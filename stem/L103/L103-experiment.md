@@ -6,15 +6,15 @@ import Image from '@theme/IdealImage';
 
 **Time allowance**: 10 min.
 
-## Posíláme stisky IoT tlačítka
+## Sending IoT button presses
 
 ### Popis experimentu
 
-Ze stavebnice HARDWARIO si postavíme IoT tlačítko. Zařízení nám umožní odesílat informaci o svém zmáčknutí a dále s touto informací pracovat. 
+From the HARDWARIO kit we will build an IoT button. The device will allow us to send information about its pressing and further work with this information.
 
-Komunikace bude probíhat bezdrátově do Radio Dongle zasunutého do USB portu počítače. Počet zmáčknutí budeme zobrazovat v aplikaci HARDWARIO Playground, resp. v dashboardu vložené aplikace Node-RED. 
+The communication will be done wirelessly to the Radio Dongle plugged into the USB port of the computer. The number of presses will be displayed in the HARDWARIO Playground application, or in the dashboard of the embedded Node-RED application.
 
-### Kroky experimentu
+### Steps of the experiment
 
 1. Postavení tlačítka  
 2. Připojení tlačítka k Playgroundu

@@ -10,5 +10,5 @@ The aim of the lesson **IoT kit HARDWARIO TOWER** is to introduce in one lesson 
 
 * A computer with the application installed[HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
 * Projector or larger monitor
-* Set [Start IoT](https://www.hardwario.store/cz/p/start-set) kits HARDWARIO TOWER
-* Optional [other kits](https://www.hardwario.store/cz/sets) IoT kits HARDWARIO TOWER
+* Set [Start IoT](https://www.hardwario.store/p/start-set) kits HARDWARIO TOWER
+* Optional [other kits](https://www.hardwario.store/sets) IoT kits HARDWARIO TOWER

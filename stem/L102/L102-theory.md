@@ -16,7 +16,7 @@ The **HARDWARIO TOWER** is a kit of electronic components that find application 
 * Wireless solution with very low power consumption, making installation easy and units can run on batteries for several years
 * Open-source approach allowing integration with other platforms - [github](https://github.com/hardwario)
 * Sample firmware for immediate use - [github](https://github.com/hardwario)
-* Wide portfolio of 3D printer case models, including an available 3D printing service - [obchod](https://www.hardwario.store/cz/)
+* Wide portfolio of 3D printer case models, including an available 3D printing service - [store](https://www.hardwario.store/)
 * Detailed instructions and technical support to help customers with the kit - [Documentation](https://docs.hardwario.com/tower/) and [forum](https://forum.hardwario.com/)
 
 ### Communication options
