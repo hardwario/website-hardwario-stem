@@ -76,10 +76,10 @@ Postavte si jednotku podle [videonávodu](https://www.youtube.com/watch?v=jGxjl5
 * Přepněte se na záložku **Dashboard**, pokud vše proběhlo správně, tak byste měli vidět budíky s aktuálními naměřenými hodnotami teploty, vlhkosti, CO2 a VOC.
 
 *Pozn.:*
-*1. Pro urychlení odeslání dat na jednotku dýchněte*
-*2. Jednotka měří teplotu, vlhkost a VOC každých 5 sekund, CO2 pak každých 15 sekund*
-*3. Jednotka odesílá data každých 15 min. *
-*4. Jednotka odešle data ihned, pokud dojde mezi dvěma měřeními k nárustu vyššímu než 0,2 °C u teploty, 5 % u relativní vlhkosti, 50 ppm u CO2 a 5 ppb u TVOC.*
+1. *Pro urychlení odeslání dat na jednotku dýchněte*
+2. *Jednotka měří teplotu, vlhkost a VOC každých 5 sekund, CO2 pak každých 15 sekund*
+3. *Jednotka odesílá data každých 15 min.*
+4. *Jednotka odešle data ihned, pokud dojde mezi dvěma měřeními k nárustu vyššímu než 0,2 °C u teploty, 5 % u relativní vlhkosti, 50 ppm u CO2 a 5 ppb u TVOC.*
 
 ### Měření teploty, vlhkosti, CO2 a VOC
 

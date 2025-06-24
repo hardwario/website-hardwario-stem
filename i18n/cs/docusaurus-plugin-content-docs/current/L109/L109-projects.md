@@ -7,7 +7,7 @@ import React from 'react';
 
 **Časová dotace**: 10 min.
 
-Students try out other projects that are linked to the topic, or there is an Ideation 
+Studenti si zkoušejí další projekty, které souvisejí s daným tématem, nebo probíhá fáze ideace.
 
 ## Platforma Hackster.io
 
