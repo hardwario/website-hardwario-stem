@@ -90,6 +90,7 @@ Na vzestupu jsou hlasoví asistenti jako Google Assistant, Amazon Alexa, Microso
 ### Firmware
 
 **Důležité!**
+
 Firmware je software pro řízení nějakého vestavěného (embedded) systému. Díky firmware se zařízení chová tak, jak chceme. Například každých 15 min. měří úroveň CO2 a každou hodinu odešle naměřené vzorky do cloudu.
 
 Důležitou vlastností firmware je řízení spotřeby zařízení, což je kritická záležitost zejména u bateriově napájených produktů. I proto se doporučuje psát firmware v úsporných programovacích jazycích (např. C), aby samotné výpočetní operace netrvaly příliš dlouho a neubíraly potřebnou energii.
@@ -152,6 +153,7 @@ Globální přenosové systémy se používají zejména pro mobilní objekty ne
 V současnosti nejvíce používanými systémy pro globální bezdrátové přenosy jsou technologie mobilních operátorů, tedy 2G (GPRS, EDGE), 3G a 4G (LTE) sítě. IoT zařízení jsou vybavena SIM kartou a připojují se k internetu skrze zvolenou mobilní síť. Nevýhodou těchto technologií je náročnost na energii, nehodí se tedy pro bateriově napájená zařízení. Naštěstí se začaly budovat nové IoT sítě souhrnně označované jako LPWAN.
 
 **Důležité!**
+
 [LPWAN](https://en.wikipedia.org/wiki/Low-power_wide-area_network) je z anglického Low-Power Wide Area Network, tzn. sítě s nízkými nároky na energii pro komunikaci a pokrývající větší území. Patří mezi ně [NB-IoT](https://en.wikipedia.org/wiki/Narrowband_IoT), [LoRaWAN](https://en.wikipedia.org/wiki/LoRa) a [Sigfox](https://en.wikipedia.org/wiki/Sigfox). Každá z těchto sítí má svá specifika, všechny jsou ale vhodné pro IoT zařízení napájené z baterií a provozované v místech, kde není standardní připojení k internetu (např. Wi-Fi). Proto nabízejí perfektní IoT řešení v zemědělství, lesnictví, vodním hospodářství.
 
 Ukázky

@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 ## Kvalita vnitřního klimatu
 
-### Důležité!
+**Důležité!**
 
 Při pobytu ve vnitřních prostorách (třída, kancelář, domácnost) se často setkáváme s klimatickým diskomfortem, který může ovlivňovat naši výkonnost. Hlavním faktorem tohoto diskomfortu je množství CO2 ve vzduchu. Z důvodu zateplování a výměny oken přestávají budovy “přirozeně dýchat”. Zatímco ve venkovním prostředí je běžné množství CO2 400 ppm 0.04%, ve vnitřních prostorách často dosahuje hodnot přes 2000 ppm (0.2%), což vede k příznakům únavy, snižování koncentrace a bolestem hlavy.
 
@@ -23,7 +23,7 @@ Těkavé organické sloučeniny nebo VOC jsou organické chemikálie, které se 
 * [Množství CO2 ve školách](https://www.idnes.cz/zpravy/domaci/skoly-tridy-oxid-uhlicity-rekonstrukce.A171127_213307_domaci_mok)
 * [Tepelný komfort](https://cs.wikipedia.org/wiki/Tepeln%C3%BD_komfort)
 
-###Přesah tématu:
+### Přesah tématu:
 
 * Biologie: atmosféra (skleníkové plyny), fotosyntéza, pokusy, např. měření množství CO2 v uzavřeném prostoru (skleník) v blízkosti rostlin a porovnání jeho množství v denních a nočních hodinách
 * Chemie: skleníkové plyny, suchý led

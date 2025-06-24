@@ -83,16 +83,16 @@ Postavte si jednotku podle [videonávodu](https://www.youtube.com/watch?v=jGxjl5
 
 ### Měření teploty, vlhkosti, CO2 a VOC
 
-* Zasoutěžte si v týmech kdo vlastním dechem vygeneruje nejvyšší teplotu
-*Otázka pro tým s nejnižší teplotou *
+* Zasoutěžte si v týmech kdo vlastním dechem vygeneruje nejvyšší teplotu<br>
+*Otázka pro tým s nejnižší teplotou*<br>
 **Proč teplý vzduch stoupá vzhůru?**
 
-* Porovnejte si mezi týmy naměřenou vlhkost
-*Otázka pro všechny týmy*
+* Porovnejte si mezi týmy naměřenou vlhkost<br>
+*Otázka pro všechny týmy*<br>
 **Naměřená vlhkost je relativní vlhkostí. Vysvětlete pojmy relativní vlhkost a rosný bod.**
 
-* Porovnejte si mezi týmy naměřené koncentrace CO2 a VOC
-*Otázka pro všechny týmy*
+* Porovnejte si mezi týmy naměřené koncentrace CO2 a VOC<br>
+*Otázka pro všechny týmy*<br>
 **Čím vysvětlíte rozdíly v naměřených hodnotách?**
 
 
