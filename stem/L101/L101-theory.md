@@ -1,10 +1,10 @@
 ---
 slug: what-is-iot-theory
-title: Teorie
+title: Theory
 ---
 import Image from '@theme/IdealImage';
 
-**Time allowance**: 10 min.
+**Time allocation**: 10 min.
 
 ## What is STEM
 

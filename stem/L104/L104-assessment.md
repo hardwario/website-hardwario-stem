@@ -1,13 +1,13 @@
 ---
 slug: iot-temperature-and-humidity-monitor-assessment
-title: Hodnocení
+title: Assessment
 ---
 import Image from '@theme/IdealImage';
 
-**Časová dotace**: 5 min.
+**Time allocation**: 5 min.
 
-Provedeme 3-2-1 Assessment, tzn. studenti uvedou:
+We will do a 3-2-1 Assessment, i.e. students will state:
 
-* 3 věci, které před lekcí neznali 
-* 2 věci, které byly v rámci projednávaného tématu pro ně překvapením
-* 1 věc, která je jim stále nejasná
+* 3 things they did not know before the lesson
+* 2 things that were a surprise to them in the topic discussed
+* 1 thing that is still unclear to them

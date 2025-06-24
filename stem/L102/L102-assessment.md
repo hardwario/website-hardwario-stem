@@ -1,10 +1,10 @@
 ---
 slug: hardwario-tower-iot-kit-assessment
-title: Rating
+title: Assessment
 ---
 import Image from '@theme/IdealImage';
 
-**Time allowance**: 5 min.
+**Time allocation**: 5 min.
 
 We will do a 3-2-1 Assessment, i.e. students will state:
 

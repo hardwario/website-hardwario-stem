@@ -1,15 +1,15 @@
 ---
 slug: iot-temperature-and-humidity-monitor-introduction
-title: Úvod
+title: Introduction
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **IoT teploměr a vlhkoměr** je v rámci jedné vyučovací hodiny představit možnosti uplatnění IoT teploměru a vlhkoměru v domácnosti i průmyslu . 
+The goal of the lesson **IoT Thermometer and Hygrometer** is to introduce, within a single class session, the possibilities of using an IoT thermometer and hygrometer both in households and in industry.
 
-V rámci lekce se sestaví a naprogramuje senzor teploty a vlhkosti, připraví grafy a nastaví se notifikace překročení zadané teploty.
+During the lesson, a temperature and humidity sensor will be assembled and programmed, graphs will be prepared, and **notifications for exceeding the set temperature** will be configured.
 
 ## Co budete v rámci lekce potřebovat?
 
-* Počítač s nainstalovanou aplikací [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
-* Projektor nebo větší monitor
-* [Sadu Bridge](https://www.hardwario.store/cz/p/bridge-set) IoT stavebnice HARDWARIO TOWER
+* A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed
+* A projector or a large monitor
+* [Bridge Set](https://www.hardwario.store/p/bridge-set) from the HARDWARIO TOWER IoT kit

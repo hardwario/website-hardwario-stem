@@ -1,10 +1,10 @@
 ---
 slug: what-is-iot-assessment
-title: Evaluation
+title: Assessment
 ---
 import Image from '@theme/IdealImage';
 
-**Time allotment**: 5 min.
+**Time allocation**: 5 min.
 
 We will conduct a 3-2-1 Assessment, i.e. students will indicate:
 

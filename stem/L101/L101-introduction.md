@@ -1,6 +1,6 @@
 ---
 slug: what-is-iot-introduction
-title: Úvod
+title: Introduction
 ---
 import Image from '@theme/IdealImage';
 
@@ -10,4 +10,4 @@ The aim of the lesson **What is the Internet of Things - IoT** is to introduce t
 
 * A computer with the [HARDWARIO Playground] application installed(https://github.com/hardwario/hardwario-playground/releases)
 * Projector or larger monitor
-* [Kit Start](https://www.hardwario.store/p/start-set) IoT kit HARDWARIO TOWER
+* [Start Set](https://www.hardwario.store/p/start-set) IoT kit HARDWARIO TOWER

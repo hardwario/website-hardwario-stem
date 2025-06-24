@@ -1,11 +1,11 @@
 ---
 slug: iot-temperature-and-humidity-monitor-presentation
-title: Prezentace
+title: Presentation
 ---
 import Image from '@theme/IdealImage';
 
-**Časová dotace**: 5 min.
+**Time allocation**: 5 min.
 
-Studenti prezentují své nápady a projekty ostatním studentům. 
+Students present their ideas and projects to other students.
 
-Diskutují a navrhují, kde se dá IoT monitoring teploty a vlhkosti nasadit tak, aby vzniklo něco smysluplného.
+They discuss and suggest where IoT monitoring of temperature and humidity can be applied to create something meaningful.

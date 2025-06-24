@@ -1,10 +1,10 @@
 ---
 slug: hardwario-tower-iot-kit-theory
-title: Theories
+title: Theory
 ---
 import Image from '@theme/IdealImage';
 
-**Time allowance**: 10 min.
+**Time allocation**: 10 min.
 
 ## TOWER kit description
 
