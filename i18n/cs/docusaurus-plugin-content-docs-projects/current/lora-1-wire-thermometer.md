@@ -6,50 +6,53 @@ import Image from '@theme/IdealImage';
 
 # LoRa 1-Wire Thermometer
 
-With this kit, you can measure **temperatures** with a single or multiple connected DS18B20 or DS18S20 temperature sensors. Then the values are sent wirelessly to the LoRa gateway.
+S touto sadou můžete měřit **teploty** pomocí jednoho nebo více připojených teplotních senzorů DS18B20 nebo DS18S20. Hodnoty jsou poté bezdrátově odeslány do LoRa gateway.
 
-You can use community The Things Network to receive the data.
 
-## What You Will Need
+K přijímání dat můžete použít komunitu The Things Network.
 
-* [Core Module](https://shop.bigclown.com/core-module)
-* [LoRa Module](https://shop.bigclown.com/lora-module)
-* [Mini Battery Module](https://shop.bigclown.com/mini-battery-module)
-* [Sensor Module](https://shop.bigclown.com/sensor-module)
-* [DS18B20 Temperature Sensor](https://shop.bigclown.com/ds18b20-temperature-sensor/)
+## Co budete potřebovat
 
-## Firmware Upload
+* [Core Module](https://www.hardwario.store/p/core-module)
+* [LoRa Module](https://www.hardwario.store/p/lora-module)
+* [Mini Battery Module](https://www.hardwario.store/p/mini-battery-module)
+* [Sensor Module](https://www.hardwario.store/p/sensor-module)
+* [DS18B20 Temperature Sensor](https://www.hardwario.store/p/temperature-sensor-ds18b20-2m)
 
-### Step 1: Download the latest [**Hardwario Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+## Nahrání firmwaru
 
-### Step 2: Connect the Core Module to your computer.
+### Krok 1: Stáhněte si nejnovější verzi [**Hardwario Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
 
-### Step 3: In Playground, go to the **Firmware** tab, select `bcf-lora-1wire-thermometer`and flash the firmware.
+### Krok 2: Připojte Core module k počítači.
 
-### Step 4: After upload, the red LED on the Core Module will turn on for 2 seconds, then it will turn off.
+### Krok 3: V aplikaci Playground přejděte na kartu **Firmware**, vyberte `bcf-lora-1wire-thermometer` a nahrajte firmware.
 
-## LoRa Configuration
 
-For configuring the LoRa keys please follow [LoRa AT Commands Configuration](https://www.bigclown.com/doc/tutorials/lora-at-commands-configuration/) tutorial.
+### Krok 4: Po nahrání se červená LED dioda na modulu Core Module rozsvítí na 2 sekundy a poté zhasne.
 
-## Transmitting the data
+## Konfigurace LoRa
 
-The LoRa Climate Monitor sends a LoRa packet when:
+Pro konfiguraci klíčů LoRa postupujte podle návodu [LoRa AT Commands Configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/#lora-configuration) 
 
-* After power-up, when the batteries are inserted
-* Every 15 minutes when the measure values are the same
-* After pressing the button
-* When you type `AT$SEND` to the console
+##  Přenos dat
 
-## Reading the Data
 
-The data are encoded in the LoRa message. You need to extract the right bits to get the values back. This is explained in the [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer) file. You can also use the `decode.py`python [script in the repository](https://github.com/bigclownlabs/bcf-lora-climate-monitor).
+LoRa Climate Monitor odešle packet LoRa v následujících případech:
 
-You can pass the received HEX string as a parameter for the `decode.py`:
+* Po zapnutí, když jsou vloženy baterie
+* Každých 15 minut, když jsou naměřené hodnoty stejné
+* Po stisknutí tlačítka
+* Když zadáte `AT$SEND` do konzole
+  
+## Čtení dat
+
+Data jsou zakódována v zprávě LoRa. Abyste získali hodnoty zpět, musíte extrahovat správné bity. To je vysvětleno v souboru [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py`python [skript v úložišti](https://github.com/bigclownlabs/bcf-lora-climate-monitor).
+
+Přijatý řetězec HEX můžete předat jako parametr pro `decode.py`:
 
 :::info
 
-You can use the same command to upgrade **Firmware Flashing Tool** to the latest version
+Stejný příkaz můžete použít k aktualizaci  **Firmware Flashing Tool** na nejnovější verzi.
 
 :::
 

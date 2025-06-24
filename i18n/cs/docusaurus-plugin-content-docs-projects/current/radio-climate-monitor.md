@@ -8,61 +8,60 @@ import Image from '@theme/IdealImage';
 
 # Radio Climate Monitor
 
-This document will guide you through the **Radio Climate Monitor** project. You will be able to see dashboard with temperature, humidity, ambient light and atmospheric pressure in **Node-RED** and view the data on your smart phone using the **Blynk** cloud and mobile app.
+Tento dokument vás provede projektem **Radio Climate Monitor**. Budete moci vidět dashboard s teplotou, vlhkostí, okolním světlem a atmosférickým tlakem v **Node-RED** a zobrazit data na svém chytrém telefonu pomocí **Blynk** cloudu a mobilní aplikace.
 
-## Block Concept
+## Koncept 
 <div class="container">
   <div class="row">
     <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_block-diagram.webp')}/>
   </div>
 </div>
 
-### Requirements <a id="requirements"></a>
+### Požadavky  <a id="requirements"></a>
 
-* Either **Hardwario Radio Climate Monitor Kit**, or individual components:
+* Buď **Hardwario Radio Climate Monitor Kit**, nebo jednotlivé komponenty:
   * 1x **Hardwario Climate Module**
   * 1x **Hardwario Core Module**
   * 1x **Hardwario Mini Battery Module**
   * 1x **Hardwario Radio Dongle**
-* One of these options:
-  * **Hardwario Playground** installed \(recommended\)
+* Jedna z těchto možností:
+  * **Hardwario Playground** nainstalováno  \(recommended\)
 
-    You can find more information in the [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/) document.
+   Další informace naleznete v [**Quick Start Guide**]([https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/)) dokumentu.
 
-  * **Raspberry Pi** with the **Hardwario Raspbian** distribution
+  * **Raspberry Pi** s distribucí **Hardwario Raspbian**
 
-    You can find more information in the document [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/).
+    Další informace naleznete v dokumentu  [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/).
 
-  * **Hardwario Toolchain** installed
+  * **Hardwario Toolchain** nainstalováno
 
-    You can find more information in the document [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
+    Další informace naleznete v dokumentu [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
 
-## Firmware Upload
+## Nahrání firmwaru
 
-In this procedure we will use the **Hardwario Playground** to upload firmware to the **Core Module**.
+V tomto postupu použijeme **Hardwario Playground** k nahrání firmwaru do **Core Modulu**.
 
-### Step 1: Connect the Micro USB cable to the **Core Module** and your computer
+### Krok 1: Připojte Micro USB kabel k **Core Modulu** a vašemu počítači
 
-### Step ****2: Run the Hardwario Playground. In the Firmware tab choose and upload the `bcf-radio-climate-monitor` firmware to the **Core Module**
+### Krok ****2: Spusťte Hardwario Playground. Na kartě Firmware vyberte a nahrajte firmware `bcf-radio-climate-monitor` do **Core Modulu**
 
 :::warning
 
-**Flashing Core Module R1 & R2**  
-For differences of flashing older **Core Module 1** and newer **Core Module 2** please read **Core Module R1 and R2 comparison** in the **Hardware section**
-
+**Přeflashování jádrového modulu R1 a R2**
+Pro rozdíly při flashování staršího **Core Module 1** a novějšího **Core Module 2** si přečtěte **srovnání Core Module R1 a R2** v sekci **Hardware**.
 :::
 
-### Step 3: Remove the Micro USB cable from the **Core Module** and your computer
+### Krok 3: Odpojte Micro USB kabel od **Core Module** a vašeho počítače
 
 :::success
 
-At this point your firmware is successfully uploaded.
+V tuto chvíli je váš firmware úspěšně nahrán.
 
 :::
 
-## Hardware Assembling
+## Sestavení hardwaru
 
-See short video with easy step by step demonstration:
+Podívejte se na krátké video s jednoduchou ukázkou krok za krokem:
 
 
 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
@@ -76,45 +75,43 @@ See short video with easy step by step demonstration:
   />
 </div>
 
-import React from 'react'
-import ReactPlayer from 'react-player/lazy'
 
-// Lazy load the YouTube player
-<ReactPlayer url='https://youtu.be/tyyjO0GoyNA' />
 
-### Step 1: Start with the **Mini Battery Module**
+### Krok 1: Začněte s **Mini Battery Module**
 
 :::warning
 
-Make sure the **Mini Battery Module** does not have batteries inserted.
+Ujistěte se, že **Mini Battery Module** nemá vložené baterie.
 
 :::
 
-### **Step 2:** Plug the **Core Module** on top of the **Mini Battery Module**
+### **Krok 2:** Připojte **Core Module** na vrchol **Mini Battery Module**
 
-### **Step 3:** Plug the **Climate Module** on top of the **Core Module**
+### **Krok 3:** Připojte **Climate Module** na vrchol **Core Module**
 
 ## Playground Bootstrap
 
 :::danger
 
-If you are using the new **Hardwario Playground**, then use the **Functions** tab instead of using [**http://localhost:1880/**](http://localhost:1880/). Also the pairing process is now done in **Devices** tab. For communication test use the **Messages** tab.
+Pokud používáte nový **Hardwario Playground**, použijte záložku **Funkce** místo [**http://localhost:1880/**](http://localhost:1880/). Také proces párování se nyní provádí na kartě **Zařízení**. Pro test komunikace použijte záložku **Zprávy**.
 
 :::
 
-### **Step 1:** Open **Node-RED** in your web browser
+### **Krok 1:** Otevřete **Node-RED** ve svém webovém prohlížeči
 
 [http://localhost:1880/](http://localhost:1880/)
 
-### Step 2: You should see the empty workspace with **Flow 1**
+### Krok 2: Měli byste vidět prázdné pracovní prostředí s **Flow 1**
 
-### Step 3: Insert the following snippet in the flow \(using **Menu &gt;&gt; Import**\) and click in **Flow 1** tab
+### Krok 3: Vložte následující úryvek do flow \(použitím **Menu &gt;&gt; Import**\) a klikněte na záložku **Flow 1**
 
 ```text
 [{"id":"2fc604fc.3b6abc","type":"inject","z":"dfc861b.b2a02a","name":"List all gateways","topic":"gateway/all/info/get","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":460,"wires":[["a2c10833.24d5d8"]]},{"id":"1e4502b8.2f63fd","type":"inject","z":"dfc861b.b2a02a","name":"Start node pairing","topic":"gateway/usb-dongle/pairing-mode/start","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":570,"y":580,"wires":[["795ff5a7.8e266c"]]},{"id":"3d844ce2.932864","type":"inject","z":"dfc861b.b2a02a","name":"Stop node pairing","topic":"gateway/usb-dongle/pairing-mode/stop","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":640,"wires":[["5967c452.c838bc"]]},{"id":"f202b253.2705b","type":"inject","z":"dfc861b.b2a02a","name":"List paired nodes","topic":"gateway/usb-dongle/nodes/get","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":520,"wires":[["f0aca138.0b2c3"]]},{"id":"349f02fd.890f6e","type":"inject","z":"dfc861b.b2a02a","name":"Unpair all nodes","topic":"gateway/usb-dongle/nodes/purge","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":700,"wires":[["2f1c5bb6.53d6f4"]]},{"id":"cf61d75d.4ad8f8","type":"mqtt in","z":"dfc861b.b2a02a","name":"","topic":"#","qos":"2","broker":"67b8de4a.029d3","x":530,"y":400,"wires":[["a5cb0658.f5d658"]]},{"id":"a5cb0658.f5d658","type":"debug","z":"dfc861b.b2a02a","name":"","active":true,"console":"false","complete":"false","x":790,"y":400,"wires":[]},{"id":"a2c10833.24d5d8","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":460,"wires":[]},{"id":"f0aca138.0b2c3","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":520,"wires":[]},{"id":"795ff5a7.8e266c","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":580,"wires":[]},{"id":"5967c452.c838bc","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":640,"wires":[]},{"id":"2f1c5bb6.53d6f4","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":700,"wires":[]},{"id":"67b8de4a.029d3","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""},{"id":"717f7c18.ba0a24","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
 ```
 
-It will look like this:
+
+
+Bude to vypadat takto:
 
 
 <div class="container">
@@ -125,13 +122,13 @@ It will look like this:
 
 :::info
 
-This snippet provides control buttons for gateway/radio commands. These commands are sent over the MQTT protocol.
+Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádia. Tyto příkazy jsou odesílány prostřednictvím protokolu MQTT.
 
 :::
 
-### Step 4: Deploy the flow using the **Deploy** button in the top-right corner
+### Krok 4: Nasazení flow pomocí tlačítka **Nasadit** v pravém horním rohu
 
-### Step 5: Open the **debug** tab
+### Krok 5: Otevřete záložku **debug**
 
 <div class="container">
   <div class="row">
@@ -141,11 +138,11 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 :::info
 
-In the **debug** tab, you will be able to see all the MQTT messages.
+Na kartě **debug** budete moci vidět všechny MQTT zprávy.
 
 :::
 
-### Step 6: Click on the **List all gateways** button. You should see a response like this in the **debug** tab
+### Krok 6: Klikněte na tlačítko **List all gateways**. Měli byste vidět odpověď jako tuto na kartě **debug**.
 
 
 <div class="container">
@@ -156,17 +153,17 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 :::success
 
-At this point, you've got working **Node-RED**, **MQTT**, **Hardwario Radio Dongle**and **Hardwario Gateway**.
+V tuto chvíli máte funkční **Node-RED**, **MQTT**, **Hardwario Radio Dongle** a **Hardwario Gateway**.
 
 :::
 
-## Radio Pairing
+##  Párování rádia
 
-In this section, we will create a radio link between the **Radio Dongle** and the **Radio Climate Monitor**.
+V této části vytvoříme rádiové spojení mezi  **Radio Dongle** a **Radio Climate Monitor**.
 
-Follow these steps in **Node-RED**:
+Postupujte podle těchto kroků v **Node-RED**:
 
-### Step 1: Click on the **Start node pairing** button
+### Krok 1: Klikněte na tlačítko **Start node pairing** 
 
 <div class="container">
   <div class="row">
@@ -174,11 +171,11 @@ Follow these steps in **Node-RED**:
   </div>
 </div>
 
-### Step 2: Pair Climate Monitor
+### Step 2: Párování Climate monitoru
 
-Insert the batteries into the **Radio Climate Monitor** to send the pairing request \(you should also see the red LED on the **Core Module** to be on for about 2 seconds\).
+Vložte baterie do **Radio Climate Monitor**, aby se odeslal žádost o párování \(měli byste také vidět, že červená LED na **Core Module** bude svítit asi 2 sekundy\).
 
-### Step 3: Click on the **Stop node pairing** button
+### Step 3: Klikněte na tlačítko **Stop node pairing** 
 
 <div class="container">
   <div class="row">
@@ -188,11 +185,11 @@ Insert the batteries into the **Radio Climate Monitor** to send the pairing requ
 
 :::success
 
-At this point, you've got established a radio link between the node \(**Radio Climate Monitor**\) and the gateway \(**Radio Dongle**\).
+V tuto chvíli jste navázali rádiové spojení mezi node \(**Radio Climate Monitor**\) a gateway \(**Radio Dongle**\).
 
 :::
 
-## Communication Test
+## Test komunikace
 
 Follow these steps in **Node-RED**:
 
@@ -200,9 +197,9 @@ Follow these steps in **Node-RED**:
 
 ### Step 2: Test connection
 
-Start breathing on the temperature sensor on the **Climate Module** to invoke a change of temperature and hence trigger a radio transmission.
+Začněte dýchat na teplotní senzor na **Climate Module** , aby došlo ke změně teploty a tím k vyvolání rádiového přenosu.
 
-You should then see similar messages:
+Měli byste pak vidět podobné zprávy:
 
 
 <div class="container">
@@ -213,44 +210,47 @@ You should then see similar messages:
 
 :::success
 
-At this point, you've got verified radio communication.
+V tuto chvíli máte ověřenou rádiovou komunikaci.
 
 :::
 
-## Enclosure
+## Kryty
 
-Optionally put the assembly into the appropriate enclosure, if you have one.
+Volitelně umístěte montáž do příslušného krytu, pokud nějaký máte.
 
 :::info
 
-You can find more information about the enclosures in the document [**Enclosures**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
+Další informace o krytech naleznete v dokumentu [**Enclosures**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
 
 :::
 
-## Integration with Blynk
+##  Integrace s Blynk
 
-Now we have assembled our kit and let's start with some basic integration with **Blynk**. We will start without describing what **Blynk** is. If you want get some information about what **Blynk** is. The best thing you can do is visit their [**page**](https://www.blynk.cc/). In our example we will be showing you how to display graphs from sensor's values in **Blynk**'s mobile application.
+Nyní jsme sestavili naši sadu a pojďme začít s nějakou základní integrací s **Blynk**. Začneme, aniž bychom popisovali, co **Blynk** je. Pokud chcete získat nějaké informace o tom, co **Blynk** je. Nejlepší, co můžete udělat, je navštívit jejich [**stránku**](https://www.blynk.cc/). V našem příkladu vám ukážeme, jak zobrazit grafy hodnot ze senzorů v mobilní aplikaci **Blynk**.
 
-Firstly we need to configure our **Node-RED** app.
+Nejprve musíme nakonfigurovat naši aplikaci **Node-RED**.
 
 ### Step 1: Blynk nodes
 
-If you are using Hardwario raspi version you should be fine, but still check that **Blynk** nodes are installed. \(You can view them on the left side menu in **Node-RED**\). Otherwise you will need to install **Node-RED** package `node-red-contrib-blynk-ws`.
+Pokud používáte verzi Hardwario raspi, mělo by to být v pořádku, ale přesto zkontrolujte, zda jsou nainstalovány nodes **Blynk**. Pokud používáte verzi Hardwario raspi, měli byste být v pořádku, ale přesto zkontrolujte, zda jsou nainstalovány nodes **Blynk**. \ (Můžete je vidět v levém postranním menu v **Node-RED**\). (Můžete je zobrazit v levém postranním menu v **Node-RED**\). Jinak budete muset nainstalovat balíček **Node-RED** `node-red-contrib-blynk-ws`.
 
 <div class="container">
   <div class="row">
     <Image img={require('./img/radio-climate-monitor/radio-co2-monitor_integration-nodered-1.webp')}/>
   </div>
 </div>
-### Step 2: Add another **Flow** \(you can add them by big plus button next to the flow name\). The new flow will have name **Flow 2**
 
-### **Step 3:** Insert the following snippet in the newly created **Flow 2** \(using **Menu &gt;&gt; Import**\)
+### Krok 2: Přidejte další **Flow** \(můžete je přidat pomocí velkého tlačítka plus vedle názvu flow\). Nový tok bude mít název **Tok 2**
+
+### **Krok 3:** Vložte následující úryvek do nově vytvořeného **Flow 2** \(použitím **Menu &gt;&gt; Import**\)
 
 ```text
 [{"id":"4914605c.76972","type":"mqtt in","z":"28050251.59dc0e","name":"","topic":"node/climate-monitor:0/lux-meter/0:0/illuminance","qos":"2","broker":"58254712.b61068","x":230,"y":520,"wires":[["431157f1.546248"]]},{"id":"dcf5bf8d.a0242","type":"mqtt in","z":"28050251.59dc0e","name":"","topic":"node/climate-monitor:0/thermometer/0:0/temperature","qos":"2","broker":"58254712.b61068","x":240,"y":580,"wires":[["be96b6aa.eed098"]]},{"id":"2ac2eae7.308486","type":"mqtt in","z":"28050251.59dc0e","name":"","topic":"node/climate-monitor:0/hygrometer/0:4/relative-humidity","qos":"2","broker":"58254712.b61068","x":250,"y":640,"wires":[["dbe4b438.be4ef8"]]},{"id":"431157f1.546248","type":"blynk-ws-out-write","z":"28050251.59dc0e","name":"Pin V0 - Write","pin":0,"pinmode":0,"client":"1b003066.8ca2c","x":659,"y":520,"wires":[]},{"id":"be96b6aa.eed098","type":"blynk-ws-out-write","z":"28050251.59dc0e","name":"","pin":"1","pinmode":0,"client":"1b003066.8ca2c","x":659,"y":580,"wires":[]},{"id":"dbe4b438.be4ef8","type":"blynk-ws-out-write","z":"28050251.59dc0e","name":"","pin":"2","pinmode":0,"client":"1b003066.8ca2c","x":659,"y":640,"wires":[]},{"id":"58254712.b61068","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""},{"id":"1b003066.8ca2c","type":"blynk-ws-client","z":"","name":"","path":"ws://blynk-cloud.com/websockets","key":"","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_low":false,"dbg_pins":""}]
 ```
 
-It will look like this:
+
+
+Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
@@ -259,12 +259,14 @@ It will look like this:
 </div>
 
 :::info
-In case you want use it for another sensors just change MQTT topics.
+
+Pokud to chcete použít pro jiné senzory, stačí změnit MQTT témata.
+
 :::
 
 ### Step 4: Connect
 
-Configure MQTT node to connect it on you broker. It will propably connect on localhost if you are using Raspberry Pi. After that you will need to configure **Blynk**node. Just fill in URL `ws://blynk-cloud.com/websockets`. The `Auth Token` we will configure later after obtaining one from Blynk over e-mail.
+Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se připojí na localhost, pokud používáte Raspberry Pi. Poté budete muset nakonfigurovat **Blynk**node. Jednoduše vyplňte URL `ws://blynk-cloud.com/websockets`. `Auth Token` nakonfigurujeme později po jeho získání od Blynk e-mailem.
 
 <div class="container">
   <div class="row">
@@ -272,9 +274,12 @@ Configure MQTT node to connect it on you broker. It will propably connect on loc
   </div>
 </div>
 
-### Step 5: Now download the **Blynk** app from [**App Store**](https://itunes.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481?mt=8) or [**Google Play**](https://play.google.com/store/apps/details?id=cc.blynk&hl=en)
+### Krok 5: Nyní si stáhněte aplikaci **Blynk** z [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk&pcampaignid=web_share). Vytvořte účet a přihlaste se.
 
-### **Step 6:** After installing, you should create account, login and you should see something like that
+
+
+
+### **Krok 6:** Po instalaci byste měli vytvořit účet, přihlásit se a měli byste vidět něco takového
 
 <div class="container">
   <div class="row">
@@ -282,7 +287,7 @@ Configure MQTT node to connect it on you broker. It will propably connect on loc
   </div>
 </div>
 
-### Step 7: Now click a button on the top right to scan QR code
+### Krok 7: Nyní klikněte na tlačítko v pravém horním rohu pro naskenování QR kódu
 
 
 <div class="container">
@@ -291,7 +296,7 @@ Configure MQTT node to connect it on you broker. It will propably connect on loc
   </div>
 </div>
 
-### Step 8: Now you should scan following QR code to get everything preconfigured
+### Krok 8: Nyní byste měli naskenovat následující QR kód, abyste získali vše předkonfigurované
 
 <div class="container">
   <div class="row">
@@ -299,7 +304,9 @@ Configure MQTT node to connect it on you broker. It will propably connect on loc
   </div>
 </div>
 
-### Step 9: You should see something like this
+### Krok 9: Měli byste vidět něco takového
+
+
 
 <div class="container">
   <div class="row">
@@ -307,9 +314,9 @@ Configure MQTT node to connect it on you broker. It will propably connect on loc
   </div>
 </div>
 
-### Step 10: Email
+### Krok 10: E-mail
 
-Click the settings wheel and you should see settings for your project. We need to get `Auth Token` which you have to copy to our **Node-RED** in **Blynk** node configuration.
+Klikněte na ozubené kolečko a měli byste vidět nastavení pro váš projekt. Musíme získat `Auth Token`, který musíte zkopírovat do našeho **Node-RED** v node konfiguraci **Blynk**.
 
 <div class="container">
   <div class="row">
@@ -317,11 +324,11 @@ Click the settings wheel and you should see settings for your project. We need t
   </div>
 </div>
 
-### Step 11: Now deploy your **Node-RED** app and hit play button in your **Blynk** project and you should be done!
+### Krok 11: Nyní nasadíte svou aplikaci **Node-RED** a stisknete tlačítko přehrávání ve vašem projektu **Blynk** a měli byste být hotovi!
 
-### Related Documents <a id="related-documents"></a>
+### Související dokumenty <a id="related-documents"></a>
 
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
-* [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
-* [**Toolchain Guide**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
+* [**Toolchain Setup**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects)
+* [**Toolchain Guide**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects)
 
