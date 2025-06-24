@@ -1,7 +1,7 @@
 ---
-slug: iot-light-monitor-cs
-title: 'L107: IoT osvětlení'
+slug: iot-light-monitor
+title: 'L107: IoT Light Monitor'
 ---
 import Image from '@theme/IdealImage';
 
-Postavíme si ovladač LED pásku a budeme s ním ovládat ledky pomocí tlačítka a změn teploty.
+We will build an LED strip controller and use it to control the LEDs based on button presses and temperature changes.

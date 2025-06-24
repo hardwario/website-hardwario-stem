@@ -1,11 +1,11 @@
 ---
 slug: iot-vibration-monitor-presentation-cs
-title: Prezentace
+title: Presentation
 ---
 import Image from '@theme/IdealImage';
 
-**Časová dotace**: 5 min.
+**Time allocation**: 5 min.
 
-Studenti prezentují své nápady a projekty ostatním studentům. 
+Students present their ideas and projects to their classmates.
 
-Diskutují a navrhují, kde se dá IoT monitoring akcelerace nasadit tak, aby vzniklo něco smysluplného.
+They discuss and suggest where IoT vibration monitoring can be applied in a way that creates something meaningful.

@@ -1,16 +1,16 @@
 ---
 slug: iot-vibration-monitor-projects-cs
-title: Projekty
+title: Projects
 ---
 import Image from '@theme/IdealImage';
 
-**Časová dotace**: 10 min.
+**Time allocation**: 10 min.
 
-Studenti si zkoušejí další projekty, které jsou svázány s daným tématem, nebo probíhá tzv. Ideation
+Students try out additional projects related to the given topic, or participate in what is called Ideation.
 
-## Další projekty s tématem lekce k vyzkoušení
+## Additional topic-related projects to try out
 
-### Platforma Hackster.io
+### Hackster.io Platform
 
 <a
   href="https://www.hackster.io/jakub-smejkal/hardwario-non-invasive-monitoring-rotation-monitor-050ab0"
@@ -53,4 +53,4 @@ Studenti si zkoušejí další projekty, které jsou svázány s daným tématem
 
 ### Ideation
 
-Studenti navrhují reálné využití znalostí nabytých teoretickým výkladem a experimenty. Nápady zapisují do grafu, kde na ose x se odhaduje náročnost (náklady) projektu a na ose y dopad realizace řešení.
+Students propose real-life applications of the knowledge gained through theoretical explanations and experiments. They record their ideas in a graph, where the x-axis represents the estimated complexity (cost) of the project and the y-axis represents the impact of implementing the solution.

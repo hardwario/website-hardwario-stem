@@ -1,13 +1,13 @@
 ---
 slug: iot-vibration-monitor-introduction-cs
-title: Úvod
+title: Introduction
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce IoT monitor akcelerace je představit studentům jeden z nejběžnějších projektů Průmyslu 4.0, a to prediktivní údržbu pomocí monitoringu otřesů.
+The goal of the **IoT Vibration Monitor** lesson is to introduce students to one of the most common Industry 4.0 projects — predictive maintenance using vibration monitoring.
 
-## Co budete v rámci lekce potřebovat?
+## What will you need for the lesson?
 
-* Počítač s nainstalovanou aplikací [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
-* Projektor nebo větší monitor
-* [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER
+* A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed
+* A projector or large monitor
+* [Start Set](https://www.hardwario.store/cz/p/start-set) from the HARDWARIO TOWER IoT kit

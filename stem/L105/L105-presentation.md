@@ -8,4 +8,4 @@ import Image from '@theme/IdealImage';
 
 Students present their ideas and projects to their classmates.
 
-They discuss and suggest where IoT acceleration monitoring can be applied in a way that creates something meaningful.
+They discuss and suggest where IoT Indoor Air Quality Monitoring can be applied in a way that creates something meaningful.

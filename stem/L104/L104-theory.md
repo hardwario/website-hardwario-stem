@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
 
 **Relative humidity** expresses the ratio between the current amount of water vapor in the air and the amount the air would hold at the same pressure and temperature when fully saturated. It is expressed as a percentage (%). Relative humidity is also sometimes referred to as **proportional humidity**.
 
-The **dew point** is the temperature at which the air is fully saturated with water vapor (relative humidity reaches 100%
+The **dew point** is the temperature at which the air is fully saturated with water vapor (relative humidity reaches 100%)
 
 Zdroj: https://cs.wikipedia.org/wiki/Vlhkost_vzduchu
 

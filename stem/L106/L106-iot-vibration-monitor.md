@@ -1,7 +1,7 @@
 ---
 slug: iot-vibration-monitor-cs
-title: 'L106: IoT monitor vibrací'
+title: 'L106: IoT Vibration Monitor'
 ---
 import Image from '@theme/IdealImage';
 
-Ukážeme si možnosti monitoringu vibrací pomocí akcelerometru a využití dat v rámci tzv. Průmyslu 4.0 a s tím související prediktivní údržby.
+We will demonstrate the possibilities of **vibration monitoring using an accelerometer** and how the collected data can be used in the context of **Industry 4.0** and related **predictive maintenance**.
