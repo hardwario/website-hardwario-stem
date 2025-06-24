@@ -1,14 +1,11 @@
 ---
 slug: iot-indoor-air-quality-monitor-presentation
-title: Presentation
+title: Prezentace
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation**: 2H Module: 15 mins. 4H Module: 45 mins. 8H Module: 45 mins.  
-**Keywords**: #21st-century_skills 
+**Časová dotace:** 5 min.
 
-Present your projects or ideas from Ideation. Develop your 21st-century skills, in particular:
+Studenti prezentují své nápady a projekty ostatním studentům. 
 
-1. Critical thinking
-2. Creativity
-3. Cooperation
+Diskutují a navrhují, kde se dá IoT monitoring akcelerace nasadit tak, aby vzniklo něco smysluplného.

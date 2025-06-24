@@ -6,8 +6,6 @@ import Image from '@theme/IdealImage';
 
 Studenti si zkoušejí další projekty, které jsou svázány s daným tématem, nebo probíhá tzv. **Ideation**
 
-
-
 ## Další projekty s tématem lekce k vyzkoušení
 
 ### Web HARDWARIO

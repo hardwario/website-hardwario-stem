@@ -1,7 +1,16 @@
 ---
 slug: iot-indoor-air-quality-monitor-introduction
-title: Introduction
+title: Úvod
 ---
 import Image from '@theme/IdealImage';
 
-The aim of the Indoor Climate Quality lesson is to present this attractive topic from multiple perspectives. Students create and program devices for measuring CO2 concentration. Based on practical experiments, they can more easily realize and remember the causes and consequences of the poor indoor climate.
+Cílem lekce **IoT monitor kvality vnitřního klimatu** je představit toto dnes atraktivní téma z vícero pohledů. 
+
+Studenti si sami sestaví a naprogramují zařízení k měření koncentrace CO2. Na základě praktických experimentů si snáze uvědomí a zapamatují příčiny a důsledky nekvalitního klimatu ve vnitřních prostorách. 
+
+## Co budete v rámci lekce potřebovat?
+
+* Počítač s nainstalovanou aplikací [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
+* Projektor nebo větší monitor
+* [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER
+* [Sadu Clime XL](https://www.hardwario.store/cz/p/clime-xl-set) stavebnice HARDWARIO TOWER

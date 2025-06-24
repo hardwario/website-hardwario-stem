@@ -76,13 +76,13 @@ Follow the [video tutorial](https://www.youtube.com/watch?v=jGxjl5v7kqE) to buil
 
 
 * Compete in teams who generate the highest temperature with their breath
-Question for the team with the lowest temperature 
+*Question for the team with the lowest temperature*
 **Why does the warm air rise up?**
 * Compare the measured humidity between teams
-A question for all teams  
+*A question for all teams* 
 **The measured humidity is relative humidity. Explain the terms of relative humidity and dew point.**
 * Compare the measured CO2 and VOC concentrations between the teams CO2 and VOC
-A question for all teams 
+*A question for all teams*
 **How do you explain the differences in the measured values?**
 
 ## Experiment 2 - Air Quality Monitor Integration with the Google Sheet

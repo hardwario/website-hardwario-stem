@@ -1,16 +1,13 @@
 ---
 slug: iot-indoor-air-quality-monitor-assessment
-title: Assessment
+title: Hodnocení
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation**: All modules: 5 mins.+ 5 mins. test  
-**Keywords**: #Feedback #Knowledge_test #3-2-1_Countdown #Assessment
+**Časová dotace:** 5 min.
 
-First, give feedback on the lesson. You will pass the knowledge test again to show if the learning objectives have been met. 
+Provedeme 3-2-1 hodnocení, tzn. studenti uvedou:
 
-Perform 3-2-1 Assessment, ie. you specify:
-
-* 3 things you didn't know before the lesson
-* 2 things that were a surprise for you under this topic
-* 1 thing you want to start doing based on what you learned in the lesson
+* 3 věci, které před lekcí neznali 
+* 2 věci, které byly v rámci projednávaného tématu pro ně překvapením
+* 1 věc, která je jim stále nejasná

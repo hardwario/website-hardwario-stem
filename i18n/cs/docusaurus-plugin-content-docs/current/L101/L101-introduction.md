@@ -1,13 +1,13 @@
 ---
 slug: what-is-iot-introduction
-title: Home
+title: Úvod
 ---
 import Image from '@theme/IdealImage';
 
-The aim of the lesson **What is the Internet of Things - IoT** is to introduce the possibilities of the Internet of Things in one lesson. During the lesson, students will learn about popular IoT technologies and get a basic idea of the purpose and real-world applications of IoT.
+Cílem lekce **Co je to Internet věcí - IoT** je v rámci jedné vyučovací hodiny představit možnosti internetu věcí. V rámci lekce se studenti seznámí s populárními IoT technologiemi a udělají si základní představu o smyslu a reálném využití internetu věcí.
 
-## What will you need during the lesson?
+## Co budete v rámci lekce potřebovat?
 
-* Computer with an application installed [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
-* Projector or larger monitor
-* [Start Set](https://www.hardwario.store/cz/p/start-set) IoT kits HARDWARIO TOWER
+* Počítač s nainstalovanou aplikací [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
+* Projektor nebo větší monitor
+* [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER
