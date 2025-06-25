@@ -4,7 +4,6 @@ title: Teorie
 ---
 import Image from '@theme/IdealImage';
 
-
 **Time allocation:** 10 min.
 
 ## Energy Consumption Monitoring
@@ -24,9 +23,9 @@ Electric current can be measured using two basic methods:
 * [Hall sensor](https://en.wikipedia.org/wiki/Hall_effect_sensor)
 * Electricity meter outputs (magnetic, LES, S0, Modbus)
 
-## Impulse monitoring
+## Pulse monitoring
 
-One of the ways to monitor consumption online is by connecting to **electricity/gas/water meters** and transmitting the number of impulses these meters generate depending on the consumption of the respective medium.
+One of the ways to monitor consumption online is by connecting to **electricity/gas/water meters** and transmitting the number of pulses these meters generate depending on the consumption of the respective medium.
 
 ### The most commonly used sensors for pulse monitoring are:
 
