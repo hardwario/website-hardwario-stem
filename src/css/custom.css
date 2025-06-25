@@ -49,9 +49,22 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   color: rgb(221, 221, 221); /* Slightly different shade for subtitle */
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
 .logo-lbc {
   margin: 1.5rem auto;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 500px; /* Adjust width as needed */
   height: auto; /* Maintain aspect ratio */
+}
+
+.logo-img {
+  width: 250px;
 }
