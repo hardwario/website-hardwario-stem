@@ -5,35 +5,33 @@ title: Teorie
 import Image from '@theme/IdealImage';
 
 
-**Časová dotace:** 10 min.
+**Time allocation:** 10 min.
 
-## Měření spotřeby energií
+## Energy Consumption Monitoring
 
-Trendem dnešní doby je snaha co nejvíce snížit spotřebu elektrické energie, plynu nebo vody. **IoT** přináší možnost online sledovat a regulovat spotřebu energií.
+A major trend today is the effort to minimize the consumption of electricity, gas, or water. The **Internet of Things (IoT)** enables real-time monitoring and regulation of energy usage.
 
+## Monitoring Electricity Consumption
 
-## Měření spotřeby elektrické energie
+Electric current can be measured using two basic methods:
 
-Elektrický proud lze měřit pomocí dvou základních metod:
+1. **Direct Measurement** – using an [ammeter](https://en.wikipedia.org/wiki/Ammeter), which measures the magnitude of electric current in a circuit.
+2. **Indirect Measurement** – the electric current is not measured directly, but instead another physical quantity is measured, from which the current and consumption values can be calculated.
 
-1. **Přímé měření** – [ampérmetrem](https://cs.wikipedia.org/wiki/Amp%C3%A9rmetr), který měří velikost elektrického proudu v obvodu.
-2. **Nepřímé měření** – neměří se přímo elektrický proud, ale jiná fyzikální veličina, díky které lze hodnotu proudu a spotřeby dopočítat.
+### Options for Indirect Measurement of Electric Current:
 
-### Možnosti nepřímého měření elektrického proudu:
-- Proudový [transformátor](https://cs.wikipedia.org/wiki/Transform%C3%A1tor)  
-- [Hallova sonda ](https://cs.wikipedia.org/wiki/Hallova_sonda) 
-- Výstupy elektroměru (magnetický, LES, S0, Modbus)
+* [Current transformer](https://en.wikipedia.org/wiki/Current_transformer)
+* [Hall sensor](https://en.wikipedia.org/wiki/Hall_effect_sensor)
+* Electricity meter outputs (magnetic, LES, S0, Modbus)
 
+## Impulse monitoring
 
-## Monitoring impulzů
+One of the ways to monitor consumption online is by connecting to **electricity/gas/water meters** and transmitting the number of impulses these meters generate depending on the consumption of the respective medium.
 
-Jedním ze způsobů online monitoringu spotřeby je **napojení na elektroměry/plynoměry/vodoměry** a přenos počtu impulsů, které tyto měřiče generují v závislosti na spotřebě daného média.
+### The most commonly used sensors for pulse monitoring are:
 
-### Pro monitoring impulzů se nejčastěji používají tyto senzory:
-
-- **LED senzor** – snímá impulzy LED na měřidle, které blikáním indikují spotřebu  
-- **Magnetický senzor** – snímá impulzy, které vznikají každým otočením magnetu umístěného na jednotkovém ciferníku
-
+* **LED sensor** – detects LED pulses on the meter, which blink to indicate consumption
+* **Magnetic sensor** – detects pulses generated with each rotation of a magnet placed on the unit dial
 
 <div class="container">
   <div class="row">

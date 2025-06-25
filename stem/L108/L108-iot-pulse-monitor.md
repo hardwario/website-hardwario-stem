@@ -1,12 +1,9 @@
 ---
 slug: iot-pulse-monitor-cs
-title: 'Úvod'
+title: 'L108: IoT Pulse Monitor'
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **IoT čítač impulzů** je ukázat studentům možnosti online monitoringu spotřeby energií (elektřina, plyn, voda) pomocí čítače impulzů.
+The goal of the **IoT Pulse Counter** lesson is to show students the possibilities of online energy consumption monitoring (electricity, gas, water) using a pulse counter.
 
-Studenti si sami sestaví a naprogramují zařízení k monitoringu impulzů pomocí sady Sensor a připojeného LED nebo magnetického senzoru pro převod impulzů měřidla.
-
-
-
+Students will build and program a device on their own to monitor pulses using the Sensor Set and a connected LED or magnetic sensor to convert pulses from the utility meter.

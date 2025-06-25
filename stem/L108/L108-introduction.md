@@ -1,20 +1,20 @@
 ---
 slug: iot-pulse-monitor-introduction-cs
-title: Úvod
+title: Introduction
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **IoT čítač impulzů** je ukázat studentům možnosti online monitoringu spotřeby energií (elektřina, plyn, voda) pomocí čítače impulzů.
+The aim of the **IoT Pulse Counter** lesson is to show students the possibilities of online energy consumption monitoring (electricity, gas, water) using a pulse counter.
 
-Studenti si sami sestaví a naprogramují zařízení k monitoringu impulzů pomocí sady Sensor a připojeného LED nebo magnetického senzoru pro převod impulzů měřidla.
+Students will build and program a device themselves to monitor pulses using the Sensor Set and a connected LED or magnetic sensor for converting meter impulses.
 
-## Co budete v rámci lekce potřebovat?
+## What will you need for the lesson?
 
-* Počítač s nainstalovanou aplikací [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
-* Projektor nebo větší monitor
-* [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER
-* [Sadu Control](https://www.hardwario.store/cz/search?phrase=sada%20control) IoT stavebnice HARDWARIO TOWER
-* Snímače pulzů
-  * [Snímač LED impulzů](https://obchod.hardwario.cz/snimac-led-impulzu/) nebo
-  * [Snímač magnetických impulzů](https://obchod.hardwario.cz/snimac-magnetickych-impulzu/) nebo 
-  * [Snímač magnetických impulzů pro vodoměry](https://obchod.hardwario.cz/snimac-magnetickych-impulzu-pro-vodomery/)
+* A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed
+* A projector or large monitor
+* [Start Set](https://www.hardwario.store/p/start-set) of the HARDWARIO TOWER IoT kit
+* [Control Set](https://www.hardwario.store/cz/search?phrase=sada%20control) of the HARDWARIO TOWER IoT kit
+* Pulse Sensors:
+	* [LED Pulse Sensor](https://www.hardwario.store/p/led-pulse-sensor)
+	* [Magnetic Pulse Sensor](https://www.hardwario.store/p/magnetic-pulse-sensor)
+	* Magnetic Pulse Sensor for Water Meters
