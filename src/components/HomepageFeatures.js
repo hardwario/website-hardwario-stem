@@ -37,7 +37,9 @@ function Feature({ src, width, height, title, subtitle, link, description }) {
     <div className={clsx('col col--3')}>
       <div className="text--center">
         <Link to={link}>
+          {/*
           <img src={src} width={width} height={height} />
+          */}
         </Link>
       </div>
       <div className='text--center padding-horiz--md'>
