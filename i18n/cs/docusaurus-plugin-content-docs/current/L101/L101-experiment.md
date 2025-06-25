@@ -17,7 +17,6 @@ V rámci experimentu pochopíme:
 * jak se snadno pracuje s IoT stavebnicí HARDWARIO TOWER
 
 ### Kroky experimentu
-1. Postavení tlačítka
 
 #### Postavení tlačítka
 

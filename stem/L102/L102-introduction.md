@@ -1,6 +1,6 @@
 ---
 slug: hardwario-tower-iot-kit-introduction
-title: Home
+title: Introduction
 ---
 import Image from '@theme/IdealImage';
 
@@ -8,7 +8,7 @@ The aim of the lesson **IoT kit HARDWARIO TOWER** is to introduce in one lesson 
 
 ## What will you need during the lesson?
 
-* A computer with the application installed[HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
+* A computer with the application installed [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
 * Projector or larger monitor
-* Set [Start IoT](https://www.hardwario.store/cz/p/start-set) kits HARDWARIO TOWER
-* Optional [other kits](https://www.hardwario.store/cz/sets) IoT kits HARDWARIO TOWER
+* [Start Set](https://www.hardwario.store/p/start-set) HARDWARIO TOWER
+* Optional [other sets](https://www.hardwario.store/sets) IoT kits HARDWARIO TOWER

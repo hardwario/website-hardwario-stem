@@ -4,7 +4,6 @@ title: Radio smart LED strip
 ---
 import Image from '@theme/IdealImage';
 
-
 # Radio Smart LED Strip
 
 This document will guide you through the **Radio Smart LED Strip** project. You will be able to interact with your LED strip in **Node-RED** and Blynk and control Power appliance using 16A Relay.

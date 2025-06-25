@@ -1,15 +1,15 @@
 ---
 slug: iot-soil-monitor-projects
-title: Projects
+title: Projekty
 ---
 import Image from '@theme/IdealImage';
 import React from 'react';
 
-**Time allocation**: 10 mins
+**Časová dotace**: 10 min.
 
-Students try out other projects that are linked to the topic, or there is an Ideation 
+Studenti si zkoušejí další projekty, které souvisejí s daným tématem, nebo probíhá fáze ideace.
 
-## Hackster.io platform 
+## Platforma Hackster.io
 
 <a
   href="https://www.hackster.io/jakub-smejkal/measure-soil-moisture-with-hardwario-iot-kit-9ae766"
@@ -140,9 +140,9 @@ Students try out other projects that are linked to the topic, or there is an Ide
 
 ## Ideation 
 
-Students design real-life applications of the knowledge acquired through theoretical explanations and experiments. 
+Studenti navrhují reálné využití znalostí získaných během teoretického výkladu a experimentů.
 
-They write their ideas on a graph, where the x-axis estimates the difficulty (cost) of the project and the y-axis estimates the impact of implementing the solution.
+Své nápady zapisují do grafu, kde osa x představuje odhadovanou náročnost (náklady) projektu a osa y odhadovaný dopad realizace řešení.
 
 <div class="container">
   <div class="row">

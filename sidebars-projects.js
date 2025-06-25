@@ -7,7 +7,6 @@ const sidebars = {
     'lora-1-wire-thermometer',
     'lora-climate-monitor',
     //'private-lora-network-with-mikrotik-and-chirpstack',
-    'projects-overview',
     'push-the-button',
     'radio-climate-monitor',
     'radio-co2-monitor',
@@ -19,6 +18,7 @@ const sidebars = {
     'radio-smart-led-strip',
     'radio-soil-sensor',
     'radio-voc-sensor',
+    'projects-overview',
 
 
 

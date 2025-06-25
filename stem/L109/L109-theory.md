@@ -6,24 +6,6 @@ import Image from '@theme/IdealImage';
 
 **Time allocation**: 10 mins
 
-## What is STEM 
-
-STEM stands for SCIENCE-TECHNOLOGY-ENGINEERING-MATHEMATICS. 
-
-We learn new things all at once. We learn new things through real-life projects. 
-
-In HARDWARIO STEM learning, we learn on real-life IoT projects. 
-
-## What is IoT 
-
-The Internet of Things (IoT for short) is the name given to a network of physical devices, vehicles, home appliances, and other devices that are equipped with electronics, software, sensors, moving parts, and network connectivity that allows these devices to connect and exchange data. 
-
-It is also a phenomenon, a bubble, a threat and an opportunity. An opportunity to make the world safer, greener, more efficient and more fun. 
-
-### Definition by HARDWARIO: 
-
-Physical things connected to the internet, linked to other things and data with the goal of getting something useful out of it all. 
-
 ## Soil monitoring
 
 ### What is drought 
@@ -32,10 +14,10 @@ Drought is difficult to define because its meaning varies from region to region.
 
 Droughts are divided into four types: 
 
-* Meteorological - negative deviation of rainfall from normal over a period of time.
-* Agricultural - soil drought, lack of moisture for crops 
-* Hydrological - significant reduction in water levels 
-* Socio-economic - impacts of drought on quality of life 
+* **Meteorological** - negative deviation of rainfall from normal over a period of time.
+* **Agricultural** - soil drought, lack of moisture for crops 
+* **Hydrological** - significant reduction in water levels 
+* **Socio-economic** - impacts of drought on quality of life 
 
 On the other hand, high soil moisture can also cause problems. For example, waterlogged soil complicates agricultural work during sowing or harvesting. It is therefore important to monitor the soil and especially soil moisture. With IoT monitoring, for example, we can irrigate more precisely and thus increase crop yields while saving water. 
 

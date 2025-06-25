@@ -7,10 +7,9 @@ import Image from '@theme/IdealImage';
 
 # Push The Button
 
-**Push Button Kit** can interact with your world. Get phone notification, play next Spotify song, control your smart lights, trigger the egg timer or send a Tweet to the world.
+**Push Button Kit** může interagovat s vaším světem. Získejte oznámení na telefonu, přehrajte další skladbu na Spotify, ovládejte své chytré osvětlení, spustíte časovač na vejce nebo pošlete Tweet do světa.
 
-In this tutorial you create a simple project with a button, that sends you push notification to your phone everytime you press it.
-
+V tomto tutoriálu vytvoříte jednoduchý projekt s tlačítkem, které vám pokaždé, když na něj kliknete, pošle push notifikaci na váš telefon.
 
 <div class="container">
   <div class="row">
@@ -19,13 +18,13 @@ In this tutorial you create a simple project with a button, that sends you push 
 </div>
 
 
-## Build Hardware
+## Sestavení hardware
 
-You will need the [Push Button Kit](https://shop.bigclown.com/push-button-kit) and [Radio Dongle](https://shop.bigclown.com/radio-dongle).
+Budete potřebovat [Push Button Kit](https://shop.bigclown.com/push-button-kit) a [Radio Dongle](https://shop.bigclown.com/radio-dongle).
 
-### Step 1: Assembly
+### Krok 1: Sestavení
 
-Put all three modules together to build the **Push Button Kit**. Note the orientation of the Mini Battery Module on the image below.
+Sestavte všechny tři moduly dohromady, abyste vytvořili **Push Button Kit**. Všimněte si orientace Mini Battery Module na obrázku níže.
 
 
 <div class="container">
@@ -34,19 +33,19 @@ Put all three modules together to build the **Push Button Kit**. Note the orient
   </div>
 </div>
 
-### Step 2: Put the batteries in
+### Krok 2: Vložte baterie
 
 :::info
 
-The red LED on the Core Module will light up for 2 seconds when the batteries are inserted. This way you know that batteries are fine and kit is running ok.
+Červená LED dioda na základním modulu se rozsvítí na 2 sekundy, když jsou vloženy baterie. Tímto způsobem víte, že baterie jsou v pořádku a kit funguje správně.
 
 :::
 
 ## Playground Set-Up
 
-In this step you run the **Playground** application that manages Radio Dongle, Push Button and thanks to the **Node-RED** connects everything together.
+V tomto kroku spustíte aplikaci **Playground**, která spravuje Radio Dongle, Push Button a díky **Node-RED** propojuje vše dohromady.
 
-### Step 1: Download and run the latest [**Hardwario Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+### Krok 1: Stáhněte a spusťte nejnovější [**Hardwario Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
 
 
 <div class="container">
@@ -55,7 +54,7 @@ In this step you run the **Playground** application that manages Radio Dongle, P
   </div>
 </div>
 
-### **Step 2:** Connect [Radio Dongle](https://shop.bigclown.com/radio-dongle) to your computer
+### **Krok 2:** Připojte [Radio Dongle](https://shop.bigclown.com/radio-dongle) k vašemu počítači
 
 <div class="container">
   <div class="row">
@@ -63,11 +62,11 @@ In this step you run the **Playground** application that manages Radio Dongle, P
   </div>
 </div>
 
-### Step 3: Go to the **Devices** tab, check that the Radio Dongle is detected and click **Connect**
+### Krok 3: Přejděte na záložku **Zařízení**, zkontrolujte, zda je rádio dongle detekován, a klikněte na **Připojit**
 
 :::info
 
-If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](https://www.bigclown.com/doc/projects/push-the-button/#troubleshooting) chapter.
+Pokud nevidíte Radio Dongle mezi zařízeními, podívejte se na kapitolu [Troubleshooting](https://docs.hardwario.com/fiber/troubleshooting/).
 
 :::
 
@@ -77,7 +76,7 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
   </div>
 </div>
 
-### **Step 4:** When connected. The already flashed and paired Push Button Kit will be in the paired devices
+### **Krok 4:** Po připojení. Již nahraný a spárovaný Push Button Kit bude v seznamu spárovaných zařízení.
 
 <div class="container">
   <div class="row">
@@ -85,7 +84,7 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
   </div>
 </div>
 
-### Step 5: Switch to the **Functions** tab and make sure you see the flow on the image below
+### Krok 5: Přepněte na záložku **Funkce** a ujistěte se, že vidíte flow na obrázku níže
 
 <div class="container">
   <div class="row">
@@ -93,21 +92,21 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
   </div>
 </div>
 
-In case you don't see the flow, you can copy the text below and paste it into the Node-RED's Menu &gt; Import &gt; Clipboard
+Pokud nevidíte flow, můžete zkopírovat níže uvedený text a vložit ho do nabídky Node-RED &gt; Import &gt; Clipboard
 
 ```text
 [{"id":"103c675c.c81139","type":"mqtt in","z":"2c41a2bd.aa36ae","name":"","topic":"node/push-button:0/push-button/-/event-count","qos":"2","broker":"29fba84a.b2af58","x":270,"y":360,"wires":[["ff41c7e0.06eba8"]]},{"id":"f507ecc3.8f82b","type":"blynk-ws-out-notify","z":"2c41a2bd.aa36ae","name":"Blynk notification","client":"fc4bbabb.9bb1b8","queue":false,"rate":5,"x":790,"y":360,"wires":[]},{"id":"ff41c7e0.06eba8","type":"change","z":"2c41a2bd.aa36ae","name":"Set message","rules":[{"t":"set","p":"payload","pt":"msg","to":"Button pressed, you're the best!","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":570,"y":360,"wires":[["f507ecc3.8f82b"]]},{"id":"c131dd35.bb855","type":"comment","z":"2c41a2bd.aa36ae","name":"Push Button Kit flow","info":"","x":190,"y":300,"wires":[]},{"id":"29fba84a.b2af58","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","willTopic":"","willQos":"0","willPayload":""},{"id":"fc4bbabb.9bb1b8","type":"blynk-ws-client","z":"","name":"","path":"ws://blynk-cloud.com/websockets","key":"5cf554e34caf4d49a1b24cd07c5e2c13","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_sync":false,"dbg_bridge":false,"dbg_low":false,"dbg_pins":"","multi_cmd":false,"proxy_type":"no","proxy_url":""}]
 ```
 
-## Blynk Mobile App Set-Up
+## Nastavení mobilní aplikace Blynk
 
-In this step you configure **Blynk** application on your phone so you can get notifications from the **Hardwario Playground**.
+V tomto kroku nakonfigurujete aplikaci **Blynk** ve svém telefonu, abyste mohli dostávat oznámení z **Hardwario Playground**.
 
-### Step 1: Download Blynk
+### Krok 1: Stáhněte si Blynk
 
-Now download the **Blynk** app from [**App Store**](https://itunes.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481?mt=8) or [**Google Play**](https://play.google.com/store/apps/details?id=cc.blynk&hl=en). Create an account and log-in.
+Nyní si stáhněte aplikaci **Blynk** z [**App Store**] (https://itunes.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481?mt=8) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cc.blynk&hl=en). Vytvořte účet a přihlaste se.
 
-### Step 2: Click on the **QR icon**
+### Krok 2: Klikněte na **QR kód**
 
 <div class="container">
   <div class="row">
@@ -115,16 +114,17 @@ Now download the **Blynk** app from [**App Store**](https://itunes.apple.com/us/
   </div>
 </div>
 
-### **Step 3:** Scan following QR code to get everything preconfigured
+### **Krok 3:** Naskenujte následující QR kód, abyste získali vše předkonfigurované
 
 <div class="container">
   <div class="row">
     <Image img={require('./img/push-the-button/push-the-button_blynk-qr-code-push-button-kit.webp')}/>
   </div>
 </div>
-### Step 4: You will see this imported **project** with a single **Notification Widget**
 
-Click on the **Settings icon**.
+### Krok 4: Uvidíte tento importovaný **projekt** s jediným **Widgetem pro oznámení**
+
+Klikněte na **ikonu Nastavení**.
 
 <div class="container">
   <div class="row">
@@ -132,7 +132,7 @@ Click on the **Settings icon**.
   </div>
 </div>
 
-### **Step 5:** Scroll down and click on **Email all** tokens. We use this token from you email later
+### **Krok 5:** Přejděte dolů a klikněte na **Odeslat všechny** tokeny. Tento token z vašeho e-mailu použijeme později.
 
 <div class="container">
   <div class="row">
@@ -140,7 +140,7 @@ Click on the **Settings icon**.
   </div>
 </div>
 
-### Step 6: Now you need start the Blynk project. Click on the **Play** symbol
+### Krok 6: Nyní musíte spustit projekt Blynk. Klikněte na symbol **Přehrát**
 
 <div class="container">
   <div class="row">
@@ -148,15 +148,15 @@ Click on the **Settings icon**.
   </div>
 </div>
 
-## Putting it all together
+## Dát to všechno dohromady
 
-The final step is to connect Node-RED and Blynk together, so you can get the notifications.
+Posledním krokem je propojit Node-RED a Blynk, abyste mohli dostávat oznámení.
 
-### Step 1: In the **Playground** **Functions** tab doubleclick on the **Blynk notification** node
+### Krok 1: V záložce **Playground** **Functions** dvojklikněte na  **Blynk notification** none
 
-### Step 2: Click on the **pencil icon** and paste the token you've received in the email. Click **Done**
+### Krok 2: Klikněte na **ikonu tužky** a vložte token, který jste obdrželi v e-mailu. Klikněte na **Hotovo**
 
-### **Step 3:** Click the **Deploy** button. Everytime you edit the Node-RED flow you have to apply changes!
+### **Krok 3:** Klikněte na tlačítko **Nasadit**. Pokaždé, když upravíte flow Node-RED, musíte změny aplikovat!
 
 <div class="container">
   <div class="row">
@@ -166,7 +166,7 @@ The final step is to connect Node-RED and Blynk together, so you can get the not
 
 ## Action !
 
-The time has come to **PUSH THE BUTTON**
+Nastal čas **PUSH THE BUTTON**
 
 <div class="container">
   <div class="row">
@@ -174,9 +174,9 @@ The time has come to **PUSH THE BUTTON**
   </div>
 </div>
 
-## Learn More
+## Zjistit více
 
-The goal of this **Push Button Project** is to show the basics in a few simple steps. Now you can learn more by browsing the **documentation** or by visiting the **links below**.
+Cílem tohoto **Push Button Projectu** je ukázat základy v několika jednoduchých krocích. Nyní se můžete dozvědět více procházením **dokumentace** nebo návštěvou **odkazů níže**.+
 
 * Check out other Hardwario [**projects**](projects-overview.md).
 * Take a look at the [**Module Overview**](../basics/module-overview.md).
@@ -185,4 +185,5 @@ The goal of this **Push Button Project** is to show the basics in a few simple s
 * Use your [**Raspberry PI**](https://docs.hardwario.com/tower/server-raspberry-pi/) or other [**single board computer \(SBC\)**](../tutorials/custom-setup-on-raspberry-pi.md#setup-on-original-raspbian) as a server.
 * [**Flash other firmware**](https://www.bigclown.com/doc/projects/radio-door-sensor/#flash-door-sensor-firmware.en.md) or [**write your own firmware**](../firmware/basic-overview.md) for the **Core Module**.
 * Check the [**Core Module pinouts**](../hardware/header-pinout.md) and add your own buttons, relays and sensors.
+
 

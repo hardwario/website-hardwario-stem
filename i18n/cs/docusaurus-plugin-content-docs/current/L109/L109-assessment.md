@@ -1,13 +1,14 @@
 ---
 slug: iot-soil-monitor-assessment
-title: Assessment
+title: Hodnocení
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation**: 5 mins
+**Časová dotace**: 5 mins
 
-We will do a 3-2-1 Assessment, i.e. students will state: 
+Provedeme 3-2-1 hodnocení, tzn. studenti uvedou:
 
-* 3 things they didn't know before the lesson 
-* 2 things that were a surprise to them in the topic discussed 
-* 1 thing that is still unclear to them
+* 3 věci, které před lekcí neznali 
+* 2 věci, které byly v rámci projednávaného tématu pro ně překvapením
+* 1 věc, která je jim stále nejasná
+

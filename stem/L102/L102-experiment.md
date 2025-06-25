@@ -4,19 +4,19 @@ title: Experiment
 ---
 import Image from '@theme/IdealImage';
 
-**Time allowance**: 10 min.
+**Time allocation**: 10 min.
 
 ## Experiment 1 - Building TOWER kits
 
-**Time allowance**: 5 min.
+**Time allocation**: 5 min.
 
 ### Experiment description
 
-Several teams of students will use the HARDWARIO kit to build sample kits. A list of these is available in the [online store](https://www.hardwario.store/cz/tower).
+Several teams of students will use the HARDWARIO kit to build sample sets. A list of these is available in the [online store](https://www.hardwario.store/tower).
 
 ## Experiment 2 - Creating flow in Playground
 
-**Time allotment**: 5 min.
+**Time allocation**: 5 min.
 
 ### Experiment description
 

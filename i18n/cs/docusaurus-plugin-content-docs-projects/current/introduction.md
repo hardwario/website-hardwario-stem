@@ -6,4 +6,4 @@ import Image from '@theme/IdealImage';
 
 # Projects Introduction
 
-This part will be populated by projects from [**this old GitHub repository**](https://github.com/hardwario/bc-developers/tree/master/projects)
+Tato část bude naplněna projekty z [**this old GitHub repository**](https://github.com/hardwario/bc-developers/tree/master/projects)

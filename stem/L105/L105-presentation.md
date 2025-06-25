@@ -4,11 +4,8 @@ title: Presentation
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation**: 2H Module: 15 mins. 4H Module: 45 mins. 8H Module: 45 mins.  
-**Keywords**: #21st-century_skills 
+**Time allocation:** 5 minutes
 
-Present your projects or ideas from Ideation. Develop your 21st-century skills, in particular:
+Students present their ideas and projects to their classmates.
 
-1. Critical thinking
-2. Creativity
-3. Cooperation
+They discuss and suggest where IoT Indoor Air Quality Monitoring can be applied in a way that creates something meaningful.

@@ -4,7 +4,6 @@ title: Push the button
 ---
 import Image from '@theme/IdealImage';
 
-
 # Push The Button
 
 **Push Button Kit** can interact with your world. Get phone notification, play next Spotify song, control your smart lights, trigger the egg timer or send a Tweet to the world.

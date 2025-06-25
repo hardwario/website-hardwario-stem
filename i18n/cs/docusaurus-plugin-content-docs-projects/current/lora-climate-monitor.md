@@ -4,47 +4,49 @@ title: Lora Climate monitor
 ---
 import Image from '@theme/IdealImage';
 
-# LoRa Klimatický monitor
+# LoRa Climate Monitor
 
-With this kit, you can measure **temperature**, **humidity**, **luminosity** and **pressure**. Then the values are sent wirelessly to the LoRa gateway.
+S touto sadou můžete měřit **teplotu**, **vlhkost**, **světelnost** a **tlak**. Hodnoty jsou poté bezdrátově odeslány do brány LoRa.
 
-You can use community The Things Network to receive the data.
+K přijímání dat můžete použít komunitu The Things Network.
 
-## What You Will Need
+## Co budete potřebovat
 
-* [Core Module](https://shop.bigclown.com/core-module)
-* [LoRa Module](https://shop.bigclown.com/lora-module)
-* [Mini Battery Module](https://shop.bigclown.com/mini-battery-module)
-* [Climate Module](https://shop.bigclown.com/climate-module)
+* [Core Module](https://www.hardwario.store/p/core-module)
+* [LoRa Module](https://www.hardwario.store/p/lora-module)
+* [Mini Battery Module](https://www.hardwario.store/p/mini-battery-module)
+* [Climate Module](https://www.hardwario.store/p/climate-module)
 
-## Firmware Upload
+## Nahrání firmwaru
 
-### Step 1: Download the latest [**Hardwario Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+### Krok 1: Stáhněte si nejnovější verzi [**Hardwario Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
 
-### Step 2: Connect the Core Module to your computer.
+### Krok 2: Připojte Core module k počítači.
 
-### Step 3: In Playground, go to the **Firmware** tab, select `bcf-lora-climate-monitor` and flash the firmware.
+### Krok 3: V aplikaci Playground přejděte na kartu **Firmware**, vyberte  `bcf-lora-climate-monitor` a nahrajte firmware.
 
-### Step 4: After upload, the red LED on the Core Module will turn on for 2 seconds, then it will turn off.
+### Krok 4: Po nahrání se červená LED dioda na modulu Core Module rozsvítí na 2 sekundy a poté zhasne.
 
 ## LoRa Configuration
 
-For configuring the LoRa keys please follow [LoRa AT Commands Configuration](../tutorials/lora-at-commands-configuration.md) tutorial.
+Pro konfiguraci klíčů LoRa postupujte podle návodu  [LoRa AT Commands Configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/) 
 
-## Transmitting the data
+##  Přenos dat
 
-The LoRa Climate Monitor sends a LoRa packet when:
 
-* After power-up, when the batteries are inserted
-* Every 15 minutes when the measure values are the same
-* After pressing the button
-* When you type `AT$SEND` to the console
+LoRa Climate Monitor odešle packet LoRa v následujících případech:
 
+* Po zapnutí, když jsou vloženy baterie
+* Každých 15 minut, když jsou naměřené hodnoty stejné
+* Po stisknutí tlačítka
+* Když zadáte `AT$SEND` do konzole
+  
 ## Reading the Data
 
-The data are encoded in the LoRa message. You need to extract the right bits to get the values back. This is explained in the [README.md file](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). You can also use the `decode.py`python [script in the repository](https://github.com/bigclownlabs/bcf-lora-climate-monitor). In the same directory there is also `decode.js` which you can use in the TTN backend to decode values and send them for example directly to Ubidots.
 
-You can pass the received HEX string as a parameter for the `decode.py`:
+Data jsou zakódována v zprávě LoRa. Abyste získali hodnoty zpět, musíte extrahovat správné bity. To je vysvětleno v souboru [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py`python [skript v úložišti](https://github.com/bigclownlabs/bcf-lora-climate-monitor).
+
+Přijatý řetězec HEX můžete předat jako parametr pro `decode.py`:
 
 ```text
 >>> python3 decode.py 011b0100f5600024c313

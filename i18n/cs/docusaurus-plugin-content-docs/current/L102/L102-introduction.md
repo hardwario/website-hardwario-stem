@@ -4,7 +4,7 @@ title: Úvod
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **IoT stavebnice HARDWARIO TOWER **je v rámci jedné vyučovací hodiny představit možnosti průmyslové stavebnice určené ke stavění zařízení internetu věcí. V rámci lekce se studenti seznámí s principy fungování a základními moduly stavebnice TOWER a s prací v rámci aplikace Playground. 
+Cílem lekce **IoT stavebnice HARDWARIO TOWER** je v rámci jedné vyučovací hodiny představit možnosti průmyslové stavebnice určené ke stavění zařízení internetu věcí. V rámci lekce se studenti seznámí s principy fungování a základními moduly stavebnice TOWER a s prací v rámci aplikace Playground. 
 
 ## Co budete v rámci lekce potřebovat?
 

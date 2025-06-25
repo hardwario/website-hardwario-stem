@@ -125,6 +125,10 @@ const config = {
                 label: 'Homepage',
                 to: 'https://hardwario.com',
               },
+              {
+                label: 'Store',
+                to: 'https://www.hardwario.store',
+              },
             ],
           },
           {

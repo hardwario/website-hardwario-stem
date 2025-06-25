@@ -1,10 +1,10 @@
-# Projects Overview
+# Přehled projektů
 
-In this category you will find prepared Hardwario projects you can create. Each project has its own pre-build firmware so you just upload firmware.
+V této kategorii najdete připravené projekty Hardwario, které můžete vytvořit. Každý projekt má svůj vlastní předem připravený firmware, takže stačí pouze nahrát firmware.
 
-## Hackster.io External Projects <a id="hackster-io-external-projects"></a>
+## Externí projekty Hackster.io <a id="hackster-io-external-projects"></a>
 
-Many other projects are published on [Hackster.io HARDWARIO Platform Page](https://www.hackster.io/hardwario/projects).
+Mnoho dalších projektů je zveřejněno na [stránce platformy Hackster.io HARDWARIO](https://www.hackster.io/hardwario/projects).
 
 * [Use Android to Flash STM32 Hardwario Modules](https://www.hackster.io/hubmartin/use-android-to-flash-stm32-bigclown-modules-3e03ee)
 * [Easy Mail Box Notification to Your Phone](https://www.hackster.io/hubmartin/easy-mail-box-notification-to-your-phone-fe6169)

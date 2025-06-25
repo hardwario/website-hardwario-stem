@@ -4,7 +4,7 @@ title: Projects
 ---
 import Image from '@theme/IdealImage';
 
-**Time allowance**: 10 min.
+**Time allocation**: 10 min.
 
 Students work in teams to refine the "Weight" experiment in the Playground app:
 

@@ -4,11 +4,6 @@ title: Radio flood detector
 ---
 import Image from '@theme/IdealImage';
 
-
-
-
-
-
 # Radio Flood Detector
 
 This document will guide you through the **Radio Flood Detector** project. You will be able to interact with your flood detector in **Node-RED** and trigger the **IFTTT** push notification service when the water leakage gets detected. You will get the push notification on your smart phone.

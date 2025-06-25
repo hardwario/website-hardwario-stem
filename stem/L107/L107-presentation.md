@@ -1,12 +1,11 @@
 ---
-slug: iot-light-monitor-presentation-cs
-title: Prezentace
+slug: iot-light-monitor-presentation
+title: Presentation
 ---
 import Image from '@theme/IdealImage';
 
-**Časová dotace**: 5 min.
+**Time allocation**: 5 min.
 
-Studenti prezentují své nápady a projekty ostatním studentům. 
+Students present their ideas and projects to their classmates.
 
-Diskutují a navrhují, kde se dá ovládání LED pásku nasadit tak, aby vzniklo něco smysluplného.
-
+They discuss and suggest where LED strip control can be applied to create something meaningful.

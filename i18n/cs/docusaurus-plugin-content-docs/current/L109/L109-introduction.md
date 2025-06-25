@@ -1,18 +1,18 @@
 ---
 slug: iot-soil-monitor-introduction
-title: Introduction
+title: Úvod
 ---
 import Image from '@theme/IdealImage';
 
-The goal of the IoT Soil Monitor lesson is to introduce soil monitoring, especially soil moisture, in one lesson. In the lesson, students will learn the definition of drought, soil water potential and how to measure soil moisture. 
+Cílem lekce **IoT monitor půdy** je představit toto dnes atraktivní téma z vícero pohledů. 
 
-Students will build their own soil capacitance sensor, create graphs of the measured values and a system of colour-coded indications of exceeding the set limits of soil moisture and temperature. 
+Studenti si sami sestaví a naprogramují zařízení k měření teploty a vlhkosti půdy. Na základě praktických experimentů si snáze uvědomí a zapamatují příčiny a důsledky nedostatečné vlhkosti půdy. 
 
-What will you need for the lesson? 
+## Co budete v rámci lekce potřebovat?
 
-* A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed 
-* Projector or larger monitor 
-* [HARDWARIO TOWER IoT Sensor Set](https://www.hardwario.store/p/sensor-set)
-* [Radio Dongle HARDWARIO TOWER](https://www.hardwario.store/p/radio-dongle)
+* Počítač s nainstalovanou aplikací [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) 
+* Projektor nebo větší monitor
+* [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER
+* [Sadu Sensor](https://www.hardwario.store/cz/p/sensor-set) stavebnice HARDWARIO TOWER
 * [Soil Sensor HARDWARIO](https://www.hardwario.store/p/soil-sensor)
-* Water jar or pot with soil
+* Sklenice s vodou, nádoba s hlínou

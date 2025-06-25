@@ -1,15 +1,15 @@
 ---
-slug: iot-vibration-monitor-introduction-cs
-title: Úvod
+slug: iot-light-monitor-introduction-cs
+title: Introduction
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **IoT osvětlení** je představit studentům výhody tzv. chytrého osvětlení, mezi které patří zvýšení pohodlí a hlavně úspory energie. V rámci experimentu si ukážeme vzdálené ovládání světel z chytrého telefonu a přizpůsobení osvětlení aktuálním podmínkám. 
+The goal of the **IoT Light Monitor** lesson is to introduce students to the benefits of so-called smart lighting, which include increased comfort and, above all, energy savings. During the experiment, we will demonstrate remote light control from a smartphone and adjust lighting to current conditions.
 
-## Co budete v rámci lekce potřebovat?
+## What will you need for the lesson?
 
-* Počítač s nainstalovanou aplikací [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
-* Projektor nebo větší monitor
-* [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER
-* [Sadu Control](https://www.hardwario.store/cz/search?phrase=sada%20control) IoT stavebnice HARDWARIO TOWER
-* [LED pásek](https://www.hardwario.store/cz/p/led-strip-rgbw-1m) se 144 ledkami
+* A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed
+* A projector or large monitor
+* [Start Set](https://www.hardwario.store/p/start-set) from the HARDWARIO TOWER IoT kit
+* [Control Set](https://www.hardwario.store/p/control-set) from the HARDWARIO TOWER IoT kit
+* [LED Strip](https://www.hardwario.store/p/led-strip-rgbw-1m) with 144 LEDs

@@ -4,8 +4,7 @@ title: Assessment
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation**: All modules: 5 mins.+ 5 mins. test  
-**Keywords**: #Feedback #Knowledge_test #3-2-1_Countdown #Assessment
+**Time allocation**: 5 mins.
 
 First, give feedback on the lesson. You will pass the knowledge test again to show if the learning objectives have been met. 
 

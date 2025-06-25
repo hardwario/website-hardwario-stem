@@ -1,6 +1,6 @@
 ---
 slug: iot-pulse-monitor-cs
-title: 'Úvod'
+title: 'L108: IoT čítač impulzů'
 ---
 import Image from '@theme/IdealImage';
 

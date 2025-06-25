@@ -1,20 +1,18 @@
 ---
 slug: iot-pulse-monitor-projects-cs
-title: Projekty
+title: Projects
 ---
 import Image from '@theme/IdealImage';
 
-Studenti si zkoušejí další projekty, které jsou svázány s daným tématem, nebo probíhá tzv. **Ideation**
+Students try out additional projects related to the given topic, or participate in so-called **Ideation**.
 
-
-
-## Další projekty s tématem lekce k vyzkoušení
+## Additional topic-related projects to try out
 
 ### Web HARDWARIO
 
 * N/A
 
-### Platforma Hackster.io
+###  Hackster.io Platform
 
 
 <a
@@ -60,7 +58,7 @@ Studenti si zkoušejí další projekty, které jsou svázány s daným tématem
 
 ### Ideation
 
-Studenti navrhují reálné využití znalostí nabytých teoretickým výkladem a experimenty. Nápady zapisují do grafu, kde na ose x se odhaduje náročnost (náklady) projektu a na ose y dopad realizace řešení.
+Students propose real-life applications of the knowledge gained through theoretical explanations and experiments. They record their ideas in a graph, where the x-axis represents the estimated complexity (cost) of the project, and the y-axis represents the impact of implementing the solution.
 
 
 

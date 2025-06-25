@@ -11,7 +11,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'L101: Co je IoT',
+      label: 'L101: What is IoT',
       link: {
         type: 'doc',
         id: 'L101/L101-what-is-iot',
@@ -29,7 +29,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'L102: IoT stavebnice HARDWARIO TOWER',
+      label: 'L102: HARDWARIO TOWER IoT Kit',
       link: {
         type: 'doc',
         id: 'L102/L102-hardwario-tower-iot-kit',
@@ -47,7 +47,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'L103: IoT tlačítko',
+      label: 'L103: IoT Push Button',
       link: {
         type: 'doc',
         id: 'L103/L103-iot-push-button',
@@ -65,7 +65,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'L104: IoT teploměr a vlhkoměr',
+      label: 'L104: IoT Temperature and Humidity Sensor',
       link: {
         type: 'doc',
         id: 'L104/L104-iot-temperature-and-humidity-monitor',
@@ -101,7 +101,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'L106: IoT monitor vibrací',
+      label: 'L106: IoT Vibration Monitor',
       link: {
         type: 'doc',
         id: 'L106/L106-iot-vibration-monitor',
@@ -118,7 +118,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'L107: IoT osvětlení',
+      label: 'L107: IoT Light Monitor',
       link: {
         type: 'doc',
         id: 'L107/L107-iot-light-monitor',
@@ -136,7 +136,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'L108: IoT čítač impulzů',
+      label: 'L108: IoT Pulse Monitor',
       link: {
         type: 'doc',
         id: 'L108/L108-iot-pulse-monitor',

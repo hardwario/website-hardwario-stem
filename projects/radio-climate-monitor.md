@@ -4,8 +4,6 @@ title: Radio climate monitor
 ---
 import Image from '@theme/IdealImage';
 
-
-
 # Radio Climate Monitor
 
 This document will guide you through the **Radio Climate Monitor** project. You will be able to see dashboard with temperature, humidity, ambient light and atmospheric pressure in **Node-RED** and view the data on your smart phone using the **Blynk** cloud and mobile app.

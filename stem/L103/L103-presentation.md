@@ -4,7 +4,7 @@ title: Presentation
 ---
 import Image from '@theme/IdealImage';
 
-**Time allowance**: 5 min.
+**Time allocation**: 5 min.
 
 Students present their ideas and projects to other students.
 

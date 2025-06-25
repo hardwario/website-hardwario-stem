@@ -1,11 +1,11 @@
 ---
 slug: iot-soil-monitor-presentation
-title: Presentation
+title: Prezentace
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation**: 10 mins
+**Časová dotace**: 10 mins
 
-Students present their ideas and projects to other students. 
+Studenti prezentují své nápady a projekty ostatním studentům.
 
-They discuss and suggest where the knowledge and outcomes of the lesson can be used to create something meaningful.
+Diskutují a navrhují, kde by bylo možné využít získané znalosti a výsledky lekce k vytvoření něčeho smysluplného.

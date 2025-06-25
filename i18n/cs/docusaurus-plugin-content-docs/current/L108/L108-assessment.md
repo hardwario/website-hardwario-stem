@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 **Časová dotace**: 5 min.
 
-Provedeme 3-2-1 Assessment, tzn. studenti uvedou:
+Provedeme 3-2-1 hodnocení, tzn. studenti uvedou:
 
 * 3 věci, které před lekcí neznali 
 * 2 věci, které byly v rámci projednávaného tématu pro ně překvapením

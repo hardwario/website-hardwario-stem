@@ -5,11 +5,10 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'STEM',
-    subtitle: 'STEM Learning Platform',
+    title: 'STEM Learning Platform',
     link: '/stem/',
-    src: '/img/stem.png',
-    width: 300,
+    src: 'img/stem-education-overview.png',
+    width: 200,
     height: 200,
     description: (
       <>
@@ -18,11 +17,10 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Projects',
-    subtitle: 'Projects and Tutorials based on HARDWARIO TOWER',
+    title: 'Projects and Tutorials',
     link: '/projects/',
-    src: '/img/projects.png',
-    width: 200,
+    src: 'img/push-the-button_button-garage.webp',
+    width: 300,
     height: 200,
     description: (
       <>
@@ -44,14 +42,10 @@ function Feature({ src, width, height, title, subtitle, link, description }) {
       </div>
       <div className='text--center padding-horiz--md'>
         <Link to={link} className='link-unstyled'>
-          <h2>{title}</h2>
+          <h3>{title}</h3>
           <h3>{subtitle}</h3>
         </Link>
-        <div className={styles.buttons}>
-          <Link className='button button--secondary button--md' to={link}>
-            👉 Go to {title} documentation
-          </Link>
-        </div>
+        
         <p>{description}</p>
       </div>
     </div >
@@ -72,7 +66,7 @@ export default function HomepageFeatures() {
       </section>
       <div className="logo-lbc">
         <h3>Spolufinancováno Libereckým krajem</h3>
-        <a href="https://www.kraj-lbc.cz" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.kraj-lbc.cz" target="_blank" rel="noopener noreferrer" className='logo-img'>
           <img src="/img/liberecky-kraj.svg" alt="LBC Logo" />
         </a>
       </div>

@@ -4,7 +4,6 @@ title: Teorie
 ---
 import Image from '@theme/IdealImage';
 
-
 **Časová dotace:** 10 min.
 
 ## Měření spotřeby energií

@@ -4,42 +4,58 @@ title: Projects
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation**: 2H Module: 15 mins. 4H Module: 45 mins. 8H Module: 3 x 45 mins.  
-**Keywords**: #HARDWARIO #Project #Team_work #Ideation #Brainstorming
+**Time allocation**: 10 mins.
 
-You will work in teams under the supervision of a lecturer on your own projects related to the topic of the lesson. Projects are commissioned in order to build on experiments and to discover new applications and expand your knowledge and skills.
+Students try out additional projects related to the given topic, or participate in an Ideation session.
 
-In the case of the 2H module, we will replace the work on our own projects with Ideation, in which you will propose a real use of the knowledge gained by theoretical explanation and experiments. We write down the ideas in the graph, where on the x-axis you estimate the effort (cost) of the project and on the y-axis the impact of the solution.
+## Additional topic-related projects to try
 
-## Tips for projects in the Apply phase
+### Web HARDWARIO
 
-* Integration with LED strip and Power module
-* Playground replacement for the Python script
-* Modelling and printing the box on a 3D printer
-* Integration with Microsoft Excel
-* Integration with Microsoft Azure platform
-* Integration with AWS platform
-* Integration with Grafana
-* Integration with Google Assistant
-* Integration with Alexa
+* N/A
 
-## Project Assignment for Apply phase: Integration with LED strip and Power Module
+### Hackster.io Platform
 
-### Project Description
+<a
+  href="https://www.hackster.io/164810/stop-the-mold-with-hardwario-iot-kit-climate-module-d01b1f"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    textDecoration: 'none',
+    color: 'inherit'
+  }}
+>
+  <div
+    style={{
+      border: '1px solid #eee',
+      borderRadius: '8px',
+      padding: '12px',
+      marginBottom: '10px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      transition: 'color 0.3s',
+      cursor: 'pointer'
+    }}
+    onMouseEnter={e => {
+      e.currentTarget.style.color = 'rgb(227, 3, 39)';
+    }}
+    onMouseLeave={e => {
+      e.currentTarget.style.color = 'inherit';
+    }}
+  >
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div>
+        <strong>Stop the Mold with HARDWARIO IoT Kit Climate Module</strong>
+        <br />
+        <small>Hackster.io</small>
+      </div>
+    </div>
+    <div style={{ fontSize: '1.5em' }}>›</div>
+  </div>
+</a>
 
-The project deals with integration with another module of the kit - Power Module and visual notification of CO2 concentration on the connected LED strip.
 
-## Project Assignment for Apply phase: Playgroundu replacement for the Python script
+### Ideation
 
-### Project Description
-
-The project deals with Node-RED flow replacement for Python script. Here is a sample code that will provide visual notification of the exceeded CO2 concentration on the attached LED strip.
-
-## Project Assignment for Apply phase: Modeling and printing the enclosure on a 3D printer
-
-### Project Description
-
-In this experiment, we print the enclosure used in the CO2 monitor on a 3D printer. STL models can be found here:
-
-* [Bottom part](https://github.com/hardwario/twr-enclosures/blob/main/doc/hwe201.png)
-* [Top part](https://github.com/hardwario/twr-enclosures/blob/main/doc/hwe201.png)
+Students propose real-life applications of the knowledge gained through theoretical explanation and experiments. They record their ideas in a graph, where the x-axis represents the estimated complexity (cost) of the project and the y-axis represents the impact of implementing the solution.

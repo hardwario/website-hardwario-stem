@@ -4,7 +4,7 @@ title: Experiment
 ---
 import Image from '@theme/IdealImage';
 
-**Time allotment**: 10 min. 
+**Time allocation**: 10 min. 
 
 ## Universal IoT button
 
@@ -17,7 +17,6 @@ As part of the experiment, we will understand
 * how easy it is to work with the IoT kit HARDWARIO TOWER
 
 ### Steps of the experiment
-1. Button assembly 
 
 #### Button assembly 
 

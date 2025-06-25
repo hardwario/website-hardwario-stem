@@ -1,10 +1,10 @@
 ---
 slug: what-is-iot-application-cs
-title: Projekty
+title: Projects
 ---
 import Image from '@theme/IdealImage';
 
-**Time allotment**: 10 min. 
+**Time allocation**: 10 min. 
 
 In groups, students will prepare presentations of the technologies used in the IoT button. They draw information from the Internet.
 * MCU (microcontroller) - what it is and how it works
