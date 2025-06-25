@@ -27,7 +27,7 @@ The IoT button is used in many fields and everyday situations:
 
 ### Work
 
-* Reporting production status – e.g. the [ANDON](https://cs.wikipedia.org/wiki/Andon) system
+* Reporting production status – e.g. the [ANDON](https://en.wikipedia.org/wiki/Andon_(manufacturing)) system
 * Reporting a request – e.g. summoning maintenance to a workstation
 * Recording operations – e.g. logging defective products
 

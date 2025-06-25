@@ -10,4 +10,4 @@ The goal of the **IoT Vibration Monitor** lesson is to introduce students to one
 
 * A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed
 * A projector or large monitor
-* [Start Set](https://www.hardwario.store/cz/p/start-set) from the HARDWARIO TOWER IoT kit
+* [Start Set](https://www.hardwario.store/p/start-set) from the HARDWARIO TOWER IoT kit

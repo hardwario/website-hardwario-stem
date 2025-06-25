@@ -14,7 +14,7 @@ import Image from '@theme/IdealImage';
 
 The **dew point** is the temperature at which the air is fully saturated with water vapor (relative humidity reaches 100%)
 
-Zdroj: https://cs.wikipedia.org/wiki/Vlhkost_vzduchu
+Zdroj: https://en.wikipedia.org/wiki/Humidity#Relative_humidity
 
 ## Effect of Humidity on Health
 

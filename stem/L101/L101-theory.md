@@ -140,7 +140,7 @@ We already know what language IoT devices use to communicate with each other and
 
 #### Local wireless transmissions
 
-In the IoT world, commonly known standards such as Wi-Fi or Bluetooth are used for local wireless transmissions. There are also special wireless technologies such as [ZigBee](https://cs.wikipedia.org/wiki/ZigBee) or [Z-Wave](https://en.wikipedia.org/wiki/Z-Wave) that have their own communication protocols. An important aspect for wireless transmissions is the choice of frequency band. This affects the quality of the transmission - range, reliability and power consumption.
+In the IoT world, commonly known standards such as Wi-Fi or Bluetooth are used for local wireless transmissions. There are also special wireless technologies such as [ZigBee](https://en.wikipedia.org/wiki/Zigbee) or [Z-Wave](https://en.wikipedia.org/wiki/Z-Wave) that have their own communication protocols. An important aspect for wireless transmissions is the choice of frequency band. This affects the quality of the transmission - range, reliability and power consumption.
 
 For IoT devices, which usually do not transmit large data, wireless transmissions in the so-called Sub-GHz band are most suitable. In this band, unlicensed frequencies are reserved for this purpose, e.g. 868 MHz for the EU. Compared to Wi-Fi (operating at 2.4 and 5 GHz), Sub-GHz has almost twice the range, higher reliability (due to lower frequency and fewer devices using this band) and significantly lower power requirements, i.e. lower power consumption. It is therefore suitable for battery-powered devices such as the HARDWARIO TOWER kit.
 
@@ -159,4 +159,4 @@ Samples
 
 ### Wired transmissions
 
-Of course, data from IoT devices can also be transmitted by wire. If conditions allow, you can connect your IoT device to the Internet via Ethernet. However, we more often see a solution where individual IoT devices are wired to the Hub, which is then connected to the Internet. In such cases, standards are used [I²C](https://cs.wikipedia.org/wiki/I%C2%B2C), [1-Wire](https://cs.wikipedia.org/wiki/1-Wire), [RS-232](https://cs.wikipedia.org/wiki/RS-232), [RS485](https://cs.wikipedia.org/wiki/RS-485).
+Of course, data from IoT devices can also be transmitted by wire. If conditions allow, you can connect your IoT device to the Internet via Ethernet. However, we more often see a solution where individual IoT devices are wired to the Hub, which is then connected to the Internet. In such cases, standards are used [I²C](https://en.wikipedia.org/wiki/I%c2%b2C), [1-Wire](https://en.wikipedia.org/wiki/1-Wire), [RS-232](https://en.wikipedia.org/wiki/RS-232), [RS485](https://en.wikipedia.org/wiki/RS-485).

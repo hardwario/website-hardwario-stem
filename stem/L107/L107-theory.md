@@ -8,26 +8,26 @@ import Image from '@theme/IdealImage';
 
 ## Light
 
-Light is the visible part o [electromagnetic radiation](https://cs.wikipedia.org/wiki/Elektromagnetick%C3%A9_z%C3%A1%C5%99en%C3%AD)**.
-JIts **[frekvency](https://cs.wikipedia.org/wiki/Frekvence)** ranges approximately between 3.9×10¹⁴ and 7.9×10¹⁴ Hz, which corresponds to wavelengths in a vacuum from 390 to 760 [nm](https://cs.wikipedia.org/wiki/Metr#D%C3%ADly_metru)**. 
+Light is the visible part o [electromagnetic radiation](https://en.wikipedia.org/wiki/Electromagnetic_radiation)**.
+JIts **[frekvency](https://en.wikipedia.org/wiki/Frequency)** ranges approximately between 3.9×10¹⁴ and 7.9×10¹⁴ Hz, which corresponds to wavelengths in a vacuum from 390 to 760 [nm](https://en.wikipedia.org/wiki/Metre)**. 
 
-This range lies between [ultraviolet](https://cs.wikipedia.org/wiki/Ultrafialov%C3%A9_z%C3%A1%C5%99en%C3%AD) (UV) and [infrared](https://cs.wikipedia.org/wiki/Infra%C4%8Derven%C3%A9_z%C3%A1%C5%99en%C3%AD) (IR) radiation.
+This range lies between [ultraviolet](https://en.wikipedia.org/wiki/Ultraviolet) (UV) and [infrared](https://en.wikipedia.org/wiki/Infrared) (IR) radiation.
 A broader spectrum extending into UV and IR is also considered light in some scientific fields.
 
 Light can be described in several ways:
 
-- **[Photometrically](https://cs.wikipedia.org/wiki/Fotometrie)**: by [luminance](https://cs.wikipedia.org/wiki/Sv%C3%ADtivost) or [luminous flux](https://cs.wikipedia.org/wiki/Sv%C4%9Bteln%C3%BD_tok)
-- **[Colorimetrically](https://cs.wikipedia.org/wiki/Kolorimetrie)**: by color and [spectrum](https://cs.wikipedia.org/wiki/Frekvence)
-- **By [coherence](https://cs.wikipedia.org/wiki/Koherence_(vln%C4%9Bn%C3%AD))** and **[polarization](https://cs.wikipedia.org/wiki/Polarizace_(elektrodynamika))**
+- **[Photometrically](https://en.wikipedia.org/wiki/Photometry_(optics))**: by [luminance](https://en.wikipedia.org/wiki/Luminance) or [luminous flux](https://en.wikipedia.org/wiki/Luminous_flux)
+- **[Colorimetrically](https://en.wikipedia.org/wiki/Colorimetry)**: by color and [spectrum](https://en.wikipedia.org/wiki/Frequency)
+- **By [coherence](https://en.wikipedia.org/wiki/Coherence)** and **[polarization](https://en.wikipedia.org/wiki/Polarization_(waves))**
 
 
 :::info
 These properties determine how light behaves during reflection, refraction, passage through materials, interference, and diffraction.
 :::
 
-Due to wave–particle duality, light exhibits the properties of both **[particles](https://cs.wikipedia.org/wiki/%C4%8C%C3%A1stice)** i **[waves](https://cs.wikipedia.org/wiki/Vln%C4%9Bn%C3%AD)**.
+Due to wave–particle duality, light exhibits the properties of both **[particles](https://en.wikipedia.org/wiki/Particle)** and **[waves](https://en.wikipedia.org/wiki/Wave)**.
 
-Different light frequencies are perceived as different [colors](https://cs.wikipedia.org/wiki/Barva): from **[red](https://cs.wikipedia.org/wiki/%C4%8Cerven%C3%A1)** (lowest frequency, longest wavelength) to **[violet](https://cs.wikipedia.org/wiki/Fialov%C3%A1)** (highest frequency, shortest wavelength).
+Different light frequencies are perceived as different [colors](https://en.wikipedia.org/wiki/Color): from **[red](https://en.wikipedia.org/wiki/Red)** (lowest frequency, longest wavelength) to **[violet](https://en.wikipedia.org/wiki/Violet_(color))** (highest frequency, shortest wavelength).
 
 <div class="container">
   <div class="row">
@@ -35,8 +35,8 @@ Different light frequencies are perceived as different [colors](https://cs.wikip
   </div>
 </div>
 
-On the shortwave side beyond visible light lies **[UV radiation](https://cs.wikipedia.org/wiki/Ultrafialov%C3%A9_z%C3%A1%C5%99en%C3%AD)**, which affects human skin and causes **[tanning](https://cs.wikipedia.org/wiki/Opalov%C3%A1n%C3%AD)**.
-On the opposite side is **[IR radiation](https://cs.wikipedia.org/wiki/Infra%C4%8Derven%C3%A9_z%C3%A1%C5%99en%C3%AD)** – invisible to the human eye, but we feel its **[heat](https://cs.wikipedia.org/wiki/Teplo)** through skin receptors.
+On the shortwave side beyond visible light lies **[UV radiation](https://en.wikipedia.org/wiki/Ultraviolet)**, which affects human skin and causes **[tanning](https://en.wikipedia.org/wiki/Sun_tanning)**.
+On the opposite side is **[IR radiation](https://en.wikipedia.org/wiki/Infrared)** – invisible to the human eye, but we feel its **[heat](https://en.wikipedia.org/wiki/Heat)** through skin receptors.
 
 ---
 
@@ -55,8 +55,8 @@ Besides the amount of light, the **color of light** is also important. There are
 
 ## RGB
 
-**[RGB](https://cs.wikipedia.org/wiki/RGB)** is a color model that uses three primary colors: **red, green, and blue**.
-For example, it is used for **emissive color mixing** in monitors and projectors. Unlike the **[CMYK](https://cs.wikipedia.org/wiki/CMYK)** model, RGB does not require external light – the device emits light on its own.
+**[RGB](https://en.wikipedia.org/wiki/RGB_color_model)** is a color model that uses three primary colors: **red, green, and blue**.
+For example, it is used for **emissive color mixing** in monitors and projectors. Unlike the **[CMYK](https://en.wikipedia.org/wiki/CMYK_color_model)** model, RGB does not require external light – the device emits light on its own.
 
 Typical wavelengths:
 
@@ -81,6 +81,6 @@ Colors are created by mixing the intensity of these components:
 
 ### Sources
 
-- [Wikipedia – Light](https://cs.wikipedia.org/wiki/Světlo)  
-- [Wikipedia – RGB](https://cs.wikipedia.org/wiki/RGB)  
+- [Wikipedia – Light](https://en.wikipedia.org/wiki/Light)  
+- [Wikipedia – RGB](https://en.wikipedia.org/wiki/RGB_color_model)  
 - [ASB Portal – Lighting Comfort](https://www.asb-portal.cz/stavebnictvi/technicka-zarizeni-budov/osvetleni-a-elektroinstalace/svetelna-pohoda-ve-vnitrnim-prostredi)
