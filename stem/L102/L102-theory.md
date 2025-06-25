@@ -6,18 +6,18 @@ import Image from '@theme/IdealImage';
 
 **Time allocation**: 10 min.
 
-## TOWER kit description
+## TOWER set description
 
-The **HARDWARIO TOWER** is a kit of electronic components that find application in Internet of Things (IoT), Industry 4.0 and home automation projects.
+The **HARDWARIO TOWER** is a set of electronic components that find application in Internet of Things (IoT), Industry 4.0 and home automation projects.
 
-### Main advantages of the TOWER kit
+### Main advantages of the TOWER set
 
 * Plug&Make system, thanks to which the elements are built without soldering and wiring - [video guide](https://www.youtube.com/watch?v=OCPPKXzCBg0)
 * Wireless solution with very low power consumption, making installation easy and units can run on batteries for several years
 * Open-source approach allowing integration with other platforms - [github](https://github.com/hardwario)
 * Sample firmware for immediate use - [github](https://github.com/hardwario)
 * Wide portfolio of 3D printer case models, including an available 3D printing service - [store](https://www.hardwario.store/)
-* Detailed instructions and technical support to help customers with the kit - [Documentation](https://docs.hardwario.com/tower/) and [forum](https://forum.hardwario.com/)
+* Detailed instructions and technical support to help customers with the set - [Documentation](https://docs.hardwario.com/tower/) and [forum](https://forum.hardwario.com/)
 
 ### Communication options
 
@@ -36,11 +36,11 @@ The **HARDWARIO TOWER** is a kit of electronic components that find application 
 
 ## Playground app description
 
-**HARDWARIO Playground** is an application for uploading firmware, pairing assemblies and programming functions of the HARDWARIO TOWER IoT kit. It is available for computers with Windows, Linux, Ubuntu and Apple macOS operating systems.
+**HARDWARIO Playground** is an application for uploading firmware, pairing assemblies and programming functions of the HARDWARIO TOWER IoT set. It is available for computers with Windows, Linux, Ubuntu and Apple macOS operating systems.
 
 In **HARDWARIO Playground** you can:
 
-* connect your box - IoT kit to your computer,
+* connect your box - IoT set to your computer,
 * customize and set the functions of your IoT box,
 * upload firmware to your build (if you don't know what that is, check out [here](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/))
 * or see what your report is doing in clear graphs and visualisations.

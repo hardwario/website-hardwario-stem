@@ -4,9 +4,6 @@ title: Radio motion detector
 ---
 import Image from '@theme/IdealImage';
 
-
-
-
 # Radio Motion Detector
 
 This document will guide you through the **Radio Motion Detector** project. You will be able to interact with your motion detector in **Node-RED** and trigger the **IFTTT** push notification service when the movement gets detected. You will get the push notification on your smart phone.

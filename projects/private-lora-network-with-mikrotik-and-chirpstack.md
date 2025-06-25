@@ -4,7 +4,6 @@ title: Private lora network
 ---
 import Image from '@theme/IdealImage';
 
-
 # Private LoRa network with Mikrotik & ChirpStack
 
 This tutorial explains how to set-up private LoRaWAN network with Mikrotik wAP LR8 kit and ChirpStack running on any Linux computer.

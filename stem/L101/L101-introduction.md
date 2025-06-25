@@ -8,6 +8,6 @@ The aim of the lesson **What is the Internet of Things - IoT** is to introduce t
 
 ## What will you need for the lesson?
 
-* A computer with the [HARDWARIO Playground] application installed(https://github.com/hardwario/hardwario-playground/releases)
+* A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed
 * Projector or larger monitor
 * [Start Set](https://www.hardwario.store/p/start-set) IoT kit HARDWARIO TOWER

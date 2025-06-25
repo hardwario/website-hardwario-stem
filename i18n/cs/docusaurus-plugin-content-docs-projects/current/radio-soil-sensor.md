@@ -4,8 +4,6 @@ title: Radio soil sensor
 ---
 import Image from '@theme/IdealImage';
 
-
-
 # Radio Soil Sensor
 
 This document will guide you through the **Radio Soil Sensor** project. You will be able to see, save and analyze moisture level and temperature in **Node-RED** and **Grafana** visualization tool.

@@ -4,9 +4,6 @@ title: Radio voc sensor
 ---
 import Image from '@theme/IdealImage';
 
-
-
-
 # Radio VOC sensor
 
 This document will guide you through the **Radio VOC sensor** project. You will be able to see dashboard with TVOC, temperature and humidity in **Node-RED**.

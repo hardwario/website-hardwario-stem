@@ -14,10 +14,10 @@ Drought is difficult to define because its meaning varies from region to region.
 
 Droughts are divided into four types: 
 
-* Meteorological - negative deviation of rainfall from normal over a period of time.
-* Agricultural - soil drought, lack of moisture for crops 
-* Hydrological - significant reduction in water levels 
-* Socio-economic - impacts of drought on quality of life 
+* **Meteorological** - negative deviation of rainfall from normal over a period of time.
+* **Agricultural** - soil drought, lack of moisture for crops 
+* **Hydrological** - significant reduction in water levels 
+* **Socio-economic** - impacts of drought on quality of life 
 
 On the other hand, high soil moisture can also cause problems. For example, waterlogged soil complicates agricultural work during sowing or harvesting. It is therefore important to monitor the soil and especially soil moisture. With IoT monitoring, for example, we can irrigate more precisely and thus increase crop yields while saving water. 
 

@@ -5,7 +5,6 @@ title: Experiment
 import Image from '@theme/IdealImage';
 
 **Time allocation:** 2H Module: 15 mins. 4H Module: 45 mins. 8H Module: 3 x 45 mins.  
-**Keywords:** #HARDWARIO #Google_Sheets #Indoor_air_quality #Python #3D_print
 
 ## Experiment 1 - Indoor Air Quality Monitor
 
