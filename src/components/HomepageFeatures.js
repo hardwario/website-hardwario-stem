@@ -8,8 +8,8 @@ const FeatureList = [
   {
     title: <Translate>STEM Learning Platform</Translate>,
     link: '/stem/',
-    src: 'img/stem-education-overview.png',
-    width: 200,
+    src: 'img/STEM-hero.jpg',
+    width: 'auto',
       height: 200,
         description: (
           <Translate>
@@ -20,14 +20,14 @@ const FeatureList = [
 {
   title: 'Projects and Tutorials',
     link: '/projects/',
-      src: 'img/push-the-button_button-garage.webp',
-        width: 300,
-          height: 200,
-            description: (
-              <>
-                Explore a collection of projects and tutorials based on HARDWARIO TOWER, designed to inspire and educate.
-              </>
-            ),
+    src: 'img/push-the-button_button-garage.webp',
+    width: 'auto',
+    height: 200,
+    description: (
+      <>
+        Explore a collection of projects and tutorials based on HARDWARIO TOWER, designed to inspire and educate.
+      </>
+    ),
   },
 ];
 
@@ -36,9 +36,9 @@ function Feature({ src, width, height, title, subtitle, link, description }) {
     <div className={clsx('col col--3')}>
       <div className="text--center">
         <Link to={link}>
-          {/*
-          <img src={src} width={width} height={height} />
-          */}
+          {
+          <img className='feature-image' src={src} width={width} height={height} />
+          }
         </Link>
       </div>
       <div className='text--center padding-horiz--md'>

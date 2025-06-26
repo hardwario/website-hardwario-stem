@@ -56,6 +56,10 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   margin-top: 25px;
 }
 
+.feature-image {
+  border-radius: 25px;
+}
+
 .logo-lbc {
   margin: 1.5rem auto;
   display: flex;
