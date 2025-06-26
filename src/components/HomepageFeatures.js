@@ -7,7 +7,7 @@ const FeatureList = [
   {
     title: 'STEM Learning Platform',
     link: '/stem/',
-    src: 'img/stem-education-overview.png',
+    src: 'img/STEM-hero.jpg',
     width: 200,
     height: 200,
     description: (
@@ -36,7 +36,7 @@ function Feature({ src, width, height, title, subtitle, link, description }) {
       <div className="text--center">
         <Link to={link}>
           {/*
-          <img src={src} width={width} height={height} />
+          <img className='feature-image' src={src} width={width} height={height} />
           */}
         </Link>
       </div>
