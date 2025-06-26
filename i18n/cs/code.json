@@ -331,7 +331,7 @@
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
-    "message": "Try again",
+    "message": "Zkusit znovu",
     "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.common.skipToMainContent": {
@@ -354,7 +354,7 @@
   "Explore a collection of projects and tutorials based on HARDWARIO TOWER, designed to inspire and educate.": {
     "message": "Prozkoumejte sbírku projektů a návodů založených na HARDWARIO TOWER, navrženou tak, aby inspirovala a vzdělávala."
   },
-  "Spolufinancováno Libereckým krajem": {
+  "Co-financed by the Liberec Region": {
     "message": "Spolufinancováno Libereckým krajem"
   }
 }
