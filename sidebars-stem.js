@@ -170,6 +170,7 @@ const sidebars = {
         'L109/L109-assessment'
       ],
     },
+    /*
     {
       type: 'doc',
       id: 'L110-iot-alarm',
@@ -195,7 +196,7 @@ const sidebars = {
       id: 'L114-iot-gps-locator',
       label: 'L114: IoT GPS lokátor',
     },
-
+    */
     /*{
       type: 'category',
       label: 'Thingsboard',
