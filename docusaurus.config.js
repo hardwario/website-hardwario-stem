@@ -166,7 +166,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} HARDWARIO a.s. Spolufinancováno Libereckým krajem. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} HARDWARIO a.s. Co-financed by the Liberec Region. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

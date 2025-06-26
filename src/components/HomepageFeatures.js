@@ -18,15 +18,15 @@ const FeatureList = [
         ),
   },
 {
-  title: 'Projects and Tutorials',
+  title: <Translate>Projects and Tutorials</Translate>,
     link: '/projects/',
     src: 'img/push-the-button_button-garage.webp',
     width: 'auto',
     height: 200,
     description: (
-      <>
+      <Translate>
         Explore a collection of projects and tutorials based on HARDWARIO TOWER, designed to inspire and educate.
-      </>
+      </Translate>
     ),
   },
 ];
@@ -66,7 +66,7 @@ export default function HomepageFeatures() {
         </div>
       </section>
       <div className="logo-lbc">
-        <h3>Spolufinancováno Libereckým krajem</h3>
+        <h3><Translate>Co-financed by the Liberec Region</Translate></h3>
         <a href="https://www.kraj-lbc.cz" target="_blank" rel="noopener noreferrer" className='logo-img'>
           <img src="/img/liberecky-kraj.svg" alt="LBC Logo" />
         </a>

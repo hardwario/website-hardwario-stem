@@ -19,8 +19,8 @@
     "message": "L104: IoT teploměr a vlhkoměr",
     "description": "The label for category L104: IoT teploměr a vlhkoměr in sidebar docs"
   },
-  "sidebar.docs.category.L105: IoT Air Quality Monitor": {
-    "message": "L105: IoT Air Quality Monitor",
+  "sidebar.docs.category.L105: IoT monitor kvality vnitřního klimatu": {
+    "message": "L105: IoT monitor kvality vnitřního klimatu",
     "description": "The label for category L105: IoT Air Quality Monitor in sidebar docs"
   },
   "sidebar.docs.category.L106: IoT monitor vibrací": {
@@ -35,8 +35,8 @@
     "message": "L108: IoT čítač impulzů",
     "description": "The label for category L108: IoT čítač impulzů in sidebar docs"
   },
-  "sidebar.docs.category.L109: IoT Soil Monitor": {
-    "message": "L109: IoT Soil Monitor",
+  "sidebar.docs.category.L109: IoT monitor půdy": {
+    "message": "L109: IoT monitor půdy",
     "description": "The label for category L109: IoT Soil Monitor in sidebar docs"
   },
   "sidebar.docs.doc.L110: IoT Alarm": {
@@ -60,31 +60,39 @@
     "description": "The label for the doc item L114: IoT GPS lokátor in sidebar docs, linking to the doc L114-iot-gps-locator"
   },
   "sidebar.docs.category.L101: What is IoT": {
-    "message": "L101: What is IoT",
+    "message": "L101: Co je IoT",
     "description": "The label for category L101: What is IoT in sidebar docs"
   },
   "sidebar.docs.category.L102: HARDWARIO TOWER IoT Kit": {
-    "message": "L102: HARDWARIO TOWER IoT Kit",
+    "message": "L102: IoT stavebnice HARDWARIO TOWER",
     "description": "The label for category L102: HARDWARIO TOWER IoT Kit in sidebar docs"
   },
   "sidebar.docs.category.L103: IoT Push Button": {
-    "message": "L103: IoT Push Button",
+    "message": "L103: IoT tlačítko",
     "description": "The label for category L103: IoT Push Button in sidebar docs"
   },
   "sidebar.docs.category.L104: IoT Temperature and Humidity Sensor": {
-    "message": "L104: IoT Temperature and Humidity Sensor",
+    "message": "L104: IoT teploměr a vlhkoměr",
     "description": "The label for category L104: IoT Temperature and Humidity Sensor in sidebar docs"
   },
+  "sidebar.docs.category.L105: IoT Air Quality Monitor": {
+    "message": "L105: IoT monitor kvality vnitřního klimatu",
+    "description": "The label for category L105: IoT Air Quality Monitor in sidebar docs"
+  },
   "sidebar.docs.category.L106: IoT Vibration Monitor": {
-    "message": "L106: IoT Vibration Monitor",
+    "message": "L106: IoT monitor vibrací",
     "description": "The label for category L106: IoT Vibration Monitor in sidebar docs"
   },
   "sidebar.docs.category.L107: IoT Light Monitor": {
-    "message": "L107: IoT Light Monitor",
+    "message": "L107: IoT osvětlení",
     "description": "The label for category L107: IoT Light Monitor in sidebar docs"
   },
   "sidebar.docs.category.L108: IoT Pulse Monitor": {
-    "message": "L108: IoT Pulse Monitor",
+    "message": "L108: IoT čítač impulzů",
     "description": "The label for category L108: IoT Pulse Monitor in sidebar docs"
+  },
+  "sidebar.docs.category.L109: IoT Soil Monitor": {
+    "message": "L109: IoT monitor půdy",
+    "description": "The label for category L109: IoT Soil Monitor in sidebar docs"
   }
 }
