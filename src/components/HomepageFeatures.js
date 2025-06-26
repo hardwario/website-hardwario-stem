@@ -8,7 +8,7 @@ const FeatureList = [
     title: 'STEM Learning Platform',
     link: '/stem/',
     src: 'img/STEM-hero.jpg',
-    width: 200,
+    width: 'auto',
     height: 200,
     description: (
       <>
@@ -20,7 +20,7 @@ const FeatureList = [
     title: 'Projects and Tutorials',
     link: '/projects/',
     src: 'img/push-the-button_button-garage.webp',
-    width: 300,
+    width: 'auto',
     height: 200,
     description: (
       <>
@@ -35,9 +35,9 @@ function Feature({ src, width, height, title, subtitle, link, description }) {
     <div className={clsx('col col--3')}>
       <div className="text--center">
         <Link to={link}>
-          {/*
+          {
           <img className='feature-image' src={src} width={width} height={height} />
-          */}
+          }
         </Link>
       </div>
       <div className='text--center padding-horiz--md'>
