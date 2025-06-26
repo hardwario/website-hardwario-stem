@@ -341,5 +341,11 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tagy",
     "description": "The title of the tag list page"
+  },
+  "STEM Learning Platform": {
+    "message": "STEM Platforma pro vzdělávání"
+  },
+  "Browse our STEM learning platform for schools and other educational institutions.": {
+    "message": "Prozkoumejte naši STEM platformu pro školy a další vzdělávací instituce."
   }
 }

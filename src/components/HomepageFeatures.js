@@ -2,31 +2,32 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
+import Translate from '@docusaurus/Translate';
 
 const FeatureList = [
   {
-    title: 'STEM Learning Platform',
+    title: <Translate>STEM Learning Platform</Translate>,
     link: '/stem/',
     src: 'img/stem-education-overview.png',
     width: 200,
-    height: 200,
-    description: (
-      <>
-        Browse our STEM learning platform for schools and other educational institutions.
-      </>
-    ),
+      height: 200,
+        description: (
+          <Translate>
+            Browse our STEM learning platform for schools and other educational institutions.
+          </Translate>
+        ),
   },
-  {
-    title: 'Projects and Tutorials',
+{
+  title: 'Projects and Tutorials',
     link: '/projects/',
-    src: 'img/push-the-button_button-garage.webp',
-    width: 300,
-    height: 200,
-    description: (
-      <>
-        Explore a collection of projects and tutorials based on HARDWARIO TOWER, designed to inspire and educate.
-      </>
-    ),
+      src: 'img/push-the-button_button-garage.webp',
+        width: 300,
+          height: 200,
+            description: (
+              <>
+                Explore a collection of projects and tutorials based on HARDWARIO TOWER, designed to inspire and educate.
+              </>
+            ),
   },
 ];
 
@@ -45,7 +46,7 @@ function Feature({ src, width, height, title, subtitle, link, description }) {
           <h3>{title}</h3>
           <h3>{subtitle}</h3>
         </Link>
-        
+
         <p>{description}</p>
       </div>
     </div >

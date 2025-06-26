@@ -41,22 +41,50 @@
   },
   "sidebar.docs.doc.L110: IoT Alarm": {
     "message": "L110: IoT Alarm",
-    "description": "The label for the doc item L110: IoT Alarm in sidebar docs, linking to the doc L110-iot-alarm-cs"
+    "description": "The label for the doc item L110: IoT Alarm in sidebar docs, linking to the doc L110-iot-alarm"
   },
   "sidebar.docs.doc.L111: IoT termostat": {
     "message": "L111: IoT termostat",
-    "description": "The label for the doc item L111: IoT termostat in sidebar docs, linking to the doc L111-iot-thermostat-cs"
+    "description": "The label for the doc item L111: IoT termostat in sidebar docs, linking to the doc L111-iot-thermostat"
   },
   "sidebar.docs.doc.L112: IoT ovladač": {
     "message": "L112: IoT ovladač",
-    "description": "The label for the doc item L112: IoT ovladač in sidebar docs, linking to the doc L112-iot-controller-cs"
+    "description": "The label for the doc item L112: IoT ovladač in sidebar docs, linking to the doc L112-iot-controller"
   },
   "sidebar.docs.doc.L113: IoT displej": {
     "message": "L113: IoT displej",
-    "description": "The label for the doc item L113: IoT displej in sidebar docs, linking to the doc L113-iot-display-cs"
+    "description": "The label for the doc item L113: IoT displej in sidebar docs, linking to the doc L113-iot-display"
   },
   "sidebar.docs.doc.L114: IoT GPS lokátor": {
     "message": "L114: IoT GPS lokátor",
-    "description": "The label for the doc item L114: IoT GPS lokátor in sidebar docs, linking to the doc L114-iot-gps-locator-cs"
+    "description": "The label for the doc item L114: IoT GPS lokátor in sidebar docs, linking to the doc L114-iot-gps-locator"
+  },
+  "sidebar.docs.category.L101: What is IoT": {
+    "message": "L101: What is IoT",
+    "description": "The label for category L101: What is IoT in sidebar docs"
+  },
+  "sidebar.docs.category.L102: HARDWARIO TOWER IoT Kit": {
+    "message": "L102: HARDWARIO TOWER IoT Kit",
+    "description": "The label for category L102: HARDWARIO TOWER IoT Kit in sidebar docs"
+  },
+  "sidebar.docs.category.L103: IoT Push Button": {
+    "message": "L103: IoT Push Button",
+    "description": "The label for category L103: IoT Push Button in sidebar docs"
+  },
+  "sidebar.docs.category.L104: IoT Temperature and Humidity Sensor": {
+    "message": "L104: IoT Temperature and Humidity Sensor",
+    "description": "The label for category L104: IoT Temperature and Humidity Sensor in sidebar docs"
+  },
+  "sidebar.docs.category.L106: IoT Vibration Monitor": {
+    "message": "L106: IoT Vibration Monitor",
+    "description": "The label for category L106: IoT Vibration Monitor in sidebar docs"
+  },
+  "sidebar.docs.category.L107: IoT Light Monitor": {
+    "message": "L107: IoT Light Monitor",
+    "description": "The label for category L107: IoT Light Monitor in sidebar docs"
+  },
+  "sidebar.docs.category.L108: IoT Pulse Monitor": {
+    "message": "L108: IoT Pulse Monitor",
+    "description": "The label for category L108: IoT Pulse Monitor in sidebar docs"
   }
 }

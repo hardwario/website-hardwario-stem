@@ -42,5 +42,9 @@
   "copyright": {
     "message": "Copyright © 2025 HARDWARIO a.s. Spolufinancováno Libereckým krajem. Built with Docusaurus.",
     "description": "The footer copyright"
+  },
+  "link.item.label.Store": {
+    "message": "Store",
+    "description": "The label of footer link with label=Store linking to https://www.hardwario.store"
   }
 }
