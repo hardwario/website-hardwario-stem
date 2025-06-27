@@ -40,7 +40,7 @@
     "description": "The label of footer link with label=GitLab linking to https://gitlab.hardwario.com"
   },
   "copyright": {
-    "message": "Copyright © 2025 HARDWARIO a.s. Spolufinancováno Libereckým krajem. Built with Docusaurus.",
+    "message": "Copyright © 2025 HARDWARIO a.s. Co-financed by the Liberec Region. Built with Docusaurus.",
     "description": "The footer copyright"
   }
 }
