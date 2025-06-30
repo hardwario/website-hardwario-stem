@@ -1,6 +1,6 @@
 ---
 slug: private-lora-network-with-mikrotik-and-chirpstack
-title: Private lora network
+title: Soukromá LoRa síť
 ---
 import Image from '@theme/IdealImage';
 
@@ -16,8 +16,6 @@ Připojte se k Mikrotiku podle pokynů na oficiální [stránce sady wAP LR8](ht
 :::info
 
 V případě, že budete potřebovat obnovit tovární nastavení Mikrotiku, [postupujte podle těchto pokynů](https://wiki.mikrotik.com/wiki/Manual:Reset). Ujistěte se, že sledujete správnou zelenou LED diodu, která je WiFi LED dioda pod konektorem napájení.
-
-
 
 Uvnitř jednotky LoRa card je další zelená LED dioda, která po spuštění bliká, což je trochu matoucí. Nesledujte tuto zelenou LED diodu uvnitř jednotky.
 
@@ -41,9 +39,7 @@ V této části nainstalujete **ChirpStack Gateway Bridge, ChirpStack Network Se
 
 Pro Debian můžete postupovat podle [návodu k instalaci Debian/Ubuntu](https://www.chirpstack.io/guides/debian-ubuntu/), jinak se podívejte na tuto [obecná stránka k instalaci](https://www.chirpstack.io/docs/chirpstack/downloads.html).
 
-
 :::info
-
 
 V instalačním návodu pro Debian/Ubuntu je skript pro vytvoření tabulky Postgress. Můžete zkopírovat celý skript a vložit ho do konzole Posgress. Po vytvoření tabulky stačí stisknout klávesu Enter a tím se provede poslední příkaz k ukončení příkazového řádku.
 
@@ -56,7 +52,6 @@ V instalačním návodu pro Debian/Ubuntu je skript pro vytvoření tabulky Post
 Nezapomeňte povolit otevření portu 8080 ve firewallu serveru pro webovou stránku Chirp a portu 1700 pro Gateway Bridge. Pokud používáte MQTT, otevřete také port 1883. Pokud používáte `ufw`, zadejte `sudo ufw allow 8080`.
 
 :::
-
 
 Postupujte podle pokynů [jak se připojit k aplikačnímu serveru ChirpStack](https://www.chirpstack.io/guides/first-gateway-device/).
 

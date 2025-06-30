@@ -1,10 +1,10 @@
 ---
 slug: lora-climate-monitor
-title: Lora Climate monitor
+title: LoRa monitor klimatu
 ---
 import Image from '@theme/IdealImage';
 
-# LoRa Climate Monitor
+# LoRa monitor klimatu
 
 S touto sadou můžete měřit **teplotu**, **vlhkost**, **světelnost** a **tlak**. Hodnoty jsou poté bezdrátově odeslány do brány LoRa.
 
@@ -40,8 +40,8 @@ LoRa Climate Monitor odešle packet LoRa v následujících případech:
 * Každých 15 minut, když jsou naměřené hodnoty stejné
 * Po stisknutí tlačítka
 * Když zadáte `AT$SEND` do konzole
-
-## Reading the Data
+  
+## Čtení dat
 
 
 Data jsou zakódována v zprávě LoRa. Abyste získali hodnoty zpět, musíte extrahovat správné bity. To je vysvětleno v souboru [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py`python [skript v úložišti](https://github.com/bigclownlabs/bcf-lora-climate-monitor).

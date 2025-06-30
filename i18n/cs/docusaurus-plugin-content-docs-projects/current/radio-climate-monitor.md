@@ -1,14 +1,15 @@
 ---
 slug: radio-climate-monitor
-title: Monitor klimatu
+title: Bezdrátový monitor klimatu
 ---
 import Image from '@theme/IdealImage';
 
-# Monitor klimatu
+# Bezdrátový monitor klimatu
 
-Tento dokument vás provede projektem **Mnitor klimatu**. Budete moci vidět dashboard s teplotou, vlhkostí, okolním světlem a atmosférickým tlakem v **Node-RED** a zobrazit data na svém chytrém telefonu pomocí **Blynk** cloudu a mobilní aplikace.
+Tento dokument vás provede projektem **Monitor klimatu**. Budete moci vidět dashboard s teplotou, vlhkostí, okolním světlem a atmosférickým tlakem v **Node-RED** a zobrazit data na svém chytrém telefonu pomocí **Blynk** cloudu a mobilní aplikace.
 
 ## Koncept
+
 <div class="container">
   <div class="row">
     <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_block-diagram.webp')}/>
@@ -107,7 +108,6 @@ Pokud používáte nový **HARDWARIO Playground**, použijte záložku **Funkce*
 ```
 
 Bude to vypadat takto:
-
 
 <div class="container">
   <div class="row">
@@ -259,7 +259,7 @@ Pokud to chcete použít pro jiné senzory, stačí změnit MQTT témata.
 
 ### Krok 4: Připojte
 
-Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se připojí na localhost, pokud používáte Raspberry Pi. Poté budete muset nakonfigurovat **Blynk**node. Jednoduše vyplňte URL `ws://blynk-cloud.com/websockets`. `Auth Token` nakonfigurujeme později po jeho získání od Blynk e-mailem.
+Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se připojí na localhost, pokud používáte Raspberry Pi. Poté budete muset nakonfigurovat **Blynk** node. Jednoduše vyplňte URL `ws://blynk-cloud.com/websockets`. `Auth Token` nakonfigurujeme později po jeho získání od Blynk e-mailem.
 
 <div class="container">
   <div class="row">
@@ -268,9 +268,6 @@ Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se
 </div>
 
 ### Krok 5: Nyní si stáhněte aplikaci **Blynk** z [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk&pcampaignid=web_share). Vytvořte účet a přihlaste se.
-
-
-
 
 ### **Krok 6:** Po instalaci byste měli vytvořit účet, přihlásit se a měli byste vidět něco takového
 
@@ -281,7 +278,6 @@ Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se
 </div>
 
 ### Krok 7: Nyní klikněte na tlačítko v pravém horním rohu pro naskenování QR kódu
-
 
 <div class="container">
   <div class="row">
@@ -298,8 +294,6 @@ Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se
 </div>
 
 ### Krok 9: Měli byste vidět něco takového
-
-
 
 <div class="container">
   <div class="row">
@@ -321,7 +315,6 @@ Klikněte na ozubené kolečko a měli byste vidět nastavení pro váš projekt
 
 ### Související dokumenty <a id="related-documents"></a>
 
-* [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
+* [**Instalace Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Toolchain Setup**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects)
 * [**Toolchain Guide**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects)
-

@@ -1,23 +1,22 @@
 ---
 slug: lora-1-wire-thermometer
-title: LoRa 1 Wire Thermometer
+title: LoRa teploměr s 1-Wire rozhraním
 ---
 import Image from '@theme/IdealImage';
 
-# LoRa 1-Wire Thermometer
+# LoRa teploměr s 1-Wire rozhraním
 
 S touto sadou můžete měřit **teploty** pomocí jednoho nebo více připojených teplotních senzorů DS18B20 nebo DS18S20. Hodnoty jsou poté bezdrátově odeslány do LoRa gateway.
-
 
 K přijímání dat můžete použít komunitu The Things Network.
 
 ## Co budete potřebovat
 
-* [Core Module](https://www.hardwario.store/p/core-module)
-* [LoRa Module](https://www.hardwario.store/p/lora-module)
-* [Mini Battery Module](https://www.hardwario.store/p/mini-battery-module)
-* [Sensor Module](https://www.hardwario.store/p/sensor-module)
-* [DS18B20 Temperature Sensor](https://www.hardwario.store/p/temperature-sensor-ds18b20-2m)
+* [Core Module](https://www.hardwario.store/cz/p/core-module)
+* [LoRa Module](https://www.hardwario.store/cz/p/lora-module)
+* [Mini Battery Module](https://www.hardwario.store/cz/p/mini-battery-module)
+* [Sensor Module](https://www.hardwario.store/cz/p/sensor-module)
+* [Teplotní senzor](https://www.hardwario.store/cz/p/temperature-sensor-ds18b20-2m)
 
 ## Nahrání firmwaru
 
@@ -27,7 +26,6 @@ K přijímání dat můžete použít komunitu The Things Network.
 
 ### Krok 3: V aplikaci Playground přejděte na kartu **Firmware**, vyberte `bcf-lora-1wire-thermometer` a nahrajte firmware.
 
-
 ### Krok 4: Po nahrání se červená LED dioda na modulu Core Module rozsvítí na 2 sekundy a poté zhasne.
 
 ## Konfigurace LoRa
@@ -35,7 +33,6 @@ K přijímání dat můžete použít komunitu The Things Network.
 Pro konfiguraci klíčů LoRa postupujte podle návodu [LoRa AT Commands Configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/#lora-configuration)
 
 ##  Přenos dat
-
 
 LoRa Climate Monitor odešle packet LoRa v následujících případech:
 

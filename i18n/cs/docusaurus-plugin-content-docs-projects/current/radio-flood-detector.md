@@ -1,14 +1,14 @@
 ---
 slug: radio-flood-detector
-title: Radio flood detector
+title: Bezdrátový záplavový detektor
 ---
 import Image from '@theme/IdealImage';
 
-# Radio Flood Detector
+# Bezdrátový záplavový detektor
 
-This document will guide you through the **Radio Flood Detector** project. You will be able to interact with your flood detector in **Node-RED** and trigger the **IFTTT** push notification service when the water leakage gets detected. You will get the push notification on your smart phone.
+Tento dokument vás provede projektem **bezdrátového záplavového detektoru**. Budete moci komunikovat se svým detektorem v prostředí **Node-RED** a spouštět službu push notifikací **IFTTT** při detekci úniku vody. Na svůj chytrý telefon obdržíte upozornění formou push notifikace.
 
-## Block Concept
+## Blokové schéma
 
 <div class="container">
   <div class="row">
@@ -16,30 +16,32 @@ This document will guide you through the **Radio Flood Detector** project. You w
   </div>
 </div>
 
-## Requirements
+## Požadavky
 
-* Either **HARDWARIO Radio Flood Detector Kit**, or individual components:
+* Buď sada **HARDWARIO Radio Flood Detector Kit**, nebo jednotlivé komponenty:
   * 1x **HARDWARIO LD-81**
   * 1x **HARDWARIO Sensor Module**
   * 1x **HARDWARIO Core Module**
   * 1x **HARDWARIO Mini Battery Module**
-  * 1x **HARDWARIO Radio Dongle**s
-* One of these options:
-  * **HARDWARIO Playground** installed \(recommended\)
+  * 1x **HARDWARIO Radio Dongle**
 
-    You can find more information in the [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/) document.
+* Jedna z následujících možností:
+* 
+  * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)
 
-  * **Raspberry Pi** with the **HARDWARIO Raspbian** distribution
+    Více informací naleznete v dokumentu [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
 
-    You can find more information in the document [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/).
+  * **Raspberry Pi** a distribucí **HARDWARIO Raspbian**
 
-  * **HARDWARIO Firmware Tool** installed
+    Více informací naleznete v dokumentu [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/).
 
-    You can find more information in the document [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
+  * Nainstalovyný **HARDWARIO Firmware Tool**
 
-## Firmware Upload
+    Více informací naleznete v dokumentu [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
 
-In this procedure we will use the **HARDWARIO Playground** to upload firmware to the **Core Module**.
+## Nahrání firmwaru
+
+V tomto postupu použijeme **HARDWARIO Playground** k nahrání firmwaru do **Core Modulu**.
 
 ### Step 1: Connect the Micro USB cable to the **Core Module** and your computer
 

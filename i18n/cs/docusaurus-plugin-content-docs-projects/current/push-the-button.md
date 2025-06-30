@@ -1,11 +1,10 @@
 ---
 slug: push-the-button
-title: Push the button
+title: Tlačítko Push
 ---
 import Image from '@theme/IdealImage';
 
-
-# Push The Button
+# Tlačítko Push
 
 **Sada Push** může interagovat s vaším světem. Získejte oznámení na telefonu, přehrajte další skladbu na Spotify, ovládejte své chytré osvětlení, spustíte časovač na vejce nebo pošlete Tweet do světa.
 
@@ -54,7 +53,7 @@ V tomto kroku spustíte aplikaci **Playground**, která spravuje Radio Dongle, P
   </div>
 </div>
 
-### **Krok 2:** Připojte [Radio Dongle](https://shop.bigclown.com/radio-dongle) k vašemu počítači
+### **Krok 2:** Připojte [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle) k vašemu počítači
 
 <div class="container">
   <div class="row">
