@@ -35,31 +35,31 @@ This document will guide you through the **Radio VOC sensor** project. You will 
   * 1x [**Temperature Tag**](https://www.hardwario.store/p/temperature-tag)
   * 1x [**Humidity Tag**](https://www.hardwario.store/p/humidity-tag)
   * One of these options:
-    * **Hardwario Playground** installed (recommended)
+    * **HARDWARIO Playground** installed (recommended)
 
       You can find more information in the [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/) document.
 
-    * **Raspberry Pi** with the **Hardwario Raspbian** distribution
+    * **Raspberry Pi** with the **HARDWARIO Raspbian** distribution
 
       You can find more information in the document [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/).
 
-    * **Hardwario Toolchain** installed
+    * **HARDWARIO Toolchain** installed
 
       You can find more information in the document [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
 
 ### Firmware Upload <a id="firmware-upload"></a>
 
-In this procedure we will use the **Hardwario Playground** to upload firmware to the **Core Module**.
+In this procedure we will use the **HARDWARIO Playground** to upload firmware to the **Core Module**.
 
 ### Step 1: Connect the Micro USB cable to the **Core Module** and your computer
 
 ### Step 2: Firmware upload
 
-Run the Hardwario Playground. In the Firmware tab choose and upload the `bcf-radio-voc-sensor` firmware to the **Core Module**:
+Run the HARDWARIO Playground. In the Firmware tab choose and upload the `bcf-radio-voc-sensor` firmware to the **Core Module**:
 
 :::warning
 
-**Flashing Core Module R1 & R2**  
+**Flashing Core Module R1 & R2**
 For differences of flashing older **Core Module 1** and newer **Core Module 2** please read **Core Module R1 and R2 comparison** in the **Hardware section**
 
 :::
@@ -98,7 +98,7 @@ Make sure the **Battery Module** does not have batteries inserted yet
 
 ### Full hardware
 
-The firmware also supports [**LCD Module**](https://www.hardwario.store/p/lcd-module-bg), [**Tag Module**](https://www.hardwario.store/p/tag-module), [**Temperature Tag**](https://www.hardwario.store/p/temperature-tag) and [**Humidity Tag**](https://www.hardwario.store/p/humidity-tag). All values are displayed with nice graph on the display and are also send over Hardwario radio network to the [**Radio Dongle**](https://www.hardwario.store/p/radio-dongle).
+The firmware also supports [**LCD Module**](https://www.hardwario.store/p/lcd-module-bg), [**Tag Module**](https://www.hardwario.store/p/tag-module), [**Temperature Tag**](https://www.hardwario.store/p/temperature-tag) and [**Humidity Tag**](https://www.hardwario.store/p/humidity-tag). All values are displayed with nice graph on the display and are also send over HARDWARIO radio network to the [**Radio Dongle**](https://www.hardwario.store/p/radio-dongle).
 
 <div class="container">
   <div class="row">
@@ -128,7 +128,7 @@ Make sure the **Battery Module** does not have batteries inserted yet.
 
 :::danger
 
-If you are using the new **Hardwario Playground**, then use the **Functions** tab instead of using [**http://localhost:1880/**](http://localhost:1880/). Also the pairing process is now done in **Devices** tab. For communication test use the **Messages** tab.
+If you are using the new **HARDWARIO Playground**, then use the **Functions** tab instead of using [**http://localhost:1880/**](http://localhost:1880/). Also the pairing process is now done in **Devices** tab. For communication test use the **Messages** tab.
 
 :::
 
@@ -184,7 +184,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 :::success
 
-At this point, you've got working **Node-RED**, **MQTT**, **Hardwario Radio Dongle** and **Hardwario Gateway**.
+At this point, you've got working **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** and **HARDWARIO Gateway**.
 
 :::
 

@@ -21,7 +21,7 @@ K přijímání dat můžete použít komunitu The Things Network.
 
 ## Nahrání firmwaru
 
-### Krok 1: Stáhněte si nejnovější verzi [**Hardwario Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+### Krok 1: Stáhněte si nejnovější verzi [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
 
 ### Krok 2: Připojte Core module k počítači.
 
@@ -32,7 +32,7 @@ K přijímání dat můžete použít komunitu The Things Network.
 
 ## Konfigurace LoRa
 
-Pro konfiguraci klíčů LoRa postupujte podle návodu [LoRa AT Commands Configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/#lora-configuration) 
+Pro konfiguraci klíčů LoRa postupujte podle návodu [LoRa AT Commands Configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/#lora-configuration)
 
 ##  Přenos dat
 
@@ -43,7 +43,7 @@ LoRa Climate Monitor odešle packet LoRa v následujících případech:
 * Každých 15 minut, když jsou naměřené hodnoty stejné
 * Po stisknutí tlačítka
 * Když zadáte `AT$SEND` do konzole
-  
+
 ## Čtení dat
 
 Data jsou zakódována v zprávě LoRa. Abyste získali hodnoty zpět, musíte extrahovat správné bity. To je vysvětleno v souboru [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py`python [skript v úložišti](https://github.com/bigclownlabs/bcf-lora-climate-monitor).

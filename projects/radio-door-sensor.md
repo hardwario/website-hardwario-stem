@@ -58,9 +58,9 @@ You can also connect Radio Dongle to the Raspberry Pi or other single board comp
 
 :::
 
-## Download Hardwario Playground
+## Download HARDWARIO Playground
 
-Download the latest [Hardwario Playground](https://github.com/bigclownlabs/bch-playground/releases) for your operating system. After download run the Playground application.
+Download the latest [HARDWARIO Playground](https://github.com/bigclownlabs/bch-playground/releases) for your operating system. After download run the Playground application.
 
 
 <div class="container">
@@ -74,7 +74,7 @@ Now we need to make sure that modules use the latest firmware. You need to flash
 
 ## Flash Door Sensor firmware
 
-### Step 1: Connect 
+### Step 1: Connect
 
 **Connect just** the Door Sensor to the USB of your computer.
 

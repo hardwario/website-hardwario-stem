@@ -7,9 +7,9 @@ import React from 'react';
 
 **Time allocation**: 10 mins
 
-Students try out other projects that are linked to the topic, or there is an Ideation 
+Students try out other projects that are linked to the topic, or there is an Ideation
 
-## Hackster.io platform 
+## Hackster.io platform
 
 <a
   href="https://www.hackster.io/jakub-smejkal/measure-soil-moisture-with-hardwario-iot-kit-9ae766"
@@ -129,7 +129,7 @@ Students try out other projects that are linked to the topic, or there is an Ide
       style={{ width: '40px', height: '40px', marginRight: '12px', borderRadius: '8px' }}
       />
       <div>
-        <strong>Soil humidity monitoring using LoRaWAN and Hardwario</strong>
+        <strong>Soil humidity monitoring using LoRaWAN and HARDWARIO</strong>
         <br />
         <small>Hackster.io</small>
       </div>
@@ -138,9 +138,9 @@ Students try out other projects that are linked to the topic, or there is an Ide
   </div>
 </a>
 
-## Ideation 
+## Ideation
 
-Students design real-life applications of the knowledge acquired through theoretical explanations and experiments. 
+Students design real-life applications of the knowledge acquired through theoretical explanations and experiments.
 
 They write their ideas on a graph, where the x-axis estimates the difficulty (cost) of the project and the y-axis estimates the impact of implementing the solution.
 

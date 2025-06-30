@@ -38,13 +38,13 @@ This document will guide you through the **Radio Soil Sensor** project. You will
 
 ## Requirements
 
-* Either **Hardwario Radio Soil Sensor Kit**, or individual components:
-  * 1x **Hardwario** [**Soil Moisture Sensor**](https://www.hardwario.store/p/soil-sensor-set)
-  * 1x **Hardwario** [**Sensor Module**](https://www.hardwario.store/p/sensor-module)
-  * 1x **Hardwario** [**Core Module**](https://www.hardwario.store/p/core-module)
-  * 1x **Hardwario** [**Battery Module**](https://www.hardwario.store/p/battery-module)
-  * 1x **Hardwario** [**Radio Dongle**](https://www.hardwario.store/p/radio-dongle)
-* You will need **Raspberry Pi** with the **Hardwario Raspbian** distribution installed. Please see [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/) document.
+* Either **HARDWARIO Radio Soil Sensor Kit**, or individual components:
+  * 1x **HARDWARIO** [**Soil Moisture Sensor**](https://www.hardwario.store/p/soil-sensor-set)
+  * 1x **HARDWARIO** [**Sensor Module**](https://www.hardwario.store/p/sensor-module)
+  * 1x **HARDWARIO** [**Core Module**](https://www.hardwario.store/p/core-module)
+  * 1x **HARDWARIO** [**Battery Module**](https://www.hardwario.store/p/battery-module)
+  * 1x **HARDWARIO** [**Radio Dongle**](https://www.hardwario.store/p/radio-dongle)
+* You will need **Raspberry Pi** with the **HARDWARIO Raspbian** distribution installed. Please see [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/) document.
 
 Measured data will be saved and visualized in Grafana on [**Raspberry Pi**](https://www.hardwario.store/p/raspberry-pi-cm4108016). It is also possible to use your computer. Just follow [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/) document.
 
@@ -56,7 +56,7 @@ Please follow the [**Raspberry Pi Login**](https://docs.hardwario.com/tower/serv
 
 ## Firmware Upload
 
-In this procedure we will use the **Hardwario Firmware Tool** to upload firmware to the **Core Module**. You will connect and flash firmware with **Raspberry Pi**
+In this procedure we will use the **HARDWARIO Firmware Tool** to upload firmware to the **Core Module**. You will connect and flash firmware with **Raspberry Pi**
 
 Now it's time to write firmware to the **Core Module**.
 
@@ -74,12 +74,12 @@ You may want to update available firmwares by `bcf update` if the installation h
 
 :::warning
 
-**Flashing Core Module R1 & R2**  
+**Flashing Core Module R1 & R2**
 For differences of flashing older **Core Module 1** and newer **Core Module 2** please read **Core Module R1 and R2 comparison** in the **Hardware section**
 
 :::
 
-Run the Hardwario Playground. In the Firmware tab choose and upload the `bcf-radio-soil-sensor` firmware to the **Core Module**:
+Run the HARDWARIO Playground. In the Firmware tab choose and upload the `bcf-radio-soil-sensor` firmware to the **Core Module**:
 
 ### Step 3: Remove the Micro USB cable from the **Core Module** and **Raspberry Pi**
 

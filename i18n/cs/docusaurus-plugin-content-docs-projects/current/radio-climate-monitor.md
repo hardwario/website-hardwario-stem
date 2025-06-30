@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 
 Tento dokument vás provede projektem **Radio Climate Monitor**. Budete moci vidět dashboard s teplotou, vlhkostí, okolním světlem a atmosférickým tlakem v **Node-RED** a zobrazit data na svém chytrém telefonu pomocí **Blynk** cloudu a mobilní aplikace.
 
-## Koncept 
+## Koncept
 <div class="container">
   <div class="row">
     <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_block-diagram.webp')}/>
@@ -19,31 +19,31 @@ Tento dokument vás provede projektem **Radio Climate Monitor**. Budete moci vid
 
 ### Požadavky  <a id="requirements"></a>
 
-* Buď **Hardwario Radio Climate Monitor Kit**, nebo jednotlivé komponenty:
-  * 1x **Hardwario Climate Module**
-  * 1x **Hardwario Core Module**
-  * 1x **Hardwario Mini Battery Module**
-  * 1x **Hardwario Radio Dongle**
+* Buď **HARDWARIO Radio Climate Monitor Kit**, nebo jednotlivé komponenty:
+  * 1x **HARDWARIO Climate Module**
+  * 1x **HARDWARIO Core Module**
+  * 1x **HARDWARIO Mini Battery Module**
+  * 1x **HARDWARIO Radio Dongle**
 * Jedna z těchto možností:
-  * **Hardwario Playground** nainstalováno  \(recommended\)
+  * **HARDWARIO Playground** nainstalováno  \(recommended\)
 
    Další informace naleznete v [**Quick Start Guide**]([https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/)) dokumentu.
 
-  * **Raspberry Pi** s distribucí **Hardwario Raspbian**
+  * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**
 
     Další informace naleznete v dokumentu  [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/).
 
-  * **Hardwario Toolchain** nainstalováno
+  * **HARDWARIO Toolchain** nainstalováno
 
     Další informace naleznete v dokumentu [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
 
 ## Nahrání firmwaru
 
-V tomto postupu použijeme **Hardwario Playground** k nahrání firmwaru do **Core Modulu**.
+V tomto postupu použijeme **HARDWARIO Playground** k nahrání firmwaru do **Core Modulu**.
 
 ### Krok 1: Připojte Micro USB kabel k **Core Modulu** a vašemu počítači
 
-### Krok ****2: Spusťte Hardwario Playground. Na kartě Firmware vyberte a nahrajte firmware `bcf-radio-climate-monitor` do **Core Modulu**
+### Krok ****2: Spusťte HARDWARIO Playground. Na kartě Firmware vyberte a nahrajte firmware `bcf-radio-climate-monitor` do **Core Modulu**
 
 :::warning
 
@@ -93,7 +93,7 @@ Ujistěte se, že **Mini Battery Module** nemá vložené baterie.
 
 :::danger
 
-Pokud používáte nový **Hardwario Playground**, použijte záložku **Funkce** místo [**http://localhost:1880/**](http://localhost:1880/). Také proces párování se nyní provádí na kartě **Zařízení**. Pro test komunikace použijte záložku **Zprávy**.
+Pokud používáte nový **HARDWARIO Playground**, použijte záložku **Funkce** místo [**http://localhost:1880/**](http://localhost:1880/). Také proces párování se nyní provádí na kartě **Zařízení**. Pro test komunikace použijte záložku **Zprávy**.
 
 :::
 
@@ -153,7 +153,7 @@ Na kartě **debug** budete moci vidět všechny MQTT zprávy.
 
 :::success
 
-V tuto chvíli máte funkční **Node-RED**, **MQTT**, **Hardwario Radio Dongle** a **Hardwario Gateway**.
+V tuto chvíli máte funkční **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** a **HARDWARIO Gateway**.
 
 :::
 
@@ -163,7 +163,7 @@ V této části vytvoříme rádiové spojení mezi  **Radio Dongle** a **Radio 
 
 Postupujte podle těchto kroků v **Node-RED**:
 
-### Krok 1: Klikněte na tlačítko **Start node pairing** 
+### Krok 1: Klikněte na tlačítko **Start node pairing**
 
 <div class="container">
   <div class="row">
@@ -175,7 +175,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 Vložte baterie do **Radio Climate Monitor**, aby se odeslal žádost o párování \(měli byste také vidět, že červená LED na **Core Module** bude svítit asi 2 sekundy\).
 
-### Step 3: Klikněte na tlačítko **Stop node pairing** 
+### Step 3: Klikněte na tlačítko **Stop node pairing**
 
 <div class="container">
   <div class="row">
@@ -232,7 +232,7 @@ Nejprve musíme nakonfigurovat naši aplikaci **Node-RED**.
 
 ### Step 1: Blynk nodes
 
-Pokud používáte verzi Hardwario raspi, mělo by to být v pořádku, ale přesto zkontrolujte, zda jsou nainstalovány nodes **Blynk**. Pokud používáte verzi Hardwario raspi, měli byste být v pořádku, ale přesto zkontrolujte, zda jsou nainstalovány nodes **Blynk**. \ (Můžete je vidět v levém postranním menu v **Node-RED**\). (Můžete je zobrazit v levém postranním menu v **Node-RED**\). Jinak budete muset nainstalovat balíček **Node-RED** `node-red-contrib-blynk-ws`.
+Pokud používáte verzi HARDWARIO raspi, mělo by to být v pořádku, ale přesto zkontrolujte, zda jsou nainstalovány nodes **Blynk**. Pokud používáte verzi HARDWARIO raspi, měli byste být v pořádku, ale přesto zkontrolujte, zda jsou nainstalovány nodes **Blynk**. \ (Můžete je vidět v levém postranním menu v **Node-RED**\). (Můžete je zobrazit v levém postranním menu v **Node-RED**\). Jinak budete muset nainstalovat balíček **Node-RED** `node-red-contrib-blynk-ws`.
 
 <div class="container">
   <div class="row">

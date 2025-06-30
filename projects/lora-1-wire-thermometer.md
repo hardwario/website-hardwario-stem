@@ -20,7 +20,7 @@ You can use community The Things Network to receive the data.
 
 ## Firmware Upload
 
-### Step 1: Download the latest [**Hardwario Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+### Step 1: Download the latest [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
 
 ### Step 2: Connect the Core Module to your computer.
 

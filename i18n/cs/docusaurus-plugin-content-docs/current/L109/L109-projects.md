@@ -129,7 +129,7 @@ Studenti si zkoušejí další projekty, které souvisejí s daným tématem, ne
       style={{ width: '40px', height: '40px', marginRight: '12px', borderRadius: '8px' }}
       />
       <div>
-        <strong>Soil humidity monitoring using LoRaWAN and Hardwario</strong>
+        <strong>Soil humidity monitoring using LoRaWAN and HARDWARIO</strong>
         <br />
         <small>Hackster.io</small>
       </div>
@@ -138,7 +138,7 @@ Studenti si zkoušejí další projekty, které souvisejí s daným tématem, ne
   </div>
 </a>
 
-## Ideation 
+## Ideation
 
 Studenti navrhují reálné využití znalostí získaných během teoretického výkladu a experimentů.
 

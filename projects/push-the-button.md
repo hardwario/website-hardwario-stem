@@ -45,7 +45,7 @@ The red LED on the Core Module will light up for 2 seconds when the batteries ar
 
 In this step you run the **Playground** application that manages Radio Dongle, Push Button and thanks to the **Node-RED** connects everything together.
 
-### Step 1: Download and run the latest [**Hardwario Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+### Step 1: Download and run the latest [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
 
 
 <div class="container">
@@ -100,7 +100,7 @@ In case you don't see the flow, you can copy the text below and paste it into th
 
 ## Blynk Mobile App Set-Up
 
-In this step you configure **Blynk** application on your phone so you can get notifications from the **Hardwario Playground**.
+In this step you configure **Blynk** application on your phone so you can get notifications from the **HARDWARIO Playground**.
 
 ### Step 1: Download Blynk
 
@@ -177,11 +177,11 @@ The time has come to **PUSH THE BUTTON**
 
 The goal of this **Push Button Project** is to show the basics in a few simple steps. Now you can learn more by browsing the **documentation** or by visiting the **links below**.
 
-* Check out other Hardwario [**projects**](projects-overview.md).
+* Check out other HARDWARIO [**projects**](projects-overview.md).
 * Take a look at the [**Module Overview**](https://docs.hardwario.com/chester/extension-modules/chester-z1/#module-overview).
-* Learn about [**MQTT**](https://docs.hardwario.com/fiber/mqtt-broker/) and [**Hardwario MQTT topics**](https://docs.hardwario.com/fiber/mqtt-broker/) to control LEDs and relays.
+* Learn about [**MQTT**](https://docs.hardwario.com/fiber/mqtt-broker/) and [**HARDWARIO MQTT topics**](https://docs.hardwario.com/fiber/mqtt-broker/) to control LEDs and relays.
 * Try other [**integrations**](https://docs.hardwario.com/tower/category/platform-integrations/) with **Grafana**, **Blynk**, **IFTTT**, **Ubidots** and others.
-* Use your [**Raspberry PI**](https://docs.hardwario.com/tower/server-raspberry-pi/) or other 
+* Use your [**Raspberry PI**](https://docs.hardwario.com/tower/server-raspberry-pi/) or other
 * [**Flash other firmware**](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware) or [**write your own firmware**](https://docs.hardwario.com/chester/category/firmware-sdk/) for the **Core Module**.
 * Check the [**Core Module pinouts**](https://docs.hardwario.com/tower/hardware-modules/header-pinout/#core-module-pinout) and add your own buttons, relays and sensors.
 

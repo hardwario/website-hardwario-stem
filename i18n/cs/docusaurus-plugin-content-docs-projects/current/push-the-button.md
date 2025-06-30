@@ -45,7 +45,7 @@ Sestavte všechny tři moduly dohromady, abyste vytvořili **Push Button Kit**. 
 
 V tomto kroku spustíte aplikaci **Playground**, která spravuje Radio Dongle, Push Button a díky **Node-RED** propojuje vše dohromady.
 
-### Krok 1: Stáhněte a spusťte nejnovější [**Hardwario Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+### Krok 1: Stáhněte a spusťte nejnovější [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
 
 
 <div class="container">
@@ -100,7 +100,7 @@ Pokud nevidíte flow, můžete zkopírovat níže uvedený text a vložit ho do 
 
 ## Nastavení mobilní aplikace Blynk
 
-V tomto kroku nakonfigurujete aplikaci **Blynk** ve svém telefonu, abyste mohli dostávat oznámení z **Hardwario Playground**.
+V tomto kroku nakonfigurujete aplikaci **Blynk** ve svém telefonu, abyste mohli dostávat oznámení z **HARDWARIO Playground**.
 
 ### Krok 1: Stáhněte si Blynk
 
@@ -178,9 +178,9 @@ Nastal čas **PUSH THE BUTTON**
 
 Cílem tohoto **Push Button Projectu** je ukázat základy v několika jednoduchých krocích. Nyní se můžete dozvědět více procházením **dokumentace** nebo návštěvou **odkazů níže**.+
 
-* Check out other Hardwario [**projects**](projects-overview.md).
+* Check out other HARDWARIO [**projects**](projects-overview.md).
 * Take a look at the [**Module Overview**](../basics/module-overview.md).
-* Learn about [**MQTT**](../interfaces/mqtt-protocol.md) and [**Hardwario MQTT topics**](../interfaces/mqtt-topics.md) to control LEDs and relays.
+* Learn about [**MQTT**](../interfaces/mqtt-protocol.md) and [**HARDWARIO MQTT topics**](../interfaces/mqtt-topics.md) to control LEDs and relays.
 * Try other [**integrations**](../integrations/grafana-for-visualization.md) with **Grafana**, **Blynk**, **IFTTT**, **Ubidots** and others.
 * Use your [**Raspberry PI**](https://docs.hardwario.com/tower/server-raspberry-pi/) or other [**single board computer \(SBC\)**](../tutorials/custom-setup-on-raspberry-pi.md#setup-on-original-raspbian) as a server.
 * [**Flash other firmware**](https://www.bigclown.com/doc/projects/radio-door-sensor/#flash-door-sensor-firmware.en.md) or [**write your own firmware**](../firmware/basic-overview.md) for the **Core Module**.

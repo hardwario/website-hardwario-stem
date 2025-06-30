@@ -18,38 +18,38 @@ This document will guide you through the **Radio Flood Detector** project. You w
 
 ## Requirements
 
-* Either **Hardwario Radio Flood Detector Kit**, or individual components:
-  * 1x **Hardwario LD-81**
-  * 1x **Hardwario Sensor Module**
-  * 1x **Hardwario Core Module**
-  * 1x **Hardwario Mini Battery Module**
-  * 1x **Hardwario Radio Dongle**s
+* Either **HARDWARIO Radio Flood Detector Kit**, or individual components:
+  * 1x **HARDWARIO LD-81**
+  * 1x **HARDWARIO Sensor Module**
+  * 1x **HARDWARIO Core Module**
+  * 1x **HARDWARIO Mini Battery Module**
+  * 1x **HARDWARIO Radio Dongle**s
 * One of these options:
-  * **Hardwario Playground** installed \(recommended\)
+  * **HARDWARIO Playground** installed \(recommended\)
 
     You can find more information in the [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/) document.
 
-  * **Raspberry Pi** with the **Hardwario Raspbian** distribution
+  * **Raspberry Pi** with the **HARDWARIO Raspbian** distribution
 
     You can find more information in the document [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/).
 
-  * **Hardwario Firmware Tool** installed
+  * **HARDWARIO Firmware Tool** installed
 
     You can find more information in the document [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
 
 ## Firmware Upload
 
-In this procedure we will use the **Hardwario Playground** to upload firmware to the **Core Module**.
+In this procedure we will use the **HARDWARIO Playground** to upload firmware to the **Core Module**.
 
 ### Step 1: Connect the Micro USB cable to the **Core Module** and your computer
 
 ### Step 2: Flash firmware
 
-Run the Hardwario Playground. In the Firmware tab choose and upload the `bcf-radio-flood-detector` firmware to the **Core Module**:
+Run the HARDWARIO Playground. In the Firmware tab choose and upload the `bcf-radio-flood-detector` firmware to the **Core Module**:
 
 :::warning
 
-**Flashing Core Module R1 & R2**  
+**Flashing Core Module R1 & R2**
 For differences of flashing older **Core Module 1** and newer **Core Module 2** please read **Core Module R1 and R2 comparison** in the **Hardware section**
 
 :::
@@ -72,7 +72,7 @@ Step 1: Start with the **Mini Battery Module**
 
 :::danger
 
-If you are using the new **Hardwario Playground**, then use the **Functions** tab instead of using [**http://localhost:1880/**](http://localhost:1880/). Also the pairing process is now done in **Devices** tab. For communication test use the **Messages** tab.
+If you are using the new **HARDWARIO Playground**, then use the **Functions** tab instead of using [**http://localhost:1880/**](http://localhost:1880/). Also the pairing process is now done in **Devices** tab. For communication test use the **Messages** tab.
 
 :::
 
@@ -127,7 +127,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 :::success
 
-At this point, you've got working **Node-RED**, **MQTT**, **Hardwario Radio Dongle** and **Hardwario Gateway**.
+At this point, you've got working **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** and **HARDWARIO Gateway**.
 
 :::
 
