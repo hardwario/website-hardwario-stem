@@ -1,14 +1,12 @@
 ---
 slug: radio-climate-monitor
-title: Radio climate monitor
+title: Monitor klimatu
 ---
 import Image from '@theme/IdealImage';
 
+# Monitor klimatu
 
-
-# Radio Climate Monitor
-
-Tento dokument vás provede projektem **Radio Climate Monitor**. Budete moci vidět dashboard s teplotou, vlhkostí, okolním světlem a atmosférickým tlakem v **Node-RED** a zobrazit data na svém chytrém telefonu pomocí **Blynk** cloudu a mobilní aplikace.
+Tento dokument vás provede projektem **Mnitor klimatu**. Budete moci vidět dashboard s teplotou, vlhkostí, okolním světlem a atmosférickým tlakem v **Node-RED** a zobrazit data na svém chytrém telefonu pomocí **Blynk** cloudu a mobilní aplikace.
 
 ## Koncept
 <div class="container">
@@ -17,9 +15,9 @@ Tento dokument vás provede projektem **Radio Climate Monitor**. Budete moci vid
   </div>
 </div>
 
-### Požadavky  <a id="requirements"></a>
+### Požadavky <a id="requirements"></a>
 
-* Buď **HARDWARIO Radio Climate Monitor Kit**, nebo jednotlivé komponenty:
+* Buď **HARDWARIO Sadu Clime**, nebo jednotlivé komponenty:
   * 1x **HARDWARIO Climate Module**
   * 1x **HARDWARIO Core Module**
   * 1x **HARDWARIO Mini Battery Module**
@@ -76,7 +74,6 @@ Podívejte se na krátké video s jednoduchou ukázkou krok za krokem:
 </div>
 
 
-
 ### Krok 1: Začněte s **Mini Battery Module**
 
 :::warning
@@ -108,8 +105,6 @@ Pokud používáte nový **HARDWARIO Playground**, použijte záložku **Funkce*
 ```text
 [{"id":"2fc604fc.3b6abc","type":"inject","z":"dfc861b.b2a02a","name":"List all gateways","topic":"gateway/all/info/get","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":460,"wires":[["a2c10833.24d5d8"]]},{"id":"1e4502b8.2f63fd","type":"inject","z":"dfc861b.b2a02a","name":"Start node pairing","topic":"gateway/usb-dongle/pairing-mode/start","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":570,"y":580,"wires":[["795ff5a7.8e266c"]]},{"id":"3d844ce2.932864","type":"inject","z":"dfc861b.b2a02a","name":"Stop node pairing","topic":"gateway/usb-dongle/pairing-mode/stop","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":640,"wires":[["5967c452.c838bc"]]},{"id":"f202b253.2705b","type":"inject","z":"dfc861b.b2a02a","name":"List paired nodes","topic":"gateway/usb-dongle/nodes/get","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":520,"wires":[["f0aca138.0b2c3"]]},{"id":"349f02fd.890f6e","type":"inject","z":"dfc861b.b2a02a","name":"Unpair all nodes","topic":"gateway/usb-dongle/nodes/purge","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":700,"wires":[["2f1c5bb6.53d6f4"]]},{"id":"cf61d75d.4ad8f8","type":"mqtt in","z":"dfc861b.b2a02a","name":"","topic":"#","qos":"2","broker":"67b8de4a.029d3","x":530,"y":400,"wires":[["a5cb0658.f5d658"]]},{"id":"a5cb0658.f5d658","type":"debug","z":"dfc861b.b2a02a","name":"","active":true,"console":"false","complete":"false","x":790,"y":400,"wires":[]},{"id":"a2c10833.24d5d8","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":460,"wires":[]},{"id":"f0aca138.0b2c3","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":520,"wires":[]},{"id":"795ff5a7.8e266c","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":580,"wires":[]},{"id":"5967c452.c838bc","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":640,"wires":[]},{"id":"2f1c5bb6.53d6f4","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":700,"wires":[]},{"id":"67b8de4a.029d3","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""},{"id":"717f7c18.ba0a24","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
 ```
-
-
 
 Bude to vypadat takto:
 
@@ -159,7 +154,7 @@ V tuto chvíli máte funkční **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle*
 
 ##  Párování rádia
 
-V této části vytvoříme rádiové spojení mezi  **Radio Dongle** a **Radio Climate Monitor**.
+V této části vytvoříme rádiové spojení mezi  **Radio Dongle** a **Sadou Clime**.
 
 Postupujte podle těchto kroků v **Node-RED**:
 
@@ -171,11 +166,11 @@ Postupujte podle těchto kroků v **Node-RED**:
   </div>
 </div>
 
-### Step 2: Párování Climate monitoru
+### Krok 2: Párování Climate monitoru
 
-Vložte baterie do **Radio Climate Monitor**, aby se odeslal žádost o párování \(měli byste také vidět, že červená LED na **Core Module** bude svítit asi 2 sekundy\).
+Vložte baterie do **Sady Clime**, aby se odeslal žádost o párování \(měli byste také vidět, že červená LED na **Core Module** bude svítit asi 2 sekundy\).
 
-### Step 3: Klikněte na tlačítko **Stop node pairing**
+### Krok 3: Klikněte na tlačítko **Stop node pairing**
 
 <div class="container">
   <div class="row">
@@ -185,7 +180,7 @@ Vložte baterie do **Radio Climate Monitor**, aby se odeslal žádost o párová
 
 :::success
 
-V tuto chvíli jste navázali rádiové spojení mezi node \(**Radio Climate Monitor**\) a gateway \(**Radio Dongle**\).
+V tuto chvíli jste navázali rádiové spojení mezi node \(**Sadou Clime**\) a gateway \(**Radio Dongle**\).
 
 :::
 
@@ -193,9 +188,9 @@ V tuto chvíli jste navázali rádiové spojení mezi node \(**Radio Climate Mon
 
 Follow these steps in **Node-RED**:
 
-### Step 1: Switch to **debug** tab on the right
+### Krok 1: Přepněte na záložku **debug** vpravo
 
-### Step 2: Test connection
+### Krok 2: Otestujte připojení
 
 Začněte dýchat na teplotní senzor na **Climate Module** , aby došlo ke změně teploty a tím k vyvolání rádiového přenosu.
 
@@ -248,8 +243,6 @@ Pokud používáte verzi HARDWARIO raspi, mělo by to být v pořádku, ale pře
 [{"id":"4914605c.76972","type":"mqtt in","z":"28050251.59dc0e","name":"","topic":"node/climate-monitor:0/lux-meter/0:0/illuminance","qos":"2","broker":"58254712.b61068","x":230,"y":520,"wires":[["431157f1.546248"]]},{"id":"dcf5bf8d.a0242","type":"mqtt in","z":"28050251.59dc0e","name":"","topic":"node/climate-monitor:0/thermometer/0:0/temperature","qos":"2","broker":"58254712.b61068","x":240,"y":580,"wires":[["be96b6aa.eed098"]]},{"id":"2ac2eae7.308486","type":"mqtt in","z":"28050251.59dc0e","name":"","topic":"node/climate-monitor:0/hygrometer/0:4/relative-humidity","qos":"2","broker":"58254712.b61068","x":250,"y":640,"wires":[["dbe4b438.be4ef8"]]},{"id":"431157f1.546248","type":"blynk-ws-out-write","z":"28050251.59dc0e","name":"Pin V0 - Write","pin":0,"pinmode":0,"client":"1b003066.8ca2c","x":659,"y":520,"wires":[]},{"id":"be96b6aa.eed098","type":"blynk-ws-out-write","z":"28050251.59dc0e","name":"","pin":"1","pinmode":0,"client":"1b003066.8ca2c","x":659,"y":580,"wires":[]},{"id":"dbe4b438.be4ef8","type":"blynk-ws-out-write","z":"28050251.59dc0e","name":"","pin":"2","pinmode":0,"client":"1b003066.8ca2c","x":659,"y":640,"wires":[]},{"id":"58254712.b61068","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""},{"id":"1b003066.8ca2c","type":"blynk-ws-client","z":"","name":"","path":"ws://blynk-cloud.com/websockets","key":"","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_low":false,"dbg_pins":""}]
 ```
 
-
-
 Bude to vypadat takto:
 
 <div class="container">
@@ -264,7 +257,7 @@ Pokud to chcete použít pro jiné senzory, stačí změnit MQTT témata.
 
 :::
 
-### Step 4: Connect
+### Krok 4: Připojte
 
 Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se připojí na localhost, pokud používáte Raspberry Pi. Poté budete muset nakonfigurovat **Blynk**node. Jednoduše vyplňte URL `ws://blynk-cloud.com/websockets`. `Auth Token` nakonfigurujeme později po jeho získání od Blynk e-mailem.
 
