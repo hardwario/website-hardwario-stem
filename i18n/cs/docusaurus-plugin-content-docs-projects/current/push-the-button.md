@@ -21,10 +21,9 @@ V tomto tutoriálu vytvoříte jednoduchý projekt s tlačítkem, které vám po
 
 Budete potřebovat [Sadu Push](https://www.hardwario.store/cz/p/push-set) a [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle).
 
-### Krok 1: Sestavení
+#### Krok 1: Sestavení
 
 Sestavte všechny tři moduly dohromady, abyste vytvořili **Sadu Push**. Všimněte si orientace Mini Battery Module na obrázku níže.
-
 
 <div class="container">
   <div class="row">
@@ -32,7 +31,7 @@ Sestavte všechny tři moduly dohromady, abyste vytvořili **Sadu Push**. Všimn
   </div>
 </div>
 
-### Krok 2: Vložte baterie
+#### Krok 2: Vložte baterie
 
 :::info
 
@@ -44,8 +43,7 @@ Sestavte všechny tři moduly dohromady, abyste vytvořili **Sadu Push**. Všimn
 
 V tomto kroku spustíte aplikaci **Playground**, která spravuje Radio Dongle, Push Button a díky **Node-RED** propojuje vše dohromady.
 
-### Krok 1: Stáhněte a spusťte nejnovější [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
-
+#### Krok 1: Stáhněte a spusťte nejnovější [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
 
 <div class="container">
   <div class="row">
@@ -53,7 +51,7 @@ V tomto kroku spustíte aplikaci **Playground**, která spravuje Radio Dongle, P
   </div>
 </div>
 
-### **Krok 2:** Připojte [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle) k vašemu počítači
+#### **Krok 2:** Připojte [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle) k vašemu počítači
 
 <div class="container">
   <div class="row">
@@ -61,7 +59,7 @@ V tomto kroku spustíte aplikaci **Playground**, která spravuje Radio Dongle, P
   </div>
 </div>
 
-### Krok 3: Přejděte na záložku **Zařízení**, zkontrolujte, zda je rádio dongle detekován, a klikněte na **Připojit**
+#### Krok 3: Přejděte na záložku **Zařízení**, zkontrolujte, zda je rádio dongle detekován, a klikněte na **Připojit**
 
 :::info
 
@@ -75,7 +73,7 @@ Pokud nevidíte Radio Dongle mezi zařízeními, podívejte se na kapitolu [Trou
   </div>
 </div>
 
-### **Krok 4:** Po připojení. Již nahraná a spárovaná Sada Push bude v seznamu spárovaných zařízení.
+#### Krok 4: Po připojení. Již nahraná a spárovaná Sada Push bude v seznamu spárovaných zařízení.
 
 <div class="container">
   <div class="row">
@@ -83,7 +81,7 @@ Pokud nevidíte Radio Dongle mezi zařízeními, podívejte se na kapitolu [Trou
   </div>
 </div>
 
-### Krok 5: Přepněte na záložku **Funkce** a ujistěte se, že vidíte flow na obrázku níže
+#### Krok 5: Přepněte na záložku **Funkce** a ujistěte se, že vidíte flow na obrázku níže
 
 <div class="container">
   <div class="row">
@@ -101,11 +99,11 @@ Pokud nevidíte flow, můžete zkopírovat níže uvedený text a vložit ho do 
 
 V tomto kroku nakonfigurujete aplikaci **Blynk** ve svém telefonu, abyste mohli dostávat oznámení z **HARDWARIO Playground**.
 
-### Krok 1: Stáhněte si Blynk
+#### Krok 1: Stáhněte si Blynk
 
-Nyní si stáhněte aplikaci **Blynk** z [**App Store**] (https://itunes.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481?mt=8) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cc.blynk&hl=en). Vytvořte účet a přihlaste se.
+Nyní si stáhněte aplikaci **Blynk** z [**App Store**](https://itunes.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481?mt=8) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cc.blynk&hl=en). Vytvořte účet a přihlaste se.
 
-### Krok 2: Klikněte na **QR kód**
+#### Krok 2: Klikněte na **QR kód**
 
 <div class="container">
   <div class="row">
@@ -113,7 +111,7 @@ Nyní si stáhněte aplikaci **Blynk** z [**App Store**] (https://itunes.apple.c
   </div>
 </div>
 
-### **Krok 3:** Naskenujte následující QR kód, abyste získali vše předkonfigurované
+#### **Krok 3:** Naskenujte následující QR kód, abyste získali vše předkonfigurované
 
 <div class="container">
   <div class="row">
@@ -121,7 +119,7 @@ Nyní si stáhněte aplikaci **Blynk** z [**App Store**] (https://itunes.apple.c
   </div>
 </div>
 
-### Krok 4: Uvidíte tento importovaný **projekt** s jediným **Widgetem pro oznámení**
+#### Krok 4: Uvidíte tento importovaný **projekt** s jediným **Widgetem pro oznámení**
 
 Klikněte na **ikonu Nastavení**.
 
@@ -131,7 +129,7 @@ Klikněte na **ikonu Nastavení**.
   </div>
 </div>
 
-### **Krok 5:** Přejděte dolů a klikněte na **Odeslat všechny** tokeny. Tento token z vašeho e-mailu použijeme později.
+#### Krok 5: Přejděte dolů a klikněte na **Odeslat všechny** tokeny. Tento token z vašeho e-mailu použijeme později.
 
 <div class="container">
   <div class="row">
@@ -139,7 +137,7 @@ Klikněte na **ikonu Nastavení**.
   </div>
 </div>
 
-### Krok 6: Nyní musíte spustit projekt Blynk. Klikněte na symbol **Přehrát**
+#### Krok 6: Nyní musíte spustit projekt Blynk. Klikněte na symbol **Přehrát**
 
 <div class="container">
   <div class="row">
@@ -151,11 +149,11 @@ Klikněte na **ikonu Nastavení**.
 
 Posledním krokem je propojit Node-RED a Blynk, abyste mohli dostávat oznámení.
 
-### Krok 1: V záložce **Playground** **Functions** dvojklikněte na  **Blynk notification** none
+#### Krok 1: V záložce **Playground** **Functions** dvojklikněte na  **Blynk notification** none
 
-### Krok 2: Klikněte na **ikonu tužky** a vložte token, který jste obdrželi v e-mailu. Klikněte na **Hotovo**
+#### Krok 2: Klikněte na **ikonu tužky** a vložte token, který jste obdrželi v e-mailu. Klikněte na **Hotovo**
 
-### **Krok 3:** Klikněte na tlačítko **Nasadit**. Pokaždé, když upravíte flow Node-RED, musíte změny aplikovat!
+#### **Krok 3:** Klikněte na tlačítko **Nasadit**. Pokaždé, když upravíte flow Node-RED, musíte změny aplikovat!
 
 <div class="container">
   <div class="row">
@@ -181,7 +179,7 @@ Cílem tohoto **Push Button Projektu** je ukázat základy v několika jednoduch
 * Prohlédněte si [**přehled modulů**](https://docs.hardwario.com/chester/extension-modules/chester-z1/#module-overview).
 * Naučte se pracovat s [**MQTT**](https://docs.hardwario.com/fiber/mqtt-broker/) a [**Hardwario MQTT topics**](https://docs.hardwario.com/fiber/mqtt-broker/) pro ovládání LED a relé.
 * Vyzkoušejte další [**integrace**](https://docs.hardwario.com/tower/category/platform-integrations/) s **Grafana**, **Blynk**, **IFTTT**, **Ubidots** a dalšími.
-* Použijte svůj [**Raspberry PI**](https://docs.hardwario.com/tower/server-raspberry-pi/) nebo jiný [**jednodeskový počítač \(SBC\)**](../tutorials/custom-setup-on-raspberry-pi.md#setup-on-original-raspbian) jako server.
+* Použijte svůj [**Raspberry PI**](https://docs.hardwario.com/tower/server-raspberry-pi/) nebo jiný jednodeskový počítač \(SBC\) jako server.
 * [**Nahrajte jiný firmware**](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware) nebo si **napište vlastní firmware** pro **Core Module**.
 * Zkontrolujte [**zapojení pinů Core Modulu**](https://docs.hardwario.com/tower/hardware-modules/header-pinout/#core-module-pinout) a připojte vlastní tlačítka, relé a senzory.
 

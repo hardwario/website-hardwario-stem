@@ -50,18 +50,17 @@ Stáhněte si nejnovější verzi [HARDWARIO Playground](https://github.com/bigc
   <div class="row">
     <Image img={require('./img/radio-door-sensor/radio-door-sensor_playground-run.webp')}/>
   </div>
-</div>
-
+</div><br></br>
 
 Nyní je potřeba se ujistit, že moduly používají nejnovější firmware. Je nutné nahrát firmware do vašeho [**Radio Dongle**](https://www.hardwario.store/cz/p/radio-dongle) a vzdáleného uzlu [**Core Module**](https://www.hardwario.store/cz/p/core-module).
 
 ## Nahrání firmwaru do dveřního senzoru
 
-### Krok 1: Připojení
+#### Krok 1: Připojení
 
 **Připojte pouze** dveřní senzor k USB portu vašeho počítače.
 
-### Krok 2: Nahrání firmwaru
+#### Krok 2: Nahrání firmwaru
 
 V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `bigclownlabs/bcf-radio-door-sensor`, zvolte sériový port zařízení v poli **Device** a klikněte na **FLASH FIRMWARE**.
 
@@ -71,19 +70,19 @@ V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `bi
   </div>
 </div>
 
-### Krok 3: Odpojení
+#### Krok 3: Odpojení
 
 Odpojte **dveřní senzor** od počítače. Vyjměte baterie a ponechte senzor bez napájení pro pozdější proces párování.
 
 ## Nahrání firmwaru do Radio Dongle
 
-### Krok 1: Připojení
+#### Krok 1: Připojení
 
 Připojte **pouze** [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle) k USB portu vašeho počítače.
 
-### Krok 2: Nahrání firmwaru
+#### Krok 2: Nahrání firmwaru
 
-V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware b`igclownlabs/bcf-gateway-usb-dongle`, zvolte sériový port zařízení v poli **Device** a klikněte na **FLASH FIRMWARE**.
+V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `bigclownlabs/bcf-gateway-usb-dongle`, zvolte sériový port zařízení v poli **Device** a klikněte na **FLASH FIRMWARE**.
 
 <div class="container">
   <div class="row">
@@ -91,7 +90,7 @@ V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware b`i
   </div>
 </div>
 
-### Krok 3: Nechte připojeno
+#### Krok 3: Nechte připojeno
 
 Nechte [**Radio Dongle**](https://www.hardwario.store/cz/p/radio-dongle) připojený k počítači.
 
@@ -107,7 +106,7 @@ V levém dolním rohu klikněte na **Gateway** a vyberte sériový port zaříze
 
 ## Spárování Radio Door Sensor
 
-### Krok 1: Spuštění párování
+#### Krok 1: Spuštění párování
 
 Na záložce **Radio** klikněte na tlačítko **Pairing start**.
 
@@ -117,11 +116,11 @@ Na záložce **Radio** klikněte na tlačítko **Pairing start**.
   </div>
 </div>
 
-### Krok 2: Přepnutí dveřního senzoru do párovacího režimu
+#### Krok 2: Přepnutí dveřního senzoru do párovacího režimu
 
 Nyní vložte baterie do dveřního senzoru. Párovací příkaz je odeslán pokaždé, když vložíte baterie do vzdáleného modulu.
 
-### Krok 3: Ukončení párování
+#### Krok 3: Ukončení párování
 
 Ukončete párování kliknutím na tlačítko **Pairing stop**.
 
@@ -133,11 +132,11 @@ Ukončete párování kliknutím na tlačítko **Pairing stop**.
 
 ## Otestuje dveřní senzor
 
-### Krok 1: Přepněte se na záložku **MQTT** a přihlaste se k odběru tématu `#`.
+#### Krok 1: Přepněte se na záložku **MQTT** a přihlaste se k odběru tématu `#`.
 
-### Krok 2: Přikládejte a oddalujte magnet od senzoru – měli byste vidět MQTT zprávy v horním okně.
+#### Krok 2: Přikládejte a oddalujte magnet od senzoru – měli byste vidět MQTT zprávy v horním okně.
 
-### Krok 3: Další zprávy jsou stisknutí tlačítka a změna teploty. Vyzkoušejte to!
+#### Krok 3: Další zprávy jsou stisknutí tlačítka a změna teploty. Vyzkoušejte to!
 
 
 <div class="container">
@@ -145,7 +144,7 @@ Ukončete párování kliknutím na tlačítko **Pairing stop**.
     <Image img={require('./img/radio-door-sensor/radio-door-sensor_playground-mqtt-test.webp')}/>
   </div>
 </div>
-:success
+:::success
 Skvělé! Vytvořili jste rádiovou síť, která přijímá události a měří teplotu.
 
 :::
@@ -154,7 +153,7 @@ Skvělé! Vytvořili jste rádiovou síť, která přijímá události a měří
 
 V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje jako mechanismus pro spouštění událostí.
 
-### Krok 1: Otevřete webový prohlížeč a přejděte na [**IFTTT**](https://ifttt.com/):
+#### Krok 1: Otevřete webový prohlížeč a přejděte na [**IFTTT**](https://ifttt.com/):
 
 <div class="container">
   <div class="row">
@@ -162,7 +161,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 2: Přihlaste se do služby IFTTT. Můžete se zaregistrovat pomocí účtu Google nebo Facebook:
+#### Krok 2: Přihlaste se do služby IFTTT. Můžete se zaregistrovat pomocí účtu Google nebo Facebook:
 
 <div class="container">
   <div class="row">
@@ -170,7 +169,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 3: V menu přejděte do sekce **My Applets** a klikněte na tlačítko **New Applet**:
+#### Krok 3: V menu přejděte do sekce **My Applets** a klikněte na tlačítko **New Applet**:
 
 <div class="container">
   <div class="row">
@@ -178,7 +177,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 4: Klikněte na **+this** ve větě `if this then that`:
+#### Krok 4: Klikněte na **+this** ve větě `if this then that`:
 
 <div class="container">
   <div class="row">
@@ -186,7 +185,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 5: Vyhledejte službu s názvem **Webhooks** a vyberte ji:
+#### Krok 5: Vyhledejte službu s názvem **Webhooks** a vyberte ji:
 
 <div class="container">
   <div class="row">
@@ -194,7 +193,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 6: Klikněte na **Receive a web request**:
+#### Krok 6: Klikněte na **Receive a web request**:
 
 <div class="container">
   <div class="row">
@@ -202,7 +201,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 7: Do pole **Event Name** napište `door` a klikněte na **Create Trigger**:
+#### Krok 7: Do pole **Event Name** napište `door` a klikněte na **Create Trigger**:
 
 <div class="container">
   <div class="row">
@@ -210,7 +209,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 8: Klikněte na **+that** ve větě `if this then that`:
+#### Krok 8: Klikněte na **+that** ve větě `if this then that`:
 
 <div class="container">
   <div class="row">
@@ -218,7 +217,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 9: Vyhledejte akční službu s názvem **Notifications** a vyberte ji:
+#### Krok 9: Vyhledejte akční službu s názvem **Notifications** a vyberte ji:
 
 <div class="container">
   <div class="row">
@@ -226,7 +225,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 10: Klikněte na **Send a notification from the IFTTT app**:
+#### Krok 10: Klikněte na **Send a notification from the IFTTT app**:
 
 <div class="container">
   <div class="row">
@@ -234,7 +233,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 11: Upravte pole **Notification** a vložte text `Door Sensor Alarm at {{OccurredAt}} !` a poté klikněte na tlačítko **Create action**:
+#### Krok 11: Upravte pole **Notification** a vložte text `Door Sensor Alarm at {{OccurredAt}} !` a poté klikněte na tlačítko **Create action**:
 
 <div class="container">
   <div class="row">
@@ -242,7 +241,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 12: Klikněte na tlačítko **Finish**:
+#### Krok 12: Klikněte na tlačítko **Finish**:
 
 <div class="container">
   <div class="row">
@@ -250,7 +249,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 13: Klikněte na tlačítko **Webhooks**:
+#### Krok 13: Klikněte na tlačítko **Webhooks**:
 
 <div class="container">
   <div class="row">
@@ -258,7 +257,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 14: Klikněte na tlačítko **Documentation**:
+#### Krok 14: Klikněte na tlačítko **Documentation**:
 
 <div class="container">
   <div class="row">
@@ -266,7 +265,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 15: Nyní máte svůj notifikační klíč. **Nechte si tuto stránku otevřenou, abyste mohli tento klíč později zkopírovat do Node-RED**:
+#### Krok 15: Nyní máte svůj notifikační klíč. **Nechte si tuto stránku otevřenou, abyste mohli tento klíč později zkopírovat do Node-RED**:
 
 <div class="container">
   <div class="row">
@@ -274,9 +273,9 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-### Krok 16: Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se pomocí stejného účtu, který jste použili k vytvoření appletu. Při výzvě povolte aplikaci zasílání push notifikací.
+#### Krok 16: Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se pomocí stejného účtu, který jste použili k vytvoření appletu. Při výzvě povolte aplikaci zasílání push notifikací.
 
-:success
+:::success
 
 V tomto bodě máte funkční notifikační **Applet** ve službě **IFTTT**.
 
@@ -286,7 +285,7 @@ V tomto bodě máte funkční notifikační **Applet** ve službě **IFTTT**.
 
 Pro použití IFTTT v Node-RED můžeme využít jednoduchý plug-in, který bude odesílat notifikace.
 
-### Krok 1: Klikněte na záložku **MQTT**, poté v pravém horním rohu na menu a vyberte **Manage palette**.
+#### Krok 1: Klikněte na záložku **MQTT**, poté v pravém horním rohu na menu a vyberte **Manage palette**.
 
 <div class="container">
   <div class="row">
@@ -294,7 +293,7 @@ Pro použití IFTTT v Node-RED můžeme využít jednoduchý plug-in, který bud
   </div>
 </div>
 
-### Krok 2: Přepněte se na záložku **Install**, vyhledejte `ifttt` a klikněte na tlačítko **Install**. V zobrazovaném okně klikněte znovu na **Install**.
+#### Krok 2: Přepněte se na záložku **Install**, vyhledejte `ifttt` a klikněte na tlačítko **Install**. V zobrazovaném okně klikněte znovu na **Install**.
 
 <div class="container">
   <div class="row">
@@ -302,15 +301,15 @@ Pro použití IFTTT v Node-RED můžeme využít jednoduchý plug-in, který bud
   </div>
 </div>
 
-### Krok 3: Po instalaci uvidíte potvrzení, že nové uzly byly přidány do prostředí Node-RED:
+#### Krok 3: Po instalaci uvidíte potvrzení, že nové uzly byly přidány do prostředí Node-RED:
 
 <div class="container">
   <div class="row">
     <Image img={require('./img/radio-door-sensor/radio-door-sensor_node-red-installed-confirmation.webp')}/>
   </div>
-</div>
+</div><br></br>
 
-:success
+:::success
 
 Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho telefonu.
 
@@ -318,13 +317,13 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
 
 ## Import notifikačního flow do Node-RED
 
-### Krok 1: Zkopírujte níže uvedený text do schránky:
+#### Krok 1: Zkopírujte níže uvedený text do schránky:
 
 ```text
 [{"id":"5ca15197.aef91","type":"mqtt in","z":"49c6b66c.16eaf8","name":"","topic":"node/door-sensor:0/door-sensor/a/state","qos":"2","broker":"67b8de4a.029d3","x":210,"y":100,"wires":[["ccd36bb4.eccae8"]]},{"id":"ccd36bb4.eccae8","type":"switch","z":"49c6b66c.16eaf8","name":"","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"false","vt":"str"}],"checkall":"true","repair":false,"outputs":1,"x":210,"y":220,"wires":[["6cb9da01.6abab4"]]},{"id":"6cb9da01.6abab4","type":"ifttt out","z":"49c6b66c.16eaf8","eventName":"door","key":"","x":210,"y":320,"wires":[]},{"id":"67b8de4a.029d3","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","willTopic":"","willQos":"0","willPayload":""}]
 ```
 
-### Krok 2: Klikněte na **Menu** v pravém horním rohu, poté vyberte **Import** a následně **Clipboard**:
+#### Krok 2: Klikněte na **Menu** v pravém horním rohu, poté vyberte **Import** a následně **Clipboard**:
 
 <div class="container">
   <div class="row">
@@ -332,7 +331,7 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
   </div>
 </div>
 
-### Krok 3: Vložte text ze schránky do textového pole a stiskněte **Import**:
+#### Krok 3: Vložte text ze schránky do textového pole a stiskněte **Import**:
 
 <div class="container">
   <div class="row">
@@ -342,7 +341,7 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
 
 ## Nastavení IFTTT klíče
 
-### Krok 1: Naimportovali jste flow. Nyní je potřeba vyplnit vlastní **IFTTT klíč**. Poklepejte na uzel **IFTTT**:
+#### Krok 1: Naimportovali jste flow. Nyní je potřeba vyplnit vlastní **IFTTT klíč**. Poklepejte na uzel **IFTTT**:
 
 <div class="container">
   <div class="row">
@@ -350,7 +349,7 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
   </div>
 </div>
 
-### Krok 2: Klikněte na **ikonu tužky** a zkopírujte a **vlože klíč** z posledního kroku kapitoly o integraci s IFTTT. Zkontrolujte, že název události (**Event name**) je nastaven na **door**. Poté klikněte na **Done**:
+#### Krok 2: Klikněte na **ikonu tužky** a zkopírujte a **vlože klíč** z posledního kroku kapitoly o integraci s IFTTT. Zkontrolujte, že název události (**Event name**) je nastaven na **door**. Poté klikněte na **Done**:
 
 <div class="container">
   <div class="row">
@@ -360,7 +359,7 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
 
 ## Spusťte a otestujte své flow!
 
-### Krok 1: Pokaždé, když změníte flow, musíte kliknout na tlačítko **Deploy** v pravém horním rohu. **Udělějte to prosím nyní**:
+#### Krok 1: Pokaždé, když změníte flow, musíte kliknout na tlačítko **Deploy** v pravém horním rohu. **Udělějte to prosím nyní**:
 
 <div class="container">
   <div class="row">
@@ -368,7 +367,7 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
   </div>
 </div>
 
-### Krok 2: Nyní přiložte magnet k magnetickému senzoru na vašem rádiovém dveřním senzoru a poté jej oddalte. Během několika sekund by vám měla přijít IFTTT notifikace!
+#### Krok 2: Nyní přiložte magnet k magnetickému senzoru na vašem rádiovém dveřním senzoru a poté jej oddalte. Během několika sekund by vám měla přijít IFTTT notifikace!
 
 V pravé záložce **debug** byste měli vidět zprávy „true“ a „false“ a během stavu **false** se na chvíli zobrazí zelená vlaječka **Sent!** u uzlu IFTTT.
 
@@ -376,7 +375,7 @@ V pravé záložce **debug** byste měli vidět zprávy „true“ a „false“
   <div class="row">
     <Image img={require('./img/radio-door-sensor/radio-door-sensor_node-red-test.webp')}/>
   </div>
-</div>
+</div><br></br>
 
 Pokud chcete být upozorňováni na zprávy typu „true“ místo **false**, jednoduše otevřete **switch node** a změňte text `false` v pravidlech na `true`.
 
@@ -384,9 +383,9 @@ Pokud chcete být upozorňováni na zprávy typu „true“ místo **false**, je
   <div class="row">
     <Image img={require('./img/radio-door-sensor/radio-door-sensor_phone-notification.webp')}/>
   </div>
-</div>
+</div><br></br>
 
-:success
+:::success
 
 Nyní najděte vhodné místo pro umístění **Radio Door Sensor** a užijte si notifikace, které budete dostávat!
 

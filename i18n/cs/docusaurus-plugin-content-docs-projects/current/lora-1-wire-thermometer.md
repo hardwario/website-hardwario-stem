@@ -20,13 +20,13 @@ K přijímání dat můžete použít komunitu The Things Network.
 
 ## Nahrání firmwaru
 
-### Krok 1: Stáhněte si nejnovější verzi [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+#### Krok 1: Stáhněte si nejnovější verzi [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
 
-### Krok 2: Připojte Core module k počítači.
+#### Krok 2: Připojte Core module k počítači.
 
-### Krok 3: V aplikaci Playground přejděte na kartu **Firmware**, vyberte `bcf-lora-1wire-thermometer` a nahrajte firmware.
+#### Krok 3: V aplikaci Playground přejděte na kartu **Firmware**, vyberte `bcf-lora-1wire-thermometer` a nahrajte firmware.
 
-### Krok 4: Po nahrání se červená LED dioda na modulu Core Module rozsvítí na 2 sekundy a poté zhasne.
+#### Krok 4: Po nahrání se červená LED dioda na modulu Core Module rozsvítí na 2 sekundy a poté zhasne.
 
 ## Konfigurace LoRa
 
@@ -43,7 +43,7 @@ LoRa Climate Monitor odešle packet LoRa v následujících případech:
 
 ## Čtení dat
 
-Data jsou zakódována v zprávě LoRa. Abyste získali hodnoty zpět, musíte extrahovat správné bity. To je vysvětleno v souboru [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py`python [skript v úložišti](https://github.com/bigclownlabs/bcf-lora-climate-monitor).
+Data jsou zakódována v zprávě LoRa. Abyste získali hodnoty zpět, musíte extrahovat správné bity. To je vysvětleno v souboru [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py` python [skript v úložišti](https://github.com/bigclownlabs/bcf-lora-climate-monitor).
 
 Přijatý řetězec HEX můžete předat jako parametr pro `decode.py`:
 
