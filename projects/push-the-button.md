@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Push The Button
 
-**Push Button Kit** can interact with your world. Get phone notification, play next Spotify song, control your smart lights, trigger the egg timer or send a Tweet to the world.
+**Push Set** can interact with your world. Get phone notification, play next Spotify song, control your smart lights, trigger the egg timer or send a Tweet to the world.
 
 In this tutorial you create a simple project with a button, that sends you push notification to your phone everytime you press it.
 
@@ -20,9 +20,9 @@ In this tutorial you create a simple project with a button, that sends you push 
 
 ## Build Hardware
 
-You will need the [Push Button Kit](https://www.hardwario.store/p/push-set) and [Radio Dongle](https://www.hardwario.store/p/radio-dongle).
+You will need the [Push Set](https://www.hardwario.store/p/push-set) and [Radio Dongle](https://www.hardwario.store/p/radio-dongle).
 
-### Step 1: Assembly
+#### Step 1: Assembly
 
 Put all three modules together to build the **Push Button Kit**. Note the orientation of the Mini Battery Module on the image below.
 
@@ -33,7 +33,7 @@ Put all three modules together to build the **Push Button Kit**. Note the orient
   </div>
 </div>
 
-### Step 2: Put the batteries in
+#### Step 2: Put the batteries in
 
 :::info
 
@@ -45,7 +45,7 @@ The red LED on the Core Module will light up for 2 seconds when the batteries ar
 
 In this step you run the **Playground** application that manages Radio Dongle, Push Button and thanks to the **Node-RED** connects everything together.
 
-### Step 1: Download and run the latest [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+#### Step 1: Download and run the latest [**HARDWARIO Playground**](https://github.com/hardwario/hardwario-playground/releases/tag/v1.7.0)
 
 
 <div class="container">
@@ -54,7 +54,7 @@ In this step you run the **Playground** application that manages Radio Dongle, P
   </div>
 </div>
 
-### **Step 2:** Connect [Radio Dongle](https://www.hardwario.store/p/radio-dongle) to your computer
+#### **Step 2:** Connect [Radio Dongle](https://www.hardwario.store/p/radio-dongle) to your computer
 
 <div class="container">
   <div class="row">
@@ -62,7 +62,7 @@ In this step you run the **Playground** application that manages Radio Dongle, P
   </div>
 </div>
 
-### Step 3: Go to the **Devices** tab, check that the Radio Dongle is detected and click **Connect**
+#### Step 3: Go to the **Devices** tab, check that the Radio Dongle is detected and click **Connect**
 
 :::info
 
@@ -76,7 +76,7 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
   </div>
 </div>
 
-### **Step 4:** When connected. The already flashed and paired Push Button Kit will be in the paired devices
+#### **Step 4:** When connected. The already flashed and paired Push Button Kit will be in the paired devices
 
 <div class="container">
   <div class="row">
@@ -84,7 +84,7 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
   </div>
 </div>
 
-### Step 5: Switch to the **Functions** tab and make sure you see the flow on the image below
+#### Step 5: Switch to the **Functions** tab and make sure you see the flow on the image below
 
 <div class="container">
   <div class="row">
@@ -102,11 +102,11 @@ In case you don't see the flow, you can copy the text below and paste it into th
 
 In this step you configure **Blynk** application on your phone so you can get notifications from the **HARDWARIO Playground**.
 
-### Step 1: Download Blynk
+#### Step 1: Download Blynk
 
 Now download the **Blynk** app from [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk&pcampaignid=web_share). Create an account and log-in.
 
-### Step 2: Click on the **QR icon**
+#### Step 2: Click on the **QR icon**
 
 <div class="container">
   <div class="row">
@@ -114,14 +114,15 @@ Now download the **Blynk** app from [**App Store**](https://apps.apple.com/us/ap
   </div>
 </div>
 
-### **Step 3:** Scan following QR code to get everything preconfigured
+#### **Step 3:** Scan following QR code to get everything preconfigured
 
 <div class="container">
   <div class="row">
     <Image img={require('./img/push-the-button/push-the-button_blynk-qr-code-push-button-kit.webp')}/>
   </div>
 </div>
-### Step 4: You will see this imported **project** with a single **Notification Widget**
+
+#### Step 4: You will see this imported **project** with a single **Notification Widget**
 
 Click on the **Settings icon**.
 
@@ -131,7 +132,7 @@ Click on the **Settings icon**.
   </div>
 </div>
 
-### **Step 5:** Scroll down and click on **Email all** tokens. We use this token from you email later
+#### **Step 5:** Scroll down and click on **Email all** tokens. We use this token from you email later
 
 <div class="container">
   <div class="row">
@@ -139,7 +140,7 @@ Click on the **Settings icon**.
   </div>
 </div>
 
-### Step 6: Now you need start the Blynk project. Click on the **Play** symbol
+#### Step 6: Now you need start the Blynk project. Click on the **Play** symbol
 
 <div class="container">
   <div class="row">
@@ -151,11 +152,11 @@ Click on the **Settings icon**.
 
 The final step is to connect Node-RED and Blynk together, so you can get the notifications.
 
-### Step 1: In the **Playground** **Functions** tab doubleclick on the **Blynk notification** node
+#### Step 1: In the **Playground** **Functions** tab doubleclick on the **Blynk notification** node
 
-### Step 2: Click on the **pencil icon** and paste the token you've received in the email. Click **Done**
+#### Step 2: Click on the **pencil icon** and paste the token you've received in the email. Click **Done**
 
-### **Step 3:** Click the **Deploy** button. Everytime you edit the Node-RED flow you have to apply changes!
+#### **Step 3:** Click the **Deploy** button. Everytime you edit the Node-RED flow you have to apply changes!
 
 <div class="container">
   <div class="row">

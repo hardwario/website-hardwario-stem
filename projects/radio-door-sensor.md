@@ -10,7 +10,6 @@ import Image from '@theme/IdealImage';
 
 It can be equiped with magnet for easy attach enclosure and works for many years on batteries. Really easy installation!
 
-
 <div class="container">
   <div class="row">
     <Image img={require('./img/radio-door-sensor/radio-door-sensor_preview.webp')}/>
@@ -40,9 +39,6 @@ It can be equiped with magnet for easy attach enclosure and works for many years
   />
 </div>
 
-
-
-
 ## Requirements
 
 * [**Radio Dongle**](https://www.hardwario.store/p/radio-dongle)
@@ -67,18 +63,17 @@ Download the latest [HARDWARIO Playground](https://github.com/bigclownlabs/bch-p
   <div class="row">
     <Image img={require('./img/radio-door-sensor/radio-door-sensor_playground-run.webp')}/>
   </div>
-</div>
-
+</div><br></br>
 
 Now we need to make sure that modules use the latest firmware. You need to flash your [**Radio Dongle**](https://www.hardwario.store/p/radio-dongle) and the remote node [**Core Module**](https://www.hardwario.store/p/core-module).
 
 ## Flash Door Sensor firmware
 
-### Step 1: Connect
+#### Step 1: Connect
 
 **Connect just** the Door Sensor to the USB of your computer.
 
-### Step 2: Flash firmware
+#### Step 2: Flash firmware
 
 In Playground go to **Firmware tab**, select the firmware `bigclownlabs/bcf-radio-door-sensor`, choose the device's serial port in **Device** and click **FLASH FIRMWARE**.
 
@@ -88,17 +83,17 @@ In Playground go to **Firmware tab**, select the firmware `bigclownlabs/bcf-radi
   </div>
 </div>
 
-### Step 3: Disconnect
+#### Step 3: Disconnect
 
 Disconnect **Door Sensor** from your computer. Disconnect the batteries and keep the Door Sensor unpowered for pairing process later.
 
 ## Flash Radio Dongle firmware
 
-### Step 1: Connect
+#### Step 1: Connect
 
 Connect **just** the [Radio Dongle](https://www.hardwario.store/p/radio-dongle) to the USB of your computer.
 
-### Step 2: Flash
+#### Step 2: Flash
 
 In Playground go to **Firmware tab**, select the firmware `bigclownlabs/bcf-gateway-usb-dongle`, choose the device's serial port in **Device** and click **FLASH FIRMWARE**.
 
@@ -108,7 +103,7 @@ In Playground go to **Firmware tab**, select the firmware `bigclownlabs/bcf-gate
   </div>
 </div>
 
-### Step 3: Keep connected
+#### Step 3: Keep connected
 
 Keep [**Radio Dongle**](https://www.hardwario.store/p/core-module) connected to your computer.
 
@@ -125,7 +120,7 @@ In the bottom left corner, click on **Gateway** and select device's serial port.
 
 ## Pair the Radio Door Sensor
 
-### Step 1: Start pairing
+#### Step 1: Start pairing
 
 In the **Radio** tab click on the **Pairing start** button.
 
@@ -135,11 +130,11 @@ In the **Radio** tab click on the **Pairing start** button.
   </div>
 </div>
 
-### Step 2: Turn Door Sensor into pairing mode
+#### Step 2: Turn Door Sensor into pairing mode
 
 Now insert the batteries to the Door Sensor. The pairing command is send every time you put batteries to the remote module.
 
-### Step 3: Stop pairing
+#### Step 3: Stop pairing
 
 Stop the pairing by clicking **Pairing stop**.
 
@@ -151,19 +146,19 @@ Stop the pairing by clicking **Pairing stop**.
 
 ## Test the Door Sensor
 
-### Step 1: Switch to **MQTT** tab and subscribe to `#` topic.
+#### Step 1: Switch to **MQTT** tab and subscribe to `#` topic.
 
-### Step 2: Now put the magnet to and away from the sensor, you should see MQTT messages in the top window.
+#### Step 2: Now put the magnet to and away from the sensor, you should see MQTT messages in the top window.
 
-### Step 3: Other messages are button press and temperature change. Try it!
-
+#### Step 3: Other messages are button press and temperature change. Try it!
 
 <div class="container">
   <div class="row">
     <Image img={require('./img/radio-door-sensor/radio-door-sensor_playground-mqtt-test.webp')}/>
   </div>
 </div>
-:success
+
+:::success
 
 Perfect! You have created radio network which is receiving events and measured temperature.
 
@@ -173,9 +168,7 @@ Perfect! You have created radio network which is receiving events and measured t
 
 In this section, we will create an **Applet** in the **IFTTT** service. The **Applet** is a sort of event-trigger mechanism.
 
-### Step 1: Open the web-browser and go to [**IFTTT**](https://ifttt.com/):
-
-
+#### Step 1: Open the web-browser and go to [**IFTTT**](https://ifttt.com/):
 
 <div class="container">
   <div class="row">
@@ -183,7 +176,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 2: Log in to IFTTT service. You can sign up using your Google or Facebook identity:
+#### Step 2: Log in to IFTTT service. You can sign up using your Google or Facebook identity:
 
 <div class="container">
   <div class="row">
@@ -191,7 +184,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 3: Go to **My Applets** in the menu and click on the **New Applet** button:
+#### Step 3: Go to **My Applets** in the menu and click on the **New Applet** button:
 
 <div class="container">
   <div class="row">
@@ -199,7 +192,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 4: Click on **+this** in the `if this then that` sentence:
+#### Step 4: Click on **+this** in the `if this then that` sentence:
 
 <div class="container">
   <div class="row">
@@ -207,7 +200,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 5: Find a service with the name **Webhooks** and select it:
+#### Step 5: Find a service with the name **Webhooks** and select it:
 
 <div class="container">
   <div class="row">
@@ -215,7 +208,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 6: Click on **Receive a web request**:
+#### Step 6: Click on **Receive a web request**:
 
 <div class="container">
   <div class="row">
@@ -223,7 +216,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 7: Type `door` in the **Event Name** field and click on **Create Trigger**:
+#### Step 7: Type `door` in the **Event Name** field and click on **Create Trigger**:
 
 <div class="container">
   <div class="row">
@@ -231,7 +224,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 8: Click on **+that** in the `if this then that` sentence:
+#### Step 8: Click on **+that** in the `if this then that` sentence:
 
 <div class="container">
   <div class="row">
@@ -239,7 +232,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 9: Find action service with the name **Notifications** and select it:
+#### Step 9: Find action service with the name **Notifications** and select it:
 
 <div class="container">
   <div class="row">
@@ -247,7 +240,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 10: Click on **Send a notification from the IFTTT app**:
+#### Step 10: Click on **Send a notification from the IFTTT app**:
 
 <div class="container">
   <div class="row">
@@ -255,7 +248,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 11: Edit the **Notification** field and insert the text `Door Sensor Alarm at {{OccurredAt}} !` and push the **Create action** button:
+#### Step 11: Edit the **Notification** field and insert the text `Door Sensor Alarm at {{OccurredAt}} !` and push the **Create action** button:
 
 <div class="container">
   <div class="row">
@@ -263,7 +256,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 12: Click on the **Finish** button:
+#### Step 12: Click on the **Finish** button:
 
 <div class="container">
   <div class="row">
@@ -271,7 +264,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 13: Click on the **Webhooks** button:
+#### Step 13: Click on the **Webhooks** button:
 
 <div class="container">
   <div class="row">
@@ -279,7 +272,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 14: Click on the **Documentation** button:
+#### Step 14: Click on the **Documentation** button:
 
 <div class="container">
   <div class="row">
@@ -287,16 +280,17 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-### Step 15: Now you have your notification key. **Keep this page open so you can copy this key to the Node-RED later:**
+#### Step 15: Now you have your notification key. **Keep this page open so you can copy this key to the Node-RED later:**
 
 <div class="container">
   <div class="row">
     <Image img={require('./img/radio-door-sensor/radio-door-sensor_ifttt-15.webp')}/>
   </div>
 </div>
-### Step 16: Install the **IFTTT** app on your smart phone and sign in using the same account as you just used to create the applet. Allow the app to use the push notifications when asked
 
-:success
+#### Step 16: Install the **IFTTT** app on your smart phone and sign in using the same account as you just used to create the applet. Allow the app to use the push notifications when asked
+
+:::success
 
 At this point, you've got working notification **Applet** in the **IFTTT** service.
 
@@ -306,7 +300,7 @@ At this point, you've got working notification **Applet** in the **IFTTT** servi
 
 To use IFTTT in Node-RED, we can use simple plug-in which will send notifications.
 
-### Step 1: Click on **MQTT** tab, then on the menu in the top right corner and select **Manage palette**
+#### Step 1: Click on **MQTT** tab, then on the menu in the top right corner and select **Manage palette**
 
 
 <div class="container">
@@ -315,9 +309,7 @@ To use IFTTT in Node-RED, we can use simple plug-in which will send notification
   </div>
 </div>
 
-### **Step 2:** Switch to **Install** tab, search for `ifttt` and click on the **install** button. In the pop-up window, click again on **Install:**
-
-
+#### **Step 2:** Switch to **Install** tab, search for `ifttt` and click on the **install** button. In the pop-up window, click again on **Install:**
 
 <div class="container">
   <div class="row">
@@ -325,17 +317,15 @@ To use IFTTT in Node-RED, we can use simple plug-in which will send notification
   </div>
 </div>
 
-### Step 3: After installation you see confirmation that new nodes has beed addded to the Node-RED:
-
-
+#### Step 3: After installation you see confirmation that new nodes has beed addded to the Node-RED:
 
 <div class="container">
   <div class="row">
     <Image img={require('./img/radio-door-sensor/radio-door-sensor_node-red-installed-confirmation.webp')}/>
   </div>
-</div>
+</div><br></br>
 
-:success
+:::success
 
 Perfect! Node-RED plugin for IFTTT will allow to send notification directly to you phone.
 
@@ -343,13 +333,13 @@ Perfect! Node-RED plugin for IFTTT will allow to send notification directly to y
 
 ## Import Node-RED notification flow
 
-### Step 1: Copy the text below to the clipboard:
+#### Step 1: Copy the text below to the clipboard:
 
 ```text
 [{"id":"5ca15197.aef91","type":"mqtt in","z":"49c6b66c.16eaf8","name":"","topic":"node/door-sensor:0/door-sensor/a/state","qos":"2","broker":"67b8de4a.029d3","x":210,"y":100,"wires":[["ccd36bb4.eccae8"]]},{"id":"ccd36bb4.eccae8","type":"switch","z":"49c6b66c.16eaf8","name":"","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"false","vt":"str"}],"checkall":"true","repair":false,"outputs":1,"x":210,"y":220,"wires":[["6cb9da01.6abab4"]]},{"id":"6cb9da01.6abab4","type":"ifttt out","z":"49c6b66c.16eaf8","eventName":"door","key":"","x":210,"y":320,"wires":[]},{"id":"67b8de4a.029d3","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","willTopic":"","willQos":"0","willPayload":""}]
 ```
 
-### Step 2: Click on the top right **menu**, then select **Import** and **Clipboard:**
+#### Step 2: Click on the top right **menu**, then select **Import** and **Clipboard:**
 
 <div class="container">
   <div class="row">
@@ -357,7 +347,7 @@ Perfect! Node-RED plugin for IFTTT will allow to send notification directly to y
   </div>
 </div>
 
-### **Step 3:** Paste the text from clipboard to the textbox and press **Import:**
+#### **Step 3:** Paste the text from clipboard to the textbox and press **Import:**
 
 <div class="container">
   <div class="row">
@@ -367,7 +357,7 @@ Perfect! Node-RED plugin for IFTTT will allow to send notification directly to y
 
 ## Set IFTTT key
 
-### **Step 1:** You have imported the flow. Now you need to fill in your own **IFTTT key**. Double click on the **IFTTT** node:
+#### **Step 1:** You have imported the flow. Now you need to fill in your own **IFTTT key**. Double click on the **IFTTT** node:
 
 <div class="container">
   <div class="row">
@@ -375,7 +365,7 @@ Perfect! Node-RED plugin for IFTTT will allow to send notification directly to y
   </div>
 </div>
 
-### Step 2: Click on a **pencil symbol** and copy and **paste the key** from the last step of IFTTT integration chapter. Check that the **Event name** is set to the **door** event. Then click **Done:**
+#### Step 2: Click on a **pencil symbol** and copy and **paste the key** from the last step of IFTTT integration chapter. Check that the **Event name** is set to the **door** event. Then click **Done:**
 
 <div class="container">
   <div class="row">
@@ -385,7 +375,7 @@ Perfect! Node-RED plugin for IFTTT will allow to send notification directly to y
 
 ## Run and test your flow!
 
-### **Step 1:** Everytime you change the flow, you have to click on the **Deploy** button in the right top corner. **Please do that now:**
+#### **Step 1:** Everytime you change the flow, you have to click on the **Deploy** button in the right top corner. **Please do that now:**
 
 <div class="container">
   <div class="row">
@@ -393,7 +383,7 @@ Perfect! Node-RED plugin for IFTTT will allow to send notification directly to y
   </div>
 </div>
 
-### **Step 2:** Now put the magnet near the magnetic sensor and away on your Radio Door Sensor. You should get IFTTT notification in a few seconds later!
+#### **Step 2:** Now put the magnet near the magnetic sensor and away on your Radio Door Sensor. You should get IFTTT notification in a few seconds later!
 
 You should see "true" and "false" messages in the right **debug** tab and during **false** there will be a **Sent!** green flag near the IFTTT node for a while.
 
@@ -401,7 +391,7 @@ You should see "true" and "false" messages in the right **debug** tab and during
   <div class="row">
     <Image img={require('./img/radio-door-sensor/radio-door-sensor_node-red-test.webp')}/>
   </div>
-</div>
+</div><br></br>
 
 If you would like be notified on "true" messages instead of **false**, just open the **switch node** and change the `false` text in the rules to `true`.
 
@@ -409,9 +399,9 @@ If you would like be notified on "true" messages instead of **false**, just open
   <div class="row">
     <Image img={require('./img/radio-door-sensor/radio-door-sensor_phone-notification.webp')}/>
   </div>
-</div>
+</div><br></br>
 
-:success
+:::success
 
 Now find the right spot for the **Radio Door Sensor** and enjoy the notifications you get!
 

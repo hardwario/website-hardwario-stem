@@ -38,12 +38,14 @@ This document will guide you through the **Radio Soil Sensor** project. You will
 
 ## Requirements
 
-* Either **HARDWARIO Radio Soil Sensor Kit**, or individual components:
-  * 1x **HARDWARIO** [**Soil Moisture Sensor**](https://www.hardwario.store/p/soil-sensor-set)
-  * 1x **HARDWARIO** [**Sensor Module**](https://www.hardwario.store/p/sensor-module)
-  * 1x **HARDWARIO** [**Core Module**](https://www.hardwario.store/p/core-module)
-  * 1x **HARDWARIO** [**Battery Module**](https://www.hardwario.store/p/battery-module)
-  * 1x **HARDWARIO** [**Radio Dongle**](https://www.hardwario.store/p/radio-dongle)
+* Either [**Soil Sensor Set**](https://www.hardwario.store/p/soil-sensor-set), or individual components:
+
+  * 1x [**Soil Moisture Sensor**](https://www.hardwario.store/p/soil-sensor)
+  * 1x [**Sensor Module**](https://www.hardwario.store/p/sensor-module)
+  * 1x [**Core Module**](https://www.hardwario.store/p/core-module)
+  * 1x [**Battery Module**](https://www.hardwario.store/p/battery-module)
+  * 1x [**Radio Dongle**](https://www.hardwario.store/p/radio-dongle)
+
 * You will need **Raspberry Pi** with the **HARDWARIO Raspbian** distribution installed. Please see [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/) document.
 
 Measured data will be saved and visualized in Grafana on [**Raspberry Pi**](https://www.hardwario.store/p/raspberry-pi-cm4108016). It is also possible to use your computer. Just follow [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/) document.
@@ -60,17 +62,15 @@ In this procedure we will use the **HARDWARIO Firmware Tool** to upload firmware
 
 Now it's time to write firmware to the **Core Module**.
 
-### Step 1: Connect the Micro USB cable to the **Core Module** and **Raspberry Pi**
+#### Step 1: Connect the Micro USB cable to the **Core Module** and **Raspberry Pi**
 
-### Step 2: Upload the firmware to the **Core Module**:
-
+#### Step 2: Upload the firmware to the **Core Module**:
 
 :::info
 
 You may want to update available firmwares by `bcf update` if the installation has been prolonged for a longer time after Playground Setup
 
 :::
-
 
 :::warning
 
@@ -81,7 +81,7 @@ For differences of flashing older **Core Module 1** and newer **Core Module 2** 
 
 Run the HARDWARIO Playground. In the Firmware tab choose and upload the `bcf-radio-soil-sensor` firmware to the **Core Module**:
 
-### Step 3: Remove the Micro USB cable from the **Core Module** and **Raspberry Pi**
+#### Step 3: Remove the Micro USB cable from the **Core Module** and **Raspberry Pi**
 
 
 :::success
@@ -92,7 +92,7 @@ At this point your firmware is successfully uploaded
 
 ## Hardware Assembling
 
-### Step 1: Start with the [**Battery Module**](https://www.hardwario.store/p/battery-module)
+#### Step 1: Start with the [**Battery Module**](https://www.hardwario.store/p/battery-module)
 
 
 :::warning
@@ -101,11 +101,11 @@ Make sure the **Battery Module** does not have batteries inserted.
 
 :::
 
-### Step 2: Plug the [**Core Module**](https://www.hardwario.store/p/core-module) on top of the [**Battery Module**](https://www.hardwario.store/p/battery-module).
+#### Step 2: Plug the [**Core Module**](https://www.hardwario.store/p/core-module) on top of the [**Battery Module**](https://www.hardwario.store/p/battery-module).
 
-### Step 3: Plug the [**Sensor Module**](https://shop.bigclown.com/sensor-module) on top of the [**Core Module**](https://www.hardwario.store/p/core-module).
+#### Step 3: Plug the [**Sensor Module**](https://www.hardwario.store/p/sensor-module) on top of the [**Core Module**](https://www.hardwario.store/p/core-module).
 
-### Step 4: Plug the [**Soil Moisture Sensor**](https://www.hardwario.store/p/soil-sensor-set) connector to the [**Sensor Module**](https://www.hardwario.store/p/sensor-module).
+#### Step 4: Plug the [**Soil Moisture Sensor**](https://www.hardwario.store/p/soil-sensor-set) connector to the [**Sensor Module**](https://www.hardwario.store/p/sensor-module).
 
 ## Radio Pairing
 
@@ -113,8 +113,7 @@ In this section, we will create a radio link between the **Radio Dongle** and th
 
 Follow these steps in **Node-RED**:
 
-### Step 1: Click on the **Start node pairing** button
-
+#### Step 1: Click on the **Start node pairing** button
 
 :::warning
 
@@ -128,7 +127,7 @@ Make sure, that after pressing the **Start node pairing** button in the right **
   </div>
 </div>
 
-### Step 2: Assembly
+#### Step 2: Assembly
 
 Insert the batteries into the **Radio Climate Monitor** to send the pairing request (you should also see the red LED on the **Core Module** to be on for about 2 seconds).
 
@@ -140,14 +139,13 @@ In the **Node-RED** debug tab, there is a message about name and firmware versio
   </div>
 </div>
 
-### Step 3: Click on the **Stop node pairing** button
+#### Step 3: Click on the **Stop node pairing** button
 
 <div class="container">
   <div class="row">
     <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_node-red-gw-pair-stop.webp')}/>
   </div>
-</div>
-
+</div><br></br>
 
 :::success
 
@@ -159,9 +157,9 @@ At this point, you've got established a radio link between the node (**Radio Moi
 
 Follow these steps in **Node-RED**:
 
-### Step 1: Switch to **debug** tab on the right
+#### Step 1: Switch to **debug** tab on the right
 
-### Step 2: Test it:
+#### Step 2: Test it:
 
 Start breathing on the temperature sensor on the **Soil Sensor** to invoke a change of temperature and hence trigger a radio transmission.
 
@@ -171,8 +169,7 @@ You should then see similar messages:
   <div class="row">
     <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_radio-test.webp')}/>
   </div>
-</div>
-
+</div><br></br>
 
 :::success
 
@@ -184,7 +181,6 @@ At this point, you've got verified radio communication.
 
 Optionally put the assembly into the appropriate enclosure, if you have one.
 
-
 :::info
 
 You can find more information about the enclosures in the document [**Enclosures**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
@@ -195,11 +191,11 @@ You can find more information about the enclosures in the document [**Enclosures
 
 Now we have assembled our kit and let's start with some basic integration with **Grafana**.
 
-### Step 1: Install dependencies
+#### Step 1: Install dependencies
 
 Install **Grafana** and **InfluxDB** database to your **Raspberry Pi**. This is explained in [**Grafana for Visualization**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/) document
 
-### Step 2: Edit config
+#### Step 2: Edit config
 
 Add these lines to the `/etc/bigclown/mqtt2influxdb.yml` configuration file which you had created in the **Grafana for Visualization** tutorial. This adds support for new topics that Soil Sensor sends.
 
@@ -236,23 +232,23 @@ And append these lines at the end of the existing file:
         channel: $.topic[3]
 ```
 
-### Step 3: Test that the configuration is valid. Otherwise there is some formatting error in the YAML file
+#### Step 3: Test that the configuration is valid. Otherwise there is some formatting error in the YAML file
 
 ```text
 mqtt2influxdb -c /etc/bigclown/mqtt2influxdb.yml --test
 ```
 
-### Step 4: Restart MQTT2InfluxDB service, because we've changed the configuration
+#### Step 4: Restart MQTT2InfluxDB service, because we've changed the configuration
 
 ```text
 pm2 restart mqtt2influxdb
 ```
 
-### Step 5: Open **Grafana** page which is running on **Raspberry Pi** on port `3000`
+#### Step 5: Open **Grafana** page which is running on **Raspberry Pi** on port `3000`
 
 [http://hub.local:3000](http://hub.local:3000)
 
-### Step 6: Graph
+#### Step 6: Graph
 
 Now you can see temperature and battery voltage on the bottom. We need to add a moisture graph. Because we added `- measurement: moisture` to the config file, we need to duplicate existing graph and change its `measurement` data source to `moisture`.
 
@@ -260,7 +256,7 @@ Now you can see temperature and battery voltage on the bottom. We need to add a 
   <div class="row">
     <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_grafana-duplicate.webp')}/>
   </div>
-</div>
+</div><br></br>
 
 Now click on **Edit** in the **duplicated** graph.
 
@@ -268,7 +264,7 @@ Now click on **Edit** in the **duplicated** graph.
   <div class="row">
     <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_grafana-edit.webp')}/>
   </div>
-</div>
+</div><br></br>
 
 Now in **Metrics** tab change the **FROM** item from value **temperature** to **moisture**.
 
@@ -278,7 +274,7 @@ Now in **Metrics** tab change the **FROM** item from value **temperature** to **
   </div>
 </div>
 
-### Step 7: Save
+#### Step 7: Save
 
 Now click on the **Save** button in the **Grafana** so all your configuration stays the same next time you open the page.
 
