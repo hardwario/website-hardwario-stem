@@ -110,7 +110,7 @@ Stáhněte si aplikaci [HARDWARIO Playground](https://github.com/hardwario/hardw
   <div class="row">
     <Image img={require('./temperature-and-humidity-gauges.avif')}/>
   </div>
-</div>
+</div><br></br>
 
 *Pozn.:*  
 *Dýchněte na Humidity Tag pro online změny hodnot teploty i vlhkosti.*

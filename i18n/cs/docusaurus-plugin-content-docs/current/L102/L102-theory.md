@@ -16,7 +16,7 @@ import Image from '@theme/IdealImage';
 * Bezdrátové řešení s velmi nízkou spotřebou energie, díky čemuž je instalace snadná a jednotky vydrží běžet z baterií i několik let
 * Open-source přístup umožňující integrace s dalšími platformami - [github](https://github.com/hardwario)
 * Vzorový firmware  k okamžitému použití - [github](https://github.com/hardwario)
-* Široké portfolio modelů pouzder pro tisk na 3D tiskárnách, včetně dostupné služby 3D tisku - [obchod](https://www.hardwario.store/cz/)
+* Široké portfolio modelů pouzder pro tisk na 3D tiskárnách, včetně dostupné služby 3D tisku - [store](https://www.hardwario.store/cz/enclosures)
 * Podrobné návody a technická podpora, které pomáhají zákazníkům při práci se stavebnicí - [dokumentace](https://docs.hardwario.com/tower/) a [fórum](https://forum.hardwario.com/)
 
 ### Komunikační možnosti
