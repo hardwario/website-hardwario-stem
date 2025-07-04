@@ -19,6 +19,8 @@ const sidebars = {
     'radio-soil-sensor',
     'radio-voc-sensor',
     'projects-overview',
+    'apology-to-teachers',
+    'bottle-party-game'
 
 
 
