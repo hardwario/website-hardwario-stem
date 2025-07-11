@@ -6,16 +6,16 @@ title: Bottle party game
 ## Introduction
 
 
-Why play Spin the Bottle with a bottle if all you need is a smart box?  Set your Starter Kit to draw a random member of your group. Whether it be at a party, while drawing a winner or deciding who will clean up.
+Why play Spin the Bottle with a bottle if all you need is a smart box?  Set your Start Set to draw a random member of your group. Whether it be at a party, while drawing a winner or deciding who will clean up.
 
 In this project, you will learn how to set up the box so it **draws a random member** of your group. 😱
 
-You will need **the box with the button** and the **USB dongle**. All you need is a basic HARDWARIO kit, the [**Starter Kit**](https://shop.hardwario.com/starter-kit/).
+You will need **the box with the button** and the **USB dongle**. All you need is a basic HARDWARIO kit, the [**Start Set**](https://www.hardwario.store/p/start-set).
 
 
 ## Get it started in the Node-RED
 
-1. Starter Kit put together and pair.
+1. Start Set put together and pair.
 2. In the Playground, click on the **Functions tab** where the programming desktop is located.
 3. Let’s make it happen. 🤞 Place the **MQTT** node from the Input section in the desktop.
 
