@@ -20,8 +20,9 @@ const sidebars = {
     'radio-voc-sensor',
     'projects-overview',
     'apology-to-teachers',
-    'bottle-party-game'
-
+    'bottle-party-game',
+    'button-for-parents',
+    'button-for-parents-upgrade',
 
 
     /*'getting-started',

@@ -1,5 +1,4 @@
 // @ts-check
-
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   docs: [
@@ -19,9 +18,13 @@ const sidebars = {
     'radio-smart-led-strip',
     'radio-soil-sensor',
     'radio-voc-sensor',
+    'apology-to-teachers',
+     'bottle-party-game',
+    'button-for-parents',
+    'button-for-parents-upgrade',
 
 
-
+    
     /*'getting-started',
     {
       type: 'category',
