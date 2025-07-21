@@ -9,12 +9,12 @@ You know this for sure. In the fridge, you keep the last piece of cake from your
 
 In this project, you will learn to make a **fridge opening detector.** 👈
 
-All you need is the box with button and the USB dongle in the basic HARDWARIO [Starter Kit](https://shop.hardwario.com/starter-kit/).
+All you need is the box with button and the USB dongle in the basic HARDWARIO [Start set](https://shop.hardwario.com/p/start-set/).
 
 
 ##  Download new firmware
 
-1. If you haven't done it yet, put together the [Starter Kit](https://shop.hardwario.com/starter-kit/).
+1. If you haven't done it yet, put together the [Start set](https://shop.hardwario.com/p/start-set/).
 2. Upload a special firmware to Core Module - **bcf-radio-x-axis-detector** (you will find it among other firmware in the Playground). Thanks to this firmware, the box will become sensitive to movement.👌
 
 3. Pair the Core Module with the USB Dongle. Right after pairing it, you will notice that your Core Module has changed Alias to **x-axis-detector**.

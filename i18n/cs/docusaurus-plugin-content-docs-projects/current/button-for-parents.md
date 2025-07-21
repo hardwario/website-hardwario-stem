@@ -9,12 +9,12 @@ Znáš to? Paříš jak drak nebo posloucháš hudbu na plné pecky, a když tě
 
 V tomhle projektu se naučíš, **jak tlačítkem poslat zprávu do mobilu** odkudkoli v domě. 👌
 
-Budeš potřebovat krabičku s **tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou, tedy [**Starter Kitem**](https://shop.hardwario.com/starter-kit/).
+Budeš potřebovat krabičku s **tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou, tedy [**Starter setem**](https://shop.hardwario.com/p/start-set/).
 
 
 ## Rozjeď to v Node-RED
 
-1. Starter Kit sestav a spáruj. Na Core module potřebuješ firmware **radio push button**.
+1. Starter set sestav a spáruj. Na Core module potřebuješ firmware **radio push button**.
 2. V Playgroundu klikni na **záložku Functions**. Na ní si přednastavíš krabičku, aby dělala všechno, co chceš.
 3. Jde se programovat. 🤞 Na plochu Node-RED postav světle fialovou bublinu, neboli nod. Najdeš ho vlevo jako **MQTT** v sekci **Input**.
 

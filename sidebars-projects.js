@@ -23,6 +23,11 @@ const sidebars = {
     'bottle-party-game',
     'button-for-parents',
     'button-for-parents-upgrade',
+    'catch-the-mist',
+    'christmas-detector',
+    'crystal-ball',
+    'dragons-fire',
+    'dragons-fire-level-2',
 
 
     /*'getting-started',

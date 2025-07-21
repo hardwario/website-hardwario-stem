@@ -12,14 +12,14 @@ Under this project, you will learn how to **set up a different message for diffe
 
 The basic version of this project can be found here: [Create an IoT button that enables your mom to call you for dinner](/projects/button-for-parents.md).
 
-You will need the **box with button** and a **USB Dongle**. The basic HARDWARIO [**Starter Kit**](https://shop.hardwario.com/starter-kit/) is sufficient for this.
+You will need the **box with button** and a **USB Dongle**. The basic HARDWARIO [**Start set**](https://shop.hardwario.com/p/start-set/) is sufficient for this.
 
 
 ## Prepare Node-RED
 
-1. Put the Starter Kit together and pair it. On the Core Module you will need the familiar **bcf-radio-push-button** firmware again.
+1. Put the Star set together and pair it. On the Core Module you will need the familiar **bcf-radio-push-button** firmware again.
 
-![sestavení-starter-kitu](https://res.cloudinary.com/lukasfabik/image/upload/v1573301763/projects/dalsi-level-projekt-tlacitko-pro-mamku/image2.png)
+![sestavení-starter-setu](https://res.cloudinary.com/lukasfabik/image/upload/v1573301763/projects/dalsi-level-projekt-tlacitko-pro-mamku/image2.png)
 
 ## Set up notification
 

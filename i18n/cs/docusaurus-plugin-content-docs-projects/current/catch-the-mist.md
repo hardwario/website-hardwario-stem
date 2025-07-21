@@ -9,12 +9,12 @@ Určitě to znáš. V lednici si necháváš poslední kousek dortu ze svojí os
 
 V tomhle projektu se naučíš vytvořit **detektor otevírání ledničky**. 👈
 
-Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Starter Kitem**](https://shop.hardwario.com/starter-kit/).
+Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Start Setem**](https://shop.hardwario.com/p/start-set/).
 
 
 ## Stáhni si nový firmware
 
-1. Pokud to ještě nemáš, sestav [Starter Kit ](https://shop.hardwario.com/starter-kit/)
+1. Pokud to ještě nemáš, sestav [Start Set ](https://shop.hardwario.com/p/start-set/)
 2. Na Core Module nahraj speciální firmware, a to **bcf-radio-x-axis-detector** (najdeš ho mezi ostatním firmwarem v Playgroundu). Díky tomuhle firmwaru bude krabička citlivější na pohyb. 👌
 3. Core Module spáruj s USB Donglem. Hned po spárování uvidíš, že tvůj Core Module změnil Alias na **x-axis-detector**.
 

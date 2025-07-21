@@ -1,5 +1,5 @@
 ---
-slug: bottle-for-parents-upgrade
+slug: button-for-parents-upgrade
 title: Tlačítko pro rodiče - Vylepšení
 ---
 
@@ -11,14 +11,14 @@ V tomhle projektu se naučíš **nastavit jinou zprávu na jiný čas**, odeslat
 
 Základní verzi tohohle projektu najdeš tady: [Vyrob si IoT tlačítko, se kterým tě máma zavolá k večeři](/i18n/cs/docusaurus-plugin-content-docs-projects/current/button-for-parents.md).
 
-Budeš potřebovat **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou, tedy [**Starter Kitem**](https://shop.hardwario.com/starter-kit/).
+Budeš potřebovat **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou, tedy [**Start setem**](https://shop.hardwario.com/p/start-set/).
 
 
 ## Připrav si Node-RED
 
-1. Starter Kit sestav a spáruj. Na Core Module potřebuješ zase ten starý známý firmware **bcf-radio-push-button**.
+1. Start set sestav a spáruj. Na Core Module potřebuješ zase ten starý známý firmware **bcf-radio-push-button**.
 
-![sestavení-starter-kitu](https://res.cloudinary.com/lukasfabik/image/upload/v1573301763/projects/dalsi-level-projekt-tlacitko-pro-mamku/image2.png)
+![sestavení-start-setu](https://res.cloudinary.com/lukasfabik/image/upload/v1573301763/projects/dalsi-level-projekt-tlacitko-pro-mamku/image2.png)
 
 ## Nastav si notifikaci
 

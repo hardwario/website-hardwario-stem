@@ -10,12 +10,12 @@ You know the feeling. You are deep into playing games or listening to music at f
 
 In this project you will learn **how to use the button to send a message to a mobile** from anywhere in the house. 👌
 
-You will need the **box with a button** and the **USB dongle**. So you will be fine with just the basic HARDWARIO kit, the [**Starter Kit**](https://shop.hardwario.com/starter-kit/). If it´s the first time you are holding the Starter Kit box in your hands.
+You will need the **box with a button** and the **USB dongle**. So you will be fine with just the basic HARDWARIO set, the [**Starter Kit**](https://shop.hardwario.com/p/start-set/). If it´s the first time you are holding the Starter set box in your hands.
 
 
 ## Get it started in Node-RED
 
-1. Put together the Starter Kit and pair it. For the Core module, you need the **radio push button** firmware. If you don’t know how to download the firmware or what it even is, you can find out more here.
+1. Put together the Starter set and pair it. For the Core module, you need the **radio push button** firmware. If you don’t know how to download the firmware or what it even is, you can find out more here.
 2. Click on the **Functions tab** in the Playground. You will find there the Node-RED programming desktop. Here you can preset your box so it does anything you want.
 **If you open the programme for the first time:** clear the desktop and delete all the preset nods with the Delete button.
 3. Let's program now. 🤞 Place the light purple cell, or nod, on the Node-RED desktop first. You'll find it on the left side as **MQTT in the Inputs section**.
@@ -67,7 +67,7 @@ Try it out. **Connect both nodes** by dragging the mouse from one cell to the ot
 
 1. Your box with the button will be connected with a smartphone thanks to the Blynk app. And that´s pretty cool. 😎 Download **the Blynk app** from [App Store](https://apps.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481) or [Google Play](https://play.google.com/store/apps/details?id=cc.blynk&hl=en). Sign in or create an account.
 2. Create a new project in the app: click on **New project**.
-3. In  “Choose device”, choose the **HARDWARIO IoT Kit**.
+3. In  “Choose device”, choose the **HARDWARIO IoT set**.
 4. Confirm with clicking on the **Create** button. Now **a token** has been sent to your email. It's an electronic key to a project with which you can later connect to your phone from the computer.  For now though, stay in the app.  📱<br/><br/>
 ❓ **What if I didn´t get the token?** Check the spam folder. The email is not even there? Send it again. In the Blynk app, in the Project settings tab, you will see your auth token, and the **E-mail** button right under it. Click on it and check your mailbox one more time. 👋
 

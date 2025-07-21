@@ -15,7 +15,7 @@ All you need for this is the basic HARDWARIO [**Start Set**](https://www.hardwar
 
 ## Make it happen in Node-RED
 
-1. Put the Starter Kit together and pair it: If you are doing this for the first time, we've prepared a simple guide for you. You need the radio push button firmware for the Core Module. If you don't know how to download the firmware or what it is, [you can find out here](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
+1. Put the Start set together and pair it: If you are doing this for the first time, we've prepared a simple guide for you. You need the radio push button firmware for the Core Module. If you don't know how to download the firmware or what it is, [you can find out here](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
 2. In Playground, click the **Functions tab** where the [Node-RED](https://docs.hardwario.com/tower/platform-integrations/blynk-app/#node-red-setup) programming area is.🤖
 3. Place the **MQTT** node from the Input section on the Node-RED area.
    
