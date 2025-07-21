@@ -18,7 +18,7 @@ All you need is the **box with button** and the **USB dongle** in the basic HARD
 
 
 
-3. [Pair the Core Module with the USB Dongle]({{< ref "/tower/tutorials/how-to-pair-Set.en.md" >}}). Right after pairing it, you will notice that your Core Module has changed Alias to **rotation-g-meter**.
+3. <a href="https://docs.hardwario.com/tower/desktop-programming/radio-network-management#pairing-new-devices" target="_blank">Pair the Core Module with the USB Dongle.</a> Right after pairing it, you will notice that your Core Module has changed Alias to **rotation-g-meter**.
 
 ![HARDWARIO devices list](https://res.cloudinary.com/lukasfabik/image/upload/v1566292682/projects/highest-centrifugal-force/image11.png)
 

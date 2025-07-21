@@ -28,6 +28,7 @@ const sidebars = {
     'crystal-ball',
     'dragons-fire',
     'dragons-fire-level-2',
+    'highest-centrifugal-force'
 
 
     /*'getting-started',
