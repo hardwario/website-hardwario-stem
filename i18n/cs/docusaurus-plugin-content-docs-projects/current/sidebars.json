@@ -1,5 +1,3 @@
-// @ts-check
-/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   docs: [
     'introduction',
@@ -19,6 +17,7 @@ const sidebars = {
     'radio-soil-sensor',
     'radio-voc-sensor',
     'apology-to-teachers',
+     'appliance-control',
      'bottle-party-game',
     'button-for-parents',
     'button-for-parents-upgrade',
@@ -27,6 +26,11 @@ const sidebars = {
     'crystal-ball',
     'dragons-fire',
     'dragons-fire-level-2',
+    'highest-centrifugal-force',
+    'iguana-terrarium-monitor',
+    'im-ok-button',
+    'kennel-temperature-monitor',
+    'kennel-temperature-monitor-upgrade',
 
 
     

@@ -20,6 +20,7 @@ const sidebars = {
     'radio-voc-sensor',
     'projects-overview',
     'apology-to-teachers',
+    'appliance-control',
     'bottle-party-game',
     'button-for-parents',
     'button-for-parents-upgrade',
@@ -28,7 +29,11 @@ const sidebars = {
     'crystal-ball',
     'dragons-fire',
     'dragons-fire-level-2',
-    'highest-centrifugal-force'
+    'highest-centrifugal-force',
+    'iguana-terrarium-monitor',
+    'im-ok-button',
+    'kennel-temperature-monitor',
+    'kennel-temperature-monitor-upgrade',
 
 
     /*'getting-started',
