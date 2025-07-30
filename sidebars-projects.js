@@ -34,6 +34,12 @@ const sidebars = {
     'im-ok-button',
     'kennel-temperature-monitor',
     'kennel-temperature-monitor-upgrade',
+    'kung-fu-master',
+    'node-red-and-start-set',
+    'safe-drawer',
+    'smart-washing-machine',
+    'thief-trap',
+    'warmes-coldes-place',
 
 
     /*'getting-started',
