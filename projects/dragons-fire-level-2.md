@@ -10,7 +10,7 @@ Under this project, you will learn how to **save the highest measured value and 
 
 The basic version of this project can be found here: [IoT party game: Do you have a dragon´s fire or freezing breath in you?](/projects/dragons-fire.md)
 
-All you need is the basic HARDWARIO [**Starter Kit**](https://shop.hardwario.com/starter-kit/).
+All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set).
 
 
 ## Prepare Node-RED

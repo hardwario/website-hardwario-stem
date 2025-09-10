@@ -13,7 +13,7 @@ You will need the **box with button and a USB Dongle**. The basic HARDWARIO [**S
 
 ## Make it happen in Node-RED
 
-1. Put the Start Set [together and pair it](/handbook/). You need the **radio-8-ball** firmware for the Core Module.
+1. Put the Start Set together and pair it. You need the **radio-8-ball** firmware for the Core Module.
 
 After downloading the firmware, you will see that the Alias of your device under the Devices tab has changed to **Future teller**.
 
