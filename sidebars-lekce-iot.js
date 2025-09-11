@@ -14,8 +14,8 @@ const sidebars = {
       items: [
         'lekce-1/nainstaluj-prostredi',
         'lekce-1/pripoj-dongle',
-        'lekce-1/prehraj-firmware',
         'lekce-1/sparuj-modul',
+        'lekce-1/prehraj-firmware',
       ],
     },
     {
