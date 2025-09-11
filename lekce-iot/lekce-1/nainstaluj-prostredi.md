@@ -1,24 +1,24 @@
 ---
 slug: nainstaluj-prostredi
-title: Nainstaluj prostředí
+title: Install the environment
 ---
-# Připoj se a měř
+# Connect and Measure
 
-🧑‍💻 **Trvání:** 20 minut  
-🎯 **Cílová skupina:** pro jednotlivce  
+🧑‍💻 **Duration:** 20 minutes  
+🎯 **Target audience:** individuals  
 
-Zapojte své Hardwario hračky, nainstalujte Hardwario Playground a začněte měřit.
+Connect your Hardwario toys, install Hardwario Playground, and start measuring.
 
-**Úkol:** Ověřte, že máte nainstalovaný Playground a že zařízení je připojeno přes Bluetooth.
+**Task:** Verify that you have Playground installed and that the device is connected via Bluetooth.
 
 ## 1. Hardwario Playground
 
-Hardwario Playground je univerzální nástroj pro práci se stavebnicí Hardwario, dostupný pro Windows, macOS i Linux. Umožňuje vizuální programování a sledování aktuálního stavu senzorů v reálném čase. Více informací najdete v [oficiální dokumentaci](https://docs.hardwario.com/tower/desktop-programming/about-playground/).
+Hardwario Playground is a universal tool for working with the Hardwario kit, available for Windows, macOS, and Linux. It allows visual programming and real-time monitoring of sensor states. You can find more information in the [official documentation](https://docs.hardwario.com/tower/desktop-programming/about-playground/).
 
 :::info
 
-Playground si můžete stáhnout na stránce [Download](https://docs.hardwario.com/tower/desktop-programming/playground-installation/). Vyberte si verzi podle vašeho operačního systému, stáhněte instalační soubor a postupujte podle průvodce instalací.
+You can download Playground from the [Download](https://docs.hardwario.com/tower/desktop-programming/playground-installation/) page. Select the version for your operating system, download the installer, and follow the installation wizard.
 
 :::
 
-Po úspěšné instalaci a spuštění Hardwario Playground se otevře hlavní okno aplikace. V záložce **Devices** uvidíte seznam připojených zařízení. Pokud je vše správně zapojeno, objeví se zde vaše Hardwario zařízení. Na začátku však může být seznam prázdný – v takovém případě zkontrolujte, zda je zařízení správně připojeno přes USB a nainstalovány všechny potřebné ovladače.
+After successful installation and launch, the main Playground window will open. In the **Devices** tab you will see a list of connected devices. If everything is set up correctly, your Hardwario device will appear here. At the beginning, however, the list may be empty — in that case, check whether the device is properly connected via USB and whether all the necessary drivers are installed.

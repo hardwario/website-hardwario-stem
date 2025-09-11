@@ -1,26 +1,26 @@
 ---
 slug: sleduj-zpravy-v-playground
-title: Sleduj zprávy v Playground
+title: Monitor messages in Playground
 ---
-# Lekce 3 – Ukázat či neukázat?
+# Lesson 3 – Show or Not to Show?
 
-🧑‍💻 **Trvání:** 30 minut  
-🎯 **Cílová skupina:** pro jednotlivce (či skupiny, co se nepohádají)  
+🧑‍💻 **Duration:** 30 minutes  
+🎯 **Target audience:** individuals (or groups that don’t argue)  
 
-## 1. Úvod
+## 1. Introduction
 
-Už umíte připojit moduly **Hardwario Tower** a zobrazit jejich výstupy pomocí grafů a měřidel.  
+You already know how to connect **Hardwario Tower** modules and display their outputs using charts and gauges.  
 
-V této lekci se ponoříme hlouběji do programování v prostředí **Playground**. Naučíte se:  
-- pracovat se zprávami (**messages**)  
-- filtrovat je podle tématu  
-- vytvářet podmíněné výstupy (např. rozsvítit LED pouze při splnění určité hodnoty)  
+In this lesson, we will dive deeper into programming in the **Playground** environment. You will learn how to:  
+- work with messages (**messages**)  
+- filter them by topic  
+- create conditional outputs (e.g., turn on an LED only when a certain value is met)  
 
-Díky tomu začnete programovat **chování systému**, nejen sbírat data.
+This way, you will start programming the **system behavior**, not just collecting data.
 
-## 2. Co je připraveno
+## 2. What’s Ready
 
-✅ PIR modul je připojený, napájený a spárovaný.  
-✅ V Playgroundu přicházejí data o orientaci, teplotě a přítomnosti osoby.  
-✅ Dashboard zobrazuje aktuální hodnoty z modulu.  
-✅ Víte, jak si hodnoty znovu zobrazit nebo upravit, pokud zmizí.  
+✅ The PIR module is connected, powered, and paired.  
+✅ Playground is receiving data about orientation, temperature, and presence.  
+✅ The dashboard displays current values from the module.  
+✅ You know how to display or adjust the values again if they disappear.  

@@ -1,63 +1,55 @@
 ---
 slug: pouzij-switch-pro-hodnoty
-title: Použij Switch pro hodnoty
+title: Use Switch for values
 ---
 import Image from '@theme/IdealImage';
 
-## 3. Kdo to všechno začne
+## 3. Who Starts It All
 
-Ve vaší flow začněte uzlem **mqtt in**, který bude odebírat zprávy s orientací. V mém případě se jmenuje: `node/motion-detector:0/orientation` ale může se u vás mírně lišit podle názvu zařízení.
+In your flow, start with the **mqtt in** node, which will subscribe to orientation messages.  
+In my case it is named: `node/motion-detector:0/orientation`, but on your device it may differ slightly depending on the module name.
 
 :::info
-Aby bylo možné s nějakou zprávou pracovat, musí nejprve vůbec přijít. Pro testování se skvěle hodí **PIR senzor**, konkrétně jeho gyroskop, protože množství a četnost zpráv můžete snadno ovlivnit pouhým překlápěním modulu.
+In order to work with a message, it must arrive first. For testing, the **PIR sensor** is perfect, specifically its gyroscope, because you can easily influence the number and frequency of messages simply by tilting the module.
 :::
 
-Co daný uzel vrací, už víte z předchozí lekce – lze jej například vykreslit do grafu.  Pro lepší pochopení si ale doporučujeme výstup z uzlu **mqtt in** napojit na uzel **debug**.  
+You already know from the previous lesson what this node returns — for example, it can be plotted on a chart.  
+For better understanding, however, we recommend connecting the output of the **mqtt in** node to a **debug** node.  
 
-- Ve výchozím nastavení se v debug výstupu zobrazí obsah `msg.payload`, tedy samotná hodnota přicházející ze senzoru.  
-- U mého PIR modulu se objevují čísla v rozsahu **1 až 6** podle toho, jak je natočený – a právě s touto hodnotou budeme dále pracovat.
+- By default, the debug output displays the content of `msg.payload`, i.e., the actual value coming from the sensor.  
+- On my PIR module, numbers in the range **1 to 6** appear depending on its orientation — and this is exactly the value we will work with further.
 
+---
 
-## 4. Switch rozdělí výstup
+## 4. Switch Splits the Output
 
-Uzel **Switch** (sekce *Function*) má jeden vstup a minimálně jeden výstup.  Po rozkliknutí můžete uzel pojmenovat, což vám usnadní orientaci ve vašem flow.  
+The **Switch** node (from the *Function* section) has one input and at least one output.  
+After opening it, you can name the node, which will help you keep your flow organized.  
 
-- V poli **Property** nastavte hodnotu, se kterou má uzel pracovat – v tomto případě `msg.payload`.  
-- Níže pak definujte jednotlivé podmínky výstupu.  
+- In the **Property** field, set the value the node should work with — in this case `msg.payload`.  
+- Below, define the individual output conditions.  
 
-Pro tuto úlohu nás zajímá situace, kdy má orientace hodnotu **6** (modul leží na PIR senzoru). Všechno ostatní zachytíte pomocí volby **otherwise**, která se nachází na konci seznamu podmínek.
+For this task, we are interested in the situation when the orientation has the value **6** (the module is lying on the PIR sensor).  
+Everything else will be caught using the **otherwise** option, which is located at the end of the condition list.
 
-## 5. Change změní zprávu
+---
 
-`msg.payload` je v tuto chvíli stále nastavený na hodnotu 1–5 nebo 6, podle toho, na kterém výstupu Switche je zrovna flow.  
+## 5. Change Modifies the Message
 
-- Uzel **Change** změní `msg.payload` na vaši textovou hodnotu.  
-- V mém případě:  
-  - hodnoty `payload 1–5` → **"Jsem v klidu"**  
-  - hodnota `payload 6` → **"Bacha spadnu"**
+At this point, `msg.payload` is still set to a value of 1–5 or 6, depending on which Switch output the flow is currently using.  
 
-Použity jsou tedy dva uzly **Change**.
+- The **Change** node modifies `msg.payload` to your chosen text value.  
+- In my case:  
+  - values `payload 1–5` → **"I am calm"**  
+  - value `payload 6` → **"Careful, I’m falling"**
 
-## 6. Text v Dashboardu
+So two **Change** nodes are used.
 
-Aby bylo možné vytisknout text, použijte v sekci **Dashboard** uzel **Text**.  
+---
 
-- Pojmenujte jej (např. *„Co PIR senzor?“*)  
-- Nastavte, aby zobrazoval `msg.payload` – v tuto chvíli nabývá hodnoty *„Jsem v klidu“* nebo *„Bacha spadnu“*.
+## 6. Text in the Dashboard
 
-<div class="container">
-  <div class="row">
-    <Image img={require('/lekce-iot/img/iot-function_text.webp')}/>
-  </div>
-</div>
+To display text, use the **Text** node from the **Dashboard** section.  
 
-
-## 7. Z čísla do textu
-
-Funguje to?  
-Po otočení PIR modulu byste měli na dashboardu vidět, jak se text mění z:
-
-- **„Jsem v klidu“** → při orientaci 1–5  
-- **„Bacha spadnu“** → při orientaci 6  
-
-Pokud máte z předchozí lekce také **Gauge**, uvidíte zároveň aktuální otočení PIR modulu.
+- Give it a name (e.g., *“What about the PIR sensor?”*)  
+- Set it to display `msg.payload` — at this point, it will take

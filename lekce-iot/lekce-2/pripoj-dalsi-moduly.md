@@ -1,12 +1,12 @@
 ---
 slug: pripoj-dalsi-moduly
-title: Připoj další moduly
+title: Connect additional modules
 ---
 import Image from '@theme/IdealImage';
 
-## 4. Ukázkové řešení
+## 4. Example Solution
 
-Funkce pro zpracování dat z PIR modulu
+Function for processing data from the PIR module
 
 <div class="container">
   <div class="row">
@@ -15,7 +15,7 @@ Funkce pro zpracování dat z PIR modulu
 </div>
 <br></br>
 
-Výsledný dashboard
+Resulting dashboard
 
 <div class="container">
   <div class="row">
@@ -24,13 +24,13 @@ Výsledný dashboard
 </div>
 <br></br>
 
-## 5. Shrnutí
+## 5. Summary
 
-✅ Už umíte připojit moduly, sledovat jejich výstupy a zobrazit je graficky.  
+✅ You have learned how to connect modules, monitor their outputs, and display them graphically.  
 
-👉 Zkuste připojit také **Climate Module** a sledovat tlak, vlhkost nebo světlo.  
+👉 Try also connecting the **Climate Module** and monitor pressure, humidity, or light.  
 
 :::info
-V této lekci byl **PIR modul** použit pro orientaci a teplotu.  
-Jeho detekce pohybu je méně vhodná pro rychlé testování, ale můžete ji vyzkoušet, pokud je v okolí klid.
+In this lesson, the **PIR module** was used for orientation and temperature.  
+Its motion detection is less suitable for quick testing, but you can try it if the surroundings are calm.
 :::

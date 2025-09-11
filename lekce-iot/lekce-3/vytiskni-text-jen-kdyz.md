@@ -1,17 +1,17 @@
 ---
 slug: vytiskni-text-jen-kdyz
-title: Vytiskni text jen když
+title: Print text only when
 ---
 
-## 8. Hlídač
+## 8. Guard
 
-PIR modul byl zatím použitý jako **gyroskopická kostka**.  
-Nyní jej využijte opravdu jako **PIR senzor**!  
+So far, the PIR module has been used as a **gyroscopic cube**.  
+Now, use it as a proper **PIR sensor**!  
 
-👉 Naprogramujte jej tak, aby sledoval **přítomnost osoby** a psal na **Dashboard**, jestli někoho vidí, nebo ne.
+👉 Program it so that it monitors the **presence of a person** and writes to the **Dashboard** whether it detects someone or not.
 
-## 9. Shrnutí
+## 9. Summary
 
-✅ **Vstup** generuje zprávy a ty umíte měnit pomocí **Change**.  
-✅ Zprávy umíte filtrovat pomocí **Switch** a předávat je dalším uzlům pro zpracování.  
-✅ V **Dashboardu** tisknete vlastní zprávy.  
+✅ The **input** generates messages, and you can modify them using **Change**.  
+✅ You can filter messages using **Switch** and pass them on to other nodes for processing.  
+✅ In the **Dashboard**, you print your own messages.  

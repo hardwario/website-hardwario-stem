@@ -1,25 +1,28 @@
 ---
 slug: nadefinuj-barevne-efekty-led-pasku
-title: Nadefinuj barevné efekty LED pásku
+title: Define color effects for the LED strip
 ---
 
-## 9. Barvy a efekty
-Byla by škoda nerozsvítit LED světla v plném rozsahu, proto se nebojte vyzkoušet například příkaz `node/power-controller:0/led-strip/-/effect/set`, kterému ale předáte zprávu 
+## 9. Colors and Effects
+
+It would be a shame not to light up the LED lights in their full range, so don’t hesitate to try, for example, the command `node/power-controller:0/led-strip/-/effect/set`, to which you pass the message:  
+
 ```json
 {"type":"rainbow", "wait":10}
 ```
 
-Bolí vás oči s přílišného jasu? `node/power-controller:0/led-strip/-/brightness/set` bere jako zprávu hodnoty 0-100 a nastaví jas.
+Are your eyes hurting from too much brightness? `node/power-controller:0/led-strip/-/brightness/set` takes values from 0–100 as the message and sets the brightness.
 
-## 10. Adresace
-Pásek je možné adresovat po jednotlivých LEDkách pomocí node//led-strip/-/set-pixel/set, zpráva pak obsahuje informace 
+## 10. Addressing
+The LED strip can also be addressed per individual LED using `node//led-strip/-/set-pixel/set`, the message then contains information like `{"type":"rainbow", "wait":10}`.
+
 ```json
 {"type":"rainbow", "wait":10}
 ```
 
-Bolí vás oči s přílišného jasu? `node/power-controller:0/led-strip/-/brightness/set` bere jako zprávu hodnoty 0-100 a nastaví jas.
+Are your eyes hurting from too much brightness? `node/power-controller:0/led-strip/-/brightness/set` takes values from 0–100 as the message and sets the brightness.
 
-## 11. Shrnutí
+## 11. Summary
 
-Máte spárovaný Power Module s firmware pro LED pásek.
-Umíte rozsvítit LED pásek v různých barvách a přidat i efekty.
+You have paired the Power Module with firmware for the LED strip.  
+You know how to light up the LED strip in different colors and even add effects.

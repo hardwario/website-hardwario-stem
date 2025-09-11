@@ -1,18 +1,18 @@
 ---
 slug: nastav-dashboard-v-blynk
-title: Nastav Dashboard v Blynk
+title: Set up the Dashboard in Blynk
 ---
 import Image from '@theme/IdealImage';
 
-## 9. Pošlete si všechna data
+## 9. Send All Your Data
 
-Podívejte se do **Hardwario Playground** na záložku **Messages**, kde najdete dostupná data ze svých modulů.
+Go to the **Messages** tab in **Hardwario Playground**, where you can find the available data from your modules.
 
-Přidejte nové **Datastreamy** v **Blynk** a všechna data si odešlete do aplikace.  
-Můžete tak sledovat různé veličiny přímo ve svém mobilu.
+Add new **Datastreams** in **Blynk** and send all the data to the application.  
+This way, you can monitor different values directly on your mobile phone.
 
 :::info
-Nezapomeňte na webové stránce **Blynk** při práci kliknout na tlačítko **Save and Apply**.
+Don’t forget to click the **Save and Apply** button on the **Blynk** website while working.
 :::
 
 <div class="container">
@@ -27,9 +27,8 @@ Nezapomeňte na webové stránce **Blynk** při práci kliknout na tlačítko **
   </div>
 </div>
 
+## 10. Summary
 
-## 10. Shrnutí
-
-✅ Nastavili jste si **Blynk**, aby dokázal přijímat a zpracovávat Datastream z vašeho senzoru.  
-✅ Umíte z **Playground** posílat data do **Blynk**.  
-✅ V mobilní aplikaci **Blynk** máte nastavený **Dashboard** pro zobrazení hodnot z Datastreamů.  
+✅ You have configured **Blynk** to receive and process Datastreams from your sensor.  
+✅ You know how to send data from **Playground** to **Blynk**.  
+✅ In the **Blynk** mobile application, you have set up a **Dashboard** to display values from the Datastreams.  

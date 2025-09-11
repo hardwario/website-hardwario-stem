@@ -1,19 +1,18 @@
 ---
 slug: prehraj-firmware
-title: Přehraj firmware
+title: Flash the firmware
 ---
 
-## 6. Přehrání firmware PIR modulu
+## 6. Flashing the PIR Module Firmware
 
-*Tento krok je volitelný a doporučuje se provést, pokud **Core module** sloužil v jiném projektu a nyní se nehlásí jako `motion-detector`. Také pokud si chcete být jisti, že používáte nejnovější firmware.*
+*This step is optional and recommended if the **Core module** was used in another project and is no longer recognized as `motion-detector`. It is also useful if you want to ensure that you are running the latest firmware.*
 
-1. Najděte USB kabel pro připojení **Core Modulu** k počítači.  
-2. V levém menu **Hardwario Playground** přejděte do sekce **Firmware**.  
-3. V části **Device** uvidíte všechna připojená Hardwario zařízení, např. `bc-usb-dongle` a `hio-core-module`. Vyberte `hio-core-module`.  
-4. V sekci firmware vyberte **twr-radio-motion-detector** (zobrazí se i jeho obrázek).  
-5. Klikněte na tlačítko **Flash firmware**.
+1. Find a USB cable to connect the **Core Module** to your computer.  
+2. In the left menu of **Hardwario Playground**, go to the **Firmware** section.  
+3. In the **Device** section, you will see all connected Hardwario devices, e.g., `bc-usb-dongle` and `hio-core-module`. Select `hio-core-module`.  
+4. In the firmware section, select **twr-radio-motion-detector** (its picture will also be displayed).  
+5. Click the **Flash firmware** button.
 
+## 7. Summary
 
-## 7. Shrnutí
-
-✅ Modul je připojený, prostředí připravené — můžete začít měřit.
+✅ The module is connected, the environment is ready — you can start measuring.  

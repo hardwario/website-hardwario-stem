@@ -1,24 +1,24 @@
 ---
 slug: nainstaluj-blynk-aplikace-zarid-si-ucet
-title: Nainstaluj Blynk aplikace, zařiď si účet
+title: Install the Blynk application and create an account
 ---
 
-# Lekce 5 – Vzhůru na net
+# Lesson 5 – Up to the Net
 
-🧑‍💻 **Trvání:** 40 minut  
-🎯 **Cílová skupina:** pro jednotlivce či dvojice  
+🧑‍💻 **Duration:** 40 minutes  
+🎯 **Target audience:** individuals or pairs  
 
-## 1. Úvod
+## 1. Introduction
 
-Dosud jste si hráli s moduly stavebnice **Hardwario Tower** a seznamovali se s prostředím **Hardwario Playground**.  
-Nyní však nastal čas posunout se dál.  
+So far, you have been experimenting with **Hardwario Tower** modules and getting familiar with the **Hardwario Playground** environment.  
+Now, however, it’s time to move forward.  
 
-Ve zkratce **IoT** představuje spojení fyzických zařízení s internetem – a právě ono „I“ jako **internet** zatím ve vašich projektech nehrálo žádnou roli.  
+In short, **IoT** represents the connection of physical devices with the internet – and so far, the “I” for **internet** has not played any role in your projects.  
 
-👉 Připojíme se proto pomocí aplikace **Blynk**, která umožňuje komunikaci jak přes mobilní telefon, tak přes webové rozhraní.
+👉 We will therefore connect using the **Blynk** application, which enables communication both through a mobile phone and through a web interface.
 
-##  2.Co je připraveno
+## 2. What’s Ready
 
-✅ Prostředí **Playground**  
-✅ Spárovaný **Climate Module** – nebo libovolný modul, ze kterého budeme číst aspoň teplotu  
-✅ **Mobilní telefon**, na který můžete instalovat aplikace  
+✅ **Playground** environment  
+✅ Paired **Climate Module** – or any other module from which we can at least read temperature  
+✅ **Mobile phone** on which you can install applications  

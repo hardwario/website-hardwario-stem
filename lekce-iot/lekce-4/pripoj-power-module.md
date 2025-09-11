@@ -1,21 +1,21 @@
 ---
 slug: pripoj-power-module
-title: Připoj Power module
+title: Connect the Power Module
 ---
-# Lekce 4 – Světla
+# Lesson 4 – Lights
 
-🧑‍💻 **Trvání:** 40 minut  
-🎯 **Cílová skupina:** pro jednotlivce i skupiny  
+🧑‍💻 **Duration:** 40 minutes  
+🎯 **Target audience:** individuals and groups  
 
-## 1. Úvod
+## 1. Introduction
 
-V **Hardwario Playground** už umíte najít vstupy, přepracovat je a vytisknout je do **Dashboardu**.  
-Tím jste získali základní dovednosti pro práci se senzory a vizualizací dat.  
+In **Hardwario Playground**, you already know how to find inputs, process them, and print them to the **Dashboard**.  
+This gave you the basic skills for working with sensors and data visualization.  
 
-Následující lekce bude hra s **LED páskem**, která přinese do této části práce světlo a nové možnosti kreativního využití.
+The next lesson will be a game with an **LED strip**, which will bring light to this part of the work and open new possibilities for creative use.
 
-## 2. Co je připraveno
+## 2. What’s Ready
 
-✅ Připravený a spárovaný **Button module** nebo **PIR module**  
-✅ Znalost práce se zprávami v Playgroundu (uzly **Change** a **Switch**)  
-✅ **Power module** a **LED pásek**  
+✅ A prepared and paired **Button module** or **PIR module**  
+✅ Knowledge of working with messages in Playground (the **Change** and **Switch** nodes)  
+✅ **Power module** and **LED strip**  

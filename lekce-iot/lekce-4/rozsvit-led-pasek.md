@@ -1,23 +1,23 @@
 ---
 slug: rozsvit-led-pasek
-title: Rozsviť LED pásek
+title: Turn on the LED strip
 ---
 import Image from '@theme/IdealImage';
 
-## 3. Přehraj firmware pro Power Module
+## 3. Flash Firmware for the Power Module
 
-1. Připojte **Power Module** pomocí USB kabelu.  
-2. V záložce **Firmware** vyberte nejnovější verzi.  
-   - Ten můj měl nahraný `twr-radio-power-controller-rgb150`, ale rozhodně je dobré jej aktualizovat.  
-3. LED pásek v tuto chvíli nemusí být připojený, ale ničemu to nevadí.
+1. Connect the **Power Module** using a USB cable.  
+2. In the **Firmware** tab, select the latest version.  
+   - Mine had `twr-radio-power-controller-rgb150` installed, but it’s definitely good to update it.  
+3. The LED strip does not need to be connected at this moment, but it won’t cause any issues if it is.
 
-## 4. Spáruj Power Module
+## 4. Pair the Power Module
 
-Power Module je výjimečný tím, že **nemá baterie** – je napájený přímo ze zdroje.  
+The Power Module is unique in that it **does not have batteries** – it is powered directly from a power source.  
 
-1. V záložce **Devices** klikněte na **Start pairing**.  
-2. Připojte Power Module do zdroje – tím se dostane do párovacího režimu.  
-3. Po spárování se Power Module hlásí jako `power-controller:0`
+1. In the **Devices** tab, click **Start pairing**.  
+2. Plug the Power Module into the power source – this puts it into pairing mode.  
+3. After pairing, the Power Module appears as `power-controller:0`.
 
 <div class="container">
   <div class="row">
@@ -25,30 +25,28 @@ Power Module je výjimečný tím, že **nemá baterie** – je napájený pří
   </div>
 </div>
 
+## 5. Start It Up!
 
-## 5. Spusťte to!
+Programming in the flow again begins with a message that triggers something. There are several options:
 
-Programování ve flow opět začněte zprávou, která vám něco pošle. Možností je více:
+✅ **Button module** – monitoring a button press  
+✅ **PIR module** – monitoring orientation  
+✅ **Any module** – all of them have temperature, which you can change (a more patient option 😊)
 
-✅ **Button modul** – sledování stisku  
-✅ **PIR modul** – sledování orientace  
-✅ **Libovolný modul** – všechny mají teplotu (trpělivější varianta 😊)
+## 6. What to Send to the Power Module
 
+So far, you have used the **mqtt in** node to read from sensors.  
+Now we need to **write** to the device → we use **mqtt out**.  
 
-## 6. Co poslat do Power Module
+The topic that lights up the strip, for example, is: `node/power-controller:0/led-strip/-/color/set`
 
-Pro čtení ze senzorů jste dosud používali uzel **mqtt in**.  
-Teď ale potřebujeme **zapsat** do zařízení → použijeme **mqtt out**.  
+## 7. What Message to Send
 
-Topic, který rozzáří pásek, je například: `node/power-controller:0/led-strip/-/color/set`
+Directly connecting an input (e.g., `Button` with message `1`) to an output (LED strip setting) won’t lead to the desired result.  
 
-## 7. Jakou zprávu poslat
+Therefore, use a **Change** node, where you reassign `msg.payload` to a color value in RGB hex code (for example, red: `"#FF0000"`).
 
-Přímé spojení vstupu (např. `Button` se zprávou `1`) s výstupem (nastavení pásku) nevede ke správnému výsledku.  
-
-Proto použijte uzel **Change**, kde přenastavíte `msg.payload` na hodnotu barvy v RGB hex kódu (například červená: `“#FF0000”`).
-
-👉 Pokud neznáte kódování barev pomocí RGB, doporučujeme se podívat na dostupné [tabulky barev](https://www.w3schools.com/colors/colors_rgb.asp).
+👉 If you’re not familiar with RGB color coding, we recommend checking available [color tables](https://www.w3schools.com/colors/colors_rgb.asp).
 
 <div class="container">
   <div class="row">
@@ -56,18 +54,16 @@ Proto použijte uzel **Change**, kde přenastavíte `msg.payload` na hodnotu bar
   </div>
 </div>
 
+## 8. Playing with Code
 
-## 8. Pohrání si s kódem
+For code that can change the LED strip color based on PIR sensor orientation:
 
-Pro kód, který umí měnit barvu LED pásku podle orientace PIR senzoru:
-
-1. Přidejte uzel **Switch**.  
-2. Podle orientace (1–6) nastavujte různou barvu (`msg.payload`).  
-3. Odesílejte ji přes **mqtt out** do Power Module.
+1. Add a **Switch** node.  
+2. According to orientation (1–6), set a different color (`msg.payload`).  
+3. Send it via **mqtt out** to the Power Module.
 
 <div class="container">
   <div class="row">
     <Image img={require('/lekce-iot/img/iot-function_LED2.webp')}/>
   </div>
 </div>
-  

@@ -1,25 +1,25 @@
 ---
 slug: vytiskni-grafy-s-prubehem-mereni
-title: Vytiskni grafy s průběhem měření
+title: Print graphs with the measurement progress
 ---
 
-## 3. První program
+## 3. First Program
 
-Vytvořte program pro zpracování výstupů z PIR modulu.
+Create a program to process the outputs from the PIR module.
 
 :::info
 
-Tento text není úplná dokumentace **Node-RED**.  
-Pro hlubší pochopení doporučujeme [oficiální příklady](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
+This text is not a complete **Node-RED** documentation.  
+For a deeper understanding, we recommend the [official examples](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
 
 :::
 
-**Úkol:** Připravte **přehledový dashboard** s následujícími prvky:
+**Task:** Prepare an **overview dashboard** with the following elements:
 
-- 🧭 **Měřidlo (gauge)** pro orientaci PIR modulu  
-- 📈 **Graf orientace v čase**  
-- 🌡️ **Graf teploty v čase**  
+- 🧭 **Gauge** for PIR module orientation  
+- 📈 **Graph of orientation over time**  
+- 🌡️ **Graph of temperature over time**  
 
-👉 Dbejte na popisky os:
-- **Osa X**: čas  
-- **Osa Y**: hodnota  
+👉 Pay attention to axis labels:
+- **X-axis**: time  
+- **Y-axis**: value  

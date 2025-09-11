@@ -1,10 +1,10 @@
 ---
 slug: sparuj-modul
-title: Spáruj modul
+title: Pair the module
 ---
 import Image from '@theme/IdealImage';
 
-## 5. Párování PIR modulu
+## 5. Pairing the PIR Module
 
 <div class="container">
   <div class="row">
@@ -13,9 +13,9 @@ import Image from '@theme/IdealImage';
 </div>
 
 <br></br>
-Abyste mohli připojit PIR modul, musíte jej nejprve dostat do párovacího režimu Bluetooth. Tento režim aktivujete vložením baterií do modulu.  
+To connect the PIR module, you must first put it into Bluetooth pairing mode. This mode is activated by inserting batteries into the module.  
 
-Předtím, než vložíte baterie, přejděte do **Hardwario Playground** a klikněte na tlačítko **Start pairing**. Tento krok zahájí proces párování.
+Before inserting the batteries, go to **Hardwario Playground** and click the **Start pairing** button. This step will start the pairing process.
 
 <div class="container">
   <div class="row">
@@ -26,16 +26,16 @@ Předtím, než vložíte baterie, přejděte do **Hardwario Playground** a klik
 
 :::tip
 
-Pokud párujete v učebně, kde je více modulů, ujistěte se, že spárujete právě ten svůj. Například tím, že si ověříte, že v daném okamžiku neprobíhá párování u jiných zařízení.
+If you are pairing in a classroom with multiple modules, make sure you are pairing the correct one. For example, verify that no other devices are in the pairing process at the same time.
 
 :::
 
-Po vložení baterií se v **Hardwario Playground** objeví senzor, který se obvykle hlásí jako `motion-detector:0`. Jakmile se tento senzor objeví, znamená to, že je připojen.  
+After inserting the batteries, a sensor will appear in **Hardwario Playground**, usually identified as `motion-detector:0`. Once this sensor appears, it means the module is connected.  
 
-V levém menu v sekci **Messages** můžete sledovat výstupy z PIR modulu, které vám ukáží, zda senzor detekuje pohyb.
+In the left menu, under the **Messages** section, you can monitor outputs from the PIR module, which will show you whether the sensor detects motion.
 
 :::tip
 
-Otočte PIR modul na bok. V sekci **Messages** by se měla objevit položka `node/motion-detector:0/orientation` (a nějaké číslo), což indikuje změnu orientace modulu.
+Rotate the PIR module on its side. In the **Messages** section, you should see an item like `node/motion-detector:0/orientation` (with a number), which indicates the change in module orientation.
 
 :::

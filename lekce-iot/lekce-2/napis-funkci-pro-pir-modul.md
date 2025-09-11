@@ -1,22 +1,22 @@
 ---
 slug: napis-funkci-pro-pir-modul
-title: Napiš funkci pro PIR modul
+title: Write a function for the PIR module
 ---
 
-# Prostředí Hardwario Playground
+# Hardwario Playground Environment
 
-🧑‍💻 **Trvání:** 30 minut  
-🎯 **Cílová skupina:** pro jednotlivce i malé skupiny  
+🧑‍💻 **Duration:** 30 minutes  
+🎯 **Target audience:** individuals and small groups  
 
-## 1. Úvod do vizuálního programování
+## 1. Introduction to Visual Programming
 
-Playground umožňuje programování přetahováním bloků a okamžitě reaguje na připojené moduly.
+Playground allows programming by dragging and dropping blocks and responds immediately to connected modules.
 
-## 2. Začínáme s Hardwario Playgroundem
+## 2. Getting Started with Hardwario Playground
 
-Ověřte si, že máte z předchozí lekce vše připraveno:
+Make sure you have everything ready from the previous lesson:
 
- ✅ Playground je spuštěný  
- ✅ Dongle je připojený  
- ✅ PIR senzor má baterie  
- ✅ V **Messages** vidíte výstupy z PIR senzoru  
+ ✅ Playground is running  
+ ✅ Dongle is connected  
+ ✅ PIR sensor has batteries  
+ ✅ In **Messages**, you can see the outputs from the PIR sensor  
