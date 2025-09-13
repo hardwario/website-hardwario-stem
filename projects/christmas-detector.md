@@ -2,6 +2,8 @@
 slug: christmas-detector
 title: Christmas detector
 ---
+import Image from '@theme/IdealImage';
+
 ## Introduction
 
 
@@ -14,9 +16,9 @@ If you already have the Starter Set, you will only need the [PIR Module](https:/
 
 ## Prepare the box
 
-1. Put your Set together. You need the **bcf-radio-motion-detector** firmware for the Core Module. ![Radio motion detector](https://res.cloudinary.com/lukasfabik/image/upload/v1572976427/projects/detektor-jeziska/image12.png)
+1. Put your Set together. You need the **bcf-radio-motion-detector** firmware for the Core Module. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-1.webp')}/> </div> </div>
 
-2. If the firmware is correctly installed, you will see the **motion detector** under the Devices Alias tab in Playground. ![Motion detector](https://res.cloudinary.com/lukasfabik/image/upload/v1572976419/projects/detektor-jeziska/image10.png)
+2. If the firmware is correctly installed, you will see the **motion detector** under the Devices Alias tab in Playground. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-2.webp')}/> </div> </div>
 
 ## Set up Node-RED
 
@@ -24,7 +26,7 @@ If you already have the Starter Set, you will only need the [PIR Module](https:/
 
 2. Drag a light purple **MQTT node** (bubble) onto the empty desktop. You can find it under the Input section.
 
-![mqtt](https://res.cloudinary.com/lukasfabik/image/upload/v1572976412/projects/detektor-jeziska/image6.png)
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-3.webp')}/> </div> </div>
 
 3. Double-click the node. In the **Topic** line, specify the key value. It will now function as a counter of movements that are recorded:
 
@@ -32,30 +34,30 @@ If you already have the Starter Set, you will only need the [PIR Module](https:/
 node/motion-detector:0/pir/-/event-count
 ```
 
-![Key value](https://res.cloudinary.com/lukasfabik/image/upload/v1572976432/projects/detektor-jeziska/image17.png)
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-4.webp')}/> </div> </div>
 Confirm with the **Done** button.
 
-4. Behind this node, place a **Switch node** from the Function section. This allows the device to recognize that the detector is on and can report any movements. ![Switch](https://res.cloudinary.com/lukasfabik/image/upload/v1572976423/projects/detektor-jeziska/image9.png)
+1. Behind this node, place a **Switch node** from the Function section. This allows the device to recognize that the detector is on and can report any movements. 
 
-5. In the node, fill in the **Property** line as _flow_. _detectorActive_ and edit the condition in the field to _is true_ (take a look at the screenshot). **Our tip**: Read more about this feature. ![Property](https://res.cloudinary.com/lukasfabik/image/upload/v1572976425/projects/detektor-jeziska/image11.png)
-
-Confirm with the **Done** button.
-
-6. Behind the switch node, place a **Change node** from the same Function section. ![Change](https://res.cloudinary.com/lukasfabik/image/upload/v1572976442/projects/detektor-jeziska/image19.png)
-
-7. In the node, you set the message that you want to pop up when our bearded friend (or Baby Jesus) brings their presents. 🎅 👼 For example: _Santa/Baby Jesus is in the living room_. **Our tip**: If you also want to set notifications for your mobile, do not use accent marks (čárky) or hooks (háčky), Blynk does not like them. ![Message setting](https://res.cloudinary.com/lukasfabik/image/upload/v1572976434/projects/detektor-jeziska/image14.png)
+2. In the node, fill in the **Property** line as _flow_. _detectorActive_ and edit the condition in the field to _is true_ (take a look at the screenshot). **Our tip**: Read more about this feature. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-5.webp')}/> </div> </div>
 
 Confirm with the **Done** button.
 
-8. Above this flow, start another one to be able to switch the detector on and off. It should consist of two nodes. The first is a **Switch node** from the Dashboard section. ![Switch node](https://res.cloudinary.com/lukasfabik/image/upload/v1572976410/projects/detektor-jeziska/image2.png)
+6. Behind the switch node, place a **Change node** from the same Function section. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-6.webp')}/> </div> </div>
 
-9. In this node, edit **Label** to _Detector Status_. This is how your Dashboard project will be labelled. ![Detector Status](https://res.cloudinary.com/lukasfabik/image/upload/v1572976416/projects/detektor-jeziska/image3.png)
+7. In the node, you set the message that you want to pop up when our bearded friend (or Baby Jesus) brings their presents. 🎅 👼 For example: _Santa/Baby Jesus is in the living room_. **Our tip**: If you also want to set notifications for your mobile, do not use accent marks (čárky) or hooks (háčky), Blynk does not like them. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-7.webp')}/> </div> </div>
 
 Confirm with the **Done** button.
 
-10. Behind the switch node, place a **Change node** from the Dashboard section. That´s right, just like the one you already have a little lower down. 👍 ![Change node](https://res.cloudinary.com/lukasfabik/image/upload/v1572976415/projects/detektor-jeziska/image1.png)
+8. Above this flow, start another one to be able to switch the detector on and off. It should consist of two nodes. The first is a **Switch node** from the Dashboard section. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-8.webp')}/> </div> </div>
 
-11. In the **Rules** field, set the function to: _flow_. _detectorActive_ (see screenshot). This enables the device to recognize if the button is on or off. Beware of making typing errors! ![Rules](https://res.cloudinary.com/lukasfabik/image/upload/v1572976434/projects/detektor-jeziska/image14.png)
+9. In this node, edit **Label** to _Detector Status_. This is how your Dashboard project will be labelled. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-9.webp')}/> </div> </div>
+
+Confirm with the **Done** button.
+
+10. Behind the switch node, place a **Change node** from the Dashboard section. That´s right, just like the one you already have a little lower down. 👍 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-10.webp')}/> </div> </div>
+
+11. In the **Rules** field, set the function to: _flow_. _detectorActive_ (see screenshot). This enables the device to recognize if the button is on or off. Beware of making typing errors! <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-11.webp')}/> </div> </div>
 Confirm with the **Done** button.
 
 12. Now connect all the nodes **as shown in the screenshot**, but don't press the Deploy button yet. The last node, which we will add shortly, is still missing. With the last node you set up a notification to your mobile. 🤳 ![Connection node](https://res.cloudinary.com/lukasfabik/image/upload/v1572976430/projects/detektor-jeziska/image13.png)
@@ -67,25 +69,21 @@ Confirm with the **Done** button.
 
 2. Create a new project and a token will be sent to your e-mail. In Blynk, place **Notification** onto your desktop using the small plus in the wheel.
 
-![notification](https://res.cloudinary.com/lukasfabik/image/upload/v1572976430/projects/detektor-jeziska/image7.png)
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-12.webp')}/> </div> </div>
 
 3. Press the **Play** triangle in the upper right corner and **go to Playground on your computer**.
 
-4. Here, place the last node for the whole project, i.e. the Notification node from the Blynk ws section. It should be placed directly behind the flow with the switch (see screenshot). 👀 ![Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1572976443/projects/detektor-jeziska/image21.png)
+4. Here, place the last node for the whole project, i.e. the Notification node from the Blynk ws section. It should be placed directly behind the flow with the switch (see screenshot). 👀 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-13.webp')}/> </div> </div>
 
-5. Unclick it and click on the **little pencil** on the right. ![Little pencil](https://res.cloudinary.com/lukasfabik/image/upload/v1572976442/projects/detektor-jeziska/image20.png)
+5. Unclick it and click on the **little pencil** on the right. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-14.webp')}/> </div> </div>
 
-6. Fill in the URL here by simply copying it from the field below. Subsequently, copy and paste the token here that you received by e-mail from Blynk. ![Token copying](https://res.cloudinary.com/lukasfabik/image/upload/v1572976430/projects/detektor-jeziska/image8.png)
+6. Fill in the URL here by simply copying it from the field below. Subsequently, copy and paste the token here that you received by e-mail from Blynk. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-15.webp')}/> </div> </div>
 Confirm by pressing the **Add** and **Done** buttons.
 
-7. Finally, **connect** this attractive green node to the previous flow and hit the **Deploy** button. ![Deploy](https://res.cloudinary.com/lukasfabik/image/upload/v1572976425/projects/detektor-jeziska/image4.png)
+7. Finally, **connect** this attractive green node to the previous flow and hit the **Deploy** button. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-16.webp')}/> </div> </div>
 
 ## Ready, steady… go!
 
-1. It's high time to spy on those who come bearing gifts. Under the **Dashboard** tab in Playground, **turn on your detector**. 🕵️ ![Turning on detector](https://res.cloudinary.com/lukasfabik/image/upload/v1572976428/projects/detektor-jeziska/image16.png)
+1. It's high time to spy on those who come bearing gifts. Under the **Dashboard** tab in Playground, **turn on your detector**. 🕵️ <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-17.webp')}/> </div> </div>
 
 2. The PIR Module senses even the slightest movement and sends the message that something is afoot to your mobile in no time. **Santa or Baby Jesus don´t stand a chance**! Quick! Catch them while you can!
-
-![notification](https://res.cloudinary.com/lukasfabik/image/upload/v1572976425/projects/detektor-jeziska/image5.png)
-
-3. Only keep in mind: After catching Santa or Baby Jesus, you will have to **placate them** in order for them to leave you any presents at all. 😜
