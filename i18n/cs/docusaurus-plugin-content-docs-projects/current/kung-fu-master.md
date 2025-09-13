@@ -5,11 +5,11 @@ title: Kung-fu mástr
 
 ## Úvod
 
-S touhle hrou se s kámoši nudit nebudete. Nastav si svůj Start set tak, aby dokázal rozeznat i ten nejjemnější pohyb.
+S touhle hrou se s kámoši nudit nebudete. Nastav si svůj Start Set tak, aby dokázal rozeznat i ten nejjemnější pohyb.
 
 V tomhle projektu se naučíš vytvořit takzvaný **still position detector**, tedy **detektor pohybu**. 👈
 
-Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Start setem**](https://shop.hardwario.com/Start-set/).
+Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Start Setem**](https://shop.hardwario.com/Start-set/).
 
 
 ## Stáhni si nový firmware

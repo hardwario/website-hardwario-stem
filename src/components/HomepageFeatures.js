@@ -17,8 +17,8 @@ const FeatureList = [
           </Translate>
         ),
   },
-{
-  title: <Translate>Projects and Tutorials</Translate>,
+  {
+    title: <Translate>Projects and Tutorials</Translate>,
     link: '/projects/',
     src: 'img/push-the-button_button-garage.webp',
     width: 'auto',
@@ -29,6 +29,18 @@ const FeatureList = [
       </Translate>
     ),
   },
+  {
+    title: <Translate>Lekce IoT s Hardwariem</Translate>,
+    link: '/lekce-iot/',
+    src: 'img/lekce-iot.avif',
+    width: 'auto',
+    height: 200,
+    description: (
+      <Translate>
+        Pojďte pochopit internet věcí se stavebnicí Hardwario. Programování vás naučíme, komunikační protokoly také a pájení není potřeba.
+      </Translate>
+    ),
+  }
 ];
 
 function Feature({ src, width, height, title, subtitle, link, description }) {
@@ -65,12 +77,6 @@ export default function HomepageFeatures() {
           </div>
         </div>
       </section>
-      <div className="logo-lbc">
-        <h3><Translate>Co-financed by the Liberec Region</Translate></h3>
-        <a href="https://www.kraj-lbc.cz" target="_blank" rel="noopener noreferrer" className='logo-img'>
-          <img src="/img/liberecky-kraj.svg" alt="LBC Logo" />
-        </a>
-      </div>
     </>
   );
 }

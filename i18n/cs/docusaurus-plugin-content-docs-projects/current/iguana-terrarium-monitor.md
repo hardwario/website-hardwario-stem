@@ -11,7 +11,7 @@ Ať už máš doma leguána, želvu, hada nebo gekona, určitě chceš, aby byl 
 
 S tímhle projektem se naučíš **měřit čtyři klimatické hodnoty a zobrazit je v grafech** – teplotu, vlhkost, světelnost a tlak vzduchu. Za odměnu ti tvoji zelení kámoši třeba povypráví historky svých dinosauřích předků. 🦖 Nebo něco na ten způsob.
 
-Pokud máš Start Kit, budeš k němu potřebovat ještě [Climate Module](https://shop.hardwario.com/p/climate-module/). **Kompletní** výbavu najdeš v sadě [Clime Set](https://www.hardwario.store/p/clime-set).
+Pokud máš Start Set, budeš k němu potřebovat ještě [Climate Module](https://shop.hardwario.com/p/climate-module/). **Kompletní** výbavu najdeš v sadě [Clime Set](https://www.hardwario.store/p/clime-set).
 
 
 ## Připrav si krabičku

@@ -11,7 +11,7 @@ S tímhle projektem se naučíš nastavit krabičku tak, aby ti **poslala zpráv
 
 Základní verzi tohohle projektu najdeš tady: [Hlídač teploty pro chlupatého hlídače: kontroluj teplotu v boudě svého psa](/i18n/cs/docusaurus-plugin-content-docs-projects/current/kennel-temperature-monitor.md).
 
-Tentokrát ti taky postačí základní HARDWARIO sada, tedy [**Start Set**](https://shop.hardwario.com/start-set/).
+Tentokrát ti taky postačí základní HARDWARIO sada, tedy [**Start Set**](https://www.hardwario.store/p/start-set).
 
 
 ## Připrav si Node-RED

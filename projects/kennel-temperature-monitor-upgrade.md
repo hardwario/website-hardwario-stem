@@ -37,7 +37,7 @@ Hold onto your hat and let's move on. 🎩
 
 ## Set up Blynk
 
-1. First, take your mobile and open [Blynk You don’t know what Blynk is or how to use it? Check out our tutorial](https://www.bigclown.com/cs/academy/jak-pripojit-blynk/).
+1. First, take your mobile and open [Blynk You don’t know what Blynk is or how to use it? Check out our tutorial](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
 2. In Blynk, put on everything you need. On the desktop of the new project, first set **Notification**.
 

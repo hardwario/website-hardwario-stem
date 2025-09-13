@@ -18,9 +18,9 @@ Pokud máš Starter Set, budeš k němu potřebovat ještě [**PIR Module**](htt
 
 ![sestavení motion detektor Setu](https://res.cloudinary.com/lukasfabik/image/upload/v1573157109/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image20.png)
 
-**Náš tip**: Nevíš, jak si firmware stáhnout nebo co to je? [Zjistíš to tady](/cs/academy/jak-nahrat-firmware/).
+**Náš tip**: Nevíš, jak si firmware stáhnout nebo co to je? [Zjistíš to tady](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
 
-3. Core Module spáruj s USB Donglem. Hned po spárování uvidíš, že tvůj Core Module změnil Alias na **Burglar alarm**.
+1. Core Module spáruj s USB Donglem. Hned po spárování uvidíš, že tvůj Core Module změnil Alias na **Burglar alarm**.
 
 ![burglar alarm](https://res.cloudinary.com/lukasfabik/image/upload/v1573157099/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image10.png)
 

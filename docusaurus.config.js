@@ -57,6 +57,16 @@ const config = {
       }),
     ],
     [
+      '@docusaurus/plugin-content-docs',
+      ({
+        id: 'lekce-iot',
+        path: 'lekce-iot',
+        routeBasePath: 'lekce-iot',
+        sidebarPath: require.resolve('./sidebars-lekce-iot.js'),
+        editUrl: 'https://github.com/hardwario/stem-website/edit/main',
+      }),
+    ],
+    [
       '@docusaurus/plugin-ideal-image',
       {
         quality: 70,
@@ -90,6 +100,12 @@ const config = {
             label: 'PROJECTS',
             position: 'left',
             activeBaseRegex: `/projects/`,
+          },
+          {
+            to: '/lekce-iot/',
+            label: 'LEKCE IOT',
+            position: 'left',
+            activeBaseRegex: `/lekce-iot/`,
           },
           {
             type: 'localeDropdown',

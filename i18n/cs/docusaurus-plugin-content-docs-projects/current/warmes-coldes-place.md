@@ -17,7 +17,7 @@ Hru **navrhni učiteli fyziky** jako super zpestření hodiny, nebo ji s kamará
 
 ## Připrav si krabičku
 
-1. Start Set sestav a spáruj. Na Core Module potřebuješ firmware **radio push button**. Pokud nevíš, jak si firmware stáhnout nebo co to je, [zjistíš to tady]({https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware).
+1. Start Set sestav a spáruj. Na Core Module potřebuješ firmware **radio push button**. Pokud nevíš, jak si firmware stáhnout nebo co to je, [zjistíš to tady](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware).
 
 2. Změny teploty uvidíš v Playgroundu v záložce **Messages**.
 

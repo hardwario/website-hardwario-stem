@@ -10,7 +10,7 @@ Is your younger brother entering your room? Are you going on holiday and afraid 
 
 Under this project, you will learn how to create a ** that sends notifications to your mobile if someone else is in your room**. 👁️
 
-If you already have the Start Set, you will only need the [**PIR Module**](https://shop.hardwario.com/pir-module/). Alternatively, the [Motion  Set](https://www.hardwario.store/p/motion-set) contains all the equipment you need.
+If you already have the Start Set, you will only need the [**PIR Module**](https://shop.hardwario.com/p/pir-module/). Alternatively, the [Motion  Set](https://www.hardwario.store/p/motion-set) contains all the equipment you need.
 
 
 ## Download the new firmware
@@ -21,9 +21,9 @@ If you already have the Start Set, you will only need the [**PIR Module**](https
 
 ![Assembling the Motion  Set](https://res.cloudinary.com/lukasfabik/image/upload/v1573157109/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image20.png)
 
-**Our tip**: You don’t know how to download the firmware or what is it? [You'll find out here](/academy/how-to-flash-firmware/).
+**Our tip**: You don’t know how to download the firmware or what is it? [You'll find out here](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
 
-3. Pair the Core Module with a USB Dongle. Right after pairing, you will see that your Core Module has changed the Alias to **Burglar alarm**.
+1. Pair the Core Module with a USB Dongle. Right after pairing, you will see that your Core Module has changed the Alias to **Burglar alarm**.
 
 ![Burglar alarm](https://res.cloudinary.com/lukasfabik/image/upload/v1573157099/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image10.png)
 
