@@ -2,6 +2,7 @@
 slug: button-for-parents-upgrade
 title: Button for parents upgrade
 ---
+import Image from '@theme/IdealImage';
 
 ## Introduction
 
@@ -19,7 +20,7 @@ You will need the **box with button** and a **USB Dongle**. The basic HARDWARIO 
 
 1. Put the Star set together and pair it. On the Core Module you will need the familiar **bcf-radio-push-button** firmware again.
 
-![sestavení-starter-setu](https://res.cloudinary.com/lukasfabik/image/upload/v1573301763/projects/dalsi-level-projekt-tlacitko-pro-mamku/image2.png)
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-1.webp')}/> </div> </div>
 
 ## Set up notification
 
@@ -30,11 +31,11 @@ Place the **MQTT node**, which has click counting in Topic, from the Input secti
 
 So far it looks like this:
 
-![MQTT node](https://res.cloudinary.com/lukasfabik/image/upload/v1573301764/projects/dalsi-level-projekt-tlacitko-pro-mamku/image10.png)
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-2.webp')}/> </div> </div>
 
 2. This time, paste a different node, to which you copy javascript, between the two nodes. You will find it as the **Function node** under the section of the same name.
 
-![Function node](https://res.cloudinary.com/lukasfabik/image/upload/v1573301763/projects/dalsi-level-projekt-tlacitko-pro-mamku/image1.png)
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-3.webp')}/> </div> </div>
 
 3. To this node add a **code with which to control the time**. ⏳ You set up from what time until what time you want to receive breakfast 🍳, lunch 🍗 and dinner 🍕 messages. Smart javascript, hey?
 
@@ -45,41 +46,40 @@ var date = new Date(); var hour = date.getHours();
 if(hour >= 8 && hour < 11) { msg.payload = "Pojd na snidani, ospalce"; return msg; } else if(hour >= 11 && hour < 17) { msg.payload = "Obidek na tebe uz ceka"; return msg; } else if(hour >= 17 && hour < 21) { msg.payload = "Podava se vrchol dne, vecere"; return msg; }
 ```
 
-![Setting the message itself](https://res.cloudinary.com/lukasfabik/image/upload/v1573301764/projects/dalsi-level-projekt-tlacitko-pro-mamku/image8.png)
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-4.webp')}/> </div> </div>
 
 4. Name this node in the same window in the **Name** line. For example _Time & Message Setting_.
-![ Setting time and message](https://res.cloudinary.com/lukasfabik/image/upload/v1573301764/projects/dalsi-level-projekt-tlacitko-pro-mamku/image6.png)
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-5.webp')}/> </div> </div>
 Confirm with the **Done** button.
 
 ## Set up press and hold button.
 
 1. Let's quickly move on. Now it´s time to set up what the button does when your parents **hold it for a long time**. That can be controlled too. 👌
 Place another **MQTT node** from the Input section onto the desktop.
-![MQTT](https://res.cloudinary.com/lukasfabik/image/upload/v1573301764/projects/dalsi-level-projekt-tlacitko-pro-mamku/image7.png)
 
 2. Set there a different **Topic** that causes the reaction of the button when you press it for a long time.
 ```
 node/push-button:0/push-button/-/hold-count
 ```
-![Topic](https://res.cloudinary.com/lukasfabik/image/upload/v1573301763/projects/dalsi-level-projekt-tlacitko-pro-mamku/image4.png)
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-6.webp')}/> </div> </div>
 
 3. Behind this, place the **Change node** that you already used in the basic version. In it, set your own message, which is sent when your parents hold the button for a long time. It can be used for different messages other than for eating 🙂. For example: _Come downstairs, you lazy so and so!_
 
-![Change node](https://res.cloudinary.com/lukasfabik/image/upload/v1573301764/projects/dalsi-level-projekt-tlacitko-pro-mamku/image5.png)
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-7.webp')}/> </div> </div>
 
 4. Behind this node, place another one to unclick the message. In addition, you can make the message not only pop up on your mobile, but also on your computer.
 
 You can do this through the **Notification node** under the Dashboard section.
 
-![Notification node](https://res.cloudinary.com/lukasfabik/image/upload/v1573301764/projects/dalsi-level-projekt-tlacitko-pro-mamku/image11.png)
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-8.webp')}/> </div> </div>
 
 5. In the node, select OK/Cancel Dialog on the **Layout** line and confirm with the **Done** button.
 
-![Layout](https://res.cloudinary.com/lukasfabik/image/upload/v1573301764/projects/dalsi-level-projekt-tlacitko-pro-mamku/image9.png)
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-9.webp')}/> </div> </div>
 
 6. Connect everything as shown in the screenshot and press **Deploy**.
 
-![Deploy](https://res.cloudinary.com/lukasfabik/image/upload/v1573301763/projects/dalsi-level-projekt-tlacitko-pro-mamku/image3.png)
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-10.webp')}/> </div> </div>
 
 ## Ready, steady... go!
 

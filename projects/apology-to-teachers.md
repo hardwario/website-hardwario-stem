@@ -2,6 +2,7 @@
 slug: apology-to-teachers
 title: Apology to teachers
 ---
+import Image from '@theme/IdealImage';
 
 ## Introduction
 
@@ -19,7 +20,11 @@ All you need for this is the basic HARDWARIO [**Start Set**](https://www.hardwar
 2. In Playground, click the **Functions tab** where the [Node-RED](https://docs.hardwario.com/tower/platform-integrations/blynk-app/#node-red-setup) programming area is.🤖
 3. Place the **MQTT** node from the Input section on the Node-RED area.
    
-![MQTT](https://res.cloudinary.com/lukasfabik/image/upload/v1573312451/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image6.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-1.webp')}/>
+  </div>
+</div>
 
 4. In the node, set the key function, i.e. push button. Double-click on the node and **copy the following line into the Topic field**:
 
@@ -32,7 +37,11 @@ Confirm with the **Done** button.
 ## Set content of the apology
 
 1. You also determine the content of the apology in Node-RED. Place **Change node** from the Functions section next to the MQTT node. This determines what e-mail is sent.
-![Change](https://res.cloudinary.com/lukasfabik/image/upload/v1573312451/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image5.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-2.webp')}/>
+  </div>
+</div>
 
 2. Double-click on the node and set two rules in the **Rules** field (see screenshot below).
 
@@ -42,7 +51,11 @@ _Dear Mr. Woodpecker, I'm sorry, but unfortunately my dog ate my alarm clock. I'
 
 In the second rule, which you add by pressing the **\+ add** button below, you fill in **msg. topic**. This will be the subject matter of the e-mail. For example _Apology_ for _being late_.
 
-![Rules](https://res.cloudinary.com/lukasfabik/image/upload/v1573312453/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image11.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-3.webp')}/>
+  </div>
+</div>
 
 Confirm with the **Done** button.👏
 
@@ -65,17 +78,33 @@ When you are finished, return to the desktop via the top left arrow and activate
 ## Set up sending e-mails
 
 1. Now return to Playground. Add **E-mail node** from Blynk ws after your flow. 📮
-![E-mail node](https://res.cloudinary.com/lukasfabik/image/upload/v1573312453/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image9.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-4.webp')}/>
+  </div>
+</div>
 
 2. Double-click on the node and fill in the teacher's e-mail address on the **E-mail** line.
-![E-mail](https://res.cloudinary.com/lukasfabik/image/upload/v1573312453/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image8.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-5.webp')}/>
+  </div>
+</div>
 
 3. Then click on **the pencil** next to the **Connection** line and set some more details. In the **Auth Token** field, copy the code that Blynk sent to your e-mail account.
 **In the URL field, copy the address** from the bottom of the window (see screenshot) and give the function a name in the Name field, for example _Apology_.
-![URL](https://res.cloudinary.com/lukasfabik/image/upload/v1573312452/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image7.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-6.webp')}/>
+  </div>
+</div>
 
 4. Connect the nodes, press the **Deploy** button and relax: the e-mail that will save your life if you are late is ready! 🙏
-![Deploy](https://res.cloudinary.com/lukasfabik/image/upload/v1573312452/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image2.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-7.webp')}/>
+  </div>
+</div>
 
 ## Ready, steady… go!
 

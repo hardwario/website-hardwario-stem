@@ -2,6 +2,7 @@
 slug: catch-the-mist
 title: Catch the mist
 ---
+import Image from '@theme/IdealImage';
 
 ## Introduction
 
@@ -19,7 +20,7 @@ All you need is the box with button and the USB dongle in the basic HARDWARIO [S
 
 3. Pair the Core Module with the USB Dongle. Right after pairing it, you will notice that your Core Module has changed Alias to **x-axis-detector**.
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/catch-the-mist/image8.png "HARDWARIO Playground - devices")
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-1.webp')}/> </div> </div>
 
 ## Get it started in the Node-RED
 
@@ -31,13 +32,13 @@ All you need is the box with button and the USB dongle in the basic HARDWARIO [S
 node/x-axis-detector:0/accelerometer/-/event-count
 ```
 
-![MQTT topic](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/catch-the-mist/image3.png "MQTT topic")
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-2.webp')}/> </div> </div>
 
 Confirm it with the **Done** button.
 
 3. Now, upload there a small javascript. 🙌 First, place the **Function node** from the section of the same name on the desktop...
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/catch-the-mist/image7.png "Node-RED function")
+
 
 4. ...and then double-click on this node. **Copy the following code to the Function field**. This code will count how many times the fridge opened:
 
@@ -52,24 +53,24 @@ return msg;
 
 Name the node in the Label field, e.g. **Counter**.
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/catch-the-mist/image6.png "Node-RED counter")
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-3.webp')}/> </div> </div>
 
 Confirm it the the **Done** button.
 
 5. Next to this node, place the last one - the **Text node** from the Dashboard section.
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/catch-the-mist/image6.png "Node-RED dashboard text input")
+
 
 6. Inside the node, change its Label to a text you want to see while it’s counting. It could be, for example, **Open fridge**.
 
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/catch-the-mist/image2.png "Node-RED dashboard text input label")
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-4.webp')}/> </div> </div>
 
 Confirm it with the **Done** button.
 
 7. **Connect all three nodes**, just as you can see in the picture. In the top-right corner, remember to click on the good old **Deploy** button which will start up the entire flow.
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/catch-the-mist/image1.png "Connect and deploy flow in Node-RED")
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-6.webp')}/> </div> </div>
 
 ## And… action!
 
@@ -77,7 +78,7 @@ Confirm it with the **Done** button.
 2. Place the box horizontally **into the door of the fridge**.
 3. When someone opens the door, the box will send you a notification to the **Dashboard** tab.
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/catch-the-mist/image5.png "Node-RED dashboard results")
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-7.webp')}/> </div> </div>
 
 
 4. **Run to subdue the wicked villain! 👮**

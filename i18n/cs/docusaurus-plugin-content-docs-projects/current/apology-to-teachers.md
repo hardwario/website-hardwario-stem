@@ -21,10 +21,9 @@ K tomu budeš potřebovat pouze základní [**Sadu Start**](https://www.hardwari
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/apology-to-teacher/MQTT-Playground.png')}/>
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-1.webp')}/>
   </div>
 </div>
-<br></br>
 
 4. V uzlu nastav funkci tlačítka. Dvojklikem otevři jeho nastavení a **zkopíruj následující řádek do pole Topic**:
 
@@ -40,10 +39,9 @@ Potvrď kliknutím na tlačítko **Done**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/apology-to-teacher/Change-Playground.png')}/>
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-2.webp')}/>
   </div>
 </div>
-<br></br>
 
 2. Dvojklikem otevři node a nastav dvě pravidla v poli **Rules** (viz screenshot níže).
 
@@ -53,7 +51,11 @@ _Dear Mr. Woodpecker, I'm sorry, but unfortunately my dog ate my alarm clock. I'
 
 Druhé pravidlo přidáš kliknutím na tlačítko **+ add** níže a vyplníš do něj **msg.topic**. To bude předmět e-mailu – například Apology nebo Being late
 
-![Rules](https://res.cloudinary.com/lukasfabik/image/upload/v1573312453/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image11.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-3.webp')}/>
+  </div>
+</div>
 
 Potvrď kliknutím na tlačítko **Done**. 👏
 
@@ -77,20 +79,36 @@ Až budeš hotový, vrať se na plochu pomocí šipky vlevo nahoře a aktivuj Bl
 
 1. Nyní se vrať do Playgroundu. Za svůj flow přidej **E-mail node** ze sekce Blynk ws. 📮
 
-![E-mail node](https://res.cloudinary.com/lukasfabik/image/upload/v1573312453/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image9.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-4.webp')}/>
+  </div>
+</div>
 
 2. Dvojklikem otevři node a do řádku **E-mail** zadej e-mailovou adresu učitele.
    
-![E-mail](https://res.cloudinary.com/lukasfabik/image/upload/v1573312453/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image8.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-5.webp')}/>
+  </div>
+</div>
 
 3. Poté klikni na **ikonu tužky** vedle řádku **Connection** a nastav další údaje. Do pole **Auth Token** zkopíruj kód, který ti poslal Blynk na e-mail.
 **Do pole URL** zkopíruj adresu z dolní části okna (viz screenshot) a v poli **Name** zadej název funkce, například *Apology*.
 
-![URL](https://res.cloudinary.com/lukasfabik/image/upload/v1573312452/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image7.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-6.webp')}/>
+  </div>
+</div>
 
 4. Propoj jednotlivé uzly, stiskni tlačítko **Deploy** a klidně se uvolni – e-mail, který ti zachrání kůži, když se zpozdíš, je připraven! 🙏
  
-![Deploy](https://res.cloudinary.com/lukasfabik/image/upload/v1573312452/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image2.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-7.webp')}/>
+  </div>
+</div>
 
 ## Připravit, pozor… teď!
 

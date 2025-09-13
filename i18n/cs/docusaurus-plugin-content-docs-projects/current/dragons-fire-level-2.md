@@ -3,6 +3,7 @@ slug: dragons-fire-level-2
 title: Dračí dech level 2
 ---
 import Image from '@theme/IdealImage';
+
 ## Úvod
 
 Troufáš si? Sestav jeden projekt, ve kterém zprovozníš dva typy své oblíbené soutěže naráz a budeš mezi nimi libovolně přepínat! Při párty máte o zábavu postaráno. 🕺
