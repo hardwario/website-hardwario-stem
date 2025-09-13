@@ -2,6 +2,7 @@
 slug: dragons-fire-level-2
 title: Dračí dech level 2
 ---
+import Image from '@theme/IdealImage';
 ## Úvod
 
 Troufáš si? Sestav jeden projekt, ve kterém zprovozníš dva typy své oblíbené soutěže naráz a budeš mezi nimi libovolně přepínat! Při párty máte o zábavu postaráno. 🕺
@@ -17,7 +18,11 @@ I tentokrát ti postačí základní HARDWARIO sada, tedy [**Start Set**](https:
 
 1. Start Set sestav a spáruj. Na Core Module potřebuješ zase ten starý známý firmware **bcf-radio-push-button**.
 
-![firmware do core modulu](https://res.cloudinary.com/lukasfabik/image/upload/v1571551047/projects/hardcore-upgrade-of-iot-party-game/image6.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/push-the-button/push-the-button_playground-devices-connected.webp')}/>
+  </div>
+</div>
 
 ## Změř nejžhavější dech
 
