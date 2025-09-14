@@ -2,6 +2,7 @@
 slug: highest-centrifugal-force
 title: Nejvyšší odstředivá síla
 ---
+import Image from '@theme/IdealImage';
 
 ## Úvod
 
@@ -21,7 +22,7 @@ Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vy
 3. Core Module spáruj s USB Donglem. Hned po spárování uvidíš, že tvůj Core Module změnil Alias na **rotation-g-meter**.
 
 
-![HARDWARIO devices list](https://res.cloudinary.com/lukasfabik/image/upload/v1566292682/projects/highest-centrifugal-force/image11.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-1.webp')}/> </div> </div>
 
 ## Stavěj v Node-RED
 
@@ -34,7 +35,7 @@ Dvakrát na něj klikni a do řádku zkopíruj **Topic**, se kterým krabička z
 node/rotation-g-meter:0/rotation-g
 ```
 
-![MQTT topic](https://res.cloudinary.com/lukasfabik/image/upload/v1566292682/projects/highest-centrifugal-force/image5.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-2.webp')}/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
@@ -45,11 +46,11 @@ Potvrď tlačítkem **Done**.
 node/rotation-g-meter:0/rotation-time
 ```
 
-![MQTT input node](https://res.cloudinary.com/lukasfabik/image/upload/v1566292683/projects/highest-centrifugal-force/image14.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-3.webp')}/> </div> </div>
 
 4. K oběma nodům umísti po jednom nodu pro javascript. Najdeš je v sekci **Function** pod jménem Function (originální 🤡).
 
-![javascript fuction node](https://res.cloudinary.com/lukasfabik/image/upload/v1566292681/projects/highest-centrifugal-force/image2.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-4.webp')}/> </div> </div>
 
 
 5. Na **horní node Function** dvakrát klikni a do velkého políčka vlož tenhle kód, který bude zapisovat rekordní odstředivou sílu. 💪
@@ -68,7 +69,7 @@ if(lastSpin > flow.get("record"))
 
 V řádku **Name** nod pojmenuj jako _Uložení rekordu_.
 
-![javascript fuction Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566292682/projects/highest-centrifugal-force/image10.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-5.webp')}/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
@@ -88,41 +89,35 @@ if(lastSpinTime > flow.get("timeRecord"))
 
 V řádku **Name** nod pojmenuj jako _Uložení rekordu_.
 
-![Javascript Funciton HARDWARIO Set](https://res.cloudinary.com/lukasfabik/image/upload/v1566292681/projects/highest-centrifugal-force/image3.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-6.webp')}/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
 7. Pod horní Function nod vlož **textový node** ze sekce Dashboard. Můžeš ho vložit i jinam, ale pro přehlednost bude lepší, když budou pod sebou.
 
-![Text Node](https://res.cloudinary.com/lukasfabik/image/upload/v1566292681/projects/highest-centrifugal-force/image7.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-7.webp')}/> </div> </div>
 
 V nastavení ho pojmenuj jako _Poslední točení_. Takhle se ti bude zobrazovat hodnota, kterou krabička právě naměřila.
 
-![Edit text Node](https://res.cloudinary.com/lukasfabik/image/upload/v1566292682/projects/highest-centrifugal-force/image12.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-8.webp')}/> </div> </div>
 
 8. Pod tenhle nod polož ještě jeden, díky kterému se budou hodnoty zapisovat do grafu. 📈 Najdeš ho jako **node Chart** v sekci Dashboard.
-
-![Chart node](https://res.cloudinary.com/lukasfabik/image/upload/v1566292681/projects/highest-centrifugal-force/image6.png)
-
 Pojmenuj ho v řádku **Label** jako _Historie_. Do řádku **X-asis Label** nastav automatic, to znamená, že se jednotka přidá automaticky.
 
-![settings of chart node in Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566334139/projects/highest-centrifugal-force/image13.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-9.webp')}/> </div> </div>
 
 9. Pod druhý javascript vlož textový **node Text** ze sekce Dashboard.
-
-![Dashboard text node](https://res.cloudinary.com/lukasfabik/image/upload/v1566292682/projects/highest-centrifugal-force/image1.png)
-
 V něm pojmenuješ, jak se bude zobrazovat délka nejnovější rotace: _Doba posledního točení_.
 
-![Set text node in dashboard](https://res.cloudinary.com/lukasfabik/image/upload/v1566292682/projects/highest-centrifugal-force/image12.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-10.webp')}/> </div> </div>
 
-10. Za obě úrovně umísti po jednom textovém **nodu Text** ze sekce Dashboard. Ty ovlivní, jak v grafu uvidíš zapsaný rekordní čas. Nastav v nich proto postupně Label **Rekord** a **Rekordní čas**.
+10.  Za obě úrovně umísti po jednom textovém **nodu Text** ze sekce Dashboard. Ty ovlivní, jak v grafu uvidíš zapsaný rekordní čas. Nastav v nich proto postupně Label **Rekord** a **Rekordní čas**.
 
-![HARDWARIO playground text node](https://res.cloudinary.com/lukasfabik/image/upload/v1566292682/projects/highest-centrifugal-force/image4.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-11.webp')}/> </div> </div>
 
 11. A pak to všechno **propoj** podle obrázku. Na ploše ti tak vyjdou dvě samostatné flow. Nezapomeň nakonec zmáčknout tlačítko **Deploy**, kterým to celé zprovozníš. 🚨
 
-![Deploy Node-RED flow](https://res.cloudinary.com/lukasfabik/image/upload/v1566292682/projects/highest-centrifugal-force/image9.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-12.webp')}/> </div> </div>
 
 ## Roztoč to!
 
@@ -131,4 +126,4 @@ V něm pojmenuješ, jak se bude zobrazovat délka nejnovější rotace: _Doba po
    **Náš tip:** Nejlíp se ti bude točit, když krabičku postavíš na tlačítko.
 3. Výsledky sleduj na záložce **Dashboard**. Tak hodně štěstí a… **Roztoč to jak roztoč!**
 
-![settings of chart node in Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566334137/projects/highest-centrifugal-force/image15.png)
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-13.webp')}/> </div> </div>

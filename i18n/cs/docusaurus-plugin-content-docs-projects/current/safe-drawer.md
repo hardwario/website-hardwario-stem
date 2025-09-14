@@ -2,6 +2,7 @@
 slug: safe-drawer
 title: Tajný šuplík
 ---
+import Image from '@theme/IdealImage';
 
 ## Úvod
 
@@ -22,7 +23,12 @@ Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vy
 
 2. [Core Module spáruj s USB Donglem](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device) Hned po spárování uvidíš, že tvůj Core Module změnil Alias na **x-axis-detector**.
 
-![HARDWARIO Playground - devices](https://res.cloudinary.com/lukasfabik/image/upload/v1566364970/projects/safe-drawer/image26.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-1.webp')}/>
+  </div>
+</div>
+
 
 ## Rozjeď appku na mobilu
 
@@ -77,67 +83,122 @@ Dvakrát na něj klikni a do řádku zkopíruj **Topic**, se kterým krabička o
 node/x-axis-detector:0/accelerometer/-/event-count
 ```
 
-![Set MQTT input in HARDWARIO Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566364963/projects/safe-drawer/image6.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-2.webp')}/>
+  </div>
+</div>
 
 3. Vedle tohohle nodu umísti **node Switch** ze sekce **Function**. Díky tomuhle nodu můžeš detekci vypnout, když jsi doma a otvíráš šuplík sám.
 
-![Add Switch node to Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566364972/projects/safe-drawer/image16.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-3.webp')}/>
+  </div>
+</div>
 
 4. Uvnitř nodu změň řádek Property na **flow. active**. Do řádku níž číslici **1**. S touhle jedničkou se notifikace pošle, když je tlačítko zapnuté, jinak se zahodí. Mrkej na obrázek.
 
-![Set Switch node in Node-RED Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566364968/projects/safe-drawer/image19.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-4.webp')}/>
+  </div>
+</div>
 
 5. Za tohle postav ještě **node Change** ze sekce Function.
 
-![Add Switch node in Node-RED Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566364962/projects/safe-drawer/image2.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-5.webp')}/>
+  </div>
+</div>
 
 6. V něm si nastav **zprávu, která se ti pošle do mobilu**. Dávej bacha, čárky a háčky Blynk neumí. 🤷
 
-![Set the message for mobile app](https://res.cloudinary.com/lukasfabik/image/upload/v1566364965/projects/safe-drawer/image10.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-6.webp')}/>
+  </div>
+</div>
 
 7. Na konec tohohle potravního řetězce umísti **node Notify** ze sekce Blynk ws.
 
-![Send mobile notification with this node](https://res.cloudinary.com/lukasfabik/image/upload/v1566364969/projects/safe-drawer/image15.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-7.webp')}/>
+  </div>
+</div>
 
 8. Když na něj dvakrát klikneš, otevře se ti nastavení. Tady klepni na **malou tužtičku**. Dostaneš se do ještě hlubšího nastavení.
 
-![Blynk App Settings](https://res.cloudinary.com/lukasfabik/image/upload/v1566364971/projects/safe-drawer/image23.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-8.webp')}/>
+  </div>
+</div>
 
 9. Zajímat tě budou první dva řádky. **URL** zkopíruj z odkazu níž a **token** zkopči z e-mailu, který se ti poslal, když jsi vytvořil projekt v Blynku.
 
-![Blynk App connection with Token and URL](https://res.cloudinary.com/lukasfabik/image/upload/v1566364968/projects/safe-drawer/image17.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-9.webp')}/>
+  </div>
+</div>
 
 **Náš tip:** V řádku Name projekt pojmenuj. V dalších nodech ho pak jednoduše rozeznáš.
 
-![Blynk App settings in Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566364971/projects/safe-drawer/image22.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-10.webp')}/>
+  </div>
+</div>
 
 10. Teď tenhle řetězec **pospojuj**. A jdeme dál.
 
-![Connect flow in Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566364963/projects/safe-drawer/image11.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-11.webp')}/>
+  </div>
+</div>
 
 ## Nastav v Node-RED detektor pohybu
 
 1. Načni další řetězec. Polož na plochu **node Write event** ze sekce Blynk WS. Ten ovládá tlačítko.
 
-![Send an event to Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364963/projects/safe-drawer/image5.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-12.webp')}/>
+  </div>
+</div>
 
 2. Když na něj dvakrát klikneš, do řádku **Virtual Pin** vyplň číslo, které jsi zadával jako PIN na Blynku (bez písmene V).
-
-![Set Virtual PIN in Blink node](https://res.cloudinary.com/lukasfabik/image/upload/v1566364976/projects/safe-drawer/image21.png)
 
 Na řádku **Connection** pak vyber projekt, který jsi pojmenoval u nodu Notify.
 
 3. A poslední node do party. Polož na plochu **node Change** ze sekce Function.
 
-![Add change node to flow in Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566364962/projects/safe-drawer/image3.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-13.webp')}/>
+  </div>
+</div>
 
 4. Node nastavíš tak, aby reagoval na vypnutí a zapnutí tlačítka na Blynku. Dvojklikem ho otevři a nastav do políček Rules postupně **flow. active** a **msg. payload** (mrkej na obrázek).
 
-![Settings of change node in flow of Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566364966/projects/safe-drawer/image9.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-14.webp')}/>
+  </div>
+</div>
 
 5. Teď tyhle dva hezouny **spoj**. Nezapomeň taky kliknout na tlačítko **Deploy** vpravo nahoře, aby se všechno zprovoznilo.
 
-![Deploy your flow in Node-RED | HARDWARIO Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566364975/projects/safe-drawer/image24.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-15.webp')}/>
+  </div>
+</div>
+
 
 ## Spusť pastičku
 

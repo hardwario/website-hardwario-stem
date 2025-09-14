@@ -12,7 +12,8 @@ Tento dokument vás provede projektem **Rádiového CO₂ monitoru**. Budete si 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_block-diagram.webp')}/>
+    <Image  img={require('./img/radio-co2-monitor/radio_co2_monitor.png')}
+          style={{ backgroundColor: "#fff" }}/>
   </div>
 </div>
 

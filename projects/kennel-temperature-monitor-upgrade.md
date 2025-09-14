@@ -2,6 +2,8 @@
 slug: kennel-temperature-monitor-upgrade
 title: Kennel temperature monitor - upgrade
 ---
+import Image from '@theme/IdealImage';
+
 ## Introduction
 
 Do you already have a basic version of the kennel temperature detector? Build an even better one. It will send notifications to your mobile and you will see the temperature in the kennel from anywhere. 🐶
@@ -17,7 +19,11 @@ All you need is the basic HARDWARIO [**Start Set**](https://shop.hardwario.com/p
 
 1. The firmware you need for this project is the familiar **bcf-radio-push-button**. Have you got it already? What are you waiting for? Pair the box with a Dongle.
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1573306270/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image5.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-1.webp')}/>
+  </div>
+</div>
 
 2. In Playground, click on the **Function** tab and place the same thing on the desktop as in the basic version of the project:
 
@@ -29,11 +35,20 @@ node/push-button:0/thermometer/0:1/temperature
 
 - and a pointer, that is a **Gauge node** from under the Dashboard section. It should read from -15 to 40 °C. Name it for better orientation. ✍️
 
-![Gauge](https://res.cloudinary.com/lukasfabik/image/upload/v1573306271/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image3.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-2.webp')}/>
+  </div>
+</div>
 
-![Dashboard](https://res.cloudinary.com/lukasfabik/image/upload/v1573306276/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image25.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-3.webp')}/>
+  </div>
+</div>
 
 Hold onto your hat and let's move on. 🎩
+
 
 ## Set up Blynk
 
@@ -80,13 +95,18 @@ In the line at the top, give the optimum temperature monitor a **name**.
 
 5. Name the project in **project settings** and run the program with the **Play** button. It won´t do much because you first have to upgrade your Node-RED.
 
+
 ## Upgrade in Node-RED
 
 1. Return to your computer and set up more features in Playground. The first is the **mobile notification**. You make this work with three nodes.
 
 - First node: **Switch node** from under the Function section.
 
-![Switch](https://res.cloudinary.com/lukasfabik/image/upload/v1573306271/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image10.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-4.webp')}/>
+  </div>
+</div>
 
 
 
@@ -96,27 +116,40 @@ a. Use **msg. payload** as the selected property;
 
 b. Select the notification to be sent when the temperature is less than or equal to −15 °C. Work with the **flow. optimalTemp** variable and with the symbol less than/equal to: `**<=**`
 
-![flow](https://res.cloudinary.com/lukasfabik/image/upload/v1573306274/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image20.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-5.webp')}/>
+  </div>
+</div>
 
 - Second node: **Change node** from the same section. This affects what message you get on your mobile.
 
-![Change](https://res.cloudinary.com/lukasfabik/image/upload/v1573306273/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image16.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-6.webp')}/>
+  </div>
+</div>
 
 In the node, set what the mobile will tell you when the temperature in the kennel falls below the lowest temperature you set. For example _It's too cold in the kennel_.
 
 **Our tip**: Write the message without hooks (háčky) and accent marks (čárky). Unfortunately, Blynk does not understand them.
 
 - Third node: **Notify node** from under the Blynk ws section. This provides the connection to the mobile.
-
-![Notify](https://res.cloudinary.com/lukasfabik/image/upload/v1573306271/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image2.png)
-
 In the node, click on the small pencil symbol.
 
-![Pencil](https://res.cloudinary.com/lukasfabik/image/upload/v1573306276/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image24.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-7.webp')}/>
+  </div>
+</div>
 
 Copy and paste here the **URL** from the bottom part of the window and the **token** that you received on your mobile when you set up the project in Blynk. Unsure about something? Take a look at the screenshot.
 
-![URL](https://res.cloudinary.com/lukasfabik/image/upload/v1573306273/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image9.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-8.webp')}/>
+  </div>
+</div>
 
 **Our tip**: Name the connection in the name line so that you can recognize it later.
 
@@ -124,7 +157,11 @@ Copy and paste here the **URL** from the bottom part of the window and the **tok
 
 1. What do you think? Does it need something else? You´re right, the **Write node** from the Blynk ws section. This will ensure that the pointer will work on your mobile.
 
-![Write node](https://res.cloudinary.com/lukasfabik/image/upload/v1573306275/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image18.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-9.webp')}/>
+  </div>
+</div>
 
 In the **Connection** line, select your current project.
 
@@ -132,58 +169,97 @@ In the **Connection** line, select your current project.
 
 In the node, set the **PIN** to the same one you entered for the pointer on the mobile. Enter it in the node without the initial V.
 
-![PIN](https://res.cloudinary.com/lukasfabik/image/upload/v1573306271/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image6.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-10.webp')}/>
+  </div>
+</div>
 
 ## Add the flow that monitors the optimum temperature.
 
 1. The icing on the cake is to follow. This flow consists of four nodes.
 
 The first is the **Write Event node** from under the Blynk ws section. Watch out, Write Event, not only Write.
+This time connect it to the **PIN**, which you set in Blynk for Step H. 
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-11.webp')}/>
+  </div>
+</div>
 
-![Write Event node](https://res.cloudinary.com/lukasfabik/image/upload/v1573306271/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image4.png)
-
-This time connect it to the **PIN**, which you set in Blynk for Step H. ![PIN](https://res.cloudinary.com/lukasfabik/image/upload/v1573306272/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image11.png)
-
-2. The next one is the **Numeric node** from under the Dashboard section. Sounds like some comic book villain, doesn't it? But he's your buddy now.
+1. The next one is the **Numeric node** from under the Dashboard section. Sounds like some comic book villain, doesn't it? But he's your buddy now.
 
 Numeric does the same as Step H in Blynk. **It ensures the values are synchronized**.
 
-![Numeric node](https://res.cloudinary.com/lukasfabik/image/upload/v1573306274/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image19.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-12.webp')}/>
+  </div>
+</div>
 
 In the node, set the **unit of measure** (°C), the **temperature range** (−15 and 40) and the **node name**.
 
-![Temperature setting](https://res.cloudinary.com/lukasfabik/image/upload/v1573306276/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image25.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-13.webp')}/>
+  </div>
+</div>
 
 3. Place another **Change node** next to it.
 
-![Change node](https://res.cloudinary.com/lukasfabik/image/upload/v1573306271/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image1.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-14.webp')}/>
+  </div>
+</div>
 
 4. In the node, set the minimum temperature value (optimalTemp) to be updated immediately with changes to the Numeric node. Take a look at the screenshot.
 
-![Numeric](https://res.cloudinary.com/lukasfabik/image/upload/v1573306275/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image23.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-15.webp')}/>
+  </div>
+</div>
 
 5. Below this node, add one more **Write node** from under the Blynk ws section.
 
-![Write node](https://res.cloudinary.com/lukasfabik/image/upload/v1573306273/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image14.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-16.webp')}/>
+  </div>
+</div>
 
 6. In this node, fill in the same **PIN** that you set for the Step H element. Also select the correct project on the **Connection** line.
 
 This setting will ensure that the set temperature is synchronized back so that you can see the changes in the Dashboard also in Blynk.
 
-![Connection](https://res.cloudinary.com/lukasfabik/image/upload/v1573306271/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image8.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-17.webp')}/>
+  </div>
+</div>
 
 7. Now you only have to **connect it as shown in the screenshot** and confirm with the **Deploy** button. 🙌
 
-![Deploy](https://res.cloudinary.com/lukasfabik/image/upload/v1573306275/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image21.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-18.webp')}/>
+  </div>
+</div>
 
 ## Ready, steady… go!
 
 1. Stick the box back to the **inner wall of the kennel**.
 2. The temperature measured in the kennel is not only shown in Playground **in the Dashboard tab**…
 
-![Dashboard](https://res.cloudinary.com/lukasfabik/image/upload/v1573306275/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image26.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-19.webp')}/>
+  </div>
+</div>
 
 3. … but also in **Blynk**. So you can check it anywhere, anytime. 🕵️
+
 
 
 ![Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1573306274/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image22.png)

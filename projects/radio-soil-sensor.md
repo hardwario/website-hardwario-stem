@@ -32,7 +32,8 @@ This document will guide you through the **Radio Soil Sensor** project. You will
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_block-diagram.webp')}/>
+    <Image  img={require('./img/radio-soil-sensor/radio_soil_sensor.png')}
+          style={{ backgroundColor: "#fff" }}/>
   </div>
 </div>
 

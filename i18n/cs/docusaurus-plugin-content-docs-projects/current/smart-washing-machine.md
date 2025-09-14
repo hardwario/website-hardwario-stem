@@ -2,6 +2,7 @@
 slug: smart-washing-machine
 title: Chytrá pračka
 ---
+import Image from '@theme/IdealImage';
 
 ## Úvod
 
@@ -34,13 +35,21 @@ Dvakrát na něj klikni a do řádku zkopíruj **Topic**, se kterým krabička z
 node/washing-machine-detector:0/washing/finished
 ```
 
-![Check alias of HARDWARIO kit](https://res.cloudinary.com/lukasfabik/image/upload/v1566368245/projects/smart-washing-machine/image2.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-1.webp')}/>
+  </div>
+</div>
 
 Potvrď tlačítkem **Done**.
 
 3. Vedle postav **node Change** ze sekce Functions.
 
-![Add change node to flow](https://res.cloudinary.com/lukasfabik/image/upload/v1566368245/projects/smart-washing-machine/image3.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-2.webp')}/>
+  </div>
+</div>
 
 4. Uvnitř nodu Change **nastavíš zprávu**, která se rodičům po doprání pošle do mobilu. Mysli na to, že by měla být bez háčků a čárek.
 Malá inspirace:
@@ -48,7 +57,11 @@ Malá inspirace:
     - Doprala jsem. Dostanu ted tyden dovolene?
     - Doprano a uz me nechte bejt. Vase pracka.
 
-![Set message to show](https://res.cloudinary.com/lukasfabik/image/upload/v1566368245/projects/smart-washing-machine/image5.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-3.webp')}/>
+  </div>
+</div>
 
 Potvrď tlačítkem **Done**.
 

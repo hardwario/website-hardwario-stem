@@ -2,10 +2,13 @@
 slug: safe-drawer
 title: Safe drawer
 ---
+import Image from '@theme/IdealImage';
 
 ## Introduction
 
 Do you have a diary, poems or a top secret government-issued document in your drawer? If it's something nobody should see, secure it. 🔒 Turn your IoT Start Set into a drawer monitor and get alerts on your mobile phone. 📲
+
+![Get mobile notification when someone open your drawer](https://res.cloudinary.com/lukasfabik/image/upload/v1566364960/projects/safe-drawer/image8.png)
 
 This project teaches you how to create a **drawer monitor that sends alerts to your mobile phone when some opens your drawer**. 👈
 
@@ -20,7 +23,12 @@ You only need a **box with a button** and a **Radio dongle**. That's why the bas
 
 2. [Pair the Core Module with the USB Dongle](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device). Right after pairing, you'll see that your Core Module has changed its Alias to **x-axis-detector**.
 
-![HARDWARIO Playground - devices](https://res.cloudinary.com/lukasfabik/image/upload/v1566364970/projects/safe-drawer/image26.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-1.webp')}/>
+  </div>
+</div>
+
 
 ## Set up the mobile app
 
@@ -63,6 +71,7 @@ Once you have everything set up, **return to the canvas** through the arrow at t
 ![Your Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364960/projects/safe-drawer/image4.png)
 ![Your Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364961/projects/safe-drawer/image7.png)
 
+
 ## Set up the message in Node-RED
 
 1. In the Playground, click on the **Functions tab**, where the Node-RED programming canvas is located.
@@ -75,67 +84,121 @@ Double-click on it and copy the **Topic** into the line, which the box uses to d
 node/x-axis-detector:0/accelerometer/-/event-count
 ```
 
-![Set MQTT input in HARDWARIO Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566364963/projects/safe-drawer/image6.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-2.webp')}/>
+  </div>
+</div>
 
 3. Next to this node, place a **Switch node** from the **Function** section. Thanks to this node, you can turn off detection when you're home and opening the drawer yourself.
 
-![Add Switch node to Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566364972/projects/safe-drawer/image16.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-3.webp')}/>
+  </div>
+</div>
 
 4. Inside the node, change the Property line to **flow.active**. In the line below, enter the number **1**. With this number one, the notification will be sent when the button is on, otherwise it will be discarded. Look at the picture.
 
-![Set Switch node in Node-RED Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566364968/projects/safe-drawer/image19.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-4.webp')}/>
+  </div>
+</div>
 
 5. After this, place another **Change node** from the Function section.
 
-![Add Switch node in Node-RED Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566364962/projects/safe-drawer/image2.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-5.webp')}/>
+  </div>
+</div>
 
 6. In it, set up the **message that will be sent to your mobile**. Be careful, Blynk doesn't handle accents and special characters. 🤷
 
-![Set the message for mobile app](https://res.cloudinary.com/lukasfabik/image/upload/v1566364965/projects/safe-drawer/image10.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-6.webp')}/>
+  </div>
+</div>
 
 7. At the end of this food chain, place a **Notify node** from the Blynk ws section.
 
-![Send mobile notification with this node](https://res.cloudinary.com/lukasfabik/image/upload/v1566364969/projects/safe-drawer/image15.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-7.webp')}/>
+  </div>
+</div>
 
 8. When you double-click on it, the settings will open. Here click on the **small pencil**. You'll get to even deeper settings.
 
-![Blynk App Settings](https://res.cloudinary.com/lukasfabik/image/upload/v1566364971/projects/safe-drawer/image23.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-8.webp')}/>
+  </div>
+</div>
 
 9. You'll be interested in the first two lines. Copy the **URL** from the link below and copy the **token** from the email that was sent to you when you created the project in Blynk.
 
-![Blynk App connection with Token and URL](https://res.cloudinary.com/lukasfabik/image/upload/v1566364968/projects/safe-drawer/image17.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-9.webp')}/>
+  </div>
+</div>
 
 **Our tip:** Name the project in the Name line. You'll easily recognize it in other nodes later.
 
-![Blynk App settings in Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566364971/projects/safe-drawer/image22.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-10.webp')}/>
+  </div>
+</div>
 
 10. Now **connect this chain**. And let's move on.
 
-![Connect flow in Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566364963/projects/safe-drawer/image11.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-11.webp')}/>
+  </div>
+</div>
 
 ## Set up the motion detector in Node-RED
 
 1. Start another chain. Place a **Write event node** from the Blynk WS section on the canvas. This controls the button.
 
-![Send an event to Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364963/projects/safe-drawer/image5.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-12.webp')}/>
+  </div>
+</div>
 
 2. When you double-click on it, fill in the **Virtual Pin** line with the number you entered as PIN in Blynk (without the letter V).
-
-![Set Virtual PIN in Blink node](https://res.cloudinary.com/lukasfabik/image/upload/v1566364976/projects/safe-drawer/image21.png)
 
 In the **Connection** line, then select the project you named in the Notify node.
 
 3. And the last node to the party. Place a **Change node** from the Function section on the canvas.
 
-![Add change node to flow in Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566364962/projects/safe-drawer/image3.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-13.webp')}/>
+  </div>
+</div>
 
 4. You'll set up the node to react to turning the button off and on in Blynk. Double-click to open it and set the Rules fields to **flow.active** and **msg.payload** respectively (look at the picture).
 
-![Settings of change node in flow of Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566364966/projects/safe-drawer/image9.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-14.webp')}/>
+  </div>
+</div>
 
 5. Now **connect these two beauties**. Don't forget to also click the **Deploy** button at the top right so everything gets activated.
 
-![Deploy your flow in Node-RED | HARDWARIO Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566364975/projects/safe-drawer/image24.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/safe-drawer/safe-drawer-15.webp')}/>
+  </div>
+</div>
 
 ## Start the trap
 

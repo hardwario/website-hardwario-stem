@@ -12,7 +12,8 @@ This document will guide you through the **Radio Smart LED Strip** project. You 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_block-diagram.webp')}/>
+    <Image  img={require('./img/radio-smart-led-strip/radio_power_controller.png')}
+          style={{ backgroundColor: "#fff" }}/>
   </div>
 </div>
 

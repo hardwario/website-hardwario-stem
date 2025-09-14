@@ -2,6 +2,8 @@
 slug: dragons-fire-level-2
 title: Dragons fire level 2
 ---
+import Image from '@theme/IdealImage';
+
 ## Introduction
 
 Do you dare? Create two of your favorite competitions by building just one project, switching between them as you like! Everyone will have fun at your party. 🕺
@@ -16,7 +18,11 @@ All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/
 ## Prepare Node-RED
 
 1. Put the Starter Kit together and pair it. On the Core Module you will need the familiar **bcf-radio-push-button** firmware again.
-![Firmware to the Core Module](https://res.cloudinary.com/lukasfabik/image/upload/v1571551047/projects/hardcore-upgrade-of-iot-party-game/image6.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/push-the-button/push-the-button_playground-devices-connected.webp')}/>
+  </div>
+</div>
 
 ## Measure the hottest breath
 

@@ -22,7 +22,8 @@ Může být vybaven magnetem pro snadné uchycení krabičky a funguje na bateri
 </div>
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor_block-diagram.webp')}/>
+    <Image  img={require('./img/radio-door-sensor/radio_door_sensor.png')}
+          style={{ backgroundColor: "#fff" }}/>
   </div>
 </div>
 

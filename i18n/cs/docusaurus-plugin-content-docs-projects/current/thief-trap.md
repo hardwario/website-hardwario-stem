@@ -2,6 +2,8 @@
 slug: thief-trap
 title: Past na Zloděje
 ---
+import Image from '@theme/IdealImage';
+
 ## Úvod
 
 Leze ti mladší brácha do pokoje? Jedeš na dovolenou a bojíš se, že ti někdo ukradne tvůj poklad? Nastav si alarm proti všem nenechavcům. 👮
@@ -22,7 +24,11 @@ Pokud máš Starter Set, budeš k němu potřebovat ještě [**PIR Module**](htt
 
 1. Core Module spáruj s USB Donglem. Hned po spárování uvidíš, že tvůj Core Module změnil Alias na **Burglar alarm**.
 
-![burglar alarm](https://res.cloudinary.com/lukasfabik/image/upload/v1573157099/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image10.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-2.webp')}/>
+  </div>
+</div>
 
 ❓ **Věděl jsi**? Burglar znamená v angličtině zloděj. Burglarem byl třeba Bilbo Pytlík z Hobita, když kradl v dračí pokladnici. 🐉
 
@@ -69,30 +75,50 @@ msg.payload = parseInt(msg.payload);
 return msg;
 ```
 
-![programovací plocha NODE-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1573157099/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image12.png)
+
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-3.webp')}/>
+  </div>
+</div>
 
 3. Teď přidej node, se kterým budeš moct sledování zlodějů zapínat a vypínat. To aby mobil nezačal plašit, až budeš doma ty. 🔕
    Uděláš to pomocí **nodu Switch** ze sekce Dashboard.
 
-![](https://res.cloudinary.com/lukasfabik/image/upload/v1573157095/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image8.png)
 
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-4.webp')}/>
+  </div>
+</div>
 4. Na node dvakrát klikni a změň jeho **Label** na Spouštěč. Potom uprav **On Payload** a **Off Payload** na 1 a 0 (viz obrázek).
 
 Potvrď tlačítkem **Done**.
 
-![spouštěč](https://res.cloudinary.com/lukasfabik/image/upload/v1573157095/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image3.png)
+
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-5.webp')}/>
+  </div>
+</div>
 
 5. Za tenhle node postav **node** **Write** ze sekce Blynk ws.
 
-![node Write z Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1573157114/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image15.png)
+
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-6.webp')}/>
+  </div>
+</div>
 
 6. Dvakrát na něj klikni. Tady vyplň **PIN**, který jsi zadával v projektu na Blynku. Stačí napsat číslo bez počátečního V.
 
-![programování](https://res.cloudinary.com/lukasfabik/image/upload/v1573157096/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image5.png)
-
 Pak klikni na malou tužtičku. ✏
-
-![Node-Red](https://res.cloudinary.com/lukasfabik/image/upload/v1573157090/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image1.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-7.webp')}/>
+  </div>
+</div>
 
 7. Otevře se ti nastavení propojení. Do pole **URL** vyplň webovou adresu z políčka níž. Do pole **Token** zkopíruj kód, který ti přišel z Blynku na e-mail.
 
@@ -100,11 +126,19 @@ A na závěr si v políčku **Label** projekt ještě pro lepší orientaci pojm
 
 Všechno potvrď a vrátíš se na programovací plochu.
 
-![nastavení propojení](https://res.cloudinary.com/lukasfabik/image/upload/v1573157110/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image17.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-8.webp')}/>
+  </div>
+</div>
 
 8. O kousek níž přidej node s podobným názvem, ale jinou funkcí. Je to **node Write Event** taky ze sekce Blynk. V něm nastav znovu stejný **PIN**. Na malou tužtičku už klikat nemusíš, nody jsou propojené a všechno se nastavilo samo.
 
-![node Write Event](https://res.cloudinary.com/lukasfabik/image/upload/v1573157114/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image23.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-9.webp')}/>
+  </div>
+</div>
 
 9. Za tento node postav další javascriptí **node Function**. Díky němu se v projektu promítne, jestli je zrovna tlačítko v Blynku zapnuté nebo vypnuté.
 
@@ -122,11 +156,14 @@ else
 return msg;
 ```
 
-![nastavení upozornění](https://res.cloudinary.com/lukasfabik/image/upload/v1573157103/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image11.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-10.webp')}/>
+  </div>
+</div>
 
 10. Pak celý tenhle flow pospojuj. Ještě ale neodcházej, čeká tě nastavení dvou dalších miniflow.
 
-![nastavení miniflow](https://res.cloudinary.com/lukasfabik/image/upload/v1573157120/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image21.png)
 
 ## Naprogramuj hlavní senzor
 
@@ -140,7 +177,11 @@ V dalším flow tedy začni starým dobrým **nodem MQTT** ze sekce Input. V ně
 node/burglar-alarm:0/thermometer/0:1/temperature
 ```
 
-![měření teploty](https://res.cloudinary.com/lukasfabik/image/upload/v1573157098/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image7.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-11.webp')}/>
+  </div>
+</div>
 
 2. Hned za něj postav další node Function. Do pole Name napiš Stav alarmu a kód použij tento:
 
@@ -152,19 +193,28 @@ return msg;
 
 Díky tomuhle node bude senzor aktivní jenom v případě, že ho spustíš tlačítkem v Blynku nebo na počítači.
 
-![stav alarmu](https://res.cloudinary.com/lukasfabik/image/upload/v1573157118/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image19.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-12.webp')}/>
+  </div>
+</div>
 
 3. A do třetice (všeho nejlepšího) hoď na plochu node MQTT ze sekce
 
 **Output** (bacha na to ❗).
 
 V něm nastav jako Topic _node/burglar-alarm:0/alarm/-/set/state_, přes který senzor pošle na alarm svůj stav. A pokud máš v Blynku nebo dashboardu zapnutý spínáč, alarm se aktivuje. 👮
-
-![aktivace alarmu](https://res.cloudinary.com/lukasfabik/image/upload/v1573157095/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image2.png)
-
 4. Pak tyhle tři krasavce **pospojuj**.
 
-![pospojování nodů](https://res.cloudinary.com/lukasfabik/image/upload/v1573157111/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image14.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-13.webp')}/>
+  </div>
+</div>
+
+
+
+
 
 ## Nastav si svoji zprávu
 
@@ -172,7 +222,11 @@ V něm nastav jako Topic _node/burglar-alarm:0/alarm/-/set/state_, přes který 
 
 Nejdřív si na plochu postav **MQTT node ze sekce Input**. V něm nastav jako **Topic** node/burglar-alarm:0/pir/-/event-count. Znamená to, že node se aktivuje, pokud bude aktivní a někdo kolem něj projde. Prostě vychytané pohybové čidlo.
 
-![MQTT Node](https://res.cloudinary.com/lukasfabik/image/upload/v1573157123/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image26.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-14.webp')}/>
+  </div>
+</div>
 
 1. Za něj patří javascriptík, tedy **node Function**. Jako **Name** nastav _Zpráva_ a kód máš tady:
 
@@ -184,21 +238,41 @@ return msg;
 
 **Náš tip**: Hlášku v kódu si klidně přepiš, ale nezapomeň na to, že Blynk nepřečte háčky ani čárky. Holt cizinec no. 🤷
 
-![zpráva](https://res.cloudinary.com/lukasfabik/image/upload/v1573157116/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image16.png)
+
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-15.webp')}/>
+  </div>
+</div>
 
 1. Nakonec sem hoď **node Notify** ze sekce Blynk ws, který komunikuje s upozorněním v mobilní appce. V něm už najdeš Token vyplněný, tak jen zkontroluj, jestli odpovídá tomu, který ti Blynk poslal na e-mail.
 
-![node Notify](https://res.cloudinary.com/lukasfabik/image/upload/v1573157090/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image6.png)
+
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-16.webp')}/>
+  </div>
+</div>
 
 4. Tyhle mazlíky **spoj**. A konečně zmáčkni tlačítko **Deploy**.
 
-![spojení nodů a deploy](https://res.cloudinary.com/lukasfabik/image/upload/v1573157122/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image24.png)
+
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-17.webp')}/>
+  </div>
+</div>
 
 ## A... akce!
 
 1. Až budeš chtít alarm spustit, **nastav switch** na počítači (v záložce Dashboard) nebo na mobilu. Obě tlačítka spolupracují, proto stačí nastavit buď jedno, nebo druhé.
 
-![nastav switch](https://res.cloudinary.com/lukasfabik/image/upload/v1573157102/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image13.png)
+
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-18.webp')}/>
+  </div>
+</div>
 
 2. Postav svou krabičku ke dveřím. Až krabička zachytí pohyb, **vyšle ti do mobilu upozornění**.
 

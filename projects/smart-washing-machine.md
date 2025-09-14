@@ -2,7 +2,7 @@
 slug: smart-washing-machine
 title: Smart Washing machine
 ---
-
+import Image from '@theme/IdealImage';
 
 ## Introduction
 
@@ -34,13 +34,21 @@ Double-click on it and copy **Topic** in the field. With this, the box will know
 node/washing-machine-detector:0/washing/finished
 ```
 
-![Check alias of HARDWARIO kit](https://res.cloudinary.com/lukasfabik/image/upload/v1566368245/projects/smart-washing-machine/image2.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-1.webp')}/>
+  </div>
+</div>
 
 Confirm it with the **Done** button.
 
 3. Place the **Change node** from the Functions section next to it.
 
-![Add change node to flow](https://res.cloudinary.com/lukasfabik/image/upload/v1566368245/projects/smart-washing-machine/image3.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-2.webp')}/>
+  </div>
+</div>
 
 
 4. Inside the Change node, **set up a message** that will be sent to your parents’ mobile after the washing is done. The message should be free of diacritics.
@@ -49,10 +57,13 @@ Confirm it with the **Done** button.
        - I am finished. Do I get a week holiday now?
        - Done and leave me alone. Your washing machine.
 
-![Set message to show](https://res.cloudinary.com/lukasfabik/image/upload/v1566368245/projects/smart-washing-machine/image5.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-3.webp')}/>
+  </div>
+</div>
 
-Confirm it with the **Done** button.
-
+Confirm it with the **Done** button. 
 ## Set up your mobile
 
 1. It’s time to steal your mom’s or dad’s mobile and set up their own Blynk. If you don’t know how to do it yet, [**check out the instructions**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)

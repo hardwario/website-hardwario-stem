@@ -2,7 +2,7 @@
 slug: thief-trap
 title: Thief trap
 ---
-
+import Image from '@theme/IdealImage';
 
 ## Introduction
 
@@ -19,15 +19,20 @@ If you already have the Start Set, you will only need the [**PIR Module**](https
 
 2. Load special firmware onto the Core Module, namely bcf-radio-burglar-alarm (you will find it among the other firmware in Playground). With this firmware the box will reveal intruders and burglars.👂
 
-![Assembling the Motion  Set](https://res.cloudinary.com/lukasfabik/image/upload/v1573157109/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image20.png)
+![sestavení motion detektor Setu](https://res.cloudinary.com/lukasfabik/image/upload/v1573157109/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image20.png)
 
 **Our tip**: You don’t know how to download the firmware or what is it? [You'll find out here](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
 
 1. Pair the Core Module with a USB Dongle. Right after pairing, you will see that your Core Module has changed the Alias to **Burglar alarm**.
 
-![Burglar alarm](https://res.cloudinary.com/lukasfabik/image/upload/v1573157099/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image10.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-2.webp')}/>
+  </div>
+</div>
 
 ❓ **Did you know**? In English, a burglar is a sort of thief. For example, Bilbo Baggins from the Hobbit was a thief. He stole from the dragon's treasury! 🐉
+
 
 ## Start the app on your mobile
 
@@ -59,6 +64,7 @@ When you have completed everything,<b> </b>**return to the desktop** by clicking
 
 6. **Tap the button**, it should switch from ON mode to OFF mode.
 
+
 ## Set the switching button in Node-RED
 
 1. In Playground, click the **Functions tab** where the [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/) programming desktop is.🤖
@@ -72,29 +78,48 @@ Subsequently, copy the following simple javascript code into the Function field:
 msg.payload = parseInt(msg.payload); return msg;
 ```
 
-![Node-RED programming desktop](https://res.cloudinary.com/lukasfabik/image/upload/v1573157099/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image12.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-3.webp')}/>
+  </div>
+</div>
 
 3. Now add a node with which you can turn the thief monitoring on and off. This is to keep the phone from bleeping when you are home. 🔕 Do it using the **Switch node** under the Dashboard section.
 
-![](https://res.cloudinary.com/lukasfabik/image/upload/v1573157095/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image8.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-4.webp')}/>
+  </div>
+</div>
 
 4. Double-click on the node and change its **Label** to Trigger. Then adjust **On Payload** and **Off Payload** to 1 and 0 (as shown in the screenshot).
 
 Confirm with the **Done** button.
 
-![Trigger](https://res.cloudinary.com/lukasfabik/image/upload/v1573157095/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image3.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-5.webp')}/>
+  </div>
+</div>
 
 5. Behind this node, place the **Write** **node** from under the Blynk ws section.
 
-![Write node from Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1573157114/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image15.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-6.webp')}/>
+  </div>
+</div>
 
 6. Double-click on it. Fill in the **PIN** you entered for the project in Blynk. Enter the number without the initial V.
 
-![Programming](https://res.cloudinary.com/lukasfabik/image/upload/v1573157096/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image5.png)
 
 Then click on the small pencil symbol.✏
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1573157090/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image1.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-7.webp')}/>
+  </div>
+</div>
 
 7. The connection settings will open. In the **URL** field, enter the web address from the field below. In the **Token** field, copy and paste the code you received by e-mail from Blynk.
 
@@ -102,11 +127,19 @@ Finally, name the project in the **Label** field for better orientation.
 
 Confirm everything and return to the programming desktop.
 
-![Setting the connection](https://res.cloudinary.com/lukasfabik/image/upload/v1573157110/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image17.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-8.webp')}/>
+  </div>
+</div>
 
 8. Add a node a bit lower down with a similar name but a different function. This should be a **Write Event node** from under the Blynk ws section. Set the same **PIN** in it again. You do not have to click on the small pencil again, the nodes are connected and everything is set up by itself.
 
-![Write Event node](https://res.cloudinary.com/lukasfabik/image/upload/v1573157114/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image23.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-9.webp')}/>
+  </div>
+</div>
 
 9. Behind this node, place another javascript **Function node**. With it, the project will show whether the button in Blynk is currently on or off.
 
@@ -116,11 +149,15 @@ In the **Name** line, fill in the Notification setting status and copy the follo
 if(msg.payload == "1") { flow.set("alarmOn", 1); } else { flow.set("alarmOn", 0); } return msg;
 ```
 
-![Setting the notification](https://res.cloudinary.com/lukasfabik/image/upload/v1573157103/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image11.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-10.webp')}/>
+  </div>
+</div>
 
 10. Now connect the whole flow. Don't go just yet though. You still need to set up two more miniflows.
 
-![Setting the miniflows](https://res.cloudinary.com/lukasfabik/image/upload/v1573157120/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image21.png)
+
 
 ## Program the main sensor
 
@@ -134,7 +171,11 @@ In the next flow, start with the good old **MQTT node** from under the Input sec
 node/burglar-alarm:0/thermometer/0:1/temperature
 ```
 
-![Temperature measurement](https://res.cloudinary.com/lukasfabik/image/upload/v1573157098/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image7.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-11.webp')}/>
+  </div>
+</div>
 
 2. Place another Function node right behind it. In the Name field, write the Alarm Status and use the following code:
 
@@ -145,7 +186,11 @@ msg.payload = flow.get("alarmOn"); return msg;
 
 Due to this node, the sensor will only be active if you trigger it by a button in Blynk or on a computer.
 
-![Alarm status](https://res.cloudinary.com/lukasfabik/image/upload/v1573157118/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image19.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-12.webp')}/>
+  </div>
+</div>
 
 3. For the best bit of all, place the MQTT node from under the
 
@@ -153,11 +198,15 @@ Due to this node, the sensor will only be active if you trigger it by a button i
 
 In the node, set _node/burglar-alarm:0/alarm/-/set/state_ as the Topic, through which the sensor sends its status to the alarm. If the switch in Blynk or Dashboard is turned on, the alarm is activated. 👮
 
-![Alarm activation](https://res.cloudinary.com/lukasfabik/image/upload/v1573157095/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image2.png)
 
-4. Subsequently **connect** these three elements together.
 
-![Node connecting](https://res.cloudinary.com/lukasfabik/image/upload/v1573157111/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image14.png)
+1. Subsequently **connect** these three elements together.
+
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-13.webp')}/>
+  </div>
+</div>
 
 ## Set up your message
 
@@ -165,7 +214,11 @@ In the node, set _node/burglar-alarm:0/alarm/-/set/state_ as the Topic, through 
 
 Place the **MQTT node from under the Input section** onto your desktop. In the node, set the **Topic** as node/burglar-alarm:0/pir/-/event-count. This means that the node will be activated if it is active and someone passes by it. Simply, a smart motion sensor.
 
-![MQTT Node](https://res.cloudinary.com/lukasfabik/image/upload/v1573157123/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image26.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-14.webp')}/>
+  </div>
+</div>
 
 2. A short javascript code should follow it, namely a **Function node**. As the **Name** set _Message_ with this code right here:
 
@@ -175,24 +228,39 @@ msg.payload = "Someone's in your room" return msg;
 
 **Our tip**: Feel free to rewrite the message in the code, but remember that Blynk does not read hooks (háčky) and accent marks (čárky). Otherwise it´s double Dutch! 🤷
 
-![Message](https://res.cloudinary.com/lukasfabik/image/upload/v1573157116/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image16.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-15.webp')}/>
+  </div>
+</div>
 
 3. Finally, place here the **Notify node** from under the Blynk ws section. This communicates with the mobile app notification. You'll find a Token filled in. Just make sure it matches the one that Blynk sent to your e-mail.
 
-![Notify node](https://res.cloudinary.com/lukasfabik/image/upload/v1573157090/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image6.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-16.webp')}/>
+  </div>
+</div>
 
 4. **Connect** these elements. Finally, press the **Deploy** button.
 
-![Connection of nodes and Deploy](https://res.cloudinary.com/lukasfabik/image/upload/v1573157122/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image24.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-17.webp')}/>
+  </div>
+</div>
 
 ## Ready, steady… go!
 
 1. When you want to trigger the alarm, **set the switch** on your computer (in the Dashboard tab) or on your mobile. Both buttons work together, so you can set either one or the other.
 
-![Set the switch](https://res.cloudinary.com/lukasfabik/image/upload/v1573157102/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image13.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/thief-trap/thief-trap-18.webp')}/>
+  </div>
+</div>
 
 2. Place your box near the door. When the box detects movement, **it will send a notification to your mobile**.
-
 
 ![Set the switch](https://res.cloudinary.com/lukasfabik/image/upload/v1573157092/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image9.png)
 

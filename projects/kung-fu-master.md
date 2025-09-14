@@ -2,6 +2,8 @@
 slug: kung-fu-master
 title: Kung-fu master
 ---
+import Image from '@theme/IdealImage';
+
 ## Introduction
 
 With this game, there's no way you and your friends will get bored! Adjust your Start Set to recognise even the slightest movement.
@@ -18,7 +20,11 @@ You only need a **box with a button** and a **USB dongle**.  That's why the basi
    **Our Tip:** You don’t know how to download the firmware or what it is? [Find out more here](https://docs.hardwario.com/tower/firmware-sdk/)
 3. [Pair Core Module with USB Dongle](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device) After pairing has been completed, you will see that your Core Module has changed the Alias to **still-position-detector**.
 
-![Devices list in Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566156518/projects/kung-fu-master/image5.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kung-fu-master/kung-fu-master-1.webp')}/>
+  </div>
+</div>
 
 ## Make it move in Node-RED
 
@@ -31,23 +37,35 @@ Double-click on it and copy it to the **Topic** line through which the box calcu
 node/still-position-detector:0/hold-time
 ```
 
-![MQTT node and topic](https://res.cloudinary.com/lukasfabik/image/upload/v1566156518/projects/kung-fu-master/image2.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kung-fu-master/kung-fu-master-2.webp')}/>
+  </div>
+</div>
 
 Confirm by clicking the **Done** button.
 
 3. You need to place another bubble on the desktop for the device to work. You can find it in the Dashboard section as **Text**. This node ensures that the result is recorded.
 
-![Dashboard text Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566156518/projects/kung-fu-master/image4.png)
+
 
 4. Tap the Text node twice. In the settings, edit **Label**, by writing, for example, **Still time**.
 
-![Text settings](https://res.cloudinary.com/lukasfabik/image/upload/v1566156518/projects/kung-fu-master/image6.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kung-fu-master/kung-fu-master-3.webp')}/>
+  </div>
+</div>
 
 Confirm by clicking the **Done** button.
 
 5. **Link both nodes** together. Don't forget to click the red **Deploy** button in the top right corner to get everything up and running. ****
 
-![Connect and Deploy](https://res.cloudinary.com/lukasfabik/image/upload/v1566156518/projects/kung-fu-master/image3.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kung-fu-master/kung-fu-master-4.webp')}/>
+  </div>
+</div>
 
 ## Time for action!
 
@@ -57,7 +75,11 @@ You now have a motion detector and timer in your hand. Cool, or what? Give it a 
 2. After a little while, **move the box**.
 3. In the **Dashboard** tab in Playground, you will see **how much** time elapsed between the moment you pressed the button and made a move. Great job! 👍
 
-![Kung-Fu master timer](https://res.cloudinary.com/lukasfabik/image/upload/v1566156518/projects/kung-fu-master/image1.png)
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/kung-fu-master/kung-fu-master-5.webp')}/>
+  </div>
+</div>
 
 ## Compete with your friends
 

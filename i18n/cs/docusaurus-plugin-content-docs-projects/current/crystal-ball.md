@@ -2,6 +2,8 @@
 slug: crystal-ball
 title: Věštecká koule
 ---
+import Image from '@theme/IdealImage';
+
 ## Úvod
 
 I mladí programátoři chtějí znát svůj osud. Vyvěšti si ho s krabičkou. IoT magie odpoví na všechny otázky, které se ti honí hlavou. 🔮 😱
@@ -17,12 +19,12 @@ Budeš potřebovat **krabičku s tlačítkem a USB dongle**. Vystačíš si tedy
 
 Po nahrání firmware uvidíš, že se Alias tvého přístroje na záložce Devices změnilo na **Future teller**.
 
-![NODE-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1573310716/projects/vestici-koule/image9.png)
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-1.webp')}/> </div> </div>
 
 2. V Playgroundu klikni na **záložku Functions**, kde je programovací plocha.
 3. Na plochu postav node **MQTT** ze sekce Input.
 
-![MQTT](https://res.cloudinary.com/lukasfabik/image/upload/v1573310714/projects/vestici-koule/image3.png)
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-2.webp')}/> </div> </div>
 
 4. Na node dvakrát klikni a nastav v něm klíčovou funkci – věštění. 🔮 **Do pole Topic zkopíruj tenhle řádek**:
 
@@ -31,7 +33,7 @@ Po nahrání firmware uvidíš, že se Alias tvého přístroje na záložce Dev
 node/future-teller:0/future/trigger
 ```
 
-![Topic](https://res.cloudinary.com/lukasfabik/image/upload/v1573310714/projects/vestici-koule/image4.png)
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-3.webp')}/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
@@ -41,7 +43,7 @@ Potvrď tlačítkem **Done**.
 
 Náhodnou volbu naprogramuješ podle jednoduchého javascriptu. Jak se to dělá? Vedle MQTT postav **node Function**, který najdeš ve stejnojmenné sekci.
 
-![node Function](https://res.cloudinary.com/lukasfabik/image/upload/v1573310716/projects/vestici-koule/image11.png)
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-4.webp')}/> </div> </div>
 
 2. Dvojklikem node otevři. Na řádku **Name** node pojmenuj (třeba 8-ball). Do řádku **Function** zkopíruj tenhle kód, přesně jak to vidíš na obrázku.
 
@@ -49,11 +51,11 @@ Náhodnou volbu naprogramuješ podle jednoduchého javascriptu. Jak se to dělá
 ```
 var answers = ["Nejspíš ano", "S tím nepočítej", "Možná", "Určitě ano"]
 var num = Math.floor(Math.random() * Math.floor(answers.length));
-msg.payload = answers\[num];
+msg.payload = answers[num];
 return msg;
 ```
 
-![Name node](https://res.cloudinary.com/lukasfabik/image/upload/v1573310715/projects/vestici-koule/image5.png)
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-5.webp')}/> </div> </div>
 
 Díky tomuhle kódu se vybere **jedna ze čtyř možností**:
 
@@ -68,28 +70,25 @@ Díky tomuhle kódu se vybere **jedna ze čtyř možností**:
 Potvrď tlačítkem **Done**.
 
 3. Vedle Náhody přidej další node, a to **Text** ze sekce Dashboard.
-
-![Text](https://res.cloudinary.com/lukasfabik/image/upload/v1573310715/projects/vestici-koule/image2.png)
-
 4. V něm nastav **Label**, tedy štítek, na Odpověď.
 
-![Label](https://res.cloudinary.com/lukasfabik/image/upload/v1573310715/projects/vestici-koule/image6.png)
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-6.webp')}/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
 5. Přidej na plochu ještě robota, který ti výsledek nahlas přečte. Aby to bylo správně creepy. 🤖 Najdeš ho jako node Audio out taky v sekci Dashboard.
 
-![Dashboard](https://res.cloudinary.com/lukasfabik/image/upload/v1573310715/projects/vestici-koule/image1.png)
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-7.webp')}/> </div> </div>
 
 Uvnitř nodu si nastav hlas, který bude zprávu číst.
 
-![nastavení hlasu](https://res.cloudinary.com/lukasfabik/image/upload/v1573310716/projects/vestici-koule/image10.png)
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-8.webp')}/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
 6. **Nody pospojuj** podle obrázku.
 
-![Deploy](https://res.cloudinary.com/lukasfabik/image/upload/v1573310715/projects/vestici-koule/image8.png)
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-9.webp')}/> </div> </div>
 
 Flow odstartuj tlačítkem **Deploy** vpravo nahoře.
 
@@ -113,6 +112,6 @@ Flow odstartuj tlačítkem **Deploy** vpravo nahoře.
 
 2. **Zatřes krabičkou** a v Playgroundu pod záložkou Dashboard se dozvíš svou odpověď. ️🎱 Nezapomeň si zapnout repráky, protože ji i uslyšíš. Aleluja!
 
-![Dashboard](https://res.cloudinary.com/lukasfabik/image/upload/v1573310715/projects/vestici-koule/image7.png)
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-10.webp')}/> </div> </div>
 
 P. S. Krabička neručí za to, že má pravdu. 🤡
