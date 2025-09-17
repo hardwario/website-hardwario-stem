@@ -37,8 +37,6 @@ Throughout the course, you will go through five lessons that combine theory, pra
 
 The project was carried out in the academic year **2024/2025** with the support of the **Regional Innovation Program of the Liberec Region**. The result is a fully developed IoT teaching methodology, available online and open for further development.
 
----
-
 ## Co-funded by the Liberec Region
 
 <a href="https://www.kraj-lbc.cz" target="_blank" rel="noopener noreferrer">
