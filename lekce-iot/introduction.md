@@ -37,9 +37,8 @@ Throughout the course, you will go through five lessons that combine theory, pra
 
 The project was carried out in the academic year **2024/2025** with the support of the **Regional Innovation Program of the Liberec Region**. The result is a fully developed IoT teaching methodology, available online and open for further development.
 
-<div className="logo-lbc">
-  <h3>Co-funded by the Liberec Region</h3>
-  <a href="https://www.kraj-lbc.cz" target="_blank" rel="noopener noreferrer" className='logo-img'>
-    <img src="/img/liberecky-kraj.svg" alt="LBC Logo" />
-  </a>
-</div>
+## Co-funded by the Liberec Region
+
+<a href="https://www.kraj-lbc.cz" target="_blank" rel="noopener noreferrer">
+<img src="/img/liberecky-kraj.svg" alt="Liberecký kraj" style="width: 500px; margin-top: 50px;">
+</a>
