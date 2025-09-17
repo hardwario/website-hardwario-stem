@@ -4,7 +4,7 @@ title: IoT Lessons with the HARDWARIO TOWER Kit
 ---
 import Image from '@theme/IdealImage';
 
-# IoT Lessons with the HARDWARIO TOWER Kit
+# IoT Lessons with HARDWARIO TOWER
 
 This course was created in cooperation between **HARDWARIO a.s.** and the **Technical University of Liberec** within the framework of the grant support from the Liberec Region. The aim is to provide students and teachers with a practical tool to explore the world of the Internet of Things (IoT) through the **HARDWARIO TOWER electronic kit**.
 
