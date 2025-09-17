@@ -1,6 +1,6 @@
 ---
 slug: /
-title: IoT Lessons with the HARDWARIO TOWER Kit
+title: IoT Lessons with HARDWARIO TOWER
 ---
 import Image from '@theme/IdealImage';
 
