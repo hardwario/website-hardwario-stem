@@ -3,8 +3,6 @@ slug: install-blynk
 title: Install the Blynk application and create an account
 ---
 
-# Lesson 5 – Up to the Net
-
 🧑‍💻 **Duration:** 40 minutes  
 🎯 **Target audience:** individuals or pairs  
 

@@ -3,8 +3,6 @@ slug: install-blynk
 title: Nainstaluj Blynk aplikace, zařiď si účet
 ---
 
-# Lekce 5 – Vzhůru na net
-
 🧑‍💻 **Trvání:** 40 minut  
 🎯 **Cílová skupina:** pro jednotlivce či dvojice  
 

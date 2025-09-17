@@ -2,7 +2,6 @@
 slug: monitor-messages-in-playground
 title: Monitor messages in Playground
 ---
-# Lesson 3 – Show or Not to Show?
 
 🧑‍💻 **Duration:** 30 minutes  
 🎯 **Target audience:** individuals (or groups that don’t argue)  

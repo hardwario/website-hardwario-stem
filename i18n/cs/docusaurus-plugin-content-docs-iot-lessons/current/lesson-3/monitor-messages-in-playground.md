@@ -2,7 +2,6 @@
 slug: monitor-messages-in-playground
 title: Sleduj zprávy v Playground
 ---
-# Lekce 3 – Ukázat či neukázat?
 
 🧑‍💻 **Trvání:** 30 minut
 🎯 **Cílová skupina:** pro jednotlivce (či skupiny, co se nepohádají)

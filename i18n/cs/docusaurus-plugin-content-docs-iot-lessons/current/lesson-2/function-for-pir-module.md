@@ -3,8 +3,6 @@ slug: function-for-pir-module
 title: Napiš funkci pro PIR Module
 ---
 
-# Prostředí HARDWARIO Playground
-
 🧑‍💻 **Trvání:** 30 minut  
 🎯 **Cílová skupina:** pro jednotlivce i malé skupiny  
 

@@ -2,7 +2,6 @@
 slug: connect-the-power-module
 title: Connect the Power Module
 ---
-# Lesson 4 – Lights
 
 🧑‍💻 **Duration:** 40 minutes  
 🎯 **Target audience:** individuals and groups  

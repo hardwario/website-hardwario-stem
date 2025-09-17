@@ -2,7 +2,6 @@
 slug: connect-the-power-module
 title: Připoj Power Module
 ---
-# Lekce 4 – Světla
 
 🧑‍💻 **Trvání:** 40 minut  
 🎯 **Cílová skupina:** pro jednotlivce i skupiny  

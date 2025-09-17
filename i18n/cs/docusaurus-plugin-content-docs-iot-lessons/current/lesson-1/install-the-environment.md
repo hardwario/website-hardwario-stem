@@ -2,7 +2,6 @@
 slug: install-the-environment
 title: Nainstaluj prostředí
 ---
-# Připoj se a měř
 
 🧑‍💻 **Trvání:** 20 minut  
 🎯 **Cílová skupina:** pro jednotlivce  

@@ -2,7 +2,6 @@
 slug: install-the-environment
 title: Install the environment
 ---
-# Connect and Measure
 
 🧑‍💻 **Duration:** 20 minutes  
 🎯 **Target audience:** individuals  

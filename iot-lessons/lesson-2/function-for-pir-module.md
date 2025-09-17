@@ -3,8 +3,6 @@ slug: function-for-pir-module
 title: Write a function for the PIR Module
 ---
 
-# HARDWARIO Playground Environment
-
 🧑‍💻 **Duration:** 30 minutes  
 🎯 **Target audience:** individuals and small groups  
 
