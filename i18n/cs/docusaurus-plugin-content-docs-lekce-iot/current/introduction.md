@@ -37,9 +37,8 @@ Během kurzu projdete pět výukových lekcí, které kombinují teorii, praktic
 
 Projekt byl realizován v akademickém roce 2024/2025 s podporou Regionálního inovačního programu Libereckého kraje. Výsledkem je plně zpracovaná metodika výuky IoT, která je k dispozici online a otevřená dalšímu rozvoji.
 
-<div className="logo-lbc">
-  <h3>Spolufinancováno Libereckým krajem</h3>
-  <a href="https://www.kraj-lbc.cz" target="_blank" rel="noopener noreferrer" className='logo-img'>
-    <img src="/img/liberecky-kraj.svg" alt="LBC Logo" />
-  </a>
-</div>
+## 🎗️ Spolufinancováno Libereckým krajem
+
+<a href="https://www.kraj-lbc.cz" target="_blank" rel="noopener noreferrer">
+<img src="/img/liberecky-kraj.svg" alt="Liberecký kraj" className="liberecky-kraj" />
+</a>
