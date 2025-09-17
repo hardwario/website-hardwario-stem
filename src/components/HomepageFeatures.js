@@ -30,14 +30,14 @@ const FeatureList = [
     ),
   },
   {
-    title: <Translate>Lekce IoT s Hardwariem</Translate>,
-    link: '/lekce-iot/',
+    title: <Translate>IoT Lessons with HARDWARIO TOWER</Translate>,
+    link: '/iot-lessons/',
     src: 'img/lekce-iot.avif',
     width: 'auto',
     height: 200,
     description: (
       <Translate>
-        Pojďte pochopit internet věcí se stavebnicí HARDWARIO. Programování vás naučíme, komunikační protokoly také a pájení není potřeba.
+        Discover the Internet of Things with the HARDWARIO TOWER. We’ll guide you through programming and communication protocols—no soldering required.
       </Translate>
     ),
   }

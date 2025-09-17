@@ -59,10 +59,10 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       ({
-        id: 'lekce-iot',
-        path: 'lekce-iot',
-        routeBasePath: 'lekce-iot',
-        sidebarPath: require.resolve('./sidebars-lekce-iot.js'),
+        id: 'iot-lessons',
+        path: 'iot-lessons',
+        routeBasePath: 'iot-lessons',
+        sidebarPath: require.resolve('./sidebars-iot-lessons.js'),
         editUrl: 'https://github.com/hardwario/stem-website/edit/main',
       }),
     ],
@@ -102,10 +102,10 @@ const config = {
             activeBaseRegex: `/projects/`,
           },
           {
-            to: '/lekce-iot/',
-            label: 'LEKCE IOT',
+            to: '/iot-lessons/',
+            label: 'IOT LESSONS',
             position: 'left',
-            activeBaseRegex: `/lekce-iot/`,
+            activeBaseRegex: `/iot-lessons/`,
           },
           {
             type: 'localeDropdown',

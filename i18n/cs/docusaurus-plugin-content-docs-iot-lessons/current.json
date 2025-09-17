@@ -1,0 +1,28 @@
+{
+    "version.label": {
+      "message": "Next",
+      "description": "The label for version current"
+    },
+
+  "sidebar.docs.category.Lesson 1: Get started": {
+    "message": "Lekce 1: Připrav se",
+    "description": "The label for category Lekce 1: Připrav se"
+  },
+  "sidebar.docs.category.Lesson 2: Measure and draw": {
+    "message": "Lekce 2: Měř a vykresluj",
+    "description": "The label for category Lekce 2: Měř a vykresluj"
+  },
+  "sidebar.docs.category.Lesson 3: To show or not to show?": {
+    "message": "Lekce 3: Ukázat či neukázat?",
+    "description": "The label for category Lekce 3: Ukázat či neukázat?"
+  },
+  "sidebar.docs.category.Lesson 4: Lights!": {
+    "message": "Lekce 4: Světla!",
+    "description": "The label for category Lekce 4: Světla!"
+  },
+  "sidebar.docs.category.Lesson 5: Up to the net": {
+    "message": "Lekce 5: Vzhůru na net",
+    "description": "The label for category Lekce 5: Vzhůru na net"
+  }
+  }
+  

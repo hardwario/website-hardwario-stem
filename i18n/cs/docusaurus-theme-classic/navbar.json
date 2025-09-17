@@ -11,6 +11,10 @@
     "message": "PROJEKTY",
     "description": "Navbar item with label PROJECTS"
   },
+  "item.label.IOT LESSONS": {
+    "message": "LEKCE IOT",
+    "description": "Navbar item with label IOT-LESSONS"
+  },
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
