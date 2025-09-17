@@ -40,5 +40,5 @@ The project was carried out in the academic year **2024/2025** with the support 
 ## 🎗️ Co-funded by the Liberec Region
 
 <a href="https://www.kraj-lbc.cz" target="_blank" rel="noopener noreferrer">
-<img src="/img/liberecky-kraj.svg" alt="Liberecký kraj" style="width: 300px !important; margin-top: 50px !important;" />
+<img src="/img/liberecky-kraj.svg" alt="Liberecký kraj" className="liberecky-kraj" />
 </a>
