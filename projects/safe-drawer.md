@@ -12,7 +12,7 @@ Do you have a diary, poems or a top secret government-issued document in your dr
 
 This project teaches you how to create a **drawer monitor that sends alerts to your mobile phone when some opens your drawer**. 👈
 
-You only need a **box with a button** and a **Radio dongle**. That's why the basic HARDWARIO [**Start Set**](https://shop.hardwario.com/p/start-set/) is perfect.
+You only need a **box with a button** and a **Radio Dongle**. That's why the basic HARDWARIO [**Start Set**](https://shop.hardwario.com/p/start-set/) is perfect.
 
 
 ## Download the firmware
