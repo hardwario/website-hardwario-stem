@@ -1,10 +1,10 @@
 ---
 slug: /
-title: Lekce IoT se stavebnicí HARDWARIO TOWER
+title: Lekce IoT s HARDWARIO TOWER
 ---
 import Image from '@theme/IdealImage';
 
-# Lekce IoT se stavebnicí HARDWARIO TOWER
+# Lekce IoT s HARDWARIO TOWER
 
 Tento kurz vznikl ve spolupráci HARDWARIO a.s. a Technické univerzity v Liberci v rámci dotační podpory Libereckého kraje. Cílem je poskytnout studentům i učitelům praktický nástroj k objevování světa Internetu věcí (IoT) prostřednictvím elektronické stavebnice TOWER.
 
