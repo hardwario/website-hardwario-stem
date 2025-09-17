@@ -15,7 +15,7 @@ You will need the **box with a button** and the **USB dongle**. So you will be f
 
 ## Get it started in Node-RED
 
-1. Put together the Starter set and pair it. For the Core module, you need the **radio push button** firmware. If you don’t know how to download the firmware or what it even is, you can find out more here.
+1. Put together the Starter set and pair it. For the Core Module, you need the **radio push button** firmware. If you don’t know how to download the firmware or what it even is, you can find out more here.
 2. Click on the **Functions tab** in the Playground. You will find there the Node-RED programming desktop. Here you can preset your box so it does anything you want.
 **If you open the programme for the first time:** clear the desktop and delete all the preset nods with the Delete button.
 3. Let's program now. 🤞 Place the light purple cell, or nod, on the Node-RED desktop first. You'll find it on the left side as **MQTT in the Inputs section**.

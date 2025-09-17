@@ -15,7 +15,7 @@ Aby bylo možné s nějakou zprávou pracovat, musí nejprve vůbec přijít. Pr
 Co daný uzel vrací, už víte z předchozí lekce – lze jej například vykreslit do grafu.  Pro lepší pochopení si ale doporučujeme výstup z uzlu **mqtt in** napojit na uzel **debug**.  
 
 - Ve výchozím nastavení se v debug výstupu zobrazí obsah `msg.payload`, tedy samotná hodnota přicházející ze senzoru.  
-- U mého PIR modulu se objevují čísla v rozsahu **1 až 6** podle toho, jak je natočený – a právě s touto hodnotou budeme dále pracovat.
+- U mého **PIR Module** se objevují čísla v rozsahu **1 až 6** podle toho, jak je natočený – a právě s touto hodnotou budeme dále pracovat.
 
 
 ## 4. Switch rozdělí výstup
@@ -55,9 +55,9 @@ Aby bylo možné vytisknout text, použijte v sekci **Dashboard** uzel **Text**.
 ## 7. Z čísla do textu
 
 Funguje to?  
-Po otočení PIR modulu byste měli na dashboardu vidět, jak se text mění z:
+Po otočení **PIR Module** byste měli na dashboardu vidět, jak se text mění z:
 
 - **„Jsem v klidu“** → při orientaci 1–5  
 - **„Bacha spadnu“** → při orientaci 6  
 
-Pokud máte z předchozí lekce také **Gauge**, uvidíte zároveň aktuální otočení PIR modulu.
+Pokud máte z předchozí lekce také **Gauge**, uvidíte zároveň aktuální otočení **PIR mModule**.

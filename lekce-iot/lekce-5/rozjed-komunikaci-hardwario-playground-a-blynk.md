@@ -1,6 +1,6 @@
 ---
 slug: rozjed-komunikaci-hardwario-playground-a-blynk
-title: Start communication between Hardwario Playground and Blynk
+title: Start communication between HARDWARIO Playground and Blynk
 ---
 import Image from '@theme/IdealImage';
 
@@ -60,6 +60,6 @@ import Image from '@theme/IdealImage';
 
 ## 8. Run It
 
-1. In **Hardwario Playground**, click the **Deploy** button.
+1. In **HARDWARIO Playground**, click the **Deploy** button.
 2. Change the illumination on your **Climate** module so you can see in **Messages** that it is sending a new value.
 3. Check your phone to see if there is a new notification about the change in illumination and whether the **Blynk** app shows the current value.

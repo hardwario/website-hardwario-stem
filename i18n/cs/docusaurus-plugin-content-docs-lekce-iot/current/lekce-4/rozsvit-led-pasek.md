@@ -30,8 +30,8 @@ Power Module je výjimečný tím, že **nemá baterie** – je napájený pří
 
 Programování ve flow opět začněte zprávou, která vám něco pošle. Možností je více:
 
-✅ **Button modul** – sledování stisku  
-✅ **PIR modul** – sledování orientace  
+✅ **Button Module** – sledování stisku  
+✅ **PIR Module** – sledování orientace  
 ✅ **Libovolný modul** – všechny mají teplotu (trpělivější varianta 😊)
 
 

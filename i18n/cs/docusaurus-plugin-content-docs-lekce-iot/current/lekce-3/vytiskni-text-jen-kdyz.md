@@ -5,8 +5,9 @@ title: Vytiskni text jen když
 
 ## 8. Hlídač
 
-PIR modul byl zatím použitý jako **gyroskopická kostka**.  
-Nyní jej využijte opravdu jako **PIR senzor**!  
+**PIR Module** byl zatím použitý jako **gyroskopická kostka**.
+
+Nyní jej využijte opravdu jako **detektor pohybu**!  
 
 👉 Naprogramujte jej tak, aby sledoval **přítomnost osoby** a psal na **Dashboard**, jestli někoho vidí, nebo ne.
 

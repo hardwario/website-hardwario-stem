@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 ## 9. Pošlete si všechna data
 
-Podívejte se do **Hardwario Playground** na záložku **Messages**, kde najdete dostupná data ze svých modulů.
+Podívejte se do **HARDWARIO Playground** na záložku **Messages**, kde najdete dostupná data ze svých modulů.
 
 Přidejte nové **Datastreamy** v **Blynk** a všechna data si odešlete do aplikace.  
 Můžete tak sledovat různé veličiny přímo ve svém mobilu.

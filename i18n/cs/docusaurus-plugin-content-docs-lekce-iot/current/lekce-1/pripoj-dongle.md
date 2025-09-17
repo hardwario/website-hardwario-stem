@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 ## 2. Radio dongle
 
-Nyní připojte Radio dongle (USB modul) do volného USB portu vašeho počítače. Hardwario Playground by měl zařízení automaticky rozpoznat a zobrazit jej v seznamu **Devices**. Pokud se dongle neobjeví, ujistěte se, že je správně zasunutý.
+Nyní připojte Radio dongle (USB modul) do volného USB portu vašeho počítače. HARDWARIO Playground by měl zařízení automaticky rozpoznat a zobrazit jej v seznamu **Devices**. Pokud se dongle neobjeví, ujistěte se, že je správně zasunutý.
 
 <div class="container">
   <div class="row">

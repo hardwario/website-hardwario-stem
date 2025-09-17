@@ -17,7 +17,7 @@ You already know from the previous lesson what this node returns — for example
 For better understanding, however, we recommend connecting the output of the **mqtt in** node to a **debug** node.  
 
 - By default, the debug output displays the content of `msg.payload`, i.e., the actual value coming from the sensor.  
-- On my PIR module, numbers in the range **1 to 6** appear depending on its orientation — and this is exactly the value we will work with further.
+- On my **PIR Module**, numbers in the range **1 to 6** appear depending on its orientation — and this is exactly the value we will work with further.
 
 ---
 

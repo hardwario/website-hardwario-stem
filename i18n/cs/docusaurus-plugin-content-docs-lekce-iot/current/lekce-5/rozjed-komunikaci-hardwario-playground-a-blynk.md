@@ -1,6 +1,6 @@
 ---
 slug: rozjed-komunikaci-hardwario-playground-a-blynk
-title: Rozjeď komunikaci Hardwario Playground a Blynk
+title: Rozjeď komunikaci HARDWARIO Playground a Blynk
 ---
 import Image from '@theme/IdealImage';
 
@@ -61,6 +61,6 @@ import Image from '@theme/IdealImage';
 
 ## 8. Spusťte to
 
-1. V **Hardwario Playground** stiskněte tlačítko **Deploy**.
+1. V **HARDWARIO Playground** stiskněte tlačítko **Deploy**.
 2. Změňte osvětlení svého **Climate** modulu, abyste viděli v **Messages**, že posílá novou hodnotu.
 3. Zkontrolujte svůj mobil, zda má novou notifikaci o změně osvětlení a jestli aplikace **Blynk** ukazuje aktuální hodnotu.

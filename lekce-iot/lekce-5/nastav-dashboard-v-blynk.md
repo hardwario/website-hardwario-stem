@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 ## 9. Send All Your Data
 
-Go to the **Messages** tab in **Hardwario Playground**, where you can find the available data from your modules.
+Go to the **Messages** tab in **HARDWARIO Playground**, where you can find the available data from your modules.
 
 Add new **Datastreams** in **Blynk** and send all the data to the application.  
 This way, you can monitor different values directly on your mobile phone.

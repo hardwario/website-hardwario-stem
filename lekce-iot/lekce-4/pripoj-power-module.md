@@ -9,13 +9,13 @@ title: Connect the Power Module
 
 ## 1. Introduction
 
-In **Hardwario Playground**, you already know how to find inputs, process them, and print them to the **Dashboard**.  
+In **HARDWARIO Playground**, you already know how to find inputs, process them, and print them to the **Dashboard**.  
 This gave you the basic skills for working with sensors and data visualization.  
 
 The next lesson will be a game with an **LED strip**, which will bring light to this part of the work and open new possibilities for creative use.
 
 ## 2. What’s Ready
 
-✅ A prepared and paired **Button module** or **PIR module**  
+✅ A prepared and paired **Button Module** or **PIR Module**  
 ✅ Knowledge of working with messages in Playground (the **Change** and **Switch** nodes)  
-✅ **Power module** and **LED strip**  
+✅ **Power Module** and **LED strip**  

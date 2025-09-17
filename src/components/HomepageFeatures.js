@@ -37,7 +37,7 @@ const FeatureList = [
     height: 200,
     description: (
       <Translate>
-        Pojďte pochopit internet věcí se stavebnicí Hardwario. Programování vás naučíme, komunikační protokoly také a pájení není potřeba.
+        Pojďte pochopit internet věcí se stavebnicí HARDWARIO. Programování vás naučíme, komunikační protokoly také a pájení není potřeba.
       </Translate>
     ),
   }

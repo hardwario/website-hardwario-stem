@@ -9,7 +9,7 @@ title: Sleduj zprávy v Playground
 
 ## 1. Úvod
 
-Už umíte připojit moduly **Hardwario Tower** a zobrazit jejich výstupy pomocí grafů a měřidel.  
+Už umíte připojit moduly **HARDWARIO Tower** a zobrazit jejich výstupy pomocí grafů a měřidel.  
 
 V této lekci se ponoříme hlouběji do programování v prostředí **Playground**. Naučíte se:  
 - pracovat se zprávami (**messages**)  
@@ -20,7 +20,7 @@ Díky tomu začnete programovat **chování systému**, nejen sbírat data.
 
 ## 2. Co je připraveno
 
-✅ PIR modul je připojený, napájený a spárovaný.  
+✅ PIR Module je připojený, napájený a spárovaný.  
 ✅ V Playgroundu přicházejí data o orientaci, teplotě a přítomnosti osoby.  
 ✅ Dashboard zobrazuje aktuální hodnoty z modulu.  
 ✅ Víte, jak si hodnoty znovu zobrazit nebo upravit, pokud zmizí.  

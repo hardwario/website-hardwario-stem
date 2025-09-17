@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 ## 4. Ukázkové řešení
 
-Funkce pro zpracování dat z PIR modulu
+Funkce pro zpracování dat z PIR Module
 
 <div class="container">
   <div class="row">
@@ -31,6 +31,6 @@ Výsledný dashboard
 👉 Zkuste připojit také **Climate Module** a sledovat tlak, vlhkost nebo světlo.  
 
 :::info
-V této lekci byl **PIR modul** použit pro orientaci a teplotu.  
+V této lekci byl **PIR Module** použit pro orientaci a teplotu.  
 Jeho detekce pohybu je méně vhodná pro rychlé testování, ale můžete ji vyzkoušet, pokud je v okolí klid.
 :::

@@ -5,7 +5,7 @@ title: Vytiskni grafy s průběhem měření
 
 ## 3. První program
 
-Vytvořte program pro zpracování výstupů z PIR modulu.
+Vytvořte program pro zpracování výstupů z **PIR Module**.
 
 :::info
 
@@ -16,7 +16,7 @@ Pro hlubší pochopení doporučujeme [oficiální příklady](https://docs.hard
 
 **Úkol:** Připravte **přehledový dashboard** s následujícími prvky:
 
-- 🧭 **Měřidlo (gauge)** pro orientaci PIR modulu  
+- 🧭 **Měřidlo (gauge)** pro orientaci **PIR Module**
 - 📈 **Graf orientace v čase**  
 - 🌡️ **Graf teploty v čase**  
 

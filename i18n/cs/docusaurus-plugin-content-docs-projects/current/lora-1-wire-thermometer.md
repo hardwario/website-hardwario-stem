@@ -22,7 +22,7 @@ K přijímání dat můžete použít komunitu The Things Network.
 
 #### Krok 1: Stáhněte si nejnovější verzi [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
 
-#### Krok 2: Připojte Core module k počítači.
+#### Krok 2: Připojte Core Module k počítači.
 
 #### Krok 3: V aplikaci Playground přejděte na kartu **Firmware**, vyberte `bcf-lora-1wire-thermometer` a nahrajte firmware.
 

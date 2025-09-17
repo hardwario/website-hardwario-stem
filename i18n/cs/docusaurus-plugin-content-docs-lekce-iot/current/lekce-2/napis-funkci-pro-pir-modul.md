@@ -1,9 +1,9 @@
 ---
-slug: napis-funkci-pro-pir-modul
-title: Napiš funkci pro PIR modul
+slug: napis-funkci-pro-pir-module
+title: Napiš funkci pro PIR Module
 ---
 
-# Prostředí Hardwario Playground
+# Prostředí HARDWARIO Playground
 
 🧑‍💻 **Trvání:** 30 minut  
 🎯 **Cílová skupina:** pro jednotlivce i malé skupiny  
@@ -12,7 +12,7 @@ title: Napiš funkci pro PIR modul
 
 Playground umožňuje programování přetahováním bloků a okamžitě reaguje na připojené moduly.
 
-## 2. Začínáme s Hardwario Playgroundem
+## 2. Začínáme s HARDWARIO Playgroundem
 
 Ověřte si, že máte z předchozí lekce vše připraveno:
 

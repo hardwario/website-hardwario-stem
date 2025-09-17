@@ -7,13 +7,13 @@ title: Install the environment
 🧑‍💻 **Duration:** 20 minutes  
 🎯 **Target audience:** individuals  
 
-Connect your Hardwario toys, install Hardwario Playground, and start measuring.
+Connect your HARDWARIO toys, install HARDWARIO Playground, and start measuring.
 
 **Task:** Verify that you have Playground installed and that the device is connected via Bluetooth.
 
-## 1. Hardwario Playground
+## 1. HARDWARIO Playground
 
-Hardwario Playground is a universal tool for working with the Hardwario kit, available for Windows, macOS, and Linux. It allows visual programming and real-time monitoring of sensor states. You can find more information in the [official documentation](https://docs.hardwario.com/tower/desktop-programming/about-playground/).
+HARDWARIO Playground is a universal tool for working with the HARDWARIO kit, available for Windows, macOS, and Linux. It allows visual programming and real-time monitoring of sensor states. You can find more information in the [official documentation](https://docs.hardwario.com/tower/desktop-programming/about-playground/).
 
 :::info
 
@@ -21,4 +21,4 @@ You can download Playground from the [Download](https://docs.hardwario.com/tower
 
 :::
 
-After successful installation and launch, the main Playground window will open. In the **Devices** tab you will see a list of connected devices. If everything is set up correctly, your Hardwario device will appear here. At the beginning, however, the list may be empty — in that case, check whether the device is properly connected via USB and whether all the necessary drivers are installed.
+After successful installation and launch, the main Playground window will open. In the **Devices** tab you will see a list of connected devices. If everything is set up correctly, your HARDWARIO device will appear here. At the beginning, however, the list may be empty — in that case, check whether the device is properly connected via USB and whether all the necessary drivers are installed.

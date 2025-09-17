@@ -1,6 +1,6 @@
 ---
 slug: pripoj-power-module
-title: Připoj Power module
+title: Připoj Power Module
 ---
 # Lekce 4 – Světla
 
@@ -9,13 +9,13 @@ title: Připoj Power module
 
 ## 1. Úvod
 
-V **Hardwario Playground** už umíte najít vstupy, přepracovat je a vytisknout je do **Dashboardu**.  
+V **HARDWARIO Playground** už umíte najít vstupy, přepracovat je a vytisknout je do **Dashboardu**.  
 Tím jste získali základní dovednosti pro práci se senzory a vizualizací dat.  
 
 Následující lekce bude hra s **LED páskem**, která přinese do této části práce světlo a nové možnosti kreativního využití.
 
 ## 2. Co je připraveno
 
-✅ Připravený a spárovaný **Button module** nebo **PIR module**  
+✅ Připravený a spárovaný **Button Module** nebo **PIR Module**  
 ✅ Znalost práce se zprávami v Playgroundu (uzly **Change** a **Switch**)  
-✅ **Power module** a **LED pásek**  
+✅ **Power Module** a **LED pásek**  

@@ -10,7 +10,7 @@ title: Nainstaluj Blynk aplikace, zařiď si účet
 
 ## 1. Úvod
 
-Dosud jste si hráli s moduly stavebnice **Hardwario Tower** a seznamovali se s prostředím **Hardwario Playground**.  
+Dosud jste si hráli s moduly stavebnice **HARDWARIO TOWER** a seznamovali se s prostředím **HARDWARIO Playground**.  
 Nyní však nastal čas posunout se dál.  
 
 Ve zkratce **IoT** představuje spojení fyzických zařízení s internetem – a právě ono „I“ jako **internet** zatím ve vašich projektech nehrálo žádnou roli.  

@@ -29,8 +29,8 @@ The Power Module is unique in that it **does not have batteries** – it is powe
 
 Programming in the flow again begins with a message that triggers something. There are several options:
 
-✅ **Button module** – monitoring a button press  
-✅ **PIR module** – monitoring orientation  
+✅ **Button Module** – monitoring a button press  
+✅ **PIR Module** – monitoring orientation  
 ✅ **Any module** – all of them have temperature, which you can change (a more patient option 😊)
 
 ## 6. What to Send to the Power Module

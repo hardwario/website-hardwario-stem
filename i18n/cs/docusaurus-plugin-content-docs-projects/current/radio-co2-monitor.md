@@ -31,22 +31,22 @@ Tento dokument vás provede projektem **Rádiového CO₂ monitoru**. Budete si 
   
 * Jedna z následujících možností:
   
-  * Nainstalovaný **Hardwario Playground** \(doporučeno\)<br></br>
+  * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)<br></br>
     Více informací naleznete v dokumentu [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
-  * **Raspberry Pi** s distribucí **Hardwario Raspbian**<br></br>
+  * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**<br></br>
     Více informací naleznete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
-  * Nainstalovaný **Hardwario Firmware Tool**<br></br>
+  * Nainstalovaný **HARDWARIO Firmware Tool**<br></br>
     Více informací naleznete v dokumentu [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
 
 ## Nahrání firmwaru
 
-V tomto postupu použijeme **Hardwario Playground** k nahrání firmwaru do **Core Modulu**.
+V tomto postupu použijeme **HARDWARIO Playground** k nahrání firmwaru do **Core Module**.
 
 #### Krok 1: Připojte kabel Micro USB k Core Modulu a k počítači
 
-#### Krok 2: Spusťte Hardwario Playground
+#### Krok 2: Spusťte HARDWARIO Playground
 
-Na kartě Firmware vyberte a nahrajte firmware `bcf-radio-co2-monitor` do **Core Modulu**.
+Na kartě Firmware vyberte a nahrajte firmware `bcf-radio-co2-monitor` do **Core Module**.
 
 :::warning
 
@@ -102,7 +102,7 @@ Ujistěte se, že v **Battery Module** nejsou vloženy žádné baterie.
 
 :::danger
 
-Pokud používáte nový **Hardwario Playground**, použijte záložku **Functions** místo [http://localhost:1880/](http://localhost:1880/). Proces párování nyní probíhá v záložce **Devices**. Pro otestování komunikace použijte záložku **Messages**.
+Pokud používáte nový **HARDWARIO Playground**, použijte záložku **Functions** místo [http://localhost:1880/](http://localhost:1880/). Proces párování nyní probíhá v záložce **Devices**. Pro otestování komunikace použijte záložku **Messages**.
 
 :::
 
@@ -155,7 +155,7 @@ V záložce **debug** uvidíte všechny zprávy MQTT.
 
 :::success
 
-V tomto bodě máte funkční **Node-RED**, **MQTT**, **Hardwario Radio Dongle** a **Hardwario Gateway**.
+V tomto bodě máte funkční **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** a **HARDWARIO Gateway**.
 
 :::
 
@@ -221,7 +221,7 @@ Nejprve musíme nakonfigurovat naši aplikaci **Node-RED**.
 
 #### Krok 1: Blynk nodes
 
-Pokud používáte verzi Hardwario pro Raspberry Pi, mělo by být vše připraveno, ale i tak si ověřte, že jsou nainstalované uzly **Blynk**. \(Můžete je vidět v levém postranním panelu v prostředí Node-RED.\) V opačném případě budete muset nainstalovat balíček pro **Node-RED** s názvem `node-red-contrib-blynk-ws`.
+Pokud používáte verzi HARDWARIO pro Raspberry Pi, mělo by být vše připraveno, ale i tak si ověřte, že jsou nainstalované uzly **Blynk**. \(Můžete je vidět v levém postranním panelu v prostředí Node-RED.\) V opačném případě budete muset nainstalovat balíček pro **Node-RED** s názvem `node-red-contrib-blynk-ws`.
 
 <div class="container">
   <div class="row">

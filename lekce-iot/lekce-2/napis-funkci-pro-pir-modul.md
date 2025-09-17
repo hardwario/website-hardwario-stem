@@ -1,9 +1,9 @@
 ---
-slug: napis-funkci-pro-pir-modul
-title: Write a function for the PIR module
+slug: napis-funkci-pro-pir-module
+title: Write a function for the PIR Module
 ---
 
-# Hardwario Playground Environment
+# HARDWARIO Playground Environment
 
 🧑‍💻 **Duration:** 30 minutes  
 🎯 **Target audience:** individuals and small groups  
@@ -12,7 +12,7 @@ title: Write a function for the PIR module
 
 Playground allows programming by dragging and dropping blocks and responds immediately to connected modules.
 
-## 2. Getting Started with Hardwario Playground
+## 2. Getting Started with HARDWARIO Playground
 
 Make sure you have everything ready from the previous lesson:
 

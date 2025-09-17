@@ -5,7 +5,7 @@ title: Print graphs with the measurement progress
 
 ## 3. First Program
 
-Create a program to process the outputs from the PIR module.
+Create a program to process the outputs from the **PIR Module**.
 
 :::info
 
@@ -16,7 +16,7 @@ For a deeper understanding, we recommend the [official examples](https://docs.ha
 
 **Task:** Prepare an **overview dashboard** with the following elements:
 
-- 🧭 **Gauge** for PIR module orientation  
+- 🧭 **Gauge** for PIR Module orientation  
 - 📈 **Graph of orientation over time**  
 - 🌡️ **Graph of temperature over time**  
 

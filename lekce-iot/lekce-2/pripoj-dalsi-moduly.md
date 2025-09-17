@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 ## 4. Example Solution
 
-Function for processing data from the PIR module
+Function for processing data from the **PIR Module**
 
 <div class="container">
   <div class="row">
@@ -31,6 +31,6 @@ Resulting dashboard
 👉 Try also connecting the **Climate Module** and monitor pressure, humidity, or light.  
 
 :::info
-In this lesson, the **PIR module** was used for orientation and temperature.  
+In this lesson, the **PIR Module** was used for orientation and temperature.  
 Its motion detection is less suitable for quick testing, but you can try it if the surroundings are calm.
 :::

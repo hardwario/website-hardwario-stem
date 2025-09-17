@@ -177,7 +177,7 @@ Cílem tohoto **Push Button Projektu** je ukázat základy v několika jednoduch
 
 * Podívejte se na dalš HARDWARIO [**projekty**](projects-overview.md).
 * Prohlédněte si [**přehled modulů**](https://docs.hardwario.com/chester/extension-modules/chester-z1/#module-overview).
-* Naučte se pracovat s [**MQTT**](https://docs.hardwario.com/fiber/mqtt-broker/) a [**Hardwario MQTT topics**](https://docs.hardwario.com/fiber/mqtt-broker/) pro ovládání LED a relé.
+* Naučte se pracovat s [**MQTT**](https://docs.hardwario.com/fiber/mqtt-broker/) a [**HARDWARIO MQTT topics**](https://docs.hardwario.com/fiber/mqtt-broker/) pro ovládání LED a relé.
 * Vyzkoušejte další [**integrace**](https://docs.hardwario.com/tower/category/platform-integrations/) s **Grafana**, **Blynk**, **IFTTT**, **Ubidots** a dalšími.
 * Použijte svůj [**Raspberry PI**](https://docs.hardwario.com/tower/server-raspberry-pi/) nebo jiný jednodeskový počítač \(SBC\) jako server.
 * [**Nahrajte jiný firmware**](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware) nebo si **napište vlastní firmware** pro **Core Module**.

@@ -10,7 +10,7 @@ title: Install the Blynk application and create an account
 
 ## 1. Introduction
 
-So far, you have been experimenting with **Hardwario Tower** modules and getting familiar with the **Hardwario Playground** environment.  
+So far, you have been experimenting with **HARDWARIO TOWER** modules and getting familiar with the **HARDWARIO Playground** environment.  
 Now, however, it’s time to move forward.  
 
 In short, **IoT** represents the connection of physical devices with the internet – and so far, the “I” for **internet** has not played any role in your projects.  
