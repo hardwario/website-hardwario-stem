@@ -1,15 +1,44 @@
 ---
 slug: /
-title: IoT lesson with HARDWARIO
+title: IoT Lessons with the HARDWARIO TOWER Kit
 ---
 import Image from '@theme/IdealImage';
 
-# IoT Lessons with HARDWARIO
+# IoT Lessons with the HARDWARIO TOWER Kit
 
-Come and understand the Internet of Things with the Hardwario kit. We will teach you programming, communication protocols as well — and no soldering is required.
+This course was created in cooperation between **HARDWARIO a.s.** and the **Technical University of Liberec** within the framework of the grant support from the Liberec Region. The aim is to provide students and teachers with a practical tool to explore the world of the Internet of Things (IoT) through the **HARDWARIO TOWER electronic kit**.
+
+The course is designed to guide participants from the connection of the very first module to the creation of their own IoT applications.
+
+## 📚 What to Expect
+
+Throughout the course, you will go through five lessons that combine theory, practical demonstrations, and hands-on experiments:
+
+* Getting Started with TOWER – environment installation, firmware upload, sensor connection.  
+* Measuring and Visualizing Data – working with temperature, humidity, light, and other sensors.  
+* Conditional Reactions – logic nodes, input responses, automation.  
+* Controlling Outputs – LED strips, color effects, and interactive elements.  
+* IoT Integration with Blynk – creating a dashboard for remote control and monitoring.  
+
+## 🚀 Course Benefits
+
+* Practical **STEM education** combining electronics, programming, and digital skills.  
+* Development of critical and logical thinking, teamwork, and creativity.  
+* Ready-to-use teaching materials and guides for educators, making it easy to integrate IoT into lessons.  
+* Inspiration for students to pursue technical careers and engage in the regional innovation ecosystem.  
+
+## 👩‍🏫 Who Is This Course For
+
+* High school and university students who want to dive into the world of modern technologies.  
+* Teachers and educators looking for practical teaching materials for classes in digital technologies, informatics, or physics.  
+* Enthusiasts of IoT and smart technologies who want to gain hands-on experience.  
+
+## 🛠 Project Implementation
+
+The project was carried out in the academic year **2024/2025** with the support of the **Regional Innovation Program of the Liberec Region**. The result is a fully developed IoT teaching methodology, available online and open for further development.
 
 <div className="logo-lbc">
-  <h3>Co-financed by the Liberec Region</h3>
+  <h3>Co-funded by the Liberec Region</h3>
   <a href="https://www.kraj-lbc.cz" target="_blank" rel="noopener noreferrer" className='logo-img'>
     <img src="/img/liberecky-kraj.svg" alt="LBC Logo" />
   </a>
