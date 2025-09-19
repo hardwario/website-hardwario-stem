@@ -1,91 +1,91 @@
 ---
 slug: lesson-6
-title: Lekce 6 – Závěr a teorie
+title: Lesson 6 – Wrap-up and Theory
 ---
 
-**Trvání:** 45 minut
-**Cílová skupina:** pro jednotlivce i dvojice / třídu
+**Duration:** 45 minutes  
+**Target group:** individuals, pairs, or class  
 
-**Úkol:** Shrňte, co jste se naučili, pochopte teorii **Node-RED** a **MQTT**, vytvořte malý projekt, který vše spojí.
+**Task:** Summarize what you have learned, understand the theory of **Node-RED** and **MQTT**, and create a small project that ties everything together.
 
-## 1. Shrnutí, co jsme zvládli
+## 1. Summary of what we have achieved
 
-V předchozích lekcích jste:
+In the previous lessons, you:
 
-- připravili **HARDWARIO TOWER**, párovali moduly, nainstalovali firmware,
-- měřili různé veličiny (teplotu, orientaci, pohyb),
-- vytvářeli jste grafy a dashboardy ve Playgroundu,
-- filtrovali zprávy, používali jste podmínky,
-- ovládali LED pásek a další výstupy,
-- poslali data do cloudu / mobilní aplikace a nastavili notifikace.
+- prepared the **HARDWARIO TOWER**, paired modules, installed firmware,  
+- measured various values (temperature, orientation, motion),  
+- created graphs and dashboards in Playground,  
+- filtered messages, used conditions,  
+- controlled the LED strip and other outputs,  
+- sent data to the cloud / mobile app and set up notifications.  
 
-> Účelem této lekce je propojit všechny tyto znalosti, pochopit, jak to funguje „pod pokličkou“, a vyzkoušet si to v jednom celistvém projektu.
+> The purpose of this lesson is to connect all this knowledge, understand how it works “under the hood,” and try it out in one complete project.
 
-## 2. Co je Node-RED
+## 2. What is Node-RED
 
-Node-RED je vizuální prostředí pro „tokové“ programování, často v oblasti IoT.
+Node-RED is a visual environment for “flow-based” programming, often used in IoT.
 
-- Skládá se z **uzlů** (nodes), které vstupují, zpracovávají zprávy a vystupují.
-- Uzly se spojují do **toků** (flows).
-- Zpráva (message) má většinou dvě důležité části:
-  - `topic` – téma, kategorie/kanál zprávy
-  - `payload` – obsah zprávy, např. číslo, text, **JSON** objekt
-- Uzly jako **Switch**, **Change**, **Function**, **Debug** umožňují zprávu měnit, filtrovat, reagovat.
-- Playground využívá **Node-RED** pro vizuální skládání toků, testování a interakci se zařízeními.
+- It consists of **nodes** that receive, process, and send messages.  
+- Nodes are connected into **flows**.  
+- A message usually has two important parts:  
+  - `topic` – subject, category/channel of the message  
+  - `payload` – the content of the message, e.g., a number, text, or a **JSON** object  
+- Nodes such as **Switch**, **Change**, **Function**, **Debug** allow you to modify, filter, or react to messages.  
+- Playground uses **Node-RED** for visually building flows, testing, and interacting with devices.  
 
-## 3. Co je MQTT
+## 3. What is MQTT
 
-**MQTT** je protokol pro zasílání zpráv, obzvláště vhodný pro IoT.
+**MQTT** is a messaging protocol, particularly suitable for IoT.
 
-- Princip *publish / subscribe*: zařízení (publisher) odesílá zprávy na dané téma (topic), a jiná zařízení (subscribers) se k tématu přihlásí a přijímají zprávy.
-- Rozdíl oproti přímému posílání: publisher neví, kdo zprávu přijme; subscriber neví, kdo ji odeslal.
-- **Broker** je server, který všechny zprávy zprostředkovává.
-- Důležité vlastnosti:
-  - hierarchie topiců (např. `home/pokoj1/teplota`)
-  - možné úrovně QoS (Quality of Service) – např. „doručeno alespoň jednou“, „doručeno přesně jednou“
-  - retenční zprávy (retained messages) – poslední zpráva může být uložena a noví odběratelé ji dostanou hned při přihlášení
-- Bezpečnost: ověřování, šifrování komunikace, pečlivé spravování klíčů / tokenů.
+- Principle *publish / subscribe*: a device (publisher) sends messages on a certain topic, and other devices (subscribers) subscribe to that topic and receive messages.  
+- Difference compared to direct sending: the publisher does not know who will receive the message; the subscriber does not know who sent it.  
+- A **broker** is the server that mediates all messages.  
+- Important features:  
+  - topic hierarchy (e.g., `home/room1/temperature`)  
+  - possible QoS levels (Quality of Service) – e.g., “delivered at least once,” “delivered exactly once”  
+  - retained messages – the last message can be stored and new subscribers will receive it immediately upon subscribing  
+- Security: authentication, encrypted communication, careful management of keys / tokens.  
 
-## 4. Jak vše do sebe zapadá – architektura
+## 4. How everything fits together – architecture
 
-Níže je zjednodušené schéma, jak tok zprávy ve vašich projektech funguje:
+Here is a simplified diagram of how the message flow works in your projects:
 
-- Modul senzor měří, odešle data do **HARDWARIO Playground**.
-- Aplikace **HARDWARIO Playground** rádiem přijatou zprávu z **Radio Dongle** publikuje přes **MQTT** protokol.
-- **Node-RED** zprávu z **MQTT** zpracuje: může filtrovat, reagovat, či opět předat dál přes **MQTT**.
-- Broker distribuuje zprávy těm, kdo o ně mají zájem – aplikacím, výstupním modulům, dashboardům.
-- Výstupy reagují – LED, upozornění aj.
+- The sensor module measures and sends data to **HARDWARIO Playground**.  
+- The **HARDWARIO Playground** application takes the message received by the **Radio Dongle** and publishes it via the **MQTT** protocol.  
+- **Node-RED** processes the message from **MQTT**: it can filter, react, or forward it again through **MQTT**.  
+- The broker distributes the messages to those interested – applications, output modules, dashboards.  
+- Outputs react – LEDs, notifications, etc.  
 
-## 5. Závěrečný projekt
+## 5. Final project
 
-Vyzkoušejte si následující projekt:
+Try the following project:
 
-**Úloha:**
+**Task:**
 
-1. Použijte senzor (např. teplotu) a modul detekce pohybu / orientace.
-2. Když teplota překročí nastavenou mez *a* je přítomen pohyb / změna orientace, pak:
+1. Use a sensor (e.g., temperature) and a motion/orientation detection module.  
+2. When the temperature exceeds the set threshold *and* motion/orientation change is detected, then:  
 
-   - rozsvítí se LED pásek na červeno,
-   - v **HARDWARIO Playground** se zobrazí zpráva,
-   - přijde notifikace do mobilní aplikace (např. aplikace **Blynk**).
+   - the LED strip lights up red,  
+   - a message is displayed in **HARDWARIO Playground**,  
+   - a notification is sent to the mobile app (e.g., the **Blynk** app).  
 
-3. Zobrazujte dashboard s aktuální teplotou, stavem pohybu/orientace a stavem LED pásku.
-4. Nakreslete tok zpráv: topic(y), payloady, uzly v **Node-RED**, kdo co publikuje / subscribuje.
+3. Show a dashboard with the current temperature, motion/orientation status, and LED strip status.  
+4. Draw the message flow: topic(s), payloads, nodes in **Node-RED**, who publishes / subscribes.  
 
-## 6. Dobré zásady a na co si dát pozor
+## 6. Good practices and what to watch out for
 
-- Pečlivě pojmenovávejte topic(y) – přehlednost se hodí.
-- Neposílejte data zbytečně často – šetříte síť a zdroje zařízení.
-- Zabezpečení: hesla / tokeny / klíče nesdílejte. Používejte silné.
-- Sledujte, co se děje při výpadku nebo chybě – co když senzor nepřijde, **MQTT broker** je nedostupný.
+- Name topics carefully – clarity helps.  
+- Don’t send data unnecessarily often – it saves the network and device resources.  
+- Security: never share passwords / tokens / keys. Always use strong ones.  
+- Monitor what happens in case of outages or errors – what if the sensor doesn’t send, or the **MQTT broker** is unavailable?  
 
-## 7. Reflexe a sdílení
+## 7. Reflection and sharing
 
-- Co bylo pro vás nejtěžší? Co naopak nejjednodušší?
-- Která část by vás zajímala do hloubky více (např. fungování **MQTT**, bezpečnost, databáze...)?
-- Sdílejte svůj projekt nebo tok zpráv s ostatními – vysvětlete, jak jste to udělali.
+- What was the hardest part for you? What was the easiest?  
+- Which part would you like to explore in more depth (e.g., how **MQTT** works, security, databases…)?  
+- Share your project or message flow with others – explain how you built it.  
 
-## Shrnutí ✅
+## Summary ✅
 
-Gratulujeme! Dokončili jste celý kurz, znáte **HARDWARIO TOWER** nejen prakticky, ale i na úrovni teorie.
-Teď už máte základy pro tvoření vlastních IoT projektů – a můžete je dál rozšiřovat podle vlastních nápadů.
+Congratulations! You have completed the entire course. You now know **HARDWARIO TOWER** not only practically, but also on a theoretical level.  
+You already have the basics to build your own IoT projects – and you can continue expanding them with your own ideas.  
