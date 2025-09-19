@@ -23,6 +23,10 @@
   "sidebar.docs.category.Lesson 5: Up to the net": {
     "message": "Lekce 5: Vzhůru na net",
     "description": "The label for category Lekce 5: Vzhůru na net"
-  }
-  }
+  },
+  "sidebar.docs.category.Lesson 6: Up to the net": {
+    "message": "Lekce 6: Závěr a teorie",
+    "description": "The label for category Lekce 6: Závěr a teorie"
+  }  
+}
   
