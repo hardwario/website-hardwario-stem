@@ -3,6 +3,10 @@
     "message": "HARDWARIO Logo",
     "description": "The alt text of navbar logo"
   },
+  "item.label.IOT-LESSONS": {
+    "message": "MINI COURSE",
+    "description": "Navbar item with label IOT-LESSONS"
+  },
   "item.label.STEM": {
     "message": "STEM",
     "description": "Navbar item with label STEM"
@@ -10,10 +14,6 @@
   "item.label.PROJECTS": {
     "message": "PROJECTS",
     "description": "Navbar item with label PROJECTS"
-  },
-  "item.label.IOT-LESSONS": {
-    "message": "IOT LESSONS",
-    "description": "Navbar item with label IOT-LESSONS"
   },
   "item.label.GitHub": {
     "message": "GitHub",

@@ -6,6 +6,18 @@ import Translate from '@docusaurus/Translate';
 
 const FeatureList = [
   {
+    title: <Translate>TOWER Mini Course</Translate>,
+    link: '/mini-course/',
+    src: 'img/lekce-iot.avif',
+    width: 'auto',
+    height: 200,
+    description: (
+      <Translate>
+        Discover the Internet of Things with the HARDWARIO TOWER. We’ll guide you through programming and communication protocols—no soldering required.
+      </Translate>
+    ),
+  },
+  {
     title: <Translate>STEM Learning Platform</Translate>,
     link: '/stem/',
     src: 'img/STEM-hero.jpg',
@@ -26,18 +38,6 @@ const FeatureList = [
     description: (
       <Translate>
         Explore a collection of projects and tutorials based on HARDWARIO TOWER, designed to inspire and educate.
-      </Translate>
-    ),
-  },
-  {
-    title: <Translate>IoT Lessons with HARDWARIO TOWER</Translate>,
-    link: '/iot-lessons/',
-    src: 'img/lekce-iot.avif',
-    width: 'auto',
-    height: 200,
-    description: (
-      <Translate>
-        Discover the Internet of Things with the HARDWARIO TOWER. We’ll guide you through programming and communication protocols—no soldering required.
       </Translate>
     ),
   }

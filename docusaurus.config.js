@@ -59,10 +59,10 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       ({
-        id: 'iot-lessons',
-        path: 'iot-lessons',
-        routeBasePath: 'iot-lessons',
-        sidebarPath: require.resolve('./sidebars-iot-lessons.js'),
+        id: 'mini-course',
+        path: 'mini-course',
+        routeBasePath: 'mini-course',
+        sidebarPath: require.resolve('./sidebars-mini-course.js'),
         editUrl: 'https://github.com/hardwario/stem-website/edit/main',
       }),
     ],
@@ -90,6 +90,12 @@ const config = {
         },
         items: [
           {
+            to: '/mini-course/',
+            label: 'MINI COURSE',
+            position: 'left',
+            activeBaseRegex: `/mini-course/`,
+          },
+          {
             to: '/stem/',
             label: 'STEM',
             position: 'left',
@@ -100,12 +106,6 @@ const config = {
             label: 'PROJECTS',
             position: 'left',
             activeBaseRegex: `/projects/`,
-          },
-          {
-            to: '/iot-lessons/',
-            label: 'IOT LESSONS',
-            position: 'left',
-            activeBaseRegex: `/iot-lessons/`,
           },
           {
             type: 'localeDropdown',
