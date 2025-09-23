@@ -1,6 +1,6 @@
 ---
 slug: lesson-6
-title: Lesson 6 – Wrap-up and Theory
+title: Lesson 6 - Wrap-up and Theory
 ---
 
 **Duration:** 45 minutes  

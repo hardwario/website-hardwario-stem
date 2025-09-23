@@ -1,6 +1,6 @@
 ---
 slug: lesson-6
-title: Lekce 6 – Závěr a teorie
+title: Lekce 6 - Závěr a teorie
 ---
 
 **Trvání:** 45 minut
