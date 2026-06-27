@@ -36,7 +36,7 @@ const config = {
           routeBasePath: 'stem',
           path: 'stem',
           sidebarPath: require.resolve('./sidebars-stem.js'),
-          editUrl: 'https://github.com/hardwario/stem-website/edit/main',
+          editUrl: 'https://github.com/hardwario/website-hardwario-stem/edit/main',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -53,7 +53,7 @@ const config = {
         path: 'projects',
         routeBasePath: 'projects',
         sidebarPath: require.resolve('./sidebars-projects.js'),
-        editUrl: 'https://github.com/hardwario/stem-website/edit/main',
+        editUrl: 'https://github.com/hardwario/website-hardwario-stem/edit/main',
       }),
     ],
     [
@@ -63,7 +63,7 @@ const config = {
         path: 'mini-course',
         routeBasePath: 'mini-course',
         sidebarPath: require.resolve('./sidebars-mini-course.js'),
-        editUrl: 'https://github.com/hardwario/stem-website/edit/main',
+        editUrl: 'https://github.com/hardwario/website-hardwario-stem/edit/main',
       }),
     ],
     [
@@ -112,7 +112,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/hardwario/stem-website',
+            href: 'https://github.com/hardwario/website-hardwario-stem',
             label: 'GitHub',
             position: 'right',
           },

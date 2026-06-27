@@ -1,50 +1,63 @@
-# stem-website
-# HARDWARIO STEM and Projects website
+# HARDWARIO STEM
 
-This website is built using [Docusaurus 3](https://docusaurus.io), a modern static website generator.
+The HARDWARIO STEM and projects site — [stem.hardwario.com](https://stem.hardwario.com).
+Built with [Docusaurus 3](https://docusaurus.io), with several doc instances
+(STEM, projects, mini-course) and i18n.
 
-## Requirements
+## Tech stack
 
-* Node.js version 18+.
+- **Docusaurus 3** — React + MDX static site generator
+- **Multi-instance docs** — `stem`, `projects`, `mini-course`
+- **i18n** — localized content under `i18n/`
+- **Netlify** — hosting
 
-## Installation
+## Develop
 
-Clone the repository:
-
-```
-$ git clone git@github.com:hardwario/stem-website.git
-```
-
-Install the required packages:
-
-```
-$ npm install
-```
-
-## Development
-
-Start the development server:
-
-```
-$ npm start
+```bash
+npm install        # first time / after dependency changes (Node 18+)
+npm start          # dev server → http://localhost:3000, hot reload
+npm run build      # production build → build/ (fails on broken links)
+npm run serve      # serve the production build locally
+npm run clear      # clear the Docusaurus cache
 ```
 
-> This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-Start the production build:
+## Project structure
 
 ```
-$ npm run build
+docusaurus.config.js     # site config: plugin instances, navbar, footer, i18n, theme
+sidebars-stem.js         # sidebars per instance
+sidebars-projects.js
+sidebars-mini-course.js
+stem/                    # STEM content        (served at /stem/)
+projects/                # projects content    (served at /projects/)
+mini-course/             # mini-course content (served at /mini-course/)
+i18n/                    # localized strings + translated content
+src/                     # custom pages + CSS
+static/                  # assets; reference images by absolute path (/img/…)
+netlify.toml             # Netlify build config
 ```
 
-> This command generates static content into the `build` directory and can be served using any static contents hosting service.
+See the `docusaurus-sites` skill in the website-admin repo for shared Docusaurus
+guidance.
 
-## License
+## Content
 
-This project is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0) - see the [LICENSE](LICENSE) file for details.
+- Docs are **Markdown/MDX** inside the relevant instance directory (`stem/`,
+  `projects/`, `mini-course/`) — preserve frontmatter.
+- Add new pages to the matching `sidebars-<instance>.js`.
+- Internal links are relative within an instance; **broken internal links fail the
+  build** (`onBrokenLinks: 'throw'`).
+- Images live in `static/`, referenced as `/img/…`.
+- Localized content/strings live under `i18n/`.
+
+## Deployment
+
+Hosted on **Netlify** — **pushing to `main` auto-deploys** (Netlify runs the
+build and publishes `build/`). After a push, confirm the live URL returns 200.
+`editUrl` in `docusaurus.config.js` points "Edit this page" links at this repo.
 
 ---
 
-Made with ❤️ by [**HARDWARIO a.s.**](https://www.hardwario.com) in the heart of Europe.
+Part of the [HARDWARIO websites](https://github.com/hardwario/website-admin) —
+managed from the **website-admin** control repo (shared Claude Code commands,
+skills, and environment). Content licensed under [CC BY-SA 4.0](LICENSE).
