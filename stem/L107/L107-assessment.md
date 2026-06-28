@@ -1,5 +1,5 @@
 ---
-slug: iot-light-monitor-asessment
+slug: iot-light-monitor-assessment
 title: Assessment
 ---
 import Image from '@theme/IdealImage';

@@ -69,7 +69,7 @@ Confirm the settings by pressing the **Add** and **Done** buttons.
 
 3. **Connect the node and Blynk with the yellow node where you have set the message**. Now you have programmed the device so that pressing the button on the box ➡️ turns into a message ➡️ that goes all the way to your parents’ mobile. **👾**
 
-![Connect nodes in HARDWARIO Playground](https://res.cloudinary.com/lukasfabik/image/upload/v15661553976projects/im-ok-button/image5.png)
+![Connect nodes in HARDWARIO Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566155397/projects/im-ok-button/image5.png)
 
 ❗ Start and confirm the entire flow with the red **Deploy** button on the top right. 🚨
 

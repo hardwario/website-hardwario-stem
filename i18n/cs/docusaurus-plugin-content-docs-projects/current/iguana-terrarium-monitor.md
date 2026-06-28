@@ -17,7 +17,7 @@ Pokud máš Start Set, budeš k němu potřebovat ještě [Climate Module](https
 
 ## Připrav si krabičku
 
-1. Clime Set sestav a spáruj: jestli to děláš poprvé, [připravili jsme k tomu jednoduchou příručku](/cs/handbook/) – postup je stejný jako u Start Setu. Na Core Module potřebuješ firmware **radio climate monitor**. Pokud nevíš, jak si firmware stáhnout nebo co to je, <a href="https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware" target="_blank">zjistíš to tady</a>.
+1. Clime Set sestav a spáruj: jestli to děláš poprvé, [připravili jsme k tomu jednoduchou příručku](https://hardwario.academy/) – postup je stejný jako u Start Setu. Na Core Module potřebuješ firmware **radio climate monitor**. Pokud nevíš, jak si firmware stáhnout nebo co to je, <a href="https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware" target="_blank">zjistíš to tady</a>.
 2. Změny teploty, světla, vlhkosti a tlaku vzduchu uvidíš v Playgroundu v záložce **Messages**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-1.webp')}/> </div> </div>

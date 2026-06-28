@@ -10,7 +10,7 @@ Troufáš si? Sestav jeden projekt, ve kterém zprovozníš dva typy své oblíb
 
 S tímhle projektem se naučíš **ukládat nejvyšší naměřenou hodnotu a nastavit několik typů soutěže v jednom projektu a přepínat mezi nimi**.
 
-Základní verzi tohohle projektu najdeš tady: [IoT párty hra: máš v sobě dračí oheň, nebo mrazivý dech?](/i18n/cs/docusaurus-plugin-content-docs-projects/current/dragons-fire.md)
+Základní verzi tohohle projektu najdeš tady: [IoT párty hra: máš v sobě dračí oheň, nebo mrazivý dech?](/cs/projects/dragons-fire/)
 
 I tentokrát ti postačí základní HARDWARIO sada, tedy [**Start Set**](https://obchod.hardwario.cz/p/start-set/).
 

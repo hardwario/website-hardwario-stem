@@ -8,7 +8,7 @@ const FeatureList = [
   {
     title: <Translate>TOWER Mini Course</Translate>,
     link: '/mini-course/',
-    src: 'img/lekce-iot.avif',
+    src: '/img/lekce-iot.avif',
     width: 'auto',
     height: 200,
     description: (
@@ -20,7 +20,7 @@ const FeatureList = [
   {
     title: <Translate>STEM Learning Platform</Translate>,
     link: '/stem/',
-    src: 'img/STEM-hero.jpg',
+    src: '/img/STEM-hero.jpg',
     width: 'auto',
       height: 200,
         description: (
@@ -32,7 +32,7 @@ const FeatureList = [
   {
     title: <Translate>Projects and Tutorials</Translate>,
     link: '/projects/',
-    src: 'img/push-the-button_button-garage.webp',
+    src: '/img/push-the-button_button-garage.webp',
     width: 'auto',
     height: 200,
     description: (

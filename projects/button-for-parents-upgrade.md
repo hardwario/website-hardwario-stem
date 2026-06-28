@@ -11,7 +11,7 @@ Do you already have a basic version of the button that enables your mom to call 
 
 Under this project, you will learn how to **set up a different message for different times of day**, send a special notification **by holding the button** and program a simple **response** option. 👌
 
-The basic version of this project can be found here: [Create an IoT button that enables your mom to call you for dinner](/projects/button-for-parents.md).
+The basic version of this project can be found here: [Create an IoT button that enables your mom to call you for dinner](/projects/button-for-parents/).
 
 You will need the **box with button** and a **USB Dongle**. The basic HARDWARIO [**Start set**](https://shop.hardwario.com/p/start-set/) is sufficient for this.
 

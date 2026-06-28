@@ -1,0 +1,45 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+# --- 301 redirects for slugs corrected in this commit ---------------------
+# The "asessment" typo (and stray "-cs" suffix on some EN slugs) was fixed.
+# Preserve any inbound links / search results pointing at the old URLs.
+
+# EN STEM assessment slugs
+[[redirects]]
+  from = "/stem/iot-vibration-monitor-asessment-cs"
+  to = "/stem/iot-vibration-monitor-assessment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stem/iot-light-monitor-asessment"
+  to = "/stem/iot-light-monitor-assessment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stem/iot-pulse-monitor-asessment-cs"
+  to = "/stem/iot-pulse-monitor-assessment"
+  status = 301
+  force = true
+
+# CS STEM assessment slugs
+[[redirects]]
+  from = "/cs/stem/iot-vibration-monitor-asessment-cs"
+  to = "/cs/stem/iot-vibration-monitor-assessment-cs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cs/stem/iot-light-monitor-asessment-cs"
+  to = "/cs/stem/iot-light-monitor-assessment-cs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cs/stem/iot-pulse-monitor-asessment-cs"
+  to = "/cs/stem/iot-pulse-monitor-assessment-cs"
+  status = 301
+  force = true

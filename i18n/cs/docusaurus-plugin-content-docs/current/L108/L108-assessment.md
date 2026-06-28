@@ -1,5 +1,5 @@
 ---
-slug: iot-pulse-monitor-asessment-cs
+slug: iot-pulse-monitor-assessment-cs
 title: Hodnocení
 ---
 import Image from '@theme/IdealImage';

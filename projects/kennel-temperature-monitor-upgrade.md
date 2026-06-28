@@ -10,7 +10,7 @@ Do you already have a basic version of the kennel temperature detector? Build an
 
 Under this project, you will learn how to set the box to **send you a message when the temperature exceeds a preset value**. 👌 The box won’t start barking, but it´s still a great project. 🐩
 
-The basic version of this project can be found here: [Temperature monitor for your hairy watchman: check the temperature in your dog's kennel](/projects/kennel-temperature-monitor.md).
+The basic version of this project can be found here: [Temperature monitor for your hairy watchman: check the temperature in your dog's kennel](/projects/kennel-temperature-monitor/).
 
 All you need is the basic HARDWARIO [**Start Set**](https://shop.hardwario.com/p/start-set/).
 

@@ -15,7 +15,7 @@ Budeš potřebovat **krabičku s tlačítkem a USB dongle**. Vystačíš si tedy
 
 ## Rozjeď to v Node-RED
 
-1. Start Set[ sestav a spáruj](/cs/handbook/). Na Core Module potřebuješ firmware **radio-8-ball**. 
+1. Start Set[ sestav a spáruj](https://hardwario.academy/). Na Core Module potřebuješ firmware **radio-8-ball**. 
 
 Po nahrání firmware uvidíš, že se Alias tvého přístroje na záložce Devices změnilo na **Future teller**.
 

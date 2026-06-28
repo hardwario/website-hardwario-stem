@@ -10,7 +10,7 @@ Základní verzi detektoru teploty do psí boudy už máš? Postav si ještě o 
 
 S tímhle projektem se naučíš nastavit krabičku tak, aby ti **poslala zprávu, když teplota překročí přednastavenou hodnotu**. 👌 Štěkat krabička sice nezačne, ale i tak je to super projekt. 🐩
 
-Základní verzi tohohle projektu najdeš tady: [Hlídač teploty pro chlupatého hlídače: kontroluj teplotu v boudě svého psa](/i18n/cs/docusaurus-plugin-content-docs-projects/current/kennel-temperature-monitor.md).
+Základní verzi tohohle projektu najdeš tady: [Hlídač teploty pro chlupatého hlídače: kontroluj teplotu v boudě svého psa](/cs/projects/kennel-temperature-monitor/).
 
 Tentokrát ti taky postačí základní HARDWARIO sada, tedy [**Start Set**](https://www.hardwario.store/p/start-set).
 
@@ -49,7 +49,7 @@ Drž si cylindr, jedeme dál. 🎩
 
 ## Nastav si Blynk
 
-1. Nejdřív si vem do ruky mobil a otevři si [Blynk. Nevíš, co to je nebo jak se to používá? Checkni náš návod](/cs/academy/jak-pripojit-blynk/).
+1. Nejdřív si vem do ruky mobil a otevři si [Blynk. Nevíš, co to je nebo jak se to používá? Checkni náš návod](https://hardwario.academy/how-to-connect-blynk/).
 
 2. V Blynku nahoď všechno potřebné. Na plochu nového projektu nastav nejdřív **Notification**.
 

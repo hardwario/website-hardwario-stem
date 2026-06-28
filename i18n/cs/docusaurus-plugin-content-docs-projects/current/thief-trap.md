@@ -34,7 +34,7 @@ Pokud máš Starter Set, budeš k němu potřebovat ještě [**PIR Module**](htt
 
 ## Rozjeď appku na mobilu
 
-1. **Pokračuj na svém mobilu**. Krabička se propojí se smartphonem díky **appce Blynk**. 📱 [Zjisti, jak na Blynk](/cs/academy/jak-pripojit-blynk/).
+1. **Pokračuj na svém mobilu**. Krabička se propojí se smartphonem díky **appce Blynk**. 📱 [Zjisti, jak na Blynk](https://hardwario.academy/how-to-connect-blynk/).
 2. Z nabídky zvol **Styled button** (vyšperkované tlačítko). 🚨 Tlačítko se ti umístí na plochu projektu a bude sloužit k vypínání a zapínání detektoru pohybu.
 
 ![spuštění aplikace](https://res.cloudinary.com/lukasfabik/image/upload/v1573157119/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image22.png)

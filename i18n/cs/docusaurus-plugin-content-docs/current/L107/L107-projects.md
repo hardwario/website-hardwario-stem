@@ -1,5 +1,5 @@
 ---
-slug: iot-vibration-monitor-projects-cs
+slug: iot-light-monitor-projects
 title: Projekty
 ---
 import Image from '@theme/IdealImage';

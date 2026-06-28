@@ -36,7 +36,7 @@ If you already have the Start Set, you will only need the [**PIR Module**](https
 
 ## Start the app on your mobile
 
-1. **Continue on your mobile.**. The box connects to your smartphone thanks to the **Blynk app**. 📱 [Find out how Blynk works.](/academy/how-to-connect-blynk/)
+1. **Continue on your mobile.**. The box connects to your smartphone thanks to the **Blynk app**. 📱 [Find out how Blynk works.](https://hardwario.academy/how-to-connect-blynk/)
 
 2. Select the embellished **Styled button** from the menu. 🚨 The button is placed on the project desktop and switches the motion  on and off.
 

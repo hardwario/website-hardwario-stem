@@ -10,7 +10,7 @@ Do you dare? Create two of your favorite competitions by building just one proje
 
 Under this project, you will learn how to **save the highest measured value and determine different competitions in one project and switch between them**.
 
-The basic version of this project can be found here: [IoT party game: Do you have a dragon´s fire or freezing breath in you?](/projects/dragons-fire.md)
+The basic version of this project can be found here: [IoT party game: Do you have a dragon´s fire or freezing breath in you?](/projects/dragons-fire/)
 
 All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set).
 

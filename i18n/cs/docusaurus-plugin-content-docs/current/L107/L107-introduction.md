@@ -1,5 +1,5 @@
 ---
-slug: iot-vibration-monitor-introduction-cs
+slug: iot-light-monitor-introduction
 title: Úvod
 ---
 import Image from '@theme/IdealImage';
