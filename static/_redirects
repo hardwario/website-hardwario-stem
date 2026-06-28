@@ -1,0 +1,12 @@
+# Cloudflare Pages redirects (migrated from netlify.toml).
+# STEM slug-fix redirects (EN + CS).
+/stem/L106/iot-vibration-monitor-asessment-cs        /stem/L106/iot-vibration-monitor-assessment        301
+/stem/L107/iot-light-monitor-asessment               /stem/L107/iot-light-monitor-assessment            301
+/stem/L108/iot-pulse-monitor-asessment-cs            /stem/L108/iot-pulse-monitor-assessment            301
+/cs/stem/L106/iot-vibration-monitor-asessment-cs     /cs/stem/L106/iot-vibration-monitor-assessment-cs  301
+/cs/stem/L107/iot-light-monitor-asessment-cs         /cs/stem/L107/iot-light-monitor-assessment-cs      301
+/cs/stem/L108/iot-pulse-monitor-asessment-cs         /cs/stem/L108/iot-pulse-monitor-assessment-cs      301
+/stem/L107/iot-vibration-monitor-projects-cs         /stem/L107/iot-light-monitor-projects              301
+/cs/stem/L107/iot-vibration-monitor-introduction-cs  /cs/stem/L107/iot-light-monitor-introduction       301
+/cs/stem/L107/iot-vibration-monitor-experiment-cs    /cs/stem/L107/iot-light-monitor-experiment         301
+/cs/stem/L107/iot-vibration-monitor-projects-cs      /cs/stem/L107/iot-light-monitor-projects           301
