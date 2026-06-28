@@ -2,6 +2,9 @@
   command = "npm run build"
   publish = "build"
 
+[build.environment]
+  NODE_VERSION = "22.17.0"
+
 # --- 301 redirects for slugs corrected in this commit ---------------------
 # Docusaurus `slug:` without a leading slash is FOLDER-relative, so STEM
 # lesson routes carry the /L1xx/ folder segment. The redirects below preserve
