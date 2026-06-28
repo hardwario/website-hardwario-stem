@@ -3,43 +3,71 @@
   publish = "build"
 
 # --- 301 redirects for slugs corrected in this commit ---------------------
-# The "asessment" typo (and stray "-cs" suffix on some EN slugs) was fixed.
-# Preserve any inbound links / search results pointing at the old URLs.
+# Docusaurus `slug:` without a leading slash is FOLDER-relative, so STEM
+# lesson routes carry the /L1xx/ folder segment. The redirects below preserve
+# inbound links / search results pointing at the pre-fix URLs.
 
+# --- "asessment" -> "assessment" typo fix (and stray "-cs" drop on EN) -----
 # EN STEM assessment slugs
 [[redirects]]
-  from = "/stem/iot-vibration-monitor-asessment-cs"
-  to = "/stem/iot-vibration-monitor-assessment"
+  from = "/stem/L106/iot-vibration-monitor-asessment-cs"
+  to = "/stem/L106/iot-vibration-monitor-assessment"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/stem/iot-light-monitor-asessment"
-  to = "/stem/iot-light-monitor-assessment"
+  from = "/stem/L107/iot-light-monitor-asessment"
+  to = "/stem/L107/iot-light-monitor-assessment"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/stem/iot-pulse-monitor-asessment-cs"
-  to = "/stem/iot-pulse-monitor-assessment"
+  from = "/stem/L108/iot-pulse-monitor-asessment-cs"
+  to = "/stem/L108/iot-pulse-monitor-assessment"
   status = 301
   force = true
 
 # CS STEM assessment slugs
 [[redirects]]
-  from = "/cs/stem/iot-vibration-monitor-asessment-cs"
-  to = "/cs/stem/iot-vibration-monitor-assessment-cs"
+  from = "/cs/stem/L106/iot-vibration-monitor-asessment-cs"
+  to = "/cs/stem/L106/iot-vibration-monitor-assessment-cs"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/cs/stem/iot-light-monitor-asessment-cs"
-  to = "/cs/stem/iot-light-monitor-assessment-cs"
+  from = "/cs/stem/L107/iot-light-monitor-asessment-cs"
+  to = "/cs/stem/L107/iot-light-monitor-assessment-cs"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/cs/stem/iot-pulse-monitor-asessment-cs"
-  to = "/cs/stem/iot-pulse-monitor-assessment-cs"
+  from = "/cs/stem/L108/iot-pulse-monitor-asessment-cs"
+  to = "/cs/stem/L108/iot-pulse-monitor-assessment-cs"
+  status = 301
+  force = true
+
+# --- L107 slug collision fix (was copied from L106) -----------------------
+# L107 previously reused L106's iot-vibration-monitor-* slugs; now retargeted.
+[[redirects]]
+  from = "/stem/L107/iot-vibration-monitor-projects-cs"
+  to = "/stem/L107/iot-light-monitor-projects"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cs/stem/L107/iot-vibration-monitor-introduction-cs"
+  to = "/cs/stem/L107/iot-light-monitor-introduction"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cs/stem/L107/iot-vibration-monitor-experiment-cs"
+  to = "/cs/stem/L107/iot-light-monitor-experiment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cs/stem/L107/iot-vibration-monitor-projects-cs"
+  to = "/cs/stem/L107/iot-light-monitor-projects"
   status = 301
   force = true
