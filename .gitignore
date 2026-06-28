@@ -26,3 +26,7 @@ yarn-error.log*
 
 # IDE
 .idea
+
+.dev.vars*
+!.dev.vars.example
+!.env.example
