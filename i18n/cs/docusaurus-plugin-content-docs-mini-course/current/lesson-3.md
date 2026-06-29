@@ -68,7 +68,7 @@ Aby bylo možné vytisknout text, použijte v sekci **Dashboard** uzel **Text**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-function_text.webp')}/>
+    <Image img={require('./img/iot-function-text.webp')}/>
   </div>
 </div>
 

@@ -37,7 +37,7 @@ The Power Module is unique in that it **does not have batteries** – it is powe
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-LED.webp')}/>
+    <Image img={require('./img/iot-led.webp')}/>
   </div>
 </div>
 
@@ -66,7 +66,7 @@ Therefore, use a **Change** node, where you reassign `msg.payload` to a color va
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-function_LED1.webp')}/>
+    <Image img={require('./img/iot-function-led1.webp')}/>
   </div>
 </div>
 
@@ -80,7 +80,7 @@ For code that can change the LED strip color based on PIR sensor orientation:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-function_LED2.webp')}/>
+    <Image img={require('./img/iot-function-led2.webp')}/>
   </div>
 </div>
 

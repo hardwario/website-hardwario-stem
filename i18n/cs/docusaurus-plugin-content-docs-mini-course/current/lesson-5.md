@@ -50,7 +50,7 @@ Ve zkratce **IoT** představuje spojení fyzických zařízení s internetem –
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-function_blynk1.webp')}/>
+    <Image img={require('./img/iot-function-blynk1.webp')}/>
   </div>
 </div>
 
@@ -95,13 +95,13 @@ Nezapomeňte na webové stránce **Blynk** při práci kliknout na tlačítko **
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-function_blynk2.webp')}/>
+    <Image img={require('./img/iot-function-blynk2.webp')}/>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-mobil_blynk.webp')}/>
+    <Image img={require('./img/iot-mobil-blynk.webp')}/>
   </div>
 </div>
 

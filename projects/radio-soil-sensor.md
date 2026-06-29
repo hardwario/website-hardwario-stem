@@ -10,7 +10,7 @@ This document will guide you through the **Radio Soil Sensor** project. You will
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_project-image.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-project-image.webp')}/>
   </div>
 </div>
 
@@ -32,7 +32,7 @@ This document will guide you through the **Radio Soil Sensor** project. You will
 
 <div class="container">
   <div class="row">
-    <Image  img={require('./img/radio-soil-sensor/radio_soil_sensor.png')}
+    <Image  img={require('./img/radio-soil-sensor/radio-soil-sensor.png')}
           style={{ backgroundColor: "#fff" }}/>
   </div>
 </div>
@@ -124,7 +124,7 @@ Make sure, that after pressing the **Start node pairing** button in the right **
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -136,7 +136,7 @@ In the **Node-RED** debug tab, there is a message about name and firmware versio
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_node-red-gw-pair-paired-mqtt-message.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-paired-mqtt-message.webp')}/>
   </div>
 </div>
 
@@ -144,7 +144,7 @@ In the **Node-RED** debug tab, there is a message about name and firmware versio
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -168,7 +168,7 @@ You should then see similar messages:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_radio-test.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-radio-test.webp')}/>
   </div>
 </div><br></br>
 
@@ -255,7 +255,7 @@ Now you can see temperature and battery voltage on the bottom. We need to add a 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_grafana-duplicate.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-duplicate.webp')}/>
   </div>
 </div><br></br>
 
@@ -263,7 +263,7 @@ Now click on **Edit** in the **duplicated** graph.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_grafana-edit.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-edit.webp')}/>
   </div>
 </div><br></br>
 
@@ -271,7 +271,7 @@ Now in **Metrics** tab change the **FROM** item from value **temperature** to **
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_grafana-from-moisture.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-from-moisture.webp')}/>
   </div>
 </div>
 
@@ -281,7 +281,7 @@ Now click on the **Save** button in the **Grafana** so all your configuration st
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_grafana-save.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-save.webp')}/>
   </div>
 </div>
 

@@ -20,7 +20,7 @@ All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/
 1. Put the Starter Kit together and pair it. On the Core Module you will need the familiar **bcf-radio-push-button** firmware again.
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_playground-devices-connected.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connected.webp')}/>
   </div>
 </div>
 

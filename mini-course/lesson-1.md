@@ -47,7 +47,7 @@ In the right-hand menu under the **Devices** section, click the **Connect** butt
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-PIRmodule.webp')}/>
+    <Image img={require('./img/iot-pirmodule.webp')}/>
   </div>
 </div>
 
@@ -58,7 +58,7 @@ Before inserting the batteries, go to **HARDWARIO Playground** and click the **S
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-PIRmodule_open.webp')}/>
+    <Image img={require('./img/iot-pirmodule-open.webp')}/>
   </div>
 </div>
 <br></br>

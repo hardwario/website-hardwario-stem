@@ -12,7 +12,7 @@ Tento dokument vás provede projektem **Monitor klimatu**. Budete moci vidět da
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_block-diagram.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-block-diagram.webp')}/>
   </div>
 </div>
 
@@ -109,7 +109,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-controls.webp')}/>
   </div>
 </div><br></br>
 
@@ -125,7 +125,7 @@ Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádia. Tyto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-debug.webp')}/>
   </div>
 </div><br></br>
 
@@ -140,7 +140,7 @@ Na kartě **debug** budete moci vidět všechny MQTT zprávy.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-list.webp')}/>
   </div>
 </div><br></br>
 
@@ -160,7 +160,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -172,7 +172,7 @@ Vložte baterie do **Sady Clime**, aby se odeslal žádost o párování \(měli
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -196,7 +196,7 @@ Měli byste pak vidět podobné zprávy:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_radio-test.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-radio-test.webp')}/>
   </div>
 </div><br></br>
 
@@ -228,7 +228,7 @@ Pokud používáte verzi HARDWARIO raspi, mělo by to být v pořádku, ale pře
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-co2-monitor_integration-nodered-1.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-co2-monitor-integration-nodered-1.webp')}/>
   </div>
 </div>
 
@@ -244,7 +244,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_nodered-screen-1.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-nodered-screen-1.webp')}/>
   </div>
 </div>
 
@@ -260,7 +260,7 @@ Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_nodered-screen-2.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-nodered-screen-2.webp')}/>
   </div>
 </div>
 
@@ -270,7 +270,7 @@ Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_blynk-3.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk-3.webp')}/>
   </div>
 </div>
 
@@ -278,7 +278,7 @@ Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_blynk-copy.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk.webp')}/>
   </div>
 </div>
 
@@ -286,7 +286,7 @@ Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_blynk-qr.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk-qr.webp')}/>
   </div>
 </div>
 
@@ -294,7 +294,7 @@ Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_blynk-10.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk-10.webp')}/>
   </div>
 </div>
 
@@ -304,7 +304,7 @@ Klikněte na ozubené kolečko a měli byste vidět nastavení pro váš projekt
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor_blynk-auth.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk-auth.webp')}/>
   </div>
 </div>
 

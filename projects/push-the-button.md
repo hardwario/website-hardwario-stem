@@ -13,7 +13,7 @@ In this tutorial you create a simple project with a button, that sends you push 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_button-garage.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-button-garage.webp')}/>
   </div>
 </div>
 
@@ -29,7 +29,7 @@ Put all three modules together to build the **Push Button Kit**. Note the orient
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_mini-battery-module-orientation.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-mini-battery-module-orientation.webp')}/>
   </div>
 </div>
 
@@ -58,7 +58,7 @@ In this step you run the **Playground** application that manages Radio Dongle, P
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_connect-usb-dongle.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-connect-usb-dongle.webp')}/>
   </div>
 </div>
 
@@ -72,7 +72,7 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_playground-devices-connect.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connect.webp')}/>
   </div>
 </div>
 
@@ -80,7 +80,7 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_playground-devices-connected.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connected.webp')}/>
   </div>
 </div>
 
@@ -88,7 +88,7 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_node-red-flow.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-node-red-flow.webp')}/>
   </div>
 </div>
 
@@ -110,7 +110,7 @@ Now download the **Blynk** app from [**App Store**](https://apps.apple.com/us/ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_blynk-copy.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-blynk.webp')}/>
   </div>
 </div>
 
@@ -118,7 +118,7 @@ Now download the **Blynk** app from [**App Store**](https://apps.apple.com/us/ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_blynk-qr-code-push-button-kit.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-blynk-qr-code-push-button-kit.webp')}/>
   </div>
 </div>
 
@@ -128,7 +128,7 @@ Click on the **Settings icon**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_blynk-config.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-blynk-config.webp')}/>
   </div>
 </div>
 
@@ -136,7 +136,7 @@ Click on the **Settings icon**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_blynk-token.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-blynk-token.webp')}/>
   </div>
 </div>
 
@@ -144,7 +144,7 @@ Click on the **Settings icon**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_blynk-play.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-blynk-play.webp')}/>
   </div>
 </div>
 
@@ -160,7 +160,7 @@ The final step is to connect Node-RED and Blynk together, so you can get the not
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_node-red-token.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-node-red-token.webp')}/>
   </div>
 </div>
 
@@ -170,7 +170,7 @@ The time has come to **PUSH THE BUTTON**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_push-the-button.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-push-the-button.webp')}/>
   </div>
 </div>
 

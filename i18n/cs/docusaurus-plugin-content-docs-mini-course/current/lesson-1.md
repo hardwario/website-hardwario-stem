@@ -48,7 +48,7 @@ V menu vpravo v sekci **Devices** klikněte na tlačítko **Connect**, čímž s
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-PIRmodule.webp')}/>
+    <Image img={require('./img/iot-pirmodule.webp')}/>
   </div>
 </div>
 
@@ -59,7 +59,7 @@ Předtím, než vložíte baterie, přejděte do **HARDWARIO Playground** a klik
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-PIRmodule_open.webp')}/>
+    <Image img={require('./img/iot-pirmodule-open.webp')}/>
   </div>
 </div>
 <br></br>

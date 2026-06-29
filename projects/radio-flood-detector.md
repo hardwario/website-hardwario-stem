@@ -12,7 +12,7 @@ This document will guide you through the **Radio Flood Detector** project. You w
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/_projects_radio-flood-detector_block-diagram.webp')}/>
+    <Image img={require('./img/radio-flood-detector/projects-radio-flood-detector-block-diagram.webp')}/>
   </div>
 </div>
 
@@ -103,7 +103,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-controls.webp')}/>
   </div>
 </div>
 
@@ -119,7 +119,7 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-debug.webp')}/>
   </div>
 </div>
 
@@ -133,7 +133,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-list.webp')}/>
   </div>
 </div>
 
@@ -153,7 +153,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -163,7 +163,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-pair-stop.webp')}/>
   </div>
 </div>
 
@@ -185,7 +185,7 @@ You should then see similar messages:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_radio-test.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-radio-test.webp')}/>
   </div>
 </div>
 
@@ -213,7 +213,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-01.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-01.webp')}/>
   </div>
 </div>
 
@@ -221,7 +221,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-02.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-02.webp')}/>
   </div>
 </div>
 
@@ -229,7 +229,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-03.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-03.webp')}/>
   </div>
 </div>
 
@@ -237,7 +237,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-04.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-04.webp')}/>
   </div>
 </div>
 
@@ -245,7 +245,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-05.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-05.webp')}/>
   </div>
 </div>
 
@@ -253,7 +253,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-06.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-06.webp')}/>
   </div>
 </div>
 
@@ -261,7 +261,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-07.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-07.webp')}/>
   </div>
 </div>
 
@@ -269,7 +269,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-08.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-08.webp')}/>
   </div>
 </div>
 
@@ -277,7 +277,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-09.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-09.webp')}/>
   </div>
 </div>
 
@@ -285,7 +285,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-10.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-10.webp')}/>
   </div>
 </div>
 
@@ -293,7 +293,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-11.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-11.webp')}/>
   </div>
 </div>
 
@@ -301,7 +301,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-12.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-12.webp')}/>
   </div>
 </div>
 
@@ -309,7 +309,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-13.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-13.webp')}/>
   </div>
 </div>
 
@@ -317,7 +317,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-14.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-14.webp')}/>
   </div>
 </div>
 
@@ -325,7 +325,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-15.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-15.webp')}/>
   </div>
 </div>
 
@@ -333,7 +333,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-16.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-16.webp')}/>
   </div>
 </div>
 
@@ -343,7 +343,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-17.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-17.webp')}/>
   </div>
 </div>
 
@@ -353,7 +353,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_ifttt-18.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-18.webp')}/>
   </div>
 </div>
 
@@ -379,7 +379,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_node-red-ifttt-snippet.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-ifttt-snippet.webp')}/>
   </div>
 </div>
 
@@ -393,7 +393,7 @@ This snippet creates a connection between the MQTT topic `node/flood-detector:0/
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector_node-red-ifttt-key.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-ifttt-key.webp')}/>
   </div>
 </div>
 

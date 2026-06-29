@@ -10,7 +10,7 @@ This document will guide you through the **Radio VOC sensor** project. You will 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_project-image.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-project-image.webp')}/>
   </div>
 </div>
 
@@ -18,7 +18,7 @@ This document will guide you through the **Radio VOC sensor** project. You will 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_block-diagram.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-block-diagram.webp')}/>
   </div>
 </div>
 
@@ -78,7 +78,7 @@ Here is the minimal assembly for VOC sensor.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_voc-minimal.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-minimal.webp')}/>
   </div>
 </div>
 
@@ -100,7 +100,7 @@ The firmware also supports [**LCD Module**](https://www.hardwario.store/p/lcd-mo
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_voc-full.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-full.webp')}/>
   </div>
 </div>
 
@@ -146,7 +146,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-controls.webp')}/>
   </div>
 </div><br></br>
 
@@ -162,7 +162,7 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-debug.webp')}/>
   </div>
 </div><br></br>
 
@@ -176,7 +176,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-list.webp')}/>
   </div>
 </div><br></br>
 
@@ -196,7 +196,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -206,7 +206,7 @@ Insert the batteries into the **Radio VOC sensor** to send the pairing request (
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_voc-sensor-paired.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-sensor-paired.webp')}/>
   </div>
 </div>
 
@@ -214,7 +214,7 @@ Insert the batteries into the **Radio VOC sensor** to send the pairing request (
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -238,7 +238,7 @@ You should then see similar messages:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_voc-messages.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-messages.webp')}/>
   </div>
 </div><br></br>
 
@@ -272,7 +272,7 @@ You can insert the following snippet in the flow (using **Menu >> Import**) inst
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-dashboard-deploy.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-dashboard-deploy.webp')}/>
   </div>
 </div>
 
@@ -282,7 +282,7 @@ You will see this dashboard with values from the Radio VOC sensor.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-dashboard.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-dashboard.webp')}/>
   </div>
 </div><br></br>
 

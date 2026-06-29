@@ -12,7 +12,7 @@ Tento dokument vás provede projektem **Rádiového detektoru pohybu**. Budete m
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_block-diagram.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-block-diagram.webp')}/>
   </div>
 </div>
 
@@ -108,7 +108,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-controls.webp')}/>
   </div>
 </div><br></br>
 
@@ -124,7 +124,7 @@ Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádio. Tyto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-debug.webp')}/>
   </div>
 </div><br></br>
 
@@ -138,7 +138,7 @@ V záložce **debug** budete moci vidět všechny MQTT zprávy.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-list.webp')}/>
   </div>
 </div><br></br>
 
@@ -156,7 +156,7 @@ V této části vytvoříme rádiové spojení mezi **Radio Dongle** a **detekto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -166,7 +166,7 @@ V této části vytvoříme rádiové spojení mezi **Radio Dongle** a **detekto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -188,7 +188,7 @@ Poté byste měli vidět podobné zprávy:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_radio-test.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-radio-test.webp')}/>
   </div>
 </div><br></br>
 
@@ -216,7 +216,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-01.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-01.webp')}/>
   </div>
 </div>
 
@@ -224,7 +224,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-02.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-02.webp')}/>
   </div>
 </div>
 
@@ -232,7 +232,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-03.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-03.webp')}/>
   </div>
 </div>
 
@@ -240,7 +240,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-04.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-04.webp')}/>
   </div>
 </div>
 
@@ -248,7 +248,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-05.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-05.webp')}/>
   </div>
 </div>
 
@@ -256,7 +256,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-06.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-06.webp')}/>
   </div>
 </div>
 
@@ -264,7 +264,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-07.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-07.webp')}/>
   </div>
 </div>
 
@@ -272,7 +272,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-08.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-08.webp')}/>
   </div>
 </div>
 
@@ -280,7 +280,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-09.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-09.webp')}/>
   </div>
 </div>
 
@@ -288,7 +288,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-10.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-10.webp')}/>
   </div>
 </div>
 
@@ -296,7 +296,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-11.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-11.webp')}/>
   </div>
 </div>
 
@@ -304,7 +304,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-12.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-12.webp')}/>
   </div>
 </div>
 
@@ -312,7 +312,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-13.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-13.webp')}/>
   </div>
 </div>
 
@@ -320,7 +320,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-14.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-14.webp')}/>
   </div>
 </div>
 
@@ -328,7 +328,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-15.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-15.webp')}/>
   </div>
 </div>
 
@@ -336,7 +336,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-16.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-16.webp')}/>
   </div>
 </div>
 
@@ -348,7 +348,7 @@ Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-17.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-17.webp')}/>
   </div>
 </div>
 
@@ -358,7 +358,7 @@ Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-18.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-18.webp')}/>
   </div>
 </div><br></br>
 
@@ -384,7 +384,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-ifttt-snippet.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-ifttt-snippet.webp')}/>
   </div>
 </div><br></br>
 
@@ -398,7 +398,7 @@ Tento úryvek vytváří propojení mezi MQTT tématem `node/motion-detector:0/p
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-ifttt-url.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-ifttt-url.webp')}/>
   </div>
 </div>
 

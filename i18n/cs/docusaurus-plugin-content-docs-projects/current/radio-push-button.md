@@ -12,7 +12,7 @@ Tento dokument vás provede projektem **Bezdrátového tlačítka**. Budete moci
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_block-diagram.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-block-diagram.webp')}/>
   </div>
 </div>
 
@@ -97,7 +97,7 @@ Pokud používáte nový **HARDWARIO Playground**, použijte záložku **Functio
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-controls.webp')}/>
   </div>
 </div><br></br>
 
@@ -113,7 +113,7 @@ Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádio. Tyto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-debug.webp')}/>
   </div>
 </div><br></br>
 
@@ -127,7 +127,7 @@ V záložce **debug** budete moci vidět všechny MQTT zprávy.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-list.webp')}/>
   </div>
 </div><br></br>
 
@@ -147,7 +147,7 @@ Postupujte podle následujících kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -159,7 +159,7 @@ Vložte baterie do **Radio Push Button**, čímž odešlete požadavek na spáro
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -179,7 +179,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_radio-test.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-radio-test.webp')}/>
   </div>
 </div><br></br>
 
@@ -207,7 +207,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-01.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-01.webp')}/>
   </div>
 </div>
 
@@ -215,7 +215,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-02.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-02.webp')}/>
   </div>
 </div>
 
@@ -223,7 +223,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-03.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-03.webp')}/>
   </div>
 </div>
 
@@ -231,7 +231,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-04.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-04.webp')}/>
   </div>
 </div>
 
@@ -239,7 +239,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-05.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-05.webp')}/>
   </div>
 </div>
 
@@ -247,7 +247,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-06.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-06.webp')}/>
   </div>
 </div>
 
@@ -255,7 +255,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-07.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-07.webp')}/>
   </div>
 </div>
 
@@ -263,7 +263,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-08.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-08.webp')}/>
   </div>
 </div>
 
@@ -271,7 +271,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-09.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-09.webp')}/>
   </div>
 </div>
 
@@ -279,7 +279,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-10.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-10.webp')}/>
   </div>
 </div>
 
@@ -287,7 +287,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-11.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-11.webp')}/>
   </div>
 </div>
 
@@ -295,7 +295,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-12.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-12.webp')}/>
   </div>
 </div>
 
@@ -303,7 +303,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-13.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-13.webp')}/>
   </div>
 </div>
 
@@ -311,7 +311,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-14.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-14.webp')}/>
   </div>
 </div>
 
@@ -319,7 +319,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-15.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-15.webp')}/>
   </div>
 </div>
 
@@ -327,7 +327,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-16.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-16.webp')}/>
   </div>
 </div>
 
@@ -339,7 +339,7 @@ Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-17.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-17.webp')}/>
   </div>
 </div>
 
@@ -349,7 +349,7 @@ Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-18.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-18.webp')}/>
   </div>
 </div><br></br>
 
@@ -375,7 +375,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-ifttt-snippet.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-snippet.webp')}/>
   </div>
 </div><br></br>
 
@@ -389,7 +389,7 @@ Tento úryvek vytváří spojení mezi MQTT tématem `node/push-button:0/push-bu
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-ifttt-url.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-url.webp')}/>
   </div>
 </div>
 

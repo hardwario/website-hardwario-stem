@@ -12,7 +12,7 @@ This document will guide you through the **Radio Push Button** project. You will
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_block-diagram.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-block-diagram.webp')}/>
   </div>
 </div>
 
@@ -98,7 +98,7 @@ If you are using the new **HARDWARIO Playground**, then use the **Functions** ta
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-controls.webp')}/>
   </div>
 </div><br></br>
 
@@ -114,7 +114,7 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-debug.webp')}/>
   </div>
 </div><br></br>
 
@@ -128,7 +128,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-list.webp')}/>
   </div>
 </div><br></br>
 
@@ -148,7 +148,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -160,7 +160,7 @@ Insert the batteries into the **Radio Push Button** to send the pairing request 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -180,7 +180,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_radio-test.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-radio-test.webp')}/>
   </div>
 </div><br></br>
 
@@ -208,7 +208,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-01.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-01.webp')}/>
   </div>
 </div>
 
@@ -216,7 +216,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-02.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-02.webp')}/>
   </div>
 </div>
 
@@ -224,7 +224,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-03.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-03.webp')}/>
   </div>
 </div>
 
@@ -232,7 +232,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-04.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-04.webp')}/>
   </div>
 </div>
 
@@ -240,7 +240,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-05.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-05.webp')}/>
   </div>
 </div>
 
@@ -248,7 +248,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-06.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-06.webp')}/>
   </div>
 </div>
 
@@ -256,7 +256,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-07.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-07.webp')}/>
   </div>
 </div>
 
@@ -264,7 +264,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-08.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-08.webp')}/>
   </div>
 </div>
 
@@ -272,7 +272,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-09.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-09.webp')}/>
   </div>
 </div>
 
@@ -280,7 +280,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-10.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-10.webp')}/>
   </div>
 </div>
 
@@ -288,7 +288,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-11.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-11.webp')}/>
   </div>
 </div>
 
@@ -296,7 +296,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-12.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-12.webp')}/>
   </div>
 </div>
 
@@ -304,7 +304,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-13.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-13.webp')}/>
   </div>
 </div>
 
@@ -312,7 +312,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-14.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-14.webp')}/>
   </div>
 </div>
 
@@ -320,7 +320,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-15.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-15.webp')}/>
   </div>
 </div>
 
@@ -328,7 +328,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-16.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-16.webp')}/>
   </div>
 </div>
 
@@ -340,7 +340,7 @@ Install the **IFTTT** app on your smart phone and sign in using the same account
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-17.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-17.webp')}/>
   </div>
 </div>
 
@@ -350,7 +350,7 @@ Install the **IFTTT** app on your smart phone and sign in using the same account
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_ifttt-18.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-18.webp')}/>
   </div>
 </div><br></br>
 
@@ -376,7 +376,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-ifttt-snippet.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-snippet.webp')}/>
   </div>
 </div><br></br>
 
@@ -390,7 +390,7 @@ This snippet creates a connection between the MQTT topic `node/push-button:0/pus
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button_node-red-ifttt-url.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-url.webp')}/>
   </div>
 </div>
 

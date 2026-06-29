@@ -12,7 +12,7 @@ Tento dokument vás provede projektem **Rádiového CO₂ monitoru**. Budete si 
 
 <div class="container">
   <div class="row">
-    <Image  img={require('./img/radio-co2-monitor/radio_co2_monitor.png')}
+    <Image  img={require('./img/radio-co2-monitor/radio-co2-monitor.png')}
           style={{ backgroundColor: "#fff" }}/>
   </div>
 </div>
@@ -123,7 +123,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-controls.webp')}/>
   </div>
 </div><br></br>
 
@@ -135,7 +135,7 @@ Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádio. Tyto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-debug.webp')}/>
   </div>
 </div><br></br>
 
@@ -149,7 +149,7 @@ V záložce **debug** uvidíte všechny zprávy MQTT.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-list.webp')}/>
   </div>
 </div><br></br>
 
@@ -169,7 +169,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -179,7 +179,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -203,7 +203,7 @@ Poté byste měli vidět podobné zprávy:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_radio-test.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-radio-test.webp')}/>
   </div>
 </div><br></br>
 
@@ -225,7 +225,7 @@ Pokud používáte verzi HARDWARIO pro Raspberry Pi, mělo by být vše připrav
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_integration-nodered-1.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-nodered-1.webp')}/>
   </div>
 </div>
 
@@ -243,7 +243,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_integration-nodered-2.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-nodered-2.webp')}/>
   </div>
 </div>
 
@@ -253,7 +253,7 @@ Nakonfigurujte MQTT uzel pro připojení k vašemu brokeru. Pokud používáte R
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_integration-nodered-3.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-nodered-3.webp')}/>
   </div>
 </div>
 
@@ -263,7 +263,7 @@ Nakonfigurujte MQTT uzel pro připojení k vašemu brokeru. Pokud používáte R
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_integration-blynk-4.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-blynk-4.webp')}/>
   </div>
 </div>
 
@@ -271,7 +271,7 @@ Nakonfigurujte MQTT uzel pro připojení k vašemu brokeru. Pokud používáte R
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_integration-blynk-5.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-blynk-5.webp')}/>
   </div>
 </div>
 
@@ -279,7 +279,7 @@ Nakonfigurujte MQTT uzel pro připojení k vašemu brokeru. Pokud používáte R
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_integration-blynk-6.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-blynk-6.webp')}/>
   </div>
 </div>
 
@@ -287,7 +287,7 @@ Nakonfigurujte MQTT uzel pro připojení k vašemu brokeru. Pokud používáte R
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_integration-blynk-7.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-blynk-7.webp')}/>
   </div>
 </div><br></br>
 
@@ -303,7 +303,7 @@ Klikněte na ozubené kolečko (nastavení) a zobrazí se nastavení vašeho pro
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor_integration-blynk-8.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-blynk-8.webp')}/>
   </div>
 </div>
 

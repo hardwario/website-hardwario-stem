@@ -12,7 +12,7 @@ Tento dokument vás provede projektem **Bezdrátového LCD termostatu**. Pomocí
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_block-diagram.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-block-diagram.webp')}/>
   </div>
 </div>
 
@@ -111,7 +111,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-controls.webp')}/>
   </div>
 </div><br></br>
 
@@ -127,7 +127,7 @@ Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádio. Tyto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-debug.webp')}/>
   </div>
 </div><br></br>
 
@@ -141,7 +141,7 @@ V záložce **debug** budete moci vidět všechny MQTT zprávy.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-list.webp')}/>
   </div>
 </div><br></br>
 
@@ -161,7 +161,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -172,7 +172,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -216,7 +216,7 @@ Pokud používáte verzi HARDWARIO pro Raspberry Pi, mělo by být vše v pořá
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_nodered-1.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-nodered-1.webp')}/>
   </div>
 </div>
 
@@ -232,7 +232,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_nodered-2.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-nodered-2.webp')}/>
   </div>
 </div>
 
@@ -242,7 +242,7 @@ Nakonfigurujte MQTT uzel tak, aby se připojil k vašemu brokeru. Pokud použív
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_nodered-screen-2.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-nodered-screen-2.webp')}/>
   </div>
 </div>
 
@@ -252,7 +252,7 @@ Nakonfigurujte MQTT uzel tak, aby se připojil k vašemu brokeru. Pokud použív
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_blynk-1.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-1.webp')}/>
   </div>
 </div>
 
@@ -260,7 +260,7 @@ Nakonfigurujte MQTT uzel tak, aby se připojil k vašemu brokeru. Pokud použív
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_blynk-2.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-2.webp')}/>
   </div>
 </div>
 
@@ -268,7 +268,7 @@ Nakonfigurujte MQTT uzel tak, aby se připojil k vašemu brokeru. Pokud použív
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_blynk-qr.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-qr.webp')}/>
   </div>
 </div>
 
@@ -276,7 +276,7 @@ Nakonfigurujte MQTT uzel tak, aby se připojil k vašemu brokeru. Pokud použív
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_blynk-3.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-3.webp')}/>
   </div>
 </div>
 
@@ -286,7 +286,7 @@ Klikněte na ozubené kolečko (nastavení) a zobrazí se nastavení vašeho pro
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_blynk-4.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-4.webp')}/>
   </div>
 </div>
 

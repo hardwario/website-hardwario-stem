@@ -12,7 +12,7 @@ Tento dokument vás provede projektem **Bezdrátový chytrý LED pásek**. Budet
 
 <div class="container">
   <div class="row">
-    <Image  img={require('./img/radio-smart-led-strip/radio_power_controller.png')}
+    <Image  img={require('./img/radio-smart-led-strip/radio-power-controller.png')}
           style={{ backgroundColor: "#fff" }}/>
   </div>
 </div>
@@ -116,7 +116,7 @@ Ujistěte se, že do **Power Modulu** není připojen napájecí adaptér.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_project-thermostat-relay-bc.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-project-thermostat-relay-bc.webp')}/>
   </div>
 </div>
 
@@ -158,7 +158,7 @@ Tento útržek poskytuje ovládací tlačítka pro příkazy bráně/rádiu. Tyt
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-debug.webp')}/>
   </div>
 </div><br></br>
 
@@ -172,7 +172,7 @@ Na kartě **debug** budete moci vidět všechny MQTT zprávy.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-list.webp')}/>
   </div>
 </div><br></br>
 
@@ -192,7 +192,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -202,7 +202,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -228,7 +228,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_set-node-id.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-set-node-id.webp')}/>
   </div>
 </div>
 
@@ -236,7 +236,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_radio-test.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-radio-test.webp')}/>
   </div>
 </div>
 
@@ -252,7 +252,7 @@ Pokud používáte HARDWARIO verzi pro Raspberry Pi, mělo by být vše v pořá
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_nodered-1.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-nodered-1.webp')}/>
   </div>
 </div>
 
@@ -268,7 +268,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_nodered-2.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-nodered-2.webp')}/>
   </div>
 </div>
 
@@ -284,7 +284,7 @@ Nyní si stáhněte aplikaci **Blynk** z [**App Store**](https://itunes.apple.co
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_blynk-1.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-1.webp')}/>
   </div>
 </div>
 
@@ -292,7 +292,7 @@ Nyní si stáhněte aplikaci **Blynk** z [**App Store**](https://itunes.apple.co
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_blynk-2.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-2.webp')}/>
   </div>
 </div>
 
@@ -300,7 +300,7 @@ Nyní si stáhněte aplikaci **Blynk** z [**App Store**](https://itunes.apple.co
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_blynk-qr.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-qr.webp')}/>
   </div>
 </div>
 
@@ -308,7 +308,7 @@ Nyní si stáhněte aplikaci **Blynk** z [**App Store**](https://itunes.apple.co
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_blynk-3.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-3.webp')}/>
   </div>
 </div>
 
@@ -318,7 +318,7 @@ Klikněte na ozubené kolečko pro nastavení a měli byste vidět nastavení va
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_blynk-4.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-4.webp')}/>
   </div>
 </div>
 

@@ -31,7 +31,7 @@ Different light frequencies are perceived as different [colors](https://en.wikip
 
 <div class="container">
   <div class="row">
-    <Image img={require('./Srgbspectrum.avif')}/>
+    <Image img={require('./srgbspectrum.avif')}/>
   </div>
 </div>
 

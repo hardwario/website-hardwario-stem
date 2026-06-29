@@ -20,7 +20,7 @@ const FeatureList = [
   {
     title: <Translate>STEM Learning Platform</Translate>,
     link: '/stem/',
-    src: '/img/STEM-hero.jpg',
+    src: '/img/stem-hero.jpg',
     width: 'auto',
       height: 200,
         description: (
@@ -32,7 +32,7 @@ const FeatureList = [
   {
     title: <Translate>Projects and Tutorials</Translate>,
     link: '/projects/',
-    src: '/img/push-the-button_button-garage.webp',
+    src: '/img/push-the-button-button-garage.webp',
     width: 'auto',
     height: 200,
     description: (

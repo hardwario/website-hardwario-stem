@@ -37,7 +37,7 @@ Power Module je výjimečný tím, že **nemá baterie** – je napájený pří
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-LED.webp')}/>
+    <Image img={require('./img/iot-led.webp')}/>
   </div>
 </div>
 
@@ -68,7 +68,7 @@ Proto použijte uzel **Change**, kde přenastavíte `msg.payload` na hodnotu bar
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-function_LED1.webp')}/>
+    <Image img={require('./img/iot-function-led1.webp')}/>
   </div>
 </div>
 
@@ -83,7 +83,7 @@ Pro kód, který umí měnit barvu LED pásku podle orientace PIR senzoru:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-function_LED2.webp')}/>
+    <Image img={require('./img/iot-function-led2.webp')}/>
   </div>
 </div>
 

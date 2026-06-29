@@ -10,7 +10,7 @@ Tento dokument vás provede projektem **Bezdrátový VOC senzor**. Budete moci z
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_project-image.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-project-image.webp')}/>
   </div>
 </div>
 
@@ -18,7 +18,7 @@ Tento dokument vás provede projektem **Bezdrátový VOC senzor**. Budete moci z
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_block-diagram.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-block-diagram.webp')}/>
   </div>
 </div>
 
@@ -80,7 +80,7 @@ Zde je minimální sestava pro VOC senzor.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_voc-minimal.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-minimal.webp')}/>
   </div>
 </div>
 
@@ -102,7 +102,7 @@ Firmware také podporuje [**LCD Module**](https://www.hardwario.store/cz/p/lcd-m
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_voc-full.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-full.webp')}/>
   </div>
 </div>
 
@@ -148,7 +148,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-controls.webp')}/>
   </div>
 </div><br></br>
 
@@ -164,7 +164,7 @@ Tento útržek poskytuje ovládací tlačítka pro příkazy bráně/rádiu. Tyt
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-debug.webp')}/>
   </div>
 </div><br></br>
 
@@ -178,7 +178,7 @@ V záložce **debug** budete moci vidět všechny MQTT zprávy.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-list.webp')}/>
   </div>
 </div><br></br>
 
@@ -198,7 +198,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -208,7 +208,7 @@ Vložte baterie do **Radio VOC senzoru**, aby se odeslala žádost o spárován�
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_voc-sensor-paired.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-sensor-paired.webp')}/>
   </div>
 </div>
 
@@ -216,7 +216,7 @@ Vložte baterie do **Radio VOC senzoru**, aby se odeslala žádost o spárován�
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -244,7 +244,7 @@ Měli byste poté vidět podobné zprávy:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_voc-messages.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-messages.webp')}/>
   </div>
 </div><br></br>
 
@@ -278,7 +278,7 @@ Můžete vložit následující snippet do flow (pomocí **Menu >> Import**) mí
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-dashboard-deploy.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-dashboard-deploy.webp')}/>
   </div>
 </div>
 
@@ -288,7 +288,7 @@ Uvidíte tento dashboard s hodnotami ze senzoru Radio VOC.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor_node-red-dashboard.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-dashboard.webp')}/>
   </div>
 </div><br></br>
 

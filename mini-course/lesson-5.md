@@ -50,7 +50,7 @@ In short, **IoT** represents the connection of physical devices with the interne
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-function_blynk1.webp')}/>
+    <Image img={require('./img/iot-function-blynk1.webp')}/>
   </div>
 </div>
 
@@ -95,13 +95,13 @@ Don’t forget to click the **Save and Apply** button on the **Blynk** website w
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-function_blynk2.webp')}/>
+    <Image img={require('./img/iot-function-blynk2.webp')}/>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-mobil_blynk.webp')}/>
+    <Image img={require('./img/iot-mobil-blynk.webp')}/>
   </div>
 </div>
 

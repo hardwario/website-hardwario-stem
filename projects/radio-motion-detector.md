@@ -13,7 +13,7 @@ This document will guide you through the **Radio Motion Detector** project. You 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_block-diagram.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-block-diagram.webp')}/>
   </div>
 </div>
 
@@ -110,7 +110,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-controls.webp')}/>
   </div>
 </div><br></br>
 
@@ -126,7 +126,7 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-debug.webp')}/>
   </div>
 </div><br></br>
 
@@ -140,7 +140,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-list.webp')}/>
   </div>
 </div><br></br>
 
@@ -158,7 +158,7 @@ In this section, we will create a radio link between the **Radio Dongle** and th
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -168,7 +168,7 @@ In this section, we will create a radio link between the **Radio Dongle** and th
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -190,7 +190,7 @@ You should then see similar messages:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_radio-test.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-radio-test.webp')}/>
   </div>
 </div><br></br>
 
@@ -218,7 +218,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-01.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-01.webp')}/>
   </div>
 </div>
 
@@ -226,7 +226,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-02.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-02.webp')}/>
   </div>
 </div>
 
@@ -234,7 +234,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-03.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-03.webp')}/>
   </div>
 </div>
 
@@ -242,7 +242,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-04.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-04.webp')}/>
   </div>
 </div>
 
@@ -250,7 +250,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-05.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-05.webp')}/>
   </div>
 </div>
 
@@ -258,7 +258,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-06.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-06.webp')}/>
   </div>
 </div>
 
@@ -266,7 +266,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-07.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-07.webp')}/>
   </div>
 </div>
 
@@ -274,7 +274,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-08.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-08.webp')}/>
   </div>
 </div>
 
@@ -282,7 +282,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-09.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-09.webp')}/>
   </div>
 </div>
 
@@ -290,7 +290,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-10.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-10.webp')}/>
   </div>
 </div>
 
@@ -298,7 +298,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-11.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-11.webp')}/>
   </div>
 </div>
 
@@ -306,7 +306,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-12.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-12.webp')}/>
   </div>
 </div>
 
@@ -314,7 +314,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-13.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-13.webp')}/>
   </div>
 </div>
 
@@ -322,7 +322,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-14.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-14.webp')}/>
   </div>
 </div>
 
@@ -330,7 +330,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-15.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-15.webp')}/>
   </div>
 </div>
 
@@ -338,7 +338,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-16.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-16.webp')}/>
   </div>
 </div>
 
@@ -350,7 +350,7 @@ Install the **IFTTT** app on your smart phone and sign in using the same account
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-17.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-17.webp')}/>
   </div>
 </div>
 
@@ -360,7 +360,7 @@ Install the **IFTTT** app on your smart phone and sign in using the same account
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_ifttt-18.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-18.webp')}/>
   </div>
 </div><br></br>
 
@@ -386,7 +386,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-ifttt-snippet.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-ifttt-snippet.webp')}/>
   </div>
 </div><br></br>
 
@@ -400,7 +400,7 @@ This snippet creates a connection between the MQTT topic `node/motion-detector:0
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector_node-red-ifttt-url.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-ifttt-url.webp')}/>
   </div>
 </div>
 

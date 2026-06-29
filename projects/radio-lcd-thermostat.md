@@ -12,7 +12,7 @@ This document will guide you through the **Radio LCD Thermostat** project. With 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_block-diagram.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-block-diagram.webp')}/>
   </div>
 </div>
 
@@ -111,7 +111,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-controls.webp')}/>
   </div>
 </div><br></br>
 
@@ -127,7 +127,7 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-debug.webp')}/>
   </div>
 </div><br></br>
 
@@ -141,7 +141,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-list.webp')}/>
   </div>
 </div><br></br>
 
@@ -161,7 +161,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -171,7 +171,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -213,7 +213,7 @@ If you are using HARDWARIO raspi version you should be fine, but still check tha
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_nodered-1.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-nodered-1.webp')}/>
   </div>
 </div>
 
@@ -229,7 +229,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_nodered-2.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-nodered-2.webp')}/>
   </div>
 </div>
 
@@ -239,7 +239,7 @@ Configure MQTT node to connect it on you broker. It will probably connect on loc
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_nodered-screen-2.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-nodered-screen-2.webp')}/>
   </div>
 </div>
 
@@ -249,7 +249,7 @@ Configure MQTT node to connect it on you broker. It will probably connect on loc
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_blynk-1.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-1.webp')}/>
   </div>
 </div>
 
@@ -257,7 +257,7 @@ Configure MQTT node to connect it on you broker. It will probably connect on loc
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_blynk-2.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-2.webp')}/>
   </div>
 </div>
 
@@ -265,7 +265,7 @@ Configure MQTT node to connect it on you broker. It will probably connect on loc
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_blynk-qr.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-qr.webp')}/>
   </div>
 </div>
 
@@ -273,7 +273,7 @@ Configure MQTT node to connect it on you broker. It will probably connect on loc
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_blynk-3.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-3.webp')}/>
   </div>
 </div>
 
@@ -283,7 +283,7 @@ Click the settings wheel and you should see settings for your project. We need t
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat_blynk-4.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-4.webp')}/>
   </div>
 </div>
 

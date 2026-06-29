@@ -12,7 +12,7 @@ V tomto tutoriálu vytvoříte jednoduchý projekt s tlačítkem, které vám po
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_button-garage.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-button-garage.webp')}/>
   </div>
 </div>
 
@@ -27,7 +27,7 @@ Sestavte všechny tři moduly dohromady, abyste vytvořili **Sadu Push**. Všimn
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_mini-battery-module-orientation.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-mini-battery-module-orientation.webp')}/>
   </div>
 </div>
 
@@ -55,7 +55,7 @@ V tomto kroku spustíte aplikaci **Playground**, která spravuje Radio Dongle, P
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_connect-usb-dongle.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-connect-usb-dongle.webp')}/>
   </div>
 </div>
 
@@ -69,7 +69,7 @@ Pokud nevidíte Radio Dongle mezi zařízeními, podívejte se na kapitolu [Trou
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_playground-devices-connect.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connect.webp')}/>
   </div>
 </div>
 
@@ -77,7 +77,7 @@ Pokud nevidíte Radio Dongle mezi zařízeními, podívejte se na kapitolu [Trou
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_playground-devices-connected.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connected.webp')}/>
   </div>
 </div>
 
@@ -85,7 +85,7 @@ Pokud nevidíte Radio Dongle mezi zařízeními, podívejte se na kapitolu [Trou
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_node-red-flow.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-node-red-flow.webp')}/>
   </div>
 </div>
 
@@ -107,7 +107,7 @@ Nyní si stáhněte aplikaci **Blynk** z [**App Store**](https://itunes.apple.co
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_blynk-copy.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-blynk.webp')}/>
   </div>
 </div>
 
@@ -115,7 +115,7 @@ Nyní si stáhněte aplikaci **Blynk** z [**App Store**](https://itunes.apple.co
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_blynk-qr-code-push-button-kit.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-blynk-qr-code-push-button-kit.webp')}/>
   </div>
 </div>
 
@@ -125,7 +125,7 @@ Klikněte na **ikonu Nastavení**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_blynk-config.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-blynk-config.webp')}/>
   </div>
 </div>
 
@@ -133,7 +133,7 @@ Klikněte na **ikonu Nastavení**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_blynk-token.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-blynk-token.webp')}/>
   </div>
 </div>
 
@@ -141,7 +141,7 @@ Klikněte na **ikonu Nastavení**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_blynk-play.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-blynk-play.webp')}/>
   </div>
 </div>
 
@@ -157,7 +157,7 @@ Posledním krokem je propojit Node-RED a Blynk, abyste mohli dostávat oznámen�
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_node-red-token.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-node-red-token.webp')}/>
   </div>
 </div>
 
@@ -167,7 +167,7 @@ Nastal čas **ZMÁČKNOUT TLAČÍTKO**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button_push-the-button.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-push-the-button.webp')}/>
   </div>
 </div>
 

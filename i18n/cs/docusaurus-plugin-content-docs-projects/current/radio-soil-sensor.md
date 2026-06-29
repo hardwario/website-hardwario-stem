@@ -10,7 +10,7 @@ Tento dokument vás provede projektem **Bezdrátový půdní senzor**. Budete mo
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_project-image.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-project-image.webp')}/>
   </div>
 </div>
 
@@ -18,7 +18,7 @@ Tento dokument vás provede projektem **Bezdrátový půdní senzor**. Budete mo
 
 <div class="container">
   <div class="row">
-    <Image  img={require('./img/radio-soil-sensor/radio_soil_sensor.png')}
+    <Image  img={require('./img/radio-soil-sensor/radio-soil-sensor.png')}
           style={{ backgroundColor: "#fff" }}/>
   </div>
 </div>
@@ -109,7 +109,7 @@ Ujistěte se, že po stisknutí tlačítka **Start node pairing** se v pravém p
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -121,7 +121,7 @@ V panelu **debug v Node-RED** se zobrazí zpráva s názvem a verzí firmwaru no
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_node-red-gw-pair-paired-mqtt-message.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-paired-mqtt-message.webp')}/>
   </div>
 </div>
 
@@ -129,7 +129,7 @@ V panelu **debug v Node-RED** se zobrazí zpráva s názvem a verzí firmwaru no
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -153,7 +153,7 @@ Měli byste pak vidět podobné zprávy:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_radio-test.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-radio-test.webp')}/>
   </div>
 </div><br></br>
 
@@ -240,7 +240,7 @@ Nyní můžete dole vidět teplotu a napětí baterie. Je však potřeba přidat
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_grafana-duplicate.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-duplicate.webp')}/>
   </div>
 </div><br></br>
 
@@ -248,7 +248,7 @@ Nyní klikněte na **Edit** v **duplikovaném** grafu.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_grafana-edit.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-edit.webp')}/>
   </div>
 </div><br></br>
 
@@ -256,7 +256,7 @@ Nyní na kartě **Metrics** změňte položku **FROM** z hodnoty **temperature**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_grafana-from-moisture.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-from-moisture.webp')}/>
   </div>
 </div>
 
@@ -266,7 +266,7 @@ Nyní klikněte na tlačítko **Save** v prostředí **Grafana**, aby vaše konf
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor_grafana-save.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-save.webp')}/>
   </div>
 </div>
 

@@ -12,7 +12,7 @@ This document will guide you through the **Radio Smart LED Strip** project. You 
 
 <div class="container">
   <div class="row">
-    <Image  img={require('./img/radio-smart-led-strip/radio_power_controller.png')}
+    <Image  img={require('./img/radio-smart-led-strip/radio-power-controller.png')}
           style={{ backgroundColor: "#fff" }}/>
   </div>
 </div>
@@ -117,7 +117,7 @@ Make sure the **Power Module** does not have power adapter inserted.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_project-thermostat-relay-bc.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-project-thermostat-relay-bc.webp')}/>
   </div>
 </div>
 
@@ -159,7 +159,7 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-debug.webp')}/>
   </div>
 </div><br></br>
 
@@ -173,7 +173,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-list.webp')}/>
   </div>
 </div><br></br>
 
@@ -193,7 +193,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-pair-start.webp')}/>
   </div>
 </div>
 
@@ -203,7 +203,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-pair-stop.webp')}/>
   </div>
 </div><br></br>
 
@@ -229,7 +229,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_set-node-id.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-set-node-id.webp')}/>
   </div>
 </div>
 
@@ -237,7 +237,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_radio-test.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-radio-test.webp')}/>
   </div>
 </div>
 
@@ -253,7 +253,7 @@ If you are using HARDWARIO raspi version you should be fine, but still check tha
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_nodered-1.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-nodered-1.webp')}/>
   </div>
 </div>
 
@@ -269,7 +269,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_nodered-2.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-nodered-2.webp')}/>
   </div>
 </div>
 
@@ -287,7 +287,7 @@ Now download the **Blynk** app from [**App Store**](https://apps.apple.com/us/ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_blynk-1.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-1.webp')}/>
   </div>
 </div>
 
@@ -295,7 +295,7 @@ Now download the **Blynk** app from [**App Store**](https://apps.apple.com/us/ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_blynk-2.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-2.webp')}/>
   </div>
 </div>
 
@@ -303,7 +303,7 @@ Now download the **Blynk** app from [**App Store**](https://apps.apple.com/us/ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_blynk-qr.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-qr.webp')}/>
   </div>
 </div>
 
@@ -311,7 +311,7 @@ Now download the **Blynk** app from [**App Store**](https://apps.apple.com/us/ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_blynk-3.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-3.webp')}/>
   </div>
 </div>
 
@@ -321,7 +321,7 @@ Click the settings wheel and you should see settings for your project. We need t
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip_blynk-4.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-4.webp')}/>
   </div>
 </div>
 
