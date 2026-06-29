@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Technical Resources for Products and Services">
+      description="STEM learning platform for schools — hands-on IoT lessons and projects with HARDWARIO TOWER kits.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
