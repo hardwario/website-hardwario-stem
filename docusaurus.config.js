@@ -73,6 +73,16 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        sitemap: {
+          // Emit <lastmod> for freshness signals and keep Docusaurus boilerplate
+          // out of the sitemap. Docusaurus emits one sitemap per locale, so the
+          // cs URLs live in /cs/sitemap.xml — both are referenced from robots.txt.
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/search', '/markdown-page', '/cs/search', '/cs/markdown-page'],
+          filename: 'sitemap.xml',
+        },
       }),
     ],
   ],
