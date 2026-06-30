@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
  Even a mobile phone isn´t infallible! It may sometimes let you down and not wake you up. If it happens to you, don't despair. Press 👇 the smart button to apologize to your teacher before they inform your parents. 
 
-Under this project, you will learn **how to send an e-mail using a smart button**. 📩
+Under this project, you will learn **how to send a notification using a smart button**. 📩
 
 All you need for this is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set).
 
@@ -36,20 +36,16 @@ Confirm with the **Done** button.
 
 ## Set content of the apology
 
-1. You also determine the content of the apology in Node-RED. Place **Change node** from the Functions section next to the MQTT node. This determines what e-mail is sent.
+1. You also determine the content of the apology in Node-RED. Place **Change node** from the Functions section next to the MQTT node. This determines what message is sent.
 <div class="container">
   <div class="row">
     <Image img={require('./img/apology-to-teachers/apology-to-teachers-2.webp')}/>
   </div>
 </div>
 
-2. Double-click on the node and set two rules in the **Rules** field (see screenshot below).
-
-The first rule will be **msg. payload**: this sets the message content. Keep in mind that the node is not familiar with Czech accent marks (čárky) and hooks (háčky) and don't forget to sign it. The message may read like this:
+2. Double-click on the node and set the **msg. payload** rule in the **Rules** field (see screenshot below). This sets the message content. Keep in mind that the notification does not display Czech accent marks (čárky) and hooks (háčky), and don't forget to sign it. The message may read like this:
 
 _Dear Mr. Woodpecker, I'm sorry, but unfortunately my dog ate my alarm clock. I'll come a.s.a.p. Evzen (your favorite pupil, who does not deserve to have a note sent home to his parents)._
-
-In the second rule, which you add by pressing the **\+ add** button below, you fill in **msg. topic**. This will be the subject matter of the e-mail. For example _Apology_ for _being late_.
 
 <div class="container">
   <div class="row">
@@ -59,56 +55,27 @@ In the second rule, which you add by pressing the **\+ add** button below, you f
 
 Confirm with the **Done** button.👏
 
-## Start the app on your mobile
+## Prepare Blynk IoT for notifications
 
-1. **Continue on your mobile.**. The e-mail is sent to the teacher at the touch of the button via the **Blynk** app. 📱 If you don't know Blynk yet from other projects, [find out how to start it](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+The apology reaches the teacher's phone as a push notification through the **Blynk IoT** app. 📱
 
-2. Select **E-mail** from the menu. ✉️ The button is placed on the project desktop.
+1. If you don't have one yet, create an account in [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). See [this guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) for how to set up your account, a device template, and a device — you'll need all three. You can also reuse a template from a previous project.
 
-![Rules](./img/apology-to-teachers/image4.jpg)
+2. In Blynk IoT, a notification isn't placed on the phone screen like a widget — it's sent as an **Event** defined on your template. On the template detail, open the **Events** tab and add a new event (for example, name it `apology` and give it a message). Then turn on **Notifications** for that event so Blynk delivers it to your phone. The [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through the template settings.
 
+3. Download the **Blynk IoT app** on your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure notifications are allowed for the app so the apology can pop up. ✉️
 
-3. Clicking on the button takes you to settings. Here, set up your teacher's e-mail address to send your apology.
+## Set up sending the apology
 
-![Rules](./img/apology-to-teachers/image1.jpg)
+1. Now return to Playground. On the Node-RED canvas, add a node from the **Blynk IoT** section that can trigger your event (the **log event** node) after the Change node with your apology. 📮
 
+2. Double-click the node to open it. On the right you'll see **a small pencil**. Click it and a new window opens. In the **Url** field enter `blynk.cloud`, and into the **Auth Token** and **Template ID** fields copy the values from the device detail in the Blynk IoT web app on your computer. Confirm with the **Add** button.
 
-When you are finished, return to the desktop via the top left arrow and activate Blynk with the Play button in the top right.
+3. Set the node to fire the **Event** you created (the event code, e.g. `apology`). This is what turns the button press into the push notification. Confirm with the **Done** button.
 
-## Set up sending e-mails
-
-1. Now return to Playground. Add **E-mail node** from Blynk ws after your flow. 📮
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-4.webp')}/>
-  </div>
-</div>
-
-2. Double-click on the node and fill in the teacher's e-mail address on the **E-mail** line.
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-5.webp')}/>
-  </div>
-</div>
-
-3. Then click on **the pencil** next to the **Connection** line and set some more details. In the **Auth Token** field, copy the code that Blynk sent to your e-mail account.
-**In the URL field, copy the address** from the bottom of the window (see screenshot) and give the function a name in the Name field, for example _Apology_.
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-6.webp')}/>
-  </div>
-</div>
-
-4. Connect the nodes, press the **Deploy** button and relax: the e-mail that will save your life if you are late is ready! 🙏
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-7.webp')}/>
-  </div>
-</div>
+4. **Connect the nodes** so the click on the box ➡️ becomes your apology ➡️ that fires the Blynk IoT event ➡️ which arrives on the teacher's mobile. Then press the **Deploy** button and relax: the apology that will save your life if you are late is ready! 🙏
 
 ## Ready, steady… go!
 
-1. Do you want to try it? **Change the e-mail address to your own for testing purposes**.
-2. Confirm with Deploy again, then just press the button and ... hey presto, **someone's writing you**! 💌
-
-![E-mail](./img/apology-to-teachers/image10.png)
+1. Do you want to try it? **Use your own account for testing purposes** so the notification lands on your phone.
+2. Confirm with Deploy again, then just press the button and ... hey presto, **someone gets your message**! 💌

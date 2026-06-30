@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 Ani mobilní telefon není neomylný! Občas tě může zklamat a nevzbudit. Pokud se ti to stane, nezoufej. Stiskni 👇 chytré tlačítko a omluv se učiteli dřív, než to oznámí rodičům.
 
-V tomto projektu se naučíš, **jak odeslat e-mail pomocí chytrého tlačítka**. 📩
+V tomto projektu se naučíš, **jak odeslat oznámení pomocí chytrého tlačítka**. 📩
 
 K tomu budeš potřebovat pouze základní [**Sadu Start**](https://www.hardwario.store/cz/p/start-set) od HARDWARIO.
 
@@ -35,7 +35,7 @@ Potvrď kliknutím na tlačítko **Done**.
 
 ## Nastav obsah omluvy.
 
-1. Obsah omluvy určíš také v Node-RED. Umísti vedle MQTT node také **Change node** z kategorie **Functions**. Tento node určuje, jaký e-mail se odešle.
+1. Obsah omluvy určíš také v Node-RED. Umísti vedle MQTT node také **Change node** z kategorie **Functions**. Tento node určuje, jaká zpráva se odešle.
 
 <div class="container">
   <div class="row">
@@ -43,13 +43,9 @@ Potvrď kliknutím na tlačítko **Done**.
   </div>
 </div>
 
-2. Dvojklikem otevři node a nastav dvě pravidla v poli **Rules** (viz screenshot níže).
-
-První pravidlo bude **msg.payload**: tím nastavíš obsah zprávy. Měj na paměti, že node nerozumí českým háčkům a čárkám – a nezapomeň se podepsat. Zpráva může vypadat třeba takto:
+2. Dvojklikem otevři node a v poli **Rules** nastav pravidlo **msg.payload** (viz screenshot níže). Tím nastavíš obsah zprávy. Měj na paměti, že oznámení nezobrazuje české háčky a čárky – a nezapomeň se podepsat. Zpráva může vypadat třeba takto:
 
 _Dear Mr. Woodpecker, I'm sorry, but unfortunately my dog ate my alarm clock. I'll come a.s.a.p. Evzen (your favorite pupil, who does not deserve to have a note sent home to his parents)._
-
-Druhé pravidlo přidáš kliknutím na tlačítko **+ add** níže a vyplníš do něj **msg.topic**. To bude předmět e-mailu – například Apology nebo Being late
 
 <div class="container">
   <div class="row">
@@ -59,60 +55,27 @@ Druhé pravidlo přidáš kliknutím na tlačítko **+ add** níže a vyplníš 
 
 Potvrď kliknutím na tlačítko **Done**. 👏
 
-## Spusť aplikaci na svém mobilním telefonu.
+## Připrav Blynk IoT pro oznámení
 
-1. **Pokračuj na svém mobilu**. E-mail se odešle učiteli pouhým stiskem tlačítka přes aplikaci **Blynk**. 📱 Pokud ještě Blynk neznáš z jiných projektů, [podívej se, jak začít](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+Omluva dorazí na telefon učitele jako push oznámení prostřednictvím aplikace **Blynk IoT**. 📱
 
-2. Vyber z nabídky možnost **E-mail**. ✉️ Tlačítko bude umístěno na pracovní ploše projektu.
+1. Pokud ještě nemáš účet, vytvoř si ho v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). [V tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) se dozvíš, jak nastavit účet, šablonu zařízení (template) a zařízení (device) – budeš potřebovat všechny tři. Můžeš také znovu použít šablonu z předchozího projektu.
 
-![Rules](./img/apology-to-teachers/image4.jpg)
+2. V Blynk IoT se oznámení neumisťuje na obrazovku telefonu jako widget – odesílá se jako **Event** definovaný na tvé šabloně. V detailu šablony otevři záložku **Events** a přidej nový event (například ho pojmenuj `apology` a přidej mu zprávu). Poté pro tento event zapni **Notifications**, aby ho Blynk doručil na tvůj telefon. [Návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) tě provede nastavením šablony.
 
+3. Stáhni si na telefon **aplikaci Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlas se stejným účtem. Zkontroluj, že má aplikace povolená oznámení, aby se omluva mohla zobrazit. ✉️
 
-3. Kliknutím na tlačítko přejdeš do nastavení. Zde zadej e-mailovou adresu svého učitele, na kterou bude omluva odeslána.
+## Nastav odesílání omluvy
 
-![Rules](./img/apology-to-teachers/image1.jpg)
+1. Nyní se vrať do Playgroundu. Na plochu Node-RED přidej za Change node se svou omluvou uzel ze sekce **Blynk IoT**, který umí spustit tvůj event (uzel **log event**). 📮
 
+2. Dvojklikem node otevři. Vpravo uvidíš **malou tužku**. Klikni na ni a otevře se nové okno. Do pole **Url** zadej `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové aplikaci Blynk IoT na svém počítači. Potvrď tlačítkem **Add**.
 
-Až budeš hotový, vrať se na plochu pomocí šipky vlevo nahoře a aktivuj Blynk stisknutím tlačítka Play vpravo nahoře.
+3. Nastav node tak, aby spouštěl **Event**, který jsi vytvořil (kód eventu, např. `apology`). Právě to promění stisk tlačítka v push oznámení. Potvrď kliknutím na tlačítko **Done**.
 
-## Nastav odesílání e-mailů
-
-1. Nyní se vrať do Playgroundu. Za svůj flow přidej **E-mail node** ze sekce Blynk ws. 📮
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-4.webp')}/>
-  </div>
-</div>
-
-2. Dvojklikem otevři node a do řádku **E-mail** zadej e-mailovou adresu učitele.
-   
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-5.webp')}/>
-  </div>
-</div>
-
-3. Poté klikni na **ikonu tužky** vedle řádku **Connection** a nastav další údaje. Do pole **Auth Token** zkopíruj kód, který ti poslal Blynk na e-mail.
-**Do pole URL** zkopíruj adresu z dolní části okna (viz screenshot) a v poli **Name** zadej název funkce, například *Apology*.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-6.webp')}/>
-  </div>
-</div>
-
-4. Propoj jednotlivé uzly, stiskni tlačítko **Deploy** a klidně se uvolni – e-mail, který ti zachrání kůži, když se zpozdíš, je připraven! 🙏
- 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-7.webp')}/>
-  </div>
-</div>
+4. **Propoj uzly** tak, aby se ze stisku tlačítka ➡️ stala tvá omluva ➡️ která spustí Blynk IoT event ➡️ jenž dorazí na mobil učitele. Poté stiskni tlačítko **Deploy** a klidně se uvolni – omluva, která ti zachrání kůži, když se zpozdíš, je připravena! 🙏
 
 ## Připravit, pozor… teď!
 
-1. Chceš si to vyzkoušet? **Změň e-mailovou adresu na svou vlastní pro testování**.
+1. Chceš si to vyzkoušet? **Pro testování použij svůj vlastní účet**, aby oznámení dorazilo na tvůj telefon.
 2. Znovu potvrď tlačítkem **Deploy**, potom už jen stiskni tlačítko a… voilà, **někdo ti píše**! 💌
-
-![E-mail](./img/apology-to-teachers/image10.png)

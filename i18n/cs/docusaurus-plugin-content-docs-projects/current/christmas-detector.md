@@ -10,7 +10,7 @@ Ježíšek je ultratajná osoba, ale s IoT ho můžeš načapat přímo při roz
 
 S tímhle projektem se naučíš **detekovat pohyb ve vzdáleném pokoji**. Díky tomu si můžeš ověřit, jestli po českých domácnostech chodí Santa, Ježíšek, Děda Mráz nebo někdo úplně jiný. 😲
 
-Pokud máš Starter Set, budeš k němu potřebovat ještě [PIR Module](https://obchod.hardwario.cz/p/pir-module/). **Kompletní výbavu** najdeš v sadě [Motion Set](https://obchod.hardwario.cz/pir-module/).
+Pokud máš Starter Set, budeš k němu potřebovat ještě [PIR Module](https://www.hardwario.store/p/pir-module/). **Kompletní výbavu** najdeš v sadě [Motion Set](https://www.hardwario.store/p/motion-set).
 
 
 ## Připrav si krabičku
@@ -74,29 +74,25 @@ Potvrď tlačítkem **Done**.
 ![propojeni nodu](./img/christmas-detector/image13.png)
 
 
-## Nastav si upozornění na mobil
+## Připrav Blynk IoT pro upozornění
 
-1. Vezmi smartphone a zapni appku Blynk.
+Detekce dorazí na tvůj smartphone přes appku **Blynk IoT**, kam zachycený pohyb přiletí jako push notifikace. A to je fakt super. 😎
 
-2. Vytvoř nový projekt, na e-mail se ti pošle token. V Blynku si na plochu postav **Notification** skrze malé plus v kolečku.
+1. Pokud ještě žádný nemáš, založ si účet v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). V [tomhle návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) najdeš, jak si nastavit účet, šablonu zařízení (device template) a zařízení (device) — budeš potřebovat všechny tři. Můžeš taky využít šablonu z některého předchozího projektu.
 
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-12.webp')}/> </div> </div>
+2. V Blynk IoT se push notifikace nepřidává na obrazovku telefonu jako widget — posílá se jako **Event** definovaný na tvé šabloně. V detailu šablony otevři záložku **Events** a přidej nový event (třeba ho pojmenuj `motion` a dej mu zprávu, kterou chceš dostávat, například _Jezisek je v obyvaku_). Pak pro tenhle event zapni **Notifications**, aby ti ho Blynk doručil na telefon. [Návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) tě nastavením šablony provede.
 
-3. Zmáčkni trojúhelníček **Play** v pravém horním rohu a **přesuň se do Playgroundu na počítači**.
+3. Stáhni si do telefonu appku **Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlas se stejným účtem. Ujisti se, že má appka povolená upozornění, aby se zpráva mohla zobrazit. 📱
 
-4. Tady postav poslední node celého projektu: node Notify ze sekce Blynk ws. Patří hned za flow se switchem, mrkni na obrázek. 👀
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-13.webp')}/> </div> </div>
+## Propoj mobil s krabičkou
 
-5. Rozklikni ho a klikni na **malou tužtičku** vpravo.
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-14.webp')}/> </div> </div>
+1. Vrať se k počítači. Na plochu Node-RED postav poslední node celého projektu — node ze sekce **Blynk IoT**, který umí spustit tvůj event (node **log event**). Patří hned za flow se switchem (mrkni na obrázek). 👀 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-13.webp')}/> </div> </div>
 
-6. Tady vyplň URL jednoduchým zkopírováním z pole níž. Navíc sem zkopíruj Token, který ti od Blynku přišel na e-mail.
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-15.webp')}/> </div> </div>
+2. Rozklikni node dvojklikem. Vpravo uvidíš **malou tužtičku**. Klikni na ni a otevře se nové okno. Do pole **Url** zadej `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové appce Blynk na počítači. Potvrď tlačítkem **Add**.
 
-Potvrď postupně tlačítky **Add** a **Done**.
+3. Nastav node tak, aby spouštěl **Event**, který jsi vytvořil (kód eventu, např. `motion`). Právě tohle promění zachycený pohyb v push notifikaci. Potvrď tlačítkem **Done**.
 
-7. Nakonec už jenom tenhle pěkně zelený node **propoj** s předchozím flow a zmáčkni tlačítko **Deploy**.
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-16.webp')}/> </div> </div>
+4. Nakonec tenhle zelený node **propoj** s předchozím flow, aby detektor ➡️ spustil Blynk IoT event ➡️ který dorazí na tvůj mobil. Pak zmáčkni červené tlačítko **Deploy**. 🚨
 
 ## A... akce!
 
@@ -104,7 +100,5 @@ Potvrď postupně tlačítky **Add** a **Done**.
 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-17.webp')}/> </div> </div>
 
 2. PIR Module vycítí i sebemenší pohyb a zpráva o cizí přítomnosti ti přijde do mobilu raz dva. **Ježíšek nemá šanci**! Honem se běž podívat a načapej ho
-
-![notification](./img/christmas-detector/image5.png)
 
 1. Poznámka na okraj: Ježíška si po načapání **udobři**, aby ti doma vůbec nějaké dárky nechal. 😜

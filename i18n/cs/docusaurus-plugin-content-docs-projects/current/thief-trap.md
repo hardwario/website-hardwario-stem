@@ -32,36 +32,19 @@ Pokud máš Starter Set, budeš k němu potřebovat ještě [**PIR Module**](htt
 
 ❓ **Věděl jsi**? Burglar znamená v angličtině zloděj. Burglarem byl třeba Bilbo Pytlík z Hobita, když kradl v dračí pokladnici. 🐉
 
-## Rozjeď appku na mobilu
+## Připrav Blynk IoT pro notifikace
 
-1. **Pokračuj na svém mobilu**. Krabička se propojí se smartphonem díky **appce Blynk**. 📱 [Zjisti, jak na Blynk](https://hardwario.academy/how-to-connect-blynk/).
-2. Z nabídky zvol **Styled button** (vyšperkované tlačítko). 🚨 Tlačítko se ti umístí na plochu projektu a bude sloužit k vypínání a zapínání detektoru pohybu.
+Krabička se propojí s tvým smartphonem díky aplikaci **Blynk IoT**, kde ti alarm přijde jako push notifikace. 📱
 
-![spuštění aplikace](./img/thief-trap/image22.png)
+1. Pokud ještě žádný nemáš, vytvoř si účet v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). V [tomhle návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) zjistíš, jak si nastavit účet, šablonu zařízení (device template) a zařízení (device) — budeš potřebovat všechny tři. Klidně můžeš použít i šablonu z některého z předchozích projektů.
 
-3. Když na tlačítko ťukneš, dostaneš se do nastavení.
+2. V Blynk IoT se push notifikace neumisťuje na plochu telefonu jako widget — posílá se jako **Event** definovaný na tvé šabloně. V detailu šablony otevři záložku **Events** a přidej nový event (například ho pojmenuj `thief` a dej mu zprávu, kterou chceš dostat, třeba "Someone's in your room"). Pak pro tenhle event zapni **Notifications**, aby ti ho Blynk doručil na mobil. [Návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) tě nastavením šablony provede.
 
-V horním řádku si projekt **pojmenuj**.
+3. Alarm chceš taky zapínat a vypínat z mobilu, aby nepípal, když jsi doma. 🔕 Na stejnou šablonu přidej **Datastream** (virtuální pin) a v aplikaci na něj umísti widget **switch** (přepínač) — přepínač posílá `1` (zapnuto) nebo `0` (vypnuto). Tuhle hodnotu si za chvíli načteš zpátky v Node-RED.
 
-Hned pod tím zvolíš **PIN**. Klikni na něj. Vyber si **virtuální** a **číslo zvol dle libosti**. Ale zapamatuj si ho, budeš ho pak zadávat na počítači. PIN ulož a pokračuj v nastavování tlačítka.
+4. Stáhni si do mobilu aplikaci **Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlas se stejným účtem. Zkontroluj, že má aplikace povolené notifikace, aby ti mohl alarm naskočit. 🚨
 
-Dál už je to na tvém uměleckém cítění. ️🎨 Můžeš si navolit barvu tlačítka, když je vypnuté a zapnuté, jeho tvar a další nezbytnosti.
-
-Až všechno budeš mít, **vrať se na plochu** skrz šipku vlevo nahoře.
-
-![virtuální tlačítko](./img/thief-trap/image18.png)
-
-4. Klepni na plochu, abys přidal další prvek na plochu. Bude to **notifikace**.
-
-![notifikace](./img/thief-trap/image4.png)
-
-5. Celá tvoje plocha teď vypadá takhle. Spusť projekt tlačítkem **Play** vpravo nahoře. ▶️
-
-![spuštění projektu](./img/thief-trap/image25.png)
-
-6. **Poťukej na tlačítko**, mělo by se přepínat z módu ON (zapnuto) do módu OFF (vypnuto).
-
-## Nastav si v Node Red přepínací tlačítko
+## Načti přepínač zapnutí alarmu v Node-RED
 
 1. V Playgroundu klikni na **záložku Functions**, kde je programovací plocha [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/). 🤖
 2. Začni programovat a rovnou do toho skoč po hlavě. První node bude totiž obsahovat malý javascriptík. Na plochu ho vložíš pomocí nodu **Function** ze stejnojmenné sekce.
@@ -102,45 +85,11 @@ Potvrď tlačítkem **Done**.
   </div>
 </div>
 
-5. Za tenhle node postav **node** **Write** ze sekce Blynk ws.
+5. Alarm chceš zapínat i z mobilu. Přidej node ze sekce **Blynk IoT**, který načítá datastream (node **read / input**), a nasměruj ho na virtuální pin přepínače zapnutí alarmu, který jsi vytvořil na šabloně.
 
+6. Dvakrát na něj klikni, ať ho otevřeš. Vpravo uvidíš **malou tužtičku**. Klikni na ni a otevře se ti nové okno. Do pole **Url** napiš `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové aplikaci Blynk IoT na svém počítači. Potvrď tlačítkem **Add**. (Tohle samé propojení použiješ pro každý Blynk IoT node v tomhle projektu.)
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-6.webp')}/>
-  </div>
-</div>
-
-6. Dvakrát na něj klikni. Tady vyplň **PIN**, který jsi zadával v projektu na Blynku. Stačí napsat číslo bez počátečního V.
-
-Pak klikni na malou tužtičku. ✏
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-7.webp')}/>
-  </div>
-</div>
-
-7. Otevře se ti nastavení propojení. Do pole **URL** vyplň webovou adresu z políčka níž. Do pole **Token** zkopíruj kód, který ti přišel z Blynku na e-mail.
-
-A na závěr si v políčku **Label** projekt ještě pro lepší orientaci pojmenuj.
-
-Všechno potvrď a vrátíš se na programovací plochu.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-8.webp')}/>
-  </div>
-</div>
-
-8. O kousek níž přidej node s podobným názvem, ale jinou funkcí. Je to **node Write Event** taky ze sekce Blynk. V něm nastav znovu stejný **PIN**. Na malou tužtičku už klikat nemusíš, nody jsou propojené a všechno se nastavilo samo.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-9.webp')}/>
-  </div>
-</div>
-
-9. Za tento node postav další javascriptí **node Function**. Díky němu se v projektu promítne, jestli je zrovna tlačítko v Blynku zapnuté nebo vypnuté.
+7. Za Dashboard switch i za Blynk IoT read node postav javascriptí **node Function**. Díky němu si projekt pamatuje, jestli je zrovna alarm zapnutý — ať už ho nastavíš z počítače (Dashboard) nebo z mobilu (Blynk IoT).
 
 V řádku **Name** vyplň Stav nastavení upozornění a do pole **Function** zkopíruj tento kódík:
 
@@ -162,7 +111,7 @@ return msg;
   </div>
 </div>
 
-10. Pak celý tenhle flow pospojuj. Ještě ale neodcházej, čeká tě nastavení dvou dalších miniflow.
+8. Pak celý tenhle flow pospojuj. Ještě ale neodcházej, čeká tě nastavení dvou dalších miniflow.
 
 
 ## Naprogramuj hlavní senzor
@@ -228,7 +177,7 @@ Nejdřív si na plochu postav **MQTT node ze sekce Input**. V něm nastav jako *
   </div>
 </div>
 
-1. Za něj patří javascriptík, tedy **node Function**. Jako **Name** nastav _Zpráva_ a kód máš tady:
+2. Za něj patří javascriptík, tedy **node Function**. Jako **Name** nastav _Zpráva_ a kód máš tady:
 
 
 ```
@@ -245,23 +194,9 @@ return msg;
   </div>
 </div>
 
-1. Nakonec sem hoď **node Notify** ze sekce Blynk ws, který komunikuje s upozorněním v mobilní appce. V něm už najdeš Token vyplněný, tak jen zkontroluj, jestli odpovídá tomu, který ti Blynk poslal na e-mail.
+3. Nakonec sem hoď node ze sekce **Blynk IoT**, který umí spustit tvůj event (node **log event**). Použije propojení, které jsi nastavil dřív (Url `blynk.cloud`, Auth Token + Template ID), takže na tužtičku už klikat nemusíš. Dvakrát na něj klikni a nastav ho tak, aby spouštěl **Event**, který jsi vytvořil na šabloně (jeho kód, např. `thief`). Právě tohle promění zachycený pohyb v push notifikaci na tvém mobilu.
 
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-16.webp')}/>
-  </div>
-</div>
-
-4. Tyhle mazlíky **spoj**. A konečně zmáčkni tlačítko **Deploy**.
-
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-17.webp')}/>
-  </div>
-</div>
+4. **Spoj** tyhle prvky tak, aby se z pohybu ➡️ stala tvoje zpráva ➡️ která spustí Blynk IoT event ➡️ jenž ti přijde na mobil. 👾 A konečně zmáčkni červené tlačítko **Deploy**.
 
 ## A... akce!
 

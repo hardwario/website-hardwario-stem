@@ -10,7 +10,7 @@ Is your younger brother entering your room? Are you going on holiday and afraid 
 
 Under this project, you will learn how to create a ** that sends notifications to your mobile if someone else is in your room**. 👁️
 
-If you already have the Start Set, you will only need the [**PIR Module**](https://shop.hardwario.com/p/pir-module/). Alternatively, the [Motion  Set](https://www.hardwario.store/p/motion-set) contains all the equipment you need.
+If you already have the Start Set, you will only need the [**PIR Module**](https://www.hardwario.store/p/pir-module/). Alternatively, the [Motion  Set](https://www.hardwario.store/p/motion-set) contains all the equipment you need.
 
 
 ## Download the new firmware
@@ -34,38 +34,20 @@ If you already have the Start Set, you will only need the [**PIR Module**](https
 ❓ **Did you know**? In English, a burglar is a sort of thief. For example, Bilbo Baggins from the Hobbit was a thief. He stole from the dragon's treasury! 🐉
 
 
-## Start the app on your mobile
+## Prepare Blynk IoT for notifications
 
-1. **Continue on your mobile.**. The box connects to your smartphone thanks to the **Blynk app**. 📱 [Find out how Blynk works.](https://hardwario.academy/how-to-connect-blynk/)
+Your box connects to your smartphone thanks to the **Blynk IoT** app, where the alarm will arrive as a push notification. 📱
 
-2. Select the embellished **Styled button** from the menu. 🚨 The button is placed on the project desktop and switches the motion  on and off.
+1. If you don't have one yet, create an account in [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). See [this guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) for how to set up your account, a device template, and a device — you'll need all three. You can also reuse a template from a previous project.
 
-![spuštění aplikace](./img/thief-trap/image22.png)
+2. In Blynk IoT, a push notification isn't placed on the phone screen like a widget — it's sent as an **Event** defined on your template. On the template detail, open the **Events** tab and add a new event (for example, name it `thief` and give it the message you want to receive, such as "Someone's in your room"). Then turn on **Notifications** for that event so Blynk delivers it to your phone. The [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through the template settings.
 
-3. Clicking on the button takes you to settings.
+3. You also want to arm and disarm the alarm from your phone so it doesn't bleep when you are home. 🔕 Add a **Datastream** on the same template (a virtual pin) and place a **switch** widget on it in the app — the switch sends `1` (armed) or `0` (disarmed). You'll read this value back in Node-RED in a moment.
 
-**Name** the detector in the upper line.
-
-Directly below this, select the **PIN**. Click on it. Choose **virtual** and **select the number as you wish**. Make sure you remember it! You will need to enter it on your computer. Save the PIN and continue setting the button.
-
-The rest is up to your artistic talents. 🎨 You can choose the color of the button when it is off and on, its shape and other details.
-
-When you have completed everything,<b> </b>**return to the desktop** by clicking on the arrow in the top left.
-
-![virtuální tlačítko](./img/thief-trap/image18.png)
-
-4. Click on the desktop to add another feature. In this case, it concerns the **notification**.
-
-![notifikace](./img/thief-trap/image4.png)
-
-5. Your desktop now looks like this. Start the project with the **Play** button in the top right. ▶️
-
-![spuštění projektu](./img/thief-trap/image25.png)
-
-6. **Tap the button**, it should switch from ON mode to OFF mode.
+4. Download the **Blynk IoT app** on your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure notifications are allowed for the app so the alarm can pop up. 🚨
 
 
-## Set the switching button in Node-RED
+## Read the arming switch in Node-RED
 
 1. In Playground, click the **Functions tab** where the [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/) programming desktop is.🤖
 2. Start programming and jump right in. The first node will contain a small javascript code. Place it on the desktop using the ** Function node** from under the section of the same name.
@@ -102,46 +84,11 @@ Confirm with the **Done** button.
   </div>
 </div>
 
-5. Behind this node, place the **Write** **node** from under the Blynk ws section.
+5. You also want to arm the alarm from your phone. Add a node from the **Blynk IoT** section that reads a datastream (the **read / input** node) and point it at the virtual pin of the arming switch you created on the template.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-6.webp')}/>
-  </div>
-</div>
+6. Double-click it to open it. On the right you'll see **a small pencil**. Click it and a new window opens. In the **Url** field enter `blynk.cloud`, and into the **Auth Token** and **Template ID** fields copy the values from the device detail in the Blynk IoT web app on your computer. Confirm with the **Add** button. (You'll reuse this same connection for every Blynk IoT node in this project.)
 
-6. Double-click on it. Fill in the **PIN** you entered for the project in Blynk. Enter the number without the initial V.
-
-
-Then click on the small pencil symbol.✏
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-7.webp')}/>
-  </div>
-</div>
-
-7. The connection settings will open. In the **URL** field, enter the web address from the field below. In the **Token** field, copy and paste the code you received by e-mail from Blynk.
-
-Finally, name the project in the **Label** field for better orientation.
-
-Confirm everything and return to the programming desktop.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-8.webp')}/>
-  </div>
-</div>
-
-8. Add a node a bit lower down with a similar name but a different function. This should be a **Write Event node** from under the Blynk ws section. Set the same **PIN** in it again. You do not have to click on the small pencil again, the nodes are connected and everything is set up by itself.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-9.webp')}/>
-  </div>
-</div>
-
-9. Behind this node, place another javascript **Function node**. With it, the project will show whether the button in Blynk is currently on or off.
+7. Behind both the Dashboard switch and the Blynk IoT read node, place a javascript **Function node**. With it, the project remembers whether the alarm is currently armed — set either from your computer (Dashboard) or from your phone (Blynk IoT).
 
 In the **Name** line, fill in the Notification setting status and copy the following code into the **Function** field:
 
@@ -155,7 +102,7 @@ if(msg.payload == "1") { flow.set("alarmOn", 1); } else { flow.set("alarmOn", 0)
   </div>
 </div>
 
-10. Now connect the whole flow. Don't go just yet though. You still need to set up two more miniflows.
+8. Now connect the whole flow. Don't go just yet though. You still need to set up two more miniflows.
 
 
 
@@ -234,21 +181,9 @@ msg.payload = "Someone's in your room" return msg;
   </div>
 </div>
 
-3. Finally, place here the **Notify node** from under the Blynk ws section. This communicates with the mobile app notification. You'll find a Token filled in. Just make sure it matches the one that Blynk sent to your e-mail.
+3. Finally, place a node from the **Blynk IoT** section that can fire your event (the **log event** node). It reuses the connection you set up earlier (Url `blynk.cloud`, Auth Token + Template ID), so you don't need the pencil again. Double-click it and set it to fire the **Event** you created on the template (its code, e.g. `thief`). This is what turns the detected motion into the push notification on your phone.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-16.webp')}/>
-  </div>
-</div>
-
-4. **Connect** these elements. Finally, press the **Deploy** button.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-17.webp')}/>
-  </div>
-</div>
+4. **Connect** these elements so the motion ➡️ becomes your message ➡️ that fires the Blynk IoT event ➡️ which arrives on your mobile. 👾 Finally, press the red **Deploy** button.
 
 ## Ready, steady… go!
 

@@ -8,11 +8,9 @@ import Image from '@theme/IdealImage';
 
 Do you have a diary, poems or a top secret government-issued document in your drawer? If it's something nobody should see, secure it. 🔒 Turn your IoT Start Set into a drawer monitor and get alerts on your mobile phone. 📲
 
-![Get mobile notification when someone open your drawer](./img/safe-drawer/image8.png)
-
 This project teaches you how to create a **drawer monitor that sends alerts to your mobile phone when some opens your drawer**. 👈
 
-You only need a **box with a button** and a **Radio Dongle**. That's why the basic HARDWARIO [**Start Set**](https://shop.hardwario.com/p/start-set/) is perfect.
+You only need a **box with a button** and a **Radio Dongle**. That's why the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/) is perfect.
 
 
 ## Download the firmware
@@ -30,46 +28,21 @@ You only need a **box with a button** and a **Radio Dongle**. That's why the bas
 </div>
 
 
-## Set up the mobile app
+## Prepare the Blynk IoT app
 
-1. **Continue on your mobile phone**. The box will connect to your smartphone through the **Blynk app**. 📱 [**Learn how to use Blynk**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
+The box will report to your smartphone through the **Blynk IoT** app. 📱 You'll set up two things there: a **switch** to arm and disarm the detector, and a **push notification** that fires when someone opens the drawer.
 
-2. From the menu, choose **Styled button** (fancy button). 🚨 The button will be placed on your project canvas.
+1. If you don't have one yet, create an account in [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). See [this guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) for how to set up your account, a device template, and a device — you'll need all three. You can also reuse a template from a previous project.
 
-![Add style button to blynk app](./img/safe-drawer/image20.png)
+2. **Add a Datastream for the detector state.** On the template detail, open the **Datastreams** tab, click **Edit** in the top right, then **+ New Datastream** and choose **Virtual Pin**. Pick a free Pin and choose the **Integer** type with a range of **0 - 1** (0 = off, 1 = on). Note the Pin number — you'll need it in Node-RED. Click **Create**, then **Save** the template.
 
-3. When you click on the button, you'll get to the settings. Now pay attention.
-In the top line, **name your detector**.
+3. **Add a notification Event.** On the template, open the **Events** tab and add a new event (for example, name it `drawer` and give it the message you want to receive — be careful, Blynk doesn't handle accents and special characters 🤷). Turn on **Notifications** for that event so Blynk delivers the alert to your phone. The [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through the template settings.
 
-![Settings of styled button in Blynk App](./img/safe-drawer/image12.png)
+4. If you don't have a device yet, **create a device** from your template — described in [the same guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
-Right below that, you'll choose **PIN**. Click on it. Select **virtual** and **choose a number as you like**. But remember it, you'll need to enter it on the computer later. Save the PIN and continue setting up the button.
+5. Download the **Blynk IoT app** on your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure notifications are allowed for the app so the alert can pop up. 📱
 
-![Styled button in Blynk App](./img/safe-drawer/image25.png)
-![Styled button in Blynk App](./img/safe-drawer/image14.png)
-
-Switch the button from push mode to **switch**, so you can conveniently start and stop the detector.
-
-![Settings of styled button in Blynk App](./img/safe-drawer/image18.png)
-
-And then there are just those **design nonsense**. 💄 You can choose the color of the button when it's off and on, its shape and other necessities.
-
-![Settings of styled button in Blynk App](./img/safe-drawer/image13.png)
-
-Once you have everything set up, **return to the canvas** through the arrow at the top left.
-
-4. Tap on the canvas to add another element to the canvas. It will be a notification.
-
-![Add Blynk Notification node](./img/safe-drawer/image1.png)
-
-5. Your entire canvas now looks like this.
-
-![Your Blynk App](./img/safe-drawer/image7.png)
-
-6. Tap on the button, it should switch from ON mode to OFF mode.
-
-![Your Blynk App](./img/safe-drawer/image4.png)
-![Your Blynk App](./img/safe-drawer/image7.png)
+6. On your phone, open the device and set up its dashboard: add a **Button** widget, set it to **Switch** mode, and bind it to the detector-state Datastream you created. This is how you'll conveniently arm and disarm the detector from your phone.
 
 
 ## Set up the message in Node-RED
@@ -122,95 +95,34 @@ node/x-axis-detector:0/accelerometer/-/event-count
   </div>
 </div>
 
-7. At the end of this food chain, place a **Notify node** from the Blynk ws section.
+7. At the end of this food chain, place a node from the **Blynk IoT** section that can trigger your event (the **log event** node).
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-7.webp')}/>
-  </div>
-</div>
+8. Double-click the node to open it. On the right you'll see a **small pencil**. Click it and a new window opens. In the **Url** field enter `blynk.cloud`, and into the **Auth Token** and **Template ID** fields copy the values from the device detail in the Blynk IoT web app on your computer. Confirm with the **Add** button.
 
-8. When you double-click on it, the settings will open. Here click on the **small pencil**. You'll get to even deeper settings.
+**Our tip:** Name the connection so you'll easily recognize it in other nodes later.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-8.webp')}/>
-  </div>
-</div>
+9. Set the node to fire the **Event** you created (the event code, e.g. `drawer`). This is what turns the drawer opening into the push notification. Confirm with the **Done** button.
 
-9. You'll be interested in the first two lines. Copy the **URL** from the link below and copy the **token** from the email that was sent to you when you created the project in Blynk.
+10. Now **connect this chain** — MQTT ➡️ Switch ➡️ Change ➡️ Blynk IoT log event. And let's move on.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-9.webp')}/>
-  </div>
-</div>
+## Set up the detector switch in Node-RED
 
-**Our tip:** Name the project in the Name line. You'll easily recognize it in other nodes later.
+This second chain reads the **Switch** widget from your phone, so you can arm and disarm the detector remotely.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-10.webp')}/>
-  </div>
-</div>
+1. Start another chain. Place a **Write node** from the **Blynk IoT** section on the canvas. This reads the switch state.
 
-10. Now **connect this chain**. And let's move on.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-11.webp')}/>
-  </div>
-</div>
-
-## Set up the motion detector in Node-RED
-
-1. Start another chain. Place a **Write event node** from the Blynk WS section on the canvas. This controls the button.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-12.webp')}/>
-  </div>
-</div>
-
-2. When you double-click on it, fill in the **Virtual Pin** line with the number you entered as PIN in Blynk (without the letter V).
-
-In the **Connection** line, then select the project you named in the Notify node.
+2. Double-click it to open the settings. In the **Connection** line, select the connection you set up in the log event node above. In the **Virtual Pin** line, enter the number of the detector-state Datastream you created in Blynk (without the letter "V"). Confirm with the **Done** button.
 
 3. And the last node to the party. Place a **Change node** from the Function section on the canvas.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-13.webp')}/>
-  </div>
-</div>
-
-4. You'll set up the node to react to turning the button off and on in Blynk. Double-click to open it and set the Rules fields to **flow.active** and **msg.payload** respectively (look at the picture).
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-14.webp')}/>
-  </div>
-</div>
+4. You'll set up the node to react to turning the switch off and on in Blynk. Double-click to open it and set the Rules fields to **flow.active** and **msg.payload** respectively, so the switch value is stored in `flow.active` (which the Switch node in the first chain checks).
 
 5. Now **connect these two beauties**. Don't forget to also click the **Deploy** button at the top right so everything gets activated.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-15.webp')}/>
-  </div>
-</div>
 
 ## Start the trap
 
 1. **Place the box in the drawer** lying flat.
 
-2. Control everything else from your mobile phone. 📱 **Turn on** the project in Blynk (click the button so it gets to the ON position).
+2. Control everything else from your mobile phone. 📱 Open the device in the Blynk IoT app and **arm the detector** by flipping the Switch widget to the ON position.
 
-![Blynk Mobile App with Button](./img/safe-drawer/image4.png)
-![Blynk Mobile App with Button](./img/safe-drawer/image7.png)
-
-3. Start the entire flow in Blynk through the **Play button** at the top right. ▶️
-
-4. And wait for the mouse to get caught. 🥁 Meanwhile, **plan what you'll do with the sneaky troublemaker**. We recommend making them do homework for you for a week. They deserve it.
-
-![Get mobile notification when someone open your drawer](./img/safe-drawer/image8.png)
+3. And wait for the mouse to get caught. 🥁 As soon as someone opens the drawer, a **push notification pops up on your mobile**. Meanwhile, **plan what you'll do with the sneaky troublemaker**. We recommend making them do homework for you for a week. They deserve it.

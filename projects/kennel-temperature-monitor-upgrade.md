@@ -12,7 +12,7 @@ Under this project, you will learn how to set the box to **send you a message wh
 
 The basic version of this project can be found here: [Temperature monitor for your hairy watchman: check the temperature in your dog's kennel](/projects/kennel-temperature-monitor/).
 
-All you need is the basic HARDWARIO [**Start Set**](https://shop.hardwario.com/p/start-set/).
+All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/).
 
 
 ## Prepare Node-RED
@@ -50,50 +50,15 @@ node/push-button:0/thermometer/0:1/temperature
 Hold onto your hat and let's move on. 🎩
 
 
-## Set up Blynk
+## Prepare Blynk IoT for the alert
 
-1. First, take your mobile and open [Blynk You don’t know what Blynk is or how to use it? Check out our tutorial](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+The temperature alert is delivered to your phone through the **Blynk IoT** app as a push notification. And that's exactly what makes the box smart. 😎
 
-2. In Blynk, put on everything you need. On the desktop of the new project, first set **Notification**.
+1. If you don't have one yet, create an account in [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). See [this guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) for how to set up your account, a device template, and a device — you'll need all three. You can also reuse a template from a previous project.
 
+2. In Blynk IoT, the alert isn't placed on the phone screen like a widget — it's sent as an **Event** defined on your template. On the template detail, open the **Events** tab and add a new event (for example, name it `kennel_temp` and give it the message you want to receive, such as _It is too cold in the kennel_). Then turn on **Notifications** for that event so Blynk delivers it to your phone. The [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through the template settings.
 
-![Blynk Step H](./img/kennel-temperature-monitor-upgrade/image28.png)
-
-3. Add **Gauge**, pointer. Click on it and in the settings add the same temperature range as on the computer: ** from −15 to 40 **.
-
-Set the unit: **/pin/ °C**.
-
-Click on **PIN**. Set **Virtual** here and select **any number**; remember it. The PIN is used to connect to the nodes in Playground.
-
-Make sure to give your graph a **name**.
-
-**Unsure about something? Take a look at the screenshot.**
-
-
-
-![Dashboard](./img/kennel-temperature-monitor-upgrade/image7.png)
-
-
-![Blynk](./img/kennel-temperature-monitor-upgrade/image12.png)
-
-
-4. Finally, add **Step H**. With it you set below how many degrees the temperature in the kennel should not drop. The letter H stands for **horizontal**, meaning in a lying position. Feel free to also use Step V, where the letter V stands for vertical or upright position. The choice depends on you and you alone.
-
-Inside, set the range **from −15 to 40**.
-
-Then select **PIN**. Again it will be Virtual, but this time you have to select **a different number**.
-
-In the line at the top, give the optimum temperature monitor a **name**.
-
-
-
-![Blynk Step H](./img/kennel-temperature-monitor-upgrade/image17.png)
-
-
-
-![Blynk](./img/kennel-temperature-monitor-upgrade/image12.png)
-
-5. Name the project in **project settings** and run the program with the **Play** button. It won´t do much because you first have to upgrade your Node-RED.
+3. Download the **Blynk IoT app** on your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure notifications are allowed for the app so the alert can pop up. 📱 You first have to upgrade your Node-RED before it does anything, though.
 
 
 ## Upgrade in Node-RED
@@ -134,62 +99,20 @@ In the node, set what the mobile will tell you when the temperature in the kenne
 
 **Our tip**: Write the message without hooks (háčky) and accent marks (čárky). Unfortunately, Blynk does not understand them.
 
-- Third node: **Notify node** from under the Blynk ws section. This provides the connection to the mobile.
-In the node, click on the small pencil symbol.
+- Third node: the **Blynk IoT node** that can trigger your event (the **log event** node), from under the Blynk IoT section. This provides the connection to the mobile.
+Double-click the node to open it. On the right you'll see **a small pencil**. Click it and a new window opens. In the **Url** field enter `blynk.cloud`, and into the **Auth Token** and **Template ID** fields copy the values from the device detail in the Blynk IoT web app on your computer. Confirm with the **Add** button.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-7.webp')}/>
-  </div>
-</div>
-
-Copy and paste here the **URL** from the bottom part of the window and the **token** that you received on your mobile when you set up the project in Blynk. Unsure about something? Take a look at the screenshot.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-8.webp')}/>
-  </div>
-</div>
+Then set the node to fire the **Event** you created (the event code, e.g. `kennel_temp`). This is what turns the too-cold reading into the push notification. Confirm with the **Done** button.
 
 **Our tip**: Name the connection in the name line so that you can recognize it later.
 
-## Link the chart on your mobile with Playground
+## Add the flow that monitors the optimum temperature
 
-1. What do you think? Does it need something else? You´re right, the **Write node** from the Blynk ws section. This will ensure that the pointer will work on your mobile.
+1. The icing on the cake is to follow. This flow consists of two nodes.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-9.webp')}/>
-  </div>
-</div>
+The first is the **Numeric node** from under the Dashboard section. Sounds like some comic book villain, doesn't it? But he's your buddy now.
 
-In the **Connection** line, select your current project.
-
-**You no longer need to click on the pencil**, just set the token and URL once in each project.
-
-In the node, set the **PIN** to the same one you entered for the pointer on the mobile. Enter it in the node without the initial V.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-10.webp')}/>
-  </div>
-</div>
-
-## Add the flow that monitors the optimum temperature.
-
-1. The icing on the cake is to follow. This flow consists of four nodes.
-
-The first is the **Write Event node** from under the Blynk ws section. Watch out, Write Event, not only Write.
-This time connect it to the **PIN**, which you set in Blynk for Step H. 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-11.webp')}/>
-  </div>
-</div>
-
-1. The next one is the **Numeric node** from under the Dashboard section. Sounds like some comic book villain, doesn't it? But he's your buddy now.
-
-Numeric does the same as Step H in Blynk. **It ensures the values are synchronized**.
+The Numeric node lets you set the lowest acceptable temperature right from the Playground Dashboard. **It ensures the threshold is easy to adjust.**
 
 <div class="container">
   <div class="row">
@@ -221,25 +144,7 @@ In the node, set the **unit of measure** (°C), the **temperature range** (−15
   </div>
 </div>
 
-5. Below this node, add one more **Write node** from under the Blynk ws section.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-16.webp')}/>
-  </div>
-</div>
-
-6. In this node, fill in the same **PIN** that you set for the Step H element. Also select the correct project on the **Connection** line.
-
-This setting will ensure that the set temperature is synchronized back so that you can see the changes in the Dashboard also in Blynk.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-17.webp')}/>
-  </div>
-</div>
-
-7. Now you only have to **connect it as shown in the screenshot** and confirm with the **Deploy** button. 🙌
+5. Now you only have to **connect it as shown in the screenshot** and confirm with the **Deploy** button. 🙌
 
 <div class="container">
   <div class="row">
@@ -258,10 +163,4 @@ This setting will ensure that the set temperature is synchronized back so that y
   </div>
 </div>
 
-3. … but also in **Blynk**. So you can check it anywhere, anytime. 🕵️
-
-
-
-![Blynk](./img/kennel-temperature-monitor-upgrade/image22.png)
-
-1. In addition, you get a **notification** on your mobile if your dog is too hot or cold. Happy dog = good dog! 🐕
+3. Above all, you get a **notification** on your mobile if your dog is too hot or cold — so you can check on the kennel anywhere, anytime. 🕵️ Happy dog = good dog! 🐕

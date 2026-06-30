@@ -47,47 +47,15 @@ node/push-button:0/thermometer/0:1/temperature),
 
 Drž si cylindr, jedeme dál. 🎩
 
-## Nastav si Blynk
+## Připrav Blynk IoT pro upozornění
 
-1. Nejdřív si vem do ruky mobil a otevři si [Blynk. Nevíš, co to je nebo jak se to používá? Checkni náš návod](https://hardwario.academy/how-to-connect-blynk/).
+Teplotní upozornění ti dorazí do telefonu skrz aplikaci **Blynk IoT** jako push notifikace. A přesně tohle dělá z krabičky chytrou věc. 😎
 
-2. V Blynku nahoď všechno potřebné. Na plochu nového projektu nastav nejdřív **Notification**.
+1. Pokud ještě žádný nemáš, založ si účet v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Jak si nastavit účet, šablonu zařízení (device template) a zařízení (device) se dozvíš v [tomhle návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) — budeš potřebovat všechny tři. Klidně můžeš použít i šablonu z předchozího projektu.
 
-![Blynk Step H](./img/kennel-temperature-monitor-upgrade/image28.png)
+2. V Blynk IoT se upozornění na obrazovku telefonu neumisťuje jako widget — posílá se jako **Event** (událost) definovaný na tvé šabloně. V detailu šablony otevři záložku **Events** a přidej nový event (pojmenuj ho například `kennel_temp` a dej mu zprávu, kterou chceš dostávat, třeba _It is too cold in the kennel_). Pak pro tenhle event zapni **Notifications**, aby ti ho Blynk doručil do telefonu. [Návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) tě nastavením šablony provede.
 
-3. Přidej **Gauge**, ukazatel. Klikni na něj a v nastavení přidej stejné rozmezí teploty jako na počítači: **od −15 do 40**.
-
-Nastav si jednotku: **/pin/°C**.
-
-Klikni na nápis **PIN**. Tady nastav **Virtual** a vyber **libovolné číslo**, ale pamatuj si ho. PIN slouží na propojení s nody v Playgroundu.
-
-A graf klidně **pojmenuj**.
-
-U něčeho **váháš? Mrkej na obrázek**.
-
-
-![Dashboard](./img/kennel-temperature-monitor-upgrade/image7.png)
-
-
-![Blynk](./img/kennel-temperature-monitor-upgrade/image12.png)
-
-4. Nakonec přidej **Step H**. Díky němu nastavíš, pod kolik stupňů už by teplota v psí boudě neměla klesnout. To H znamená **horizontální**, naležato. Klidně můžeš použít i Step V, tedy vertikální: nastojato. Záleží na tvém vkusu.
-
-Uvnitř zase nastav rozmezí **od −15 až do 40**.
-
-A zvol **PIN**. Opět to bude Virtual, ale tentokrát musíš vybrat **jiné číslo**.
-
-Nahoře v řádku hlídač optimální teploty **pojmenuj**.
-
-
-
-![Blynk Step H](./img/kennel-temperature-monitor-upgrade/image17.png)
-
-
-
-![Blynk](./img/kennel-temperature-monitor-upgrade/image12.png)
-
-5. Celý projekt si **pojmenuj v nastavení projektu** a spusť **tlačítkem Play**. Ještě to ale nic moc dělat nebude, nejdřív musíš vylepšit svůj Node-RED.
+3. Stáhni si do telefonu aplikaci **Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlas se stejným účtem. Ujisti se, že má aplikace povolené notifikace, aby se upozornění mohlo objevit. 📱 Nejdřív ale musíš vylepšit svůj Node-RED, jinak to nic dělat nebude.
 
 
 ## Upgraduj v Node-RED
@@ -124,59 +92,20 @@ Uvnitř nodu nastav, co ti telefon zahlásí, až teplota v boudě klesne pod ne
 
 **Náš tip**: Zprávu piš bez háčků a čárek, Blynk jim bohužel nerozumí.
 
-- Třetí: **node Notify** ze sekce Blynk ws. Ten zajišťuje propojení s mobilem.
+- Třetí: **node Blynk IoT**, který umí spustit tvůj event (node **log event**), ze sekce Blynk IoT. Ten zajišťuje propojení s mobilem.
+Dvojklikem node otevři. Vpravo uvidíš **malou tužku**. Klikni na ni a otevře se nové okno. Do pole **Url** zadej `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové aplikaci Blynk IoT na počítači. Potvrď tlačítkem **Add**.
 
-Uvnitř nodu klikni na malou tužku.
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-7.webp')}/>
-  </div>
-</div>
-
-Sem zkopíruj **URL** ze spodní části okna a **token**, který ti při zakládání projektu v Blynku přišel na mobil. Váháš? Koukni na obrázek.
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-8.webp')}/>
-  </div>
-</div>
+Pak node nastav tak, aby spouštěl **Event**, který jsi vytvořil (kód eventu, např. `kennel_temp`). Právě tohle promění příliš nízkou naměřenou teplotu v push notifikaci. Potvrď tlačítkem **Done**.
 
 **Náš tip**: V řádku name si propojení ještě pojmenuj, abys ho později poznal.
 
-## Propoj graf v mobilu s Playgroundem
-
-1. Chce to ještě něco, co říkáš? Správně, **node Write** ze sekce Blynk ws. Ten zajistí, že ti bude fungovat ukazatel v mobilu.
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-9.webp')}/>
-  </div>
-</div>
-
-V řádku **Connection** vyber svůj aktuální projekt.
-
-**Na tužku už klikat nemusíš**, token a URL stačí nastavit v každém projektu jednou.
-
-Uvnitř ale ještě nastav **PIN**, který jsi zadával u ukazatele v mobilu. Do nodu ho ale napiš bez počátečního V.
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-10.webp')}/>
-  </div>
-</div>
-
 ## Hoď tam flow, které hlídá optimální teplotu
 
-1. Poslední třešinka na dortu. Tohle flow se bude skládat ze 4 nodů.
+1. Poslední třešinka na dortu. Tohle flow se bude skládat ze dvou nodů.
 
-První je **node Write Event** ze sekce Blynk ws. Bacha, Write event, ne jenom Write.
-Tentokrát ho napoj na **PIN**, který sis v Blynku nastavoval u prvku Step H.
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-11.webp')}/>
-  </div>
-</div>
+První je **node Numeric** ze sekce Dashboard. Zní to jako nějaký padouch z komiksu, že jo? Teď je to ale tvůj kámoš.
 
-2. Další pán na holení je **node Numeric** ze sekce Dashboard. Zní to jako nějaký padouch z komiksu, že jo? Teď je to ale tvůj kámoš.
-
-Numeric dělá to stejné, co Step H v Blynku. **Zajistí, aby se hodnoty synchronizovaly**.
+Node Numeric ti umožní nastavit nejnižší přípustnou teplotu rovnou z Dashboardu v Playgroundu. **Zajistí, že se práh dá snadno upravit.**
 <div class="container">
   <div class="row">
     <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-12.webp')}/>
@@ -205,23 +134,7 @@ Uvnitř nastav **měrnou jednotku** (°C), **teplotní rozmezí** ( −15 a 40) 
   </div>
 </div>
 
-5. A pod tenhle node přidej ještě jeden **node Write** ze sekce Blynk ws.
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-16.webp')}/>
-  </div>
-</div>
-
-6. Do něj vyplň ten samý **PIN**, který jsi nastavoval u prvku Step H. A také zvol správný projekt na řádku **Connection**.
-
-Tímhle nastavením zase zajistíš zpětnou synchronizaci nastavené teploty, takže změny z Dashboardu uvidíš i v Blynku.
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-17.webp')}/>
-  </div>
-</div>
-
-7. Teď už ti to zbývá **propojit podle obrázku** a potvrdit tlačítkem **Deploy**. 🙌
+5. Teď už ti to zbývá **propojit podle obrázku** a potvrdit tlačítkem **Deploy**. 🙌
 <div class="container">
   <div class="row">
     <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-18.webp')}/>
@@ -231,16 +144,11 @@ Tímhle nastavením zase zajistíš zpětnou synchronizaci nastavené teploty, t
 ## A... akce!
 
 1. Krabičku zase nalep na **vnitřní stěnu boudy**.
-2. Teplota naměřená v boudě se ti ukazuje nejenom v Playgroundu **na záložce Dashboard**…
+2. Teplota naměřená v boudě se ti ukazuje v Playgroundu **na záložce Dashboard**…
 <div class="container">
   <div class="row">
     <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-19.webp')}/>
   </div>
 </div>
 
-3. … ale i v **Blynku**. Takže ji můžeš čekovat odkudkoli a kdykoli. 🕵️
-
-
-![Blynk](./img/kennel-temperature-monitor-upgrade/image22.png)
-
-4. Navíc na mobil dostaneš **notifikaci**, kdyby bylo rafíkovi moc hic nebo velká kosa. Šťastný pes = dobrý pes! 🐕
+3. A hlavně dostaneš na mobil **notifikaci**, kdyby bylo rafíkovi moc hic nebo velká kosa — takže můžeš boudu čekovat odkudkoli a kdykoli. 🕵️ Šťastný pes = dobrý pes! 🐕
