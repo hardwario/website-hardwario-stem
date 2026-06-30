@@ -161,9 +161,6 @@ const config = {
           },
         ],
       },
-      prism: {
-        theme: darkCodeTheme,
-      },
       zoom: {
         selector: '.markdown :not(em) > img',
         background: {
@@ -182,11 +179,11 @@ const config = {
             items: [
               {
                 label: 'Homepage',
-                to: 'https://hardwario.com',
+                href: 'https://hardwario.com',
               },
               {
                 label: 'Store',
-                to: 'https://www.hardwario.store',
+                href: 'https://www.hardwario.store',
               },
             ],
           },

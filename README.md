@@ -9,7 +9,7 @@ Built with [Docusaurus 3](https://docusaurus.io), with several doc instances
 - **Docusaurus 3** — React + MDX static site generator
 - **Multi-instance docs** — `stem`, `projects`, `mini-course`
 - **i18n** — localized content under `i18n/`
-- **Netlify** — hosting
+- **Cloudflare Workers** — hosting (static assets, auto-deploy via Workers Builds)
 
 ## Develop
 
@@ -34,7 +34,8 @@ mini-course/             # mini-course content (served at /mini-course/)
 i18n/                    # localized strings + translated content
 src/                     # custom pages + CSS
 static/                  # assets; reference images by absolute path (/img/…)
-netlify.toml             # Netlify build config
+                         #   incl. static/_redirects (same-domain slug redirects)
+wrangler.jsonc           # Cloudflare Worker config — serves build/ as static assets
 ```
 
 See the `docusaurus-sites` skill in the website-admin repo for shared Docusaurus
@@ -52,8 +53,9 @@ guidance.
 
 ## Deployment
 
-Hosted on **Netlify** — **pushing to `main` auto-deploys** (Netlify runs the
-build and publishes `build/`). After a push, confirm the live URL returns 200.
+Hosted on **Cloudflare Workers** (static assets) — **pushing to `main` auto-deploys**
+(Workers Builds runs `npm run build` then `npx wrangler deploy`, serving `build/`).
+After a push, confirm the live URL returns 200.
 `editUrl` in `docusaurus.config.js` points "Edit this page" links at this repo.
 
 ---

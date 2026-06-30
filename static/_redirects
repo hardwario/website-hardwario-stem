@@ -1,4 +1,4 @@
-# Cloudflare Pages redirects (migrated from netlify.toml).
+# Cloudflare Workers static-asset redirects (migrated from netlify.toml).
 # STEM slug-fix redirects (EN + CS).
 /stem/L106/iot-vibration-monitor-asessment-cs        /stem/L106/iot-vibration-monitor-assessment        301
 /stem/L107/iot-light-monitor-asessment               /stem/L107/iot-light-monitor-assessment            301
