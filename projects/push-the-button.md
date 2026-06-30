@@ -92,77 +92,43 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
   </div>
 </div>
 
-In case you don't see the flow, you can copy the text below and paste it into the Node-RED's Menu &gt; Import &gt; Clipboard
+In case you don't see the flow, build it yourself. You need three nodes wired in a row:
 
-```text
-[{"id":"103c675c.c81139","type":"mqtt in","z":"2c41a2bd.aa36ae","name":"","topic":"node/push-button:0/push-button/-/event-count","qos":"2","broker":"29fba84a.b2af58","x":270,"y":360,"wires":[["ff41c7e0.06eba8"]]},{"id":"f507ecc3.8f82b","type":"blynk-ws-out-notify","z":"2c41a2bd.aa36ae","name":"Blynk notification","client":"fc4bbabb.9bb1b8","queue":false,"rate":5,"x":790,"y":360,"wires":[]},{"id":"ff41c7e0.06eba8","type":"change","z":"2c41a2bd.aa36ae","name":"Set message","rules":[{"t":"set","p":"payload","pt":"msg","to":"Button pressed, you're the best!","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":570,"y":360,"wires":[["f507ecc3.8f82b"]]},{"id":"c131dd35.bb855","type":"comment","z":"2c41a2bd.aa36ae","name":"Push Button Kit flow","info":"","x":190,"y":300,"wires":[]},{"id":"29fba84a.b2af58","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","willTopic":"","willQos":"0","willPayload":""},{"id":"fc4bbabb.9bb1b8","type":"blynk-ws-client","z":"","name":"","path":"ws://blynk-cloud.com/websockets","key":"5cf554e34caf4d49a1b24cd07c5e2c13","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_sync":false,"dbg_bridge":false,"dbg_low":false,"dbg_pins":"","multi_cmd":false,"proxy_type":"no","proxy_url":""}]
-```
+1. An **MQTT in** node subscribed to the button-press topic `node/push-button:0/push-button/-/event-count`.
+2. A **change** node that sets `msg.payload` to the notification text you want, for example `Button pressed, you're the best!`.
+3. A Blynk IoT node that delivers the notification (you add this in the next section, once your Blynk IoT account and template are ready).
 
-## Blynk Mobile App Set-Up
+We'll connect the Blynk IoT node in **Putting it all together** below.
 
-In this step you configure **Blynk** application on your phone so you can get notifications from the **HARDWARIO Playground**.
+## Prepare the Blynk IoT app
 
-#### Step 1: Download Blynk
+In this step you set up **Blynk IoT** so your phone can receive notifications from the **HARDWARIO Playground**. The old Blynk Legacy app has been discontinued, so we use the current **Blynk IoT** platform.
 
-Now download the **Blynk** app from [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk&pcampaignid=web_share). Create an account and log-in.
+#### Step 1: Create a Blynk IoT account, template, and device
 
-#### Step 2: Click on the **QR icon**
+If you don't have one yet, create an account in **Blynk IoT** and set up a device. The whole process — account, **template**, **datastreams**, and **device** — is described in [this guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). You can reuse a template from a previous project if you have one.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-blynk.webp')}/>
-  </div>
-</div>
+Then download the **Blynk IoT** app to your phone from the [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same credentials.
 
-#### **Step 3:** Scan following QR code to get everything preconfigured
+#### Step 2: Define a notification Event on your template
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-blynk-qr-code-push-button-kit.webp')}/>
-  </div>
-</div>
+In Blynk IoT, push notifications are sent through **Events**. Open your template in the Blynk IoT web console and create a new **Event** (for example named `Button pressed`). In the Event settings, turn on **Notifications** and pick who should receive the push notification on the linked device.
 
-#### Step 4: You will see this imported **project** with a single **Notification Widget**
-
-Click on the **Settings icon**.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-blynk-config.webp')}/>
-  </div>
-</div>
-
-#### **Step 5:** Scroll down and click on **Email all** tokens. We use this token from you email later
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-blynk-token.webp')}/>
-  </div>
-</div>
-
-#### Step 6: Now you need start the Blynk project. Click on the **Play** symbol
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-blynk-play.webp')}/>
-  </div>
-</div>
+This is the message that will pop up on your phone every time the button is pressed. See the [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) for the exact steps and screenshots.
 
 ## Putting it all together
 
-The final step is to connect Node-RED and Blynk together, so you can get the notifications.
+The final step is to connect Node-RED with Blynk IoT, so pressing the button triggers your notification Event.
 
-#### Step 1: In the **Playground** **Functions** tab doubleclick on the **Blynk notification** node
+#### Step 1: Add the Blynk IoT node
 
-#### Step 2: Click on the **pencil icon** and paste the token you've received in the email. Click **Done**
+In the **Playground** **Functions** tab, add a Blynk IoT node after the **change** node and connect them. You'll find the Blynk IoT nodes on the left in the palette.
+
+#### Step 2: Configure the connection
+
+Double-click the node, then click the **pencil icon** to set up the Blynk connection. In the **Url** field enter `blynk.cloud`, and into the **Auth Token** and **Template ID** fields copy the values from your device detail in the Blynk IoT web console. Confirm, then point the node at the **Event** (`Button pressed`) you defined on the template so it fires that notification.
 
 #### **Step 3:** Click the **Deploy** button. Everytime you edit the Node-RED flow you have to apply changes!
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-node-red-token.webp')}/>
-  </div>
-</div>
 
 ## Action !
 

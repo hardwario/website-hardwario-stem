@@ -201,96 +201,76 @@ At this point, you've got verified radio communication.
 
 :::
 
-## Integration with Blynk
+## Integration with Blynk IoT
 
-Now we have assembled our kit and let's start with some basic integration with **Blynk**. We will start without describing what **Blynk** is. If you want get some information about what **Blynk** is. The best thing you can do is visit their [**page**](https://www.blynk.cc/). In our example we will be showing you how monitor your temperature in time graph. As well as switch your relay which depends on pre-set temperature.
+Now that the kit is assembled and sending data over MQTT, let's display the
+temperature on your phone with **Blynk IoT** (the current Blynk platform — the old
+Blynk Legacy cloud has been discontinued). In this example you'll graph the
+measured temperature together with your set-point, while the relay keeps switching
+locally based on that set-point.
 
-Firstly we need to configure our **Node-RED** app.
+See the canonical HARDWARIO guide,
+[**Blynk app integration**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/),
+for how to create a Blynk account, a device template, datastreams, and a device.
+It also explains where to find the **Auth Token** and **Template ID** you'll need
+below.
 
-#### Step 1: Blynk nodes
+#### Step 1: Create a template and datastreams
 
-If you are using HARDWARIO raspi version you should be fine, but still check that **Blynk** nodes are installed. (You can view them on the left side menu in **Node-RED**). Otherwise you will need to install **Node-RED** package `node-red-contrib-blynk-ws`.
+In the Blynk IoT web console, create a **device template**, then add one
+**Datastream** (a **Virtual Pin**) for each value you want to display:
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-nodered-1.webp')}/>
-  </div>
-</div>
+| Value | Virtual Pin | Type | Unit |
+|---|---|---|---|
+| Measured temperature | V1 | Double | °C |
+| Set-point temperature | V2 | Double | °C |
 
-#### Step 2: Add another flow (you can add them by big plus button next to the flow name)
+Set a sensible range for each datastream (for example **0 – 50**). Then create a
+**device** from this template — see the [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
+for the exact steps.
 
-#### Step 3: Insert the following snippet in the flow (using **Menu >> Import**)
+#### Step 2: Configure the Node-RED flow
 
-```text
-[{"id":"85a6bc11.f6088","type":"tab","label":"Flow 2","disabled":false,"info":""},{"id":"cdb6da8f.c84f88","type":"blynk-ws-out-write","z":"85a6bc11.f6088","name":"","pin":"1","pinmode":0,"client":"172c134d.989ead","x":700,"y":440,"wires":[]},{"id":"9dd2498e.466368","type":"mqtt in","z":"85a6bc11.f6088","name":"","topic":"node/lcd-thermostat:0/thermometer/0:1/temperature","qos":"2","broker":"3d7de0ee.6b9ed","x":210,"y":140,"wires":[["2390ca91.f7db36"]]},{"id":"c35cea67.a92b48","type":"inject","z":"85a6bc11.f6088","name":"Every 1 second","topic":"","payload":"","payloadType":"date","repeat":"1","crontab":"","once":false,"onceDelay":"","x":130,"y":440,"wires":[["10c14148.1cc99f","19338151.912a9f"]]},{"id":"5b5fb6fe.549268","type":"mqtt out","z":"85a6bc11.f6088","name":"","topic":"node/power-controller:0/relay/-/state/set","qos":"","retain":"","broker":"3d7de0ee.6b9ed","x":780,"y":340,"wires":[]},{"id":"2390ca91.f7db36","type":"change","z":"85a6bc11.f6088","name":"","rules":[{"t":"set","p":"temperature","pt":"flow","to":"$number(msg.payload)","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":540,"y":140,"wires":[["63757f48.e9115"]]},{"id":"518ff012.d2933","type":"mqtt in","z":"85a6bc11.f6088","name":"","topic":"node/lcd-thermostat:0/thermometer/set-point/temperature","qos":"2","broker":"3d7de0ee.6b9ed","x":230,"y":60,"wires":[["efd4b628.96d098"]]},{"id":"efd4b628.96d098","type":"change","z":"85a6bc11.f6088","name":"","rules":[{"t":"set","p":"setpoint","pt":"flow","to":"$number(msg.payload)","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":560,"y":60,"wires":[["63757f48.e9115"]]},{"id":"10c14148.1cc99f","type":"change","z":"85a6bc11.f6088","name":"","rules":[{"t":"set","p":"payload","pt":"msg","to":"temperature","tot":"flow"}],"action":"","property":"","from":"","to":"","reg":false,"x":400,"y":440,"wires":[["cdb6da8f.c84f88"]]},{"id":"19338151.912a9f","type":"change","z":"85a6bc11.f6088","name":"","rules":[{"t":"set","p":"payload","pt":"msg","to":"setpoint","tot":"flow"}],"action":"","property":"","from":"","to":"","reg":false,"x":400,"y":480,"wires":[["32f2b7a7.072788"]]},{"id":"32f2b7a7.072788","type":"blynk-ws-out-write","z":"85a6bc11.f6088","name":"","pin":"2","pinmode":0,"client":"172c134d.989ead","x":700,"y":480,"wires":[]},{"id":"63757f48.e9115","type":"switch","z":"85a6bc11.f6088","name":"comparison","property":"setpoint","propertyType":"flow","rules":[{"t":"gt","v":"temperature","vt":"flow"},{"t":"lte","v":"temperature","vt":"flow"}],"checkall":"true","repair":false,"outputs":2,"x":530,"y":260,"wires":[["b83b5274.58c59"],["4984fb4c.bbe3f4"]]},{"id":"b83b5274.58c59","type":"change","z":"85a6bc11.f6088","name":"true","rules":[{"t":"set","p":"payload","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":670,"y":240,"wires":[["5b5fb6fe.549268"]]},{"id":"4984fb4c.bbe3f4","type":"change","z":"85a6bc11.f6088","name":"false","rules":[{"t":"set","p":"payload","pt":"msg","to":"false","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":670,"y":280,"wires":[["5b5fb6fe.549268"]]},{"id":"172c134d.989ead","type":"blynk-ws-client","z":"","name":"","path":"ws://blynk-cloud.com/websockets","key":"4035de467a9a483b9d1318c92d3fabcb","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_sync":false,"dbg_bridge":false,"dbg_low":false,"dbg_pins":"","multi_cmd":false,"proxy_type":"no","proxy_url":""},{"id":"3d7de0ee.6b9ed","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","willTopic":"","willQos":"0","willPayload":""}]
-```
+On the Node-RED canvas, subscribe to the two MQTT topics published by the
+thermostat and forward them to Blynk:
 
-It will look like this:
+* `node/lcd-thermostat:0/thermometer/0:1/temperature` → the **measured temperature**
+* `node/lcd-thermostat:0/thermometer/set-point/temperature` → the **set-point**
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-nodered-2.webp')}/>
-  </div>
-</div>
+The relay logic stays entirely local: a **switch** node compares the measured
+temperature against the set-point and publishes `true`/`false` to
+`node/power-controller:0/relay/-/state/set`, exactly as before. This part does not
+involve Blynk.
 
-#### Step 4: Connect
+To send each value to the phone, add a **Blynk IoT Write** node (you'll find it on
+the left under the **Blynk IoT** section) after each temperature topic:
 
-Configure MQTT node to connect it on you broker. It will probably connect on localhost if you are using Raspberry Pi. After that you will need to configure **Blynk** node. Just fill in URL `ws://blynk-cloud.com/websockets`. The `Auth Token` we will configure later after obtaining one from Blynk over e-mail.
+* the measured-temperature node → **Virtual Pin** `1`
+* the set-point node → **Virtual Pin** `2`
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-nodered-screen-2.webp')}/>
-  </div>
-</div>
+#### Step 3: Point the Write nodes at Blynk IoT
 
-#### Step 5: Now download the **Blynk** app from [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk&pcampaignid=web_share). Create an account and log-in.
+Double-click a **Write** node and click the **small pencil** to open the client
+configuration. In the **Url** field enter `blynk.cloud`, and copy the **Auth Token**
+and **Template ID** from your device detail in the Blynk web console. Confirm with
+**Add**. Back in the node, set the **Virtual Pin** number (without the letter "V"),
+then click **Done**. Reuse the same client for both Write nodes.
 
-#### **Step 6:** After installing, you should create account, login and you should see something like that
+When both nodes are wired, click **Deploy** in the top-right corner.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-1.webp')}/>
-  </div>
-</div>
+#### Step 4: Add a widget in the Blynk IoT app
 
-#### Step 7: Now click a button on the top right to scan QR code
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-2.webp')}/>
-  </div>
-</div>
-
-#### Step 8: Now you should scan following QR code to get everything preconfigured
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-qr.webp')}/>
-  </div>
-</div>
-
-#### Step 9: You should see something like this, just without the temperatures values yet
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-3.webp')}/>
-  </div>
-</div>
-
-#### Step 10: Email
-
-Click the settings wheel and you should see settings for your project. We need to get `Auth Token` which you have to copy to our **Node-RED** in **Blynk** node configuration.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-4.webp')}/>
-  </div>
-</div>
-
-#### Step 11: Now deploy your **Node-RED** app and hit play button in your **Blynk** project and you should be done!
+Download the **Blynk IoT** app from the
+[**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) or
+[**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk) and
+sign in with the same account. Open your device, then add a **Chart** widget (to
+watch the temperature over time) or a **Gauge**. Open the widget's settings and
+bind it to the **Datastream** for the virtual pin you chose. Once Node-RED is
+deployed, the values start streaming in and you're done!
 
 ## Related Documents
 
+* [**Blynk app integration**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
 * [**Toolchain Guide**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)

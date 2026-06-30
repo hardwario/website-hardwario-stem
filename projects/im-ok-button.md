@@ -9,7 +9,7 @@ Do your parents call you every day, asking if you got home from school? It’s a
 
 In this project, you will learn how **to use the button to send a message to your parents’ mobile**. 👩👱
 
-You will need the **box with the button** and the **USB dongle**. You can do with the basic HARDWARIO set, the [Start Set](https://shop.hardwario.com/p/start-set/).
+You will need the **box with the button** and the **USB dongle**. You can do with the basic HARDWARIO set, the [Start Set](https://www.hardwario.store/p/start-set/).
 
 
 ## Get it started in the Node-RED
@@ -49,34 +49,27 @@ Confirm it with the **Done** button.
 
 Confirm it with the **Done** button and link both nodes by dragging the mouse from one bubble to the other. 🐁
 
-## Set up an app on your mobile
+## Prepare the Blynk IoT app
 
-1. Borrow a smartphone from your mom or dad and make it yet a bit smarter. 🤓 They must have the [**Blynk app**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) on their phone to be able to see your message.
-2. Select **Notification** in the new project. The notification will be added to your desktop.
+The push notification is delivered through the **Blynk IoT** app. If you don't have one yet, create an account and a device template — see [this guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) for how to do it, including creating templates and devices. You can also reuse a template from a previous project.
 
-![Blynk Notify](https://res.cloudinary.com/lukasfabik/image/upload/v1566155396/projects/im-ok-button/image1.png)
+1. In Blynk IoT, push notifications are sent as an **Event** on the template. Open your template, go to the **Events** tab, and add a new Event (for example, name it `im_ok`). Turn on **Notifications** for that Event so the parents' phone receives a push message when it is triggered.
 
-3. Just press the **Play** triangle in the upper right corner and **return the mobile to your parents**.
+2. Borrow a smartphone from your mom or dad and make it yet a bit smarter. 🤓 They need the **Blynk IoT app** on their phone — from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) — signed in with your account, so the notification lands on their device.
 
 ## Connect the mobile with the box
 
-1. Go back to your computer. On the Node-RED desktop, add the **dark green Notify node** behind both nodes. You can find it on the left in the Blynk ws section.
-2. Open the node by double-clicking it. You’ll see a **small pencil** on the right. Click on it and a new window will open. In the **Auth Token** field, copy the token you have sent to your email. Copy Blynk Cloud Server from the bottom window into the **URL** field,  `ws://blynk-cloud.com/websockets`
-
-![Blynk Settings](https://res.cloudinary.com/lukasfabik/image/upload/v1566155397/projects/im-ok-button/image3.png)
+1. Go back to your computer. On the Node-RED desktop, add a green **Blynk IoT node** behind both nodes. You'll find it on the left under the Blynk IoT section.
+2. Open the node by double-clicking it. You'll see a **small pencil** on the right. Click on it and a new window will open. In the **Url** field enter `blynk.cloud`, and into the **Auth Token** and **Template ID** fields copy the values from the device detail in the Blynk IoT web app on your computer. Set the node to log the Event you created (`im_ok`) so pressing the button fires that Event and its notification.
 
 Confirm the settings by pressing the **Add** and **Done** buttons.
 
-3. **Connect the node and Blynk with the yellow node where you have set the message**. Now you have programmed the device so that pressing the button on the box ➡️ turns into a message ➡️ that goes all the way to your parents’ mobile. **👾**
-
-![Connect nodes in HARDWARIO Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566155397/projects/im-ok-button/image5.png)
+3. **Connect this node to the yellow node where you set the message.** Now you have programmed the device so that pressing the button on the box ➡️ fires the Blynk IoT Event ➡️ that pushes your "I'm OK" message all the way to your parents' mobile. **👾**
 
 ❗ Start and confirm the entire flow with the red **Deploy** button on the top right. 🚨
 
 ## And… Action!
 
-1. Press the button. A **message popped** up on your parents’ mobile. 💪
-
-![Blynk Settings](https://res.cloudinary.com/lukasfabik/image/upload/v1566155396/projects/im-ok-button/image2.png)
+1. Press the button. A **push notification popped** up on your parents' mobile. 💪
 
 2. Not only will your parents think you are gifted but you will also avoid their daily phone calls. 🎉 **And that’s just so smart, it must be IoT**. 🕺

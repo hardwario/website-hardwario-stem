@@ -10,7 +10,7 @@ You know the feeling. You are deep into playing games or listening to music at f
 
 In this project you will learn **how to use the button to send a message to a mobile** from anywhere in the house. 👌
 
-You will need the **box with a button** and the **USB dongle**. So you will be fine with just the basic HARDWARIO set, the [**Starter Kit**](https://shop.hardwario.com/p/start-set/). If it´s the first time you are holding the Starter set box in your hands.
+You will need the **box with a button** and the **USB dongle**. So you will be fine with just the basic HARDWARIO set, the [**Starter Kit**](https://www.hardwario.store/p/start-set/). If it´s the first time you are holding the Starter set box in your hands.
 
 
 ## Get it started in Node-RED
@@ -63,49 +63,27 @@ Try it out. **Connect both nodes** by dragging the mouse from one cell to the ot
 
 ![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/button-for-mum/image6.png "Node-RED")
 
-## Set up an app in your mobile
+## Prepare Blynk IoT for notifications
 
-1. Your box with the button will be connected with a smartphone thanks to the Blynk app. And that´s pretty cool. 😎 Download **the Blynk app** from [App Store](https://apps.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481) or [Google Play](https://play.google.com/store/apps/details?id=cc.blynk&hl=en). Sign in or create an account.
-2. Create a new project in the app: click on **New project**.
-3. In  “Choose device”, choose the **HARDWARIO IoT set**.
-4. Confirm with clicking on the **Create** button. Now **a token** has been sent to your email. It's an electronic key to a project with which you can later connect to your phone from the computer.  For now though, stay in the app.  📱<br/><br/>
-❓ **What if I didn´t get the token?** Check the spam folder. The email is not even there? Send it again. In the Blynk app, in the Project settings tab, you will see your auth token, and the **E-mail** button right under it. Click on it and check your mailbox one more time. 👋
+Your box with the button will be connected with a smartphone thanks to the **Blynk IoT** app, where the button press will arrive as a push notification. And that´s pretty cool. 😎
 
-5. **Click on** the black desktop in new project. There you will set up what is supposed to happen in the mobile after clicking on it.
-6. Choose **Notification** from the menu. A notification will appear on your display.
+1. If you don't have one yet, create an account in [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). See [this guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) for how to set up your account, a device template, and a device — you'll need all three. You can also reuse a template from a previous project.
 
+2. In Blynk IoT, a push notification isn't placed on the phone screen like a widget — it's sent as an **Event** defined on your template. On the template detail, open the **Events** tab and add a new event (for example, name it `button` and give it the message you want to receive). Then turn on **Notifications** for that event so Blynk delivers it to your phone. The [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through the template settings.
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/button-for-mum/image1.png "Blynk")
-
-7. Now just click on **Play** in upper right corner.
-
+3. Download the **Blynk IoT app** on your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure notifications are allowed for the app so the message can pop up. 📱
 
 ## Connect your mobile with the box
 
-1. Go back to your computer. On Node-RED desktop, add to both nodes **the dark green Notify node**. You will find it on the left side under the Blynk ws.
-2. Double-click on it to open the node. You will see **a small pencil** on the right. Click on it and settings will open.
-3. Copy the Blynk Cloud Server from the bottom window to the URL field.
+1. Go back to your computer. On the Node-RED canvas, add a node from the **Blynk IoT** section that can trigger your event (the **log event** node) after the Change node with your message.
 
-```
-ws://blynk-cloud.com/websockets
-```
+2. Double-click the node to open it. On the right you'll see **a small pencil**. Click it and a new window opens. In the **Url** field enter `blynk.cloud`, and into the **Auth Token** and **Template ID** fields copy the values from the device detail in the Blynk web app on your computer. Confirm with the **Add** button.
 
-4. Copy the token you have sent to your email to the **Auth Token** field.
+3. Set the node to fire the **Event** you created (the event code, e.g. `button`). This is what turns the button press into the push notification. Confirm with the **Done** button.
 
-![Node-RED Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1565632592/projects/button-for-mum/image2.png "Node-RED Blynk")
-
-Confirm the settings with the **Add** and **Done** buttons, respectively.
-
-5. **Connect Node and Blynk with the node in which you set the message**. Now you have programmed the device so the clicking on the box ➡️ changes into a message ➡️ that will get all to way to your mobile. 👾
-
-![Node-RED Blynk integration](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/button-for-mum/image4.png "Node-RED Blynk integration")
-
-❗ Start the flow and confirm it with the red **Deploy** button top right. 🚨
+4. **Connect the nodes** so the click on the box ➡️ becomes your message ➡️ that fires the Blynk IoT event ➡️ which arrives on your mobile. 👾 Then click the red **Deploy** button in the top right. 🚨
 
 ## Action!
 
 1. Push the button and ...magic happens. 🎇 **The message displays on your mobile!** 🙌
 2. Give the button to your mum. Isn't she amazed?  Family peace is restored before dinner starts. 🤓
-
-
-![Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/button-for-mum/image8.png "Blynk notification")

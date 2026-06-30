@@ -218,98 +218,61 @@ You can find more information about the enclosures in the document [**Enclosures
 
 :::
 
-## Integration with Blynk
+## Integration with Blynk IoT
 
-Now we have assembled our kit and let's start with some basic integration with **Blynk**. We will start without describing what **Blynk** is. If you want get some information about what **Blynk** is. The best thing you can do is visit their [**page**](https://www.blynk.cc/). In our example we will be showing you how to display graphs from sensor's values in **Blynk**'s mobile application.
+Now that the kit is assembled and sending data over MQTT, let's push the sensor values to your phone with **Blynk IoT** (the current Blynk platform — the old Blynk Legacy app and its `blynk-cloud.com` cloud have been shut down). You'll create an account, a device template, and one **Datastream** per measured value, then wire those datastreams in **Node-RED** with the **Blynk IoT Write** node.
 
-Firstly we need to configure our **Node-RED** app.
+For the click-by-click account, template, and device setup, follow the canonical guide:
 
-#### Step 1: Blynk nodes
+[**Blynk app integration — HARDWARIO docs**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
 
-If you are using HARDWARIO raspi version you should be fine, but still check that **Blynk** nodes are installed. \(You can view them on the left side menu in **Node-RED**\). Otherwise you will need to install **Node-RED** package `node-red-contrib-blynk-ws`.
+#### Step 1: Create the Blynk IoT account, template, and device
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-co2-monitor-integration-nodered-1.webp')}/>
-  </div>
-</div>
+If you don't have one yet, create a [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) account, then create a **device template** and a **device** from it. The [guide above](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through each of these. From the device detail you'll need its **Auth Token** and **Template ID** in a later step.
 
-#### Step 2: Add another **Flow** \(you can add them by big plus button next to the flow name\). The new flow will have name **Flow 2**
+#### Step 2: Create one Datastream (Virtual Pin) per value
 
-#### **Step 3:** Insert the following snippet in the newly created **Flow 2** \(using **Menu &gt;&gt; Import**\)
+On the template, open the **Datastreams** tab and add one **Virtual Pin** datastream for each value. Use the **Double** data type for all of them and set sensible units and ranges:
 
-```text
-[{"id":"4914605c.76972","type":"mqtt in","z":"28050251.59dc0e","name":"","topic":"node/climate-monitor:0/lux-meter/0:0/illuminance","qos":"2","broker":"58254712.b61068","x":230,"y":520,"wires":[["431157f1.546248"]]},{"id":"dcf5bf8d.a0242","type":"mqtt in","z":"28050251.59dc0e","name":"","topic":"node/climate-monitor:0/thermometer/0:0/temperature","qos":"2","broker":"58254712.b61068","x":240,"y":580,"wires":[["be96b6aa.eed098"]]},{"id":"2ac2eae7.308486","type":"mqtt in","z":"28050251.59dc0e","name":"","topic":"node/climate-monitor:0/hygrometer/0:4/relative-humidity","qos":"2","broker":"58254712.b61068","x":250,"y":640,"wires":[["dbe4b438.be4ef8"]]},{"id":"431157f1.546248","type":"blynk-ws-out-write","z":"28050251.59dc0e","name":"Pin V0 - Write","pin":0,"pinmode":0,"client":"1b003066.8ca2c","x":659,"y":520,"wires":[]},{"id":"be96b6aa.eed098","type":"blynk-ws-out-write","z":"28050251.59dc0e","name":"","pin":"1","pinmode":0,"client":"1b003066.8ca2c","x":659,"y":580,"wires":[]},{"id":"dbe4b438.be4ef8","type":"blynk-ws-out-write","z":"28050251.59dc0e","name":"","pin":"2","pinmode":0,"client":"1b003066.8ca2c","x":659,"y":640,"wires":[]},{"id":"58254712.b61068","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""},{"id":"1b003066.8ca2c","type":"blynk-ws-client","z":"","name":"","path":"ws://blynk-cloud.com/websockets","key":"","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_low":false,"dbg_pins":""}]
-```
-
-It will look like this:
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-nodered-screen-1.webp')}/>
-  </div>
-</div>
+| Datastream | Virtual Pin | Type | Unit | Suggested range |
+|---|---|---|---|---|
+| Illuminance | V0 | Double | lux | 0 – 1000 |
+| Temperature | V1 | Double | °C | 0 – 50 |
+| Relative humidity | V2 | Double | % | 0 – 100 |
+| Atmospheric pressure | V3 | Double | Pa | 80000 – 110000 |
 
 :::info
-In case you want use it for another sensors just change MQTT topics.
+
+The Virtual Pin numbers above must match the **Virtual Pin** you set on each Node-RED Write node in the next step.
+
 :::
 
-#### Step 4: Connect
+#### Step 3: Wire the values in Node-RED with the Blynk IoT Write node
 
-Configure MQTT node to connect it on you broker. It will propably connect on localhost if you are using Raspberry Pi. After that you will need to configure **Blynk**node. Just fill in URL `ws://blynk-cloud.com/websockets`. The `Auth Token` we will configure later after obtaining one from Blynk over e-mail.
+Add a new **Flow** (the big plus button next to the flow name), then for each value place an **mqtt in** node subscribed to the sensor topic followed by a green **Blynk IoT → write** node. Connect each `mqtt in` node to its `write` node:
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-nodered-screen-2.webp')}/>
-  </div>
-</div>
+```text
+node/climate-monitor:0/lux-meter/0:0/illuminance        →  Write V0
+node/climate-monitor:0/thermometer/0:0/temperature      →  Write V1
+node/climate-monitor:0/hygrometer/0:4/relative-humidity →  Write V2
+node/climate-monitor:0/barometer/0:0/pressure           →  Write V3
+```
 
-#### Step 5: Now download the **Blynk** app from [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk&pcampaignid=web_share). Create an account and log-in.
+:::info
 
+If you want to use this for other sensors, just change the MQTT topics.
 
-#### **Step 6:** After installing, you should create account, login and you should see something like that
+:::
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk-3.webp')}/>
-  </div>
-</div>
+#### Step 4: Configure the Blynk IoT connection
 
-#### Step 7: Now click a button on the top right to scan QR code
+Double-click a **Write** node to open it. On the right, click the **pencil** to edit the Blynk IoT connection. In the **Url** field enter `blynk.cloud`, and copy the **Auth Token** and **Template ID** from your device detail in the Blynk IoT web console. Confirm with **Add**.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk.webp')}/>
-  </div>
-</div>
+Back in the node, set the **Virtual Pin** to the number from the table above (just the number, without the letter "V"). Repeat for each Write node so its Virtual Pin matches its value, then click **Deploy** in the top-right corner.
 
-#### Step 8: Now you should scan following QR code to get everything preconfigured
+#### Step 5: Add widgets in the Blynk IoT app
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk-qr.webp')}/>
-  </div>
-</div>
-
-#### Step 9: You should see something like this
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk-10.webp')}/>
-  </div>
-</div>
-
-#### Step 10: Email
-
-Click the settings wheel and you should see settings for your project. We need to get `Auth Token` which you have to copy to our **Node-RED** in **Blynk** node configuration.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk-auth.webp')}/>
-  </div>
-</div>
-
-#### Step 11: Now deploy your **Node-RED** app and hit play button in your **Blynk** project and you should be done!
+Download the **Blynk IoT** app from the [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk), sign in, and open your device. Add a **Gauge** or **Chart** widget for each value and, in the widget settings, point its **Datastream** at the matching Virtual Pin (V0–V3). Once Node-RED is deployed, the live readings appear on your phone.
 
 ### Related Documents<a id="related-documents"></a>
 

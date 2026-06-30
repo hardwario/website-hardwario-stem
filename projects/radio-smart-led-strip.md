@@ -241,91 +241,57 @@ Follow these steps in **Node-RED**:
   </div>
 </div>
 
-## Integration with Blynk
+## Integration with Blynk IoT
 
-Now we have assembled our Radio Power Controller and let's start with some basic integration with **Blynk**. We will start without describing what **Blynk** is. If you want get some information about what **Blynk** is. The best thing you can do is to visit their [**page**](https://www.blynk.cc/). In our example we will be showing you how to control LED strip colours in **Blynk**'s mobile application.
+Now that the Radio Power Controller is assembled and responding to the local colour test, let's control it from your phone with **Blynk IoT** (the current Blynk platform — the old Blynk Legacy cloud has been shut down). Everything here follows the canonical [**HARDWARIO Blynk IoT guide**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) — open it alongside this page for the exact click paths and screenshots; below we only describe the mechanism.
 
-Firstly we need to configure our **Node-RED** app.
+In this project the data direction is **app → device**: each widget you tap in the Blynk IoT app writes a value to a Virtual Pin, Node-RED **reads** that pin, and forwards it to the LED strip / relay over the MQTT-out logic you already built.
 
-#### **Step 1: Blynk nodes**
+#### Step 1: Create a Blynk IoT account, template and device
 
-If you are using HARDWARIO raspi version you should be fine, but still check that **Blynk** nodes are installed. \(You can view them on the left side menu in **Node-RED**\). Otherwise you will need to install **Node-RED** package `node-red-contrib-blynk-ws`.
+If you don't have one yet, create an account in the [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) app, then create a **device template** and a **device** from it. The [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through all of this; you can also reuse a template from a previous project. From the device detail, note its **Auth Token** and **Template ID** — you'll paste them into Node-RED in Step 4.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-nodered-1.webp')}/>
-  </div>
-</div>
+#### Step 2: Create a Datastream (Virtual Pin) for each control
 
-#### **Step 2:** Add another flow \(you can add them by big plus button next to the flow name\)
+On the template detail, open the **Datastreams** tab, click **Edit**, then **+ New Datastream** and choose **Virtual Pin**. Create one Virtual Pin per control you want over the LED strip and the relay:
 
-#### Step 3: Insert the following snippet in the flow \(using **Menu &gt;&gt; Import &gt;&gt; Clipboard**\) and click in Flow 3 tab
+| Control | Virtual Pin | Datastream type | Sends to device |
+|---|---|---|---|
+| LED strip colour | V1 | String (colour) | `led-strip/-/color/set` |
+| White level | V2 | Integer `0`–`255` | `led-strip/-/color/set` (white channel) |
+| LED strip on/off | V3 | Integer `0`/`1` | `led-strip/-/color/set` (last colour / off) |
+| Relay (power appliance) | V4 | Integer `0`/`1` | `relay/-/state/set` |
+| Rainbow effect | V5 | Integer `0`/`1` | `led-strip/-/effect/set` (`rainbow`) |
+| Theater-chase effect | V6 | Integer `0`/`1` | `led-strip/-/effect/set` (`theater-chase-rainbow`) |
+| Brightness | V7 | Integer `0`–`100` | `led-strip/-/brightness/set` |
 
-```text
-[{"id":"702c9447.9b790c","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"1","client":"746d7fe1.2a0be","x":330,"y":280,"wires":[["4da0fdbd.a3c614"]]},{"id":"4da0fdbd.a3c614","type":"function","z":"aaf5722e.dfdca","name":"Convert to BC format","func":"var finalString = '\"#'\nvar colorToSave = \"\";\nmsg.arrayOfValues.forEach((color) => {\n    var carry = (parseInt(color)).toString(16)\n    if(carry.length == 1) carry = \"0\" + carry;\n    finalString += carry;\n    colorToSave += carry;\n});\n\nflow.set(\"color\", colorToSave);\n\nif((flow.get(\"ledstrip\")) == false){\n    msg.payload = '\"#000000(00)\"'\n}\nelse{\n    var white = flow.get(\"white\");\n    if(white == null) white = \"00\";\n    msg.payload = finalString + '(' + white + ')\"'; \n}\n\n\nmsg.topic = \"node/power-controller:0/led-strip/-/color/set\";\nreturn msg;\n","outputs":1,"noerr":0,"x":600,"y":280,"wires":[["a7ef9db0.cc602"]]},{"id":"a7ef9db0.cc602","type":"mqtt out","z":"aaf5722e.dfdca","name":"","topic":"","qos":"","retain":"","broker":"71afb0a.14d505","x":870,"y":420,"wires":[]},{"id":"b596fcc7.b5206","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"4","client":"746d7fe1.2a0be","x":330,"y":460,"wires":[["80140f23.46bf6"]]},{"id":"80140f23.46bf6","type":"function","z":"aaf5722e.dfdca","name":"String to bool parser","func":"if(msg.payload == true)\n{\n    msg.payload = true;\n}\nelse{\n    msg.payload = false;\n}\nmsg.topic = \"node/power-controller:0/relay/-/state/set\";\nreturn msg;","outputs":1,"noerr":0,"x":600,"y":460,"wires":[["a7ef9db0.cc602"]]},{"id":"62416cd0.a6dbf4","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"3","client":"746d7fe1.2a0be","x":330,"y":400,"wires":[["3bce27cc.257308"]]},{"id":"3bce27cc.257308","type":"function","z":"aaf5722e.dfdca","name":"Handler","func":"var lastColor = flow.get(\"color\")|| \"000000(00)\";\n\nif(msg.payload == false) {\n    msg.payload = '\"#000000(00)\"';\n    flow.set(\"ledstrip\", false);\n}\nelse {\n    msg.payload = '\"#' + '' + lastColor + '\"';\n    flow.set(\"ledstrip\", true);\n}\nmsg.topic = \"node/power-controller:0/led-strip/-/color/set\";\n\nreturn msg;","outputs":1,"noerr":0,"x":640,"y":400,"wires":[["a7ef9db0.cc602"]]},{"id":"d619d828.3e1bf8","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"5","client":"746d7fe1.2a0be","x":330,"y":520,"wires":[["9b87dc69.53d55"]]},{"id":"e267bf2d.7e292","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"6","client":"746d7fe1.2a0be","x":330,"y":580,"wires":[["81fcc52c.023c08"]]},{"id":"3121623b.8b75de","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"2","client":"746d7fe1.2a0be","x":330,"y":340,"wires":[["99a36ea2.e29bf"]]},{"id":"9b87dc69.53d55","type":"function","z":"aaf5722e.dfdca","name":"Rainbow","func":"if(msg.payload == true && flow.get(\"ledstrip\")||true){\n    msg.payload = '{\"type\":\"rainbow\", \"wait\":50}';\n    msg.topic = \"node/power-controller:0/led-strip/-/effect/set\"   \n}\n\nreturn msg;","outputs":1,"noerr":0,"x":640,"y":520,"wires":[["a7ef9db0.cc602"]]},{"id":"81fcc52c.023c08","type":"function","z":"aaf5722e.dfdca","name":"Theater chase","func":"if(msg.payload == true && flow.get(\"ledstrip\")||true){\n    msg.payload = '{\"type\":\"theater-chase-rainbow\", \"wait\":50}';\n    msg.topic = \"node/power-controller:0/led-strip/-/effect/set\"   \n}\n\nreturn msg;","outputs":1,"noerr":0,"x":620,"y":580,"wires":[["a7ef9db0.cc602"]]},{"id":"99a36ea2.e29bf","type":"function","z":"aaf5722e.dfdca","name":"White color handler","func":"var carry = (parseInt(msg.payload)).toString(16)\nif(carry.length == 1) carry = \"0\" + carry;\n\nflow.set(\"white\", carry);\n\nvar color = flow.get(\"color\");\nif(color == null) color = \"000000\";\n\nmsg.payload = '\"#' + color +'(' + carry + ')\"';\nmsg.topic = \"node/power-controller:0/led-strip/-/color/set\";\nreturn msg;","outputs":1,"noerr":0,"x":610,"y":340,"wires":[["a7ef9db0.cc602"]]},{"id":"d40dc7b0.acf648","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"7","client":"746d7fe1.2a0be","x":330,"y":640,"wires":[["a03ff4eb.de9fd8"]]},{"id":"a03ff4eb.de9fd8","type":"function","z":"aaf5722e.dfdca","name":"Brightness handler","func":"if(msg.payload == true && flow.get(\"ledstrip\")||true){\n    msg.payload = msg.payload;\n    msg.topic = \"node/power-controller:0/led-strip/-/brightness/set\"   \n}\n\nreturn msg;","outputs":1,"noerr":0,"x":610,"y":640,"wires":[["a7ef9db0.cc602"]]},{"id":"746d7fe1.2a0be","type":"blynk-ws-client","z":"","name":"","path":"ws://blynk-cloud.com/websockets","key":"","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_low":false,"dbg_pins":""},{"id":"71afb0a.14d505","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
-```
+Save the template when you're done. (The Virtual Pin numbers above are just an example — use whatever free pins you like, but keep them consistent with the Node-RED nodes in Step 4.)
 
-It will look like this:
+#### Step 3: Add the matching widgets in the Blynk IoT app
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-nodered-2.webp')}/>
-  </div>
-</div>
+Download the **Blynk IoT** app from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk), sign in, and open the device you created. On its dashboard add a widget for each Datastream and bind each widget to its Virtual Pin:
 
-#### Step 4: Configure Blynk connection
+* **Color** widget → colour pin (V1)
+* **Slider** widget → white level (V2) and another for brightness (V7)
+* **Button** (switch mode) → on/off (V3) and the relay (V4)
+* **Button** or **Segmented Switch** → rainbow effect (V5) and theater-chase effect (V6)
 
-Configure MQTT node to connect it on you broker. It will propably connect on localhost if you are using Raspberry Pi. After that you will need to configure **Blynk**node. Just fill in URL `ws://blynk-cloud.com/websockets`. The `Auth Token` we will configure later after obtaining one from Blynk over e-mail.
+The guide shows exactly how to add and bind a widget.
 
+#### Step 4: Read the Virtual Pins in Node-RED
 
-#### Step 5: Mobile app
+Add a new flow in Node-RED. For each control, drop a Blynk IoT **Read** node (found under the Blynk IoT section in the left palette) and feed it into a small **function** node that maps the incoming value to the right MQTT topic, then into your existing **MQTT out** node. The mapping mirrors the local Communication Test topics — for example colour and white build a `node/power-controller:0/led-strip/-/color/set` payload, on/off restores the last colour or sends black, the relay sends `node/power-controller:0/relay/-/state/set`, the effects send `node/power-controller:0/led-strip/-/effect/set`, and brightness sends `node/power-controller:0/led-strip/-/brightness/set`.
 
+Configure each Read node by clicking the **pencil** next to the connection and filling in:
 
-Now download the **Blynk** app from [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk&pcampaignid=web_share). Create an account and log-in.
+* **Url**: `blynk.cloud`
+* **Auth Token** and **Template ID**: the values from your device detail (Step 1)
 
-#### Step 6: After installing, you should create account, login and you should see something like that
+Confirm with **Add**, then in the **Virtual Pin** field enter the pin number for that control (just the number, without the letter "V"). Confirm with **Done**.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-1.webp')}/>
-  </div>
-</div>
+#### Step 5: Deploy and try it
 
-#### Step 7: Now click a button on the top right to scan QR code
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-2.webp')}/>
-  </div>
-</div>
-
-#### Step 8: Now you should scan following QR code to get everything preconfigured
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-qr.webp')}/>
-  </div>
-</div>
-
-#### Step 9: You should see something like this
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-3.webp')}/>
-  </div>
-</div>
-
-#### Step 10: Email
-
-Click the settings wheel and you should see settings for your project. We need to get `Auth Token` which you have to copy to our **Node-RED** in **Blynk** node configuration.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-4.webp')}/>
-  </div>
-</div>
-
-#### Step 11: Now deploy your **Node-RED** app and hit play button in your **Blynk** project and you should be done!
+Click the red **Deploy** button in Node-RED, then open the device in the Blynk IoT app. Tap the widgets — the colour, white level, on/off, relay, effects and brightness should now drive the LED strip and the power appliance in real time. 🌈
 
 ### Related Documents <a id="related-documents"></a>
 
