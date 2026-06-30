@@ -10,7 +10,7 @@ Zvedni rodinné pračce IQ. 🤖 Naprogramuj pomocí krabičky IoT upozornění,
 
 V tomhle projektu se naučíš **nastavit krabičku tak, že pozná, až pračka dopere**, a pošle o tom **upozornění na mobil**.📱 👈
 
-Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Start Setem**](https://shop.hardwario.com/p/start-set/).
+Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Start Setem**](https://www.hardwario.store/p/start-set/).
 
 
 ## Stáhni si nový firmware

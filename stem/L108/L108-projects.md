@@ -1,5 +1,5 @@
 ---
-slug: iot-pulse-monitor-projects-cs
+slug: iot-pulse-monitor-projects
 title: Projects
 ---
 import Image from '@theme/IdealImage';

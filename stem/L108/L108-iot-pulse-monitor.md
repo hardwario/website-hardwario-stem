@@ -1,5 +1,5 @@
 ---
-slug: iot-pulse-monitor-cs
+slug: iot-pulse-monitor
 title: 'L108: IoT Pulse Monitor'
 ---
 import Image from '@theme/IdealImage';

@@ -10,7 +10,7 @@ I mladí programátoři chtějí znát svůj osud. Vyvěšti si ho s krabičkou.
 
 V tomhle projektu se naučíš udělat z krabičky věšteckou kouli neboli **magic 8-ball**. ️🎱 Nastavíš ji tak, aby při zatřepání náhodně zvolila jednu z možností.
 
-Budeš potřebovat **krabičku s tlačítkem a USB dongle**. Vystačíš si tedy se základní HARDWARIO sadou, [**Start Set**](https://shop.hardwario.com/p/start-set/).
+Budeš potřebovat **krabičku s tlačítkem a USB dongle**. Vystačíš si tedy se základní HARDWARIO sadou, [**Start Set**](https://www.hardwario.store/p/start-set/).
 
 
 ## Rozjeď to v Node-RED

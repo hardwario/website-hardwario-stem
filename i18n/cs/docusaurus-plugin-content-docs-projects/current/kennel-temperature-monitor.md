@@ -8,7 +8,7 @@ title: Monitor teploty psí boudy
 Zima, že bys ani psa nevyhnal? Hlídej teplotní komfort svého nejlepšího kámoše a sleduj teplotu v jeho boudě. 🐶
 
 
-S tímhle projektem se naučíš **měřit teplotu s IoT a zobrazit ji na grafu**. Postačí ti základní HARDWARIO sada, tedy [**Start Set**](https://shop.hardwario.com/p/start-set/). Uvidíš, že ti hafan poděkuje. Třeba míň bobky. Nebo tak něco. 🐩
+S tímhle projektem se naučíš **měřit teplotu s IoT a zobrazit ji na grafu**. Postačí ti základní HARDWARIO sada, tedy [**Start Set**](https://www.hardwario.store/p/start-set/). Uvidíš, že ti hafan poděkuje. Třeba míň bobky. Nebo tak něco. 🐩
 
 
 ## Připrav si krabičku

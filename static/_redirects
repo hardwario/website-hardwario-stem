@@ -10,3 +10,20 @@
 /cs/stem/L107/iot-vibration-monitor-introduction-cs  /cs/stem/L107/iot-light-monitor-introduction       301
 /cs/stem/L107/iot-vibration-monitor-experiment-cs    /cs/stem/L107/iot-light-monitor-experiment         301
 /cs/stem/L107/iot-vibration-monitor-projects-cs      /cs/stem/L107/iot-light-monitor-projects           301
+
+# EN lesson routes had a copy-pasted Czech "-cs" slug suffix; slugs fixed, old URLs 301'd.
+/stem/L101/what-is-iot-application-cs                 /stem/L101/what-is-iot-application                  301
+/stem/L106/iot-vibration-monitor-cs                   /stem/L106/iot-vibration-monitor                    301
+/stem/L106/iot-vibration-monitor-introduction-cs      /stem/L106/iot-vibration-monitor-introduction       301
+/stem/L106/iot-vibration-monitor-theory-cs            /stem/L106/iot-vibration-monitor-theory             301
+/stem/L106/iot-vibration-monitor-presentation-cs      /stem/L106/iot-vibration-monitor-presentation       301
+/stem/L106/iot-vibration-monitor-experiment-cs        /stem/L106/iot-vibration-monitor-experiment         301
+/stem/L106/iot-vibration-monitor-projects-cs          /stem/L106/iot-vibration-monitor-projects           301
+/stem/L107/iot-light-monitor-introduction-cs          /stem/L107/iot-light-monitor-introduction           301
+/stem/L107/iot-light-monitor-experiment-cs            /stem/L107/iot-light-monitor-experiment             301
+/stem/L108/iot-pulse-monitor-cs                       /stem/L108/iot-pulse-monitor                        301
+/stem/L108/iot-pulse-monitor-introduction-cs          /stem/L108/iot-pulse-monitor-introduction           301
+/stem/L108/iot-pulse-monitor-theory-cs                /stem/L108/iot-pulse-monitor-theory                 301
+/stem/L108/iot-pulse-monitor-presentation-cs          /stem/L108/iot-pulse-monitor-presentation           301
+/stem/L108/iot-pulse-monitor-experiment-cs            /stem/L108/iot-pulse-monitor-experiment             301
+/stem/L108/iot-pulse-monitor-projects-cs              /stem/L108/iot-pulse-monitor-projects               301

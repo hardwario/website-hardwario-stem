@@ -12,7 +12,7 @@ Máš v šuplíku deníček, básničky nebo tajný vládní dokument? Pokud je 
 
 V tomhle projektu se naučíš vytvořit **detektor otevírání šuplíku, který ti pošle upozornění na mobil**. 👈
 
-Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Starter Kitem**](https://shop.hardwario.com/starter-kit/).
+Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Starter Kitem**](https://www.hardwario.store/starter-kit/).
 
 
 ## Stáhni si nový firmware

@@ -1,5 +1,5 @@
 ---
-slug: iot-vibration-monitor-introduction-cs
+slug: iot-vibration-monitor-introduction
 title: Introduction
 ---
 import Image from '@theme/IdealImage';

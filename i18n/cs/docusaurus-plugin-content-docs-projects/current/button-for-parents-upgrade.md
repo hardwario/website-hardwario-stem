@@ -12,7 +12,7 @@ V tomhle projektu se naučíš **nastavit jinou zprávu na jiný čas**, odeslat
 
 Základní verzi tohohle projektu najdeš tady: [Vyrob si IoT tlačítko, se kterým tě máma zavolá k večeři](/cs/projects/button-for-parents/).
 
-Budeš potřebovat **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou, tedy [**Start setem**](https://shop.hardwario.com/p/start-set/).
+Budeš potřebovat **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou, tedy [**Start setem**](https://www.hardwario.store/p/start-set/).
 
 
 ## Připrav si Node-RED

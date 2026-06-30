@@ -7,7 +7,7 @@ title: Teplota lednice
 
 Myslíš si, že je v celé lednici stejná zima? A jak je na tom mrazák, mrazí dobře? Odhal to s IoT projektem pro Starter Kit – teplotu uvidíš přímo ve svém mobilu. ❄
 
-S tímhle projektem se naučíš **měřit teplotu s IoT**. Postačí ti základní HARDWARIO sada, tedy [**Starter Kit**](https://shop.hardwario.com/starter-kit/).
+S tímhle projektem se naučíš **měřit teplotu s IoT**. Postačí ti základní HARDWARIO sada, tedy [**Starter Kit**](https://www.hardwario.store/starter-kit/).
 
 
 ## Připrav si krabičku

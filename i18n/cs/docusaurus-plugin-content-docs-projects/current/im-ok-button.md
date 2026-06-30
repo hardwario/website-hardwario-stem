@@ -10,7 +10,7 @@ Rodiče ti každý den volají, jestli jsi ze školy dorazil domů? Je to sice o
 
 V tomhle projektu se naučíš, **jak tlačítkem poslat zprávu do mobilu svých rodičů**. 👩👱
 
-Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíš si se základní HARDWARIO sadou, tedy [**Start Set**](https://shop.hardwario.com/p/start-set/).
+Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíš si se základní HARDWARIO sadou, tedy [**Start Set**](https://www.hardwario.store/p/start-set/).
 
 
 ## Rozjeď to v Node-RED

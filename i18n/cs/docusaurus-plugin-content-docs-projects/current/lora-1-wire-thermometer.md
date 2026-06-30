@@ -20,7 +20,7 @@ K přijímání dat můžete použít komunitu The Things Network.
 
 ## Nahrání firmwaru
 
-#### Krok 1: Stáhněte si nejnovější verzi [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+#### Krok 1: Stáhněte si nejnovější verzi [**HARDWARIO Playground**](https://github.com/hardwario/hardwario-playground/releases/latest)
 
 #### Krok 2: Připojte Core Module k počítači.
 

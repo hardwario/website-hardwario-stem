@@ -8,7 +8,7 @@ title: Nejteplejší a nejchladnější místo
 
 Tenhle projekt odhalí všechna tajemství tvojí školy, ať už někdo loví duchy nebo chce najít žhavé místo pro svoje příští rande. Změř se svojí třídou teplotu v různých koutech školy a zkus být ten, kdo objeví ten největší extrém. 😱
 
-S tímhle projektem se naučíš měřit teplotu s IoT a zobrazit ji na svém mobilu. Postačí ti základní HARDWARIO sada, tedy [**Start Set**](https://shop.hardwario.com/p/start-set/).
+S tímhle projektem se naučíš měřit teplotu s IoT a zobrazit ji na svém mobilu. Postačí ti základní HARDWARIO sada, tedy [**Start Set**](https://www.hardwario.store/p/start-set/).
 
 Hru **navrhni učiteli fyziky** jako super zpestření hodiny, nebo ji s kamarády podnikni jenom tak, po škole.
 

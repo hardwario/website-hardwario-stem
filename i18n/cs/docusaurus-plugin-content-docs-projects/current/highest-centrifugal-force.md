@@ -10,7 +10,7 @@ Pamatuješ si ještě káču? Asi jsi měl dřevěnou nebo plastovou, ale vsadí
 
 V tomhle projektu se naučíš vytvořit **změřit rychlé točení krabičky**. 👈
 
-Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Start Set**](https://shop.hardwario.com/p/start-set/).
+Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Start Set**](https://www.hardwario.store/p/start-set/).
 
 
 ## Stáhni si nový firmware

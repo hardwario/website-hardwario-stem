@@ -9,7 +9,7 @@ Znáš to? Paříš jak drak nebo posloucháš hudbu na plné pecky, a když tě
 
 V tomhle projektu se naučíš, **jak tlačítkem poslat zprávu do mobilu** odkudkoli v domě. 👌
 
-Budeš potřebovat krabičku s **tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou, tedy [**Starter setem**](https://shop.hardwario.com/p/start-set/).
+Budeš potřebovat krabičku s **tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou, tedy [**Starter setem**](https://www.hardwario.store/p/start-set/).
 
 
 ## Rozjeď to v Node-RED

@@ -10,7 +10,7 @@ S touhle hrou se s kámoši nudit nebudete. Nastav si svůj Start Set tak, aby d
 
 V tomhle projektu se naučíš vytvořit takzvaný **still position detector**, tedy **detektor pohybu**. 👈
 
-Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Start Setem**](https://shop.hardwario.com/Start-set/).
+Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Start Setem**](https://www.hardwario.store/Start-set/).
 
 
 ## Stáhni si nový firmware

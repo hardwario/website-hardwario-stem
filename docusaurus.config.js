@@ -179,7 +179,7 @@ const config = {
             items: [
               {
                 label: 'Homepage',
-                href: 'https://hardwario.com',
+                href: 'https://www.hardwario.com',
               },
               {
                 label: 'Store',

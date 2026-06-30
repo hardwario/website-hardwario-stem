@@ -43,7 +43,7 @@ Sestavte všechny tři moduly dohromady, abyste vytvořili **Sadu Push**. Všimn
 
 V tomto kroku spustíte aplikaci **Playground**, která spravuje Radio Dongle, Push Button a díky **Node-RED** propojuje vše dohromady.
 
-#### Krok 1: Stáhněte a spusťte nejnovější [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+#### Krok 1: Stáhněte a spusťte nejnovější [**HARDWARIO Playground**](https://github.com/hardwario/hardwario-playground/releases/latest)
 
 <div class="container">
   <div class="row">

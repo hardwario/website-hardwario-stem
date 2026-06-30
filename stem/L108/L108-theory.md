@@ -1,5 +1,5 @@
 ---
-slug: iot-pulse-monitor-theory-cs
+slug: iot-pulse-monitor-theory
 title: Teorie
 ---
 import Image from '@theme/IdealImage';

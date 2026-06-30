@@ -1,5 +1,5 @@
 ---
-slug: iot-vibration-monitor-theory-cs
+slug: iot-vibration-monitor-theory
 title: Theory
 ---
 import Image from '@theme/IdealImage';

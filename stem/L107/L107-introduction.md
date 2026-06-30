@@ -1,5 +1,5 @@
 ---
-slug: iot-light-monitor-introduction-cs
+slug: iot-light-monitor-introduction
 title: Introduction
 ---
 import Image from '@theme/IdealImage';

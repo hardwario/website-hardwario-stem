@@ -1,5 +1,5 @@
 ---
-slug: iot-pulse-monitor-experiment-cs
+slug: iot-pulse-monitor-experiment
 title: Experiment
 ---
 import Image from '@theme/IdealImage';

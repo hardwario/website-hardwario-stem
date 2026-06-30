@@ -44,7 +44,7 @@ Můžete také připojit Radio Dongle k Raspberry Pi nebo jinému jednodeskovém
 
 ## Stažení HARDWARIO Playground
 
-Stáhněte si nejnovější verzi [HARDWARIO Playground](https://github.com/bigclownlabs/bch-playground/releases) pro svůj operační systém. Po stažení spusťte aplikaci Playground.
+Stáhněte si nejnovější verzi [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) pro svůj operační systém. Po stažení spusťte aplikaci Playground.
 
 
 <div class="container">
