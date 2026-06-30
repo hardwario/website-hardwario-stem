@@ -14,16 +14,16 @@ const sidebars = {
       label: 'L101: What is IoT',
       link: {
         type: 'doc',
-        id: 'L101/L101-what-is-iot',
+        id: 'lesson-101/L101-what-is-iot',
       },
       collapsed: true,
       items: [
-        'L101/L101-introduction',
-        'L101/L101-theory',
-        'L101/L101-experiment',
-        'L101/L101-projects',
-        'L101/L101-presentation',
-        'L101/L101-assessment'
+        'lesson-101/L101-introduction',
+        'lesson-101/L101-theory',
+        'lesson-101/L101-experiment',
+        'lesson-101/L101-projects',
+        'lesson-101/L101-presentation',
+        'lesson-101/L101-assessment'
       ],
     },
 
@@ -32,16 +32,16 @@ const sidebars = {
       label: 'L102: HARDWARIO TOWER IoT Kit',
       link: {
         type: 'doc',
-        id: 'L102/L102-hardwario-tower-iot-kit',
+        id: 'lesson-102/L102-hardwario-tower-iot-kit',
       },
       collapsed: true,
       items: [
-        'L102/L102-introduction',
-        'L102/L102-theory',
-        'L102/L102-experiment',
-        'L102/L102-projects',
-        'L102/L102-presentation',
-        'L102/L102-assessment'
+        'lesson-102/L102-introduction',
+        'lesson-102/L102-theory',
+        'lesson-102/L102-experiment',
+        'lesson-102/L102-projects',
+        'lesson-102/L102-presentation',
+        'lesson-102/L102-assessment'
       ],
     },
 
@@ -50,16 +50,16 @@ const sidebars = {
       label: 'L103: IoT Push Button',
       link: {
         type: 'doc',
-        id: 'L103/L103-iot-push-button',
+        id: 'lesson-103/L103-iot-push-button',
       },
       collapsed: true,
       items: [
-        'L103/L103-introduction',
-        'L103/L103-theory',
-        'L103/L103-experiment',
-        'L103/L103-projects',
-        'L103/L103-presentation',
-        'L103/L103-assessment'
+        'lesson-103/L103-introduction',
+        'lesson-103/L103-theory',
+        'lesson-103/L103-experiment',
+        'lesson-103/L103-projects',
+        'lesson-103/L103-presentation',
+        'lesson-103/L103-assessment'
       ],
     },
 
@@ -68,16 +68,16 @@ const sidebars = {
       label: 'L104: IoT Temperature and Humidity Sensor',
       link: {
         type: 'doc',
-        id: 'L104/L104-iot-temperature-and-humidity-monitor',
+        id: 'lesson-104/L104-iot-temperature-and-humidity-monitor',
       },
       collapsed: true,
       items: [
-        'L104/L104-introduction',
-        'L104/L104-theory',
-        'L104/L104-experiment',
-        'L104/L104-projects',
-        'L104/L104-presentation',
-        'L104/L104-assessment'
+        'lesson-104/L104-introduction',
+        'lesson-104/L104-theory',
+        'lesson-104/L104-experiment',
+        'lesson-104/L104-projects',
+        'lesson-104/L104-presentation',
+        'lesson-104/L104-assessment'
       ],
     },
 
@@ -86,16 +86,16 @@ const sidebars = {
       label: 'L105: IoT Air Quality Monitor',
       link: {
         type: 'doc',
-        id: 'L105/L105-iot-indoor-air-quality-monitor',
+        id: 'lesson-105/L105-iot-indoor-air-quality-monitor',
       },
       collapsed: true,
       items: [
-        'L105/L105-introduction',
-        'L105/L105-theory',
-        'L105/L105-experiment',
-        'L105/L105-projects',
-        'L105/L105-presentation',
-        'L105/L105-assessment'
+        'lesson-105/L105-introduction',
+        'lesson-105/L105-theory',
+        'lesson-105/L105-experiment',
+        'lesson-105/L105-projects',
+        'lesson-105/L105-presentation',
+        'lesson-105/L105-assessment'
       ],
     },
 
@@ -104,16 +104,16 @@ const sidebars = {
       label: 'L106: IoT Vibration Monitor',
       link: {
         type: 'doc',
-        id: 'L106/L106-iot-vibration-monitor',
+        id: 'lesson-106/L106-iot-vibration-monitor',
       },
       collapsed: true,
       items: [
-        'L106/L106-introduction',
-        'L106/L106-theory',
-        'L106/L106-experiment',
-        'L106/L106-projects',
-        'L106/L106-presentation',
-        'L106/L106-assessment'
+        'lesson-106/L106-introduction',
+        'lesson-106/L106-theory',
+        'lesson-106/L106-experiment',
+        'lesson-106/L106-projects',
+        'lesson-106/L106-presentation',
+        'lesson-106/L106-assessment'
       ],
     },
     {
@@ -121,16 +121,16 @@ const sidebars = {
       label: 'L107: IoT Light Monitor',
       link: {
         type: 'doc',
-        id: 'L107/L107-iot-light-monitor',
+        id: 'lesson-107/L107-iot-light-monitor',
       },
       collapsed: true,
       items: [
-        'L107/L107-introduction',
-        'L107/L107-theory',
-        'L107/L107-experiment',
-        'L107/L107-projects',
-        'L107/L107-presentation',
-        'L107/L107-assessment'
+        'lesson-107/L107-introduction',
+        'lesson-107/L107-theory',
+        'lesson-107/L107-experiment',
+        'lesson-107/L107-projects',
+        'lesson-107/L107-presentation',
+        'lesson-107/L107-assessment'
 
       ],
     },
@@ -139,16 +139,16 @@ const sidebars = {
       label: 'L108: IoT Pulse Monitor',
       link: {
         type: 'doc',
-        id: 'L108/L108-iot-pulse-monitor',
+        id: 'lesson-108/L108-iot-pulse-monitor',
       },
       collapsed: true,
       items: [
-        'L108/L108-introduction',
-        'L108/L108-theory',
-        'L108/L108-experiment',
-        'L108/L108-projects',
-        'L108/L108-presentation',
-        'L108/L108-assessment'
+        'lesson-108/L108-introduction',
+        'lesson-108/L108-theory',
+        'lesson-108/L108-experiment',
+        'lesson-108/L108-projects',
+        'lesson-108/L108-presentation',
+        'lesson-108/L108-assessment'
 
       ],
     },
@@ -158,16 +158,16 @@ const sidebars = {
       label: 'L109: IoT Soil Monitor',
       link: {
         type: 'doc',
-        id: 'L109/L109-iot-soil-monitor',
+        id: 'lesson-109/L109-iot-soil-monitor',
       },
       collapsed: true,
       items: [
-        'L109/L109-introduction',
-        'L109/L109-theory',
-        'L109/L109-experiment',
-        'L109/L109-projects',
-        'L109/L109-presentation',
-        'L109/L109-assessment'
+        'lesson-109/L109-introduction',
+        'lesson-109/L109-theory',
+        'lesson-109/L109-experiment',
+        'lesson-109/L109-projects',
+        'lesson-109/L109-presentation',
+        'lesson-109/L109-assessment'
       ],
     },
     /*

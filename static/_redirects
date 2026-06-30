@@ -1,29 +1,49 @@
 # Cloudflare Workers static-asset redirects (migrated from netlify.toml).
 # STEM slug-fix redirects (EN + CS).
-/stem/L106/iot-vibration-monitor-asessment-cs        /stem/L106/iot-vibration-monitor-assessment        301
-/stem/L107/iot-light-monitor-asessment               /stem/L107/iot-light-monitor-assessment            301
-/stem/L108/iot-pulse-monitor-asessment-cs            /stem/L108/iot-pulse-monitor-assessment            301
-/cs/stem/L106/iot-vibration-monitor-asessment-cs     /cs/stem/L106/iot-vibration-monitor-assessment-cs  301
-/cs/stem/L107/iot-light-monitor-asessment-cs         /cs/stem/L107/iot-light-monitor-assessment-cs      301
-/cs/stem/L108/iot-pulse-monitor-asessment-cs         /cs/stem/L108/iot-pulse-monitor-assessment-cs      301
-/stem/L107/iot-vibration-monitor-projects-cs         /stem/L107/iot-light-monitor-projects              301
-/cs/stem/L107/iot-vibration-monitor-introduction-cs  /cs/stem/L107/iot-light-monitor-introduction       301
-/cs/stem/L107/iot-vibration-monitor-experiment-cs    /cs/stem/L107/iot-light-monitor-experiment         301
-/cs/stem/L107/iot-vibration-monitor-projects-cs      /cs/stem/L107/iot-light-monitor-projects           301
+/stem/L106/iot-vibration-monitor-asessment-cs        /stem/lesson-106/iot-vibration-monitor-assessment      301
+/stem/L107/iot-light-monitor-asessment               /stem/lesson-107/iot-light-monitor-assessment          301
+/stem/L108/iot-pulse-monitor-asessment-cs            /stem/lesson-108/iot-pulse-monitor-assessment          301
+/cs/stem/L106/iot-vibration-monitor-asessment-cs     /cs/stem/lesson-106/iot-vibration-monitor-assessment-cs 301
+/cs/stem/L107/iot-light-monitor-asessment-cs         /cs/stem/lesson-107/iot-light-monitor-assessment-cs    301
+/cs/stem/L108/iot-pulse-monitor-asessment-cs         /cs/stem/lesson-108/iot-pulse-monitor-assessment-cs    301
+/stem/L107/iot-vibration-monitor-projects-cs         /stem/lesson-107/iot-light-monitor-projects            301
+/cs/stem/L107/iot-vibration-monitor-introduction-cs  /cs/stem/lesson-107/iot-light-monitor-introduction     301
+/cs/stem/L107/iot-vibration-monitor-experiment-cs    /cs/stem/lesson-107/iot-light-monitor-experiment       301
+/cs/stem/L107/iot-vibration-monitor-projects-cs      /cs/stem/lesson-107/iot-light-monitor-projects         301
 
 # EN lesson routes had a copy-pasted Czech "-cs" slug suffix; slugs fixed, old URLs 301'd.
-/stem/L101/what-is-iot-application-cs                 /stem/L101/what-is-iot-application                  301
-/stem/L106/iot-vibration-monitor-cs                   /stem/L106/iot-vibration-monitor                    301
-/stem/L106/iot-vibration-monitor-introduction-cs      /stem/L106/iot-vibration-monitor-introduction       301
-/stem/L106/iot-vibration-monitor-theory-cs            /stem/L106/iot-vibration-monitor-theory             301
-/stem/L106/iot-vibration-monitor-presentation-cs      /stem/L106/iot-vibration-monitor-presentation       301
-/stem/L106/iot-vibration-monitor-experiment-cs        /stem/L106/iot-vibration-monitor-experiment         301
-/stem/L106/iot-vibration-monitor-projects-cs          /stem/L106/iot-vibration-monitor-projects           301
-/stem/L107/iot-light-monitor-introduction-cs          /stem/L107/iot-light-monitor-introduction           301
-/stem/L107/iot-light-monitor-experiment-cs            /stem/L107/iot-light-monitor-experiment             301
-/stem/L108/iot-pulse-monitor-cs                       /stem/L108/iot-pulse-monitor                        301
-/stem/L108/iot-pulse-monitor-introduction-cs          /stem/L108/iot-pulse-monitor-introduction           301
-/stem/L108/iot-pulse-monitor-theory-cs                /stem/L108/iot-pulse-monitor-theory                 301
-/stem/L108/iot-pulse-monitor-presentation-cs          /stem/L108/iot-pulse-monitor-presentation           301
-/stem/L108/iot-pulse-monitor-experiment-cs            /stem/L108/iot-pulse-monitor-experiment             301
-/stem/L108/iot-pulse-monitor-projects-cs              /stem/L108/iot-pulse-monitor-projects               301
+/stem/L101/what-is-iot-application-cs                /stem/lesson-101/what-is-iot-application               301
+/stem/L106/iot-vibration-monitor-cs                  /stem/lesson-106/iot-vibration-monitor                 301
+/stem/L106/iot-vibration-monitor-introduction-cs     /stem/lesson-106/iot-vibration-monitor-introduction    301
+/stem/L106/iot-vibration-monitor-theory-cs           /stem/lesson-106/iot-vibration-monitor-theory          301
+/stem/L106/iot-vibration-monitor-presentation-cs     /stem/lesson-106/iot-vibration-monitor-presentation    301
+/stem/L106/iot-vibration-monitor-experiment-cs       /stem/lesson-106/iot-vibration-monitor-experiment      301
+/stem/L106/iot-vibration-monitor-projects-cs         /stem/lesson-106/iot-vibration-monitor-projects        301
+/stem/L107/iot-light-monitor-introduction-cs         /stem/lesson-107/iot-light-monitor-introduction        301
+/stem/L107/iot-light-monitor-experiment-cs           /stem/lesson-107/iot-light-monitor-experiment          301
+/stem/L108/iot-pulse-monitor-cs                      /stem/lesson-108/iot-pulse-monitor                     301
+/stem/L108/iot-pulse-monitor-introduction-cs         /stem/lesson-108/iot-pulse-monitor-introduction        301
+/stem/L108/iot-pulse-monitor-theory-cs               /stem/lesson-108/iot-pulse-monitor-theory              301
+/stem/L108/iot-pulse-monitor-presentation-cs         /stem/lesson-108/iot-pulse-monitor-presentation        301
+/stem/L108/iot-pulse-monitor-experiment-cs           /stem/lesson-108/iot-pulse-monitor-experiment          301
+/stem/L108/iot-pulse-monitor-projects-cs             /stem/lesson-108/iot-pulse-monitor-projects            301
+
+# Lesson directories renamed L1NN -> lesson-1NN (folder only; slugs + sidebar labels unchanged).
+/stem/L101/*      /stem/lesson-101/:splat      301
+/stem/L102/*      /stem/lesson-102/:splat      301
+/stem/L103/*      /stem/lesson-103/:splat      301
+/stem/L104/*      /stem/lesson-104/:splat      301
+/stem/L105/*      /stem/lesson-105/:splat      301
+/stem/L106/*      /stem/lesson-106/:splat      301
+/stem/L107/*      /stem/lesson-107/:splat      301
+/stem/L108/*      /stem/lesson-108/:splat      301
+/stem/L109/*      /stem/lesson-109/:splat      301
+/cs/stem/L101/*      /cs/stem/lesson-101/:splat      301
+/cs/stem/L102/*      /cs/stem/lesson-102/:splat      301
+/cs/stem/L103/*      /cs/stem/lesson-103/:splat      301
+/cs/stem/L104/*      /cs/stem/lesson-104/:splat      301
+/cs/stem/L105/*      /cs/stem/lesson-105/:splat      301
+/cs/stem/L106/*      /cs/stem/lesson-106/:splat      301
+/cs/stem/L107/*      /cs/stem/lesson-107/:splat      301
+/cs/stem/L108/*      /cs/stem/lesson-108/:splat      301
+/cs/stem/L109/*      /cs/stem/lesson-109/:splat      301
