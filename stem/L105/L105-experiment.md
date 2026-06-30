@@ -32,6 +32,12 @@ In the experiment, we will understand:
 
 The building of the monitoring unit
 
+<div class="container">
+  <div class="row">
+    <Image img={require('./stem-clime-xl.avif')}/>
+  </div>
+</div>
+
 #### Modules in the unit:
 
 * Core Module
