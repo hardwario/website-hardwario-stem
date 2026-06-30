@@ -7,7 +7,7 @@ title: Dračí dech
 
 Bav se s kámoši díky IoT. Kdo z vás bude mít nejžhavější, nebo nejchladnější dech? Je na tobě, čím si k vítězství pomůžeš. Smí se všechno. 😱
 
-S tímhle projektem se naučíš **měřit teplotu s IoT**. Postačí ti základní HARDWARIO sada, tedy [**Start Set**](https://obchod.hardwario.cz/p/start-set/).
+S tímhle projektem se naučíš **měřit teplotu s IoT**. Postačí ti základní HARDWARIO sada, tedy [**Start Set**](https://www.hardwario.store/cz/p/start-set/).
 
 
 ## Připrav si krabičku

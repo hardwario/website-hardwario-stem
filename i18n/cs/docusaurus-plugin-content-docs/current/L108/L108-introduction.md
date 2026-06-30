@@ -17,4 +17,4 @@ Studenti si sami sestaví a naprogramují zařízení k monitoringu impulzů pom
 * Snímače pulzů
   * [Snímač LED impulzů](https://www.hardwario.store/cz/p/led-pulse-sensor) nebo
   * [Snímač magnetických impulzů](https://www.hardwario.store/cz/p/magnetic-pulse-sensor) nebo 
-  * [Snímač magnetických impulzů pro vodoměry](https://obchod.hardwario.cz/snimac-magnetickych-impulzu-pro-vodomery/)
+  * [Snímač magnetických impulzů pro vodoměry](https://www.hardwario.store/cz/p/magnetic-pulse-sensor)

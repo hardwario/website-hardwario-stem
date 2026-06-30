@@ -10,7 +10,7 @@ Do you remember the spintop? You might have had a wooden or plastic one, but we 
 
 In this project, you will learn **to measure the fast spinning of the box**.  👈
 
-All you need is the **box with button** and the **USB dongle** in the basic HARDWARIO [Start Set](https://shop.hardwario.com/p/start-set/).
+All you need is the **box with button** and the **USB dongle** in the basic HARDWARIO [Start Set](https://www.hardwario.store/p/start-set/).
 
 
 ## Download new firmware

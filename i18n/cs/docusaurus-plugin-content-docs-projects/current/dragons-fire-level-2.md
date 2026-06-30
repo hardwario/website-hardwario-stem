@@ -12,7 +12,7 @@ S tímhle projektem se naučíš **ukládat nejvyšší naměřenou hodnotu a na
 
 Základní verzi tohohle projektu najdeš tady: [IoT párty hra: máš v sobě dračí oheň, nebo mrazivý dech?](/cs/projects/dragons-fire/)
 
-I tentokrát ti postačí základní HARDWARIO sada, tedy [**Start Set**](https://obchod.hardwario.cz/p/start-set/).
+I tentokrát ti postačí základní HARDWARIO sada, tedy [**Start Set**](https://www.hardwario.store/cz/p/start-set/).
 
 
 ## Připrav si Node-RED

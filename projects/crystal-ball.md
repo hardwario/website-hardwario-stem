@@ -10,7 +10,7 @@ Even young programmers want to know what their future holds. The box will tell y
 
 Under this project, you will learn to turn the box into an oracle or **magic 8-ball**. ️🎱 Set it to randomly choose one of a number of options when it is shaken.
 
-You will need the **box with button and a USB Dongle**. The basic HARDWARIO [**Start Set**](https://shop.hardwario.com/p/start-set/) is sufficient for this.
+You will need the **box with button and a USB Dongle**. The basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/) is sufficient for this.
 
 
 ## Make it happen in Node-RED

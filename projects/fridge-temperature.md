@@ -6,7 +6,7 @@ title: Fridge temperature
 
 Do you think it's the same temperature in different places in your fridge or freezer? And how's the freezer functioning, is it freezing properly? Discover the answers to these questions through our IoT project. Using the HARDWARIO Start Set, the temperature will be displayed on your mobile phone. ❄
 
-This project will teach you how to **measure temperature using IoT**. All you need is the basic HARDWARIO [Start Set](https://shop.hardwario.com/p/start-set/).
+This project will teach you how to **measure temperature using IoT**. All you need is the basic HARDWARIO [Start Set](https://www.hardwario.store/p/start-set/).
 
 
 ## Prepare the box

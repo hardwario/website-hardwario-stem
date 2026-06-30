@@ -10,7 +10,7 @@ With this game, there's no way you and your friends will get bored! Adjust your 
 
 This project will teach you how to create a so-called **still position detector**, i.e. motion **detector**. 👈
 
-You only need a **box with a button** and a **USB dongle**.  That's why the basic HARDWARIO [**Start Set**](https://shop.hardwario.com/p/start-set/) is perfect.
+You only need a **box with a button** and a **USB dongle**.  That's why the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/) is perfect.
 
 
 ## Download the firmware

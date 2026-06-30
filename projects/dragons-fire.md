@@ -5,7 +5,7 @@ title: Dragons fire
 
 Have fun with your friends with IoT. Which of you has the hottest or coldest breath? You decide what will help you win. As they say, anything goes!😱
 
-This project teaches you how to **measure temperature with IoT**. All you need is the basic HARDWARIO [Start Set](https://shop.hardwario.com/p/start-set/).
+This project teaches you how to **measure temperature with IoT**. All you need is the basic HARDWARIO [Start Set](https://www.hardwario.store/p/start-set/).
 
 
 ## Prepare the box

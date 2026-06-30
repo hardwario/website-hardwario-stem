@@ -11,7 +11,7 @@ Whether you have an iguana, turtle, snake or gecko, you definitely want them to 
 
 Under this project, you will learn **how to measure four climate values and display them in graphs** \- temperature, humidity, luminosity and air pressure. Who knows? Your green buddies may reward you with a few the stories about their dinosaur ancestors! 🦖 Or something like that.
 
-If you already have the Start Set, you will only need the [Climate Module](https://shop.hardwario.com/p/climate-module/). Alternatively, the [Clime Set](https://www.hardwario.store/p/clime-set) contains **all the equipment** you need.
+If you already have the Start Set, you will only need the [Climate Module](https://www.hardwario.store/p/climate-module/). Alternatively, the [Clime Set](https://www.hardwario.store/p/clime-set) contains **all the equipment** you need.
 
 
 ## Prepare the box

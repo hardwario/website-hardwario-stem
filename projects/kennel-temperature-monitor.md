@@ -6,7 +6,7 @@ title: Kennel temperature monitor
 
 Is it so cold that you can’t even get the dog out? Want to find out what temperature is the most comfortable for your best friend? Then why not monitor the temperature in their kennel? 🐶
 
-This project teaches you how to **measure temperature with IoT and display it on a chart**. All you need is the basic HARDWARIO [Start Set](https://shop.hardwario.com/p/start-set/). Hopefully your dog will reward you for your efforts with less unsightly mess, or something like that. 🐩
+This project teaches you how to **measure temperature with IoT and display it on a chart**. All you need is the basic HARDWARIO [Start Set](https://www.hardwario.store/p/start-set/). Hopefully your dog will reward you for your efforts with less unsightly mess, or something like that. 🐩
 
 
 ## Prepare the box
