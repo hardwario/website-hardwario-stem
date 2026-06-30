@@ -21,7 +21,7 @@ Hru **navrhni učiteli fyziky** jako super zpestření hodiny, nebo ji s kamará
 
 2. Změny teploty uvidíš v Playgroundu v záložce **Messages**.
 
-![MQTT messages in HARDWARIO Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566156994/projects/wormest-coldest-place/image10.png)
+![MQTT messages in HARDWARIO Playground](./img/warmes-coldes-place/image10.png)
 
 ## Nastav si Node-RED
 
@@ -35,7 +35,7 @@ Hru **navrhni učiteli fyziky** jako super zpestření hodiny, nebo ji s kamará
 node/push-button:0/thermometer/0:1/temperature
 ```
 
-![MQTT input topic](https://res.cloudinary.com/lukasfabik/image/upload/v1566156994/projects/wormest-coldest-place/image9.png)
+![MQTT input topic](./img/warmes-coldes-place/image9.png)
 
 Potvrď tlačítkem **Done**.
 
@@ -47,13 +47,13 @@ Potvrď tlačítkem **Done**.
 
 3. Teď si nastav nový Datastream. Na detailu šablony klikni na záložku **Datastreams**. Vpravo nahoře klikni na **Edit**. Objeví se ti tlačítko **+ New Datastream**, klikni na něj, vyber **Virtual Pin** a objeví se ti dialogové okno:
 
-![HARDWARIO Add Blynk IoT datastream](https://res.cloudinary.com/lukasfabik/image/upload/v1642782841/projects/wormest-coldest-place/add-datastream-1.png)
+![HARDWARIO Add Blynk IoT datastream](./img/warmes-coldes-place/add-datastream-1.png)
 
 4. Nastav název pro nový Datastream a vyber jeden z volných Pinů. Teplotu budeš měřit jako desetinné číslo, proto zvol typ **Double** a jednotku (unit) nastav na **Celsius**. Nezapomeň nastavit rozpětí teplot, které budeš měřit, například **0 - 50**.
 
 5. Datastream vytvoříš kliknutím na **Create**. 
 
-![HARDWARIO Add Blynk IoT datastream](https://res.cloudinary.com/lukasfabik/image/upload/v1642782841/projects/wormest-coldest-place/add-datastream-2.png)
+![HARDWARIO Add Blynk IoT datastream](./img/warmes-coldes-place/add-datastream-2.png)
 
 6. Vpravo nahoře svou práci ulož tlačítkem **Save**.
 
@@ -65,25 +65,25 @@ Pokud jej ještě nemáš, založ si zařízení z vytvořené šablony. Jak na 
 
 **Aplikaci Blynk IoT** si na mobil stáhni z [App store](https://apps.apple.com/us/app/blynk-iot/id1559317868), nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk). Přihlas se do ní s tvými údaji. 
 
-![Blynk IoT mobile dashboard](https://res.cloudinary.com/lukasfabik/image/upload/v1642786322/projects/wormest-coldest-place/blynk-1.png)
+![Blynk IoT mobile dashboard](./img/warmes-coldes-place/blynk-1.png)
 
 Hned po přihlášení uvidíš své vytvořené zařízení:
 
-![Blynk IoT mobile dashboard](https://res.cloudinary.com/lukasfabik/image/upload/v1642786323/projects/wormest-coldest-place/blynk-2.png)
+![Blynk IoT mobile dashboard](./img/warmes-coldes-place/blynk-2.png)
 
 Ťukni na něj prstem, teď si nastavíme dashboard, ve kterém budeme ukazovat naměřenou hodnotu:
 
 1. Pod **klíčem** vpravo nahoře najdeš nastavovací stránku dashboardu.
 
-![Blynk IoT mobile dashboard](https://res.cloudinary.com/lukasfabik/image/upload/v1642786323/projects/wormest-coldest-place/blynk-3.png)
+![Blynk IoT mobile dashboard](./img/warmes-coldes-place/blynk-3.png)
 
 2. Tlačítkem **+** , nebo kliknutím někam na plochu přidáš nový graf nebo jiný prvek dashboardu. Teď použijeme **Gauge**.
 
-![Blynk IoT mobile dashboard](https://res.cloudinary.com/lukasfabik/image/upload/v1642786200/projects/wormest-coldest-place/blynk-gauge.png)
+![Blynk IoT mobile dashboard](./img/warmes-coldes-place/blynk-gauge.png)
 
 3. Stiskem přidaného widgetu otevřeš okno s jeho nastavením. Nejdůležitější je doplnit ***Datastream*** z tvé šablony pro vybraný virtuální Pin. Doplnit můžeš taky název a změnit barvu.
 
-![Blynk IoT mobile dashboard](https://res.cloudinary.com/lukasfabik/image/upload/v1642786198/projects/wormest-coldest-place/blynk-temperature.png)
+![Blynk IoT mobile dashboard](./img/warmes-coldes-place/blynk-temperature.png)
 
 4. Aplikaci máš hotovou. Teď do ní ještě začneme posílat data. 💪
 
@@ -91,11 +91,11 @@ Hned po přihlášení uvidíš své vytvořené zařízení:
 
 1. Vrať se k počítači. Na ploše Node-RED přidej za oba nody zelený **node Write**. Najdeš ho v levé části pod sekcí Blynk IoT.
 
-![Node-RED Blynk write](https://res.cloudinary.com/lukasfabik/image/upload/v1642785777/projects/wormest-coldest-place/playground-0.png)
+![Node-RED Blynk write](./img/warmes-coldes-place/playground-0.png)
 
 2. Node otevři dvojklikem. Vpravo uvidíš **malou tužku**. Klikni na ni a otevře se ti nové okno. Do pole **Url** vlož ``blynk.cloud``, do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové aplikaci na počítači.
 
-![Node-RED Blynk set pin](https://res.cloudinary.com/lukasfabik/image/upload/v1642785779/projects/wormest-coldest-place/playground-1.png)
+![Node-RED Blynk set pin](./img/warmes-coldes-place/playground-1.png)
 
 Nastavení potvrď tlačítem **Add**. Z nodu ale ještě neodcházej. 👈
 
@@ -103,11 +103,11 @@ Nastavení potvrď tlačítem **Add**. Z nodu ale ještě neodcházej. 👈
 Potvrď tlačítkem **Done**.
 
 
-![Node-RED Blynk set pin](https://res.cloudinary.com/lukasfabik/image/upload/v1642785778/projects/wormest-coldest-place/playground-2.png)
+![Node-RED Blynk set pin](./img/warmes-coldes-place/playground-2.png)
 
 1. Teď **oba nody propoj** a klikni na červené tlačítko **Deploy** vpravo nahoře. 🚨
 
-![Connect Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1642785778/projects/wormest-coldest-place/playground-3.png)
+![Connect Blynk](./img/warmes-coldes-place/playground-3.png)
 
 ## Trumfni svou třídu
 
@@ -117,6 +117,6 @@ Potvrď tlačítkem **Done**.
 
 3. Na místo vezmi krabičku a **teplotu sleduj na mobilu**. Může chvíli trvat, než se na ukazateli teplota projeví.
 
-![measure temperature and show in Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1642785943/projects/wormest-coldest-place/blynk-temperature-gauge.jpg)
+![measure temperature and show in Blynk](./img/warmes-coldes-place/blynk-temperature-gauge.jpg)
 
 4. Vyzkoušej několik míst a na závěr vyhlašte ty nejextrémnější výsledky. **Congrats vítězům!** 🎇

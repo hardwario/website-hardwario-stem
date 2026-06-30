@@ -71,7 +71,7 @@ Potvrď tlačítkem **Done**.
 Potvrď tlačítkem **Done**.
 
 12. Teď všechny nody **pospojuj podle obrázku**, ale ještě nemačkej tlačítko Deploy. Chybí nám poslední node, který přidáme za chviličku. S ním nastavíš upozornění do mobilu. 🤳
-![propojeni nodu](https://res.cloudinary.com/lukasfabik/image/upload/v1572976430/projects/detektor-jeziska/image13.png)
+![propojeni nodu](./img/christmas-detector/image13.png)
 
 
 ## Nastav si upozornění na mobil
@@ -105,6 +105,6 @@ Potvrď postupně tlačítky **Add** a **Done**.
 
 2. PIR Module vycítí i sebemenší pohyb a zpráva o cizí přítomnosti ti přijde do mobilu raz dva. **Ježíšek nemá šanci**! Honem se běž podívat a načapej ho
 
-![notification](https://res.cloudinary.com/lukasfabik/image/upload/v1572976428/projects/detektor-jeziska/image5.png)
+![notification](./img/christmas-detector/image5.png)
 
 1. Poznámka na okraj: Ježíška si po načapání **udobři**, aby ti doma vůbec nějaké dárky nechal. 😜

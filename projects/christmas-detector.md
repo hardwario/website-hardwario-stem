@@ -60,7 +60,7 @@ Confirm with the **Done** button.
 11. In the **Rules** field, set the function to: _flow_. _detectorActive_ (see screenshot). This enables the device to recognize if the button is on or off. Beware of making typing errors! <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-11.webp')}/> </div> </div>
 Confirm with the **Done** button.
 
-12. Now connect all the nodes **as shown in the screenshot**, but don't press the Deploy button yet. The last node, which we will add shortly, is still missing. With the last node you set up a notification to your mobile. 🤳 ![Connection node](https://res.cloudinary.com/lukasfabik/image/upload/v1572976430/projects/detektor-jeziska/image13.png)
+12. Now connect all the nodes **as shown in the screenshot**, but don't press the Deploy button yet. The last node, which we will add shortly, is still missing. With the last node you set up a notification to your mobile. 🤳 ![Connection node](./img/christmas-detector/image13.png)
 
 
 ## Set up notification to mobile
