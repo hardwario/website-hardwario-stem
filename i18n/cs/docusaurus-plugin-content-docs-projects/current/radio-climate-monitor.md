@@ -216,37 +216,45 @@ Další informace o krytech naleznete v dokumentu [**Enclosures**](https://docs.
 
 :::
 
-##  Integrace s Blynk
+## Integrace s Blynk IoT
 
-Nyní jsme sestavili naši sadu a pojďme začít s nějakou základní integrací s **Blynk**. Začneme, aniž bychom popisovali, co **Blynk** je. Pokud chcete získat nějaké informace o tom, co **Blynk** je. Nejlepší, co můžete udělat, je navštívit jejich [**stránku**](https://www.blynk.cc/). V našem příkladu vám ukážeme, jak zobrazit grafy hodnot ze senzorů v mobilní aplikaci **Blynk**.
+Nyní, když je sada sestavená a odesílá data přes MQTT, pojďme posílat hodnoty ze senzorů do vašeho telefonu pomocí **Blynk IoT** (aktuální platforma Blynk — stará aplikace Blynk Legacy a její cloud `blynk-cloud.com` byly vypnuty). Vytvoříte si účet, šablonu zařízení a jeden **Datastream** pro každou měřenou hodnotu a poté tyto datastreamy propojíte v **Node-RED** pomocí node **Blynk IoT Write**.
 
-Nejprve musíme nakonfigurovat naši aplikaci **Node-RED**.
+Podrobné nastavení účtu, šablony a zařízení krok za krokem najdete v hlavním návodu:
 
-#### Step 1: Blynk nodes
+[**Integrace s aplikací Blynk — dokumentace HARDWARIO**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
 
-Pokud používáte verzi HARDWARIO raspi, mělo by to být v pořádku, ale přesto zkontrolujte, zda jsou nainstalovány nodes **Blynk**. Pokud používáte verzi HARDWARIO raspi, měli byste být v pořádku, ale přesto zkontrolujte, zda jsou nainstalovány nodes **Blynk**. \ (Můžete je vidět v levém postranním menu v **Node-RED**\). (Můžete je zobrazit v levém postranním menu v **Node-RED**\). Jinak budete muset nainstalovat balíček **Node-RED** `node-red-contrib-blynk-ws`.
+#### Krok 1: Vytvořte účet Blynk IoT, šablonu a zařízení
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-co2-monitor-integration-nodered-1.webp')}/>
-  </div>
-</div>
+Pokud ještě účet nemáte, vytvořte si účet [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) a poté vytvořte **šablonu zařízení** (device template) a z ní **zařízení** (device). [Výše uvedený návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) vás každým z těchto kroků provede. Z detailu zařízení budete v dalším kroku potřebovat jeho **Auth Token** a **Template ID**.
 
-#### Krok 2: Přidejte další **Flow** \(můžete je přidat pomocí velkého tlačítka plus vedle názvu flow\). Nový tok bude mít název **Tok 2**
+#### Krok 2: Vytvořte jeden Datastream (Virtual Pin) pro každou hodnotu
 
-#### Krok 3: Vložte následující úryvek do nově vytvořeného **Flow 2** \(použitím **Menu &gt;&gt; Import**\)
+V šabloně otevřete kartu **Datastreams** a přidejte jeden datastream typu **Virtual Pin** pro každou hodnotu. Pro všechny použijte datový typ **Double** a nastavte vhodné jednotky a rozsahy:
+
+| Datastream | Virtual Pin | Typ | Jednotka | Doporučený rozsah |
+|---|---|---|---|---|
+| Illuminance | V0 | Double | lux | 0 – 1000 |
+| Temperature | V1 | Double | °C | 0 – 50 |
+| Relative humidity | V2 | Double | % | 0 – 100 |
+| Atmospheric pressure | V3 | Double | Pa | 80000 – 110000 |
+
+:::info
+
+Čísla Virtual Pin uvedená výše se musí shodovat s **Virtual Pin**, který nastavíte na každém node Write v Node-RED v dalším kroku.
+
+:::
+
+#### Krok 3: Propojte hodnoty v Node-RED pomocí node Blynk IoT Write
+
+Přidejte nový **Flow** (velké tlačítko plus vedle názvu flow) a pro každou hodnotu umístěte node **mqtt in** přihlášený k odběru tématu senzoru následovaný zeleným node **Blynk IoT → write**. Každý node `mqtt in` propojte s jeho node `write`:
 
 ```text
-[{"id":"4914605c.76972","type":"mqtt in","z":"28050251.59dc0e","name":"","topic":"node/climate-monitor:0/lux-meter/0:0/illuminance","qos":"2","broker":"58254712.b61068","x":230,"y":520,"wires":[["431157f1.546248"]]},{"id":"dcf5bf8d.a0242","type":"mqtt in","z":"28050251.59dc0e","name":"","topic":"node/climate-monitor:0/thermometer/0:0/temperature","qos":"2","broker":"58254712.b61068","x":240,"y":580,"wires":[["be96b6aa.eed098"]]},{"id":"2ac2eae7.308486","type":"mqtt in","z":"28050251.59dc0e","name":"","topic":"node/climate-monitor:0/hygrometer/0:4/relative-humidity","qos":"2","broker":"58254712.b61068","x":250,"y":640,"wires":[["dbe4b438.be4ef8"]]},{"id":"431157f1.546248","type":"blynk-ws-out-write","z":"28050251.59dc0e","name":"Pin V0 - Write","pin":0,"pinmode":0,"client":"1b003066.8ca2c","x":659,"y":520,"wires":[]},{"id":"be96b6aa.eed098","type":"blynk-ws-out-write","z":"28050251.59dc0e","name":"","pin":"1","pinmode":0,"client":"1b003066.8ca2c","x":659,"y":580,"wires":[]},{"id":"dbe4b438.be4ef8","type":"blynk-ws-out-write","z":"28050251.59dc0e","name":"","pin":"2","pinmode":0,"client":"1b003066.8ca2c","x":659,"y":640,"wires":[]},{"id":"58254712.b61068","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""},{"id":"1b003066.8ca2c","type":"blynk-ws-client","z":"","name":"","path":"ws://blynk-cloud.com/websockets","key":"","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_low":false,"dbg_pins":""}]
+node/climate-monitor:0/lux-meter/0:0/illuminance        →  Write V0
+node/climate-monitor:0/thermometer/0:0/temperature      →  Write V1
+node/climate-monitor:0/hygrometer/0:4/relative-humidity →  Write V2
+node/climate-monitor:0/barometer/0:0/pressure           →  Write V3
 ```
-
-Bude to vypadat takto:
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-nodered-screen-1.webp')}/>
-  </div>
-</div>
 
 :::info
 
@@ -254,61 +262,15 @@ Pokud to chcete použít pro jiné senzory, stačí změnit MQTT témata.
 
 :::
 
-#### Krok 4: Připojte
+#### Krok 4: Nakonfigurujte připojení k Blynk IoT
 
-Nakonfigurujte MQTT node, aby se připojil k vašemu brokeru. Pravděpodobně se připojí na localhost, pokud používáte Raspberry Pi. Poté budete muset nakonfigurovat **Blynk** node. Jednoduše vyplňte URL `ws://blynk-cloud.com/websockets`. `Auth Token` nakonfigurujeme později po jeho získání od Blynk e-mailem.
+Dvojklikem na node **Write** jej otevřete. Vpravo klikněte na **tužku** pro úpravu připojení k Blynk IoT. Do pole **Url** zadejte `blynk.cloud` a zkopírujte **Auth Token** a **Template ID** z detailu zařízení ve webové konzoli Blynk IoT. Potvrďte tlačítkem **Add**.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-nodered-screen-2.webp')}/>
-  </div>
-</div>
+Zpět v node nastavte **Virtual Pin** na číslo z tabulky výše (jen číslo, bez písmene „V"). Zopakujte to pro každý node Write tak, aby jeho Virtual Pin odpovídal jeho hodnotě, a poté klikněte na **Deploy** v pravém horním rohu.
 
-#### Krok 5: Nyní si stáhněte aplikaci **Blynk** z [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk&pcampaignid=web_share). Vytvořte účet a přihlaste se.
+#### Krok 5: Přidejte widgety v aplikaci Blynk IoT
 
-#### **Krok 6:** Po instalaci byste měli vytvořit účet, přihlásit se a měli byste vidět něco takového
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk-3.webp')}/>
-  </div>
-</div>
-
-#### Krok 7: Nyní klikněte na tlačítko v pravém horním rohu pro naskenování QR kódu
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk.webp')}/>
-  </div>
-</div>
-
-#### Krok 8: Nyní byste měli naskenovat následující QR kód, abyste získali vše předkonfigurované
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk-qr.webp')}/>
-  </div>
-</div>
-
-#### Krok 9: Měli byste vidět něco takového
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk-10.webp')}/>
-  </div>
-</div>
-
-#### Krok 10: E-mail
-
-Klikněte na ozubené kolečko a měli byste vidět nastavení pro váš projekt. Musíme získat `Auth Token`, který musíte zkopírovat do našeho **Node-RED** v node konfiguraci **Blynk**.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-blynk-auth.webp')}/>
-  </div>
-</div>
-
-#### Krok 11: Nyní nasadíte svou aplikaci **Node-RED** a stisknete tlačítko přehrávání ve vašem projektu **Blynk** a měli byste být hotovi!
+Stáhněte si aplikaci **Blynk IoT** z [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk), přihlaste se a otevřete své zařízení. Pro každou hodnotu přidejte widget **Gauge** nebo **Chart** a v nastavení widgetu nasměrujte jeho **Datastream** na odpovídající Virtual Pin (V0–V3). Jakmile je Node-RED nasazený, na vašem telefonu se objeví živé hodnoty.
 
 ### Související dokumenty <a id="related-documents"></a>
 

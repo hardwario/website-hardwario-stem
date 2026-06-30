@@ -170,52 +170,37 @@ function doPost(e) {
 
 ### Experiment Description
 
-Experiment 1 can be followed by integration with the Blynk mobile application, so you can see the measured data in your smartphone.
+Experiment 1 can be followed by integration with the **Blynk IoT** mobile application, so you can see the measured data on your smartphone. (The old **Blynk Legacy** cloud has been discontinued, so this experiment uses the current **Blynk IoT** platform.)
 
 In the experiment, we will understand:
 
-* how to connect the Blynk mobile app with Playground
+* how to connect the Blynk mobile app to see the measured data
+
+For the click-by-click account, template and device setup, follow the canonical guide: [**HARDWARIO Blynk app integration**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
 ### Experiment Steps
 
+* Create an account in the **Blynk IoT** app (download it from the [App Store / Google Play](https://blynk.io/getting-started)) or in the [Blynk web console](https://blynk.cloud/).
+* Create a **device template**, and then create a **device** from it. The [integration guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) is the source of truth for the exact steps; from the device you will get the **Auth Token** and **Template ID** used below.
+* On the template, open the **Datastreams** tab and add one **Virtual Pin** datastream (type **Double**) per measured value:
 
-* Install the [Blynk app](https://blynk.io/getting-started) on your smartphone
-* Select **Scan QR code** and scan this **code**
+| Value | Virtual Pin | Type | Unit |
+|---|---|---|---|
+| Temperature | V0 | Double | °C |
+| Humidity | V1 | Double | % |
+| TVOC | V2 | Double | ppb |
+| CO₂ concentration | V3 | Double | ppm |
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./stem-qr-code.jpeg')}/>
-  </div>
-</div>
+* In the **Playground** app, on the **Functions** tab, add the Blynk IoT Write nodes that push the MQTT readings to Blynk. For each value, wire an **MQTT in** node (subscribed to the sensor topic) into a green **Blynk IoT Write** node (found in the left menu under the **Blynk IoT** section), with the Virtual Pin matching the datastream above:
 
-* You will see that the project appeared in your application
-* Click on the project and then click on the **Settings** icon in the top right corner
+| MQTT topic | Virtual Pin |
+|---|---|
+| `node/co2-monitor:0/thermometer/0:0/temperature` | V0 |
+| `node/co2-monitor:0/hygrometer/0:4/relative-humidity` | V1 |
+| `node/co2-monitor:0/voc-sensor/0:0/tvoc` | V2 |
+| `node/co2-monitor:0/co2-meter/-/concentration` | V3 |
 
-* 
-<div class="container">
-  <div class="row">
-    <Image img={require('./stem-application.png')}/>
-  </div>
-</div>
-
-* You will see the **Auth Token**, you will need it for the project to work with the playground
-* In the Playground app, on the Functions tab, import this flow
-
-```json
-[{"id":"73063e5f.b2922","type":"mqtt in","z":"b3853131.935c8","name":"","topic":"node/co2-monitor:0/thermometer/0:0/temperature","qos":"2","broker":"e649966c.8c2af8","x":340,"y":480,"wires":[["8f85e87c.769d18","3f7fcbee.7f91e4"]]},{"id":"4166a3d0.b2c9ac","type":"mqtt in","z":"b3853131.935c8","name":"","topic":"node/co2-monitor:0/hygrometer/0:4/relative-humidity","qos":"2","broker":"e649966c.8c2af8","x":350,"y":580,"wires":[["28dadeae.792542","4eab5e08.5ca1d"]]},{"id":"4008a8e5.904ff8","type":"mqtt in","z":"b3853131.935c8","name":"","topic":"node/co2-monitor:0/co2-meter/-/concentration","qos":"2","broker":"e649966c.8c2af8","x":330,"y":780,"wires":[["bba1323a.410d6","4470ac6c.039244"]]},{"id":"8f85e87c.769d18","type":"ui_gauge","z":"b3853131.935c8","name":"","group":"57ff470b.93fdf8","order":0,"width":0,"height":0,"gtype":"gage","title":"Temperature","label":"°C","format":"{{value}}","min":0,"max":"40","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","x":750,"y":480,"wires":[]},{"id":"28dadeae.792542","type":"ui_gauge","z":"b3853131.935c8","name":"","group":"57ff470b.93fdf8","order":0,"width":0,"height":0,"gtype":"gage","title":"Humidity","label":"%","format":"{{value}}","min":0,"max":"100","colors":["#97faff","#00b8c1","#005bca"],"seg1":"","seg2":"","x":740,"y":580,"wires":[]},{"id":"bba1323a.410d6","type":"ui_gauge","z":"b3853131.935c8","name":"","group":"57ff470b.93fdf8","order":0,"width":0,"height":0,"gtype":"gage","title":"CÖ2 Concentration","label":"ppm","format":"{{value}}","min":0,"max":"10000","colors":["#ffffff","#c0c0c0","#220909"],"seg1":"","seg2":"","x":770,"y":780,"wires":[]},{"id":"3f7fcbee.7f91e4","type":"blynk-ws-out-write","z":"b3853131.935c8","name":"","pin":0,"pinmode":0,"client":"69359c27.0b0d54","x":760,"y":520,"wires":[]},{"id":"4eab5e08.5ca1d","type":"blynk-ws-out-write","z":"b3853131.935c8","name":"","pin":"1","pinmode":0,"client":"69359c27.0b0d54","x":760,"y":620,"wires":[]},{"id":"4470ac6c.039244","type":"blynk-ws-out-write","z":"b3853131.935c8","name":"","pin":"3","pinmode":0,"client":"69359c27.0b0d54","x":760,"y":820,"wires":[]},{"id":"b481c17c.ffeb1","type":"blynk-ws-out-write","z":"b3853131.935c8","name":"","pin":"2","pinmode":0,"client":"69359c27.0b0d54","x":760,"y":720,"wires":[]},{"id":"ec9b8fbd.bd1ec","type":"mqtt in","z":"b3853131.935c8","name":"","topic":"node/co2-monitor:0/voc-sensor/0:0/tvoc","qos":"2","datatype":"auto","broker":"e649966c.8c2af8","x":310,"y":680,"wires":[["b481c17c.ffeb1","a38ea362.79de7"]]},{"id":"a38ea362.79de7","type":"ui_gauge","z":"b3853131.935c8","name":"","group":"2fc45a9a.bbfd66","order":0,"width":0,"height":0,"gtype":"gage","title":"TVOC","label":"units","format":"{{value}} ppb","min":0,"max":"5500","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","x":730,"y":680,"wires":[]},{"id":"e649966c.8c2af8","type":"mqtt-broker","z":"","name":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","closeTopic":"","closeQos":"0","closePayload":"","willTopic":"","willQos":"0","willPayload":""},{"id":"57ff470b.93fdf8","type":"ui_group","z":"","name":"Default","tab":"11207769.c31889","disp":true,"width":"6","collapse":false},{"id":"69359c27.0b0d54","type":"blynk-ws-client","z":"","name":"CO2 Monitor","path":"ws://blynk-cloud.com/websockets","key":"","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_sync":false,"dbg_bridge":false,"dbg_low":false,"dbg_pins":"","multi_cmd":false,"proxy_type":"no","proxy_url":"","enabled":true},{"id":"2fc45a9a.bbfd66","type":"ui_group","z":"","name":"Default","tab":"54d3d6be.bc2ca8","disp":true,"width":"6","collapse":false},{"id":"11207769.c31889","type":"ui_tab","z":"","name":"Home","icon":"dashboard"},{"id":"54d3d6be.bc2ca8","type":"ui_tab","z":"","name":"Home","icon":"dashboard"}]
-```
-* After you succesfully imported it you will have to update the green Blynk nodes. They will appear as Disconnected
-*    
-<div class="container">
-    <div class="row">
-        <Image img={require('./stem-diagram.png')}/>
-    </div>
-</div>
-
-* Open any of the nodes
-* On the end of the **Connection** line press the little pencil
-* The screen will pop up
-* Paste the Auth Token that you have in your mobile application to the line **Auth Token**
-* Press the **Update** button and then **Done**
-* Press the **Deploy** button to confirm
-* In a moment you should see the measured data in the prepared **dashboard in Blynk**
+* Double-click a Write node and click the **pencil** to add the connection. In the **Url** field enter `blynk.cloud`, then paste the **Auth Token** and **Template ID** from your device. Confirm, then set the node's **Virtual Pin** to the matching number (`0`, `1`, `2` or `3`). All four Write nodes share the same connection.
+* Press the **Deploy** button to confirm.
+* In the **Blynk IoT** app, open your device and add a **Gauge** widget for each value (Temperature, Humidity, TVOC, CO₂), binding each gauge to its Virtual Pin (V0–V3).
+* In a moment you should see the measured data in the gauges in the **Blynk IoT** app.

@@ -213,105 +213,57 @@ V tomto bodě máte ověřenou rádiovou komunikaci.
 
 :::
 
-## Integrace s Blynk
+## Integrace s Blynk IoT
 
-Nyní máme naši sadu sestavenou a můžeme začít se základní integrací s **Blynk**. Začneme bez podrobného vysvětlování, co **Blynk** je. Pokud se o něm chcete dozvědět více, nejlepší bude navštívit jejich [**stránku**](https://www.blynk.cc/). V našem příkladu vám ukážeme, jak zobrazit hodnoty ze senzorů v mobilní aplikaci **Blynk**.
+Nyní, když je sada sestavená a odesílá data, ukážeme si naměřené hodnoty na telefonu pomocí **Blynk IoT** (současná platforma Blynk — starý cloud Blynk Legacy byl ukončen). Vytvoříte si účet Blynk, šablonu zařízení s jedním **Datastreamem** pro každou hodnotu a samotné zařízení, a poté propojíte **Node-RED** tak, aby do Blynku posílal naměřené hodnoty z MQTT.
 
-Nejprve musíme nakonfigurovat naši aplikaci **Node-RED**.
+Nastavení účtu, šablony, zařízení a datastreamů popisuje kanonický návod: [**Integrace aplikace HARDWARIO Blynk**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
-#### Krok 1: Blynk nodes
+#### Krok 1: Vytvořte účet, šablonu a zařízení v Blynk IoT
 
-Pokud používáte verzi HARDWARIO pro Raspberry Pi, mělo by být vše připraveno, ale i tak si ověřte, že jsou nainstalované uzly **Blynk**. \(Můžete je vidět v levém postranním panelu v prostředí Node-RED.\) V opačném případě budete muset nainstalovat balíček pro **Node-RED** s názvem `node-red-contrib-blynk-ws`.
+Pokud účet ještě nemáte, vytvořte si ho v aplikaci **Blynk IoT**, vytvořte **šablonu zařízení** (device template) a z ní pak **zařízení** (device). [**Návod k integraci**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) provede každým krokem a je závazným zdrojem přesných postupů.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-nodered-1.webp')}/>
-  </div>
-</div>
+#### Krok 2: Vytvořte jeden Datastream (Virtual Pin) pro každou hodnotu
 
+V detailu šablony otevřete záložku **Datastreams** a přidejte jeden datastream typu **Virtual Pin** pro každou naměřenou hodnotu. Pro všechny použijte datový typ **Double** a nastavte rozumný rozsah a jednotku:
 
-#### Krok 2: Přidejte nové flow \(můžete jej přidat pomocí velkého tlačítka plus vedle názvu flow\)
-
-
-#### Krok 3: Vložte následující úryvek do flow \(pomocí **Menu &gt;&gt; Import**\) a klikněte na záložku Flow 3
-
-```text
-[{"id":"31ab8ee9.420bb2","type":"mqtt in","z":"2c41a2bd.aa36ae","name":"","topic":"node/co2-monitor:0/thermometer/0:0/temperature","qos":"2","broker":"1292d7bf.db35a8","x":316,"y":483,"wires":[["cb15bc57.2b0a5"]]},{"id":"fa8f9692.6cb388","type":"mqtt in","z":"2c41a2bd.aa36ae","name":"","topic":"node/co2-monitor:0/hygrometer/0:4/relative-humidity","qos":"2","broker":"1292d7bf.db35a8","x":326,"y":543,"wires":[["dcea0ae2.3287b8"]]},{"id":"d9edba1c.71f348","type":"mqtt in","z":"2c41a2bd.aa36ae","name":"","topic":"node/co2-monitor:0/barometer/0:0/pressure","qos":"2","broker":"1292d7bf.db35a8","x":290,"y":600,"wires":[["31270a41.f16076"]]},{"id":"cb15bc57.2b0a5","type":"blynk-ws-out-write","z":"2c41a2bd.aa36ae","name":"","pin":"0","pinmode":0,"client":"90573d3c.a1cca","x":686,"y":483,"wires":[]},{"id":"f7853a1c.8891e8","type":"mqtt in","z":"2c41a2bd.aa36ae","name":"","topic":"node/co2-monitor:0/co2-meter/-/concentration","qos":"2","broker":"1292d7bf.db35a8","x":300,"y":660,"wires":[["39fede01.e9a5f2"]]},{"id":"dcea0ae2.3287b8","type":"blynk-ws-out-write","z":"2c41a2bd.aa36ae","name":"","pin":"1","pinmode":0,"client":"90573d3c.a1cca","x":686,"y":543,"wires":[]},{"id":"1b9b2c91.106d63","type":"blynk-ws-out-write","z":"2c41a2bd.aa36ae","name":"","pin":"2","pinmode":0,"client":"90573d3c.a1cca","x":680,"y":600,"wires":[]},{"id":"39fede01.e9a5f2","type":"blynk-ws-out-write","z":"2c41a2bd.aa36ae","name":"","pin":"3","pinmode":0,"client":"90573d3c.a1cca","x":680,"y":660,"wires":[]},{"id":"31270a41.f16076","type":"function","z":"2c41a2bd.aa36ae","name":"/ 1000","func":"msg.payload = msg.payload / 1000.0;\nreturn msg;","outputs":1,"noerr":0,"x":530,"y":600,"wires":[["1b9b2c91.106d63"]]},{"id":"1292d7bf.db35a8","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""},{"id":"90573d3c.a1cca","type":"blynk-ws-client","z":"","name":"","path":"ws://blynk-cloud.com/websockets","key":"","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_low":false,"dbg_pins":""}]
-```
-
-Bude to vypadat takto:
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-nodered-2.webp')}/>
-  </div>
-</div>
-
-#### Krok 4: Připojení
-
-Nakonfigurujte MQTT uzel pro připojení k vašemu brokeru. Pokud používáte Raspberry Pi, pravděpodobně se připojí na localhost. Poté je potřeba nakonfigurovat **Blynk** uzel - stačí vyplnit URL `ws://blynk-cloud.com/websockets`. `Auth Token` nakonfigurujeme později, jakmile jej obdržíme z Blynku e-mailem.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-nodered-3.webp')}/>
-  </div>
-</div>
-
-#### Krok 5: Stáhněte si aplikaci **Blynk** z [**App Store**](https://itunes.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481?mt=8) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cc.blynk&hl=en)
-
-#### Krok 6: Po instalaci si vytvořte účet, přihlaste se a měli byste vidět něco podobného
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-blynk-4.webp')}/>
-  </div>
-</div>
-
-#### Krok 7: Nyní klikněte na tlačítko v pravém horním rohu pro naskenování QR kódu
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-blynk-5.webp')}/>
-  </div>
-</div>
-
-#### Krok 8: Nyní naskenujte následující QR kód, abyste získali vše přednastavené
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-blynk-6.webp')}/>
-  </div>
-</div>
-
-#### Krok 9: Měli byste vidět něco podobného
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-blynk-7.webp')}/>
-  </div>
-</div><br></br>
+| Hodnota | Virtual Pin | Typ | Jednotka |
+|---|---|---|---|
+| Teplota | V0 | Double | °C |
+| Relativní vlhkost | V1 | Double | % |
+| Atmosférický tlak | V2 | Double | hPa |
+| Koncentrace CO₂ | V3 | Double | ppm |
 
 :::info
 
-Hodnoty uvidíte po spuštění vašeho integračního projektu.
+Koncentrace CO₂ má vlastní Virtual Pin (V3). Barometr hlásí tlak v pascalech, proto jej Node-RED před odesláním dělí **1000** — datastream V2 plňte v **hPa** (≈ 950–1050).
 
 :::
 
-#### Krok 10: E-mail
+#### Krok 3: Přidejte v Node-RED uzly Blynk IoT Write
 
-Klikněte na ozubené kolečko (nastavení) a zobrazí se nastavení vašeho projektu. Potřebujeme získat `Auth Token`, který musíte zkopírovat do prostředí **Node-RED** v konfiguraci uzlu **Blynk**.
+Přidejte další flow (velkým tlačítkem **+** vedle názvu flow) a sestavte malý řetězec pro každou hodnotu: uzel **MQTT in** přihlášený k odběru tématu daného senzoru, který napájí zelený uzel **Blynk IoT Write** (najdete jej v levém menu v sekci **Blynk IoT**). U atmosférického tlaku vložte mezi MQTT uzel a Write uzel malý **function** uzel `msg.payload = msg.payload / 1000.0`, aby hodnota dorazila v hPa.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-integration-blynk-8.webp')}/>
-  </div>
-</div>
+Použijte tato MQTT témata a Virtual Piny:
 
-#### Krok 11: Nasazení
+| MQTT téma | Virtual Pin |
+|---|---|
+| `node/co2-monitor:0/thermometer/0:0/temperature` | V0 |
+| `node/co2-monitor:0/hygrometer/0:4/relative-humidity` | V1 |
+| `node/co2-monitor:0/barometer/0:0/pressure` (÷ 1000) | V2 |
+| `node/co2-monitor:0/co2-meter/-/concentration` | V3 |
 
-Nyní nasadíte svou aplikaci v **Node-RED** a v projektu **Blynk** stiskněte tlačítko „play“ a máte hotovo!
+#### Krok 4: Nakonfigurujte připojení k Blynk IoT
+
+Dvojklikem otevřete Write uzel a kliknutím na **tužku** přidejte připojení. Do pole **Url** zadejte `blynk.cloud`, poté zkopírujte **Auth Token** a **Template ID** z detailu zařízení ve webové konzoli Blynk. Potvrďte tlačítkem **Add**. Zpět v uzlu nastavte **Virtual Pin** na odpovídající číslo (`0`, `1`, `2` nebo `3` — bez úvodního „V“). Všechny čtyři Write uzly sdílejí stejné připojení. Potvrďte tlačítkem **Done**, propojte uzly a klikněte na **Deploy**.
+
+#### Krok 5: Přidejte v aplikaci widgety Gauge
+
+Stáhněte si aplikaci **Blynk IoT** z [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk), přihlaste se a otevřete své zařízení. Pro každý datastream (CO₂, teplota, vlhkost, tlak) přidejte widget **Gauge** a každý z nich svažte s jeho Virtual Pinem. Po nasazení flow v Node-RED začnou ukazatele zobrazovat živé hodnoty.
 
 ### Související dokumenty  <a id="related-documents"></a>
+
+* [**Integrace aplikace HARDWARIO Blynk**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Nastavení nástrojového řetězce**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)

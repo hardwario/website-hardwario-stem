@@ -240,89 +240,57 @@ Postupujte podle těchto kroků v **Node-RED**:
   </div>
 </div>
 
-## Integrace s Blynk
+## Integrace s Blynk IoT
 
-Nyní jsme sestavili náš **Radio Power Controller**, a můžeme začít se základní integrací s **Blynk**. Nebudeme zde popisovat, co přesně **Blynk** je – pokud chcete získat více informací, doporučujeme navštívit jejich [**webové stránky**](https://www.blynk.cc/). V tomto příkladu vám ukážeme, jak ovládat barvy LED pásku pomocí mobilní aplikace **Blynk**.
+Nyní, když je Radio Power Controller sestaven a reaguje na lokální barevný test, pojďme jej ovládat z telefonu pomocí **Blynk IoT** (současná platforma Blynk – starý cloud Blynk Legacy byl ukončen). Vše zde vychází z kanonického [**průvodce HARDWARIO Blynk IoT**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) – mějte jej otevřený vedle této stránky, kde najdete přesné postupy kliknutí a snímky obrazovky; níže pouze popisujeme princip.
 
-Nejprve je potřeba nakonfigurovat naši aplikaci **Node-RED**.
+V tomto projektu je směr dat **aplikace → zařízení**: každý widget, na který v aplikaci Blynk IoT klepnete, zapíše hodnotu do virtuálního pinu, Node-RED tento pin **přečte** (Read) a předá ji LED pásku / relé prostřednictvím logiky MQTT-out, kterou jste již vytvořili.
 
-#### Krok 1: Blynk uzly
+#### Krok 1: Vytvořte účet, šablonu a zařízení Blynk IoT
 
-Pokud používáte HARDWARIO verzi pro Raspberry Pi, mělo by být vše v pořádku, ale přesto zkontrolujte, zda jsou nainstalovány **Blynk** nodes. (Můžete je vidět v levém postranním menu v **Node-RED**). V opačném případě budete muset nainstalovat balíček **Node-RED** s názvem `node-red-contrib-blynk-ws`.
+Pokud ještě žádný nemáte, vytvořte si účet v aplikaci [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) a poté vytvořte **šablonu zařízení (device template)** a z ní **zařízení (device)**. [Průvodce](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) vás provede celým tímto procesem; můžete také znovu použít šablonu z předchozího projektu. V detailu zařízení si poznamenejte jeho **Auth Token** a **Template ID** – vložíte je do Node-RED v kroku 4.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-nodered-1.webp')}/>
-  </div>
-</div>
+#### Krok 2: Vytvořte Datastream (virtuální pin) pro každý ovládací prvek
 
-#### Krok 2: Přidejte další flow \(můžete je přidat pomocí velkého tlačítka plus vedle názvu flow.\)
+V detailu šablony otevřete záložku **Datastreams**, klikněte na **Edit**, poté na **+ New Datastream** a zvolte **Virtual Pin**. Vytvořte jeden virtuální pin pro každý ovládací prvek, který chcete u LED pásku a relé používat:
 
-#### Krok 3: Vložte následující úryvek do flow \(pomocí **Menu >> Import >> Schránka**\) a klikněte na záložku Flow 3
+| Ovládací prvek | Virtuální pin | Typ datastreamu | Odesílá do zařízení |
+|---|---|---|---|
+| Barva LED pásku | V1 | String (barva) | `led-strip/-/color/set` |
+| Úroveň bílé | V2 | Integer `0`–`255` | `led-strip/-/color/set` (bílý kanál) |
+| LED pásek zap/vyp | V3 | Integer `0`/`1` | `led-strip/-/color/set` (poslední barva / vypnuto) |
+| Relé (napájené zařízení) | V4 | Integer `0`/`1` | `relay/-/state/set` |
+| Efekt duha | V5 | Integer `0`/`1` | `led-strip/-/effect/set` (`rainbow`) |
+| Efekt theater-chase | V6 | Integer `0`/`1` | `led-strip/-/effect/set` (`theater-chase-rainbow`) |
+| Jas | V7 | Integer `0`–`100` | `led-strip/-/brightness/set` |
 
-```text
-[{"id":"702c9447.9b790c","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"1","client":"746d7fe1.2a0be","x":330,"y":280,"wires":[["4da0fdbd.a3c614"]]},{"id":"4da0fdbd.a3c614","type":"function","z":"aaf5722e.dfdca","name":"Convert to BC format","func":"var finalString = '\"#'\nvar colorToSave = \"\";\nmsg.arrayOfValues.forEach((color) => {\n    var carry = (parseInt(color)).toString(16)\n    if(carry.length == 1) carry = \"0\" + carry;\n    finalString += carry;\n    colorToSave += carry;\n});\n\nflow.set(\"color\", colorToSave);\n\nif((flow.get(\"ledstrip\")) == false){\n    msg.payload = '\"#000000(00)\"'\n}\nelse{\n    var white = flow.get(\"white\");\n    if(white == null) white = \"00\";\n    msg.payload = finalString + '(' + white + ')\"'; \n}\n\n\nmsg.topic = \"node/power-controller:0/led-strip/-/color/set\";\nreturn msg;\n","outputs":1,"noerr":0,"x":600,"y":280,"wires":[["a7ef9db0.cc602"]]},{"id":"a7ef9db0.cc602","type":"mqtt out","z":"aaf5722e.dfdca","name":"","topic":"","qos":"","retain":"","broker":"71afb0a.14d505","x":870,"y":420,"wires":[]},{"id":"b596fcc7.b5206","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"4","client":"746d7fe1.2a0be","x":330,"y":460,"wires":[["80140f23.46bf6"]]},{"id":"80140f23.46bf6","type":"function","z":"aaf5722e.dfdca","name":"String to bool parser","func":"if(msg.payload == true)\n{\n    msg.payload = true;\n}\nelse{\n    msg.payload = false;\n}\nmsg.topic = \"node/power-controller:0/relay/-/state/set\";\nreturn msg;","outputs":1,"noerr":0,"x":600,"y":460,"wires":[["a7ef9db0.cc602"]]},{"id":"62416cd0.a6dbf4","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"3","client":"746d7fe1.2a0be","x":330,"y":400,"wires":[["3bce27cc.257308"]]},{"id":"3bce27cc.257308","type":"function","z":"aaf5722e.dfdca","name":"Handler","func":"var lastColor = flow.get(\"color\")|| \"000000(00)\";\n\nif(msg.payload == false) {\n    msg.payload = '\"#000000(00)\"';\n    flow.set(\"ledstrip\", false);\n}\nelse {\n    msg.payload = '\"#' + '' + lastColor + '\"';\n    flow.set(\"ledstrip\", true);\n}\nmsg.topic = \"node/power-controller:0/led-strip/-/color/set\";\n\nreturn msg;","outputs":1,"noerr":0,"x":640,"y":400,"wires":[["a7ef9db0.cc602"]]},{"id":"d619d828.3e1bf8","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"5","client":"746d7fe1.2a0be","x":330,"y":520,"wires":[["9b87dc69.53d55"]]},{"id":"e267bf2d.7e292","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"6","client":"746d7fe1.2a0be","x":330,"y":580,"wires":[["81fcc52c.023c08"]]},{"id":"3121623b.8b75de","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"2","client":"746d7fe1.2a0be","x":330,"y":340,"wires":[["99a36ea2.e29bf"]]},{"id":"9b87dc69.53d55","type":"function","z":"aaf5722e.dfdca","name":"Rainbow","func":"if(msg.payload == true && flow.get(\"ledstrip\")||true){\n    msg.payload = '{\"type\":\"rainbow\", \"wait\":50}';\n    msg.topic = \"node/power-controller:0/led-strip/-/effect/set\"   \n}\n\nreturn msg;","outputs":1,"noerr":0,"x":640,"y":520,"wires":[["a7ef9db0.cc602"]]},{"id":"81fcc52c.023c08","type":"function","z":"aaf5722e.dfdca","name":"Theater chase","func":"if(msg.payload == true && flow.get(\"ledstrip\")||true){\n    msg.payload = '{\"type\":\"theater-chase-rainbow\", \"wait\":50}';\n    msg.topic = \"node/power-controller:0/led-strip/-/effect/set\"   \n}\n\nreturn msg;","outputs":1,"noerr":0,"x":620,"y":580,"wires":[["a7ef9db0.cc602"]]},{"id":"99a36ea2.e29bf","type":"function","z":"aaf5722e.dfdca","name":"White color handler","func":"var carry = (parseInt(msg.payload)).toString(16)\nif(carry.length == 1) carry = \"0\" + carry;\n\nflow.set(\"white\", carry);\n\nvar color = flow.get(\"color\");\nif(color == null) color = \"000000\";\n\nmsg.payload = '\"#' + color +'(' + carry + ')\"';\nmsg.topic = \"node/power-controller:0/led-strip/-/color/set\";\nreturn msg;","outputs":1,"noerr":0,"x":610,"y":340,"wires":[["a7ef9db0.cc602"]]},{"id":"d40dc7b0.acf648","type":"blynk-ws-in-write","z":"aaf5722e.dfdca","name":"","pin":"7","client":"746d7fe1.2a0be","x":330,"y":640,"wires":[["a03ff4eb.de9fd8"]]},{"id":"a03ff4eb.de9fd8","type":"function","z":"aaf5722e.dfdca","name":"Brightness handler","func":"if(msg.payload == true && flow.get(\"ledstrip\")||true){\n    msg.payload = msg.payload;\n    msg.topic = \"node/power-controller:0/led-strip/-/brightness/set\"   \n}\n\nreturn msg;","outputs":1,"noerr":0,"x":610,"y":640,"wires":[["a7ef9db0.cc602"]]},{"id":"746d7fe1.2a0be","type":"blynk-ws-client","z":"","name":"","path":"ws://blynk-cloud.com/websockets","key":"","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_low":false,"dbg_pins":""},{"id":"71afb0a.14d505","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
-```
+Po dokončení šablonu uložte. (Čísla virtuálních pinů výše jsou pouze příklad – použijte libovolné volné piny, ale udržujte je konzistentní s uzly Node-RED v kroku 4.)
 
-Bude to vypadat takto:
+#### Krok 3: Přidejte odpovídající widgety v aplikaci Blynk IoT
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-nodered-2.webp')}/>
-  </div>
-</div>
+Stáhněte si aplikaci **Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk), přihlaste se a otevřete zařízení, které jste vytvořili. Na jeho dashboard přidejte widget pro každý Datastream a každý widget přiřaďte k jeho virtuálnímu pinu:
 
-#### Krok 4: Nastavení připojení k Blynk
+* **Color** widget → pin barvy (V1)
+* **Slider** widget → úroveň bílé (V2) a další pro jas (V7)
+* **Button** (režim přepínače) → zap/vyp (V3) a relé (V4)
+* **Button** nebo **Segmented Switch** → efekt duha (V5) a efekt theater-chase (V6)
 
-Nakonfigurujte MQTT uzel tak, aby se připojil k vašemu brokeru. Pokud používáte Raspberry Pi, pravděpodobně se připojí na localhost. Poté je potřeba nakonfigurovat **Blynk** node. Stačí zadat URL `ws://blynk-cloud.com/websockets`. `Auth Token` nakonfigurujeme později poté, co jej obdržíte e-mailem z Blynk.
+Průvodce ukazuje přesně, jak widget přidat a přiřadit.
 
-#### Krok 5: Mobilní aplikace
+#### Krok 4: Přečtěte virtuální piny v Node-RED
 
-Nyní si stáhněte aplikaci **Blynk** z [**App Store**](https://itunes.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481?mt=8) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cc.blynk&hl=en)
+Přidejte v Node-RED nový flow. Pro každý ovládací prvek vložte uzel **Read** Blynk IoT (najdete jej v sekci Blynk IoT v levé paletě) a propojte jej s malým uzlem **function**, který příchozí hodnotu namapuje na správné MQTT téma, a poté do vašeho stávajícího uzlu **MQTT out**. Mapování odpovídá tématům z lokálního Testu komunikace – například barva a bílá sestaví payload `node/power-controller:0/led-strip/-/color/set`, zap/vyp obnoví poslední barvu nebo odešle černou, relé odešle `node/power-controller:0/relay/-/state/set`, efekty odešlou `node/power-controller:0/led-strip/-/effect/set` a jas odešle `node/power-controller:0/led-strip/-/brightness/set`.
 
-#### Krok 6: Po instalaci si vytvořte účet, přihlaste se a měli byste vidět něco podobného.
+Každý uzel Read nakonfigurujte kliknutím na **tužku** vedle připojení a vyplněním:
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-1.webp')}/>
-  </div>
-</div>
+* **Url**: `blynk.cloud`
+* **Auth Token** a **Template ID**: hodnoty z detailu vašeho zařízení (krok 1)
 
-#### Krok 7: Nyní klikněte na tlačítko v pravém horním rohu pro naskenování QR kódu
+Potvrďte tlačítkem **Add**, poté do pole **Virtual Pin** zadejte číslo pinu pro daný ovládací prvek (pouze číslo, bez písmene „V“). Potvrďte tlačítkem **Done**.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-2.webp')}/>
-  </div>
-</div>
+#### Krok 5: Nasaďte a vyzkoušejte
 
-#### Krok 8: Nyní naskenujte následující QR kód, abyste získali vše předem nakonfigurované
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-qr.webp')}/>
-  </div>
-</div>
-
-#### Krok 9: Měli byste vidět něco podobného
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-3.webp')}/>
-  </div>
-</div>
-
-#### Krok 10: Email
-
-Klikněte na ozubené kolečko pro nastavení a měli byste vidět nastavení vašeho projektu. Potřebujeme získat `Auth Token`, který musíte zkopírovat do **Node-RED** v konfiguraci **Blynk** node.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-blynk-4.webp')}/>
-  </div>
-</div>
-
-#### Krok 11: Nyní nasaďte (deploy) vaši aplikaci **Node-RED** a stiskněte tlačítko přehrávání (**play**) ve vašem projektu **Blynk** – a máte hotovo!
+Klikněte na červené tlačítko **Deploy** v Node-RED a poté otevřete zařízení v aplikaci Blynk IoT. Klepejte na widgety – barva, úroveň bílé, zap/vyp, relé, efekty a jas by nyní měly v reálném čase ovládat LED pásek a napájené zařízení. 🌈
 
 ### Související dokumenty<a id="related-documents"></a>
 

@@ -202,99 +202,77 @@ V tomto bodě máte ověřenou rádiovou komunikaci.
 
 :::
 
-## Integrace s Blynk
+## Integrace s Blynk IoT
 
-Nyní máme naši sadu sestavenou a můžeme začít se základní integrací s **Blynk**. Začneme bez podrobného vysvětlování, co **Blynk** je. Pokud se o něm chcete dozvědět více, nejlepší bude navštívit jejich [**stránku**](https://www.blynk.cc/). V našem příkladu vám ukážeme, jak monitorovat teplotu v časovém grafu a také jak ovládat relé v závislosti na přednastavené teplotě.
+Nyní, když je sada sestavená a odesílá data přes MQTT, zobrazme si teplotu na
+telefonu pomocí platformy **Blynk IoT** (aktuální platforma Blynk — původní cloud
+Blynk Legacy byl ukončen). V tomto příkladu vykreslíme do grafu naměřenou teplotu
+společně s nastavenou hodnotou (set-point), zatímco relé se nadále spíná lokálně
+podle této nastavené hodnoty.
 
-Nejprve musíme nakonfigurovat naši aplikaci **Node-RED**.
+Postup vytvoření účtu Blynk, šablony zařízení, datastreamů a zařízení najdete
+v hlavním návodu HARDWARIO
+[**Integrace s aplikací Blynk**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+Tento návod také vysvětluje, kde najít **Auth Token** a **Template ID**, které
+budete níže potřebovat.
 
-#### Krok 1: Blynk nodes
+#### Krok 1: Vytvořte šablonu a datastreamy
 
-If you are using HARDWARIO raspi version you should be fine, but still check that **Blynk** nodes are installed. (You can view them on the left side menu in **Node-RED**). Otherwise you will need to install **Node-RED** package `node-red-contrib-blynk-ws`.
+Ve webové konzoli Blynk IoT vytvořte **šablonu zařízení** (device template) a poté
+přidejte jeden **Datastream** (**Virtual Pin**) pro každou hodnotu, kterou chcete
+zobrazit:
 
-Pokud používáte verzi HARDWARIO pro Raspberry Pi, mělo by být vše v pořádku, ale i tak si ověřte, že jsou nainstalovány uzly **Blynk**. (Můžete je vidět v levém postranním panelu v prostředí **Node-RED**.) V opačném případě budete muset nainstalovat balíček pro **Node-RED** s názvem `node-red-contrib-blynk-ws`.
+| Hodnota | Virtual Pin | Typ | Jednotka |
+|---|---|---|---|
+| Naměřená teplota | V1 | Double | °C |
+| Nastavená teplota (set-point) | V2 | Double | °C |
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-nodered-1.webp')}/>
-  </div>
-</div>
+Pro každý datastream nastavte rozumný rozsah (například **0 – 50**). Poté z této
+šablony vytvořte **zařízení** — přesné kroky najdete v [návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
-#### Krok 2: Přidejte nové flow (můžete jej přidat pomocí velkého tlačítka plus vedle názvu flow)
+#### Krok 2: Nakonfigurujte flow v Node-RED
 
-#### Krok 3: Vložte následující úryvek do flow (pomocí **Menu >> Import**)
+Na ploše Node-RED se přihlaste k odběru dvou MQTT témat publikovaných termostatem
+a předejte je do Blynku:
 
-```text
-[{"id":"85a6bc11.f6088","type":"tab","label":"Flow 2","disabled":false,"info":""},{"id":"cdb6da8f.c84f88","type":"blynk-ws-out-write","z":"85a6bc11.f6088","name":"","pin":"1","pinmode":0,"client":"172c134d.989ead","x":700,"y":440,"wires":[]},{"id":"9dd2498e.466368","type":"mqtt in","z":"85a6bc11.f6088","name":"","topic":"node/lcd-thermostat:0/thermometer/0:1/temperature","qos":"2","broker":"3d7de0ee.6b9ed","x":210,"y":140,"wires":[["2390ca91.f7db36"]]},{"id":"c35cea67.a92b48","type":"inject","z":"85a6bc11.f6088","name":"Every 1 second","topic":"","payload":"","payloadType":"date","repeat":"1","crontab":"","once":false,"onceDelay":"","x":130,"y":440,"wires":[["10c14148.1cc99f","19338151.912a9f"]]},{"id":"5b5fb6fe.549268","type":"mqtt out","z":"85a6bc11.f6088","name":"","topic":"node/power-controller:0/relay/-/state/set","qos":"","retain":"","broker":"3d7de0ee.6b9ed","x":780,"y":340,"wires":[]},{"id":"2390ca91.f7db36","type":"change","z":"85a6bc11.f6088","name":"","rules":[{"t":"set","p":"temperature","pt":"flow","to":"$number(msg.payload)","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":540,"y":140,"wires":[["63757f48.e9115"]]},{"id":"518ff012.d2933","type":"mqtt in","z":"85a6bc11.f6088","name":"","topic":"node/lcd-thermostat:0/thermometer/set-point/temperature","qos":"2","broker":"3d7de0ee.6b9ed","x":230,"y":60,"wires":[["efd4b628.96d098"]]},{"id":"efd4b628.96d098","type":"change","z":"85a6bc11.f6088","name":"","rules":[{"t":"set","p":"setpoint","pt":"flow","to":"$number(msg.payload)","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":560,"y":60,"wires":[["63757f48.e9115"]]},{"id":"10c14148.1cc99f","type":"change","z":"85a6bc11.f6088","name":"","rules":[{"t":"set","p":"payload","pt":"msg","to":"temperature","tot":"flow"}],"action":"","property":"","from":"","to":"","reg":false,"x":400,"y":440,"wires":[["cdb6da8f.c84f88"]]},{"id":"19338151.912a9f","type":"change","z":"85a6bc11.f6088","name":"","rules":[{"t":"set","p":"payload","pt":"msg","to":"setpoint","tot":"flow"}],"action":"","property":"","from":"","to":"","reg":false,"x":400,"y":480,"wires":[["32f2b7a7.072788"]]},{"id":"32f2b7a7.072788","type":"blynk-ws-out-write","z":"85a6bc11.f6088","name":"","pin":"2","pinmode":0,"client":"172c134d.989ead","x":700,"y":480,"wires":[]},{"id":"63757f48.e9115","type":"switch","z":"85a6bc11.f6088","name":"comparison","property":"setpoint","propertyType":"flow","rules":[{"t":"gt","v":"temperature","vt":"flow"},{"t":"lte","v":"temperature","vt":"flow"}],"checkall":"true","repair":false,"outputs":2,"x":530,"y":260,"wires":[["b83b5274.58c59"],["4984fb4c.bbe3f4"]]},{"id":"b83b5274.58c59","type":"change","z":"85a6bc11.f6088","name":"true","rules":[{"t":"set","p":"payload","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":670,"y":240,"wires":[["5b5fb6fe.549268"]]},{"id":"4984fb4c.bbe3f4","type":"change","z":"85a6bc11.f6088","name":"false","rules":[{"t":"set","p":"payload","pt":"msg","to":"false","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":670,"y":280,"wires":[["5b5fb6fe.549268"]]},{"id":"172c134d.989ead","type":"blynk-ws-client","z":"","name":"","path":"ws://blynk-cloud.com/websockets","key":"4035de467a9a483b9d1318c92d3fabcb","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_sync":false,"dbg_bridge":false,"dbg_low":false,"dbg_pins":"","multi_cmd":false,"proxy_type":"no","proxy_url":""},{"id":"3d7de0ee.6b9ed","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","willTopic":"","willQos":"0","willPayload":""}]
-```
+* `node/lcd-thermostat:0/thermometer/0:1/temperature` → **naměřená teplota**
+* `node/lcd-thermostat:0/thermometer/set-point/temperature` → **nastavená hodnota (set-point)**
 
-Bude to vypadat takto:
+Logika relé zůstává zcela lokální: uzel **switch** porovnává naměřenou teplotu
+s nastavenou hodnotou a publikuje `true`/`false` na téma
+`node/power-controller:0/relay/-/state/set`, přesně jako dříve. Tato část se
+Blynku netýká.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-nodered-2.webp')}/>
-  </div>
-</div>
+Abyste každou hodnotu odeslali do telefonu, přidejte za každé téma s teplotou uzel
+**Blynk IoT Write** (najdete jej vlevo v sekci **Blynk IoT**):
 
-#### Krok 4: Připojení
+* uzel s naměřenou teplotou → **Virtual Pin** `1`
+* uzel s nastavenou hodnotou → **Virtual Pin** `2`
 
-Nakonfigurujte MQTT uzel tak, aby se připojil k vašemu brokeru. Pokud používáte Raspberry Pi, pravděpodobně se připojí na localhost. Poté je potřeba nakonfigurovat **Blynk node** – stačí vyplnit URL `ws://blynk-cloud.com/websockets`. `Auth Token` nakonfigurujeme později, až jej obdržíme e-mailem od Blynku.
+#### Krok 3: Nasměrujte uzly Write na Blynk IoT
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-nodered-screen-2.webp')}/>
-  </div>
-</div>
+Dvakrát klikněte na uzel **Write** a kliknutím na **malou tužku** otevřete
+konfiguraci klienta. Do pole **Url** zadejte `blynk.cloud` a zkopírujte **Auth
+Token** a **Template ID** z detailu vašeho zařízení ve webové konzoli Blynk.
+Potvrďte tlačítkem **Add**. Zpět v uzlu nastavte číslo **Virtual Pin** (bez
+písmene „V“) a klikněte na **Done**. Pro oba uzly Write použijte stejného klienta.
 
-#### Krok 5: Nyní si stáhněte aplikaci Blynk [**App Store**](https://itunes.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481?mt=8) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cc.blynk&hl=en)
+Jakmile jsou oba uzly zapojené, klikněte na tlačítko **Deploy** v pravém horním
+rohu.
 
-#### Krok 6: Po instalaci si vytvořte účet, přihlaste se a měli byste vidět něco podobného.
+#### Krok 4: Přidejte widget v aplikaci Blynk IoT
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-1.webp')}/>
-  </div>
-</div>
-
-#### Krok 7: Nyní klikněte na tlačítko v pravém horním rohu pro naskenování QR kódu
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-2.webp')}/>
-  </div>
-</div>
-
-#### Krok 8: Nyní naskenujte následující QR kód, abyste získali vše přednastavené
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-qr.webp')}/>
-  </div>
-</div>
-
-#### Krok 9: Měli byste vidět něco podobného, pouze zatím bez hodnot teploty
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-3.webp')}/>
-  </div>
-</div>
-
-#### Krok 10: Email
-
-Klikněte na ozubené kolečko (nastavení) a zobrazí se nastavení vašeho projektu. Potřebujeme získat `Auth Token`, který musíte zkopírovat do prostředí **Node-RED** v konfiguraci **Blynk** node.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-blynk-4.webp')}/>
-  </div>
-</div>
-
-#### Krok 11: Nyní nasadíte svou aplikaci v **Node-RED** a v projektu **Blynk** stiskněte tlačítko „play“ – a máte hotovo!
-
+Stáhněte si aplikaci **Blynk IoT** z
+[**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo
+[**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk) a
+přihlaste se pod stejným účtem. Otevřete své zařízení a poté přidejte widget
+**Chart** (pro sledování teploty v čase) nebo **Gauge**. Otevřete nastavení
+widgetu a navažte jej na **Datastream** virtuálního pinu, který jste zvolili.
+Jakmile je Node-RED nasazený, hodnoty začnou přitékat a máte hotovo!
 
 ## Související dokumenty
 
+* [**Integrace s aplikací Blynk**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
 * [**Instalace Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Toolchain nastavení**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
 * [**Toolchain průvodce**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)

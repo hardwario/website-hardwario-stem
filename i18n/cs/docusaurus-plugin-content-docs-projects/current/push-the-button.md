@@ -89,77 +89,43 @@ Pokud nevidíte Radio Dongle mezi zařízeními, podívejte se na kapitolu [Trou
   </div>
 </div>
 
-Pokud nevidíte flow, můžete zkopírovat níže uvedený text a vložit ho do nabídky Node-RED &gt; Import &gt; Clipboard
+Pokud flow nevidíte, sestavte ho sami. Potřebujete tři uzly zapojené za sebou:
 
-```text
-[{"id":"103c675c.c81139","type":"mqtt in","z":"2c41a2bd.aa36ae","name":"","topic":"node/push-button:0/push-button/-/event-count","qos":"2","broker":"29fba84a.b2af58","x":270,"y":360,"wires":[["ff41c7e0.06eba8"]]},{"id":"f507ecc3.8f82b","type":"blynk-ws-out-notify","z":"2c41a2bd.aa36ae","name":"Blynk notification","client":"fc4bbabb.9bb1b8","queue":false,"rate":5,"x":790,"y":360,"wires":[]},{"id":"ff41c7e0.06eba8","type":"change","z":"2c41a2bd.aa36ae","name":"Set message","rules":[{"t":"set","p":"payload","pt":"msg","to":"Button pressed, you're the best!","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":570,"y":360,"wires":[["f507ecc3.8f82b"]]},{"id":"c131dd35.bb855","type":"comment","z":"2c41a2bd.aa36ae","name":"Push Button Kit flow","info":"","x":190,"y":300,"wires":[]},{"id":"29fba84a.b2af58","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","willTopic":"","willQos":"0","willPayload":""},{"id":"fc4bbabb.9bb1b8","type":"blynk-ws-client","z":"","name":"","path":"ws://blynk-cloud.com/websockets","key":"5cf554e34caf4d49a1b24cd07c5e2c13","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_sync":false,"dbg_bridge":false,"dbg_low":false,"dbg_pins":"","multi_cmd":false,"proxy_type":"no","proxy_url":""}]
-```
+1. Uzel **MQTT in** přihlášený k topicu stisku tlačítka `node/push-button:0/push-button/-/event-count`.
+2. Uzel **change**, který nastaví `msg.payload` na text oznámení, který chcete, například `Button pressed, you're the best!`.
+3. Uzel Blynk IoT, který oznámení doručí (ten přidáte v další sekci, jakmile budete mít připravený účet a šablonu Blynk IoT).
 
-## Nastavení mobilní aplikace Blynk
+Uzel Blynk IoT propojíme v sekci **Dát to všechno dohromady** níže.
 
-V tomto kroku nakonfigurujete aplikaci **Blynk** ve svém telefonu, abyste mohli dostávat oznámení z **HARDWARIO Playground**.
+## Příprava aplikace Blynk IoT
 
-#### Krok 1: Stáhněte si Blynk
+V tomto kroku nastavíte **Blynk IoT**, aby váš telefon mohl přijímat oznámení z **HARDWARIO Playground**. Stará aplikace Blynk Legacy byla ukončena, proto používáme aktuální platformu **Blynk IoT**.
 
-Nyní si stáhněte aplikaci **Blynk** z [**App Store**](https://itunes.apple.com/us/app/blynk-iot-for-arduino-esp32/id808760481?mt=8) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cc.blynk&hl=en). Vytvořte účet a přihlaste se.
+#### Krok 1: Vytvořte účet, šablonu a zařízení v Blynk IoT
 
-#### Krok 2: Klikněte na **QR kód**
+Pokud ještě účet nemáte, vytvořte si ho v **Blynk IoT** a nastavte zařízení. Celý postup — účet, **šablona** (template), **datastreamy** a **zařízení** — je popsán v [této příručce](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Pokud již máte šablonu z předchozího projektu, můžete ji znovu použít.
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-blynk.webp')}/>
-  </div>
-</div>
+Poté si do telefonu stáhněte aplikaci **Blynk IoT** z [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlaste se stejnými údaji.
 
-#### **Krok 3:** Naskenujte následující QR kód, abyste získali vše předkonfigurované
+#### Krok 2: Definujte ve své šabloně oznamovací Event
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-blynk-qr-code-push-button-kit.webp')}/>
-  </div>
-</div>
+V Blynk IoT se push notifikace odesílají prostřednictvím **Events** (událostí). Otevřete svou šablonu ve webové konzoli Blynk IoT a vytvořte nový **Event** (například s názvem `Button pressed`). V nastavení události zapněte **Notifications** a vyberte, kdo má na propojeném zařízení push notifikaci dostávat.
 
-#### Krok 4: Uvidíte tento importovaný **projekt** s jediným **Widgetem pro oznámení**
-
-Klikněte na **ikonu Nastavení**.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-blynk-config.webp')}/>
-  </div>
-</div>
-
-#### Krok 5: Přejděte dolů a klikněte na **Odeslat všechny** tokeny. Tento token z vašeho e-mailu použijeme později.
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-blynk-token.webp')}/>
-  </div>
-</div>
-
-#### Krok 6: Nyní musíte spustit projekt Blynk. Klikněte na symbol **Přehrát**
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-blynk-play.webp')}/>
-  </div>
-</div>
+Toto je zpráva, která se objeví na vašem telefonu pokaždé, když stisknete tlačítko. Přesné kroky a snímky obrazovky najdete v [příručce](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
 ## Dát to všechno dohromady
 
-Posledním krokem je propojit Node-RED a Blynk, abyste mohli dostávat oznámení.
+Posledním krokem je propojit Node-RED s Blynk IoT, aby stisk tlačítka spustil vaši oznamovací událost (Event).
 
-#### Krok 1: V záložce **Playground** **Functions** dvojklikněte na  **Blynk notification** none
+#### Krok 1: Přidejte uzel Blynk IoT
 
-#### Krok 2: Klikněte na **ikonu tužky** a vložte token, který jste obdrželi v e-mailu. Klikněte na **Hotovo**
+V záložce **Funkce** v **Playground** přidejte za uzel **change** uzel Blynk IoT a propojte je. Uzly Blynk IoT najdete vlevo v paletě.
+
+#### Krok 2: Nakonfigurujte připojení
+
+Dvojklikněte na uzel a poté klikněte na **ikonu tužky** pro nastavení připojení k Blynk. Do pole **Url** zadejte `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu vašeho zařízení ve webové konzoli Blynk IoT. Potvrďte a poté uzel nasměrujte na **Event** (`Button pressed`), který jste ve šabloně definovali, aby spouštěl danou notifikaci.
 
 #### **Krok 3:** Klikněte na tlačítko **Nasadit**. Pokaždé, když upravíte flow Node-RED, musíte změny aplikovat!
-
-<div class="container">
-  <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-node-red-token.webp')}/>
-  </div>
-</div>
 
 ## Akce!
 

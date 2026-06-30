@@ -172,51 +172,37 @@ function doPost(e) {
 
 ### Popis experimentu
 
-Na Experiment 1 může navazovat integrace s mobilní aplikací Blynk, díky které můžete zobrazit naměřená data ve svém chytrém telefonu.
+Na Experiment 1 může navazovat integrace s mobilní aplikací **Blynk IoT**, díky které můžete zobrazit naměřená data ve svém chytrém telefonu. (Starý cloud **Blynk Legacy** byl ukončen, proto tento experiment využívá současnou platformu **Blynk IoT**.)
 
 V rámci experimentu pochopíme:
 
-* jak propojit mobilní aplikaci Blynk s prostředím Playground
+* jak propojit mobilní aplikaci Blynk a zobrazit naměřená data
+
+Podrobný postup krok za krokem pro vytvoření účtu, šablony a zařízení najdete v oficiálním návodu: [**Integrace aplikace Blynk s HARDWARIO**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
 ### Kroky experimentu
 
+* Vytvořte si účet v aplikaci **Blynk IoT** (stáhněte si ji z [App Store / Google Play](https://blynk.io/getting-started)) nebo v [webové konzoli Blynk](https://blynk.cloud/).
+* Vytvořte **šablonu zařízení** (device template) a z ní následně vytvořte **zařízení** (device). Přesné kroky jsou popsány v [návodu k integraci](https://docs.hardwario.com/tower/platform-integrations/blynk-app/), který je závazným zdrojem informací; ze zařízení získáte **Auth Token** a **Template ID** použité níže.
+* V šabloně otevřete kartu **Datastreams** a pro každou měřenou hodnotu přidejte jeden datastream typu **Virtual Pin** (typ **Double**):
 
-* Nainstalujte si [aplikaci Blynk](https://blynk.io/getting-started) do svého chytrého telefonu
-* Vyberte možnost **Scan QR code** (Skenovat QR kód) a naskenujte tento **kód**
+| Hodnota | Virtual Pin | Typ | Jednotka |
+|---|---|---|---|
+| Teplota | V0 | Double | °C |
+| Vlhkost | V1 | Double | % |
+| TVOC | V2 | Double | ppb |
+| Koncentrace CO₂ | V3 | Double | ppm |
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./stem-qr-code.jpeg')}/>
-  </div>
-</div>
+* V aplikaci **Playground** na kartě **Functions** přidejte uzly Blynk IoT Write, které posílají MQTT data do Blynku. Pro každou hodnotu propojte uzel **MQTT in** (přihlášený k odběru senzorového topicu) se zeleným uzlem **Blynk IoT Write** (najdete ho v levém menu v sekci **Blynk IoT**), s Virtual Pinem odpovídajícím datastreamu výše:
 
-* Uvidíte, že se projekt objeví ve vaší aplikaci
-* Klikněte na projekt a poté v pravém horním rohu na ikonu **Nastavení**
+| MQTT topic | Virtual Pin |
+|---|---|
+| `node/co2-monitor:0/thermometer/0:0/temperature` | V0 |
+| `node/co2-monitor:0/hygrometer/0:4/relative-humidity` | V1 |
+| `node/co2-monitor:0/voc-sensor/0:0/tvoc` | V2 |
+| `node/co2-monitor:0/co2-meter/-/concentration` | V3 |
 
-<div class="container">
-  <div class="row">
-    <Image img={require('./stem-application.png')}/>
-  </div>
-</div>
-
-* Zobrazí se vám **Auth Token**, který budete potřebovat, aby projekt fungoval s prostředím Playground
-* V aplikaci Playground přejděte na kartu Functions a importujte tento flow
-
-```json
-[{"id":"73063e5f.b2922","type":"mqtt in","z":"b3853131.935c8","name":"","topic":"node/co2-monitor:0/thermometer/0:0/temperature","qos":"2","broker":"e649966c.8c2af8","x":340,"y":480,"wires":[["8f85e87c.769d18","3f7fcbee.7f91e4"]]},{"id":"4166a3d0.b2c9ac","type":"mqtt in","z":"b3853131.935c8","name":"","topic":"node/co2-monitor:0/hygrometer/0:4/relative-humidity","qos":"2","broker":"e649966c.8c2af8","x":350,"y":580,"wires":[["28dadeae.792542","4eab5e08.5ca1d"]]},{"id":"4008a8e5.904ff8","type":"mqtt in","z":"b3853131.935c8","name":"","topic":"node/co2-monitor:0/co2-meter/-/concentration","qos":"2","broker":"e649966c.8c2af8","x":330,"y":780,"wires":[["bba1323a.410d6","4470ac6c.039244"]]},{"id":"8f85e87c.769d18","type":"ui_gauge","z":"b3853131.935c8","name":"","group":"57ff470b.93fdf8","order":0,"width":0,"height":0,"gtype":"gage","title":"Temperature","label":"°C","format":"{{value}}","min":0,"max":"40","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","x":750,"y":480,"wires":[]},{"id":"28dadeae.792542","type":"ui_gauge","z":"b3853131.935c8","name":"","group":"57ff470b.93fdf8","order":0,"width":0,"height":0,"gtype":"gage","title":"Humidity","label":"%","format":"{{value}}","min":0,"max":"100","colors":["#97faff","#00b8c1","#005bca"],"seg1":"","seg2":"","x":740,"y":580,"wires":[]},{"id":"bba1323a.410d6","type":"ui_gauge","z":"b3853131.935c8","name":"","group":"57ff470b.93fdf8","order":0,"width":0,"height":0,"gtype":"gage","title":"CÖ2 Concentration","label":"ppm","format":"{{value}}","min":0,"max":"10000","colors":["#ffffff","#c0c0c0","#220909"],"seg1":"","seg2":"","x":770,"y":780,"wires":[]},{"id":"3f7fcbee.7f91e4","type":"blynk-ws-out-write","z":"b3853131.935c8","name":"","pin":0,"pinmode":0,"client":"69359c27.0b0d54","x":760,"y":520,"wires":[]},{"id":"4eab5e08.5ca1d","type":"blynk-ws-out-write","z":"b3853131.935c8","name":"","pin":"1","pinmode":0,"client":"69359c27.0b0d54","x":760,"y":620,"wires":[]},{"id":"4470ac6c.039244","type":"blynk-ws-out-write","z":"b3853131.935c8","name":"","pin":"3","pinmode":0,"client":"69359c27.0b0d54","x":760,"y":820,"wires":[]},{"id":"b481c17c.ffeb1","type":"blynk-ws-out-write","z":"b3853131.935c8","name":"","pin":"2","pinmode":0,"client":"69359c27.0b0d54","x":760,"y":720,"wires":[]},{"id":"ec9b8fbd.bd1ec","type":"mqtt in","z":"b3853131.935c8","name":"","topic":"node/co2-monitor:0/voc-sensor/0:0/tvoc","qos":"2","datatype":"auto","broker":"e649966c.8c2af8","x":310,"y":680,"wires":[["b481c17c.ffeb1","a38ea362.79de7"]]},{"id":"a38ea362.79de7","type":"ui_gauge","z":"b3853131.935c8","name":"","group":"2fc45a9a.bbfd66","order":0,"width":0,"height":0,"gtype":"gage","title":"TVOC","label":"units","format":"{{value}} ppb","min":0,"max":"5500","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","x":730,"y":680,"wires":[]},{"id":"e649966c.8c2af8","type":"mqtt-broker","z":"","name":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","closeTopic":"","closeQos":"0","closePayload":"","willTopic":"","willQos":"0","willPayload":""},{"id":"57ff470b.93fdf8","type":"ui_group","z":"","name":"Default","tab":"11207769.c31889","disp":true,"width":"6","collapse":false},{"id":"69359c27.0b0d54","type":"blynk-ws-client","z":"","name":"CO2 Monitor","path":"ws://blynk-cloud.com/websockets","key":"","dbg_all":false,"dbg_read":false,"dbg_write":false,"dbg_notify":false,"dbg_mail":false,"dbg_prop":false,"dbg_sync":false,"dbg_bridge":false,"dbg_low":false,"dbg_pins":"","multi_cmd":false,"proxy_type":"no","proxy_url":"","enabled":true},{"id":"2fc45a9a.bbfd66","type":"ui_group","z":"","name":"Default","tab":"54d3d6be.bc2ca8","disp":true,"width":"6","collapse":false},{"id":"11207769.c31889","type":"ui_tab","z":"","name":"Home","icon":"dashboard"},{"id":"54d3d6be.bc2ca8","type":"ui_tab","z":"","name":"Home","icon":"dashboard"}]
-```
-* Po úspěšném importu budete muset aktualizovat zelené uzly Blynk – zobrazí se jako „Disconnected“ (odpojeno)
-
-<div class="container">
-    <div class="row">
-        <Image img={require('./stem-diagram.png')}/>
-    </div>
-</div>
-
-* Otevřete libovolný z těchto uzlů
-* Na konci řádku **Connection** klikněte na malou tužku
-* Zobrazí se nové okno
-* Vložte **Auth Token**, který máte ve své mobilní aplikaci, do pole **Auth Token**
-* Klikněte na tlačítko **Update** a poté na **Done**
-* Stiskněte tlačítko **Deploy**, abyste změny potvrdili
-* Během chvilky byste měli vidět naměřená data v připraveném **dashboardu v Blynku**
+* Dvakrát klikněte na uzel Write a klikněte na **tužku**, abyste přidali připojení. Do pole **Url** zadejte `blynk.cloud`, poté vložte **Auth Token** a **Template ID** ze svého zařízení. Potvrďte a následně nastavte **Virtual Pin** uzlu na odpovídající číslo (`0`, `1`, `2` nebo `3`). Všechny čtyři uzly Write sdílejí stejné připojení.
+* Stiskněte tlačítko **Deploy**, abyste změny potvrdili.
+* V aplikaci **Blynk IoT** otevřete své zařízení a pro každou hodnotu přidejte widget **Gauge** (Teplota, Vlhkost, TVOC, CO₂), přičemž každý budík navážete na jeho Virtual Pin (V0–V3).
+* Během chvilky byste měli vidět naměřená data v budících v aplikaci **Blynk IoT**.
