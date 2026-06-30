@@ -65,12 +65,12 @@ Confirm with the **Done** button.👏
 
 2. Select **E-mail** from the menu. ✉️ The button is placed on the project desktop.
 
-![Rules](https://res.cloudinary.com/lukasfabik/image/upload/v1573312453/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image4.jpg)
+![Rules](./img/apology-to-teachers/image4.jpg)
 
 
 3. Clicking on the button takes you to settings. Here, set up your teacher's e-mail address to send your apology.
 
-![Rules](https://res.cloudinary.com/lukasfabik/image/upload/v1573312453/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image1.jpg)
+![Rules](./img/apology-to-teachers/image1.jpg)
 
 
 When you are finished, return to the desktop via the top left arrow and activate Blynk with the Play button in the top right.
@@ -111,4 +111,4 @@ When you are finished, return to the desktop via the top left arrow and activate
 1. Do you want to try it? **Change the e-mail address to your own for testing purposes**.
 2. Confirm with Deploy again, then just press the button and ... hey presto, **someone's writing you**! 💌
 
-![E-mail](https://res.cloudinary.com/lukasfabik/image/upload/v1573312452/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image10.png)
+![E-mail](./img/apology-to-teachers/image10.png)

@@ -65,12 +65,12 @@ Potvrď kliknutím na tlačítko **Done**. 👏
 
 2. Vyber z nabídky možnost **E-mail**. ✉️ Tlačítko bude umístěno na pracovní ploše projektu.
 
-![Rules](https://res.cloudinary.com/lukasfabik/image/upload/v1573312453/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image4.jpg)
+![Rules](./img/apology-to-teachers/image4.jpg)
 
 
 3. Kliknutím na tlačítko přejdeš do nastavení. Zde zadej e-mailovou adresu svého učitele, na kterou bude omluva odeslána.
 
-![Rules](https://res.cloudinary.com/lukasfabik/image/upload/v1573312453/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image1.jpg)
+![Rules](./img/apology-to-teachers/image1.jpg)
 
 
 Až budeš hotový, vrať se na plochu pomocí šipky vlevo nahoře a aktivuj Blynk stisknutím tlačítka Play vpravo nahoře.
@@ -115,4 +115,4 @@ Až budeš hotový, vrať se na plochu pomocí šipky vlevo nahoře a aktivuj Bl
 1. Chceš si to vyzkoušet? **Změň e-mailovou adresu na svou vlastní pro testování**.
 2. Znovu potvrď tlačítkem **Deploy**, potom už jen stiskni tlačítko a… voilà, **někdo ti píše**! 💌
 
-![E-mail](https://res.cloudinary.com/lukasfabik/image/upload/v1573312452/projects/poslani-e-mailu-uciteli-s-omluvenkou-z-vyucovani/image10.png)
+![E-mail](./img/apology-to-teachers/image10.png)

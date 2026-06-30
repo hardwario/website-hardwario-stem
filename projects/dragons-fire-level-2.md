@@ -27,7 +27,7 @@ All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/
 ## Measure the hottest breath
 
 Build this flow to detect which of your party buddies has the **hottest dragon´s breath**. 🐉 To start measuring the highest temperature, **briefly press and release the button**.
-![Measure the hottest breath](https://res.cloudinary.com/lukasfabik/image/upload/v1571551047/projects/hardcore-upgrade-of-iot-party-game/image9.png)
+![Measure the hottest breath](./img/dragons-fire-level-2/image9.png)
 
 **Do you need advice on how to do this?**
 
@@ -56,7 +56,7 @@ if(!flow.get("pressed")) {
 ```
 - The highest temperature is recorded under the **Text node**. Do not forget to enter the value `{{msg.payload}}°C` in the Value format line.
 - The **Change node** lists the participant with the hottest breath; you have to set the flow in it. contestantName
-The ![Change node](https://res.cloudinary.com/lukasfabik/image/upload/v1571551047/projects/hardcore-upgrade-of-iot-party-game/image8.png)
+The ![Change node](./img/dragons-fire-level-2/image8.png)
 - flow closes the ordinary **Text node**.
 
 ## Measure the coldest breath
@@ -65,7 +65,7 @@ Place the next flow below the previous one. With this, you'll be able to measure
 
 **Our tip**: Avoid generating a similar flow from scratch by simply copying and rewriting the nodes. Copy and paste with **CRTL + C & CTRL + V**; this can be applied to several nodes at once. Hurray! 🙌
 
-![Measure the coldest breath](https://res.cloudinary.com/lukasfabik/image/upload/v1571551046/projects/hardcore-upgrade-of-iot-party-game/image1.png)
+![Measure the coldest breath](./img/dragons-fire-level-2/image1.png)
 
 **Do you need advice on how to do this?**
 
@@ -104,7 +104,7 @@ if(!flow.get("holded")) {
 
 Create a new flow and place it under both previous ones. With this flow, you measure every attempt. In addition, the table remembers the names of the participants.
 
-![Continuous measurement flow](https://res.cloudinary.com/lukasfabik/image/upload/v1571551048/projects/hardcore-upgrade-of-iot-party-game/image15.png)
+![Continuous measurement flow](./img/dragons-fire-level-2/image15.png)
 
 **Do you need advice on how to do this?**
 
@@ -138,7 +138,7 @@ else if(flow.get("holded")) {
 
 - The **Change node** has two rules. The first rule leaves the value empty until it registers the first temperature. The second one sets the average temperature to 30 °C, meaning that warmer results will be above 30 °C and cooler ones below it.
 
-![Continuous measurement](https://res.cloudinary.com/lukasfabik/image/upload/v1571551046/projects/hardcore-upgrade-of-iot-party-game/image3.png)
+![Continuous measurement](./img/dragons-fire-level-2/image3.png)
 
 - Under the **Function node**, the javascript code for storing names looks like this:
 
@@ -153,37 +153,37 @@ return msg;
 
 Easy peasy? Just add one **timestamp flow** to change the game type! A short press on the button measures the hottest breath and a long press on the button measures the coldest breath. Fantastic! 👍
 
-![Timestamp flow](https://res.cloudinary.com/lukasfabik/image/upload/v1571551047/projects/hardcore-upgrade-of-iot-party-game/image4.png)
+![Timestamp flow](./img/dragons-fire-level-2/image4.png)
 
 ### Do you need advice on how to do this?
 
 - The first node is called **Inject**, which can be found under the Input section. It checks every second which competition is running. By pressing the button for a long or short time, it will determine whether the competition is for the coldest or hottest breath, and will open the competition accordingly.
 
-![Inject](https://res.cloudinary.com/lukasfabik/image/upload/v1571551047/projects/hardcore-upgrade-of-iot-party-game/image12.png)
+![Inject](./img/dragons-fire-level-2/image12.png)
 
 Set it to repeat after one second.
 
-![Interval setting](https://res.cloudinary.com/lukasfabik/image/upload/v1571551046/projects/hardcore-upgrade-of-iot-party-game/image5.png)
+![Interval setting](./img/dragons-fire-level-2/image5.png)
 
 - The upper **Switch node** responds to a short press of the button and contains _is true_.
 
-![Switch node](https://res.cloudinary.com/lukasfabik/image/upload/v1571551047/projects/hardcore-upgrade-of-iot-party-game/image7.png)
+![Switch node](./img/dragons-fire-level-2/image7.png)
 
 - The lower **Switch node** responds to the button being pressed and held and also contains _is true_.
 
-![Lower Switch node](https://res.cloudinary.com/lukasfabik/image/upload/v1571551046/projects/hardcore-upgrade-of-iot-party-game/image2.png)
+![Lower Switch node](./img/dragons-fire-level-2/image2.png)
 
 - All three Change nodes contain a message. The upper node contains a message announcing the **hottest breath competition**:
 
-![Hottest breath competition](https://res.cloudinary.com/lukasfabik/image/upload/v1571551047/projects/hardcore-upgrade-of-iot-party-game/image13.png)
+![Hottest breath competition](./img/dragons-fire-level-2/image13.png)
 
 The middle Change node contains a message announcing **no competition is running at the moment**:
 
-![No competition running](https://res.cloudinary.com/lukasfabik/image/upload/v1571551048/projects/hardcore-upgrade-of-iot-party-game/image14.png)
+![No competition running](./img/dragons-fire-level-2/image14.png)
 
 The lower Change node announces the **coldest breath competition**:
 
-![Coldest breath competition](https://res.cloudinary.com/lukasfabik/image/upload/v1571551047/projects/hardcore-upgrade-of-iot-party-game/image10.png)
+![Coldest breath competition](./img/dragons-fire-level-2/image10.png)
 
 - The closing **Text node** announces the type of competition.
 
@@ -191,14 +191,14 @@ The lower Change node announces the **coldest breath competition**:
 
 Hold onto your hat, we're heading into the final stretch. The last flow sets the **default values**: 30 °C as an optimum temperature, pretty cool lowest temperature and pretty hot highest temperature. The actual measured temperatures are then compared with these temperatures.
 
-![Timestamp value setting](https://res.cloudinary.com/lukasfabik/image/upload/v1571551048/projects/hardcore-upgrade-of-iot-party-game/image17.png)
+![Timestamp value setting](./img/dragons-fire-level-2/image17.png)
 
 
 ### Do you need advice on how to do this?
 
 - The **Inject node** contains a checked box with which the default values are set just a moment after pressing the Deploy button.
 
-The ![Inject node](https://res.cloudinary.com/lukasfabik/image/upload/v1571551047/projects/hardcore-upgrade-of-iot-party-game/image11.png)
+The ![Inject node](./img/dragons-fire-level-2/image11.png)
 
 -  and the **Function node** contain javascript code that sets the default values.
 
@@ -213,7 +213,7 @@ return msg;
 
 That's how sexy your desktop looks now. Enjoy it, just like when you saw the sea for the first time ... 🌊 Just one more second ... and another ... and then press your old good friend **Deploy** in the top right.
 
-![Deploy](https://res.cloudinary.com/lukasfabik/image/upload/v1571551049/projects/hardcore-upgrade-of-iot-party-game/image18.png)
+![Deploy](./img/dragons-fire-level-2/image18.png)
 
 ## Let's compete!
 
@@ -226,6 +226,6 @@ As you may have noticed, the box reacts to a short press of the button: which st
 - Subsequently, **briefly press or press and hold** to select the type of competition. 👇
 - When the first competitor has tried their luck, **briefly press or press and hold the button** to end the current competition and save the results.
 - For the next competitors follow the same procedure, one at a time.
-![Competitors](https://res.cloudinary.com/lukasfabik/image/upload/v1571551048/projects/hardcore-upgrade-of-iot-party-game/image16.png)
+![Competitors](./img/dragons-fire-level-2/image16.png)
 
 At this difficulty level, **all help is permitted**! Try what makes your breath hotter or colder. May the best Dragon or Night King win! Fingers crossed it´s you! 💪

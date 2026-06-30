@@ -18,7 +18,7 @@ Pokud máš Starter Set, budeš k němu potřebovat ještě [**PIR Module**](htt
 1. Pokud to ještě nemáš, Motion Set si sestav.
 2. Na Core Module nahraj speciální firmware, a to bcf-radio-burglar-alarm (najdeš ho mezi ostatním firmwarem v Playgroundu). Díky tomuhle firmwaru krabička odhalí zloděje. 👂
 
-![sestavení motion detektor Setu](https://res.cloudinary.com/lukasfabik/image/upload/v1573157109/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image20.png)
+![sestavení motion detektor Setu](./img/thief-trap/image20.png)
 
 **Náš tip**: Nevíš, jak si firmware stáhnout nebo co to je? [Zjistíš to tady](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
 
@@ -37,7 +37,7 @@ Pokud máš Starter Set, budeš k němu potřebovat ještě [**PIR Module**](htt
 1. **Pokračuj na svém mobilu**. Krabička se propojí se smartphonem díky **appce Blynk**. 📱 [Zjisti, jak na Blynk](https://hardwario.academy/how-to-connect-blynk/).
 2. Z nabídky zvol **Styled button** (vyšperkované tlačítko). 🚨 Tlačítko se ti umístí na plochu projektu a bude sloužit k vypínání a zapínání detektoru pohybu.
 
-![spuštění aplikace](https://res.cloudinary.com/lukasfabik/image/upload/v1573157119/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image22.png)
+![spuštění aplikace](./img/thief-trap/image22.png)
 
 3. Když na tlačítko ťukneš, dostaneš se do nastavení.
 
@@ -49,15 +49,15 @@ Dál už je to na tvém uměleckém cítění. ️🎨 Můžeš si navolit barvu
 
 Až všechno budeš mít, **vrať se na plochu** skrz šipku vlevo nahoře.
 
-![virtuální tlačítko](https://res.cloudinary.com/lukasfabik/image/upload/v1573157108/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image18.png)
+![virtuální tlačítko](./img/thief-trap/image18.png)
 
 4. Klepni na plochu, abys přidal další prvek na plochu. Bude to **notifikace**.
 
-![notifikace](https://res.cloudinary.com/lukasfabik/image/upload/v1573157088/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image4.png)
+![notifikace](./img/thief-trap/image4.png)
 
 5. Celá tvoje plocha teď vypadá takhle. Spusť projekt tlačítkem **Play** vpravo nahoře. ▶️
 
-![spuštění projektu](https://res.cloudinary.com/lukasfabik/image/upload/v1573157116/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image25.png)
+![spuštění projektu](./img/thief-trap/image25.png)
 
 6. **Poťukej na tlačítko**, mělo by se přepínat z módu ON (zapnuto) do módu OFF (vypnuto).
 
@@ -276,6 +276,6 @@ return msg;
 
 2. Postav svou krabičku ke dveřím. Až krabička zachytí pohyb, **vyšle ti do mobilu upozornění**.
 
-![upozornění v mobilu](https://res.cloudinary.com/lukasfabik/image/upload/v1573157092/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image9.png)
+![upozornění v mobilu](./img/thief-trap/image9.png)
 
 Zlodějové, střezte se, zákon je tu! 😱

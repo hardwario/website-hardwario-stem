@@ -53,7 +53,7 @@ As mentioned earlier, the device can send more than just button press messages â
 4. Blow warm air onto the device â€“ the temperature will rise and appear in the messages.
 5. The last type of message is the orientation of the device. It works like a die (dice), try rotating it to find when positions 1, 2, 3...6 appear.
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632592/projects/button-for-mum/image3.png " Node-RED")
+![Node-RED](./img/appliance-control/image3.png " Node-RED")
 
 ## Your First Project
 

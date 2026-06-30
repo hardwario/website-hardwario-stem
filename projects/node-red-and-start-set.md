@@ -18,7 +18,7 @@ To display the button press count, we first need to retrieve that value.
 3. Delete the two nodes that are already on the canvas.
 4. Start by adding an **mqtt in** node. You can find it in the **network** section on the left. Drag it onto the canvas.
 
-![Run it in Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632592/projects/button-for-mum/image3.png "Run it in Node-RED")
+![Run it in Node-RED](./img/node-red-and-start-set/image3.png "Run it in Node-RED")
 
 5. Double-click it to open its settings window, where you need to fill in the **topic** field. This determines which messages we want to receive in this flow.
 6. Go back to the **Messages** tab in Playground and find the message with the temperature. Besides the temperature value, you’ll also see the message ID, which looks like this: `node/push-button:0/thermometer/0:1/temperature` – this is the **topic**.

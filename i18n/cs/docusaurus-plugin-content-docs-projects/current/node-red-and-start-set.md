@@ -19,7 +19,7 @@ Abychom mohli zobrazovat hodnotu stisknutí, musíme jí nejprve někde vzít.
 3. Smažte dva nody, které máte na ploše.
 4. Začneme přidáním nodu **mqtt in**. Najdete jej vlevo v sekci **network**. Přetáhněte jej na plochu.
 
-![Rozjeď to v Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632592/projects/button-for-mum/image3.png "Rozjeď to v Node-RED")
+![Rozjeď to v Node-RED](./img/node-red-and-start-set/image3.png "Rozjeď to v Node-RED")
 
 5. Dvakrát na něj klikněte, otevře se vám nastavovací okno nodu, ve kterém potřebujeme vyplnit pole **topic**. To určí, jaké zprávy chceme v této flow přijímat.
 6. Vraťte se v Playgroundu do záložky **Messages** a najděte zprávu s teplotou. Kromě hodnoty teploty vidíte vedle i identifikaci zprávy, vypadá takto: `node/push-button:0/thermometer/0:1/temperature` a jedná se o **topic**. 

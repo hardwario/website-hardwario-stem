@@ -17,7 +17,7 @@ S tímhle projektem se naučíš **měřit teplotu s IoT a zobrazit ji na grafu*
 
 2. Změny teploty uvidíš v Playgroundu v záložce **Messages**.
 
-![MQTT messages](https://res.cloudinary.com/lukasfabik/image/upload/v1566156149/projects/kennel-temperature-monitor/image5.png)
+![MQTT messages](./img/kennel-temperature-monitor/image5.png)
 
 ## Nastav si Node-RED
 
@@ -31,18 +31,18 @@ S tímhle projektem se naučíš **měřit teplotu s IoT a zobrazit ji na grafu*
 node/push-button:0/thermometer/0:1/temperature
 ```
 
-![MQTT topic](https://res.cloudinary.com/lukasfabik/image/upload/v1566156149/projects/kennel-temperature-monitor/image1.png)
+![MQTT topic](./img/kennel-temperature-monitor/image1.png)
 
 Potvrď tlačítkem **Done**.
 
 4. Vedle nodu postav druhý, světle modrý s názvem **Chart** (graf). Najdeš ho v sekci Dashboard. Tímhle nodem určíš, jak bude naměřená teplota znázorněná na obrazovce. Oba nody propoj. 👌
 
-![Node-RED dashboard chart](https://res.cloudinary.com/lukasfabik/image/upload/v1566156149/projects/kennel-temperature-monitor/image4.png)
+![Node-RED dashboard chart](./img/kennel-temperature-monitor/image4.png)
 
 5. Na node Chart dvakrát klikni. V řádku **X-axis** si nastavíš, za jak dlouhou dobu bude graf teplotu ukazovat. Nastav, kolik potřebuješ.
 Na řádku **Label** si graf libovolně přejmenuj.
 
-![Chart settings](https://res.cloudinary.com/lukasfabik/image/upload/v1566156149/projects/kennel-temperature-monitor/image3.png)
+![Chart settings](./img/kennel-temperature-monitor/image3.png)
 
 Potvrď tlačítkem **Done**.
 
@@ -52,7 +52,7 @@ Potvrď tlačítkem **Done**.
 ❗ **Pozor:** Při každé změně v nodech musíš Deploy mačkat znovu.
 
 7. Překlikni se do jiné záložky, do **Dashboardu**. Tady je tvůj graf. 👏
-![Temperature chart from kennel](https://res.cloudinary.com/lukasfabik/image/upload/v1566156149/projects/kennel-temperature-monitor/image2.png)
+![Temperature chart from kennel](./img/kennel-temperature-monitor/image2.png)
 
 ## A akce!
 

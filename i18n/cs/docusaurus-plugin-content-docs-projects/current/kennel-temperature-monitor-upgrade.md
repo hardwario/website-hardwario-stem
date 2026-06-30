@@ -53,7 +53,7 @@ Drž si cylindr, jedeme dál. 🎩
 
 2. V Blynku nahoď všechno potřebné. Na plochu nového projektu nastav nejdřív **Notification**.
 
-![Blynk Step H](https://res.cloudinary.com/lukasfabik/image/upload/v1573306276/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image28.png)
+![Blynk Step H](./img/kennel-temperature-monitor-upgrade/image28.png)
 
 3. Přidej **Gauge**, ukazatel. Klikni na něj a v nastavení přidej stejné rozmezí teploty jako na počítači: **od −15 do 40**.
 
@@ -66,10 +66,10 @@ A graf klidně **pojmenuj**.
 U něčeho **váháš? Mrkej na obrázek**.
 
 
-![Dashboard](https://res.cloudinary.com/lukasfabik/image/upload/v1573306272/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image7.png)
+![Dashboard](./img/kennel-temperature-monitor-upgrade/image7.png)
 
 
-![Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1573306272/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image12.png)
+![Blynk](./img/kennel-temperature-monitor-upgrade/image12.png)
 
 4. Nakonec přidej **Step H**. Díky němu nastavíš, pod kolik stupňů už by teplota v psí boudě neměla klesnout. To H znamená **horizontální**, naležato. Klidně můžeš použít i Step V, tedy vertikální: nastojato. Záleží na tvém vkusu.
 
@@ -81,11 +81,11 @@ Nahoře v řádku hlídač optimální teploty **pojmenuj**.
 
 
 
-![Blynk Step H](https://res.cloudinary.com/lukasfabik/image/upload/v1573306273/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image17.png)
+![Blynk Step H](./img/kennel-temperature-monitor-upgrade/image17.png)
 
 
 
-![Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1573306272/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image12.png)
+![Blynk](./img/kennel-temperature-monitor-upgrade/image12.png)
 
 5. Celý projekt si **pojmenuj v nastavení projektu** a spusť **tlačítkem Play**. Ještě to ale nic moc dělat nebude, nejdřív musíš vylepšit svůj Node-RED.
 
@@ -241,6 +241,6 @@ Tímhle nastavením zase zajistíš zpětnou synchronizaci nastavené teploty, t
 3. … ale i v **Blynku**. Takže ji můžeš čekovat odkudkoli a kdykoli. 🕵️
 
 
-![Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1573306274/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image22.png)
+![Blynk](./img/kennel-temperature-monitor-upgrade/image22.png)
 
 4. Navíc na mobil dostaneš **notifikaci**, kdyby bylo rafíkovi moc hic nebo velká kosa. Šťastný pes = dobrý pes! 🐕

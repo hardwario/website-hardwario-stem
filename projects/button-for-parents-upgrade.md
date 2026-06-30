@@ -87,10 +87,10 @@ You can do this through the **Notification node** under the Dashboard section.
 
 2. Instruct them to **short press** the button to call you to come and eat…
 
-![Button](https://res.cloudinary.com/lukasfabik/image/upload/v1573301763/projects/dalsi-level-projekt-tlacitko-pro-mamku/image12.png)
+![Button](./img/button-for-parents-upgrade/image12.png)
 
 3. ... and to **press and hold** 👇 the button if they want to call you for anything else.
 
-![Button](https://res.cloudinary.com/lukasfabik/image/upload/v1573301763/projects/dalsi-level-projekt-tlacitko-pro-mamku/image13.png)
+![Button](./img/button-for-parents-upgrade/image13.png)
 
 At least you won't be disappointed when, instead of eating, there is a family discussion on the plate. Ugh, another menu, please!

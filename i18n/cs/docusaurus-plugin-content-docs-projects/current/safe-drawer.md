@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 Máš v šuplíku deníček, básničky nebo tajný vládní dokument? Pokud je to něco, co by nikdo neměl vidět, zabezpeč to. 🔒 Vytvoř si ze Start Sady IoT hlídače šuplíku, který ti pošle upozornění na mobil. 📲
 
-![Get mobile notification when someone open your drawer](https://res.cloudinary.com/lukasfabik/image/upload/v1566364960/projects/safe-drawer/image8.png)
+![Get mobile notification when someone open your drawer](./img/safe-drawer/image8.png)
 
 V tomhle projektu se naučíš vytvořit **detektor otevírání šuplíku, který ti pošle upozornění na mobil**. 👈
 
@@ -36,40 +36,40 @@ Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vy
 
 2. Z nabídky zvol **Styled button** (vyšperkované tlačítko). 🚨 Tlačítko se ti umístí na plochu projektu.
 
-![Add style button to blynk app](https://res.cloudinary.com/lukasfabik/image/upload/v1566364970/projects/safe-drawer/image20.png)
+![Add style button to blynk app](./img/safe-drawer/image20.png)
 
 3. Když na tlačítko klikneš, dostaneš se do nastavení. Teď dávej bacha.
 V horním řádku si detektor **pojmenuj**.
 
-![Settings of styled button in Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364966/projects/safe-drawer/image12.png)
+![Settings of styled button in Blynk App](./img/safe-drawer/image12.png)
 
 Hned pod tím zvolíš **PIN**. Klikni na něj. Vyber si **virtuální** a **číslo zvol dle libosti**. Ale zapamatuj si ho, budeš ho pak zadávat na počítači. PIN ulož a pokračuj v nastavování tlačítka.
 
-![Styled button in Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364978/projects/safe-drawer/image25.png)
-![Styled button in Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364965/projects/safe-drawer/image14.png)
+![Styled button in Blynk App](./img/safe-drawer/image25.png)
+![Styled button in Blynk App](./img/safe-drawer/image14.png)
 
 Přepni tlačítko z módu push na **switch**, abys mohl detektor pohodlně spouštět a vypínat.
 
-![Settings of styled button in Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364970/projects/safe-drawer/image18.png)
+![Settings of styled button in Blynk App](./img/safe-drawer/image18.png)
 
 A dál už jsou jenom takové ty **dyzajnové blbůstky**. 💄 Můžeš si navolit barvu tlačítka, když je vypnuté a zapnuté, jeho tvar a další nezbytnosti.
 
-![Settings of styled button in Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364966/projects/safe-drawer/image13.png)
+![Settings of styled button in Blynk App](./img/safe-drawer/image13.png)
 
 Až všechno budeš mít, **vrať se na plochu** skrz šipku vlevo nahoře.
 
 4. Klepni na plochu, abys přidal další prvek na plochu. Bude to notifikace.
 
-![Add Blynk Notification node](https://res.cloudinary.com/lukasfabik/image/upload/v1566364964/projects/safe-drawer/image1.png)
+![Add Blynk Notification node](./img/safe-drawer/image1.png)
 
 5. Celá tvoje plocha teď vypadá takhle.
 
-![Your Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364961/projects/safe-drawer/image7.png)
+![Your Blynk App](./img/safe-drawer/image7.png)
 
 6. Poťukej na tlačítko, mělo by se přepínat z módu ON (zapnuto) do módu OFF (vypnuto).
 
-![Your Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364960/projects/safe-drawer/image4.png)
-![Your Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364961/projects/safe-drawer/image7.png)
+![Your Blynk App](./img/safe-drawer/image4.png)
+![Your Blynk App](./img/safe-drawer/image7.png)
 
 ## Nastav v Node-RED zprávu
 
@@ -206,12 +206,12 @@ Na řádku **Connection** pak vyber projekt, který jsi pojmenoval u nodu Notify
 
 2. Všechno ostatní už ovládej z mobilu. 📱 Projekt v Blynku **zapni** (klikni na tlačítko, aby se dostalo do pozice ON).
 
-![Blynk Mobile App with Button](https://res.cloudinary.com/lukasfabik/image/upload/v1566364960/projects/safe-drawer/image4.png)
-![Blynk Mobile App with Button](https://res.cloudinary.com/lukasfabik/image/upload/v1566364961/projects/safe-drawer/image7.png)
+![Blynk Mobile App with Button](./img/safe-drawer/image4.png)
+![Blynk Mobile App with Button](./img/safe-drawer/image7.png)
 
 3. Celý flow v Blynku spusť skrze **tlačítko Play** vpravo nahoře. ▶️
 
 4. A čekej, až se myška chytí. 🥁 Mezitím **naplánuj, co s nenechavým neřádem uděláš**.️ Doporučujeme nechat ho týden dělat domácí práce za tebe. Však si to zaslouží.
 
 
-![Get mobile notification when someone open your drawer](https://res.cloudinary.com/lukasfabik/image/upload/v1566364960/projects/safe-drawer/image8.png)
+![Get mobile notification when someone open your drawer](./img/safe-drawer/image8.png)

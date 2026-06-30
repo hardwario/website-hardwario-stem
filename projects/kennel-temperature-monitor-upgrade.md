@@ -57,7 +57,7 @@ Hold onto your hat and let's move on. 🎩
 2. In Blynk, put on everything you need. On the desktop of the new project, first set **Notification**.
 
 
-![Blynk Step H](https://res.cloudinary.com/lukasfabik/image/upload/v1573306276/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image28.png)
+![Blynk Step H](./img/kennel-temperature-monitor-upgrade/image28.png)
 
 3. Add **Gauge**, pointer. Click on it and in the settings add the same temperature range as on the computer: ** from −15 to 40 **.
 
@@ -71,10 +71,10 @@ Make sure to give your graph a **name**.
 
 
 
-![Dashboard](https://res.cloudinary.com/lukasfabik/image/upload/v1573306272/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image7.png)
+![Dashboard](./img/kennel-temperature-monitor-upgrade/image7.png)
 
 
-![Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1573306272/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image12.png)
+![Blynk](./img/kennel-temperature-monitor-upgrade/image12.png)
 
 
 4. Finally, add **Step H**. With it you set below how many degrees the temperature in the kennel should not drop. The letter H stands for **horizontal**, meaning in a lying position. Feel free to also use Step V, where the letter V stands for vertical or upright position. The choice depends on you and you alone.
@@ -87,11 +87,11 @@ In the line at the top, give the optimum temperature monitor a **name**.
 
 
 
-![Blynk Step H](https://res.cloudinary.com/lukasfabik/image/upload/v1573306273/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image17.png)
+![Blynk Step H](./img/kennel-temperature-monitor-upgrade/image17.png)
 
 
 
-![Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1573306272/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image12.png)
+![Blynk](./img/kennel-temperature-monitor-upgrade/image12.png)
 
 5. Name the project in **project settings** and run the program with the **Play** button. It won´t do much because you first have to upgrade your Node-RED.
 
@@ -262,6 +262,6 @@ This setting will ensure that the set temperature is synchronized back so that y
 
 
 
-![Blynk](https://res.cloudinary.com/lukasfabik/image/upload/v1573306274/projects/upgrade-hlidac-teploty-pro-chlupateho-hlidace/image22.png)
+![Blynk](./img/kennel-temperature-monitor-upgrade/image22.png)
 
 1. In addition, you get a **notification** on your mobile if your dog is too hot or cold. Happy dog = good dog! 🐕

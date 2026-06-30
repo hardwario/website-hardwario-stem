@@ -20,7 +20,7 @@ You will need the **box with a button** and the **USB dongle**. So you will be f
 **If you open the programme for the first time:** clear the desktop and delete all the preset nods with the Delete button.
 3. Let's program now. 🤞 Place the light purple cell, or nod, on the Node-RED desktop first. You'll find it on the left side as **MQTT in the Inputs section**.
 
-![Get it started in Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632592/projects/button-for-mum/image3.png "Rozjeď to v Node-RED")
+![Get it started in Node-RED](./img/button-for-parents/image3.png "Rozjeď to v Node-RED")
 
 
 4. In the node, you will set up the key feature - clicking on the button. Click on the node twice and **copy this link into the Topic field**:
@@ -29,7 +29,7 @@ You will need the **box with a button** and the **USB dongle**. So you will be f
 node/push-button:0/push-button/-/event-count
 ```
 
-![MQTT Topic](https://res.cloudinary.com/lukasfabik/image/upload/v1565632595/projects/button-for-mum/image9.png "MQTT Topic")
+![MQTT Topic](./img/button-for-parents/image9.png "MQTT Topic")
 
 Confirm it with the **Done** button.
 
@@ -43,7 +43,7 @@ What does it mean? It means that next time you can copy lines into the Topic fie
 
 1. The message can be also set up here in the Node-RED. Place **the yellow node called Change from the Functions section** anywhere next to the light purple MQTT input.
 
-![Node-RED Change node](https://res.cloudinary.com/lukasfabik/image/upload/v1565632592/projects/button-for-mum/image7.png "Node-RED Change node")
+![Node-RED Change node](./img/button-for-parents/image7.png "Node-RED Change node")
 
 2. This Change nod alters the action. For example, it can send a message. Go wild and set up your own. A little inspiration:
 	- Grub!
@@ -53,7 +53,7 @@ What does it mean? It means that next time you can copy lines into the Topic fie
 
 You can do it by clicking the node twice and writing the message in the second line of the **Rules** field.
 
-![Node-RED Change node edit](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/button-for-mum/image5.png "Node-RED Change node edit")
+![Node-RED Change node edit](./img/button-for-parents/image5.png "Node-RED Change node edit")
 
 Confirm it with the **Done** button.
 
@@ -61,7 +61,7 @@ Confirm it with the **Done** button.
 Try it out. **Connect both nodes** by dragging the mouse from one cell to the other. Easy peasy. 🙆
 
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632593/projects/button-for-mum/image6.png "Node-RED")
+![Node-RED](./img/button-for-parents/image6.png "Node-RED")
 
 ## Prepare Blynk IoT for notifications
 

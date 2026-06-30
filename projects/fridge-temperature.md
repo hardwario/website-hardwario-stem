@@ -14,7 +14,7 @@ This project will teach you how to **measure temperature using IoT**. All you ne
 1. Put the Start Set together and pair it.  You need the **radio-push-button** firmware for the Core Module. 
 2. The temperature changes are displayed in the **Messages** tab in Playground.
 
-![MQTT](https://res.cloudinary.com/lukasfabik/image/upload/v1566155066/projects/fridge-monitoring/image4.png)
+![MQTT](./img/fridge-temperature/image4.png)
 
 ## Set up Node-RED
 
@@ -27,18 +27,18 @@ This project will teach you how to **measure temperature using IoT**. All you ne
 node/push-button:0/thermometer/0:1/temperature
 ```
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566155066/projects/fridge-monitoring/image2.png)
+![Node-RED](./img/fridge-temperature/image2.png)
 
 Confirm by clicking the **Done** button.
 
 4. Next to the MQTT node place a second one, this time a blue **Chart** node. This node can be found in the Dashboard section. This node is used to determine how the measured temperature is displayed on screen. Link both nodes together. 👌
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566155066/projects/fridge-monitoring/image5.png)
+![Node-RED](./img/fridge-temperature/image5.png)
 
 
 5. Double-click on the Chart node. In the **X-axis** line, you can set the period of time the data in the chart will be displayed. This might be, for example, for the duration of your classes.
    In the Label line, give your chart a name.
 
-![Chart](https://res.cloudinary.com/lukasfabik/image/upload/v1566155066/projects/fridge-monitoring/image1.png)
+![Chart](./img/fridge-temperature/image1.png)
 
 Confirm by clicking the **Done** button.
 
@@ -46,7 +46,7 @@ Confirm by clicking the **Done** button.
    ❗ **Beware**: Every time you change the nodes you have to press Deploy again.
 7. Click on **Dashboard**. Your temperature chart will be displayed. 👏
 
-![MQTT topic](https://res.cloudinary.com/lukasfabik/image/upload/v1566155066/projects/fridge-monitoring/image3.png)
+![MQTT topic](./img/fridge-temperature/image3.png)
 
 ## Measure as you please
 

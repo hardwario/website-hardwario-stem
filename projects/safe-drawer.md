@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 Do you have a diary, poems or a top secret government-issued document in your drawer? If it's something nobody should see, secure it. 🔒 Turn your IoT Start Set into a drawer monitor and get alerts on your mobile phone. 📲
 
-![Get mobile notification when someone open your drawer](https://res.cloudinary.com/lukasfabik/image/upload/v1566364960/projects/safe-drawer/image8.png)
+![Get mobile notification when someone open your drawer](./img/safe-drawer/image8.png)
 
 This project teaches you how to create a **drawer monitor that sends alerts to your mobile phone when some opens your drawer**. 👈
 
@@ -36,40 +36,40 @@ You only need a **box with a button** and a **Radio Dongle**. That's why the bas
 
 2. From the menu, choose **Styled button** (fancy button). 🚨 The button will be placed on your project canvas.
 
-![Add style button to blynk app](https://res.cloudinary.com/lukasfabik/image/upload/v1566364970/projects/safe-drawer/image20.png)
+![Add style button to blynk app](./img/safe-drawer/image20.png)
 
 3. When you click on the button, you'll get to the settings. Now pay attention.
 In the top line, **name your detector**.
 
-![Settings of styled button in Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364966/projects/safe-drawer/image12.png)
+![Settings of styled button in Blynk App](./img/safe-drawer/image12.png)
 
 Right below that, you'll choose **PIN**. Click on it. Select **virtual** and **choose a number as you like**. But remember it, you'll need to enter it on the computer later. Save the PIN and continue setting up the button.
 
-![Styled button in Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364978/projects/safe-drawer/image25.png)
-![Styled button in Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364965/projects/safe-drawer/image14.png)
+![Styled button in Blynk App](./img/safe-drawer/image25.png)
+![Styled button in Blynk App](./img/safe-drawer/image14.png)
 
 Switch the button from push mode to **switch**, so you can conveniently start and stop the detector.
 
-![Settings of styled button in Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364970/projects/safe-drawer/image18.png)
+![Settings of styled button in Blynk App](./img/safe-drawer/image18.png)
 
 And then there are just those **design nonsense**. 💄 You can choose the color of the button when it's off and on, its shape and other necessities.
 
-![Settings of styled button in Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364966/projects/safe-drawer/image13.png)
+![Settings of styled button in Blynk App](./img/safe-drawer/image13.png)
 
 Once you have everything set up, **return to the canvas** through the arrow at the top left.
 
 4. Tap on the canvas to add another element to the canvas. It will be a notification.
 
-![Add Blynk Notification node](https://res.cloudinary.com/lukasfabik/image/upload/v1566364964/projects/safe-drawer/image1.png)
+![Add Blynk Notification node](./img/safe-drawer/image1.png)
 
 5. Your entire canvas now looks like this.
 
-![Your Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364961/projects/safe-drawer/image7.png)
+![Your Blynk App](./img/safe-drawer/image7.png)
 
 6. Tap on the button, it should switch from ON mode to OFF mode.
 
-![Your Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364960/projects/safe-drawer/image4.png)
-![Your Blynk App](https://res.cloudinary.com/lukasfabik/image/upload/v1566364961/projects/safe-drawer/image7.png)
+![Your Blynk App](./img/safe-drawer/image4.png)
+![Your Blynk App](./img/safe-drawer/image7.png)
 
 
 ## Set up the message in Node-RED
@@ -206,11 +206,11 @@ In the **Connection** line, then select the project you named in the Notify node
 
 2. Control everything else from your mobile phone. 📱 **Turn on** the project in Blynk (click the button so it gets to the ON position).
 
-![Blynk Mobile App with Button](https://res.cloudinary.com/lukasfabik/image/upload/v1566364960/projects/safe-drawer/image4.png)
-![Blynk Mobile App with Button](https://res.cloudinary.com/lukasfabik/image/upload/v1566364961/projects/safe-drawer/image7.png)
+![Blynk Mobile App with Button](./img/safe-drawer/image4.png)
+![Blynk Mobile App with Button](./img/safe-drawer/image7.png)
 
 3. Start the entire flow in Blynk through the **Play button** at the top right. ▶️
 
 4. And wait for the mouse to get caught. 🥁 Meanwhile, **plan what you'll do with the sneaky troublemaker**. We recommend making them do homework for you for a week. They deserve it.
 
-![Get mobile notification when someone open your drawer](https://res.cloudinary.com/lukasfabik/image/upload/v1566364960/projects/safe-drawer/image8.png)
+![Get mobile notification when someone open your drawer](./img/safe-drawer/image8.png)

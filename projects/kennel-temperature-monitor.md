@@ -14,7 +14,7 @@ This project teaches you how to **measure temperature with IoT and display it on
 1. Put the Start Set together and pair it. You need the **radio-push-button** firmware for the Core Module. If you don't know how to download the firmware or what it is, [you can find out more here](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware)
 2. The temperature changes are displayed in the **Messages** tab in Playground.
 
-![MQTT messages](https://res.cloudinary.com/lukasfabik/image/upload/v1566156149/projects/kennel-temperature-monitor/image5.png)
+![MQTT messages](./img/kennel-temperature-monitor/image5.png)
 
 ## Set up Node-RED
 
@@ -27,18 +27,18 @@ This project teaches you how to **measure temperature with IoT and display it on
 node/push-button:0/thermometer/0:1/temperature
 ```
 
-![MQTT topic](https://res.cloudinary.com/lukasfabik/image/upload/v1566156149/projects/kennel-temperature-monitor/image1.png)
+![MQTT topic](./img/kennel-temperature-monitor/image1.png)
 
 Confirm by clicking the **Done** button.
 
 4. Next to the MQTT node place a second one, this time a blue **Chart** node. This node can be found in the Dashboard section. This node is used to determine how the measured temperature is displayed on screen. Link both nodes together. 👌
 
-![Node-RED dashboard chart](https://res.cloudinary.com/lukasfabik/image/upload/v1566156149/projects/kennel-temperature-monitor/image4.png)
+![Node-RED dashboard chart](./img/kennel-temperature-monitor/image4.png)
 
 5. Double-click on the Chart node. In the **X-axis** line, you can set the period of time the data in the chart will be displayed. This can be as long as you like, you choose.
    In the **Label** line, give your chart a name.
 
-![Chart settings](https://res.cloudinary.com/lukasfabik/image/upload/v1566156149/projects/kennel-temperature-monitor/image3.png)
+![Chart settings](./img/kennel-temperature-monitor/image3.png)
 
 Confirm by clicking the **Done** button.
 
@@ -48,7 +48,7 @@ Confirm by clicking the **Done** button.
 
 7. Click on **Dashboard**. Your temperature chart will be displayed. 👏
 
-![Temperature chart from kennel](https://res.cloudinary.com/lukasfabik/image/upload/v1566156149/projects/kennel-temperature-monitor/image2.png)
+![Temperature chart from kennel](./img/kennel-temperature-monitor/image2.png)
 
 ## Time for action!
 

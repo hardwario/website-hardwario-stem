@@ -18,7 +18,7 @@ You will need the **box with the button** and the **USB dongle**. You can do wit
 2. In the Playground, click on the **Functions tab**, where you find the  Node-RED programming desktop.
 3. Place a light purple bubble, or node, in the desktop. You will find it on the left as **Input** **MQTT**.
 
-      ![MQTT input node](https://res.cloudinary.com/lukasfabik/image/upload/v1566155396/projects/im-ok-button/image4.png)
+      ![MQTT input node](./img/im-ok-button/image4.png)
 
 4. Inside the node you will set up a key feature - which is pressing a button. Double-click on the node and **copy this line into the Topic field**:
 
@@ -27,7 +27,7 @@ You will need the **box with the button** and the **USB dongle**. You can do wit
 node/push-button:0/push-button/-/event-count
 ```
 
-![MQTT topic](https://res.cloudinary.com/lukasfabik/image/upload/v1566155397/projects/im-ok-button/image8.png)
+![MQTT topic](./img/im-ok-button/image8.png)
 
 Confirm it with the **Done** button.
 
@@ -38,14 +38,14 @@ Confirm it with the **Done** button.
 1. You can set up your message also here in the Node-RED. Drag the **yellow node from the Functions section called Change** anywhere next to the light purple MQTT input.
 
 
-![Change Node HARDWARIO Playground](https://res.cloudinary.com/lukasfabik/image/upload/v1566155397/projects/im-ok-button/image7.png)
+![Change Node HARDWARIO Playground](./img/im-ok-button/image7.png)
 
 2. Double-click on the node and write the message for your parents into the **Rules** field. Just be careful, Blynk doesn’t display any diacritics. Little inspiration:
    *  _Easy. I’m home and safe._
    * _A celebrity came to visit….just kidding, it’s me._
    * _I was bitten by dogs, kidnapped by a UFO, but I made it home._
 
-![HARDWARIO Playground MQTT messages](https://res.cloudinary.com/lukasfabik/image/upload/v1566155396/projects/im-ok-button/image6.png)
+![HARDWARIO Playground MQTT messages](./img/im-ok-button/image6.png)
 
 Confirm it with the **Done** button and link both nodes by dragging the mouse from one bubble to the other. 🐁
 

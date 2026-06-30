@@ -17,7 +17,7 @@ S tímhle projektem se naučíš **měřit teplotu s IoT**. Postačí ti základ
 2. Otevři v Playgroundu záložku **Messages**. Tady uvidíš změny teploty. Teplota se měří automaticky, a to buď pravidelně po 15 sekundách, nebo když dojde k větší změně. A právě toho využijeme.
 
 
-![messages](https://res.cloudinary.com/lukasfabik/image/upload/v1566154531/projects/dragon-fire/image4.png)
+![messages](./img/dragons-fire/image4.png)
 
 ## Nastav si Node-RED
 
@@ -30,17 +30,17 @@ S tímhle projektem se naučíš **měřit teplotu s IoT**. Postačí ti základ
 node/push-button:0/thermometer/0:1/temperature
 ```
 
-![MQTT](https://res.cloudinary.com/lukasfabik/image/upload/v1566154530/projects/dragon-fire/image3.png)
+![MQTT](./img/dragons-fire/image3.png)
 
 Potvrď tlačítkem **Done**.
 
 4. Vedle nodu postav druhý, tentokrát modrý s názvem **Gauge**. Najdeš ho v sekci Dashboard. Tímhle nodem určíš, jak bude naměřená teplota znázorněná na obrazovce: jako ukazatel. Oba nody propoj.
 
-![Gauce chart](https://res.cloudinary.com/lukasfabik/image/upload/v1566154530/projects/dragon-fire/image1.png)
+![Gauce chart](./img/dragons-fire/image1.png)
 
 5. Na node Gauge dvakrát klikni. V řádku **Type** si nastavíš, jak se bude graf zobrazovat (nejlepší bude Gauge). V řádku **Range** upravíš minimální a maximální hodnotu ukazatele (zkus 0 a 50).
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566154530/projects/dragon-fire/image2.png)
+![Node-RED](./img/dragons-fire/image2.png)
 
 Potvrď tlačítkem **Done**.
 **Náš tip:** V záložce **Label** si svůj ukazatel libovolně přejmenuj.
@@ -50,7 +50,7 @@ Potvrď tlačítkem **Done**.
 
 7. Překlikni se do jiné záložky, do **Dashboardu**. Tvůj ukazatel žije právě tady. 😲
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566154530/projects/dragon-fire/image5.png)
+![Node-RED](./img/dragons-fire/image5.png)
 
 ## Rozjeď hru s kámoši
 

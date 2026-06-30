@@ -107,10 +107,10 @@ Je to **node Notification** pod sekcí Dashboard.
 1. Stejně jako předtím, vylepšenou krabičku **dej do správy mamce a taťkovi**.
 2. Nauč je, že **krátkým stisknutím** tě zavolají k jídlu…
 
-![Action](https://res.cloudinary.com/lukasfabik/image/upload/v1573301763/projects/dalsi-level-projekt-tlacitko-pro-mamku/image12.png)
+![Action](./img/button-for-parents-upgrade/image12.png)
 
 3. A pokud tě chtějí zavolat kvůli čemukoli jinému, musí tlačítko **zmáčknout déle**. 👇
 
-![Action](https://res.cloudinary.com/lukasfabik/image/upload/v1573301763/projects/dalsi-level-projekt-tlacitko-pro-mamku/image13.png)
+![Action](./img/button-for-parents-upgrade/image13.png)
 
 Aspoň tě nezklame, když na talíř nedostaneš jídlo, ale rodinnou diskuzi. No fuj, jiné menu, prosím!

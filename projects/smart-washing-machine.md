@@ -21,7 +21,7 @@ All you need is the box with the button and the USB dongle. You will be all set 
 
 1. [Pair the Core Module with the USB Dongle](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device) Right after pairing it, you will see that your Core Module changed Alias to **washing-machine-detector**. 👌
 
-![HARDWARIO Playground devices list](https://res.cloudinary.com/lukasfabik/image/upload/v1566368246/projects/smart-washing-machine/image4.png)
+![HARDWARIO Playground devices list](./img/smart-washing-machine/image4.png)
 
 ## Get it started in the Node-RED
 
@@ -70,25 +70,25 @@ Confirm it with the **Done** button.
 2. Create a **new project** in Blynk. Now a token has been sent to your email, but don’t do anything with it just yet.
 3. On the Blynk desktop, **place the notification**.
 
-![Add Blynk Notify widget](https://res.cloudinary.com/lukasfabik/image/upload/v1566368247/projects/smart-washing-machine/image11.png)
+![Add Blynk Notify widget](./img/smart-washing-machine/image11.png)
 
 4. **Start the project** with the Play button at the top right.
 
-![Set Blynk Notify widget](https://res.cloudinary.com/lukasfabik/image/upload/v1566368245/projects/smart-washing-machine/image6.png)
+![Set Blynk Notify widget](./img/smart-washing-machine/image6.png)
 
 ## Finish the programming
 
 1. Go back to your computer. Place the last node, **Notify** from the Blynk ws section, on the Node-RED desktop.
 
-![Add Blynk Notify node](https://res.cloudinary.com/lukasfabik/image/upload/v1566368247/projects/smart-washing-machine/image9.png)
+![Add Blynk Notify node](./img/smart-washing-machine/image9.png)
 
 2. Double-click on the node. Then click on the **pencil**. ✏
 
-![Blynk Connection settings](https://res.cloudinary.com/lukasfabik/image/upload/v1566368245/projects/smart-washing-machine/image1.png)
+![Blynk Connection settings](./img/smart-washing-machine/image1.png)
 
 3. A window has opened for pairing with Blynk. Set the **URL** and the **Project Token** here. As always, you copy the URL from the bottom section of the image and receive the project token to your mailbox after creating a new project in Blynk.
 
-![Blynk Connection settings](https://res.cloudinary.com/lukasfabik/image/upload/v1566368245/projects/smart-washing-machine/image8_new.png)
+![Blynk Connection settings](./img/smart-washing-machine/image8_new.png)
 
 **Our tip:** In the Name field, set the **name** of the project to recognize it better.
 
@@ -96,7 +96,7 @@ Confirm everything with the **Add** and **Done** buttons.
 
 4. All you have to do now is **connect** and send a command to the space with the red **Deploy** button on the top right. 👏
 
-![Deploy flow in Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566368247/projects/smart-washing-machine/image8.png)
+![Deploy flow in Node-RED](./img/smart-washing-machine/image8.png)
 
 ## Give it a spin!
 

@@ -17,7 +17,7 @@ S tímhle projektem se naučíš **měřit teplotu s IoT**. Postačí ti základ
 2. Změny teploty uvidíš v Playgroundu v záložce **Messages**.
 
 
-![MQTT](https://res.cloudinary.com/lukasfabik/image/upload/v1566155066/projects/fridge-monitoring/image4.png)
+![MQTT](./img/fridge-temperature/image4.png)
 
 ## Nastav si Node-RED
 
@@ -32,19 +32,19 @@ node/push-button:0/thermometer/0:1/temperature
 ```
 
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566155066/projects/fridge-monitoring/image2.png)
+![Node-RED](./img/fridge-temperature/image2.png)
 
 
 Potvrď tlačítkem **Done**.
 
 4. Vedle nodu postav druhý, světle modrý s názvem **Chart** (graf). Najdeš ho v sekci Dashboard. Tímhle nodem určíš, jak bude naměřená teplota znázorněná na obrazovce. Oba nody propoj. 👌
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566155066/projects/fridge-monitoring/image5.png)
+![Node-RED](./img/fridge-temperature/image5.png)
 
 5. Na node Chart dvakrát klikni. V řádku **X-axis** nastavíš, za jakou dobu data v grafu uvidíš. Napiš sem, kolik potřebuješ, třeba délku celého vyučování.
 V řádku Label svůj graf libovolně pojmenuj.
 
-![Chart](https://res.cloudinary.com/lukasfabik/image/upload/v1566155066/projects/fridge-monitoring/image1.png)
+![Chart](./img/fridge-temperature/image1.png)
 
 Potvrď tlačítkem **Done**.
 
@@ -54,7 +54,7 @@ Potvrď tlačítkem **Done**.
 7. Překlikni se do jiné záložky, do **Dashboardu**. Tady je tvůj graf. 👏
 
 
-![MQTT topic](https://res.cloudinary.com/lukasfabik/image/upload/v1566155066/projects/fridge-monitoring/image3.png)
+![MQTT topic](./img/fridge-temperature/image3.png)
 
 ## Měř dle libosti
 

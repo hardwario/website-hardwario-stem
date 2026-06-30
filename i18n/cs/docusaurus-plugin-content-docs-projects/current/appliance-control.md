@@ -50,7 +50,7 @@ Jak už je uvedeno výše, sestava umí kromě zprávy o stisknutí tlačítka p
 4. Zkuste na zařízení dýchnout teplý vzduch z úst. Vzroste teplota a ta se vám objeví mezi zprávami.
 5. Poslední zprávou je informace o orientaci zařízení. Ta funguje jako klasická kostka, zkuste zařízením otáčet a zjistěte, kdy se objeví pozice 1, 2, 3...6.
 
-![Rozjeď to v Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1565632592/projects/button-for-mum/image3.png "Rozjeď to v Node-RED")
+![Rozjeď to v Node-RED](./img/appliance-control/image3.png "Rozjeď to v Node-RED")
 
 ## První projekt
 

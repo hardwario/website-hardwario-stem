@@ -19,7 +19,7 @@ If you already have the Start Set, you will only need the [**PIR Module**](https
 
 2. Load special firmware onto the Core Module, namely bcf-radio-burglar-alarm (you will find it among the other firmware in Playground). With this firmware the box will reveal intruders and burglars.👂
 
-![sestavení motion detektor Setu](https://res.cloudinary.com/lukasfabik/image/upload/v1573157109/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image20.png)
+![sestavení motion detektor Setu](./img/thief-trap/image20.png)
 
 **Our tip**: You don’t know how to download the firmware or what is it? [You'll find out here](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
 
@@ -40,7 +40,7 @@ If you already have the Start Set, you will only need the [**PIR Module**](https
 
 2. Select the embellished **Styled button** from the menu. 🚨 The button is placed on the project desktop and switches the motion  on and off.
 
-![spuštění aplikace](https://res.cloudinary.com/lukasfabik/image/upload/v1573157119/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image22.png)
+![spuštění aplikace](./img/thief-trap/image22.png)
 
 3. Clicking on the button takes you to settings.
 
@@ -52,15 +52,15 @@ The rest is up to your artistic talents. 🎨 You can choose the color of the bu
 
 When you have completed everything,<b> </b>**return to the desktop** by clicking on the arrow in the top left.
 
-![virtuální tlačítko](https://res.cloudinary.com/lukasfabik/image/upload/v1573157108/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image18.png)
+![virtuální tlačítko](./img/thief-trap/image18.png)
 
 4. Click on the desktop to add another feature. In this case, it concerns the **notification**.
 
-![notifikace](https://res.cloudinary.com/lukasfabik/image/upload/v1573157088/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image4.png)
+![notifikace](./img/thief-trap/image4.png)
 
 5. Your desktop now looks like this. Start the project with the **Play** button in the top right. ▶️
 
-![spuštění projektu](https://res.cloudinary.com/lukasfabik/image/upload/v1573157116/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image25.png)
+![spuštění projektu](./img/thief-trap/image25.png)
 
 6. **Tap the button**, it should switch from ON mode to OFF mode.
 
@@ -262,6 +262,6 @@ msg.payload = "Someone's in your room" return msg;
 
 2. Place your box near the door. When the box detects movement, **it will send a notification to your mobile**.
 
-![Set the switch](https://res.cloudinary.com/lukasfabik/image/upload/v1573157092/projects/pohlidej-si-kdyz-nejsi-doma-jestli-ti-nekdo-neleze-do-pokoje/image9.png)
+![Set the switch](./img/thief-trap/image9.png)
 
 Thieves beware! The law is here! 😱

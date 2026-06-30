@@ -14,7 +14,7 @@ This project teaches you how to **measure temperature with IoT**. All you need i
 2. In Playground, open the **Messages** tab. Here you will see temperature changes. The temperature is measured automatically, either regularly after 15 seconds, or when there is a major change. And that is what we will use.
 
 
-![messages](https://res.cloudinary.com/lukasfabik/image/upload/v1566154531/projects/dragon-fire/image4.png)
+![messages](./img/dragons-fire/image4.png)
 
 ## Set up Node-RED
 
@@ -27,17 +27,17 @@ This project teaches you how to **measure temperature with IoT**. All you need i
 node/push-button:0/thermometer/0:1/temperature
 ```
 
-![MQTT topic](https://res.cloudinary.com/lukasfabik/image/upload/v1566154530/projects/dragon-fire/image3.png)
+![MQTT topic](./img/dragons-fire/image3.png)
 
 Confirm by clicking the **Done** button.
 
 4. Next to the MQTT node place a second one, this time a blue **Gauge** node. This node can be found in the Dashboard section. This node is used to determine how the measured temperature is displayed on screen: as an indicator. Link both nodes together.
 
-![Gauce chart](https://res.cloudinary.com/lukasfabik/image/upload/v1566154530/projects/dragon-fire/image1.png)
+![Gauce chart](./img/dragons-fire/image1.png)
 
 5. Double-click on the Gauge node. In the **Type** line, set how the graph will be displayed (Gauge is best). In the **Range** line, adjust the minimum and maximum value of the indicator (try 0 and 50).
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566154530/projects/dragon-fire/image2.png)
+![Node-RED](./img/dragons-fire/image2.png)
 
 Confirm by clicking the **Done** button.
 
@@ -49,7 +49,7 @@ Confirm by clicking the **Done** button.
 
 7. Click on **Dashboard**. Your temperature indicator will be displayed. 😲
 
-![Node-RED](https://res.cloudinary.com/lukasfabik/image/upload/v1566154530/projects/dragon-fire/image5.png)
+![Node-RED](./img/dragons-fire/image5.png)
 
 ## Start the game with your friends
 
