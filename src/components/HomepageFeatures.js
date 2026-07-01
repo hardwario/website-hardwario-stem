@@ -2,11 +2,12 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
-import Translate from '@docusaurus/Translate';
+import Translate, { translate } from '@docusaurus/Translate';
 
 const FeatureList = [
   {
     title: <Translate>TOWER Mini Course</Translate>,
+    alt: translate({ message: 'TOWER Mini Course' }),
     link: '/mini-course/',
     src: '/img/lekce-iot.avif',
     width: 'auto',
@@ -19,18 +20,20 @@ const FeatureList = [
   },
   {
     title: <Translate>STEM Learning Platform</Translate>,
+    alt: translate({ message: 'STEM Learning Platform' }),
     link: '/stem/',
     src: '/img/stem-hero.jpg',
     width: 'auto',
-      height: 200,
-        description: (
-          <Translate>
-            Browse our STEM learning platform for schools and other educational institutions.
-          </Translate>
-        ),
+    height: 200,
+    description: (
+      <Translate>
+        Browse our STEM learning platform for schools and other educational institutions.
+      </Translate>
+    ),
   },
   {
     title: <Translate>Projects and Tutorials</Translate>,
+    alt: translate({ message: 'Projects and Tutorials' }),
     link: '/projects/',
     src: '/img/push-the-button-button-garage.webp',
     width: 'auto',
@@ -43,20 +46,17 @@ const FeatureList = [
   }
 ];
 
-function Feature({ src, width, height, title, subtitle, link, description }) {
+function Feature({ src, alt, width, height, title, link, description }) {
   return (
     <div className={clsx('col col--3')}>
       <div className="text--center">
         <Link to={link}>
-          {
-          <img className='feature-image' src={src} width={width} height={height} />
-          }
+          <img className='feature-image' src={src} width={width} height={height} alt={alt} />
         </Link>
       </div>
       <div className='text--center padding-horiz--md'>
         <Link to={link} className='link-unstyled'>
           <h3>{title}</h3>
-          <h3>{subtitle}</h3>
         </Link>
 
         <p>{description}</p>
