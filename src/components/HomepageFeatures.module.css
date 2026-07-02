@@ -13,3 +13,8 @@
 .buttons {
   margin-bottom: 16px;
 }
+
+/* h2 for correct outline depth (hero is the sole h1), sized like the h3 it replaced */
+.featureTitle {
+  font-size: var(--ifm-h3-font-size);
+}

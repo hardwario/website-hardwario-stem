@@ -56,7 +56,7 @@ function Feature({ src, alt, width, height, title, link, description }) {
       </div>
       <div className='text--center padding-horiz--md'>
         <Link to={link} className='link-unstyled'>
-          <h3>{title}</h3>
+          <h2 className={styles.featureTitle}>{title}</h2>
         </Link>
 
         <p>{description}</p>
