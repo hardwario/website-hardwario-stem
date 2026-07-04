@@ -29,24 +29,6 @@
 /stem/L108/iot-pulse-monitor-projects-cs             /stem/lesson-108/iot-pulse-monitor-projects            301
 
 # Lesson directories renamed L1NN -> lesson-1NN (folder only; slugs + sidebar labels unchanged).
-/stem/L101/*      /stem/lesson-101/:splat      301
-/stem/L102/*      /stem/lesson-102/:splat      301
-/stem/L103/*      /stem/lesson-103/:splat      301
-/stem/L104/*      /stem/lesson-104/:splat      301
-/stem/L105/*      /stem/lesson-105/:splat      301
-/stem/L106/*      /stem/lesson-106/:splat      301
-/stem/L107/*      /stem/lesson-107/:splat      301
-/stem/L108/*      /stem/lesson-108/:splat      301
-/stem/L109/*      /stem/lesson-109/:splat      301
-/cs/stem/L101/*      /cs/stem/lesson-101/:splat      301
-/cs/stem/L102/*      /cs/stem/lesson-102/:splat      301
-/cs/stem/L103/*      /cs/stem/lesson-103/:splat      301
-/cs/stem/L104/*      /cs/stem/lesson-104/:splat      301
-/cs/stem/L105/*      /cs/stem/lesson-105/:splat      301
-/cs/stem/L106/*      /cs/stem/lesson-106/:splat      301
-/cs/stem/L107/*      /cs/stem/lesson-107/:splat      301
-/cs/stem/L108/*      /cs/stem/lesson-108/:splat      301
-/cs/stem/L109/*      /cs/stem/lesson-109/:splat      301
 
 # --- GSC 404 remediation (2026-07-04) ---
 
@@ -110,24 +92,6 @@
 /cs/stem/l108/iot-pulse-monitor                      /cs/stem/lesson-108/iot-pulse-monitor-cs               301
 
 # Lowercase lesson-directory splats (mirror of the L1NN splats above)
-/stem/l101/*                                         /stem/lesson-101/:splat                                301
-/stem/l102/*                                         /stem/lesson-102/:splat                                301
-/stem/l103/*                                         /stem/lesson-103/:splat                                301
-/stem/l104/*                                         /stem/lesson-104/:splat                                301
-/stem/l105/*                                         /stem/lesson-105/:splat                                301
-/stem/l106/*                                         /stem/lesson-106/:splat                                301
-/stem/l107/*                                         /stem/lesson-107/:splat                                301
-/stem/l108/*                                         /stem/lesson-108/:splat                                301
-/stem/l109/*                                         /stem/lesson-109/:splat                                301
-/cs/stem/l101/*                                      /cs/stem/lesson-101/:splat                             301
-/cs/stem/l102/*                                      /cs/stem/lesson-102/:splat                             301
-/cs/stem/l103/*                                      /cs/stem/lesson-103/:splat                             301
-/cs/stem/l104/*                                      /cs/stem/lesson-104/:splat                             301
-/cs/stem/l105/*                                      /cs/stem/lesson-105/:splat                             301
-/cs/stem/l106/*                                      /cs/stem/lesson-106/:splat                             301
-/cs/stem/l107/*                                      /cs/stem/lesson-107/:splat                             301
-/cs/stem/l108/*                                      /cs/stem/lesson-108/:splat                             301
-/cs/stem/l109/*                                      /cs/stem/lesson-109/:splat                             301
 
 # Legacy GitBook-era URLs (/v/cs, zakladni-lekce, academy). Content is gone;
 # land on the modern equivalent where one exists, else the homepage (owner decision 2026-07-04).
@@ -135,12 +99,7 @@
 /v/cs/                                               /cs/                                                   301
 /academy                                             /                                                      301
 /academy/                                            /                                                      301
-/v/cs/zakladni-lekce/l101-co-je-to-internet-veci-iot/*  /cs/stem/lesson-101/what-is-iot                        301
-/cs/zakladni-lekce/l101-co-je-to-internet-veci-iot/* /cs/stem/lesson-101/what-is-iot                        301
-/v/cs/*                                              /cs/                                                   301
 /cs/zakladni-lekce                                   /cs/                                                   301
-/cs/zakladni-lekce/*                                 /cs/                                                   301
-/academy/*                                           /                                                      301
 
 # Trailing-slash twins (Workers-assets matching is exact)
 /stem/L106/iot-vibration-monitor-asessment-cs/       /stem/lesson-106/iot-vibration-monitor-assessment      301
@@ -223,3 +182,49 @@
 /cs/stem/l107/iot-light-monitor-projects-cs/         /cs/stem/lesson-107/iot-light-monitor-projects         301
 /cs/stem/l106/iot-vibration-monitor/                 /cs/stem/lesson-106/iot-vibration-monitor-cs           301
 /cs/stem/l108/iot-pulse-monitor/                     /cs/stem/lesson-108/iot-pulse-monitor-cs               301
+
+# --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
+# --- every rule after the first splat toward the 100-dynamic-rule limit and
+# --- fails the deploy beyond it; static rules also only win when listed first.
+
+/stem/L101/*      /stem/lesson-101/:splat      301
+/stem/L102/*      /stem/lesson-102/:splat      301
+/stem/L103/*      /stem/lesson-103/:splat      301
+/stem/L104/*      /stem/lesson-104/:splat      301
+/stem/L105/*      /stem/lesson-105/:splat      301
+/stem/L106/*      /stem/lesson-106/:splat      301
+/stem/L107/*      /stem/lesson-107/:splat      301
+/stem/L108/*      /stem/lesson-108/:splat      301
+/stem/L109/*      /stem/lesson-109/:splat      301
+/cs/stem/L101/*      /cs/stem/lesson-101/:splat      301
+/cs/stem/L102/*      /cs/stem/lesson-102/:splat      301
+/cs/stem/L103/*      /cs/stem/lesson-103/:splat      301
+/cs/stem/L104/*      /cs/stem/lesson-104/:splat      301
+/cs/stem/L105/*      /cs/stem/lesson-105/:splat      301
+/cs/stem/L106/*      /cs/stem/lesson-106/:splat      301
+/cs/stem/L107/*      /cs/stem/lesson-107/:splat      301
+/cs/stem/L108/*      /cs/stem/lesson-108/:splat      301
+/cs/stem/L109/*      /cs/stem/lesson-109/:splat      301
+/stem/l101/*                                         /stem/lesson-101/:splat                                301
+/stem/l102/*                                         /stem/lesson-102/:splat                                301
+/stem/l103/*                                         /stem/lesson-103/:splat                                301
+/stem/l104/*                                         /stem/lesson-104/:splat                                301
+/stem/l105/*                                         /stem/lesson-105/:splat                                301
+/stem/l106/*                                         /stem/lesson-106/:splat                                301
+/stem/l107/*                                         /stem/lesson-107/:splat                                301
+/stem/l108/*                                         /stem/lesson-108/:splat                                301
+/stem/l109/*                                         /stem/lesson-109/:splat                                301
+/cs/stem/l101/*                                      /cs/stem/lesson-101/:splat                             301
+/cs/stem/l102/*                                      /cs/stem/lesson-102/:splat                             301
+/cs/stem/l103/*                                      /cs/stem/lesson-103/:splat                             301
+/cs/stem/l104/*                                      /cs/stem/lesson-104/:splat                             301
+/cs/stem/l105/*                                      /cs/stem/lesson-105/:splat                             301
+/cs/stem/l106/*                                      /cs/stem/lesson-106/:splat                             301
+/cs/stem/l107/*                                      /cs/stem/lesson-107/:splat                             301
+/cs/stem/l108/*                                      /cs/stem/lesson-108/:splat                             301
+/cs/stem/l109/*                                      /cs/stem/lesson-109/:splat                             301
+/v/cs/zakladni-lekce/l101-co-je-to-internet-veci-iot/*  /cs/stem/lesson-101/what-is-iot                        301
+/cs/zakladni-lekce/l101-co-je-to-internet-veci-iot/* /cs/stem/lesson-101/what-is-iot                        301
+/v/cs/*                                              /cs/                                                   301
+/cs/zakladni-lekce/*                                 /cs/                                                   301
+/academy/*                                           /                                                      301
