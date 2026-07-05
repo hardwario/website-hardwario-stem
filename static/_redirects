@@ -183,6 +183,33 @@
 /cs/stem/l106/iot-vibration-monitor/                 /cs/stem/lesson-106/iot-vibration-monitor-cs           301
 /cs/stem/l108/iot-pulse-monitor/                     /cs/stem/lesson-108/iot-pulse-monitor-cs               301
 
+# Removed orphaned pages (owner decision 2026-07-05): half-translated lesson stubs
+# L110-L114 -> stem lessons index; fridge-temperature project -> projects index.
+/stem/iot-alarm-cs                                   /stem/                                                 301
+/stem/iot-alarm-cs/                                  /stem/                                                 301
+/stem/iot-thermostat-cs                              /stem/                                                 301
+/stem/iot-thermostat-cs/                             /stem/                                                 301
+/stem/iot-controller-cs                              /stem/                                                 301
+/stem/iot-controller-cs/                             /stem/                                                 301
+/stem/iot-display-cs                                 /stem/                                                 301
+/stem/iot-display-cs/                                /stem/                                                 301
+/stem/iot-gps-locator                                /stem/                                                 301
+/stem/iot-gps-locator/                               /stem/                                                 301
+/cs/stem/iot-alarm-cs                                /cs/stem/                                              301
+/cs/stem/iot-alarm-cs/                               /cs/stem/                                              301
+/cs/stem/iot-thermostat-cs                           /cs/stem/                                              301
+/cs/stem/iot-thermostat-cs/                          /cs/stem/                                              301
+/cs/stem/iot-controller-cs                           /cs/stem/                                              301
+/cs/stem/iot-controller-cs/                          /cs/stem/                                              301
+/cs/stem/iot-display-cs                              /cs/stem/                                              301
+/cs/stem/iot-display-cs/                             /cs/stem/                                              301
+/cs/stem/iot-gps-locator                             /cs/stem/                                              301
+/cs/stem/iot-gps-locator/                            /cs/stem/                                              301
+/projects/fridge-temperature                         /projects/                                             301
+/projects/fridge-temperature/                        /projects/                                             301
+/cs/projects/fridge-temperature                      /cs/projects/                                          301
+/cs/projects/fridge-temperature/                     /cs/projects/                                          301
+
 # --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
 # --- every rule after the first splat toward the 100-dynamic-rule limit and
 # --- fails the deploy beyond it; static rules also only win when listed first.

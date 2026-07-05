@@ -170,33 +170,6 @@ const sidebars = {
         'lesson-109/L109-assessment'
       ],
     },
-    /*
-    {
-      type: 'doc',
-      id: 'L110-iot-alarm',
-      label: 'L110: IoT Alarm',
-    },
-    {
-      type: 'doc',
-      id: 'L111-iot-thermostat',
-      label: 'L111: IoT termostat',
-    },
-     {
-      type: 'doc',
-      id: 'L112-iot-controller',
-      label: 'L112: IoT ovladač',
-    },
-    {
-      type: 'doc',
-      id: 'L113-iot-display',
-      label: 'L113: IoT displej',
-    },
-    {
-      type: 'doc',
-      id: 'L114-iot-gps-locator',
-      label: 'L114: IoT GPS lokátor',
-    },
-    */
     /*{
       type: 'category',
       label: 'Thingsboard',

@@ -39,26 +39,6 @@
     "message": "L109: IoT monitor půdy",
     "description": "The label for category L109: IoT Soil Monitor in sidebar docs"
   },
-  "sidebar.docs.doc.L110: IoT Alarm": {
-    "message": "L110: IoT Alarm",
-    "description": "The label for the doc item L110: IoT Alarm in sidebar docs, linking to the doc L110-iot-alarm"
-  },
-  "sidebar.docs.doc.L111: IoT termostat": {
-    "message": "L111: IoT termostat",
-    "description": "The label for the doc item L111: IoT termostat in sidebar docs, linking to the doc L111-iot-thermostat"
-  },
-  "sidebar.docs.doc.L112: IoT ovladač": {
-    "message": "L112: IoT ovladač",
-    "description": "The label for the doc item L112: IoT ovladač in sidebar docs, linking to the doc L112-iot-controller"
-  },
-  "sidebar.docs.doc.L113: IoT displej": {
-    "message": "L113: IoT displej",
-    "description": "The label for the doc item L113: IoT displej in sidebar docs, linking to the doc L113-iot-display"
-  },
-  "sidebar.docs.doc.L114: IoT GPS lokátor": {
-    "message": "L114: IoT GPS lokátor",
-    "description": "The label for the doc item L114: IoT GPS lokátor in sidebar docs, linking to the doc L114-iot-gps-locator"
-  },
   "sidebar.docs.category.L101: What is IoT": {
     "message": "L101: Co je IoT",
     "description": "The label for category L101: What is IoT in sidebar docs"
