@@ -222,7 +222,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} HARDWARIO a.s. Built with Docusaurus.`,
+        copyright: `<nav aria-label="HARDWARIO websites" style="margin-bottom:8px">HARDWARIO websites: <a href="https://www.hardwario.com/" target="_blank" rel="noopener noreferrer">HARDWARIO.com</a> · <a href="https://docs.hardwario.com/" target="_blank" rel="noopener noreferrer">Docs</a> · <a href="https://hardwario.engineering/" target="_blank" rel="noopener noreferrer">Engineering</a> · <a href="https://hardwario.studio/" target="_blank" rel="noopener noreferrer">Studio</a> · <a href="https://hardwario.academy/" target="_blank" rel="noopener noreferrer">Academy</a> · <strong>STEM</strong></nav>Copyright © ${new Date().getFullYear()} HARDWARIO a.s.`,
       },
       prism: {
         theme: lightCodeTheme,
