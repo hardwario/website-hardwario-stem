@@ -341,5 +341,29 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "STEM learning platform for schools": {
+    "message": "STEM learning platform for schools"
+  },
+  "TOWER Mini Course": {
+    "message": "TOWER Mini Course"
+  },
+  "Discover the Internet of Things with the HARDWARIO TOWER. We’ll guide you through programming and communication protocols—no soldering required.": {
+    "message": "Discover the Internet of Things with the HARDWARIO TOWER. We’ll guide you through programming and communication protocols—no soldering required."
+  },
+  "STEM Learning Platform": {
+    "message": "STEM Learning Platform"
+  },
+  "Browse our STEM learning platform for schools and other educational institutions.": {
+    "message": "Browse our STEM learning platform for schools and other educational institutions."
+  },
+  "Projects and Tutorials": {
+    "message": "Projects and Tutorials"
+  },
+  "Explore a collection of projects and tutorials based on HARDWARIO TOWER, designed to inspire and educate.": {
+    "message": "Explore a collection of projects and tutorials based on HARDWARIO TOWER, designed to inspire and educate."
+  },
+  "Co-financed by the Liberec Region": {
+    "message": "Co-financed by the Liberec Region"
   }
 }
