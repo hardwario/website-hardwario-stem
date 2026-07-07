@@ -68,3 +68,12 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 .logo-img {
   width: 250px;
 }
+
+/* Mobile: the "Other HARDWARIO websites" footer label sits on its own line
+   (the footer copyright block is centered by default) */
+@media (max-width: 640px) {
+  .footer-sites-label {
+    display: block;
+    margin-bottom: 2px;
+  }
+}
