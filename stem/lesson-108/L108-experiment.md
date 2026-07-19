@@ -48,7 +48,7 @@ As part of the experiment, we will transmit the number of pulses using an **LED*
 
 :::tip
 
- Take a look at the [detailed guide for uploading firmware to the Core Module.](https://www.hardwario.com/cs/education/tutorials/jak-nahrat-firmware/)
+ Take a look at the [detailed guide for uploading firmware to the Core Module.](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/)
 
 :::
 
@@ -90,7 +90,6 @@ As part of the experiment, we will transmit the number of pulses using an **LED*
     <Image img={require('./stem-result.webp')}/>
   </div>
 </div>
-
 
 
 

@@ -1,6 +1,7 @@
 ---
 slug: /
 title: Anotace HARDWARIO aktivní STEM výuky
+description: Jak HARDWARIO propojuje aktivní STEM výuku, reálné IoT projekty, strukturované lekce a podporu učitelů.
 
 ---
 import Image from '@theme/IdealImage';
@@ -19,7 +20,7 @@ IoT totiž patří mezi fenomény dnešní doby. Nástup nových technologií um
 
 ## Pedagogický rámec aktivní STEM výuky s HARDWARIO
 
-Ve spolupráci s odborníky na pedagogiku z EDvisor Finland nabízí HARDWARIO detailně připravené lekce pro aktivní STEM výuku, které využívají na výzkumu založený pedagogický rámec REALISE-EXPERIMENT-APPLY-REFLECT. 
+HARDWARIO nabízí detailně připravené lekce pro aktivní STEM výuku, které využívají na výzkumu založený pedagogický rámec REALISE-EXPERIMENT-APPLY-REFLECT.
 
 
 <div class="container">
@@ -33,5 +34,3 @@ Náš pedagogický rámec velmi usnadňuje přípravu, vedení a hodnocení lekc
 ## Vzorové lekce aktivní STEM výuky HARDWARIO
 
 Naše lekce aktivní STEM výuky jsou postaveny na reálných projektech internetu věcí v domácnostech, školách i průmyslu. Nabízíme lekce v základní i pokročilé úrovni. Budeme potěšeni vaší zpětnou vazbou - kritikou i nápady pro vylepšení.
-
-

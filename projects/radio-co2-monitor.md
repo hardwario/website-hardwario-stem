@@ -266,5 +266,4 @@ Download the **Blynk IoT** app from the [**App Store**](https://apps.apple.com/u
 
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
-* [**Toolchain Guide**](https://docs.hardwario.com/ember/chirpstack-v4-installation/#add-chirpstack-repository)
-
+* [**Toolchain Guide**](https://docs.hardwario.com/apps/chirpstack/chirpstack-installation/#add-chirpstack-repository)

@@ -1,5 +1,5 @@
 ---
-slug: iot-pulse-monitor-projects-cs
+slug: iot-pulse-monitor-projects
 title: Projekty
 ---
 import Image from '@theme/IdealImage';
@@ -59,6 +59,5 @@ Studenti si zkoušejí další projekty, které jsou svázány s daným tématem
 ### Ideation
 
 Studenti navrhují reálné využití znalostí nabytých teoretickým výkladem a experimenty. Nápady zapisují do grafu, kde na ose x se odhaduje náročnost (náklady) projektu a na ose y dopad realizace řešení.
-
 
 

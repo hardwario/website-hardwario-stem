@@ -1,5 +1,5 @@
 ---
-slug: iot-light-monitor-assessment-cs
+slug: iot-light-monitor-assessment
 title: Hodnocení
 ---
 import Image from '@theme/IdealImage';

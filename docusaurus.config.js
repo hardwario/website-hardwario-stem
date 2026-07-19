@@ -14,28 +14,27 @@ const config = {
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
 
-  // Organization structured data (schema.org JSON-LD) — consistent across HARDWARIO sites
+  // Identify this property as the learning website, with the legal company as
+  // its publisher. This keeps search engines from confusing STEM with the
+  // parent company's industrial-product site.
   headTags: [
     {
       tagName: 'script',
       attributes: { type: 'application/ld+json' },
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'Organization',
-        name: 'HARDWARIO',
-        legalName: 'HARDWARIO a.s.',
-        url: 'https://www.hardwario.com',
+        '@type': 'WebSite',
+        '@id': 'https://stem.hardwario.com/#website',
+        name: 'HARDWARIO STEM',
+        url: 'https://stem.hardwario.com/',
         logo: 'https://stem.hardwario.com/img/logo.svg',
-        description:
-          'Czech manufacturer of industrial / wireless IoT (LPWAN) hardware and software.',
-        address: { '@type': 'PostalAddress', addressCountry: 'CZ' },
-        areaServed: 'Europe',
-        sameAs: [
-          'https://www.linkedin.com/company/13187032',
-          'https://twitter.com/hardwario_en',
-          'https://www.youtube.com/c/hardwario',
-          'https://github.com/hardwario',
-        ],
+        description: 'STEM learning platform for schools using hands-on Internet of Things lessons and projects.',
+        publisher: {
+          '@type': 'Organization',
+          '@id': 'https://www.hardwario.com/#organization',
+          name: 'HARDWARIO a.s.',
+          url: 'https://www.hardwario.com/',
+        },
       }),
     },
   ],
@@ -70,6 +69,9 @@ const config = {
           sidebarPath: require.resolve('./sidebars-stem.js'),
           editUrl: 'https://github.com/hardwario/website-hardwario-stem/edit/main',
         },
+        // Learning content lives in the three docs instances below; there is
+        // no STEM blog. Avoid publishing an empty, indexable /blog route.
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -241,4 +243,3 @@ const config = {
 };
 
 module.exports = config;
-

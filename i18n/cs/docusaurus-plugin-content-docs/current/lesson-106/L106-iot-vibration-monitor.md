@@ -1,5 +1,5 @@
 ---
-slug: iot-vibration-monitor-cs
+slug: iot-vibration-monitor
 title: 'L106: IoT monitor vibrací'
 ---
 import Image from '@theme/IdealImage';

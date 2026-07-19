@@ -1,5 +1,5 @@
 ---
-slug: iot-pulse-monitor-presentation-cs
+slug: iot-pulse-monitor-presentation
 title: Prezentace
 ---
 import Image from '@theme/IdealImage';
@@ -9,4 +9,3 @@ import Image from '@theme/IdealImage';
 Studenti prezentují své nápady a projekty ostatním studentům. 
 
 Diskutují a navrhují, kde se dá ovládání LED pásku nasadit tak, aby vzniklo něco smysluplného.
-

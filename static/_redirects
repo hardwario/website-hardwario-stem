@@ -3,9 +3,9 @@
 /stem/L106/iot-vibration-monitor-asessment-cs        /stem/lesson-106/iot-vibration-monitor-assessment      301
 /stem/L107/iot-light-monitor-asessment               /stem/lesson-107/iot-light-monitor-assessment          301
 /stem/L108/iot-pulse-monitor-asessment-cs            /stem/lesson-108/iot-pulse-monitor-assessment          301
-/cs/stem/L106/iot-vibration-monitor-asessment-cs     /cs/stem/lesson-106/iot-vibration-monitor-assessment-cs 301
-/cs/stem/L107/iot-light-monitor-asessment-cs         /cs/stem/lesson-107/iot-light-monitor-assessment-cs    301
-/cs/stem/L108/iot-pulse-monitor-asessment-cs         /cs/stem/lesson-108/iot-pulse-monitor-assessment-cs    301
+/cs/stem/L106/iot-vibration-monitor-asessment-cs     /cs/stem/lesson-106/iot-vibration-monitor-assessment    301
+/cs/stem/L107/iot-light-monitor-asessment-cs         /cs/stem/lesson-107/iot-light-monitor-assessment        301
+/cs/stem/L108/iot-pulse-monitor-asessment-cs         /cs/stem/lesson-108/iot-pulse-monitor-assessment        301
 /stem/L107/iot-vibration-monitor-projects-cs         /stem/lesson-107/iot-light-monitor-projects            301
 /cs/stem/L107/iot-vibration-monitor-introduction-cs  /cs/stem/lesson-107/iot-light-monitor-introduction     301
 /cs/stem/L107/iot-vibration-monitor-experiment-cs    /cs/stem/lesson-107/iot-light-monitor-experiment       301
@@ -41,22 +41,21 @@
 /stem/L107/iot-vibration-monitor-experiment-cs       /stem/lesson-107/iot-light-monitor-experiment          301
 /stem/L106/iot-vibration-monitor-assessment-cs       /stem/lesson-106/iot-vibration-monitor-assessment      301
 /stem/L108/iot-pulse-monitor-assessment-cs           /stem/lesson-108/iot-pulse-monitor-assessment          301
-/cs/stem/L107/iot-light-monitor                      /cs/stem/lesson-107/iot-light-monitor-cs               301
+/cs/stem/L107/iot-light-monitor                      /cs/stem/lesson-107/iot-light-monitor                  301
 /cs/stem/L107/iot-light-monitor-introduction-cs      /cs/stem/lesson-107/iot-light-monitor-introduction     301
 /cs/stem/L107/iot-light-monitor-experiment-cs        /cs/stem/lesson-107/iot-light-monitor-experiment       301
 /cs/stem/L107/iot-light-monitor-projects-cs          /cs/stem/lesson-107/iot-light-monitor-projects         301
-/cs/stem/L106/iot-vibration-monitor                  /cs/stem/lesson-106/iot-vibration-monitor-cs           301
-/cs/stem/L108/iot-pulse-monitor                      /cs/stem/lesson-108/iot-pulse-monitor-cs               301
-/projects/node-red-a-sada-start                      /cs/projects/node-red-a-sada-start                     301
-/cs/projects/node-red-and-start-set                  /cs/projects/node-red-a-sada-start                     301
+/cs/stem/L106/iot-vibration-monitor                  /cs/stem/lesson-106/iot-vibration-monitor              301
+/cs/stem/L108/iot-pulse-monitor                      /cs/stem/lesson-108/iot-pulse-monitor                  301
+/projects/node-red-a-sada-start                      /cs/projects/node-red-and-start-set                    301
 
 # Lowercase twins of the L1NN rules above (crawlers lowercase old URLs; matching is case-sensitive)
 /stem/l106/iot-vibration-monitor-asessment-cs        /stem/lesson-106/iot-vibration-monitor-assessment      301
 /stem/l107/iot-light-monitor-asessment               /stem/lesson-107/iot-light-monitor-assessment          301
 /stem/l108/iot-pulse-monitor-asessment-cs            /stem/lesson-108/iot-pulse-monitor-assessment          301
-/cs/stem/l106/iot-vibration-monitor-asessment-cs     /cs/stem/lesson-106/iot-vibration-monitor-assessment-cs301
-/cs/stem/l107/iot-light-monitor-asessment-cs         /cs/stem/lesson-107/iot-light-monitor-assessment-cs    301
-/cs/stem/l108/iot-pulse-monitor-asessment-cs         /cs/stem/lesson-108/iot-pulse-monitor-assessment-cs    301
+/cs/stem/l106/iot-vibration-monitor-asessment-cs     /cs/stem/lesson-106/iot-vibration-monitor-assessment    301
+/cs/stem/l107/iot-light-monitor-asessment-cs         /cs/stem/lesson-107/iot-light-monitor-assessment        301
+/cs/stem/l108/iot-pulse-monitor-asessment-cs         /cs/stem/lesson-108/iot-pulse-monitor-assessment        301
 /stem/l107/iot-vibration-monitor-projects-cs         /stem/lesson-107/iot-light-monitor-projects            301
 /cs/stem/l107/iot-vibration-monitor-introduction-cs  /cs/stem/lesson-107/iot-light-monitor-introduction     301
 /cs/stem/l107/iot-vibration-monitor-experiment-cs    /cs/stem/lesson-107/iot-light-monitor-experiment       301
@@ -84,12 +83,12 @@
 /stem/l107/iot-vibration-monitor-experiment-cs       /stem/lesson-107/iot-light-monitor-experiment          301
 /stem/l106/iot-vibration-monitor-assessment-cs       /stem/lesson-106/iot-vibration-monitor-assessment      301
 /stem/l108/iot-pulse-monitor-assessment-cs           /stem/lesson-108/iot-pulse-monitor-assessment          301
-/cs/stem/l107/iot-light-monitor                      /cs/stem/lesson-107/iot-light-monitor-cs               301
+/cs/stem/l107/iot-light-monitor                      /cs/stem/lesson-107/iot-light-monitor                  301
 /cs/stem/l107/iot-light-monitor-introduction-cs      /cs/stem/lesson-107/iot-light-monitor-introduction     301
 /cs/stem/l107/iot-light-monitor-experiment-cs        /cs/stem/lesson-107/iot-light-monitor-experiment       301
 /cs/stem/l107/iot-light-monitor-projects-cs          /cs/stem/lesson-107/iot-light-monitor-projects         301
-/cs/stem/l106/iot-vibration-monitor                  /cs/stem/lesson-106/iot-vibration-monitor-cs           301
-/cs/stem/l108/iot-pulse-monitor                      /cs/stem/lesson-108/iot-pulse-monitor-cs               301
+/cs/stem/l106/iot-vibration-monitor                  /cs/stem/lesson-106/iot-vibration-monitor              301
+/cs/stem/l108/iot-pulse-monitor                      /cs/stem/lesson-108/iot-pulse-monitor                  301
 
 # Lowercase lesson-directory splats (mirror of the L1NN splats above)
 
@@ -105,9 +104,9 @@
 /stem/L106/iot-vibration-monitor-asessment-cs/       /stem/lesson-106/iot-vibration-monitor-assessment      301
 /stem/L107/iot-light-monitor-asessment/              /stem/lesson-107/iot-light-monitor-assessment          301
 /stem/L108/iot-pulse-monitor-asessment-cs/           /stem/lesson-108/iot-pulse-monitor-assessment          301
-/cs/stem/L106/iot-vibration-monitor-asessment-cs/    /cs/stem/lesson-106/iot-vibration-monitor-assessment-cs301
-/cs/stem/L107/iot-light-monitor-asessment-cs/        /cs/stem/lesson-107/iot-light-monitor-assessment-cs    301
-/cs/stem/L108/iot-pulse-monitor-asessment-cs/        /cs/stem/lesson-108/iot-pulse-monitor-assessment-cs    301
+/cs/stem/L106/iot-vibration-monitor-asessment-cs/    /cs/stem/lesson-106/iot-vibration-monitor-assessment    301
+/cs/stem/L107/iot-light-monitor-asessment-cs/        /cs/stem/lesson-107/iot-light-monitor-assessment        301
+/cs/stem/L108/iot-pulse-monitor-asessment-cs/        /cs/stem/lesson-108/iot-pulse-monitor-assessment        301
 /stem/L107/iot-vibration-monitor-projects-cs/        /stem/lesson-107/iot-light-monitor-projects            301
 /cs/stem/L107/iot-vibration-monitor-introduction-cs/ /cs/stem/lesson-107/iot-light-monitor-introduction     301
 /cs/stem/L107/iot-vibration-monitor-experiment-cs/   /cs/stem/lesson-107/iot-light-monitor-experiment       301
@@ -135,20 +134,19 @@
 /stem/L107/iot-vibration-monitor-experiment-cs/      /stem/lesson-107/iot-light-monitor-experiment          301
 /stem/L106/iot-vibration-monitor-assessment-cs/      /stem/lesson-106/iot-vibration-monitor-assessment      301
 /stem/L108/iot-pulse-monitor-assessment-cs/          /stem/lesson-108/iot-pulse-monitor-assessment          301
-/cs/stem/L107/iot-light-monitor/                     /cs/stem/lesson-107/iot-light-monitor-cs               301
+/cs/stem/L107/iot-light-monitor/                     /cs/stem/lesson-107/iot-light-monitor                  301
 /cs/stem/L107/iot-light-monitor-introduction-cs/     /cs/stem/lesson-107/iot-light-monitor-introduction     301
 /cs/stem/L107/iot-light-monitor-experiment-cs/       /cs/stem/lesson-107/iot-light-monitor-experiment       301
 /cs/stem/L107/iot-light-monitor-projects-cs/         /cs/stem/lesson-107/iot-light-monitor-projects         301
-/cs/stem/L106/iot-vibration-monitor/                 /cs/stem/lesson-106/iot-vibration-monitor-cs           301
-/cs/stem/L108/iot-pulse-monitor/                     /cs/stem/lesson-108/iot-pulse-monitor-cs               301
-/projects/node-red-a-sada-start/                     /cs/projects/node-red-a-sada-start                     301
-/cs/projects/node-red-and-start-set/                 /cs/projects/node-red-a-sada-start                     301
+/cs/stem/L106/iot-vibration-monitor/                 /cs/stem/lesson-106/iot-vibration-monitor              301
+/cs/stem/L108/iot-pulse-monitor/                     /cs/stem/lesson-108/iot-pulse-monitor                  301
+/projects/node-red-a-sada-start/                     /cs/projects/node-red-and-start-set                    301
 /stem/l106/iot-vibration-monitor-asessment-cs/       /stem/lesson-106/iot-vibration-monitor-assessment      301
 /stem/l107/iot-light-monitor-asessment/              /stem/lesson-107/iot-light-monitor-assessment          301
 /stem/l108/iot-pulse-monitor-asessment-cs/           /stem/lesson-108/iot-pulse-monitor-assessment          301
-/cs/stem/l106/iot-vibration-monitor-asessment-cs/    /cs/stem/lesson-106/iot-vibration-monitor-assessment-cs301
-/cs/stem/l107/iot-light-monitor-asessment-cs/        /cs/stem/lesson-107/iot-light-monitor-assessment-cs    301
-/cs/stem/l108/iot-pulse-monitor-asessment-cs/        /cs/stem/lesson-108/iot-pulse-monitor-assessment-cs    301
+/cs/stem/l106/iot-vibration-monitor-asessment-cs/    /cs/stem/lesson-106/iot-vibration-monitor-assessment    301
+/cs/stem/l107/iot-light-monitor-asessment-cs/        /cs/stem/lesson-107/iot-light-monitor-assessment        301
+/cs/stem/l108/iot-pulse-monitor-asessment-cs/        /cs/stem/lesson-108/iot-pulse-monitor-assessment        301
 /stem/l107/iot-vibration-monitor-projects-cs/        /stem/lesson-107/iot-light-monitor-projects            301
 /cs/stem/l107/iot-vibration-monitor-introduction-cs/ /cs/stem/lesson-107/iot-light-monitor-introduction     301
 /cs/stem/l107/iot-vibration-monitor-experiment-cs/   /cs/stem/lesson-107/iot-light-monitor-experiment       301
@@ -176,12 +174,55 @@
 /stem/l107/iot-vibration-monitor-experiment-cs/      /stem/lesson-107/iot-light-monitor-experiment          301
 /stem/l106/iot-vibration-monitor-assessment-cs/      /stem/lesson-106/iot-vibration-monitor-assessment      301
 /stem/l108/iot-pulse-monitor-assessment-cs/          /stem/lesson-108/iot-pulse-monitor-assessment          301
-/cs/stem/l107/iot-light-monitor/                     /cs/stem/lesson-107/iot-light-monitor-cs               301
+/cs/stem/l107/iot-light-monitor/                     /cs/stem/lesson-107/iot-light-monitor                  301
 /cs/stem/l107/iot-light-monitor-introduction-cs/     /cs/stem/lesson-107/iot-light-monitor-introduction     301
 /cs/stem/l107/iot-light-monitor-experiment-cs/       /cs/stem/lesson-107/iot-light-monitor-experiment       301
 /cs/stem/l107/iot-light-monitor-projects-cs/         /cs/stem/lesson-107/iot-light-monitor-projects         301
-/cs/stem/l106/iot-vibration-monitor/                 /cs/stem/lesson-106/iot-vibration-monitor-cs           301
-/cs/stem/l108/iot-pulse-monitor/                     /cs/stem/lesson-108/iot-pulse-monitor-cs               301
+/cs/stem/l106/iot-vibration-monitor/                 /cs/stem/lesson-106/iot-vibration-monitor              301
+/cs/stem/l108/iot-pulse-monitor/                     /cs/stem/lesson-108/iot-pulse-monitor                  301
+
+# Czech translations now share the English route slugs so Docusaurus emits
+# direct, reciprocal hreflang URLs. Preserve every former Czech canonical URL.
+/cs/stem/lesson-101/what-is-iot-application-cs                 /cs/stem/lesson-101/what-is-iot-application                 301
+/cs/stem/lesson-101/what-is-iot-application-cs/                /cs/stem/lesson-101/what-is-iot-application                 301
+/cs/stem/lesson-106/iot-vibration-monitor-assessment-cs        /cs/stem/lesson-106/iot-vibration-monitor-assessment        301
+/cs/stem/lesson-106/iot-vibration-monitor-assessment-cs/       /cs/stem/lesson-106/iot-vibration-monitor-assessment        301
+/cs/stem/lesson-106/iot-vibration-monitor-experiment-cs        /cs/stem/lesson-106/iot-vibration-monitor-experiment        301
+/cs/stem/lesson-106/iot-vibration-monitor-experiment-cs/       /cs/stem/lesson-106/iot-vibration-monitor-experiment        301
+/cs/stem/lesson-106/iot-vibration-monitor-introduction-cs      /cs/stem/lesson-106/iot-vibration-monitor-introduction      301
+/cs/stem/lesson-106/iot-vibration-monitor-introduction-cs/     /cs/stem/lesson-106/iot-vibration-monitor-introduction      301
+/cs/stem/lesson-106/iot-vibration-monitor-cs                   /cs/stem/lesson-106/iot-vibration-monitor                   301
+/cs/stem/lesson-106/iot-vibration-monitor-cs/                  /cs/stem/lesson-106/iot-vibration-monitor                   301
+/cs/stem/lesson-106/iot-vibration-monitor-presentation-cs      /cs/stem/lesson-106/iot-vibration-monitor-presentation      301
+/cs/stem/lesson-106/iot-vibration-monitor-presentation-cs/     /cs/stem/lesson-106/iot-vibration-monitor-presentation      301
+/cs/stem/lesson-106/iot-vibration-monitor-projects-cs          /cs/stem/lesson-106/iot-vibration-monitor-projects          301
+/cs/stem/lesson-106/iot-vibration-monitor-projects-cs/         /cs/stem/lesson-106/iot-vibration-monitor-projects          301
+/cs/stem/lesson-106/iot-vibration-monitor-theory-cs            /cs/stem/lesson-106/iot-vibration-monitor-theory            301
+/cs/stem/lesson-106/iot-vibration-monitor-theory-cs/           /cs/stem/lesson-106/iot-vibration-monitor-theory            301
+/cs/stem/lesson-107/iot-light-monitor-assessment-cs            /cs/stem/lesson-107/iot-light-monitor-assessment            301
+/cs/stem/lesson-107/iot-light-monitor-assessment-cs/           /cs/stem/lesson-107/iot-light-monitor-assessment            301
+/cs/stem/lesson-107/iot-light-monitor-cs                       /cs/stem/lesson-107/iot-light-monitor                       301
+/cs/stem/lesson-107/iot-light-monitor-cs/                      /cs/stem/lesson-107/iot-light-monitor                       301
+/cs/stem/lesson-107/iot-light-monitor-presentation-cs          /cs/stem/lesson-107/iot-light-monitor-presentation          301
+/cs/stem/lesson-107/iot-light-monitor-presentation-cs/         /cs/stem/lesson-107/iot-light-monitor-presentation          301
+/cs/stem/lesson-107/iot-light-monitor-theory-cs                /cs/stem/lesson-107/iot-light-monitor-theory                301
+/cs/stem/lesson-107/iot-light-monitor-theory-cs/               /cs/stem/lesson-107/iot-light-monitor-theory                301
+/cs/stem/lesson-108/iot-pulse-monitor-assessment-cs            /cs/stem/lesson-108/iot-pulse-monitor-assessment            301
+/cs/stem/lesson-108/iot-pulse-monitor-assessment-cs/           /cs/stem/lesson-108/iot-pulse-monitor-assessment            301
+/cs/stem/lesson-108/iot-pulse-monitor-experiment-cs            /cs/stem/lesson-108/iot-pulse-monitor-experiment            301
+/cs/stem/lesson-108/iot-pulse-monitor-experiment-cs/           /cs/stem/lesson-108/iot-pulse-monitor-experiment            301
+/cs/stem/lesson-108/iot-pulse-monitor-introduction-cs          /cs/stem/lesson-108/iot-pulse-monitor-introduction          301
+/cs/stem/lesson-108/iot-pulse-monitor-introduction-cs/         /cs/stem/lesson-108/iot-pulse-monitor-introduction          301
+/cs/stem/lesson-108/iot-pulse-monitor-cs                       /cs/stem/lesson-108/iot-pulse-monitor                       301
+/cs/stem/lesson-108/iot-pulse-monitor-cs/                      /cs/stem/lesson-108/iot-pulse-monitor                       301
+/cs/stem/lesson-108/iot-pulse-monitor-presentation-cs          /cs/stem/lesson-108/iot-pulse-monitor-presentation          301
+/cs/stem/lesson-108/iot-pulse-monitor-presentation-cs/         /cs/stem/lesson-108/iot-pulse-monitor-presentation          301
+/cs/stem/lesson-108/iot-pulse-monitor-projects-cs              /cs/stem/lesson-108/iot-pulse-monitor-projects              301
+/cs/stem/lesson-108/iot-pulse-monitor-projects-cs/             /cs/stem/lesson-108/iot-pulse-monitor-projects              301
+/cs/stem/lesson-108/iot-pulse-monitor-theory-cs                /cs/stem/lesson-108/iot-pulse-monitor-theory                301
+/cs/stem/lesson-108/iot-pulse-monitor-theory-cs/               /cs/stem/lesson-108/iot-pulse-monitor-theory                301
+/cs/projects/node-red-a-sada-start                              /cs/projects/node-red-and-start-set                         301
+/cs/projects/node-red-a-sada-start/                             /cs/projects/node-red-and-start-set                         301
 
 # Removed orphaned pages (owner decision 2026-07-05): half-translated lesson stubs
 # L110-L114 -> stem lessons index; fridge-temperature project -> projects index.

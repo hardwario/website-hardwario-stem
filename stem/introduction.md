@@ -1,6 +1,7 @@
 ---
 slug: /
 title: Annotation of HARDWARIO Active STEM Education
+description: How HARDWARIO combines active STEM learning, real IoT projects, structured lessons, and teacher support for schools.
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ It is also undisputed that the best way to learn STEM is active learning. In thi
 
 IoT is one of today's growing phenomena. The advent of new technologies makes it possible to connect almost any physical device to the Internet, thus creating the possibility to control such a device and work with its data remotely. IoT is a multidisciplinary field in which not only STEM knowledge is applied, but also other fields such as economics and geography. This characteristic of IoT addresses one of the basic requirements of STEM learning, namely that the selected problems should be solved in a holistic fashion. Working on real IoT projects generates excellent content for active lessons, thus their attractiveness for students is enhanced by meaningful use of personal digital devices.
 
-In cooperation with pedagogical experts from EDvisor Finland, HARDWARIO offers detailed STEM lessons using its research-based REALISE-EXPERIMENT-APPLY-REFLECT pedagogical framework.
+HARDWARIO offers detailed STEM lessons using its research-based REALISE-EXPERIMENT-APPLY-REFLECT pedagogical framework.
 
 <div class="container">
   <div class="row">
@@ -27,4 +28,3 @@ The lessons deal with topics related to the school environment or current studen
 - Projects dealing with indoor climate quality in classrooms
 - Projects addressing environmental challenges such as climate change and/or waste - management
 - Projects related to student and teacher safety
-

@@ -146,9 +146,8 @@ The goal of this **Push Button Project** is to show the basics in a few simple s
 
 * Check out other HARDWARIO [**projects**](projects-overview.md).
 * Take a look at the [**Module Overview**](https://docs.hardwario.com/chester/extension-modules/chester-z1/#module-overview).
-* Learn about [**MQTT**](https://docs.hardwario.com/fiber/mqtt-broker/) and [**HARDWARIO MQTT topics**](https://docs.hardwario.com/fiber/mqtt-broker/) to control LEDs and relays.
+* Learn about [**MQTT**](https://docs.hardwario.com/tower/mqtt-protocol/) and [**HARDWARIO MQTT topics**](https://docs.hardwario.com/tower/mqtt-protocol/topics-reference/) to control LEDs and relays.
 * Try other [**integrations**](https://docs.hardwario.com/tower/category/platform-integrations/) with **Grafana**, **Blynk**, **IFTTT**, **Ubidots** and others.
 * Use your [**Raspberry PI**](https://docs.hardwario.com/tower/server-raspberry-pi/) or other
 * [**Flash other firmware**](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware) or [**write your own firmware**](https://docs.hardwario.com/chester/category/firmware-sdk/) for the **Core Module**.
 * Check the [**Core Module pinouts**](https://docs.hardwario.com/tower/hardware-modules/header-pinout/#core-module-pinout) and add your own buttons, relays and sensors.
-

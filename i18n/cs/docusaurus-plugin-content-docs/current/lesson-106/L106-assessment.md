@@ -1,5 +1,5 @@
 ---
-slug: iot-vibration-monitor-assessment-cs
+slug: iot-vibration-monitor-assessment
 title: Hodnocení
 ---
 import Image from '@theme/IdealImage';

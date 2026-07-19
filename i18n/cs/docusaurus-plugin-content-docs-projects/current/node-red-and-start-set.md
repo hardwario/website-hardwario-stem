@@ -1,5 +1,5 @@
 ---
-slug: node-red-a-sada-start
+slug: node-red-and-start-set
 title: Node-RED a Sada Start
 ---
 ## Úvod

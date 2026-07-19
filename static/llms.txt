@@ -11,7 +11,11 @@
 
 - [HARDWARIO STEM — English (default)](https://stem.hardwario.com/): courses, mini-courses and teaching materials
 - [HARDWARIO STEM — Czech](https://stem.hardwario.com/cs/): Czech version of the platform
-- [Sitemap](https://stem.hardwario.com/sitemap.xml): complete, machine-readable list of every page
+- [TOWER mini-course](https://stem.hardwario.com/mini-course/): introductory hands-on IoT course
+- [STEM lessons](https://stem.hardwario.com/stem/): structured classroom lessons and teaching guidance
+- [Projects and tutorials](https://stem.hardwario.com/projects/): practical projects built around HARDWARIO TOWER
+- [English sitemap](https://stem.hardwario.com/sitemap.xml): complete, machine-readable list of English pages
+- [Czech sitemap](https://stem.hardwario.com/cs/sitemap.xml): complete, machine-readable list of Czech pages
 
 ## More from HARDWARIO
 

@@ -1,5 +1,5 @@
 ---
-slug: iot-pulse-monitor-experiment-cs
+slug: iot-pulse-monitor-experiment
 title: Experiment
 ---
 import Image from '@theme/IdealImage';
@@ -49,7 +49,7 @@ V rámci experimentu budeme přenášet počet impulzů pomocí **LED** nebo **m
 
 :::tip
 
- Podívejte se na [podrobný návod nahrání firmware do Core Module.](https://www.hardwario.com/cs/education/tutorials/jak-nahrat-firmware/)
+ Podívejte se na [podrobný návod nahrání firmware do Core Module.](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/)
 
 :::
 
@@ -92,8 +92,6 @@ V rámci experimentu budeme přenášet počet impulzů pomocí **LED** nebo **m
     <Image img={require('./stem-result.webp')}/>
   </div>
 </div>
-
-
 
 
 

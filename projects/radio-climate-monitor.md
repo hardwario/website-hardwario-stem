@@ -274,9 +274,8 @@ Back in the node, set the **Virtual Pin** to the number from the table above (ju
 
 Download the **Blynk IoT** app from the [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk), sign in, and open your device. Add a **Gauge** or **Chart** widget for each value and, in the widget settings, point its **Datastream** at the matching Virtual Pin (V0–V3). Once Node-RED is deployed, the live readings appear on your phone.
 
-### Related Documents<a id="related-documents"></a>
+### Related Documents
 
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Toolchain Setup**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects)
 * [**Toolchain Guide**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects)
-

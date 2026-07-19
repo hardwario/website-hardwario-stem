@@ -1,6 +1,7 @@
 ---
 slug: /
 title: Úvod
+description: Praktický minikurz HARDWARIO TOWER pro studenty, učitele a zájemce o IoT, od prvního zapojení po funkční aplikaci.
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,5 +1,5 @@
 ---
-slug: iot-pulse-monitor-theory-cs
+slug: iot-pulse-monitor-theory
 title: Teorie
 ---
 import Image from '@theme/IdealImage';
@@ -39,6 +39,5 @@ Jedním ze způsobů online monitoringu spotřeby je **napojení na elektroměry
     <Image img={require('./pulse-cabel.avif')}/>
   </div>
 </div>
-
 
 

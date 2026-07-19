@@ -1,5 +1,5 @@
 ---
-slug: iot-light-monitor-theory-cs
+slug: iot-light-monitor-theory
 title: Teorie
 ---
 import Image from '@theme/IdealImage';

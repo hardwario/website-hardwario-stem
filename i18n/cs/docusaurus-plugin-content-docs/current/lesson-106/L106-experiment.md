@@ -1,5 +1,5 @@
 ---
-slug: iot-vibration-monitor-experiment-cs
+slug: iot-vibration-monitor-experiment
 title: Experiment
 ---
 import Image from '@theme/IdealImage';

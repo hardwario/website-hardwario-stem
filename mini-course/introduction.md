@@ -1,6 +1,7 @@
 ---
 slug: /
 title: Introduction
+description: A hands-on HARDWARIO TOWER mini-course for students, teachers, and IoT enthusiasts, from first connection to a working application.
 ---
 import Image from '@theme/IdealImage';
 

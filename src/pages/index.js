@@ -4,7 +4,7 @@ import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
-import Translate from '@docusaurus/Translate';
+import Translate, {translate} from '@docusaurus/Translate';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -24,10 +24,14 @@ function HomepageHeader() {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+  const description = translate({
+    id: 'homepage.metaDescription',
+    message: 'STEM learning platform for schools — hands-on IoT lessons and projects with HARDWARIO TOWER kits.',
+  });
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="STEM learning platform for schools — hands-on IoT lessons and projects with HARDWARIO TOWER kits.">
+      description={description}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
