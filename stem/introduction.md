@@ -21,7 +21,7 @@ HARDWARIO offers detailed STEM lessons using its Realise–Experiment–Apply–
   </div>
 </div>
 
-Our pedagogical framework greatly facilitates the preparation, management and assessment of lesson content by constantly focusing upon its learning goals. The essential driver of HARDWARIO’s active STEM lessons is the HARDWARIO TOWER kit, with which students can easily build IoT equipment for their projects. An equally important element of the HARDWARIO system is the technical and professional support of teachers in the form of detailed instructions, webinars, seminars and online chat.
+Our pedagogical framework greatly facilitates the preparation, management and assessment of lesson content by constantly focusing upon its learning goals. The essential driver of HARDWARIO’s active STEM lessons is the HARDWARIO TOWER kit, with which students can easily build IoT equipment for their projects. An equally important element of the HARDWARIO system is the technical and professional support of teachers in the form of detailed instructions, online documentation, webinars, a technical support form, and a community forum.
 
 The lessons deal with topics related to the school environment or current student interests, e.g.:
 

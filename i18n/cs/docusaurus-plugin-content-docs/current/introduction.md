@@ -29,7 +29,7 @@ HARDWARIO nabízí detailně připravené lekce pro aktivní STEM výuku, které
   </div>
 </div>
 
-Náš pedagogický rámec velmi usnadňuje přípravu, vedení a hodnocení lekcí tím, že se nepřetržitě soustřeďuje na určené vzdělávací cíle. Zásadní hnací silou aktivních STEM lekcí HARDWARIO je stavebnice HARDWARIO TOWER, pomocí které mohou studenti snadno vytvářet IoT zařízení pro své projekty. Neméně důležitým prvkem systému HARDWARIO je technická a odborná podpora učitelů ve formě podrobných návodů, webinářů, seminářů a online chatu.
+Náš pedagogický rámec velmi usnadňuje přípravu, vedení a hodnocení lekcí tím, že se nepřetržitě soustřeďuje na určené vzdělávací cíle. Zásadní hnací silou aktivních STEM lekcí HARDWARIO je stavebnice HARDWARIO TOWER, pomocí které mohou studenti snadno vytvářet IoT zařízení pro své projekty. Neméně důležitým prvkem systému HARDWARIO je technická a odborná podpora učitelů ve formě podrobných návodů, online dokumentace, webinářů, formuláře technické podpory a komunitního fóra.
 
 ## Vzorové lekce aktivní STEM výuky HARDWARIO
 
