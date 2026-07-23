@@ -1,13 +1,13 @@
 ---
 slug: lesson-1
-title: Lekce 1 - Připrav se
+title: Lekce 1 – Připravte se
 ---
 import Image from '@theme/IdealImage';
 
 🧑‍💻 **Trvání:** 20 minut  
 🎯 **Cílová skupina:** pro jednotlivce  
 
-Zapojte své HARDWARIO hračky, nainstalujte HARDWARIO Playground a začněte měřit.
+Zapojte moduly HARDWARIO TOWER, nainstalujte HARDWARIO Playground a začněte měřit.
 
 **Úkol:** Ověřte, že máte nainstalovaný Playground a že zařízení je připojeno přes Bluetooth.
 

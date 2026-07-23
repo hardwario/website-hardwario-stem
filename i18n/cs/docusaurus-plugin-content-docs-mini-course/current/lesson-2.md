@@ -1,6 +1,6 @@
 ---
 slug: lesson-2
-title: Lekce 2 - Měř a vykresluj
+title: Lekce 2 - Měřte a vykreslujte
 ---
 import Image from '@theme/IdealImage';
 

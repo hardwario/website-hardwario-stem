@@ -1,6 +1,6 @@
 ---
 slug: lesson-5
-title: Lekce 5 - Vrhůru na net
+title: Lekce 5 – Vzhůru na net
 ---
 import Image from '@theme/IdealImage';
 

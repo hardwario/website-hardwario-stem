@@ -1,6 +1,6 @@
 # Projects Overview
 
-In this category you will find prepared HARDWARIO projects you can create. Each project has its own pre-build firmware so you just upload firmware.
+In this category you will find prepared HARDWARIO projects you can create. Each project has its own pre-built firmware — you only upload it.
 
 ## Hackster.io External Projects <a id="hackster-io-external-projects"></a>
 

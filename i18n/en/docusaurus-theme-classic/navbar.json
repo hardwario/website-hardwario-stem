@@ -7,16 +7,16 @@
     "message": "STEM",
     "description": "Navbar item with label STEM"
   },
-  "item.label.PROJECTS": {
-    "message": "PROJECTS",
-    "description": "Navbar item with label PROJECTS"
+  "item.label.Projects": {
+    "message": "Projects",
+    "description": "Navbar item with label Projects"
   },
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
   },
-  "item.label.MINI COURSE": {
-    "message": "MINI COURSE",
-    "description": "Navbar item with label MINI COURSE"
+  "item.label.Mini Course": {
+    "message": "Mini Course",
+    "description": "Navbar item with label Mini Course"
   }
 }

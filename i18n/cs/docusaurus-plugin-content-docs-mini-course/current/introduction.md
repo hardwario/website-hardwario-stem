@@ -13,7 +13,7 @@ Kurz je navržen tak, aby účastníky vedl od prvního zapojení modulu až po 
 
 ## 📚 Co vás čeká
 
-Během kurzu projdete pět výukových lekcí, které kombinují teorii, praktické ukázky a vlastní experimenty:
+Během kurzu projdete šest výukových lekcí, které kombinují teorii, praktické ukázky a vlastní experimenty:
 
 * Začínáme s TOWER – instalace prostředí, nahrání firmware, připojení senzoru.
 * Měření a vizualizace dat – práce s teplotou, vlhkostí, světlem a dalšími senzory.

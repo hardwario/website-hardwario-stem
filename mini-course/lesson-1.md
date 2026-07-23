@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 🧑‍💻 **Duration:** 20 minutes  
 🎯 **Target audience:** individuals  
 
-Connect your HARDWARIO toys, install HARDWARIO Playground, and start measuring.
+Connect your HARDWARIO TOWER modules, install HARDWARIO Playground, and start measuring.
 
 **Task:** Verify that you have Playground installed and that the device is connected via Bluetooth.
 

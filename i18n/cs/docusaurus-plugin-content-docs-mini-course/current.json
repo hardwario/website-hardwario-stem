@@ -5,12 +5,12 @@
     },
 
   "sidebar.docs.category.Lesson 1: Get started": {
-    "message": "Lekce 1: Připrav se",
-    "description": "The label for category Lekce 1: Připrav se"
+    "message": "Lekce 1: Připravte se",
+    "description": "The label for category Lekce 1: Připravte se"
   },
   "sidebar.docs.category.Lesson 2: Measure and draw": {
-    "message": "Lekce 2: Měř a vykresluj",
-    "description": "The label for category Lekce 2: Měř a vykresluj"
+    "message": "Lekce 2: Měřte a vykreslujte",
+    "description": "The label for category Lekce 2: Měřte a vykreslujte"
   },
   "sidebar.docs.category.Lesson 3: To show or not to show?": {
     "message": "Lekce 3: Ukázat či neukázat?",

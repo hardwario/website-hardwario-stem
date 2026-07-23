@@ -136,7 +136,7 @@ const config = {
         items: [
           {
             to: '/mini-course/',
-            label: 'MINI COURSE',
+            label: 'Mini Course',
             position: 'left',
             activeBaseRegex: `/mini-course/`,
           },
@@ -148,7 +148,7 @@ const config = {
           },
           {
             to: '/projects/',
-            label: 'PROJECTS',
+            label: 'Projects',
             position: 'left',
             activeBaseRegex: `/projects/`,
           },
@@ -201,12 +201,12 @@ const config = {
                 href: 'https://www.linkedin.com/company/hardwario',
               },
               {
-                label: 'Twitter (EN)',
-                href: 'https://twitter.com/hardwario_en',
+                label: 'X (EN)',
+                href: 'https://x.com/hardwario_en',
               },
               {
-                label: 'Twitter (CZ)',
-                href: 'https://twitter.com/hardwario_cz',
+                label: 'X (CZ)',
+                href: 'https://x.com/hardwario_cz',
               },
             ],
           },

@@ -23,13 +23,13 @@
     "message": "LinkedIn",
     "description": "The label of footer link with label=LinkedIn linking to https://www.linkedin.com/company/hardwario"
   },
-  "link.item.label.Twitter (EN)": {
-    "message": "Twitter (EN)",
-    "description": "The label of footer link with label=Twitter (EN) linking to https://twitter.com/hardwario_en"
+  "link.item.label.X (EN)": {
+    "message": "X (EN)",
+    "description": "The label of footer link with label=X (EN) linking to https://x.com/hardwario_en"
   },
-  "link.item.label.Twitter (CZ)": {
-    "message": "Twitter (CZ)",
-    "description": "The label of footer link with label=Twitter (CZ) linking to https://twitter.com/hardwario_cz"
+  "link.item.label.X (CZ)": {
+    "message": "X (CZ)",
+    "description": "The label of footer link with label=X (CZ) linking to https://x.com/hardwario_cz"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",

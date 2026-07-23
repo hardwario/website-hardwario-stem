@@ -1,6 +1,6 @@
 # Přehled projektů
 
-V této kategorii najdete připravené projekty HARDWARIO, které můžete vytvořit. Každý projekt má svůj vlastní předem připravený firmware, takže stačí pouze nahrát firmware.
+V této kategorii najdete připravené projekty HARDWARIO, které můžete vytvořit. Každý projekt má svůj předem připravený firmware — stačí ho jen nahrát.
 
 ## Externí projekty Hackster.io <a id="hackster-io-external-projects"></a>
 
