@@ -14,7 +14,7 @@ Přivítání studentů a představení průběhu lekce. Seznámení s jednotliv
 
 **Časová dotace:** 0 - 5 min. 
 
-## Realise - Teoretická příprava
+## Teoretická příprava
 
 
 ### Anotace

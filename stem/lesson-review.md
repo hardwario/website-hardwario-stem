@@ -13,7 +13,7 @@ Welcome students and presentation of the lesson. Introduction to individual phas
 
 **Time allocation:** 0 - 5 mins. 
 
-## Realise - Theoretical Preparation
+## Theoretical Preparation
 
 ### Annotation
 

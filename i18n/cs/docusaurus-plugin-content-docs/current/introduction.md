@@ -20,7 +20,7 @@ IoT totiž patří mezi fenomény dnešní doby. Nástup nových technologií um
 
 ## Pedagogický rámec aktivní STEM výuky s HARDWARIO
 
-HARDWARIO nabízí detailně připravené lekce pro aktivní STEM výuku, které využívají pedagogický rámec Realise–Experiment–Apply–Reflect.
+HARDWARIO nabízí detailně připravené lekce pro aktivní STEM výuku s jednotnou strukturou: teoretická příprava, experiment, projektové využití a reflexe.
 
 
 <div class="container">
