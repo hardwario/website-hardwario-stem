@@ -20,7 +20,7 @@ Tentokrát ti taky postačí základní HARDWARIO sada, tedy [**Start Set**](htt
 1. Firmware, který k projektu potřebuješ, je známý **bcf-radio-push-button**. Máš ho tam? Tak na co čekáš, krabičku spáruj s Donglem.
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-1.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-1.webp')} alt="Záložka Devices v Playgroundu: řádek spárovaného zařízení se zvýrazněným aliasem push-button:0"/>
   </div>
 </div>
 
@@ -35,13 +35,13 @@ node/push-button:0/thermometer/0:1/temperature),
 - a ukazatel, tedy node **Gauge** ze sekce Dashboard. Měl by ukazovat od −15 do 40 °C. Navíc si ho pojmenuj, pro lepší orientaci. ✍️
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-2.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-2.webp')} alt="Plocha Node-RED s MQTT uzlem teploty a uzlem budíku boudy umístěnými na ploše"/>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-3.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-3.webp')} alt="Dialog úprav se zvýrazněnými poli Label, formát hodnoty se °C a rozsah teplot"/>
   </div>
 </div>
 
@@ -65,7 +65,7 @@ Teplotní upozornění ti dorazí do telefonu skrz aplikaci **Blynk IoT** jako p
 - První node: **node Switch** ze sekce Function.
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-4.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-4.webp')} alt="Plocha Node-RED se zvýrazněným uzlem Switch ze sekce Function nad uzlem budíku"/>
   </div>
 </div>
 
@@ -77,14 +77,14 @@ b. zvol, aby se notifikace poslala, když bude teplota rovna nebo nižší −15
 `**<=**`.
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-5.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-5.webp')} alt="Dialog Edit switch node: vlastnost msg.payload s pravidlem porovnávajícím flow.optimalTemp"/>
   </div>
 </div>
 
 - Druhý: **node Change** ze stejné sekce. Ten ovlivňuje, jaká zpráva ti na mobil přijde.
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-6.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-6.webp')} alt="Plocha Node-RED se zvýrazněným uzlem Change (set msg.payload) vedle uzlu Switch"/>
   </div>
 </div>
 
@@ -108,7 +108,7 @@ První je **node Numeric** ze sekce Dashboard. Zní to jako nějaký padouch z k
 Node Numeric ti umožní nastavit nejnižší přípustnou teplotu rovnou z Dashboardu v Playgroundu. **Zajistí, že se práh dá snadno upravit.**
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-12.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-12.webp')} alt="Plocha Node-RED se zvýrazněným uzlem Numeric ze sekce Dashboard"/>
   </div>
 </div>
 
@@ -116,28 +116,28 @@ Uvnitř nastav **měrnou jednotku** (°C), **teplotní rozmezí** ( −15 a 40) 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-13.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-13.webp')} alt="Dialog Edit numeric node: zvýrazněná pole Label, formát hodnoty se °C a rozsah min -15 max 50"/>
   </div>
 </div>
 
 3. Vedle toho umísti další **Change node**.
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-14.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-14.webp')} alt="Plocha Node-RED se zvýrazněným uzlem Change (set msg.payload) vedle uzlu Numeric"/>
   </div>
 </div>
 
 4. V něm nastav, aby se podle změny v nodu Numeric rovnou aktualizovala hodnota minimální teploty (optimalTemp). Mrkej na obrázek.
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-15.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-15.webp')} alt="Dialog Edit change node: zvýrazněné pravidlo Set flow.optimalTemp na msg.payload"/>
   </div>
 </div>
 
 5. Teď už ti to zbývá **propojit podle obrázku** a potvrdit tlačítkem **Deploy**. 🙌
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-18.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-18.webp')} alt="Hotový flow v Node-RED s propojenými uzly a zvýrazněným tlačítkem Deploy"/>
   </div>
 </div>
 
@@ -147,7 +147,7 @@ Uvnitř nastav **měrnou jednotku** (°C), **teplotní rozmezí** ( −15 a 40) 
 2. Teplota naměřená v boudě se ti ukazuje v Playgroundu **na záložce Dashboard**…
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-19.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-19.webp')} alt="Dashboard s budíkem teploty v boudě ukazujícím 23,75 °C a polem optimální teploty"/>
   </div>
 </div>
 

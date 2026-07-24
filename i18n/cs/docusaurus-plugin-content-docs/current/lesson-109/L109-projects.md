@@ -40,7 +40,7 @@ Studenti si zkoušejí další projekty, které souvisejí s daným tématem, ne
     }}
   >
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <Image img={require('./stem-soil-sensor.avif')}
+      <Image img={require('./stem-soil-sensor.avif')} alt="Senzor půdní vlhkosti v květináči s kvetoucí rostlinou"
       style={{ width: '40px', height: '40px', marginRight: '12px' }}
       />
       <div>
@@ -83,7 +83,7 @@ Studenti si zkoušejí další projekty, které souvisejí s daným tématem, ne
     }}
   >
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <Image img={require('./stem-soil-sensor-arduino.avif')}
+      <Image img={require('./stem-soil-sensor-arduino.avif')} alt="Půdní senzor v květináči vedle desek ESP32, Arduino Uno a ESP8266"
       style={{ width: '40px', height: '40px', marginRight: '12px' }}
       />
       <div>
@@ -125,7 +125,7 @@ Studenti si zkoušejí další projekty, které souvisejí s daným tématem, ne
     }}
   >
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <Image img={require('./stem-soil-humidity-monitoring.avif')}
+      <Image img={require('./stem-soil-humidity-monitoring.avif')} alt="Sonda půdního senzoru zapíchnutá v záhonu mezi afrikány"
       style={{ width: '40px', height: '40px', marginRight: '12px', borderRadius: '8px' }}
       />
       <div>
@@ -146,6 +146,6 @@ Své nápady zapisují do grafu, kde osa x představuje odhadovanou náročnost 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-ideation.gif')}/>
+    <Image img={require('./stem-ideation.gif')} alt="Matice nápadů: dopad řešení proti náročnosti realizace, se čtyřmi očíslovanými nápady v kvadrantech"/>
   </div>
 </div>

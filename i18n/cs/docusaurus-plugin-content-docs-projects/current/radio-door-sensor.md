@@ -12,18 +12,18 @@ Může být vybaven magnetem pro snadné uchycení krabičky a funguje na bateri
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-preview.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-preview.webp')} alt="Sestavený Radio Door Sensor ve žluté krabičce s magnetickým kontaktem na kabelu vedle"/>
   </div>
 </div>
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-overview.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-overview.webp')} alt="Rozložené díly Radio Door Sensoru: moduly, magnetický kontakt, díly krabičky a spojovací materiál"/>
   </div>
 </div>
 <div class="container">
   <div class="row">
     <Image  img={require('./img/radio-door-sensor/radio-door-sensor.png')}
-          style={{ backgroundColor: "#fff" }}/>
+          style={{ backgroundColor: "#fff" }} alt="Blokové schéma: magnetický kontakt připojený k Radio Door Sensoru, rádiem k donglu, Playgroundu a IFTTT"/>
   </div>
 </div>
 
@@ -49,7 +49,7 @@ Stáhněte si nejnovější verzi [HARDWARIO Playground](https://github.com/hard
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-run.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-run.webp')} alt="Aplikace BigClown Playground otevřená na domovské obrazovce s dokumentací Learn"/>
   </div>
 </div><br></br>
 
@@ -67,7 +67,7 @@ V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `bi
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-flash-door-sensor.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-flash-door-sensor.webp')} alt="Záložka Firmware s vybraným bcf-radio-door-sensor, zvoleným sériovým portem a zvýrazněným Flash Firmware"/>
   </div>
 </div>
 
@@ -87,7 +87,7 @@ V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `bi
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-flash-dongle.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-flash-dongle.webp')} alt="Záložka Firmware s vybraným bcf-gateway-usb-dongle, zvoleným sériovým portem a zvýrazněným Flash Firmware"/>
   </div>
 </div>
 
@@ -101,7 +101,7 @@ V levém dolním rohu klikněte na **Gateway** a vyberte sériový port zaříze
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-gateway-connect.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-gateway-connect.webp')} alt="Ovládání Gateway v levém dolním rohu s vybraným sériovým portem Radio Donglu"/>
   </div>
 </div>
 
@@ -113,7 +113,7 @@ Na záložce **Radio** klikněte na tlačítko **Pairing start**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-pairing-start.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-pairing-start.webp')} alt="Záložka Radio se zvýrazněným tlačítkem Pairing start"/>
   </div>
 </div>
 
@@ -127,7 +127,7 @@ Ukončete párování kliknutím na tlačítko **Pairing stop**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-pairing-stop.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-pairing-stop.webp')} alt="Záložka Radio se spárovaným door-sensor:0 v seznamu a zvýrazněným tlačítkem Pairing stop"/>
   </div>
 </div>
 
@@ -142,7 +142,7 @@ Ukončete párování kliknutím na tlačítko **Pairing stop**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-mqtt-test.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-mqtt-test.webp')} alt="Záložka MQTT s odběrem tématu # a zprávami o stavu door-sensoru přepínajícími mezi true a false"/>
   </div>
 </div>
 :::success
@@ -158,7 +158,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-01.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-01.webp')} alt="Úvodní stránka IFTTT se zvýrazněným tlačítkem Sign in"/>
   </div>
 </div>
 
@@ -166,7 +166,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-02.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-02.webp')} alt="Stránka Discover na IFTTT po přihlášení se zvýrazněnou položkou My Applets v menu"/>
   </div>
 </div>
 
@@ -174,7 +174,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-03.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-03.webp')} alt="Stránka My Applets se zvýrazněným tlačítkem New Applet"/>
   </div>
 </div>
 
@@ -182,7 +182,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-04.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-04.webp')} alt="Editor nového appletu se zvýrazněným +this ve větě if this then that"/>
   </div>
 </div>
 
@@ -190,7 +190,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-05.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-05.webp')} alt="Krok Choose a service s vyhledaným Webhooks a zvýrazněnou dlaždicí Webhooks"/>
   </div>
 </div>
 
@@ -198,7 +198,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-06.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-06.webp')} alt="Krok Choose trigger se zvýrazněnou kartou Receive a web request"/>
   </div>
 </div>
 
@@ -206,7 +206,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-07.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-07.webp')} alt="Pole triggeru s názvem události door a zvýrazněným tlačítkem Create trigger"/>
   </div>
 </div>
 
@@ -214,7 +214,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-08.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-08.webp')} alt="Editor nového appletu se zvýrazněným +that ve větě if this then that"/>
   </div>
 </div>
 
@@ -222,7 +222,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-09.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-09.webp')} alt="Krok Choose action service s vyhledaným Notifications a zvýrazněnou dlaždicí Notifications"/>
   </div>
 </div>
 
@@ -230,7 +230,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-10.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-10.webp')} alt="Krok Choose action se zvýrazněnou kartou Send a notification from the IFTTT app"/>
   </div>
 </div>
 
@@ -238,7 +238,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-11.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-11.webp')} alt="Pole akce s vyplněným textem oznámení Door Sensor Alarm a zvýrazněným tlačítkem Create action"/>
   </div>
 </div>
 
@@ -246,7 +246,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-12.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-12.webp')} alt="Krok Review and finish appletu door se zvýrazněným tlačítkem Finish"/>
   </div>
 </div>
 
@@ -254,7 +254,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-13.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-13.webp')} alt="Karta dokončeného appletu door se zvýrazněnou ikonou Webhooks"/>
   </div>
 </div>
 
@@ -262,7 +262,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-14.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-14.webp')} alt="Stránka služby Webhooks se zvýrazněným tlačítkem Documentation"/>
   </div>
 </div>
 
@@ -270,7 +270,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-15.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-15.webp')} alt="Stránka dokumentace Webhooks se zvýrazněným osobním klíčem ke zkopírování"/>
   </div>
 </div>
 
@@ -290,7 +290,7 @@ Pro použití IFTTT v Node-RED můžeme využít jednoduchý plug-in, který bud
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-manage-palette.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-manage-palette.webp')} alt="Otevřené menu Node-RED se zvýrazněnou položkou Manage palette"/>
   </div>
 </div>
 
@@ -298,7 +298,7 @@ Pro použití IFTTT v Node-RED můžeme využít jednoduchý plug-in, který bud
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-install-ifttt.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-install-ifttt.webp')} alt="Záložka Install v Manage palette s vyhledaným ifttt a zvýrazněným tlačítkem install u node-red-contrib-ifttt"/>
   </div>
 </div>
 
@@ -306,7 +306,7 @@ Pro použití IFTTT v Node-RED můžeme využít jednoduchý plug-in, který bud
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-installed-confirmation.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-installed-confirmation.webp')} alt="Potvrzení, že uzly ifttt-key a ifttt out byly přidány do palety"/>
   </div>
 </div><br></br>
 
@@ -328,7 +328,7 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-menu-import.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-menu-import.webp')} alt="Menu Node-RED se zvýrazněnými položkami Import a Clipboard"/>
   </div>
 </div>
 
@@ -336,7 +336,7 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-dialog-import.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-dialog-import.webp')} alt="Dialog Import nodes s vloženým JSON kódem flow a zvýrazněným tlačítkem Import"/>
   </div>
 </div>
 
@@ -346,7 +346,7 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-doubleclick-ifttt.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-doubleclick-ifttt.webp')} alt="Importovaný oznamovací flow se zvýrazněným uzlem IFTTT door pro úpravu"/>
   </div>
 </div>
 
@@ -354,7 +354,7 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-config-ifttt.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-config-ifttt.webp')} alt="Dialog úpravy uzlu ifttt out se zvýrazněnou ikonou tužky u Key a názvem události door"/>
   </div>
 </div>
 
@@ -364,7 +364,7 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-deploy.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-deploy.webp')} alt="Editor Node-RED se zvýrazněným tlačítkem Deploy v pravém horním rohu"/>
   </div>
 </div>
 
@@ -374,7 +374,7 @@ V pravé záložce **debug** byste měli vidět zprávy „true“ a „false“
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-test.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-test.webp')} alt="Zprávy o stavu dveří true a false v záložce debug a příznak Sent! pod uzlem IFTTT"/>
   </div>
 </div><br></br>
 
@@ -382,7 +382,7 @@ Pokud chcete být upozorňováni na zprávy typu „true“ místo **false**, je
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-phone-notification.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-phone-notification.webp')} alt="Telefon zobrazující push oznámení IFTTT Door Sensor Alarm s datem a časem"/>
   </div>
 </div><br></br>
 
@@ -406,7 +406,7 @@ Naimportujte toto flow do Node-RED, které umožní:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-more-flows.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-more-flows.webp')} alt="Další flow v Node-RED: stav dveří na dashboardu, stopky otevřených dveří a kontrola dveří ve 22:00"/>
   </div>
 </div>
 

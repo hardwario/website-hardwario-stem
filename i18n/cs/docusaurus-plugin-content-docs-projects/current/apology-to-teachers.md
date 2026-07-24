@@ -21,7 +21,7 @@ K tomu budeš potřebovat pouze základní [**Sadu Start**](https://www.hardwari
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-1.webp')}/>
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-1.webp')} alt="Paleta Node-RED se zvýrazněným uzlem mqtt in a uzlem mqtt umístěným na ploše"/>
   </div>
 </div>
 
@@ -39,7 +39,7 @@ Potvrď kliknutím na tlačítko **Done**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-2.webp')}/>
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-2.webp')} alt="Zvýrazněný Change node v paletě a uzel set msg.payload umístěný vedle MQTT uzlu tlačítka"/>
   </div>
 </div>
 
@@ -49,7 +49,7 @@ _Dear Mr. Woodpecker, I'm sorry, but unfortunately my dog ate my alarm clock. I'
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-3.webp')}/>
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-3.webp')} alt="Dialog Edit change node s pravidlem Rules nastavujícím msg.payload na text omluvy"/>
   </div>
 </div>
 

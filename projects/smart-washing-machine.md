@@ -36,7 +36,7 @@ node/washing-machine-detector:0/washing/finished
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/smart-washing-machine/smart-washing-machine-1.webp')}/>
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-1.webp')} alt="Edit mqtt in node dialog with the washing finished topic pasted into the highlighted Topic field"/>
   </div>
 </div>
 
@@ -46,7 +46,7 @@ Confirm it with the **Done** button.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/smart-washing-machine/smart-washing-machine-2.webp')}/>
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-2.webp')} alt="Node-RED workspace with a Change node placed next to the washing-machine-detector MQTT node"/>
   </div>
 </div>
 
@@ -59,7 +59,7 @@ Confirm it with the **Done** button.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/smart-washing-machine/smart-washing-machine-3.webp')}/>
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-3.webp')} alt="Edit change node dialog: msg.payload set to the notification message text"/>
   </div>
 </div>
 

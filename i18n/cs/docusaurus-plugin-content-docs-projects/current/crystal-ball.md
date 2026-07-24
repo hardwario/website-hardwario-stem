@@ -19,12 +19,12 @@ Budeš potřebovat **krabičku s tlačítkem a USB dongle**. Vystačíš si tedy
 
 Po nahrání firmware uvidíš, že se Alias tvého přístroje na záložce Devices změnilo na **Future teller**.
 
-<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-1.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-1.webp')} alt="Záložka Devices v Playgroundu se spárovaným zařízením pod aliasem future-teller:0"/> </div> </div>
 
 2. V Playgroundu klikni na **záložku Functions**, kde je programovací plocha.
 3. Na plochu postav node **MQTT** ze sekce Input.
 
-<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-2.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-2.webp')} alt="Uzel mqtt in zvýrazněný v paletě a uzel mqtt umístěný na ploše"/> </div> </div>
 
 4. Na node dvakrát klikni a nastav v něm klíčovou funkci – věštění. 🔮 **Do pole Topic zkopíruj tenhle řádek**:
 
@@ -33,7 +33,7 @@ Po nahrání firmware uvidíš, že se Alias tvého přístroje na záložce Dev
 node/future-teller:0/future/trigger
 ```
 
-<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-3.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-3.webp')} alt="Dialog Edit mqtt in node se zvýrazněným polem Topic s tématem trigger uzlu future-teller"/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
@@ -43,7 +43,7 @@ Potvrď tlačítkem **Done**.
 
 Náhodnou volbu naprogramuješ podle jednoduchého javascriptu. Jak se to dělá? Vedle MQTT postav **node Function**, který najdeš ve stejnojmenné sekci.
 
-<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-4.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-4.webp')} alt="Function uzel zvýrazněný v paletě a umístěný vedle MQTT uzlu future-telleru"/> </div> </div>
 
 2. Dvojklikem node otevři. Na řádku **Name** node pojmenuj (třeba 8-ball). Do řádku **Function** zkopíruj tenhle kód, přesně jak to vidíš na obrázku.
 
@@ -55,7 +55,7 @@ msg.payload = answers[num];
 return msg;
 ```
 
-<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-5.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-5.webp')} alt="Dialog Edit function node pojmenovaný 8-ball s JavaScriptem náhodné odpovědi na záložce On Message"/> </div> </div>
 
 Díky tomuhle kódu se vybere **jedna ze čtyř možností**:
 
@@ -72,23 +72,23 @@ Potvrď tlačítkem **Done**.
 3. Vedle Náhody přidej další node, a to **Text** ze sekce Dashboard.
 4. V něm nastav **Label**, tedy štítek, na Odpověď.
 
-<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-6.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-6.webp')} alt="Dialog Edit text node s Label nastaveným na Odpověď a textovým uzlem na ploše"/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
 5. Přidej na plochu ještě robota, který ti výsledek nahlas přečte. Aby to bylo správně creepy. 🤖 Najdeš ho jako node Audio out taky v sekci Dashboard.
 
-<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-7.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-7.webp')} alt="Uzel audio out zvýrazněný v paletě dashboard a umístěný pod flow s odpovědí"/> </div> </div>
 
 Uvnitř nodu si nastav hlas, který bude zprávu číst.
 
-<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-8.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-8.webp')} alt="Dialog Edit audio out node s vybraným hlasem TTS, který odpověď přečte nahlas"/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
 6. **Nody pospojuj** podle obrázku.
 
-<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-9.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-9.webp')} alt="Propojené uzly MQTT, 8-ball, text a audio out, se zvýrazněným tlačítkem Deploy"/> </div> </div>
 
 Flow odstartuj tlačítkem **Deploy** vpravo nahoře.
 
@@ -112,6 +112,6 @@ Flow odstartuj tlačítkem **Deploy** vpravo nahoře.
 
 2. **Zatřes krabičkou** a v Playgroundu pod záložkou Dashboard se dozvíš svou odpověď. ️🎱 Nezapomeň si zapnout repráky, protože ji i uslyšíš. Aleluja!
 
-<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-10.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-10.webp')} alt="Dlaždice Odpověď na Dashboardu s vylosovanou odpovědí Nejspíš ano"/> </div> </div>
 
 P. S. Krabička neručí za to, že má pravdu. 🤡

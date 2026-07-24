@@ -22,7 +22,7 @@ V rámci experimentu pochopíme:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./push-button-canvas.webp')}/>
+    <Image img={require('./push-button-canvas.webp')} alt="Díly bezdrátového tlačítka: Core Module, Mini Battery Module s bateriemi, Push Button Module a tištěná krabička"/>
   </div>
 </div>
 

@@ -10,7 +10,7 @@ This document will guide you through the **Radio Soil Sensor** project. You will
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-project-image.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-project-image.webp')} alt="Soil Sensor project: electronics in an outdoor box, the probe in a flower bed, and gauges for temperature, moisture and battery"/>
   </div>
 </div>
 
@@ -33,7 +33,7 @@ This document will guide you through the **Radio Soil Sensor** project. You will
 <div class="container">
   <div class="row">
     <Image  img={require('./img/radio-soil-sensor/radio-soil-sensor.png')}
-          style={{ backgroundColor: "#fff" }}/>
+          style={{ backgroundColor: "#fff" }} alt="Block diagram: Soil Sensor Set linked over sub-GHz radio and Radio Dongle to MQTT, Node-RED, InfluxDB and Grafana"/>
   </div>
 </div>
 
@@ -124,7 +124,7 @@ Make sure, that after pressing the **Start node pairing** button in the right **
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-start.webp')} alt="Node-RED flow with the Start node pairing inject button highlighted and the start response in the debug tab"/>
   </div>
 </div>
 
@@ -136,7 +136,7 @@ In the **Node-RED** debug tab, there is a message about name and firmware versio
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-paired-mqtt-message.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-paired-mqtt-message.webp')} alt="Debug tab showing the paired soil sensor's firmware info plus first moisture and temperature messages"/>
   </div>
 </div>
 
@@ -144,7 +144,7 @@ In the **Node-RED** debug tab, there is a message about name and firmware versio
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-stop.webp')} alt="Node-RED flow with the Stop node pairing inject button highlighted"/>
   </div>
 </div><br></br>
 
@@ -168,7 +168,7 @@ You should then see similar messages:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-radio-test.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-radio-test.webp')} alt="Debug tab with incoming soil sensor temperature and moisture MQTT messages highlighted"/>
   </div>
 </div><br></br>
 
@@ -255,7 +255,7 @@ Now you can see temperature and battery voltage on the bottom. We need to add a 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-duplicate.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-duplicate.webp')} alt="Grafana panel menu opened on the temperature graph with More and Duplicate highlighted"/>
   </div>
 </div><br></br>
 
@@ -263,7 +263,7 @@ Now click on **Edit** in the **duplicated** graph.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-edit.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-edit.webp')} alt="Grafana panel menu on the duplicated graph with Edit highlighted"/>
   </div>
 </div><br></br>
 
@@ -271,7 +271,7 @@ Now in **Metrics** tab change the **FROM** item from value **temperature** to **
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-from-moisture.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-from-moisture.webp')} alt="Grafana Metrics tab with the FROM measurement dropdown open to switch from temperature to moisture"/>
   </div>
 </div>
 
@@ -281,7 +281,7 @@ Now click on the **Save** button in the **Grafana** so all your configuration st
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-save.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-save.webp')} alt="Grafana dashboard with the Save button highlighted in the top toolbar"/>
   </div>
 </div>
 

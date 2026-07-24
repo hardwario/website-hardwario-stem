@@ -12,7 +12,7 @@ This document will guide you through the **Radio LCD Thermostat** project. With 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-block-diagram.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-block-diagram.webp')} alt="Block diagram: Radio LCD Thermostat Kit and Radio Power Controller Kit linked by radio to the Node-RED gateway stack"/>
   </div>
 </div>
 
@@ -111,7 +111,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-controls.webp')} alt="Imported Node-RED flow with inject buttons for the gateway commands, each wired to an MQTT node"/>
   </div>
 </div><br></br>
 
@@ -127,7 +127,7 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-debug.webp')} alt="Node-RED editor with the debug tab highlighted in the right sidebar"/>
   </div>
 </div><br></br>
 
@@ -141,7 +141,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-list.webp')} alt="Debug tab showing the gateway info response after clicking List all gateways"/>
   </div>
 </div><br></br>
 
@@ -161,7 +161,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-pair-start.webp')} alt="Start node pairing button highlighted, with the pairing start confirmed in the debug tab"/>
   </div>
 </div>
 
@@ -171,7 +171,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-pair-stop.webp')} alt="Stop node pairing button highlighted, with the pairing stop confirmed in the debug tab"/>
   </div>
 </div><br></br>
 

@@ -20,7 +20,7 @@ Pokud máš Start Set, budeš k němu potřebovat ještě [Climate Module](https
 1. Clime Set sestav a spáruj: jestli to děláš poprvé, [připravili jsme k tomu jednoduchou příručku](https://hardwario.academy/) – postup je stejný jako u Start Setu. Na Core Module potřebuješ firmware **radio climate monitor**. Pokud nevíš, jak si firmware stáhnout nebo co to je, <a href="https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware" target="_blank">zjistíš to tady</a>.
 2. Změny teploty, světla, vlhkosti a tlaku vzduchu uvidíš v Playgroundu v záložce **Messages**.
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-1.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-1.webp')} alt="Záložka Messages v Playgroundu s tématy climate-monitoru a hodnotami teploty, orientace a přítomnosti"/> </div> </div>
 
 ## Nastav si Node-RED
 
@@ -33,7 +33,7 @@ Pokud máš Start Set, budeš k němu potřebovat ještě [Climate Module](https
 node/climate-monitor:0/thermometer/0:0/temperature
 ```
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-2.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-2.webp')} alt="Dialog Edit mqtt in node s tématem teploty climate-monitoru ve zvýrazněném poli Topic"/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
@@ -42,7 +42,7 @@ Potvrď tlačítkem **Done**.
 
 Na řádku **Label** si graf libovolně přejmenuj a na řádku **Value format** doplň jednotku teploty, tedy °C. Jestli chceš, vyber si i barvu ukazatele na řádku **Colour gradient**.
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-3.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-3.webp')} alt="Dialog Edit gauge node pro teplotu: zvýrazněná pole Label, formát hodnoty se °C a rozsah 0 až 40"/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
@@ -51,13 +51,13 @@ Potvrď tlačítkem **Done**.
 
 V novém nodu **Gauge** si nastav **Range** 0 až 100 a do **Value format** dej % (vlhkost se totiž měří v procentech). Nezapomeň si ukazatel pojmenovat, případně vyber barvu.
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-4.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-4.webp')} alt="MQTT uzel vlhkosti se zvýrazněným budíkem; dialog ukazuje Label, formát v procentech a rozsah 0 až 100"/> </div> </div>
 
 8. Teď jdeme na ukazatel světla. 💡 Postup bude úplně stejný – jeden node **MQTT** a jeden node **Gauge**.
 9. Do **MQTT** zkopíruj tenhle topic: node/climate-monitor:0/lux-meter/0:0/illuminance
    V **Gauge** nastav tentokrát rozmezí 0 až 10 000 a do **Value format** jednotku světla lx (takzvaný lux). A chceš-li, vyber opět jméno a barvičku.
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-5.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-5.webp')} alt="MQTT uzel osvětlení se zvýrazněným budíkem; dialog ukazuje formát v lx a rozsah 0 až 10000"/> </div> </div>
 
 10. 3 ze 4 kroků máš za sebou, tak přihoď ještě poslední hodnotu na měření: tlak vzduchu. Opět přihoď jeden node **MQTT** a jeden **Gauge**.
 11. Do MQTT zkopíruj **Topic** pro měření tlaku vzduchu:
@@ -69,7 +69,7 @@ node/climate-monitor:0/barometer/0:0/pressure
 
 A do nového **Gauge** opět přidej rozmezí 0 až 10 000. Jednotku tentokrát nastavovat nemusíš, ale jméno a barvu klidně přidej.
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-6.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-6.webp')} alt="MQTT uzel tlaku se zvýrazněným budíkem; dialog ukazuje Label a rozsah 0 až 10000"/> </div> </div>
 
 12. Abys neviděl jenom aktuální čísla, přidej ke třem hodnotám ještě grafy, které ti přehledně ukážou, jak se vlhkost, světelnost a tlak vzduchu vyvíjely za poslední hodinu. 📈
 
@@ -79,7 +79,7 @@ Pod nody Gauge u vlhkosti, světelnosti a tlaku proto přidej po jednom nodu **C
 
 Do **Y-axis** pak vyplň stejná rozmezí, jaká jsi dával do přilehlých Gauge, takže u vlhkosti 0 až 100, u teploty a světelnosti 0 až 10 000.
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-7.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-7.webp')} alt="Dialog Edit chart node se zvýrazněnými poli Label, interval osy X a rozsah osy Y a třemi uzly grafů ve flow"/> </div> </div>
 
 A je to! Než se pustíš do měření, přidej ještě jednu vychytanou funkci – virtuálního hlídače.
 
@@ -91,7 +91,7 @@ Virtuální hlídač tě upozorní vždy, když ještěrák nebude mít v terár
 
 Rozklikni ho a jeho **Range** a **Value format** vyplň úplně stejně jako u prvního Gauge. Pokud si to už nepamatuješ, mrkni na obrázek dole. Nezapomeň ještě node v Labelu pojmenovat, třeba jako Ideální teplota.
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-8.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-8.webp')} alt="Uzel Numeric na ploše; dialog se zvýrazněnými poli Label, formát hodnoty se °C a rozsah 0 až 40"/> </div> </div>
 
 2. Hned vedle přidej další node, tentokrát to bude nová tvář v podobě nodu **Change** ze sekce Function.
 
@@ -99,7 +99,7 @@ Rozklikni si ho a nastav do něj hned pod sebe **flow.optimal** a **msg.payload*
 
 **K čemu to je**: Tyhle dva nody (Numeric a Change) ti umožní nastavit ideální teplotu, na jejíž překročení tě bude hlídač upozorňovat. 👮 Pomocí nodu Numeric si budeš v Dashboardu určovat optimální teplotu a node Change ji nastaví do proměnné flow.optimal. S tou pracují další nody, které si umístíme nyní.
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-9.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-9.webp')} alt="Uzel Change vedle uzlu Numeric; dialog se zvýrazněným pravidlem Set flow.optimal na msg.payload"/> </div> </div>
 
 3. Teď je čas na node **Switch**, který taky najdeš v sekci **Function**. Přetáhni ho vedle MQTT nodu pro měření teploty a rozklikni.
 
@@ -107,34 +107,34 @@ V něm nastavíš tři různé situace, které při sledování ideální teplot
 
 4. Dvakrát klikni na malé tlačítko **+add**, ať máš v nodu tři možné situace. A potom je uprav přesně podle obrázku níž. Všimni si, že na každém řádku je „**flow.optimal**”. Program vždy zkontroluje, jaká je zrovna hodnota této proměnné a podle toho pozná správnou situaci.
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-10.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-10.webp')} alt="Dialog Edit switch node se třemi pravidly porovnávajícími msg.payload s flow.optimal, výstupy 1 až 3"/> </div> </div>
 
 5. Teď je čas nastavit zprávy, které tě upozorní na všechny tři možné situace. Uděláš to tak, že vedle nodu Switch umístíš tři nody **Change** pod sebou.
 6. Všechny tři nody Change si postupně rozklikni a vepiš do nich zprávy, třeba “Teplota je moc vysoká/nízká/akorát”.
 
 Pokud jsi node **Switch** nastavil přesně podle našeho obrázku, tak do vrchního nodu **Change** napiš zprávu pro příliš vysokou teplotu, do prostředního pro příliš nízkou a do spodního pro optimální teplotu.
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-11.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-11.webp')} alt="Tři uzly Change vedle uzlu Switch; dialog se zvýrazněnou zprávou o příliš vysoké teplotě"/> </div> </div>
 
 7. A teď už jen jeden node a můžeme to celé spustit! 🏎️ Za tři nody Change přidej node **Text** ze sekce **Dashboard**. Ten slouží k tomu, aby se ti zobrazovaly zprávy, které sis v předchozím kroku nastavil.
 8. Node si rozklikni a pojmenuj ho na řádku **Label** třeba Stav teploty.
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-13.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-13.webp')} alt="Uzel Text za uzly Change; dialog se zvýrazněným polem Label pro stav teploty"/> </div> </div>
 
 9. A je to! Teď celý flow hezky pospojuj podle našeho obrázku. Nebo pokud se na to cítíš, pospojuj ho sám, a pak si ho podle našeho obrázku jen zkontroluj. 💪
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-14.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-14.webp')} alt="Kompletní propojený flow: čtyři senzorové větve s budíky a grafy plus hlídač teploty, zvýrazněné Deploy"/> </div> </div>
 
 10. Klikni na tlačítko **Deploy** vpravo nahoře a celý tenhle mega flow rozjeď. V Dashboardu se ti budou naměřené hodnoty zobrazovat zhruba takhle:
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-15.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-15.webp')} alt="Budíky na dashboardu s hodnotami teploty, vlhkosti a světelnosti"/> </div> </div>
 
 ## A akce!
 
 1. Krabičku izolepou pořádně upevni **do terárka tvého plazího bráchy nebo ségry**. 🏡
 2. V Dashboardu najdi **nastavení optimální teploty** a pomocí dvou šipek si vyber takovou, kterou tvůj leguán, had nebo želva potřebují. Ideální hodnotu pro svého mazlíčka si dohledej na internetu.
 
-<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-16.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-16.webp')} alt="Detail dashboardu: nastavení optimální teploty se šipkami a zvýrazněnou zprávou o stavu teploty"/> </div> </div>
 
 3. Kontroluj, zda má tvůj kámoš ideální teplotu, a sleduj, jak se **zvyšuje a snižuje** tlak, světelnost a vlhkost.
 4. Pokud je naměřená teplota příliš odlišná od té v terárku, zajdi se poradit do zverimexu nebo k veterináři, ať je tvůj plazák **maximálně spoko**. 👌

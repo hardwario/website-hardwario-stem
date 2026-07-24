@@ -12,18 +12,18 @@ It can be equiped with magnet for easy attach enclosure and works for many years
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-preview.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-preview.webp')} alt="Assembled Radio Door Sensor in a yellow enclosure with the wired magnetic switch beside it"/>
   </div>
 </div>
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-overview.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-overview.webp')} alt="All Radio Door Sensor parts laid out: modules, magnetic switch, enclosure halves and fasteners"/>
   </div>
 </div>
 <div class="container">
   <div class="row">
     <Image  img={require('./img/radio-door-sensor/radio-door-sensor.png')}
-          style={{ backgroundColor: "#fff" }}/>
+          style={{ backgroundColor: "#fff" }} alt="Block diagram: magnetic switch wired to the Radio Door Sensor, linked by radio to the dongle, Playground and IFTTT"/>
   </div>
 </div>
 
@@ -62,7 +62,7 @@ Download the latest [HARDWARIO Playground](https://github.com/bigclownlabs/bch-p
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-run.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-run.webp')} alt="BigClown Playground application open on its Home screen with the Learn documentation"/>
   </div>
 </div><br></br>
 
@@ -80,7 +80,7 @@ In Playground go to **Firmware tab**, select the firmware `bigclownlabs/bcf-radi
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-flash-door-sensor.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-flash-door-sensor.webp')} alt="Firmware tab with bcf-radio-door-sensor selected, the serial port chosen and Flash Firmware highlighted"/>
   </div>
 </div>
 
@@ -100,7 +100,7 @@ In Playground go to **Firmware tab**, select the firmware `bigclownlabs/bcf-gate
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-flash-dongle.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-flash-dongle.webp')} alt="Firmware tab with bcf-gateway-usb-dongle selected, the serial port chosen and Flash Firmware highlighted"/>
   </div>
 </div>
 
@@ -115,7 +115,7 @@ In the bottom left corner, click on **Gateway** and select device's serial port.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-gateway-connect.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-gateway-connect.webp')} alt="Gateway control in the bottom-left corner with the Radio Dongle serial port selected"/>
   </div>
 </div>
 
@@ -127,7 +127,7 @@ In the **Radio** tab click on the **Pairing start** button.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-pairing-start.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-pairing-start.webp')} alt="Radio tab with the Pairing start button highlighted"/>
   </div>
 </div>
 
@@ -141,7 +141,7 @@ Stop the pairing by clicking **Pairing stop**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-pairing-stop.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-pairing-stop.webp')} alt="Radio tab with the paired door-sensor:0 listed and the Pairing stop button highlighted"/>
   </div>
 </div>
 
@@ -155,7 +155,7 @@ Stop the pairing by clicking **Pairing stop**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-mqtt-test.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-mqtt-test.webp')} alt="MQTT tab subscribed to # showing door-sensor state messages switching between true and false"/>
   </div>
 </div>
 
@@ -173,7 +173,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-01.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-01.webp')} alt="IFTTT homepage with the Sign in button highlighted"/>
   </div>
 </div>
 
@@ -181,7 +181,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-02.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-02.webp')} alt="IFTTT Discover page after signing in, with My Applets highlighted in the menu"/>
   </div>
 </div>
 
@@ -189,7 +189,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-03.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-03.webp')} alt="My Applets page with the New Applet button highlighted"/>
   </div>
 </div>
 
@@ -197,7 +197,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-04.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-04.webp')} alt="New Applet editor with +this highlighted in the if this then that sentence"/>
   </div>
 </div>
 
@@ -205,7 +205,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-05.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-05.webp')} alt="Choose a service step with Webhooks typed in the search and the Webhooks tile highlighted"/>
   </div>
 </div>
 
@@ -213,7 +213,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-06.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-06.webp')} alt="Choose trigger step with the Receive a web request card highlighted"/>
   </div>
 </div>
 
@@ -221,7 +221,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-07.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-07.webp')} alt="Trigger fields with door typed as Event Name and the Create trigger button highlighted"/>
   </div>
 </div>
 
@@ -229,7 +229,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-08.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-08.webp')} alt="New Applet editor with +that highlighted in the if this then that sentence"/>
   </div>
 </div>
 
@@ -237,7 +237,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-09.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-09.webp')} alt="Choose action service step with Notifications searched and the Notifications tile highlighted"/>
   </div>
 </div>
 
@@ -245,7 +245,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-10.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-10.webp')} alt="Choose action step with the Send a notification from the IFTTT app card highlighted"/>
   </div>
 </div>
 
@@ -253,7 +253,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-11.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-11.webp')} alt="Action fields with the Door Sensor Alarm notification text filled in and the Create action button highlighted"/>
   </div>
 </div>
 
@@ -261,7 +261,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-12.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-12.webp')} alt="Review and finish step for the door applet with the Finish button highlighted"/>
   </div>
 </div>
 
@@ -269,7 +269,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-13.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-13.webp')} alt="Finished door applet card with the Webhooks icon highlighted"/>
   </div>
 </div>
 
@@ -277,7 +277,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-14.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-14.webp')} alt="Webhooks service page with the Documentation button highlighted"/>
   </div>
 </div>
 
@@ -285,7 +285,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-15.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-ifttt-15.webp')} alt="Webhooks documentation page with the personal key highlighted for copying"/>
   </div>
 </div>
 
@@ -306,7 +306,7 @@ To use IFTTT in Node-RED, we can use simple plug-in which will send notification
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-manage-palette.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-manage-palette.webp')} alt="Node-RED menu open with the Manage palette item highlighted"/>
   </div>
 </div>
 
@@ -314,7 +314,7 @@ To use IFTTT in Node-RED, we can use simple plug-in which will send notification
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-install-ifttt.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-install-ifttt.webp')} alt="Manage palette Install tab with ifttt searched and the install button for node-red-contrib-ifttt highlighted"/>
   </div>
 </div>
 
@@ -322,7 +322,7 @@ To use IFTTT in Node-RED, we can use simple plug-in which will send notification
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-installed-confirmation.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-installed-confirmation.webp')} alt="Confirmation banner that the ifttt-key and ifttt out nodes were added to the palette"/>
   </div>
 </div><br></br>
 
@@ -344,7 +344,7 @@ Perfect! Node-RED plugin for IFTTT will allow to send notification directly to y
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-menu-import.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-menu-import.webp')} alt="Node-RED menu with Import and Clipboard highlighted"/>
   </div>
 </div>
 
@@ -352,7 +352,7 @@ Perfect! Node-RED plugin for IFTTT will allow to send notification directly to y
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-dialog-import.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-dialog-import.webp')} alt="Import nodes dialog with the flow JSON pasted in and the Import button highlighted"/>
   </div>
 </div>
 
@@ -362,7 +362,7 @@ Perfect! Node-RED plugin for IFTTT will allow to send notification directly to y
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-doubleclick-ifttt.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-doubleclick-ifttt.webp')} alt="Imported notification flow with the door IFTTT node highlighted for editing"/>
   </div>
 </div>
 
@@ -370,7 +370,7 @@ Perfect! Node-RED plugin for IFTTT will allow to send notification directly to y
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-config-ifttt.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-config-ifttt.webp')} alt="Edit ifttt out node dialog with the Key pencil icon and the door Event Name highlighted"/>
   </div>
 </div>
 
@@ -380,7 +380,7 @@ Perfect! Node-RED plugin for IFTTT will allow to send notification directly to y
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-deploy.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-deploy.webp')} alt="Node-RED editor with the Deploy button in the top-right corner highlighted"/>
   </div>
 </div>
 
@@ -390,7 +390,7 @@ You should see "true" and "false" messages in the right **debug** tab and during
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-test.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-test.webp')} alt="Door state messages true and false in the debug tab and the Sent! flag under the IFTTT node"/>
   </div>
 </div><br></br>
 
@@ -398,7 +398,7 @@ If you would like be notified on "true" messages instead of **false**, just open
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-phone-notification.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-phone-notification.webp')} alt="Phone showing the IFTTT push notification Door Sensor Alarm with the date and time"/>
   </div>
 </div><br></br>
 
@@ -423,7 +423,7 @@ Import this flow to Node-RED that will be able to:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-more-flows.webp')}/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-node-red-more-flows.webp')} alt="Extra Node-RED flows: door state on a dashboard, opened-door stopwatch and a 22:00 door check"/>
   </div>
 </div>
 

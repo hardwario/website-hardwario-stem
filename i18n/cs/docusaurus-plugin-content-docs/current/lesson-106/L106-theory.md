@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
-    <Image img={require('./industry-4.0.png')}/>
+    <Image img={require('./industry-4.0.png')} alt="Časová osa čtyř průmyslových revolucí: mechanizace, masová produkce, počítače, kyberneticko-fyzikální systémy"/>
   </div>
 </div>
 *Obrázek znázorňující 4 industriální revoluce.*

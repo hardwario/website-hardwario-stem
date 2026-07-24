@@ -48,7 +48,7 @@ Function for processing data from the **PIR Module**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-function-orientation.webp')}/>
+    <Image img={require('./img/iot-function-orientation.webp')} alt="Node-RED flow: orientation and temperature topics wired to chart and gauge dashboard nodes"/>
   </div>
 </div>
 <br></br>
@@ -57,7 +57,7 @@ Resulting dashboard
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-chart-orientation.webp')}/>
+    <Image img={require('./img/iot-chart-orientation.webp')} alt="Dashboard with an orientation gauge, an orientation-over-time chart, and a temperature-over-time chart"/>
   </div>
 </div>
 <br></br>

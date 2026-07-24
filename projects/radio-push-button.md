@@ -12,7 +12,7 @@ This document will guide you through the **Radio Push Button** project. You will
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-block-diagram.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-block-diagram.webp')} alt="Block diagram: push button kit linked over sub-GHz radio and Radio Dongle to Node-RED, which calls an IFTTT webhook"/>
   </div>
 </div>
 
@@ -98,7 +98,7 @@ If you are using the new **HARDWARIO Playground**, then use the **Functions** ta
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-controls.webp')} alt="Node-RED flow with inject buttons for gateway commands: list gateways, pair and unpair nodes"/>
   </div>
 </div><br></br>
 
@@ -114,7 +114,7 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-debug.webp')} alt="Node-RED editor with the debug tab highlighted in the right sidebar"/>
   </div>
 </div><br></br>
 
@@ -128,7 +128,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-list.webp')} alt="Debug tab showing the gateway response with firmware name and ID after clicking List all gateways"/>
   </div>
 </div><br></br>
 
@@ -148,7 +148,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-pair-start.webp')} alt="Node-RED flow with the Start node pairing inject button highlighted"/>
   </div>
 </div>
 
@@ -160,7 +160,7 @@ Insert the batteries into the **Radio Push Button** to send the pairing request 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-pair-stop.webp')} alt="Node-RED flow with the Stop node pairing inject button highlighted"/>
   </div>
 </div><br></br>
 
@@ -180,7 +180,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-radio-test.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-radio-test.webp')} alt="Debug tab listing event-count messages that increase with every button press"/>
   </div>
 </div><br></br>
 
@@ -208,7 +208,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-01.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-01.webp')} alt="IFTTT homepage with the Sign in button highlighted in the top-right corner"/>
   </div>
 </div>
 
@@ -216,7 +216,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-02.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-02.webp')} alt="IFTTT menu bar with the My Applets item highlighted"/>
   </div>
 </div>
 
@@ -224,7 +224,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-03.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-03.webp')} alt="My Applets page with the New Applet button highlighted"/>
   </div>
 </div>
 
@@ -232,7 +232,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-04.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-04.webp')} alt="New Applet page with +this highlighted in the if this then that sentence"/>
   </div>
 </div>
 
@@ -240,7 +240,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-05.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-05.webp')} alt="Choose a service step with Webhooks typed in the search box and the Webhooks service highlighted"/>
   </div>
 </div>
 
@@ -248,7 +248,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-06.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-06.webp')} alt="Choose trigger step with the Receive a web request trigger highlighted"/>
   </div>
 </div>
 
@@ -256,7 +256,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-07.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-07.webp')} alt="Trigger fields with button typed as Event Name and the Create trigger button highlighted"/>
   </div>
 </div>
 
@@ -264,7 +264,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-08.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-08.webp')} alt="New Applet page with +that highlighted in the if this then that sentence"/>
   </div>
 </div>
 
@@ -272,7 +272,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-09.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-09.webp')} alt="Choose action service step with Notifications typed in the search box and the Notifications service highlighted"/>
   </div>
 </div>
 
@@ -280,7 +280,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-10.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-10.webp')} alt="Choose action step with Send a notification from the IFTTT app highlighted"/>
   </div>
 </div>
 
@@ -288,7 +288,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-11.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-11.webp')} alt="Notification field filled with the button-pressed message and the Create action button highlighted"/>
   </div>
 </div>
 
@@ -296,7 +296,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-12.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-12.webp')} alt="Review and finish step with the Finish button highlighted"/>
   </div>
 </div>
 
@@ -304,7 +304,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-13.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-13.webp')} alt="Finished applet page with the Webhooks icon highlighted"/>
   </div>
 </div>
 
@@ -312,7 +312,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-14.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-14.webp')} alt="Webhooks service page with the Documentation button highlighted"/>
   </div>
 </div>
 
@@ -320,7 +320,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-15.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-15.webp')} alt="Webhooks documentation page with the event field in the trigger URL highlighted"/>
   </div>
 </div>
 
@@ -328,7 +328,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-16.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-16.webp')} alt="Webhooks documentation with button filled in the event field of the trigger URL"/>
   </div>
 </div>
 
@@ -340,7 +340,7 @@ Install the **IFTTT** app on your smart phone and sign in using the same account
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-17.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-17.webp')} alt="Webhooks documentation page with the Test It button highlighted"/>
   </div>
 </div>
 
@@ -350,7 +350,7 @@ Install the **IFTTT** app on your smart phone and sign in using the same account
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-18.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-18.webp')} alt="Webhooks trigger URL highlighted for copying to the clipboard"/>
   </div>
 </div><br></br>
 
@@ -376,7 +376,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-snippet.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-snippet.webp')} alt="Node-RED flow with the push-button event-count MQTT node wired through delete msg.payload to an http request node"/>
   </div>
 </div><br></br>
 
@@ -390,7 +390,7 @@ This snippet creates a connection between the MQTT topic `node/push-button:0/pus
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-url.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-url.webp')} alt="Edit http request node dialog with the IFTTT webhook URL entered in the URL field"/>
   </div>
 </div>
 

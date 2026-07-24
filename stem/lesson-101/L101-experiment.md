@@ -22,7 +22,7 @@ As part of the experiment, we will understand
 
 <div class="container">
   <div class="row">
-    <Image img={require('./push-button-canvas.webp')}/>
+    <Image img={require('./push-button-canvas.webp')} alt="Parts of the wireless button: Core Module, Mini Battery Module with batteries, Push Button Module, and 3D-printed case"/>
   </div>
 </div>
 

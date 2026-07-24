@@ -40,7 +40,7 @@ Formát Tag modulů stavebnice TOWER je určen pro I²C periferie typu senzor, p
 
 <div class="container">
   <div class="row">
-    <Image img={require('./humidity-tag.png')}/>
+    <Image img={require('./humidity-tag.png')} alt="Zapojení pinů modulu Tag 16 x 16 mm: piny 1–5 nesou GND, VDD, SCL, SDA a INT"/>
   </div>
 </div>
 *Zapojení signálů na 5pinovém konektoru*
@@ -57,7 +57,7 @@ Humidity Tag zasuňte do Bridge Module do pravého dolního rohu. Bridge Module 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./bridge-set.avif')}/>
+    <Image img={require('./bridge-set.avif')} alt="Bridge Module s Humidity Tagem zasunutým v rohu a připojeným micro USB kabelem"/>
   </div>
 </div>
 *Sestava Bridge Module s Humidity Tagem*
@@ -76,7 +76,7 @@ Stáhněte si aplikaci [HARDWARIO Playground](https://github.com/hardwario/hardw
 
 <div class="container">
   <div class="row">
-    <Image img={require('./bridge-playground.webp')}/>
+    <Image img={require('./bridge-playground.webp')} alt="Záložka Bridge v Playgroundu se zapnutým bridge a tabulkou naměřených hodnot vlhkosti a teploty"/>
   </div>
 </div>
 
@@ -92,7 +92,7 @@ Stáhněte si aplikaci [HARDWARIO Playground](https://github.com/hardwario/hardw
 * V pravém horním rohu naleznete hamburger menu a v něm položku Import
 <div class="container">
   <div class="row">
-    <Image img={require('./playground-import.png')}/>
+    <Image img={require('./playground-import.png')} alt="Otevřené hamburger menu v Node-RED se zvýrazněnou volbou Import"/>
   </div>
 </div>
 
@@ -102,13 +102,13 @@ Stáhněte si aplikaci [HARDWARIO Playground](https://github.com/hardwario/hardw
 
 <div class="container">
   <div class="row">
-    <Image img={require('./temperature-and-humidity-graph.avif')}/>
+    <Image img={require('./temperature-and-humidity-graph.avif')} alt="Sekce Charts na dashboardu s liniovými grafy teploty a vlhkosti v čase"/>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <Image img={require('./temperature-and-humidity-gauges.avif')}/>
+    <Image img={require('./temperature-and-humidity-gauges.avif')} alt="Sekce Gauges na dashboardu s budíky teploty a vlhkosti a aktuálními hodnotami"/>
   </div>
 </div><br></br>
 

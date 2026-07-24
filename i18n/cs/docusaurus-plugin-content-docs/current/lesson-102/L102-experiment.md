@@ -40,12 +40,12 @@ V aplikaci Playground si vytvoříme vzorový flow zobrazující váhu studentů
 
 <div class="container">
   <div class="row">
-    <Image img={require('./tower-experiment-1.avif')}/>
+    <Image img={require('./tower-experiment-1.avif')} alt="Úprava uzlu mqtt in v Playgroundu: vyplněný topic váhy propojený s textovým uzlem dashboardu"/>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <Image img={require('./tower-experiment-2.webp')}/>
+    <Image img={require('./tower-experiment-2.webp')} alt="Záložka Messages v Playgroundu: publikování hodnoty váhy na topic a odběr témat cesko/#"/>
   </div>
 </div>

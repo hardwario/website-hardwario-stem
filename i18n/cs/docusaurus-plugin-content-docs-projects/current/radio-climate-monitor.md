@@ -12,7 +12,7 @@ Tento dokument vás provede projektem **Monitor klimatu**. Budete moci vidět da
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-block-diagram.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-block-diagram.webp')} alt="Blokové schéma: sada Radio Climate Monitor propojená sub-GHz rádiem s Radio Donglem a branou s Node-RED"/>
   </div>
 </div>
 
@@ -109,7 +109,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-controls.webp')} alt="Importovaný flow v Node-RED s tlačítky pro příkazy brány, každé napojené na uzel MQTT"/>
   </div>
 </div><br></br>
 
@@ -125,7 +125,7 @@ Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádia. Tyto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-debug.webp')} alt="Editor Node-RED se zvýrazněnou záložkou debug v pravém panelu"/>
   </div>
 </div><br></br>
 
@@ -140,7 +140,7 @@ Na kartě **debug** budete moci vidět všechny MQTT zprávy.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-list.webp')} alt="Záložka debug s odpovědí s informacemi o bráně po kliknutí na List all gateways"/>
   </div>
 </div><br></br>
 
@@ -160,7 +160,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-pair-start.webp')} alt="Zvýrazněné tlačítko Start node pairing a potvrzení zahájení párování v záložce debug"/>
   </div>
 </div>
 
@@ -172,7 +172,7 @@ Vložte baterie do **Sady Clime**, aby se odeslal žádost o párování \(měli
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-node-red-gw-pair-stop.webp')} alt="Zvýrazněné tlačítko Stop node pairing a potvrzení ukončení párování v záložce debug"/>
   </div>
 </div><br></br>
 
@@ -196,7 +196,7 @@ Měli byste pak vidět podobné zprávy:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-radio-test.webp')}/>
+    <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-radio-test.webp')} alt="Záložka debug s příchozími zprávami MQTT s naměřenou teplotou, vlhkostí a osvětlením"/>
   </div>
 </div><br></br>
 

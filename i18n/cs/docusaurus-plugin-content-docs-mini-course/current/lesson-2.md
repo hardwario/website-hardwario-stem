@@ -47,7 +47,7 @@ Funkce pro zpracování dat z PIR Module
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-function-orientation.webp')}/>
+    <Image img={require('./img/iot-function-orientation.webp')} alt="Flow v Node-RED: témata orientace a teploty propojená s uzly grafu a budíku na dashboardu"/>
   </div>
 </div>
 <br></br>
@@ -56,7 +56,7 @@ Výsledný dashboard
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-chart-orientation.webp')}/>
+    <Image img={require('./img/iot-chart-orientation.webp')} alt="Dashboard s budíkem orientace, grafem orientace v čase a grafem teploty v čase"/>
   </div>
 </div>
 <br></br>

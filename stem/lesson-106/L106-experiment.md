@@ -30,7 +30,7 @@ Communication will take place wirelessly to the **Radio Dongle** plugged into th
 
 <div class="container">
   <div class="row">
-    <Image img={require('./push-button-canvas.webp')}/>
+    <Image img={require('./push-button-canvas.webp')} alt="Push button kit parts: Core Module, Mini Battery Module, button cover, O-rings, and orange enclosure halves"/>
   </div>
 </div>
 
@@ -65,7 +65,7 @@ Check out the detailed guide on [uploading firmware to the Core Module](https://
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-vibration-diagram.png')}/>
+    <Image img={require('./stem-vibration-diagram.png')} alt="Node-RED flow: the vibration-monitor magnitude topic connected to a Vibrations in time chart node"/>
   </div>
 </div>
 
@@ -74,7 +74,7 @@ Check out the detailed guide on [uploading firmware to the Core Module](https://
 
 <div class="container">
   <div class="row">
-    <Image img={require('./vibration-graph.png')}/>
+    <Image img={require('./vibration-graph.png')} alt="Dashboard line chart Vibrations in time showing measured vibration magnitude"/>
   </div>
 </div>
 
@@ -84,7 +84,7 @@ We will enhance the experiment by adding a notification when a configurable limi
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-vibration-final-diagram.png')}/>
+    <Image img={require('./stem-vibration-final-diagram.png')} alt="Final Node-RED flow: magnitude feeds the chart and a switch node that triggers a Vibrations over limit notification"/>
   </div>
 </div>
 *This is what the final flow looks like, with the vibration graph and a notification when the limit is exceeded*

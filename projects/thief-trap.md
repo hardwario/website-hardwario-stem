@@ -27,7 +27,7 @@ If you already have the Start Set, you will only need the [**PIR Module**](https
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-2.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-2.webp')} alt="Playground Devices tab: the paired device row with alias burglar-alarm:0 highlighted"/>
   </div>
 </div>
 
@@ -62,7 +62,7 @@ msg.payload = parseInt(msg.payload); return msg;
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-3.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-3.webp')} alt="Node-RED workspace with a Function node placed on the canvas"/>
   </div>
 </div>
 
@@ -70,7 +70,7 @@ msg.payload = parseInt(msg.payload); return msg;
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-4.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-4.webp')} alt="Node-RED workspace: a Switch widget node from the Dashboard section placed next to the Function node"/>
   </div>
 </div>
 
@@ -80,7 +80,7 @@ Confirm with the **Done** button.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-5.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-5.webp')} alt="Edit switch node dialog: Label, On Payload 1, and Off Payload 0 highlighted"/>
   </div>
 </div>
 
@@ -98,7 +98,7 @@ if(msg.payload == "1") { flow.set("alarmOn", 1); } else { flow.set("alarmOn", 0)
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-10.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-10.webp')} alt="Node-RED flow with the notification-status Function node highlighted behind the switch and Blynk read nodes"/>
   </div>
 </div>
 
@@ -120,7 +120,7 @@ node/burglar-alarm:0/thermometer/0:1/temperature
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-11.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-11.webp')} alt="Node-RED flow with the burglar-alarm thermometer temperature MQTT node highlighted"/>
   </div>
 </div>
 
@@ -135,7 +135,7 @@ Due to this node, the sensor will only be active if you trigger it by a button i
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-12.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-12.webp')} alt="Node-RED flow with the alarm-status Function node highlighted next to the temperature MQTT node"/>
   </div>
 </div>
 
@@ -151,7 +151,7 @@ In the node, set _node/burglar-alarm:0/alarm/-/set/state_ as the Topic, through 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-13.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-13.webp')} alt="Node-RED flow: temperature, alarm-status, and the highlighted MQTT output node with the alarm set state topic connected"/>
   </div>
 </div>
 
@@ -163,7 +163,7 @@ Place the **MQTT node from under the Input section** onto your desktop. In the n
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-14.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-14.webp')} alt="Node-RED flow with the PIR event-count MQTT input node highlighted"/>
   </div>
 </div>
 
@@ -177,7 +177,7 @@ msg.payload = "Someone's in your room" return msg;
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-15.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-15.webp')} alt="Node-RED flow with the message Function node highlighted next to the PIR event-count node"/>
   </div>
 </div>
 
@@ -191,7 +191,7 @@ msg.payload = "Someone's in your room" return msg;
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-18.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-18.webp')} alt="Playground Dashboard tab with the arming switch turned on"/>
   </div>
 </div>
 

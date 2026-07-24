@@ -13,7 +13,7 @@ Tento dokument vás provede projektem **Rádiového CO₂ monitoru**. Budete si 
 <div class="container">
   <div class="row">
     <Image  img={require('./img/radio-co2-monitor/radio-co2-monitor.png')}
-          style={{ backgroundColor: "#fff" }}/>
+          style={{ backgroundColor: "#fff" }} alt="Blokové schéma: sada Radio CO2 Monitor propojená sub-GHz rádiem s Radio Donglem a branou s Node-RED"/>
   </div>
 </div>
 
@@ -123,7 +123,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-controls.webp')} alt="Importovaný flow v Node-RED s tlačítky pro příkazy brány, každé napojené na uzel MQTT"/>
   </div>
 </div><br></br>
 
@@ -135,7 +135,7 @@ Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádio. Tyto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-debug.webp')} alt="Editor Node-RED se zvýrazněnou záložkou debug v pravém panelu"/>
   </div>
 </div><br></br>
 
@@ -149,7 +149,7 @@ V záložce **debug** uvidíte všechny zprávy MQTT.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-list.webp')} alt="Záložka debug s odpovědí s informacemi o bráně po kliknutí na List all gateways"/>
   </div>
 </div><br></br>
 
@@ -169,7 +169,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-pair-start.webp')} alt="Zvýrazněné tlačítko Start node pairing a potvrzení zahájení párování v záložce debug"/>
   </div>
 </div>
 
@@ -179,7 +179,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-pair-stop.webp')} alt="Zvýrazněné tlačítko Stop node pairing a potvrzení ukončení párování v záložce debug"/>
   </div>
 </div><br></br>
 
@@ -203,7 +203,7 @@ Poté byste měli vidět podobné zprávy:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-radio-test.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-radio-test.webp')} alt="Záložka debug se zprávou MQTT s naměřenou koncentrací CO2"/>
   </div>
 </div><br></br>
 

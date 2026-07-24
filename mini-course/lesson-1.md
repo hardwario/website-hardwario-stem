@@ -29,7 +29,7 @@ Now connect the **Radio Dongle** (USB module) to a free USB port on your compute
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-dongle.webp')}/>
+    <Image img={require('./img/iot-dongle.webp')} alt="HARDWARIO Radio Dongle: a black USB stick with the HARDWARIO logo label"/>
   </div>
 </div>
 
@@ -47,7 +47,7 @@ In the right-hand menu under the **Devices** section, click the **Connect** butt
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-pirmodule.webp')}/>
+    <Image img={require('./img/iot-pirmodule.webp')} alt="Assembled PIR Module in its white enclosure, with the dome motion lens in the middle"/>
   </div>
 </div>
 
@@ -58,7 +58,7 @@ Before inserting the batteries, go to **HARDWARIO Playground** and click the **S
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-pirmodule-open.webp')}/>
+    <Image img={require('./img/iot-pirmodule-open.webp')} alt="Disassembled PIR Module: stacked electronics boards, sealing O-ring, and the two halves of the enclosure"/>
   </div>
 </div>
 <br></br>

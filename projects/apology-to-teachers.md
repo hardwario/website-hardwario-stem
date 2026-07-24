@@ -22,7 +22,7 @@ All you need for this is the basic HARDWARIO [**Start Set**](https://www.hardwar
    
 <div class="container">
   <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-1.webp')}/>
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-1.webp')} alt="Node-RED palette with the mqtt in node highlighted and an mqtt node placed on the flow canvas"/>
   </div>
 </div>
 
@@ -39,7 +39,7 @@ Confirm with the **Done** button.
 1. You also determine the content of the apology in Node-RED. Place **Change node** from the Functions section next to the MQTT node. This determines what message is sent.
 <div class="container">
   <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-2.webp')}/>
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-2.webp')} alt="Change node highlighted in the palette, with a set msg.payload node placed next to the push-button MQTT node"/>
   </div>
 </div>
 
@@ -49,7 +49,7 @@ _Dear Mr. Woodpecker, I'm sorry, but unfortunately my dog ate my alarm clock. I'
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-3.webp')}/>
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-3.webp')} alt="Edit change node dialog with Rules setting msg.payload to the apology message text"/>
   </div>
 </div>
 

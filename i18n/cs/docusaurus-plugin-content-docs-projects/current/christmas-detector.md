@@ -15,17 +15,17 @@ Pokud máš Starter Set, budeš k němu potřebovat ještě [PIR Module](https:/
 
 ## Připrav si krabičku
 
-1. Sestav svůj Set. Na Core Module potřebuješ firmware **bcf-radio-motion-detector**. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-1.webp')}/> </div> </div>
+1. Sestav svůj Set. Na Core Module potřebuješ firmware **bcf-radio-motion-detector**. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-1.webp')} alt="Záložka Firmware v Playgroundu s vybraným firmwarem twr-radio-motion-detector k nahrání"/> </div> </div>
 
 2. Při správně nainstalovaném firmware uvidíš v Playgroundu na záložce Devices Alias jako **motion-detector**.
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-2.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-2.webp')} alt="Záložka Devices v Playgroundu se spárovaným zařízením pod aliasem motion-detector:0"/> </div> </div>
 
 ## Nastav si Node-RED
 
 1. Programování odstartuj v Node-RED. Nejdřív v Playgroundu klikni na záložku **Functions**.
 2. Na volnou plochu si přetáhni světle fialový node (bublinu) s názvem **MQTT**. Najdeš ho v sekci Input.
 
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-3.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-3.webp')} alt="Uzel mqtt in zvýrazněný v paletě a uzel mqtt umístěný na ploše"/> </div> </div>
 
 3. Node rozklikni dvojklikem. V řádku **Topic** určíš klíčovou hodnotu. Teď to bude počítadlo pohybů, které jsou zaznamenány:
 
@@ -34,39 +34,39 @@ Pokud máš Starter Set, budeš k němu potřebovat ještě [PIR Module](https:/
 node/motion-detector:0/pir/-/event-count
 ```
 
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-4.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-4.webp')} alt="MQTT uzel na ploše s tématem event-count PIR čidla motion-detectoru"/> </div> </div>
 
 Potvrď pomocí tlačítka **Done**.
 
 4. Za tenhle node postav node **Switch** ze sekce Function. Díky němu zařízení pozná, že je detektor zapnutý a může hlásit veškerý pohyb.
 5. Uvnitř nodu vyplň řádek **Property** jako _flow_. _detectorActive_ a podmínku uvnitř pole uprav na _is true_ (mrkej na obrázek).
 **Náš tip**: Přečti si o téhle funkci víc.
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-5.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-5.webp')} alt="Dialog Edit switch node kontrolující vlastnost flow.detectorActive s podmínkou is true"/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
 6. Teď přijde **node Change** ze stejné sekce Function.
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-6.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-6.webp')} alt="Change node zvýrazněný v paletě, uzel set msg.payload je umístěný za uzlem switch"/> </div> </div>
 
 7. V něm nastavíš zprávu, která se ti ukáže, jakmile dorazí ten vousáč s dárkama (případně miminko). 🎅 👼 Takže třeba: _Jezisek je v obyvaku_.
 **Náš tip**: Pokud si chceš nastavit i upozornění do mobilu, nepoužívej čárky ani háčky, Blynk to nemá rád.
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-7.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-7.webp')} alt="Dialog Edit change node s pravidlem nastavujícím flow.detectorActive na msg.payload"/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
 8. Nad tímhle flow načni další, díky kterému budeš moct detektor zapínat a vypínat. Bude se skládat ze dvou nodů. První je **node Switch** ze sekce Dashboard.
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-8.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-8.webp')} alt="Uzel switch z palety dashboard zvýrazněný a umístěný nad flow detektoru"/> </div> </div>
 
 9. Uvnitř tohohle nodu uprav **Label** na _Stav detektoru_. Takhle bude označený tvůj projekt v Dashboardu.
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-9.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-9.webp')} alt="Dialog Edit switch node s Label Stav detektoru a hodnotami true a false"/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
 10. Za něj postav **node Change** ze sekce Dashboard. Jojo, ten, co už máš o kousek níž. 👍
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-10.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-10.webp')} alt="Change node zvýrazněný v paletě, uzel set msg.payload je umístěný za přepínačem Stav detektoru"/> </div> </div>
 
 11. Uvnitř nastav v poli **Rules** funkci, se kterou zařízení pozná, jestli je tlačítko vypnuté, nebo zapnuté: _flow_. _detectorActive_ (viz obrázek). Pozor na překlepy!
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-11.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-11.webp')} alt="Dialog Edit change node pro flow přepínače se zvýrazněným pravidlem Set flow.detectorActive na msg.payload"/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
@@ -86,7 +86,7 @@ Detekce dorazí na tvůj smartphone přes appku **Blynk IoT**, kam zachycený po
 
 ## Propoj mobil s krabičkou
 
-1. Vrať se k počítači. Na plochu Node-RED postav poslední node celého projektu — node ze sekce **Blynk IoT**, který umí spustit tvůj event (node **log event**). Patří hned za flow se switchem (mrkni na obrázek). 👀 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-13.webp')}/> </div> </div>
+1. Vrať se k počítači. Na plochu Node-RED postav poslední node celého projektu — node ze sekce **Blynk IoT**, který umí spustit tvůj event (node **log event**). Patří hned za flow se switchem (mrkni na obrázek). 👀 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-13.webp')} alt="Uzel notify pro Blynk zvýrazněný na ploše, umístěný na konec flow detektoru"/> </div> </div>
 
 2. Rozklikni node dvojklikem. Vpravo uvidíš **malou tužtičku**. Klikni na ni a otevře se nové okno. Do pole **Url** zadej `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové appce Blynk na počítači. Potvrď tlačítkem **Add**.
 
@@ -97,7 +97,7 @@ Detekce dorazí na tvůj smartphone přes appku **Blynk IoT**, kam zachycený po
 ## A... akce!
 
 1. Je čas špehovat toho dárečkového krále. V záložce **Dashboard** v Playgroundu **zapni svůj detektor**. 🕵️
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-17.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-17.webp')} alt="Hotové flow s přepínačem Stav detektoru a řetězcem PIR eventu končícím uzlem notify"/> </div> </div>
 
 2. PIR Module vycítí i sebemenší pohyb a zpráva o cizí přítomnosti ti přijde do mobilu raz dva. **Ježíšek nemá šanci**! Honem se běž podívat a načapej ho
 

@@ -31,7 +31,7 @@ Různé frekvence světla vnímáme jako různé [barvy](https://cs.wikipedia.or
 
 <div class="container">
   <div class="row">
-    <Image img={require('./srgbspectrum.avif')}/>
+    <Image img={require('./srgbspectrum.avif')} alt="Spektrum viditelného světla od fialové po červenou se stupnicemi vlnové délky a frekvence"/>
   </div>
 </div>
 

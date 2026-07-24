@@ -13,7 +13,7 @@ Tento dokument vás provede projektem **Bezdrátový chytrý LED pásek**. Budet
 <div class="container">
   <div class="row">
     <Image  img={require('./img/radio-smart-led-strip/radio-power-controller.png')}
-          style={{ backgroundColor: "#fff" }}/>
+          style={{ backgroundColor: "#fff" }} alt="Blokové schéma: sada Power Controller ovládá LED pásek a spotřebič 230 V, rádiem propojená s Node-RED a Blynk"/>
   </div>
 </div>
 
@@ -116,7 +116,7 @@ Ujistěte se, že do **Power Modulu** není připojen napájecí adaptér.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-project-thermostat-relay-bc.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-project-thermostat-relay-bc.webp')} alt="Sestavené moduly Power Controlleru v červené krabičce BCE301, otevřená i zavřená varianta s konektory na boku"/>
   </div>
 </div>
 
@@ -158,7 +158,7 @@ Tento útržek poskytuje ovládací tlačítka pro příkazy bráně/rádiu. Tyt
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-debug.webp')} alt="Editor Node-RED se zvýrazněnou záložkou debug v pravém panelu"/>
   </div>
 </div><br></br>
 
@@ -172,7 +172,7 @@ Na kartě **debug** budete moci vidět všechny MQTT zprávy.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-list.webp')} alt="Záložka debug s odpovědí brány obsahující název firmwaru a ID po kliknutí na List all gateways"/>
   </div>
 </div><br></br>
 
@@ -192,7 +192,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-pair-start.webp')} alt="Flow v Node-RED se zvýrazněným inject tlačítkem Start node pairing"/>
   </div>
 </div>
 
@@ -202,7 +202,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-pair-stop.webp')} alt="Flow v Node-RED se zvýrazněným inject tlačítkem Stop node pairing"/>
   </div>
 </div><br></br>
 
@@ -228,7 +228,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-set-node-id.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-set-node-id.webp')} alt="Dialog Edit change node s polem Replace with nastaveným na power-controller:0"/>
   </div>
 </div>
 
@@ -236,7 +236,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-radio-test.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-radio-test.webp')} alt="Flow v Node-RED s příkazy pro LED pásek a zvýrazněným inject tlačítkem led-strip set color #ff0000"/>
   </div>
 </div>
 

@@ -37,7 +37,7 @@ node/washing-machine-detector:0/washing/finished
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/smart-washing-machine/smart-washing-machine-1.webp')}/>
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-1.webp')} alt="Dialog Edit mqtt in node s tématem konce praní vloženým do zvýrazněného pole Topic"/>
   </div>
 </div>
 
@@ -47,7 +47,7 @@ Potvrď tlačítkem **Done**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/smart-washing-machine/smart-washing-machine-2.webp')}/>
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-2.webp')} alt="Plocha Node-RED s uzlem Change umístěným vedle MQTT uzlu washing-machine-detector"/>
   </div>
 </div>
 
@@ -59,7 +59,7 @@ Malá inspirace:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/smart-washing-machine/smart-washing-machine-3.webp')}/>
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-3.webp')} alt="Dialog Edit change node: msg.payload nastaven na text upozornění"/>
   </div>
 </div>
 

@@ -23,7 +23,7 @@ Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vy
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-1.webp')}/>
+    <Image img={require('./img/safe-drawer/safe-drawer-1.webp')} alt="Záložka Devices v Playgroundu: řádek spárovaného zařízení se zvýrazněným aliasem x-axis-detector:0"/>
   </div>
 </div>
 
@@ -59,7 +59,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-2.webp')}/>
+    <Image img={require('./img/safe-drawer/safe-drawer-2.webp')} alt="Dialog Edit mqtt in node s tématem event-count akcelerometru ve zvýrazněném poli Topic"/>
   </div>
 </div>
 
@@ -67,7 +67,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-3.webp')}/>
+    <Image img={require('./img/safe-drawer/safe-drawer-3.webp')} alt="Plocha Node-RED s uzlem Switch umístěným vedle MQTT uzlu x-axis-detectoru"/>
   </div>
 </div>
 
@@ -75,7 +75,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-4.webp')}/>
+    <Image img={require('./img/safe-drawer/safe-drawer-4.webp')} alt="Dialog Edit switch node: Property nastaveno na flow.active s pravidlem rovná se 1"/>
   </div>
 </div>
 
@@ -83,7 +83,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-5.webp')}/>
+    <Image img={require('./img/safe-drawer/safe-drawer-5.webp')} alt="Plocha Node-RED s uzlem Change (set msg.payload) přidaným za uzel Switch"/>
   </div>
 </div>
 
@@ -91,7 +91,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-6.webp')}/>
+    <Image img={require('./img/safe-drawer/safe-drawer-6.webp')} alt="Dialog Edit change node: msg.payload nastaven na text upozornění"/>
   </div>
 </div>
 

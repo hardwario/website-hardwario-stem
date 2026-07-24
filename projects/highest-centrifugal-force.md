@@ -22,7 +22,7 @@ All you need is the **box with button** and the **USB dongle** in the basic HARD
 
 3. <a href="https://docs.hardwario.com/tower/desktop-programming/radio-network-management#pairing-new-devices" target="_blank">Pair the Core Module with the USB Dongle.</a> Right after pairing it, you will notice that your Core Module has changed Alias to **rotation-g-meter**.
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-1.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-1.webp')} alt="Playground Devices tab: the paired device row with alias rotation-g-meter:0 highlighted"/> </div> </div>
 
 ## Build in the Node-RED
 
@@ -36,7 +36,7 @@ node/rotation-g-meter:0/rotation-g
 ```
 
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-2.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-2.webp')} alt="Edit mqtt in node dialog with the rotation-g topic in the highlighted Topic field"/> </div> </div>
 
 Confirm it with the **Done** button.
 
@@ -47,11 +47,11 @@ Confirm it with the **Done** button.
 node/rotation-g-meter:0/rotation-time
 ```
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-3.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-3.webp')} alt="Second MQTT node: Edit dialog with the rotation-time topic in the highlighted Topic field"/> </div> </div>
 
 4. To each node, place one node for javascript. You can find them in **Function** section, under Function (original, right? 🤡).
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-4.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-4.webp')} alt="Node-RED workspace with a Function node highlighted next to each of the two MQTT nodes"/> </div> </div>
 
 5. Double-click on the **upper Function node** and insert this code into the large field. The code will register the record centrifugal force. 💪
 
@@ -69,7 +69,7 @@ if(lastSpin > flow.get("record"))
 
 In the **Name** field, name the node as _Save the record_.
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-5.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-5.webp')} alt="Edit function node dialog with the record-saving code and the Name field highlighted"/> </div> </div>
 
 Confirm it with the **Done** button.
 
@@ -89,35 +89,35 @@ if(lastSpinTime > flow.get("timeRecord"))
 
 In the **Name** field, name the node as _Save the record_.
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-6.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-6.webp')} alt="Edit function node dialog for the bottom node with the spin-time record code and the Name field highlighted"/> </div> </div>
 
 Confirm it with the **Done** button.
 
 7. Under the upper Function node, place the **text node** from the Dashboard section. You can place it elsewhere, but for the sake of clarity it will be better if they are aligned vertically.
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-7.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-7.webp')} alt="Node-RED workspace with a Text node from the Dashboard section highlighted under the upper Function node"/> </div> </div>
 
 In settings, name it _Last spin_. This way, it will show you the value that the box just measured.
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-8.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-8.webp')} alt="Edit text node dialog with the Label field for the last spin value highlighted"/> </div> </div>
 
 8. Place another node under this one; thanks to the bottom one, the values will be registered into a graph. 📈 You will find it as **Chart node** in Dashboard section.
 In the **Label** field, name it as _History_. Into the **X-asis** Label field, set  automatic, which means that the unit will be added automatically.
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-9.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-9.webp')} alt="Edit chart node dialog with the Label field and the automatic X-axis Label setting highlighted"/> </div> </div>
 
 9. Under the second javascript, place the **Text node** from the Dashboard section.
 You will determine in it how the length of the latest rotation is displayed: _Time of last spin_.
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-10.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-10.webp')} alt="Edit text node dialog with the Label field for the time of the last spin highlighted"/> </div> </div>
 
 10.  Next to each level, place one **Text node** from the Dashboard section. Those will affect the way you see the record time registered in the graph.  Set up the **Record label** and **Record** **time**, respectively.
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-11.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-11.webp')} alt="Node-RED workspace with the record and record-time Text nodes highlighted next to each flow level"/> </div> </div>
 
 11. And then **connect** it all as shown in the picture. You will have two separate flows on the desktop. In the end, don’t forget to press the **Deploy** button to make it all work. 🚨
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-12.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-12.webp')} alt="Two finished flows connected in Node-RED with the Deploy button highlighted"/> </div> </div>
 
 ## Give it a spin!
 
@@ -126,4 +126,4 @@ You will determine in it how the length of the latest rotation is displayed: _Ti
    **Our tip**: For the best spin, make the box stand on its button.
 3. Follow the results in the **Dashboard tab**. So, good luck and …. **spin it like you dare!**
 
-<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-13.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-13.webp')} alt="Dashboard with last spin value, history chart, last spin time, record, and record time"/> </div> </div>

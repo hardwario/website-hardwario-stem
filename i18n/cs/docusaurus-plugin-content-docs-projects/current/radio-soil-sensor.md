@@ -10,7 +10,7 @@ Tento dokument vás provede projektem **Bezdrátový půdní senzor**. Budete mo
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-project-image.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-project-image.webp')} alt="Projekt půdního čidla: elektronika ve venkovní krabičce, sonda v záhonu a budíky s teplotou, vlhkostí a baterií"/>
   </div>
 </div>
 
@@ -19,7 +19,7 @@ Tento dokument vás provede projektem **Bezdrátový půdní senzor**. Budete mo
 <div class="container">
   <div class="row">
     <Image  img={require('./img/radio-soil-sensor/radio-soil-sensor.png')}
-          style={{ backgroundColor: "#fff" }}/>
+          style={{ backgroundColor: "#fff" }} alt="Blokové schéma: sada Soil Sensor propojená sub-GHz rádiem přes Radio Dongle s MQTT, Node-RED, InfluxDB a Grafanou"/>
   </div>
 </div>
 
@@ -109,7 +109,7 @@ Ujistěte se, že po stisknutí tlačítka **Start node pairing** se v pravém p
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-start.webp')} alt="Flow v Node-RED se zvýrazněným inject tlačítkem Start node pairing a odpovědí start v záložce debug"/>
   </div>
 </div>
 
@@ -121,7 +121,7 @@ V panelu **debug v Node-RED** se zobrazí zpráva s názvem a verzí firmwaru no
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-paired-mqtt-message.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-paired-mqtt-message.webp')} alt="Záložka debug s informací o firmwaru spárovaného půdního čidla a prvními zprávami o vlhkosti a teplotě"/>
   </div>
 </div>
 
@@ -129,7 +129,7 @@ V panelu **debug v Node-RED** se zobrazí zpráva s názvem a verzí firmwaru no
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-stop.webp')} alt="Flow v Node-RED se zvýrazněným inject tlačítkem Stop node pairing"/>
   </div>
 </div><br></br>
 
@@ -153,7 +153,7 @@ Měli byste pak vidět podobné zprávy:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-radio-test.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-radio-test.webp')} alt="Záložka debug se zvýrazněnými příchozími MQTT zprávami o teplotě a vlhkosti z půdního čidla"/>
   </div>
 </div><br></br>
 
@@ -240,7 +240,7 @@ Nyní můžete dole vidět teplotu a napětí baterie. Je však potřeba přidat
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-duplicate.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-duplicate.webp')} alt="Otevřené menu panelu s grafem teploty v Grafaně se zvýrazněnými položkami More a Duplicate"/>
   </div>
 </div><br></br>
 
@@ -248,7 +248,7 @@ Nyní klikněte na **Edit** v **duplikovaném** grafu.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-edit.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-edit.webp')} alt="Menu duplikovaného panelu v Grafaně se zvýrazněnou položkou Edit"/>
   </div>
 </div><br></br>
 
@@ -256,7 +256,7 @@ Nyní na kartě **Metrics** změňte položku **FROM** z hodnoty **temperature**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-from-moisture.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-from-moisture.webp')} alt="Záložka Metrics v Grafaně s rozbaleným výběrem FROM pro změnu měření z temperature na moisture"/>
   </div>
 </div>
 
@@ -266,7 +266,7 @@ Nyní klikněte na tlačítko **Save** v prostředí **Grafana**, aby vaše konf
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-save.webp')}/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-grafana-save.webp')} alt="Dashboard v Grafaně se zvýrazněným tlačítkem Save v horní liště"/>
   </div>
 </div>
 

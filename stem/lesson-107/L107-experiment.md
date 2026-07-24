@@ -28,7 +28,7 @@ In this experiment, we will control an **LED strip** using a **button** based on
   
 <div class="container">
   <div class="row">
-    <Image img={require('./push-button-canvas.webp')}/>
+    <Image img={require('./push-button-canvas.webp')} alt="Kit parts laid out: Core Module, Mini Battery Module, button cover, O-rings, and orange enclosure halves"/>
   </div>
 </div>
 
@@ -56,7 +56,7 @@ In this experiment, we will control an **LED strip** using a **button** based on
 
 <div class="container">
   <div class="row">
-    <Image img={require('./push-button-canvas.webp')}/>
+    <Image img={require('./push-button-canvas.webp')} alt="Kit parts laid out: Core Module, Mini Battery Module, button cover, O-rings, and orange enclosure halves"/>
   </div>
 </div>
 

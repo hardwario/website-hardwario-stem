@@ -24,7 +24,7 @@ Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vy
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-1.webp')}/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-1.webp')} alt="Záložka Devices v Playgroundu s napárovaným Core Modulem přejmenovaným na still-position-detector:0"/>
   </div>
 </div>
 
@@ -42,7 +42,7 @@ node/still-position-detector:0/hold-time
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-2.webp')}/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-2.webp')} alt="Nastavení uzlu MQTT s tématem hold-time vyplněným v poli Topic"/>
   </div>
 </div>
 
@@ -55,7 +55,7 @@ Potvrď tlačítkem **Done**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-3.webp')}/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-3.webp')} alt="Nastavení uzlu Text s vlastním popiskem vyplněným ve zvýrazněném poli Label"/>
   </div>
 </div>
 
@@ -66,7 +66,7 @@ Potvrď tlačítkem Done.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-4.webp')}/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-4.webp')} alt="Uzel MQTT propojený s uzlem Text a zvýrazněné červené tlačítko Deploy"/>
   </div>
 </div>
 
@@ -82,7 +82,7 @@ Wow, v ruce máš časovač pohybu. Nezní to cool? Zkus si to!
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-5.webp')}/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-5.webp')} alt="Dashboard v Playgroundu zobrazující naměřený čas bez pohybu v sekundách vedle popisku"/>
   </div>
 </div>
 

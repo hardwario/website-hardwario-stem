@@ -36,7 +36,7 @@ Jedním ze způsobů online monitoringu spotřeby je **napojení na elektroměry
 
 <div class="container">
   <div class="row">
-    <Image img={require('./pulse-cabel.avif')}/>
+    <Image img={require('./pulse-cabel.avif')} alt="Pulzní senzor na dlouhém šedém kabelu zakončeném holými vodiči se svorkou"/>
   </div>
 </div>
 

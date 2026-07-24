@@ -17,7 +17,7 @@ As part of the experiment, we will understand:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-soil-sensor.avif')}/>
+    <Image img={require('./stem-soil-sensor.avif')} alt="Soil moisture sensor with a depth scale inserted in a potted flowering plant"/>
   </div>
 </div>
 
@@ -34,7 +34,7 @@ As part of the experiment, we will understand:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-sensor-set-canvas.avif')}/>
+    <Image img={require('./stem-sensor-set-canvas.avif')} alt="Sensor Set parts: Mini Battery Module, Sensor Module, Core Module, cover, batteries, O-rings, and orange enclosure"/>
   </div>
 </div>
 
@@ -42,7 +42,7 @@ As part of the experiment, we will understand:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-sensor-set-schema.avif')}/>
+    <Image img={require('./stem-sensor-set-schema.avif')} alt="Soil Sensor probe with a depth scale and a coiled cable ending in three labeled wires"/>
   </div>
 </div>
 
@@ -52,7 +52,7 @@ Open HARDWARIO Playground application - Tab **Devices**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-sensor-set-playground.png')}/>
+    <Image img={require('./stem-sensor-set-playground.png')} alt="Playground Devices tab with steps highlighted: connect the dongle, click Start pairing, insert batteries"/>
   </div>
 </div>
 
@@ -68,13 +68,13 @@ Copy and Import this **Soil Sensor Flow**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-sensor-set-deploy.avif')}/>
+    <Image img={require('./stem-sensor-set-deploy.avif')} alt="Node-RED menu opened in Playground with the Import option highlighted"/>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-import-nodes.png')}/>
+    <Image img={require('./stem-import-nodes.png')} alt="Import nodes dialog: paste the flow JSON into the Clipboard field and click Import"/>
   </div>
 </div>
 
@@ -82,7 +82,7 @@ Click on **Deploy**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-click-on-deploy.webp')}/>
+    <Image img={require('./stem-click-on-deploy.webp')} alt="Node-RED toolbar with the Deploy button highlighted"/>
   </div>
 </div>
 
@@ -90,7 +90,7 @@ Open Tab **Dashboard** - you'll see gauges with Soil Temperature and Moisture.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-sensor-set-dashboard.avif')}/>
+    <Image img={require('./stem-sensor-set-dashboard.avif')} alt="Dashboard Soil Gauges panel with Soil Moisture and Soil Temperature gauges"/>
   </div>
 </div>
 
@@ -106,7 +106,7 @@ In **HARDWARIO Playground**, tab **Functions**, you can change limits of moistur
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-soil-sensor-diagram.png')}/>
+    <Image img={require('./stem-soil-sensor-diagram.png')} alt="Node-RED flow: raw soil moisture feeds a gauge and the LOW MOISTURE switch driving LED strip colors and the relay"/>
   </div>
 </div>
 

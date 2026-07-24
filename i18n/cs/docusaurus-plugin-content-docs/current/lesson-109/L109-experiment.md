@@ -17,7 +17,7 @@ V rámci experimentu pochopíme:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-soil-sensor.avif')}/>
+    <Image img={require('./stem-soil-sensor.avif')} alt="Senzor půdní vlhkosti se stupnicí hloubky zapíchnutý v květináči s kvetoucí rostlinou"/>
   </div>
 </div>
 
@@ -34,7 +34,7 @@ V rámci experimentu pochopíme:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-sensor-set-canvas.avif')}/>
+    <Image img={require('./stem-sensor-set-canvas.avif')} alt="Díly Sensor Setu: Mini Battery Module, Sensor Module, Core Module, kryt, baterie, O-kroužky a oranžová krabička"/>
   </div>
 </div>
 
@@ -42,7 +42,7 @@ V rámci experimentu pochopíme:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-sensor-set-schema.avif')}/>
+    <Image img={require('./stem-sensor-set-schema.avif')} alt="Sonda Soil Sensoru se stupnicí hloubky a stočeným kabelem zakončeným třemi značenými vodiči"/>
   </div>
 </div>
 
@@ -52,7 +52,7 @@ Otevřete aplikaci HARDWARIO Playground – záložka **Devices**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-sensor-set-playground.png')}/>
+    <Image img={require('./stem-sensor-set-playground.png')} alt="Záložka Devices v Playgroundu se zvýrazněnými kroky: připojit dongle, spustit párování, vložit baterie"/>
   </div>
 </div>
 
@@ -68,13 +68,13 @@ Zkopírujte a importujte tento **flow pro půdní senzor**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-sensor-set-deploy.avif')}/>
+    <Image img={require('./stem-sensor-set-deploy.avif')} alt="Otevřené menu Node-RED v Playgroundu se zvýrazněnou volbou Import"/>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-import-nodes.png')}/>
+    <Image img={require('./stem-import-nodes.png')} alt="Dialog Import nodes: vložte JSON flow do pole Clipboard a klikněte na Import"/>
   </div>
 </div>
 
@@ -82,7 +82,7 @@ Klikněte na **Deploy**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-click-on-deploy.webp')}/>
+    <Image img={require('./stem-click-on-deploy.webp')} alt="Lišta Node-RED se zvýrazněným tlačítkem Deploy"/>
   </div>
 </div>
 
@@ -90,7 +90,7 @@ Otevřete záložku **Dashboard** – uvidíte měřáky s hodnotami teploty a v
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-sensor-set-dashboard.avif')}/>
+    <Image img={require('./stem-sensor-set-dashboard.avif')} alt="Panel Soil Gauges na dashboardu s budíky Soil Moisture a Soil Temperature"/>
   </div>
 </div>
 
@@ -106,7 +106,7 @@ V aplikaci **HARDWARIO Playground**, záložka **Functions**, můžete měnit li
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-soil-sensor-diagram.png')}/>
+    <Image img={require('./stem-soil-sensor-diagram.png')} alt="Flow v Node-RED: surová vlhkost půdy vede do budíku a uzlu LOW MOISTURE, který řídí barvy LED pásku a relé"/>
   </div>
 </div>
 

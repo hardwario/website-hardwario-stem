@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
-    <Image img={require('./industry-4.0.png')}/>
+    <Image img={require('./industry-4.0.png')} alt="Timeline of the four industrial revolutions: mechanization, mass production, computers, cyber-physical systems"/>
   </div>
 </div>
 *Image illustrating the four industrial revolutions.*

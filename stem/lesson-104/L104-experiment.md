@@ -41,7 +41,7 @@ The **Tag module format** in the TOWER kit is designed for **I²C peripherals** 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./humidity-tag.png')}/>
+    <Image img={require('./humidity-tag.png')} alt="Pinout of the 16 x 16 mm Tag module: pins 1-5 carry GND, VDD, SCL, SDA, and INT"/>
   </div>
 </div>
 *Signal wiring on the 5-pin connector*
@@ -58,7 +58,7 @@ Insert the Humidity Tag into the **bottom right corner** of the Bridge Module. T
 
 <div class="container">
   <div class="row">
-    <Image img={require('./bridge-set.avif')}/>
+    <Image img={require('./bridge-set.avif')} alt="Bridge Module with the Humidity Tag plugged into its corner and a micro USB cable attached"/>
   </div>
 </div>
 *Bridge Module with Humidity Tag*
@@ -77,7 +77,7 @@ Download the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playg
 
 <div class="container">
   <div class="row">
-    <Image img={require('./bridge-playground.webp')}/>
+    <Image img={require('./bridge-playground.webp')} alt="Playground Bridge tab with bridge enabled, showing a table of measured humidity and temperature values"/>
   </div>
 </div>
 
@@ -93,7 +93,7 @@ Download the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playg
 * In the top right corner, you will find the hamburger menu with an **Import** option inside
 <div class="container">
   <div class="row">
-    <Image img={require('./playground-import.png')}/>
+    <Image img={require('./playground-import.png')} alt="Node-RED hamburger menu opened, with the Import option highlighted"/>
   </div>
 </div>
 
@@ -103,13 +103,13 @@ Download the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playg
 
 <div class="container">
   <div class="row">
-    <Image img={require('./temperature-and-humidity-graph.avif')}/>
+    <Image img={require('./temperature-and-humidity-graph.avif')} alt="Dashboard Charts section with line graphs of temperature and humidity over time"/>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <Image img={require('./temperature-and-humidity-gauges.avif')}/>
+    <Image img={require('./temperature-and-humidity-gauges.avif')} alt="Dashboard Gauges section showing temperature and humidity dials with current readings"/>
   </div>
 </div>
 

@@ -25,7 +25,7 @@ V rámci experimentu budeme přenášet počet impulzů pomocí **LED** nebo **m
 
 <div class="container">
   <div class="row">
-    <Image img={require('./modules-canvas.webp')}/>
+    <Image img={require('./modules-canvas.webp')} alt="Díly senzorové sestavy: Core Module, Mini Battery Module, Sensor Module se svorkovnicí, kryt, baterie, O-kroužky, krabička"/>
   </div>
 </div>
 
@@ -37,7 +37,7 @@ V rámci experimentu budeme přenášet počet impulzů pomocí **LED** nebo **m
 
 <div class="container">
   <div class="row">
-    <Image img={require('./counter.avif')}/>
+    <Image img={require('./counter.avif')} alt="Sensor Module s vodiči pulzního čítače připojenými do zelené svorkovnice"/>
   </div>
 </div>
 
@@ -74,7 +74,7 @@ V rámci experimentu budeme přenášet počet impulzů pomocí **LED** nebo **m
 ```
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-diagram.png')}/>
+    <Image img={require('./stem-diagram.png')} alt="Flow v Node-RED: počet pulzů vede do textu Pulses, grafu Pulses in time a uzlu switch zobrazujícího dialog"/>
   </div>
 </div>
 
@@ -89,7 +89,7 @@ V rámci experimentu budeme přenášet počet impulzů pomocí **LED** nebo **m
 
  <div class="container">
   <div class="row">
-    <Image img={require('./stem-result.webp')}/>
+    <Image img={require('./stem-result.webp')} alt="Dashboard Node-RED s počtem pulzů, grafem Pulses in time a dialogem Pulse counter hlásícím 30 ticks detected"/>
   </div>
 </div>
 

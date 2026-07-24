@@ -36,12 +36,12 @@ In Playground, we will create a flow pattern showing the weight of the students.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./tower-experiment-1.avif')}/>
+    <Image img={require('./tower-experiment-1.avif')} alt="Editing the mqtt in node in Playground: weight topic filled in and wired to a dashboard text node"/>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <Image img={require('./tower-experiment-2.webp')}/>
+    <Image img={require('./tower-experiment-2.webp')} alt="Playground Messages tab publishing a weight value to the topic, with cesko/# among subscribed topics"/>
   </div>
 </div>

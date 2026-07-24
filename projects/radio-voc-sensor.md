@@ -10,7 +10,7 @@ This document will guide you through the **Radio VOC sensor** project. You will 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-project-image.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-project-image.webp')} alt="Radio VOC sensor: minimal and full assemblies beside a dashboard with TVOC and temperature gauges"/>
   </div>
 </div>
 
@@ -18,7 +18,7 @@ This document will guide you through the **Radio VOC sensor** project. You will 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-block-diagram.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-block-diagram.webp')} alt="Block diagram: sensor kit linked over sub-GHz radio to the Radio Dongle and a gateway running MQTT and Node-RED"/>
   </div>
 </div>
 
@@ -78,7 +78,7 @@ Here is the minimal assembly for VOC sensor.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-minimal.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-minimal.webp')} alt="Minimal assembly: Core Module and VOC Tag plugged into the Battery Module"/>
   </div>
 </div>
 
@@ -100,7 +100,7 @@ The firmware also supports [**LCD Module**](https://www.hardwario.store/p/lcd-mo
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-full.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-full.webp')} alt="Full assembly stack: LCD Module on Core Module with Tag Module, Temperature, Humidity, and VOC Tags on the Battery Module"/>
   </div>
 </div>
 
@@ -146,7 +146,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-controls.webp')} alt="Imported Node-RED flow with inject buttons for gateway commands, each wired to an MQTT output node"/>
   </div>
 </div><br></br>
 
@@ -162,7 +162,7 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-debug.webp')} alt="Node-RED with the debug tab in the right sidebar highlighted"/>
   </div>
 </div><br></br>
 
@@ -176,7 +176,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-list.webp')} alt="Node-RED debug tab showing the gateway info response with firmware name and id after clicking List all gateways"/>
   </div>
 </div><br></br>
 
@@ -196,7 +196,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-pair-start.webp')} alt="Node-RED with the Start node pairing inject button highlighted and the pairing start message in the debug tab"/>
   </div>
 </div>
 
@@ -206,7 +206,7 @@ Insert the batteries into the **Radio VOC sensor** to send the pairing request (
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-sensor-paired.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-sensor-paired.webp')} alt="Node-RED debug tab with the pairing response: node attach, firmware wireless-voc-sensor, and first sensor values"/>
   </div>
 </div>
 
@@ -214,7 +214,7 @@ Insert the batteries into the **Radio VOC sensor** to send the pairing request (
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-pair-stop.webp')} alt="Node-RED with the Stop node pairing inject button highlighted and the stop message in the debug tab"/>
   </div>
 </div><br></br>
 
@@ -238,7 +238,7 @@ You should then see similar messages:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-messages.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-messages.webp')} alt="Debug messages with TVOC, temperature, and relative humidity values from the sensor topics"/>
   </div>
 </div><br></br>
 
@@ -272,7 +272,7 @@ You can insert the following snippet in the flow (using **Menu >> Import**) inst
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-dashboard-deploy.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-dashboard-deploy.webp')} alt="Three MQTT input nodes wired to Gauge nodes, with Deploy and the open-dashboard icon highlighted"/>
   </div>
 </div>
 
@@ -282,7 +282,7 @@ You will see this dashboard with values from the Radio VOC sensor.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-dashboard.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-dashboard.webp')} alt="Node-RED dashboard with TVOC, Temperature, and Humidity gauges showing live values"/>
   </div>
 </div><br></br>
 

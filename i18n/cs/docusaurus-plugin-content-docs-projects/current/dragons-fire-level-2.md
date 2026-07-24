@@ -21,7 +21,7 @@ I tentokrát ti postačí základní HARDWARIO sada, tedy [**Start Set**](https:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connected.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connected.webp')} alt="Záložka Devices v Playgroundu se spárovaným Core Module pod aliasem push-button:0"/>
   </div>
 </div>
 

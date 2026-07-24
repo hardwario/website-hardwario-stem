@@ -18,7 +18,7 @@ You will need **the box with the button** and the **USB dongle**. All you need i
 
 node/x-axis-detector:0/accelerometer/-/event-count
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-1.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-1.webp')} alt="Edit mqtt in node dialog with the accelerometer event-count topic filled into the highlighted Topic field"/> </div> </div>
 
 Confirm it with the **Done** button.
 
@@ -26,7 +26,7 @@ Confirm it with the **Done** button.
 
 1. You can programme a random option following a simple javascript. But don’t worry, we’ll help you. First, place the **Function node** from the Function section next to the MQTT.
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-2.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-2.webp')} alt="Function node highlighted in the palette and placed next to the accelerometer MQTT node"/> </div> </div>
 
 2. Double click on the node to open it. In the **Name** line, name the node (for example, Random option). In the **Function** line, copy this code exactly as you see it in the picture. With this code, one of the participants will be drawn.
 ```
@@ -35,47 +35,47 @@ msg.payload = flow.get("contestantArr")[rand];
 return msg;
 ```
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-3.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-3.webp')} alt="Edit function node dialog named Random pick with the random-draw JavaScript on the On Message tab"/> </div> </div>
 
 Confirm it with the **Done** button.
 
 3. Add another node next to the Random option, the **Delay** one (also found in the Function section). Thanks to this node, the response will be delayed a little and it will create an atmosphere of tension. Boo! 😲
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-4.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-4.webp')} alt="Delay node highlighted in the palette, with a delay 5s node placed after the Random pick function"/> </div> </div>
 
 4. Inside the node, make it even more random, set up a **random delay**. Click on random delay and select a time between **2 and 4 seconds**. That should be just right for keeping the tension in the air.
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-5.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-5.webp')} alt="Edit delay node dialog set to a random delay between 2 and 4 seconds"/> </div> </div>
 
 Confirm it with the **Done** button.
 
 5. Above all this, place a node that will set up a message that shows up when the box is busy picking. Use the **Change node** from the same section to do it.
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-6.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-6.webp')} alt="Change node highlighted in the palette, with a set msg.payload node placed above the draw flow"/> </div> </div>
 
 6. Open the node with a double-click and type here your message. For example, _Picking_...
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-7.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-7.webp')} alt="Edit change node dialog setting msg.payload to the text Picking..."/> </div> </div>
 
 ## Set the participants
 
 1. Your lottery won’t do without a table reset button. You need it to continue playing. Under the MQTT place the **Button node**, this time from the Dashboard section.
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-8.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-8.webp')} alt="Button node highlighted in the dashboard palette and placed below the MQTT node"/> </div> </div>
 
 2. Double click on the node and in the **Label** line, name it _Reset_.
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-9.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-9.webp')} alt="Edit button node dialog with the Label field set to Reset"/> </div> </div>
 
 Confirm it with the **Done** button.
 
 3. We are moving on. Now set all your buddies who will take part in the game. Anonymously, for now. Place them on the desktop using the **Text input** node in the Dashboard section. As many pieces as many you are.
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-10.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-10.webp')} alt="Text input node highlighted in the palette, with five text input nodes placed on the canvas"/> </div> </div>
 
 4. Within each node, rewrite the **Label** line to Participant + a number from one to as many as you are. So it will go Participant 1, Participant 2… you know the rest. In the **Delay** field, fill in the number 0. **Uncheck** the box just bellow it to really reset the fields after the reset. Do all this with all nodes with participants.
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-11.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-11.webp')} alt="Edit text input node dialog with Label Participant 2, Delay set to 0 and the pass-through box unchecked"/> </div> </div>
 
 Confirm it with the **Done** button.
 
@@ -99,17 +99,17 @@ flow.set("contestantArr", contestantArray);
 
 Make sure the **Output** is really just one. ❗
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-12.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-12.webp')} alt="Edit function node dialog named Fate, choose one of them with the code that stores each participant"/> </div> </div>
 
 Confirm it with the **Done** button.
 
 7. Don’t worry, we are almost finished. 🙌 Place the **Change** node on the desktop. This will ensure that everything gets restored to its original state when resetting.🖖
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-13.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-13.webp')} alt="Second set msg.payload change node highlighted below the participant nodes"/> </div> </div>
 
 8. In this node’s settings, fill in two **Rules** as you can see in the picture. The first one is **Delete | flow | ContestantArr**. To add another rule, click on the small **+Add** button below the field. In this Rule, set **Delete | flow | numberOfContestants.**
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-14.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-14.webp')} alt="Edit change node dialog with two Delete rules clearing contestantArr and numberOfContestants"/> </div> </div>
 
 Confirm it with the **Done** button.
 
@@ -117,17 +117,17 @@ Confirm it with the **Done** button.
 
 1. Put the last node behind all this on the desktop. It will tell everyone who has been chosen. 🙏 You can find it simply as **Text** node in the Dashboard section.
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-15.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-15.webp')} alt="Text node highlighted in the dashboard palette and placed at the end of the flow"/> </div> </div>
 
 2. In the **Label** line inside the node, set how the message will look like when randomly selecting one participant.
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-16.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-16.webp')} alt="Edit text node dialog with the Label set to And fate chooses..."/> </div> </div>
 
 Confirm it with the **Done** button.
 
 3. And then **put it all beautifully together**. In the upper part, connect all the nodes that ensure the draw, in the lower part, connect the ones that form the draw table.
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-17.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-17.webp')} alt="Finished flow with the draw and participant nodes wired together and the Deploy button highlighted"/> </div> </div>
 
 4. Don’t forget to click on the **Deploy** button in the top right corner! 🚨
 
@@ -135,7 +135,7 @@ Confirm it with the **Done** button.
 
 1. And now, let’s get down to business! In the **Dashboard** tab, enter the names of all participants. If you haven’t selected the auto-refresh time period in the nodes for each participant, be sure to press **Enter** after each name. 👈
 
-<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-18.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-18.webp')} alt="Dashboard with the Reset button, five participant name fields and the drawn name shown below"/> </div> </div>
 
 2. **Who was chosen by fate**? And what for? It’s only up to you now. 😈 You can, for example:
 

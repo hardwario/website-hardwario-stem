@@ -20,7 +20,7 @@ All you need is the box with button and the USB dongle in the basic HARDWARIO [S
 
 3. Pair the Core Module with the USB Dongle. Right after pairing it, you will notice that your Core Module has changed Alias to **x-axis-detector**.
 
-<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-1.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-1.webp')} alt="Playground Devices tab with the paired Core Module listed under the alias x-axis-detector:0"/> </div> </div>
 
 ## Get it started in the Node-RED
 
@@ -32,7 +32,7 @@ All you need is the box with button and the USB dongle in the basic HARDWARIO [S
 node/x-axis-detector:0/accelerometer/-/event-count
 ```
 
-<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-2.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-2.webp')} alt="Edit mqtt in node dialog with the accelerometer event-count topic in the highlighted Topic field"/> </div> </div>
 
 Confirm it with the **Done** button.
 
@@ -53,7 +53,7 @@ return msg;
 
 Name the node in the Label field, e.g. **Counter**.
 
-<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-3.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-3.webp')} alt="Edit function node dialog with the fridge-opening counter code and the node name filled in"/> </div> </div>
 
 Confirm it the the **Done** button.
 
@@ -64,13 +64,13 @@ Confirm it the the **Done** button.
 6. Inside the node, change its Label to a text you want to see while it’s counting. It could be, for example, **Open fridge**.
 
 
-<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-4.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-4.webp')} alt="Edit text node dialog with the Label field set to Otevrena lednice (open fridge)"/> </div> </div>
 
 Confirm it with the **Done** button.
 
 7. **Connect all three nodes**, just as you can see in the picture. In the top-right corner, remember to click on the good old **Deploy** button which will start up the entire flow.
 
-<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-6.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-6.webp')} alt="All three nodes wired from MQTT through the counter to the text node, with Deploy highlighted"/> </div> </div>
 
 ## And… action!
 
@@ -78,7 +78,7 @@ Confirm it with the **Done** button.
 2. Place the box horizontally **into the door of the fridge**.
 3. When someone opens the door, the box will send you a notification to the **Dashboard** tab.
 
-<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-7.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-7.webp')} alt="Dashboard tile labelled Otevrena lednice showing the fridge was opened 4 times"/> </div> </div>
 
 
 4. **Run to subdue the wicked villain! 👮**

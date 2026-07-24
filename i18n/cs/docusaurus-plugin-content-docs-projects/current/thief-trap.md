@@ -26,7 +26,7 @@ Pokud máš Starter Set, budeš k němu potřebovat ještě [**PIR Module**](htt
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-2.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-2.webp')} alt="Záložka Devices v Playgroundu: řádek spárovaného zařízení se zvýrazněným aliasem burglar-alarm:0"/>
   </div>
 </div>
 
@@ -61,7 +61,7 @@ return msg;
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-3.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-3.webp')} alt="Plocha Node-RED s uzlem Function umístěným na ploše"/>
   </div>
 </div>
 
@@ -71,7 +71,7 @@ return msg;
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-4.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-4.webp')} alt="Plocha Node-RED: widget Switch ze sekce Dashboard umístěný vedle uzlu Function"/>
   </div>
 </div>
 4. Na node dvakrát klikni a změň jeho **Label** na Spouštěč. Potom uprav **On Payload** a **Off Payload** na 1 a 0 (viz obrázek).
@@ -81,7 +81,7 @@ Potvrď tlačítkem **Done**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-5.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-5.webp')} alt="Dialog Edit switch node: zvýrazněná pole Label, On Payload 1 a Off Payload 0"/>
   </div>
 </div>
 
@@ -107,7 +107,7 @@ return msg;
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-10.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-10.webp')} alt="Flow v Node-RED se zvýrazněným uzlem Function pro stav nastavení upozornění za uzly switch a Blynk read"/>
   </div>
 </div>
 
@@ -128,7 +128,7 @@ node/burglar-alarm:0/thermometer/0:1/temperature
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-11.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-11.webp')} alt="Flow v Node-RED se zvýrazněným MQTT uzlem teploty z burglar-alarm teploměru"/>
   </div>
 </div>
 
@@ -144,7 +144,7 @@ Díky tomuhle node bude senzor aktivní jenom v případě, že ho spustíš tla
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-12.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-12.webp')} alt="Flow v Node-RED se zvýrazněným uzlem Function pro stav alarmu vedle MQTT uzlu teploty"/>
   </div>
 </div>
 
@@ -157,7 +157,7 @@ V něm nastav jako Topic _node/burglar-alarm:0/alarm/-/set/state_, přes který 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-13.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-13.webp')} alt="Flow v Node-RED: teplota, stav alarmu a zvýrazněný výstupní MQTT uzel s tématem nastavení stavu alarmu"/>
   </div>
 </div>
 
@@ -173,7 +173,7 @@ Nejdřív si na plochu postav **MQTT node ze sekce Input**. V něm nastav jako *
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-14.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-14.webp')} alt="Flow v Node-RED se zvýrazněným vstupním MQTT uzlem event-count PIR senzoru"/>
   </div>
 </div>
 
@@ -190,7 +190,7 @@ return msg;
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-15.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-15.webp')} alt="Flow v Node-RED se zvýrazněným uzlem Function pro zprávu vedle uzlu event-count PIR senzoru"/>
   </div>
 </div>
 
@@ -205,7 +205,7 @@ return msg;
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-18.webp')}/>
+    <Image img={require('./img/thief-trap/thief-trap-18.webp')} alt="Záložka Dashboard v Playgroundu se zapnutým spouštěcím přepínačem"/>
   </div>
 </div>
 

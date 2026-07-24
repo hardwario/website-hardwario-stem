@@ -19,7 +19,7 @@ Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vy
 2. Na Core Module nahraj speciální firmware, a to **bcf-radio-x-axis-detector** (najdeš ho mezi ostatním firmwarem v Playgroundu). Díky tomuhle firmwaru bude krabička citlivější na pohyb. 👌
 3. Core Module spáruj s USB Donglem. Hned po spárování uvidíš, že tvůj Core Module změnil Alias na **x-axis-detector**.
 
-<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-1.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-1.webp')} alt="Záložka Devices v Playgroundu se spárovaným Core Module pod aliasem x-axis-detector:0"/> </div> </div>
 
 ## Rozjeď to v Node-RED
 
@@ -30,7 +30,7 @@ Dvakrát na něj klikni a do řádku zkopíruj **Topic**, se kterým krabička o
 ```
 node/x-axis-detector:0/accelerometer/-/event-count
 ```
-<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-2.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-2.webp')} alt="Dialog Edit mqtt in node se zvýrazněným polem Topic s tématem event-count akcelerometru"/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
@@ -49,7 +49,7 @@ return msg;
 
 Node si ještě pojmenuj v řádku Label, třeba na **Počítadlo**.
 
-<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-3.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-3.webp')} alt="Dialog Edit function node s kódem počítadla otevření lednice a vyplněným názvem uzlu"/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
@@ -60,13 +60,13 @@ Potvrď tlačítkem **Done**.
 6. Uvnitř nodu změň jeho Label na text, který chceš, aby se ti při počítání ukazoval. Takže třeba **Otevřená lednice**.
 
 
-<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-4.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-4.webp')} alt="Dialog Edit text node s polem Label nastaveným na Otevřená lednice"/> </div> </div>
 
 Potvrď tlačítkem **Done**.
 
 7. **Všechny tři nody propoj** tak, jak to vidíš na obrázku. V pravém horním rohu nezapomeň ťuknout na staré známé tlačítko **Deploy**, kterým celé flow rozjedeš.
 
-<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-6.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-6.webp')} alt="Všechny tři uzly propojené od MQTT přes počítadlo k textovému uzlu, se zvýrazněným tlačítkem Deploy"/> </div> </div>
 
 
 ## A… akce!
@@ -75,7 +75,7 @@ Potvrď tlačítkem **Done**.
 2. Krabičku vlož naležato **do dvířek lednice**.
 3. Když se dvířka otevřou, krabička ti pošle upozornění na záložku **Dashboard**.
 
-<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-7.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-7.webp')} alt="Dlaždice Otevřená lednice na Dashboardu ukazující 4 otevření lednice"/> </div> </div>
 
 4. **Utíkej zpacifikovat zlotřilého zloducha!** 👮
 5. A vychutnej si svou sladkou odměnu ty sám. 💘

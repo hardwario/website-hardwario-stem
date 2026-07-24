@@ -13,7 +13,7 @@ This document will guide you through the **Radio CO₂ Monitor** project. You wi
 <div class="container">
   <div class="row">
     <Image  img={require('./img/radio-co2-monitor/radio-co2-monitor.png')}
-          style={{ backgroundColor: "#fff" }}/>
+          style={{ backgroundColor: "#fff" }} alt="Block diagram: Radio CO2 Monitor Set linked over sub-GHz radio to the Radio Dongle and Node-RED gateway stack"/>
   </div>
 </div>
 
@@ -123,7 +123,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-controls.webp')} alt="Imported Node-RED flow with inject buttons for the gateway commands, each wired to an MQTT node"/>
   </div>
 </div><br></br>
 
@@ -135,7 +135,7 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-debug.webp')} alt="Node-RED editor with the debug tab highlighted in the right sidebar"/>
   </div>
 </div><br></br>
 
@@ -149,7 +149,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-list.webp')} alt="Debug tab showing the gateway info response after clicking List all gateways"/>
   </div>
 </div><br></br>
 
@@ -169,7 +169,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-pair-start.webp')} alt="Start node pairing button highlighted, with the pairing start confirmed in the debug tab"/>
   </div>
 </div>
 
@@ -179,7 +179,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-node-red-gw-pair-stop.webp')} alt="Stop node pairing button highlighted, with the pairing stop confirmed in the debug tab"/>
   </div>
 </div><br></br>
 
@@ -202,7 +202,7 @@ Start breathing on the temperature sensor on the **Temperature Tag** to invoke a
 You should then see similar messages:
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-radio-test.webp')}/>
+    <Image img={require('./img/radio-co2-monitor/radio-co2-monitor-radio-test.webp')} alt="Debug tab showing an MQTT message with the measured CO2 concentration"/>
   </div>
 </div><br></br>
 

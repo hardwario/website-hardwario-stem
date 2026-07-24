@@ -12,7 +12,7 @@ This document will guide you through the **Radio Flood Detector** project. You w
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/projects-radio-flood-detector-block-diagram.webp')}/>
+    <Image img={require('./img/radio-flood-detector/projects-radio-flood-detector-block-diagram.webp')} alt="Block diagram: Radio Flood Detector Kit with the LD-81 probe linked by radio to the gateway, Node-RED and IFTTT"/>
   </div>
 </div>
 
@@ -103,7 +103,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-controls.webp')} alt="Imported Node-RED flow with inject buttons for the gateway commands, each wired to an MQTT node"/>
   </div>
 </div>
 
@@ -119,7 +119,7 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-debug.webp')} alt="Node-RED editor with the debug tab highlighted in the right sidebar"/>
   </div>
 </div>
 
@@ -133,7 +133,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-list.webp')} alt="Debug tab showing the gateway info response after clicking List all gateways"/>
   </div>
 </div>
 
@@ -153,7 +153,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-pair-start.webp')} alt="Start node pairing button highlighted, with the pairing start confirmed in the debug tab"/>
   </div>
 </div>
 
@@ -163,7 +163,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-gw-pair-stop.webp')} alt="Stop node pairing button highlighted, with the pairing stop confirmed in the debug tab"/>
   </div>
 </div>
 
@@ -185,7 +185,7 @@ You should then see similar messages:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-radio-test.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-radio-test.webp')} alt="Debug tab showing flood detector alarm messages switching between true and false"/>
   </div>
 </div>
 
@@ -213,7 +213,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-01.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-01.webp')} alt="IFTTT homepage with the Sign in button highlighted"/>
   </div>
 </div>
 
@@ -221,7 +221,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-02.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-02.webp')} alt="IFTTT Discover page after signing in, with My Applets highlighted in the menu"/>
   </div>
 </div>
 
@@ -229,7 +229,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-03.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-03.webp')} alt="My Applets page with the New Applet button highlighted"/>
   </div>
 </div>
 
@@ -237,7 +237,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-04.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-04.webp')} alt="New Applet editor with +this highlighted in the if this then that sentence"/>
   </div>
 </div>
 
@@ -245,7 +245,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-05.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-05.webp')} alt="Choose a service step with Webhooks typed in the search and the Webhooks tile highlighted"/>
   </div>
 </div>
 
@@ -253,7 +253,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-06.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-06.webp')} alt="Choose trigger step with the Receive a web request card highlighted"/>
   </div>
 </div>
 
@@ -261,7 +261,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-07.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-07.webp')} alt="Trigger fields with flood typed as Event Name and the Create trigger button highlighted"/>
   </div>
 </div>
 
@@ -269,7 +269,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-08.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-08.webp')} alt="New Applet editor with +that highlighted in the if this then that sentence"/>
   </div>
 </div>
 
@@ -277,7 +277,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-09.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-09.webp')} alt="Choose action service step with Notifications searched and the Notifications tile highlighted"/>
   </div>
 </div>
 
@@ -285,7 +285,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-10.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-10.webp')} alt="Choose action step with the Send a notification from the IFTTT app card highlighted"/>
   </div>
 </div>
 
@@ -293,7 +293,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-11.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-11.webp')} alt="Action fields with the flood notification text filled in and the Create action button highlighted"/>
   </div>
 </div>
 
@@ -301,7 +301,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-12.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-12.webp')} alt="Review and finish step for the flood applet with the Finish button highlighted"/>
   </div>
 </div>
 
@@ -309,7 +309,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-13.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-13.webp')} alt="Finished flood applet switched on, with the Webhooks icon highlighted"/>
   </div>
 </div>
 
@@ -317,7 +317,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-14.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-14.webp')} alt="Webhooks service page with the Documentation button highlighted"/>
   </div>
 </div>
 
@@ -325,7 +325,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-15.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-15.webp')} alt="Webhooks documentation page showing your key, with the event placeholder in the trigger URL highlighted"/>
   </div>
 </div>
 
@@ -333,7 +333,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-16.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-16.webp')} alt="Webhooks documentation page with flood entered in the event field of the trigger URL"/>
   </div>
 </div>
 
@@ -343,7 +343,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-17.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-17.webp')} alt="Webhooks documentation page with the Test It button highlighted"/>
   </div>
 </div>
 
@@ -353,7 +353,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-18.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-ifttt-18.webp')} alt="Webhooks documentation page with the personal key highlighted for copying"/>
   </div>
 </div>
 
@@ -379,7 +379,7 @@ It will look like this:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-ifttt-snippet.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-ifttt-snippet.webp')} alt="Node-RED flow wiring the flood alarm MQTT topic through a switch node to the flood IFTTT node"/>
   </div>
 </div>
 
@@ -393,7 +393,7 @@ This snippet creates a connection between the MQTT topic `node/flood-detector:0/
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-ifttt-key.webp')}/>
+    <Image img={require('./img/radio-flood-detector/radio-flood-detector-node-red-ifttt-key.webp')} alt="Edit ifttt out node dialog with the Key field and pencil icon for entering your IFTTT key"/>
   </div>
 </div>
 

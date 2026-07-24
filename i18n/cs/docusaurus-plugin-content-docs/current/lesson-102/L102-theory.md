@@ -30,7 +30,7 @@ import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
-    <Image img={require('./tower-communication.avif')}/>
+    <Image img={require('./tower-communication.avif')} alt="Schéma komunikace stavebnice TOWER: cesty sub-GHz, LoRaWAN, Sigfox, NB-IoT a Ethernet do cloudu a aplikací"/>
   </div>
 </div>
 
@@ -47,7 +47,7 @@ V **HARDWARIO Playground** můžeš:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./tower-diagram.avif')}/>
+    <Image img={require('./tower-diagram.avif')} alt="Záložka Functions v aplikaci HARDWARIO Playground s Node-RED flow uzlů climate-monitoru"/>
   </div>
 </div>
 

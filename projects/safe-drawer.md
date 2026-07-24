@@ -23,7 +23,7 @@ You only need a **box with a button** and a **Radio Dongle**. That's why the bas
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-1.webp')}/>
+    <Image img={require('./img/safe-drawer/safe-drawer-1.webp')} alt="Playground Devices tab: the paired device row with alias x-axis-detector:0 highlighted"/>
   </div>
 </div>
 
@@ -59,7 +59,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-2.webp')}/>
+    <Image img={require('./img/safe-drawer/safe-drawer-2.webp')} alt="Edit mqtt in node dialog with the accelerometer event-count topic in the highlighted Topic field"/>
   </div>
 </div>
 
@@ -67,7 +67,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-3.webp')}/>
+    <Image img={require('./img/safe-drawer/safe-drawer-3.webp')} alt="Node-RED workspace with a Switch node placed next to the x-axis-detector MQTT node"/>
   </div>
 </div>
 
@@ -75,7 +75,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-4.webp')}/>
+    <Image img={require('./img/safe-drawer/safe-drawer-4.webp')} alt="Edit switch node dialog: Property set to flow.active with rule equals 1"/>
   </div>
 </div>
 
@@ -83,7 +83,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-5.webp')}/>
+    <Image img={require('./img/safe-drawer/safe-drawer-5.webp')} alt="Node-RED workspace with a Change node (set msg.payload) added after the Switch node"/>
   </div>
 </div>
 
@@ -91,7 +91,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-6.webp')}/>
+    <Image img={require('./img/safe-drawer/safe-drawer-6.webp')} alt="Edit change node dialog: msg.payload set to the alert message text"/>
   </div>
 </div>
 

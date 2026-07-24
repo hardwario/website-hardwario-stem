@@ -30,7 +30,7 @@ The communication will be done wirelessly to the Radio Dongle plugged into the U
 
 <div class="container">
   <div class="row">
-    <Image img={require('./push-button-canvas.webp')}/>
+    <Image img={require('./push-button-canvas.webp')} alt="Parts of the IoT button: Core Module, Mini Battery Module with batteries, Push Button Module, and 3D-printed case"/>
   </div>
 </div>
 

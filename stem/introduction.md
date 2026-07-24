@@ -17,7 +17,7 @@ HARDWARIO offers detailed STEM lessons with a consistent structure: theoretical 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-education-overview.png')}/>
+    <Image img={require('./stem-education-overview.png')} alt="Four-stage active STEM learning cycle: realise, experiment, apply, and reflect around an IoT device"/>
   </div>
 </div>
 

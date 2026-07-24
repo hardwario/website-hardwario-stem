@@ -22,7 +22,7 @@ You only need a **box with a button** and a **USB dongle**.  That's why the basi
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-1.webp')}/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-1.webp')} alt="Playground Devices tab with the paired Core Module renamed to still-position-detector:0"/>
   </div>
 </div>
 
@@ -39,7 +39,7 @@ node/still-position-detector:0/hold-time
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-2.webp')}/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-2.webp')} alt="MQTT node settings with the hold-time topic filled in the Topic field"/>
   </div>
 </div>
 
@@ -53,7 +53,7 @@ Confirm by clicking the **Done** button.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-3.webp')}/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-3.webp')} alt="Text node settings with a custom name typed into the highlighted Label field"/>
   </div>
 </div>
 
@@ -63,7 +63,7 @@ Confirm by clicking the **Done** button.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-4.webp')}/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-4.webp')} alt="MQTT node wired to the Text node, with the red Deploy button highlighted"/>
   </div>
 </div>
 
@@ -77,7 +77,7 @@ You now have a motion detector and timer in your hand. Cool, or what? Give it a 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-5.webp')}/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-5.webp')} alt="Playground Dashboard showing the measured still time in seconds next to its label"/>
   </div>
 </div>
 

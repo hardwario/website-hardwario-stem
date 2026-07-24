@@ -10,7 +10,7 @@ Tento dokument vás provede projektem **Bezdrátový VOC senzor**. Budete moci z
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-project-image.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-project-image.webp')} alt="Radio VOC sensor: minimální a plná sestava vedle dashboardu s budíky TVOC a teploty"/>
   </div>
 </div>
 
@@ -18,7 +18,7 @@ Tento dokument vás provede projektem **Bezdrátový VOC senzor**. Budete moci z
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-block-diagram.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-block-diagram.webp')} alt="Blokové schéma: sestava senzoru spojená sub-GHz rádiem s Radio Donglem a bránou s MQTT a Node-RED"/>
   </div>
 </div>
 
@@ -80,7 +80,7 @@ Zde je minimální sestava pro VOC senzor.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-minimal.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-minimal.webp')} alt="Minimální sestava: Core Module a VOC Tag zapojené do Battery Module"/>
   </div>
 </div>
 
@@ -102,7 +102,7 @@ Firmware také podporuje [**LCD Module**](https://www.hardwario.store/cz/p/lcd-m
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-full.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-full.webp')} alt="Plná sestava: LCD Module na Core Module s Tag Module a Tagy teploty, vlhkosti a VOC na Battery Module"/>
   </div>
 </div>
 
@@ -148,7 +148,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-controls.webp')} alt="Importovaný flow v Node-RED s inject tlačítky pro příkazy brány, každé propojené s výstupním MQTT uzlem"/>
   </div>
 </div><br></br>
 
@@ -164,7 +164,7 @@ Tento útržek poskytuje ovládací tlačítka pro příkazy bráně/rádiu. Tyt
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-debug.webp')} alt="Node-RED se zvýrazněnou záložkou debug v pravém panelu"/>
   </div>
 </div><br></br>
 
@@ -178,7 +178,7 @@ V záložce **debug** budete moci vidět všechny MQTT zprávy.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-list.webp')} alt="Záložka debug v Node-RED s odpovědí brány: název firmwaru a id po kliknutí na List all gateways"/>
   </div>
 </div><br></br>
 
@@ -198,7 +198,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-pair-start.webp')} alt="Node-RED se zvýrazněným tlačítkem Start node pairing a zprávou o zahájení párování v záložce debug"/>
   </div>
 </div>
 
@@ -208,7 +208,7 @@ Vložte baterie do **Radio VOC senzoru**, aby se odeslala žádost o spárován�
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-sensor-paired.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-sensor-paired.webp')} alt="Záložka debug v Node-RED s odpovědí párování: připojení uzlu, firmware wireless-voc-sensor a první hodnoty"/>
   </div>
 </div>
 
@@ -216,7 +216,7 @@ Vložte baterie do **Radio VOC senzoru**, aby se odeslala žádost o spárován�
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-gw-pair-stop.webp')} alt="Node-RED se zvýrazněným tlačítkem Stop node pairing a zprávou o ukončení párování v záložce debug"/>
   </div>
 </div><br></br>
 
@@ -244,7 +244,7 @@ Měli byste poté vidět podobné zprávy:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-messages.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-voc-messages.webp')} alt="Zprávy v záložce debug s hodnotami TVOC, teploty a relativní vlhkosti ze senzorových témat"/>
   </div>
 </div><br></br>
 
@@ -278,7 +278,7 @@ Můžete vložit následující snippet do flow (pomocí **Menu >> Import**) mí
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-dashboard-deploy.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-dashboard-deploy.webp')} alt="Tři vstupní MQTT uzly propojené s uzly Gauge, zvýrazněné tlačítko Deploy a ikona otevření dashboardu"/>
   </div>
 </div>
 
@@ -288,7 +288,7 @@ Uvidíte tento dashboard s hodnotami ze senzoru Radio VOC.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-dashboard.webp')}/>
+    <Image img={require('./img/radio-voc-sensor/radio-voc-sensor-node-red-dashboard.webp')} alt="Dashboard Node-RED s budíky TVOC, Temperature a Humidity s aktuálními hodnotami"/>
   </div>
 </div><br></br>
 

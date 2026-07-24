@@ -24,7 +24,7 @@ As part of the experiment, we will transmit the number of pulses using an **LED*
 
 <div class="container">
   <div class="row">
-    <Image img={require('./modules-canvas.webp')}/>
+    <Image img={require('./modules-canvas.webp')} alt="Sensor set parts: Core Module, Mini Battery Module, Sensor Module with terminal block, cover, batteries, O-rings, enclosure"/>
   </div>
 </div>
 
@@ -36,7 +36,7 @@ As part of the experiment, we will transmit the number of pulses using an **LED*
 
 <div class="container">
   <div class="row">
-    <Image img={require('./counter.avif')}/>
+    <Image img={require('./counter.avif')} alt="Sensor Module with the pulse counter wires connected to the green terminal block pins"/>
   </div>
 </div>
 
@@ -72,7 +72,7 @@ As part of the experiment, we will transmit the number of pulses using an **LED*
 ```
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-diagram.png')}/>
+    <Image img={require('./stem-diagram.png')} alt="Node-RED flow: pulse-counter count feeds Pulses text, Pulses in time chart, and a switch that shows a dialog"/>
   </div>
 </div>
 
@@ -87,7 +87,7 @@ As part of the experiment, we will transmit the number of pulses using an **LED*
 
  <div class="container">
   <div class="row">
-    <Image img={require('./stem-result.webp')}/>
+    <Image img={require('./stem-result.webp')} alt="Node-RED dashboard with pulse count, Pulses in time chart, and a Pulse counter dialog reporting 30 ticks detected"/>
   </div>
 </div>
 

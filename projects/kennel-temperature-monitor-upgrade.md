@@ -21,7 +21,7 @@ All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-1.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-1.webp')} alt="Playground Devices tab: the paired device row with alias push-button:0 highlighted"/>
   </div>
 </div>
 
@@ -37,13 +37,13 @@ node/push-button:0/thermometer/0:1/temperature
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-2.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-2.webp')} alt="Node-RED workspace with the temperature MQTT node and the kennel gauge node placed on the canvas"/>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-3.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-3.webp')} alt="Edit dialog with Label, value format with degrees Celsius, and the temperature range fields highlighted"/>
   </div>
 </div>
 
@@ -69,7 +69,7 @@ The temperature alert is delivered to your phone through the **Blynk IoT** app a
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-4.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-4.webp')} alt="Node-RED workspace with a Switch node from the Function section highlighted above the gauge node"/>
   </div>
 </div>
 
@@ -83,7 +83,7 @@ b. Select the notification to be sent when the temperature is less than or equal
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-5.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-5.webp')} alt="Edit switch node dialog: property msg.payload with a rule comparing against flow.optimalTemp highlighted"/>
   </div>
 </div>
 
@@ -91,7 +91,7 @@ b. Select the notification to be sent when the temperature is less than or equal
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-6.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-6.webp')} alt="Node-RED workspace with a Change node (set msg.payload) highlighted next to the Switch node"/>
   </div>
 </div>
 
@@ -116,7 +116,7 @@ The Numeric node lets you set the lowest acceptable temperature right from the P
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-12.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-12.webp')} alt="Node-RED workspace with a Numeric node from the Dashboard section highlighted on the canvas"/>
   </div>
 </div>
 
@@ -124,7 +124,7 @@ In the node, set the **unit of measure** (°C), the **temperature range** (−15
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-13.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-13.webp')} alt="Edit numeric node dialog: Label, value format with degrees Celsius, and range min -15 max 50 highlighted"/>
   </div>
 </div>
 
@@ -132,7 +132,7 @@ In the node, set the **unit of measure** (°C), the **temperature range** (−15
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-14.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-14.webp')} alt="Node-RED workspace with a Change node (set msg.payload) highlighted next to the Numeric node"/>
   </div>
 </div>
 
@@ -140,7 +140,7 @@ In the node, set the **unit of measure** (°C), the **temperature range** (−15
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-15.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-15.webp')} alt="Edit change node dialog: rule Set flow.optimalTemp to msg.payload highlighted"/>
   </div>
 </div>
 
@@ -148,7 +148,7 @@ In the node, set the **unit of measure** (°C), the **temperature range** (−15
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-18.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-18.webp')} alt="Finished Node-RED flow with all nodes connected and the Deploy button highlighted"/>
   </div>
 </div>
 
@@ -159,7 +159,7 @@ In the node, set the **unit of measure** (°C), the **temperature range** (−15
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-19.webp')}/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-19.webp')} alt="Dashboard with the kennel temperature gauge reading 23.75 degrees Celsius and the optimal temperature field"/>
   </div>
 </div>
 

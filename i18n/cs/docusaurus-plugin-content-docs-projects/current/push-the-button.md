@@ -12,7 +12,7 @@ V tomto tutoriálu vytvoříte jednoduchý projekt s tlačítkem, které vám po
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-button-garage.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-button-garage.webp')} alt="Ruka mačkající tlačítko na sestavě Push Button Kit před garážovými vraty"/>
   </div>
 </div>
 
@@ -27,7 +27,7 @@ Sestavte všechny tři moduly dohromady, abyste vytvořili **Sadu Push**. Všimn
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-mini-battery-module-orientation.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-mini-battery-module-orientation.webp')} alt="Správné a špatné nasazení Core Modulu na Mini Battery Module, označené OK a WRONG"/>
   </div>
 </div>
 
@@ -47,7 +47,7 @@ V tomto kroku spustíte aplikaci **Playground**, která spravuje Radio Dongle, P
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/logo.webp')}/>
+    <Image img={require('./img/push-the-button/logo.webp')} alt="Logo aplikace HARDWARIO Playground"/>
   </div>
 </div>
 
@@ -55,7 +55,7 @@ V tomto kroku spustíte aplikaci **Playground**, která spravuje Radio Dongle, P
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-connect-usb-dongle.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-connect-usb-dongle.webp')} alt="Radio Dongle zapojený do USB portu notebooku"/>
   </div>
 </div>
 
@@ -69,7 +69,7 @@ Pokud nevidíte Radio Dongle mezi zařízeními, podívejte se na kapitolu [Trou
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connect.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connect.webp')} alt="Záložka Devices v Playgroundu s vybraným portem Radio Donglu a zvýrazněným tlačítkem Connect"/>
   </div>
 </div>
 
@@ -77,7 +77,7 @@ Pokud nevidíte Radio Dongle mezi zařízeními, podívejte se na kapitolu [Trou
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connected.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connected.webp')} alt="Připojený Radio Dongle a spárovaný Push Button Kit uvedený v seznamu jako push-button:0"/>
   </div>
 </div>
 
@@ -85,7 +85,7 @@ Pokud nevidíte Radio Dongle mezi zařízeními, podívejte se na kapitolu [Trou
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-node-red-flow.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-node-red-flow.webp')} alt="Flow v Node-RED propojující MQTT téma stisku tlačítka přes Set message s uzlem Blynk notifikace"/>
   </div>
 </div>
 
@@ -133,7 +133,7 @@ Nastal čas **ZMÁČKNOUT TLAČÍTKO**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-push-the-button.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-push-the-button.webp')} alt="Kreslený prst mačkající tlačítko na sestavě Push Button Kit"/>
   </div>
 </div>
 

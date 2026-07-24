@@ -12,7 +12,7 @@ Tento dokument vás provede projektem **Bezdrátového LCD termostatu**. Pomocí
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-block-diagram.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-block-diagram.webp')} alt="Blokové schéma: sady Radio LCD Thermostat a Radio Power Controller propojené rádiem s branou s Node-RED"/>
   </div>
 </div>
 
@@ -111,7 +111,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-controls.webp')} alt="Importovaný flow v Node-RED s tlačítky pro příkazy brány, každé napojené na uzel MQTT"/>
   </div>
 </div><br></br>
 
@@ -127,7 +127,7 @@ Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádio. Tyto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-debug.webp')} alt="Editor Node-RED se zvýrazněnou záložkou debug v pravém panelu"/>
   </div>
 </div><br></br>
 
@@ -141,7 +141,7 @@ V záložce **debug** budete moci vidět všechny MQTT zprávy.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-list.webp')} alt="Záložka debug s odpovědí s informacemi o bráně po kliknutí na List all gateways"/>
   </div>
 </div><br></br>
 
@@ -161,7 +161,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-pair-start.webp')} alt="Zvýrazněné tlačítko Start node pairing a potvrzení zahájení párování v záložce debug"/>
   </div>
 </div>
 
@@ -172,7 +172,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-lcd-thermostat/radio-lcd-thermostat-node-red-gw-pair-stop.webp')} alt="Zvýrazněné tlačítko Stop node pairing a potvrzení ukončení párování v záložce debug"/>
   </div>
 </div><br></br>
 

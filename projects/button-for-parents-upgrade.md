@@ -20,7 +20,7 @@ You will need the **box with button** and a **USB Dongle**. The basic HARDWARIO 
 
 1. Put the Star set together and pair it. On the Core Module you will need the familiar **bcf-radio-push-button** firmware again.
 
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-1.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-1.webp')} alt="Playground Devices tab with the paired device listed under the alias push-button:0"/> </div> </div>
 
 ## Set up notification
 
@@ -31,11 +31,11 @@ Place the **MQTT node**, which has click counting in Topic, from the Input secti
 
 So far it looks like this:
 
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-2.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-2.webp')} alt="MQTT event-count node and the Blynk notify node placed on the canvas, not yet connected"/> </div> </div>
 
 2. This time, paste a different node, to which you copy javascript, between the two nodes. You will find it as the **Function node** under the section of the same name.
 
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-3.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-3.webp')} alt="Function node highlighted in the palette and placed between the MQTT and notify nodes"/> </div> </div>
 
 3. To this node add a **code with which to control the time**. ⏳ You set up from what time until what time you want to receive breakfast 🍳, lunch 🍗 and dinner 🍕 messages. Smart javascript, hey?
 
@@ -46,10 +46,10 @@ var date = new Date(); var hour = date.getHours();
 if(hour >= 8 && hour < 11) { msg.payload = "Pojd na snidani, ospalce"; return msg; } else if(hour >= 11 && hour < 17) { msg.payload = "Obidek na tebe uz ceka"; return msg; } else if(hour >= 17 && hour < 21) { msg.payload = "Podava se vrchol dne, vecere"; return msg; }
 ```
 
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-4.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-4.webp')} alt="Edit function node dialog with the time-checking meal message JavaScript on the On Message tab"/> </div> </div>
 
 4. Name this node in the same window in the **Name** line. For example _Time & Message Setting_.
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-5.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-5.webp')} alt="Edit function node dialog with the node named in the highlighted Name field"/> </div> </div>
 Confirm with the **Done** button.
 
 ## Set up press and hold button.
@@ -61,25 +61,25 @@ Place another **MQTT node** from the Input section onto the desktop.
 ```
 node/push-button:0/push-button/-/hold-count
 ```
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-6.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-6.webp')} alt="Edit mqtt in node dialog with the push-button hold-count topic in the highlighted Topic field"/> </div> </div>
 
 3. Behind this, place the **Change node** that you already used in the basic version. In it, set your own message, which is sent when your parents hold the button for a long time. It can be used for different messages other than for eating 🙂. For example: _Come downstairs, you lazy so and so!_
 
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-7.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-7.webp')} alt="Edit change node dialog setting msg.payload to the hold-button message Pojd dolu, lenochu!"/> </div> </div>
 
 4. Behind this node, place another one to unclick the message. In addition, you can make the message not only pop up on your mobile, but also on your computer.
 
 You can do this through the **Notification node** under the Dashboard section.
 
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-8.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-8.webp')} alt="Notification node named show notification placed after the set msg.payload node in the hold flow"/> </div> </div>
 
 5. In the node, select OK/Cancel Dialog on the **Layout** line and confirm with the **Done** button.
 
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-9.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-9.webp')} alt="Edit notification node dialog with Layout set to OK / Cancel Dialog"/> </div> </div>
 
 6. Connect everything as shown in the screenshot and press **Deploy**.
 
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-10.webp')}/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-10.webp')} alt="Both button flows wired to the notify and show dialog nodes, with the Deploy button highlighted"/> </div> </div>
 
 ## Ready, steady... go!
 

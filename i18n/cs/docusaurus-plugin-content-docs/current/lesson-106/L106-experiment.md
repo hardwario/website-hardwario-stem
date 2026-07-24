@@ -30,7 +30,7 @@ Komunikace bude probíhat bezdrátově do Radio Dongle zasunutého do USB portu 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./push-button-canvas.webp')}/>
+    <Image img={require('./push-button-canvas.webp')} alt="Díly tlačítkové sestavy: Core Module, Mini Battery Module, kryt s tlačítkem, O-kroužky a oranžová krabička"/>
   </div>
 </div>
 
@@ -65,7 +65,7 @@ Podívejte se na podrobný návod [nahrání firmware do Core Module](https://do
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-vibration-diagram.png')}/>
+    <Image img={require('./stem-vibration-diagram.png')} alt="Flow v Node-RED: téma magnitude z vibration-monitoru napojené na uzel grafu Vibrations in time"/>
   </div>
 </div>
 
@@ -74,7 +74,7 @@ Podívejte se na podrobný návod [nahrání firmware do Core Module](https://do
 
 <div class="container">
   <div class="row">
-    <Image img={require('./vibration-graph.png')}/>
+    <Image img={require('./vibration-graph.png')} alt="Liniový graf Vibrations in time na dashboardu s naměřenou úrovní vibrací"/>
   </div>
 </div>
 
@@ -84,7 +84,7 @@ Experiment doplníme o zaslání notifikace při překročení konfigurovatelné
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-vibration-final-diagram.png')}/>
+    <Image img={require('./stem-vibration-final-diagram.png')} alt="Výsledný flow v Node-RED: magnitude vede do grafu a do uzlu switch, který spouští upozornění Vibrations over limit"/>
   </div>
 </div>
 *Takto vypadá výsledná flow s grafem vibrací a notifikací při překročení limitu*

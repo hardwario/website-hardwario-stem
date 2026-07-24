@@ -25,7 +25,7 @@ HARDWARIO nabízí detailně připravené lekce pro aktivní STEM výuku s jedno
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-education-overview.png')}/>
+    <Image img={require('./stem-education-overview.png')} alt="Cyklus aktivní STEM výuky o čtyřech fázích: pochopení, experiment, projekt a reflexe kolem IoT zařízení"/>
   </div>
 </div>
 

@@ -30,7 +30,7 @@ The **HARDWARIO TOWER** is a set of electronic components that find application 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./tower-communication.avif')}/>
+    <Image img={require('./tower-communication.avif')} alt="Diagram of TOWER kit communication paths: sub-GHz, LoRaWAN, Sigfox, NB-IoT, and Ethernet routes to the cloud and apps"/>
   </div>
 </div>
 
@@ -47,7 +47,7 @@ In **HARDWARIO Playground** you can:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./tower-diagram.avif')}/>
+    <Image img={require('./tower-diagram.avif')} alt="HARDWARIO Playground Functions tab showing a Node-RED flow with climate-monitor MQTT nodes"/>
   </div>
 </div>
 

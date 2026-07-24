@@ -34,7 +34,7 @@ The building of the monitoring unit
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-clime-xl.avif')}/>
+    <Image img={require('./stem-clime-xl.avif')} alt="Assembled monitoring unit in a black holder, with the LCD Module showing temperature and humidity readings"/>
   </div>
 </div>
 
@@ -140,7 +140,7 @@ function doPost(e) {
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-experiment-image.png')}/>
+    <Image img={require('./stem-experiment-image.png')} alt="Imported Node-RED flow: sensor topics set flow variables that the Data Parser joins and sends via http request"/>
   </div>
 </div>
 
@@ -154,7 +154,7 @@ function doPost(e) {
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-experiment-code.png')}/>
+    <Image img={require('./stem-experiment-code.png')} alt="Edit http request node dialog with method POST and the URL field for the Google script address"/>
   </div>
 </div>
 

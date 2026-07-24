@@ -34,7 +34,7 @@ One of the ways to monitor consumption online is by connecting to **electricity/
 
 <div class="container">
   <div class="row">
-    <Image img={require('./pulse-cabel.avif')}/>
+    <Image img={require('./pulse-cabel.avif')} alt="Pulse sensor probe on a long grey cable ending in bare wires with a terminal connector"/>
   </div>
 </div>
 

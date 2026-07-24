@@ -13,7 +13,7 @@ In this tutorial you create a simple project with a button, that sends you push 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-button-garage.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-button-garage.webp')} alt="Hand pressing the button on the Push Button Kit in front of a garage door"/>
   </div>
 </div>
 
@@ -29,7 +29,7 @@ Put all three modules together to build the **Push Button Kit**. Note the orient
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-mini-battery-module-orientation.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-mini-battery-module-orientation.webp')} alt="Correct and wrong stacking of the Core Module on the Mini Battery Module, labelled OK and WRONG"/>
   </div>
 </div>
 
@@ -50,7 +50,7 @@ In this step you run the **Playground** application that manages Radio Dongle, P
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/logo.webp')}/>
+    <Image img={require('./img/push-the-button/logo.webp')} alt="HARDWARIO Playground application logo"/>
   </div>
 </div>
 
@@ -58,7 +58,7 @@ In this step you run the **Playground** application that manages Radio Dongle, P
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-connect-usb-dongle.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-connect-usb-dongle.webp')} alt="Radio Dongle plugged into a USB port on a laptop"/>
   </div>
 </div>
 
@@ -72,7 +72,7 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connect.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connect.webp')} alt="Playground Devices tab with the Radio Dongle port selected and the Connect button highlighted"/>
   </div>
 </div>
 
@@ -80,7 +80,7 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connected.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connected.webp')} alt="Connected Radio Dongle with the paired Push Button Kit listed as push-button:0"/>
   </div>
 </div>
 
@@ -88,7 +88,7 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-node-red-flow.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-node-red-flow.webp')} alt="Node-RED flow wiring the button-press MQTT topic through Set message to a Blynk notification node"/>
   </div>
 </div>
 
@@ -136,7 +136,7 @@ The time has come to **PUSH THE BUTTON**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-push-the-button.webp')}/>
+    <Image img={require('./img/push-the-button/push-the-button-push-the-button.webp')} alt="Cartoon finger pressing the button on the Push Button Kit"/>
   </div>
 </div>
 

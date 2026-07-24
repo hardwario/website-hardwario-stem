@@ -13,7 +13,7 @@ This document will guide you through the **Radio Smart LED Strip** project. You 
 <div class="container">
   <div class="row">
     <Image  img={require('./img/radio-smart-led-strip/radio-power-controller.png')}
-          style={{ backgroundColor: "#fff" }}/>
+          style={{ backgroundColor: "#fff" }} alt="Block diagram: Power Controller Set driving an LED strip and a 230V appliance, linked by radio to Node-RED and Blynk"/>
   </div>
 </div>
 
@@ -117,7 +117,7 @@ Make sure the **Power Module** does not have power adapter inserted.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-project-thermostat-relay-bc.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-project-thermostat-relay-bc.webp')} alt="Assembled Power Controller modules in the red BCE301 enclosure, shown open and closed with connectors on the side"/>
   </div>
 </div>
 
@@ -159,7 +159,7 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-debug.webp')} alt="Node-RED editor with the debug tab highlighted in the right sidebar"/>
   </div>
 </div><br></br>
 
@@ -173,7 +173,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-list.webp')} alt="Debug tab showing the gateway response with firmware name and ID after clicking List all gateways"/>
   </div>
 </div><br></br>
 
@@ -193,7 +193,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-pair-start.webp')} alt="Node-RED flow with the Start node pairing inject button highlighted"/>
   </div>
 </div>
 
@@ -203,7 +203,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-node-red-gw-pair-stop.webp')} alt="Node-RED flow with the Stop node pairing inject button highlighted"/>
   </div>
 </div><br></br>
 
@@ -229,7 +229,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-set-node-id.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-set-node-id.webp')} alt="Edit change node dialog with the Replace with field set to power-controller:0"/>
   </div>
 </div>
 
@@ -237,7 +237,7 @@ Follow these steps in **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-radio-test.webp')}/>
+    <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-radio-test.webp')} alt="Node-RED flow of LED strip commands with the led-strip set color #ff0000 inject button highlighted"/>
   </div>
 </div>
 

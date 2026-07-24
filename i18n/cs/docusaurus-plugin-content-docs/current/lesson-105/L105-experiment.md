@@ -34,7 +34,7 @@ Měření teploty, vlhkosti, CO2 a VOC
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-clime-xl.avif')}/>
+    <Image img={require('./stem-clime-xl.avif')} alt="Sestavená monitorovací jednotka v černém držáku, LCD Module zobrazuje naměřenou teplotu a vlhkost"/>
   </div>
 </div>
 
@@ -142,7 +142,7 @@ function doPost(e) {
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-experiment-image.png')}/>
+    <Image img={require('./stem-experiment-image.png')} alt="Importovaný flow v Node-RED: témata senzorů plní proměnné flow, Data Parser je spojí a odešle přes http request"/>
   </div>
 </div>
 
@@ -156,7 +156,7 @@ function doPost(e) {
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-experiment-code.png')}/>
+    <Image img={require('./stem-experiment-code.png')} alt="Dialog Edit http request node s metodou POST a polem URL pro adresu Google skriptu"/>
   </div>
 </div>
 

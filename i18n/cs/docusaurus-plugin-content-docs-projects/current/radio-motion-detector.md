@@ -12,7 +12,7 @@ Tento dokument vás provede projektem **Rádiového detektoru pohybu**. Budete m
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-block-diagram.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-block-diagram.webp')} alt="Blokové schéma: sada Radio Motion Detector s PIR Modulem propojená rádiem s branou, Node-RED a IFTTT"/>
   </div>
 </div>
 
@@ -108,7 +108,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-controls.webp')} alt="Importovaný flow v Node-RED s tlačítky pro příkazy brány, každé napojené na uzel MQTT"/>
   </div>
 </div><br></br>
 
@@ -124,7 +124,7 @@ Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádio. Tyto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-debug.webp')} alt="Editor Node-RED se zvýrazněnou záložkou debug v pravém panelu"/>
   </div>
 </div><br></br>
 
@@ -138,7 +138,7 @@ V záložce **debug** budete moci vidět všechny MQTT zprávy.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-list.webp')} alt="Záložka debug s odpovědí s informacemi o bráně po kliknutí na List all gateways"/>
   </div>
 </div><br></br>
 
@@ -156,7 +156,7 @@ V této části vytvoříme rádiové spojení mezi **Radio Dongle** a **detekto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-pair-start.webp')} alt="Zvýrazněné tlačítko Start node pairing a potvrzení zahájení párování v záložce debug"/>
   </div>
 </div>
 
@@ -166,7 +166,7 @@ V této části vytvoříme rádiové spojení mezi **Radio Dongle** a **detekto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-gw-pair-stop.webp')} alt="Zvýrazněné tlačítko Stop node pairing a potvrzení ukončení párování v záložce debug"/>
   </div>
 </div><br></br>
 
@@ -188,7 +188,7 @@ Poté byste měli vidět podobné zprávy:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-radio-test.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-radio-test.webp')} alt="Záložka debug se zprávami event-count z PIR čidla rostoucími při detekci pohybu"/>
   </div>
 </div><br></br>
 
@@ -216,7 +216,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-01.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-01.webp')} alt="Úvodní stránka IFTTT se zvýrazněným tlačítkem Sign in"/>
   </div>
 </div>
 
@@ -224,7 +224,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-02.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-02.webp')} alt="Stránka Discover na IFTTT po přihlášení se zvýrazněnou položkou My Applets v menu"/>
   </div>
 </div>
 
@@ -232,7 +232,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-03.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-03.webp')} alt="Stránka My Applets se zvýrazněným tlačítkem New Applet"/>
   </div>
 </div>
 
@@ -240,7 +240,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-04.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-04.webp')} alt="Editor nového appletu se zvýrazněným +this ve větě if this then that"/>
   </div>
 </div>
 
@@ -248,7 +248,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-05.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-05.webp')} alt="Krok Choose a service s vyhledaným Webhooks a zvýrazněnou dlaždicí Webhooks"/>
   </div>
 </div>
 
@@ -256,7 +256,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-06.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-06.webp')} alt="Krok Choose trigger se zvýrazněnou kartou Receive a web request"/>
   </div>
 </div>
 
@@ -264,7 +264,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-07.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-07.webp')} alt="Pole triggeru s názvem události motion a zvýrazněným tlačítkem Create trigger"/>
   </div>
 </div>
 
@@ -272,7 +272,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-08.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-08.webp')} alt="Editor nového appletu se zvýrazněným +that ve větě if this then that"/>
   </div>
 </div>
 
@@ -280,7 +280,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-09.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-09.webp')} alt="Krok Choose action service s vyhledaným Notifications a zvýrazněnou dlaždicí Notifications"/>
   </div>
 </div>
 
@@ -288,7 +288,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-10.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-10.webp')} alt="Krok Choose action se zvýrazněnou kartou Send a notification from the IFTTT app"/>
   </div>
 </div>
 
@@ -296,7 +296,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-11.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-11.webp')} alt="Pole akce s vyplněným textem oznámení o pohybu a zvýrazněným tlačítkem Create action"/>
   </div>
 </div>
 
@@ -304,7 +304,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-12.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-12.webp')} alt="Krok Review and finish appletu motion se zvýrazněným tlačítkem Finish"/>
   </div>
 </div>
 
@@ -312,7 +312,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-13.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-13.webp')} alt="Dokončený a zapnutý applet motion se zvýrazněnou ikonou Webhooks"/>
   </div>
 </div>
 
@@ -320,7 +320,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-14.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-14.webp')} alt="Stránka služby Webhooks se zvýrazněným tlačítkem Documentation"/>
   </div>
 </div>
 
@@ -328,7 +328,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-15.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-15.webp')} alt="Stránka dokumentace Webhooks s vaším klíčem a zvýrazněným polem event v adrese triggeru"/>
   </div>
 </div>
 
@@ -336,7 +336,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-16.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-16.webp')} alt="Stránka dokumentace Webhooks s vyplněným motion v poli event adresy triggeru"/>
   </div>
 </div>
 
@@ -348,7 +348,7 @@ Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-17.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-17.webp')} alt="Stránka dokumentace Webhooks se zvýrazněným tlačítkem Test It"/>
   </div>
 </div>
 
@@ -358,7 +358,7 @@ Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-18.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-ifttt-18.webp')} alt="Stránka dokumentace Webhooks se zvýrazněnou celou adresou triggeru pro událost motion"/>
   </div>
 </div><br></br>
 
@@ -384,7 +384,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-ifttt-snippet.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-ifttt-snippet.webp')} alt="Flow v Node-RED propojující téma event-count z PIR čidla přes uzly change a delay s uzlem http request"/>
   </div>
 </div><br></br>
 
@@ -398,7 +398,7 @@ Tento úryvek vytváří propojení mezi MQTT tématem `node/motion-detector:0/p
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-ifttt-url.webp')}/>
+    <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-ifttt-url.webp')} alt="Dialog úpravy uzlu http request s adresou triggeru IFTTT vloženou do zvýrazněného pole URL"/>
   </div>
 </div>
 

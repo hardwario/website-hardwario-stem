@@ -31,7 +31,7 @@ Different light frequencies are perceived as different [colors](https://en.wikip
 
 <div class="container">
   <div class="row">
-    <Image img={require('./srgbspectrum.avif')}/>
+    <Image img={require('./srgbspectrum.avif')} alt="Visible light spectrum from violet to red with wavelength and frequency scales"/>
   </div>
 </div>
 

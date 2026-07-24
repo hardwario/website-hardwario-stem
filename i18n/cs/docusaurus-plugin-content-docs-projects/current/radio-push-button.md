@@ -12,7 +12,7 @@ Tento dokument vás provede projektem **Bezdrátového tlačítka**. Budete moci
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-block-diagram.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-block-diagram.webp')} alt="Blokové schéma: sada s tlačítkem propojená sub-GHz rádiem přes Radio Dongle s Node-RED, který volá IFTTT webhook"/>
   </div>
 </div>
 
@@ -97,7 +97,7 @@ Pokud používáte nový **HARDWARIO Playground**, použijte záložku **Functio
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-controls.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-controls.webp')} alt="Flow v Node-RED s inject tlačítky pro příkazy brány: výpis bran, spuštění a zastavení párování uzlů"/>
   </div>
 </div><br></br>
 
@@ -113,7 +113,7 @@ Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádio. Tyto
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-debug.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-debug.webp')} alt="Editor Node-RED se zvýrazněnou záložkou debug v pravém panelu"/>
   </div>
 </div><br></br>
 
@@ -127,7 +127,7 @@ V záložce **debug** budete moci vidět všechny MQTT zprávy.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-list.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-list.webp')} alt="Záložka debug s odpovědí brány obsahující název firmwaru a ID po kliknutí na List all gateways"/>
   </div>
 </div><br></br>
 
@@ -147,7 +147,7 @@ Postupujte podle následujících kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-pair-start.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-pair-start.webp')} alt="Flow v Node-RED se zvýrazněným inject tlačítkem Start node pairing"/>
   </div>
 </div>
 
@@ -159,7 +159,7 @@ Vložte baterie do **Radio Push Button**, čímž odešlete požadavek na spáro
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-pair-stop.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-pair-stop.webp')} alt="Flow v Node-RED se zvýrazněným inject tlačítkem Stop node pairing"/>
   </div>
 </div><br></br>
 
@@ -179,7 +179,7 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-radio-test.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-radio-test.webp')} alt="Záložka debug se zprávami event-count, jejichž hodnota roste s každým stisknutím tlačítka"/>
   </div>
 </div><br></br>
 
@@ -207,7 +207,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-01.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-01.webp')} alt="Úvodní stránka IFTTT se zvýrazněným tlačítkem Sign in vpravo nahoře"/>
   </div>
 </div>
 
@@ -215,7 +215,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-02.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-02.webp')} alt="Horní menu IFTTT se zvýrazněnou položkou My Applets"/>
   </div>
 </div>
 
@@ -223,7 +223,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-03.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-03.webp')} alt="Stránka My Applets se zvýrazněným tlačítkem New Applet"/>
   </div>
 </div>
 
@@ -231,7 +231,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-04.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-04.webp')} alt="Stránka New Applet se zvýrazněným +this ve větě if this then that"/>
   </div>
 </div>
 
@@ -239,7 +239,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-05.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-05.webp')} alt="Krok Choose a service s vyhledaným a zvýrazněným servisem Webhooks"/>
   </div>
 </div>
 
@@ -247,7 +247,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-06.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-06.webp')} alt="Krok Choose trigger se zvýrazněným spouštěčem Receive a web request"/>
   </div>
 </div>
 
@@ -255,7 +255,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-07.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-07.webp')} alt="Pole spouštěče s vyplněným Event Name button a zvýrazněným tlačítkem Create trigger"/>
   </div>
 </div>
 
@@ -263,7 +263,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-08.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-08.webp')} alt="Stránka New Applet se zvýrazněným +that ve větě if this then that"/>
   </div>
 </div>
 
@@ -271,7 +271,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-09.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-09.webp')} alt="Krok Choose action service s vyhledanou a zvýrazněnou službou Notifications"/>
   </div>
 </div>
 
@@ -279,7 +279,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-10.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-10.webp')} alt="Krok Choose action se zvýrazněnou akcí Send a notification from the IFTTT app"/>
   </div>
 </div>
 
@@ -287,7 +287,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-11.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-11.webp')} alt="Pole Notification s textem o stisknutém tlačítku a zvýrazněným tlačítkem Create action"/>
   </div>
 </div>
 
@@ -295,7 +295,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-12.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-12.webp')} alt="Krok Review and finish se zvýrazněným tlačítkem Finish"/>
   </div>
 </div>
 
@@ -303,7 +303,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-13.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-13.webp')} alt="Stránka hotového appletu se zvýrazněnou ikonou Webhooks"/>
   </div>
 </div>
 
@@ -311,7 +311,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-14.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-14.webp')} alt="Stránka služby Webhooks se zvýrazněným tlačítkem Documentation"/>
   </div>
 </div>
 
@@ -319,7 +319,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-15.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-15.webp')} alt="Dokumentace Webhooks se zvýrazněným polem event v URL spouštěče"/>
   </div>
 </div>
 
@@ -327,7 +327,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-16.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-16.webp')} alt="Dokumentace Webhooks s hodnotou button vyplněnou v poli event v URL spouštěče"/>
   </div>
 </div>
 
@@ -339,7 +339,7 @@ Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-17.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-17.webp')} alt="Dokumentace Webhooks se zvýrazněným tlačítkem Test It"/>
   </div>
 </div>
 
@@ -349,7 +349,7 @@ Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-18.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-18.webp')} alt="Zvýrazněná URL spouštěče Webhooks ke zkopírování do schránky"/>
   </div>
 </div><br></br>
 
@@ -375,7 +375,7 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-snippet.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-snippet.webp')} alt="Flow v Node-RED s MQTT uzlem event-count tlačítka napojeným přes delete msg.payload na uzel http request"/>
   </div>
 </div><br></br>
 
@@ -389,7 +389,7 @@ Tento úryvek vytváří spojení mezi MQTT tématem `node/push-button:0/push-bu
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-url.webp')}/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-url.webp')} alt="Dialog Edit http request node s vyplněnou IFTTT webhook URL v poli URL"/>
   </div>
 </div>
 

@@ -40,7 +40,7 @@ Students try out other projects that are linked to the topic, or there is an Ide
     }}
   >
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <Image img={require('./stem-soil-sensor.avif')}
+      <Image img={require('./stem-soil-sensor.avif')} alt="Soil moisture sensor in a potted flowering plant"
       style={{ width: '40px', height: '40px', marginRight: '12px' }}
       />
       <div>
@@ -83,7 +83,7 @@ Students try out other projects that are linked to the topic, or there is an Ide
     }}
   >
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <Image img={require('./stem-soil-sensor-arduino.avif')}
+      <Image img={require('./stem-soil-sensor-arduino.avif')} alt="Soil sensor in a potted plant next to ESP32, Arduino Uno, and ESP8266 boards"
       style={{ width: '40px', height: '40px', marginRight: '12px' }}
       />
       <div>
@@ -125,7 +125,7 @@ Students try out other projects that are linked to the topic, or there is an Ide
     }}
   >
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <Image img={require('./stem-soil-humidity-monitoring.avif')}
+      <Image img={require('./stem-soil-humidity-monitoring.avif')} alt="Soil sensor probe inserted in a flower bed among marigold plants"
       style={{ width: '40px', height: '40px', marginRight: '12px', borderRadius: '8px' }}
       />
       <div>
@@ -146,6 +146,6 @@ They write their ideas on a graph, where the x-axis estimates the difficulty (co
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-ideation.gif')}/>
+    <Image img={require('./stem-ideation.gif')} alt="Ideation matrix: impact of the solution versus effort required to implement, with four numbered ideas placed in quadrants"/>
   </div>
 </div>
