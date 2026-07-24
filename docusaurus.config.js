@@ -201,11 +201,11 @@ const config = {
                 href: 'https://www.linkedin.com/company/hardwario',
               },
               {
-                label: 'X (EN)',
+                label: 'X (Twitter) (EN)',
                 href: 'https://x.com/hardwario_en',
               },
               {
-                label: 'X (CZ)',
+                label: 'X (Twitter) (CZ)',
                 href: 'https://x.com/hardwario_cz',
               },
             ],
