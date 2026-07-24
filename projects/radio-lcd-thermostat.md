@@ -201,76 +201,8 @@ At this point, you've got verified radio communication.
 
 :::
 
-## Integration with Blynk IoT
-
-Now that the kit is assembled and sending data over MQTT, let's display the
-temperature on your phone with **Blynk IoT** (the current Blynk platform — the old
-Blynk Legacy cloud has been discontinued). In this example you'll graph the
-measured temperature together with your set-point, while the relay keeps switching
-locally based on that set-point.
-
-See the canonical HARDWARIO guide,
-[**Blynk app integration**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/),
-for how to create a Blynk account, a device template, datastreams, and a device.
-It also explains where to find the **Auth Token** and **Template ID** you'll need
-below.
-
-#### Step 1: Create a template and datastreams
-
-In the Blynk IoT web console, create a **device template**, then add one
-**Datastream** (a **Virtual Pin**) for each value you want to display:
-
-| Value | Virtual Pin | Type | Unit |
-|---|---|---|---|
-| Measured temperature | V1 | Double | °C |
-| Set-point temperature | V2 | Double | °C |
-
-Set a sensible range for each datastream (for example **0 – 50**). Then create a
-**device** from this template — see the [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
-for the exact steps.
-
-#### Step 2: Configure the Node-RED flow
-
-On the Node-RED canvas, subscribe to the two MQTT topics published by the
-thermostat and forward them to Blynk:
-
-* `node/lcd-thermostat:0/thermometer/0:1/temperature` → the **measured temperature**
-* `node/lcd-thermostat:0/thermometer/set-point/temperature` → the **set-point**
-
-The relay logic stays entirely local: a **switch** node compares the measured
-temperature against the set-point and publishes `true`/`false` to
-`node/power-controller:0/relay/-/state/set`, exactly as before. This part does not
-involve Blynk.
-
-To send each value to the phone, add a **Blynk IoT Write** node (you'll find it on
-the left under the **Blynk IoT** section) after each temperature topic:
-
-* the measured-temperature node → **Virtual Pin** `1`
-* the set-point node → **Virtual Pin** `2`
-
-#### Step 3: Point the Write nodes at Blynk IoT
-
-Double-click a **Write** node and click the **small pencil** to open the client
-configuration. In the **Url** field enter `blynk.cloud`, and copy the **Auth Token**
-and **Template ID** from your device detail in the Blynk web console. Confirm with
-**Add**. Back in the node, set the **Virtual Pin** number (without the letter "V"),
-then click **Done**. Reuse the same client for both Write nodes.
-
-When both nodes are wired, click **Deploy** in the top-right corner.
-
-#### Step 4: Add a widget in the Blynk IoT app
-
-Download the **Blynk IoT** app from the
-[**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) or
-[**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk) and
-sign in with the same account. Open your device, then add a **Chart** widget (to
-watch the temperature over time) or a **Gauge**. Open the widget's settings and
-bind it to the **Datastream** for the virtual pin you chose. Once Node-RED is
-deployed, the values start streaming in and you're done!
-
 ## Related Documents
 
-* [**Blynk app integration**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
 * [**Toolchain Guide**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)

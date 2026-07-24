@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Radio CO₂ Monitor
 
-This document will guide you through the **Radio CO₂ Monitor** project. You will be able to see dashboard with CO2, temperature, humidity, ambient light and atmospheric pressure in **Node-RED** and view the data on your smart phone using the **Blynk** cloud and mobile app.
+This document will guide you through the **Radio CO₂ Monitor** project. You will be able to see dashboard with CO2, temperature, humidity, ambient light and atmospheric pressure in **Node-RED**.
 
 ## Block Concept
 
@@ -212,57 +212,7 @@ At this point, you've got verified radio communication.
 
 :::
 
-## Integration with Blynk IoT
-
-Now that the kit is assembled and sending data, let's show the measured values on your phone using **Blynk IoT** (the current Blynk platform — the old Blynk Legacy cloud has been discontinued). You'll create a Blynk account, a device template with one **Datastream** per value, and a device, then wire **Node-RED** to push the MQTT readings into Blynk.
-
-For account, template, device and datastream setup, follow the canonical guide: [**HARDWARIO Blynk app integration**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
-
-#### Step 1: Create the Blynk IoT account, template and device
-
-If you don't have one yet, create an account in the **Blynk IoT** app and create a **device template**, then a **device** from it. The [**integration guide**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through each step and is the source of truth for the exact click paths.
-
-#### Step 2: Create one Datastream (Virtual Pin) per value
-
-On the template detail, open the **Datastreams** tab and add one **Virtual Pin** datastream for each measured value. Use the **Double** data type for all of them and set a sensible range and unit:
-
-| Value | Virtual Pin | Type | Unit |
-|---|---|---|---|
-| Temperature | V0 | Double | °C |
-| Relative humidity | V1 | Double | % |
-| Atmospheric pressure | V2 | Double | hPa |
-| CO₂ concentration | V3 | Double | ppm |
-
-:::info
-
-The CO₂ concentration has its own Virtual Pin (V3). The barometer reports pressure in pascals, so Node-RED divides it by **1000** before sending — feed the V2 datastream in **hPa** (≈ 950–1050).
-
-:::
-
-#### Step 3: Add the Blynk IoT Write nodes in Node-RED
-
-Add another flow (the big **+** button next to the flow name) and build a small chain for each value: an **MQTT in** node subscribed to the sensor topic, feeding a green **Blynk IoT Write** node (found in the left menu under the **Blynk IoT** section). For atmospheric pressure, put a small **function** node `msg.payload = msg.payload / 1000.0` between the MQTT node and the Write node so the value arrives in hPa.
-
-Use these MQTT topics and Virtual Pins:
-
-| MQTT topic | Virtual Pin |
-|---|---|
-| `node/co2-monitor:0/thermometer/0:0/temperature` | V0 |
-| `node/co2-monitor:0/hygrometer/0:4/relative-humidity` | V1 |
-| `node/co2-monitor:0/barometer/0:0/pressure` (÷ 1000) | V2 |
-| `node/co2-monitor:0/co2-meter/-/concentration` | V3 |
-
-#### Step 4: Configure the Blynk IoT connection
-
-Double-click a Write node and click the **pencil** to add the connection. In the **Url** field enter `blynk.cloud`, then copy the **Auth Token** and **Template ID** from the device detail in the Blynk web console. Confirm with **Add**. Back in the node, set the **Virtual Pin** to the matching number (`0`, `1`, `2` or `3` — without the leading "V"). All four Write nodes share the same connection. Confirm with **Done**, connect the nodes and click **Deploy**.
-
-#### Step 5: Add Gauge widgets in the app
-
-Download the **Blynk IoT** app from the [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk), sign in and open your device. Add a **Gauge** widget for each datastream (CO₂, temperature, humidity, pressure) and bind each one to its Virtual Pin. After deploying the Node-RED flow, the gauges start showing live readings.
-
 ### Related Documents <a id="related-documents"></a>
-
-* [**HARDWARIO Blynk app integration**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
 
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)

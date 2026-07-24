@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Radio Climate Monitor
 
-This document will guide you through the **Radio Climate Monitor** project. You will be able to see dashboard with temperature, humidity, ambient light and atmospheric pressure in **Node-RED** and view the data on your smart phone using the **Blynk** cloud and mobile app.
+This document will guide you through the **Radio Climate Monitor** project. You will be able to see dashboard with temperature, humidity, ambient light and atmospheric pressure in **Node-RED**.
 
 ## Block Concept
 <div class="container">
@@ -217,62 +217,6 @@ Optionally put the assembly into the appropriate enclosure, if you have one.
 You can find more information about the enclosures in the document [**Enclosures**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
 
 :::
-
-## Integration with Blynk IoT
-
-Now that the kit is assembled and sending data over MQTT, let's push the sensor values to your phone with **Blynk IoT** (the current Blynk platform — the old Blynk Legacy app and its `blynk-cloud.com` cloud have been shut down). You'll create an account, a device template, and one **Datastream** per measured value, then wire those datastreams in **Node-RED** with the **Blynk IoT Write** node.
-
-For the click-by-click account, template, and device setup, follow the canonical guide:
-
-[**Blynk app integration — HARDWARIO docs**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
-
-#### Step 1: Create the Blynk IoT account, template, and device
-
-If you don't have one yet, create a [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) account, then create a **device template** and a **device** from it. The [guide above](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through each of these. From the device detail you'll need its **Auth Token** and **Template ID** in a later step.
-
-#### Step 2: Create one Datastream (Virtual Pin) per value
-
-On the template, open the **Datastreams** tab and add one **Virtual Pin** datastream for each value. Use the **Double** data type for all of them and set sensible units and ranges:
-
-| Datastream | Virtual Pin | Type | Unit | Suggested range |
-|---|---|---|---|---|
-| Illuminance | V0 | Double | lux | 0 – 1000 |
-| Temperature | V1 | Double | °C | 0 – 50 |
-| Relative humidity | V2 | Double | % | 0 – 100 |
-| Atmospheric pressure | V3 | Double | Pa | 80000 – 110000 |
-
-:::info
-
-The Virtual Pin numbers above must match the **Virtual Pin** you set on each Node-RED Write node in the next step.
-
-:::
-
-#### Step 3: Wire the values in Node-RED with the Blynk IoT Write node
-
-Add a new **Flow** (the big plus button next to the flow name), then for each value place an **mqtt in** node subscribed to the sensor topic followed by a green **Blynk IoT → write** node. Connect each `mqtt in` node to its `write` node:
-
-```text
-node/climate-monitor:0/lux-meter/0:0/illuminance        →  Write V0
-node/climate-monitor:0/thermometer/0:0/temperature      →  Write V1
-node/climate-monitor:0/hygrometer/0:4/relative-humidity →  Write V2
-node/climate-monitor:0/barometer/0:0/pressure           →  Write V3
-```
-
-:::info
-
-If you want to use this for other sensors, just change the MQTT topics.
-
-:::
-
-#### Step 4: Configure the Blynk IoT connection
-
-Double-click a **Write** node to open it. On the right, click the **pencil** to edit the Blynk IoT connection. In the **Url** field enter `blynk.cloud`, and copy the **Auth Token** and **Template ID** from your device detail in the Blynk IoT web console. Confirm with **Add**.
-
-Back in the node, set the **Virtual Pin** to the number from the table above (just the number, without the letter "V"). Repeat for each Write node so its Virtual Pin matches its value, then click **Deploy** in the top-right corner.
-
-#### Step 5: Add widgets in the Blynk IoT app
-
-Download the **Blynk IoT** app from the [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk), sign in, and open your device. Add a **Gauge** or **Chart** widget for each value and, in the widget settings, point its **Datastream** at the matching Virtual Pin (V0–V3). Once Node-RED is deployed, the live readings appear on your phone.
 
 ### Related Documents
 

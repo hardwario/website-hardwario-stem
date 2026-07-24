@@ -251,6 +251,12 @@
 /cs/projects/fridge-temperature                      /cs/projects/                                          301
 /cs/projects/fridge-temperature/                     /cs/projects/                                          301
 
+# Mini-course third-party-app lesson removed (owner decision 2026-07-24); wrap-up lesson renumbered 6 -> 5.
+/mini-course/lesson-6                                /mini-course/lesson-5                                  301
+/mini-course/lesson-6/                               /mini-course/lesson-5                                  301
+/cs/mini-course/lesson-6                             /cs/mini-course/lesson-5                               301
+/cs/mini-course/lesson-6/                            /cs/mini-course/lesson-5                               301
+
 # --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
 # --- every rule after the first splat toward the 100-dynamic-rule limit and
 # --- fails the deploy beyond it; static rules also only win when listed first.

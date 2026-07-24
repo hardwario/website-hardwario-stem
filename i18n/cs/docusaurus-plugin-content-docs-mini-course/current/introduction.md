@@ -13,13 +13,12 @@ Kurz je navržen tak, aby účastníky vedl od prvního zapojení modulu až po 
 
 ## Co vás čeká
 
-Během kurzu projdete šest výukových lekcí, které kombinují teorii, praktické ukázky a vlastní experimenty:
+Během kurzu projdete pět výukových lekcí, které kombinují teorii, praktické ukázky a vlastní experimenty:
 
 * Začínáme s TOWER – instalace prostředí, nahrání firmware, připojení senzoru.
 * Měření a vizualizace dat – práce s teplotou, vlhkostí, světlem a dalšími senzory.
 * Podmíněné reakce – logické uzly, reakce na vstupy, automatizace.
 * Ovládání výstupů – LED pásky, barevné efekty a interaktivní prvky.
-* IoT propojení s Blynk – vytvoření dashboardu pro ovládání a monitoring odkudkoli.
 
 ## Přínosy kurzu
 

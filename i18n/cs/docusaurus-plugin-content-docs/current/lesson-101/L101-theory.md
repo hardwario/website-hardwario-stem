@@ -103,7 +103,7 @@ Přidaná hodnota internetu věcí netkví v IoT zařízeních, ale v analýzác
 
 ### IoT aplikace
 
-Nabídka aplikací pro IoT je obrovská a dynamicky se rozšiřující. Velcí hráči provozující IoT platformy nabízejí vlastní řešení (např. Microsoft a jeho IoT Central), ale existuje mnoho vynikajících IoT aplikací vyvíjených menšími společnostmi, jako např. IFTTT, Ubidots, Blynk atd. Drtivá většina aplikací jsou v desktopové i mobilní variantě pro chytré telefony.
+Nabídka aplikací pro IoT je obrovská a dynamicky se rozšiřující. Velcí hráči provozující IoT platformy nabízejí vlastní řešení (např. Microsoft a jeho IoT Central), ale existuje mnoho vynikajících IoT aplikací vyvíjených menšími společnostmi, jako např. IFTTT, Ubidots atd. Drtivá většina aplikací jsou v desktopové i mobilní variantě pro chytré telefony.
 
 ## IoT konektivita
 

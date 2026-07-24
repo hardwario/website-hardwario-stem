@@ -13,13 +13,12 @@ The course is designed to guide participants from the connection of the very fir
 
 ## What to Expect
 
-Throughout the course, you will go through six lessons that combine theory, practical demonstrations, and hands-on experiments:
+Throughout the course, you will go through five lessons that combine theory, practical demonstrations, and hands-on experiments:
 
 * Getting Started with TOWER – environment installation, firmware upload, sensor connection.  
 * Measuring and Visualizing Data – working with temperature, humidity, light, and other sensors.  
 * Conditional Reactions – logic nodes, input responses, automation.  
 * Controlling Outputs – LED strips, color effects, and interactive elements.  
-* IoT Integration with Blynk – creating a dashboard for remote control and monitoring.  
 
 ## Course Benefits
 

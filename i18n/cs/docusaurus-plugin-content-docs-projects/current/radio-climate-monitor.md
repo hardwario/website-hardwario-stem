@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Bezdrátový monitor klimatu
 
-Tento dokument vás provede projektem **Monitor klimatu**. Budete moci vidět dashboard s teplotou, vlhkostí, okolním světlem a atmosférickým tlakem v **Node-RED** a zobrazit data na svém chytrém telefonu pomocí **Blynk** cloudu a mobilní aplikace.
+Tento dokument vás provede projektem **Monitor klimatu**. Budete moci vidět dashboard s teplotou, vlhkostí, okolním světlem a atmosférickým tlakem v **Node-RED**.
 
 ## Koncept
 
@@ -215,62 +215,6 @@ Volitelně umístěte montáž do příslušného krytu, pokud nějaký máte.
 Další informace o krytech naleznete v dokumentu [**Enclosures**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
 
 :::
-
-## Integrace s Blynk IoT
-
-Nyní, když je sada sestavená a odesílá data přes MQTT, pojďme posílat hodnoty ze senzorů do vašeho telefonu pomocí **Blynk IoT** (aktuální platforma Blynk — stará aplikace Blynk Legacy a její cloud `blynk-cloud.com` byly vypnuty). Vytvoříte si účet, šablonu zařízení a jeden **Datastream** pro každou měřenou hodnotu a poté tyto datastreamy propojíte v **Node-RED** pomocí node **Blynk IoT Write**.
-
-Podrobné nastavení účtu, šablony a zařízení krok za krokem najdete v hlavním návodu:
-
-[**Integrace s aplikací Blynk — dokumentace HARDWARIO**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
-
-#### Krok 1: Vytvořte účet Blynk IoT, šablonu a zařízení
-
-Pokud ještě účet nemáte, vytvořte si účet [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) a poté vytvořte **šablonu zařízení** (device template) a z ní **zařízení** (device). [Výše uvedený návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) vás každým z těchto kroků provede. Z detailu zařízení budete v dalším kroku potřebovat jeho **Auth Token** a **Template ID**.
-
-#### Krok 2: Vytvořte jeden Datastream (Virtual Pin) pro každou hodnotu
-
-V šabloně otevřete kartu **Datastreams** a přidejte jeden datastream typu **Virtual Pin** pro každou hodnotu. Pro všechny použijte datový typ **Double** a nastavte vhodné jednotky a rozsahy:
-
-| Datastream | Virtual Pin | Typ | Jednotka | Doporučený rozsah |
-|---|---|---|---|---|
-| Illuminance | V0 | Double | lux | 0 – 1000 |
-| Temperature | V1 | Double | °C | 0 – 50 |
-| Relative humidity | V2 | Double | % | 0 – 100 |
-| Atmospheric pressure | V3 | Double | Pa | 80000 – 110000 |
-
-:::info
-
-Čísla Virtual Pin uvedená výše se musí shodovat s **Virtual Pin**, který nastavíte na každém node Write v Node-RED v dalším kroku.
-
-:::
-
-#### Krok 3: Propojte hodnoty v Node-RED pomocí node Blynk IoT Write
-
-Přidejte nový **Flow** (velké tlačítko plus vedle názvu flow) a pro každou hodnotu umístěte node **mqtt in** přihlášený k odběru tématu senzoru následovaný zeleným node **Blynk IoT → write**. Každý node `mqtt in` propojte s jeho node `write`:
-
-```text
-node/climate-monitor:0/lux-meter/0:0/illuminance        →  Write V0
-node/climate-monitor:0/thermometer/0:0/temperature      →  Write V1
-node/climate-monitor:0/hygrometer/0:4/relative-humidity →  Write V2
-node/climate-monitor:0/barometer/0:0/pressure           →  Write V3
-```
-
-:::info
-
-Pokud to chcete použít pro jiné senzory, stačí změnit MQTT témata.
-
-:::
-
-#### Krok 4: Nakonfigurujte připojení k Blynk IoT
-
-Dvojklikem na node **Write** jej otevřete. Vpravo klikněte na **tužku** pro úpravu připojení k Blynk IoT. Do pole **Url** zadejte `blynk.cloud` a zkopírujte **Auth Token** a **Template ID** z detailu zařízení ve webové konzoli Blynk IoT. Potvrďte tlačítkem **Add**.
-
-Zpět v node nastavte **Virtual Pin** na číslo z tabulky výše (jen číslo, bez písmene „V"). Zopakujte to pro každý node Write tak, aby jeho Virtual Pin odpovídal jeho hodnotě, a poté klikněte na **Deploy** v pravém horním rohu.
-
-#### Krok 5: Přidejte widgety v aplikaci Blynk IoT
-
-Stáhněte si aplikaci **Blynk IoT** z [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk), přihlaste se a otevřete své zařízení. Pro každou hodnotu přidejte widget **Gauge** nebo **Chart** a v nastavení widgetu nasměrujte jeho **Datastream** na odpovídající Virtual Pin (V0–V3). Jakmile je Node-RED nasazený, na vašem telefonu se objeví živé hodnoty.
 
 ### Související dokumenty <a id="related-documents"></a>
 

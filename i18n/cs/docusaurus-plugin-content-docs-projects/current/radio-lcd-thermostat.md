@@ -202,77 +202,8 @@ V tomto bodě máte ověřenou rádiovou komunikaci.
 
 :::
 
-## Integrace s Blynk IoT
-
-Nyní, když je sada sestavená a odesílá data přes MQTT, zobrazme si teplotu na
-telefonu pomocí platformy **Blynk IoT** (aktuální platforma Blynk — původní cloud
-Blynk Legacy byl ukončen). V tomto příkladu vykreslíme do grafu naměřenou teplotu
-společně s nastavenou hodnotou (set-point), zatímco relé se nadále spíná lokálně
-podle této nastavené hodnoty.
-
-Postup vytvoření účtu Blynk, šablony zařízení, datastreamů a zařízení najdete
-v hlavním návodu HARDWARIO
-[**Integrace s aplikací Blynk**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
-Tento návod také vysvětluje, kde najít **Auth Token** a **Template ID**, které
-budete níže potřebovat.
-
-#### Krok 1: Vytvořte šablonu a datastreamy
-
-Ve webové konzoli Blynk IoT vytvořte **šablonu zařízení** (device template) a poté
-přidejte jeden **Datastream** (**Virtual Pin**) pro každou hodnotu, kterou chcete
-zobrazit:
-
-| Hodnota | Virtual Pin | Typ | Jednotka |
-|---|---|---|---|
-| Naměřená teplota | V1 | Double | °C |
-| Nastavená teplota (set-point) | V2 | Double | °C |
-
-Pro každý datastream nastavte rozumný rozsah (například **0 – 50**). Poté z této
-šablony vytvořte **zařízení** — přesné kroky najdete v [návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
-
-#### Krok 2: Nakonfigurujte flow v Node-RED
-
-Na ploše Node-RED se přihlaste k odběru dvou MQTT témat publikovaných termostatem
-a předejte je do Blynku:
-
-* `node/lcd-thermostat:0/thermometer/0:1/temperature` → **naměřená teplota**
-* `node/lcd-thermostat:0/thermometer/set-point/temperature` → **nastavená hodnota (set-point)**
-
-Logika relé zůstává zcela lokální: uzel **switch** porovnává naměřenou teplotu
-s nastavenou hodnotou a publikuje `true`/`false` na téma
-`node/power-controller:0/relay/-/state/set`, přesně jako dříve. Tato část se
-Blynku netýká.
-
-Abyste každou hodnotu odeslali do telefonu, přidejte za každé téma s teplotou uzel
-**Blynk IoT Write** (najdete jej vlevo v sekci **Blynk IoT**):
-
-* uzel s naměřenou teplotou → **Virtual Pin** `1`
-* uzel s nastavenou hodnotou → **Virtual Pin** `2`
-
-#### Krok 3: Nasměrujte uzly Write na Blynk IoT
-
-Dvakrát klikněte na uzel **Write** a kliknutím na **malou tužku** otevřete
-konfiguraci klienta. Do pole **Url** zadejte `blynk.cloud` a zkopírujte **Auth
-Token** a **Template ID** z detailu vašeho zařízení ve webové konzoli Blynk.
-Potvrďte tlačítkem **Add**. Zpět v uzlu nastavte číslo **Virtual Pin** (bez
-písmene „V“) a klikněte na **Done**. Pro oba uzly Write použijte stejného klienta.
-
-Jakmile jsou oba uzly zapojené, klikněte na tlačítko **Deploy** v pravém horním
-rohu.
-
-#### Krok 4: Přidejte widget v aplikaci Blynk IoT
-
-Stáhněte si aplikaci **Blynk IoT** z
-[**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo
-[**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk) a
-přihlaste se pod stejným účtem. Otevřete své zařízení a poté přidejte widget
-**Chart** (pro sledování teploty v čase) nebo **Gauge**. Otevřete nastavení
-widgetu a navažte jej na **Datastream** virtuálního pinu, který jste zvolili.
-Jakmile je Node-RED nasazený, hodnoty začnou přitékat a máte hotovo!
-
 ## Související dokumenty
 
-* [**Integrace s aplikací Blynk**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
 * [**Instalace Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Toolchain nastavení**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
 * [**Toolchain průvodce**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)

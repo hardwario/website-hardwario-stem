@@ -4,7 +4,7 @@ title: Experiment
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation:** 2H Module: 15 mins. 4H Module: 45 mins. 8H Module: 3 x 45 mins.  
+**Time allocation:** 2H Module: 15 mins. 4H Module: 30 mins. 8H Module: 2 x 45 mins.  
 
 ## Experiment 1 - Indoor Air Quality Monitor
 
@@ -163,44 +163,3 @@ function doPost(e) {
 * Look at your **Google sheet project** and you should see how the measured values increase in each tab
 * If you see **-1** in some column it means that the sensor didn't send any data yet.
 * At the end of the measurement, complete the worksheets by specifying the timetable and number of pupils and then present the results to others.
-
-## Experiment 3 - Air Quality Monitor Integration with the Blynk App
-
-**Time allocation**: 15 mins. 
-
-### Experiment Description
-
-Experiment 1 can be followed by integration with the **Blynk IoT** mobile application, so you can see the measured data on your smartphone. (The old **Blynk Legacy** cloud has been discontinued, so this experiment uses the current **Blynk IoT** platform.)
-
-In the experiment, we will understand:
-
-* how to connect the Blynk mobile app to see the measured data
-
-For the click-by-click account, template and device setup, follow the canonical guide: [**HARDWARIO Blynk app integration**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
-
-### Experiment Steps
-
-* Create an account in the **Blynk IoT** app (download it from the [App Store / Google Play](https://blynk.io/getting-started)) or in the [Blynk web console](https://blynk.cloud/).
-* Create a **device template**, and then create a **device** from it. The [integration guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) is the source of truth for the exact steps; from the device you will get the **Auth Token** and **Template ID** used below.
-* On the template, open the **Datastreams** tab and add one **Virtual Pin** datastream (type **Double**) per measured value:
-
-| Value | Virtual Pin | Type | Unit |
-|---|---|---|---|
-| Temperature | V0 | Double | °C |
-| Humidity | V1 | Double | % |
-| TVOC | V2 | Double | ppb |
-| CO₂ concentration | V3 | Double | ppm |
-
-* In the **Playground** app, on the **Functions** tab, add the Blynk IoT Write nodes that push the MQTT readings to Blynk. For each value, wire an **MQTT in** node (subscribed to the sensor topic) into a green **Blynk IoT Write** node (found in the left menu under the **Blynk IoT** section), with the Virtual Pin matching the datastream above:
-
-| MQTT topic | Virtual Pin |
-|---|---|
-| `node/co2-monitor:0/thermometer/0:0/temperature` | V0 |
-| `node/co2-monitor:0/hygrometer/0:4/relative-humidity` | V1 |
-| `node/co2-monitor:0/voc-sensor/0:0/tvoc` | V2 |
-| `node/co2-monitor:0/co2-meter/-/concentration` | V3 |
-
-* Double-click a Write node and click the **pencil** to add the connection. In the **Url** field enter `blynk.cloud`, then paste the **Auth Token** and **Template ID** from your device. Confirm, then set the node's **Virtual Pin** to the matching number (`0`, `1`, `2` or `3`). All four Write nodes share the same connection.
-* Press the **Deploy** button to confirm.
-* In the **Blynk IoT** app, open your device and add a **Gauge** widget for each value (Temperature, Humidity, TVOC, CO₂), binding each gauge to its Virtual Pin (V0–V3).
-* In a moment you should see the measured data in the gauges in the **Blynk IoT** app.

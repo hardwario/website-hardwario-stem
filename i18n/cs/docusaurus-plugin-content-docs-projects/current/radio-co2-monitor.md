@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Bezdrátový CO₂ monitor
 
-Tento dokument vás provede projektem **Rádiového CO₂ monitoru**. Budete si moci zobrazit panel s údaji o CO₂, teplotě, vlhkosti, okolním osvětlení a atmosférickém tlaku v prostředí **Node-RED** a zároveň sledovat data na svém chytrém telefonu pomocí cloudu a mobilní aplikace **Blynk**.
+Tento dokument vás provede projektem **Rádiového CO₂ monitoru**. Budete si moci zobrazit panel s údaji o CO₂, teplotě, vlhkosti, okolním osvětlení a atmosférickém tlaku v prostředí **Node-RED**.
 
 ## Blokové schéma
 
@@ -213,57 +213,8 @@ V tomto bodě máte ověřenou rádiovou komunikaci.
 
 :::
 
-## Integrace s Blynk IoT
-
-Nyní, když je sada sestavená a odesílá data, ukážeme si naměřené hodnoty na telefonu pomocí **Blynk IoT** (současná platforma Blynk — starý cloud Blynk Legacy byl ukončen). Vytvoříte si účet Blynk, šablonu zařízení s jedním **Datastreamem** pro každou hodnotu a samotné zařízení, a poté propojíte **Node-RED** tak, aby do Blynku posílal naměřené hodnoty z MQTT.
-
-Nastavení účtu, šablony, zařízení a datastreamů popisuje kanonický návod: [**Integrace aplikace HARDWARIO Blynk**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
-
-#### Krok 1: Vytvořte účet, šablonu a zařízení v Blynk IoT
-
-Pokud účet ještě nemáte, vytvořte si ho v aplikaci **Blynk IoT**, vytvořte **šablonu zařízení** (device template) a z ní pak **zařízení** (device). [**Návod k integraci**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) provede každým krokem a je závazným zdrojem přesných postupů.
-
-#### Krok 2: Vytvořte jeden Datastream (Virtual Pin) pro každou hodnotu
-
-V detailu šablony otevřete záložku **Datastreams** a přidejte jeden datastream typu **Virtual Pin** pro každou naměřenou hodnotu. Pro všechny použijte datový typ **Double** a nastavte rozumný rozsah a jednotku:
-
-| Hodnota | Virtual Pin | Typ | Jednotka |
-|---|---|---|---|
-| Teplota | V0 | Double | °C |
-| Relativní vlhkost | V1 | Double | % |
-| Atmosférický tlak | V2 | Double | hPa |
-| Koncentrace CO₂ | V3 | Double | ppm |
-
-:::info
-
-Koncentrace CO₂ má vlastní Virtual Pin (V3). Barometr hlásí tlak v pascalech, proto jej Node-RED před odesláním dělí **1000** — datastream V2 plňte v **hPa** (≈ 950–1050).
-
-:::
-
-#### Krok 3: Přidejte v Node-RED uzly Blynk IoT Write
-
-Přidejte další flow (velkým tlačítkem **+** vedle názvu flow) a sestavte malý řetězec pro každou hodnotu: uzel **MQTT in** přihlášený k odběru tématu daného senzoru, který napájí zelený uzel **Blynk IoT Write** (najdete jej v levém menu v sekci **Blynk IoT**). U atmosférického tlaku vložte mezi MQTT uzel a Write uzel malý **function** uzel `msg.payload = msg.payload / 1000.0`, aby hodnota dorazila v hPa.
-
-Použijte tato MQTT témata a Virtual Piny:
-
-| MQTT téma | Virtual Pin |
-|---|---|
-| `node/co2-monitor:0/thermometer/0:0/temperature` | V0 |
-| `node/co2-monitor:0/hygrometer/0:4/relative-humidity` | V1 |
-| `node/co2-monitor:0/barometer/0:0/pressure` (÷ 1000) | V2 |
-| `node/co2-monitor:0/co2-meter/-/concentration` | V3 |
-
-#### Krok 4: Nakonfigurujte připojení k Blynk IoT
-
-Dvojklikem otevřete Write uzel a kliknutím na **tužku** přidejte připojení. Do pole **Url** zadejte `blynk.cloud`, poté zkopírujte **Auth Token** a **Template ID** z detailu zařízení ve webové konzoli Blynk. Potvrďte tlačítkem **Add**. Zpět v uzlu nastavte **Virtual Pin** na odpovídající číslo (`0`, `1`, `2` nebo `3` — bez úvodního „V“). Všechny čtyři Write uzly sdílejí stejné připojení. Potvrďte tlačítkem **Done**, propojte uzly a klikněte na **Deploy**.
-
-#### Krok 5: Přidejte v aplikaci widgety Gauge
-
-Stáhněte si aplikaci **Blynk IoT** z [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk), přihlaste se a otevřete své zařízení. Pro každý datastream (CO₂, teplota, vlhkost, tlak) přidejte widget **Gauge** a každý z nich svažte s jeho Virtual Pinem. Po nasazení flow v Node-RED začnou ukazatele zobrazovat živé hodnoty.
-
 ### Související dokumenty  <a id="related-documents"></a>
 
-* [**Integrace aplikace HARDWARIO Blynk**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/)
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Nastavení nástrojového řetězce**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)

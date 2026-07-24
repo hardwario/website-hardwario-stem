@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Bezdrátový chytrý LED pásek
 
-Tento dokument vás provede projektem **Bezdrátový chytrý LED pásek**. Budete moci ovládat svůj LED pásek pomocí **Node-RED** a **Blynku** a také řídit napájení zařízení prostřednictvím relé **16 A**.
+Tento dokument vás provede projektem **Bezdrátový chytrý LED pásek**. Budete moci ovládat svůj LED pásek pomocí **Node-RED** a také řídit napájení zařízení prostřednictvím relé **16 A**.
 
 ## Blokové schéma
 
@@ -239,58 +239,6 @@ Postupujte podle těchto kroků v **Node-RED**:
     <Image img={require('./img/radio-smart-led-strip/radio-smart-led-strip-radio-test.webp')}/>
   </div>
 </div>
-
-## Integrace s Blynk IoT
-
-Nyní, když je Radio Power Controller sestaven a reaguje na lokální barevný test, pojďme jej ovládat z telefonu pomocí **Blynk IoT** (současná platforma Blynk – starý cloud Blynk Legacy byl ukončen). Vše zde vychází z kanonického [**průvodce HARDWARIO Blynk IoT**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) – mějte jej otevřený vedle této stránky, kde najdete přesné postupy kliknutí a snímky obrazovky; níže pouze popisujeme princip.
-
-V tomto projektu je směr dat **aplikace → zařízení**: každý widget, na který v aplikaci Blynk IoT klepnete, zapíše hodnotu do virtuálního pinu, Node-RED tento pin **přečte** (Read) a předá ji LED pásku / relé prostřednictvím logiky MQTT-out, kterou jste již vytvořili.
-
-#### Krok 1: Vytvořte účet, šablonu a zařízení Blynk IoT
-
-Pokud ještě žádný nemáte, vytvořte si účet v aplikaci [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) a poté vytvořte **šablonu zařízení (device template)** a z ní **zařízení (device)**. [Průvodce](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) vás provede celým tímto procesem; můžete také znovu použít šablonu z předchozího projektu. V detailu zařízení si poznamenejte jeho **Auth Token** a **Template ID** – vložíte je do Node-RED v kroku 4.
-
-#### Krok 2: Vytvořte Datastream (virtuální pin) pro každý ovládací prvek
-
-V detailu šablony otevřete záložku **Datastreams**, klikněte na **Edit**, poté na **+ New Datastream** a zvolte **Virtual Pin**. Vytvořte jeden virtuální pin pro každý ovládací prvek, který chcete u LED pásku a relé používat:
-
-| Ovládací prvek | Virtuální pin | Typ datastreamu | Odesílá do zařízení |
-|---|---|---|---|
-| Barva LED pásku | V1 | String (barva) | `led-strip/-/color/set` |
-| Úroveň bílé | V2 | Integer `0`–`255` | `led-strip/-/color/set` (bílý kanál) |
-| LED pásek zap/vyp | V3 | Integer `0`/`1` | `led-strip/-/color/set` (poslední barva / vypnuto) |
-| Relé (napájené zařízení) | V4 | Integer `0`/`1` | `relay/-/state/set` |
-| Efekt duha | V5 | Integer `0`/`1` | `led-strip/-/effect/set` (`rainbow`) |
-| Efekt theater-chase | V6 | Integer `0`/`1` | `led-strip/-/effect/set` (`theater-chase-rainbow`) |
-| Jas | V7 | Integer `0`–`100` | `led-strip/-/brightness/set` |
-
-Po dokončení šablonu uložte. (Čísla virtuálních pinů výše jsou pouze příklad – použijte libovolné volné piny, ale udržujte je konzistentní s uzly Node-RED v kroku 4.)
-
-#### Krok 3: Přidejte odpovídající widgety v aplikaci Blynk IoT
-
-Stáhněte si aplikaci **Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk), přihlaste se a otevřete zařízení, které jste vytvořili. Na jeho dashboard přidejte widget pro každý Datastream a každý widget přiřaďte k jeho virtuálnímu pinu:
-
-* **Color** widget → pin barvy (V1)
-* **Slider** widget → úroveň bílé (V2) a další pro jas (V7)
-* **Button** (režim přepínače) → zap/vyp (V3) a relé (V4)
-* **Button** nebo **Segmented Switch** → efekt duha (V5) a efekt theater-chase (V6)
-
-Průvodce ukazuje přesně, jak widget přidat a přiřadit.
-
-#### Krok 4: Přečtěte virtuální piny v Node-RED
-
-Přidejte v Node-RED nový flow. Pro každý ovládací prvek vložte uzel **Read** Blynk IoT (najdete jej v sekci Blynk IoT v levé paletě) a propojte jej s malým uzlem **function**, který příchozí hodnotu namapuje na správné MQTT téma, a poté do vašeho stávajícího uzlu **MQTT out**. Mapování odpovídá tématům z lokálního Testu komunikace – například barva a bílá sestaví payload `node/power-controller:0/led-strip/-/color/set`, zap/vyp obnoví poslední barvu nebo odešle černou, relé odešle `node/power-controller:0/relay/-/state/set`, efekty odešlou `node/power-controller:0/led-strip/-/effect/set` a jas odešle `node/power-controller:0/led-strip/-/brightness/set`.
-
-Každý uzel Read nakonfigurujte kliknutím na **tužku** vedle připojení a vyplněním:
-
-* **Url**: `blynk.cloud`
-* **Auth Token** a **Template ID**: hodnoty z detailu vašeho zařízení (krok 1)
-
-Potvrďte tlačítkem **Add**, poté do pole **Virtual Pin** zadejte číslo pinu pro daný ovládací prvek (pouze číslo, bez písmene „V“). Potvrďte tlačítkem **Done**.
-
-#### Krok 5: Nasaďte a vyzkoušejte
-
-Klikněte na červené tlačítko **Deploy** v Node-RED a poté otevřete zařízení v aplikaci Blynk IoT. Klepejte na widgety – barva, úroveň bílé, zap/vyp, relé, efekty a jas by nyní měly v reálném čase ovládat LED pásek a napájené zařízení. 🌈
 
 ### Související dokumenty<a id="related-documents"></a>
 

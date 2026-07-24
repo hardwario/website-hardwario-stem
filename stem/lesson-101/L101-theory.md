@@ -101,7 +101,7 @@ The added value of IoT lies not in IoT devices, but in the analysis of the data 
 
 ### IoT applications
 
-The range of IoT applications is huge and dynamically expanding. Big players running IoT platforms offer their own solutions (e.g. Microsoft and its IoT Central), but there are many excellent IoT applications developed by smaller companies such as IFTTT, Ubidots, Blynk, etc. The vast majority of apps are in both desktop and mobile variants for smartphones.
+The range of IoT applications is huge and dynamically expanding. Big players running IoT platforms offer their own solutions (e.g. Microsoft and its IoT Central), but there are many excellent IoT applications developed by smaller companies such as IFTTT, Ubidots, etc. The vast majority of apps are in both desktop and mobile variants for smartphones.
 
 ## IoT connectivity
 

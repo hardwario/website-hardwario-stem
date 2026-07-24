@@ -8,7 +8,6 @@ title: Předpokládané výsledky a způsob vyhodnocení
 * Vysvětlit pojem Internet věcí
 * Používat IoT stavebnici HARDWARIO
 * Programovat v prostředí Node-RED
-* Používat aplikaci pro chytré telefony Blynk
 * Vytvořit vlastní IoT projekt a odprezentovat ho
 
 ## Student bude znát:
