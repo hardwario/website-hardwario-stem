@@ -20,6 +20,13 @@ Během kurzu projdete pět výukových lekcí, které kombinují teorii, praktic
 * Podmíněné reakce – logické uzly, reakce na vstupy, automatizace.
 * Ovládání výstupů – LED pásky, barevné efekty a interaktivní prvky.
 
+## Co budete potřebovat
+
+* Počítač s **Windows 10 nebo novějším**, **macOS 15 nebo novějším**, nebo s **linuxovým desktopem** (podporováno je Ubuntu 24.04 / Fedora 42 nebo novější), jeden volný USB port a oprávnění instalovat software a USB ovladače.
+* **HARDWARIO Playground** — ke stažení zdarma; instalací vás provede Lekce 1.
+* Hardware HARDWARIO TOWER používaný v lekcích: **Radio Dongle, Core Module, Battery Module, Mini Battery Module, PIR Module, Climate Module, Button Module, LCD Module, Power Module, Cover Module**, USB kabel, LED pásek, DC adaptér a 3D tištěné kryty — a k tomu **šest baterií AAA** (čtyři do Battery Module, dvě do Mini Battery Module).
+* Připojení k internetu pro stažení softwaru. **Nejsou potřeba žádné účty ani cloudové služby.**
+
 ## Přínosy kurzu
 
 * Praktické STEM vzdělávání propojující elektroniku, programování a digitální dovednosti.
