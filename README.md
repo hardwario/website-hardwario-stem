@@ -14,7 +14,7 @@ Built with [Docusaurus 3](https://docusaurus.io), with several doc instances
 ## Develop
 
 ```bash
-npm install        # first time / after dependency changes (Node 18+)
+npm install        # first time / after dependency changes (Node 20+; .nvmrc pins 24)
 npm start          # dev server → http://localhost:3000, hot reload
 npm run build      # production build → build/ (fails on broken links)
 npm run serve      # serve the production build locally
