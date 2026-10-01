@@ -18,6 +18,31 @@ const config = {
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
 
+  // Docusaurus Faster (@docusaurus/faster): Rspack bundler, SWC JS loader and
+  // minifier, Lightning CSS, SSG worker threads, as on docs.hardwario.com. The
+  // worker threads need the v4 flag that drops the legacy postBuild({head}) API,
+  // which no plugin here uses; the other v4 flags (CSS cascade layers, storage
+  // namespacing) would change the site and stay off. Two faster options stay off:
+  // - swcHtmlMinimizer: it reports invalid markup on 9 pages (nested <a>, stray
+  //   </p>) and on docs it changed the DOM of such pages; the default minifier
+  //   leaves the markup as written.
+  // - gitEagerVcs: in a submodule checkout it lost <lastmod> for every sitemap
+  //   URL. The default per-file git strategy keeps them.
+  future: {
+    v4: { removeLegacyPostBuildHeadAttribute: true },
+    faster: {
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: false,
+      lightningCssMinimizer: true,
+      mdxCrossCompilerCache: true,
+      rspackBundler: true,
+      rspackPersistentCache: true,
+      ssgWorkerThreads: true,
+      gitEagerVcs: false,
+    },
+  },
+
   // Identify this property as the learning website, with the legal company as
   // its publisher. This keeps search engines from confusing STEM with the
   // parent company's industrial-product site.
