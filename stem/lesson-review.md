@@ -33,7 +33,7 @@ Practical preparation for individual work of students. The lecturer leads experi
 
 ### Annotation
 
-The teamwork of students on selected IoT projects. The lecturer is a mentor, it helps students with the choice of projects (considering the knowledge and skills of students and time allocation). Students in teams work on designing, creating and preparing presentations of IoT projects. In the case of a small amount of time, [the Ideation](https://en.wikipedia.org/wiki/Ideation_(creative_process)) method can be used at this stage.
+The teamwork of students on selected IoT projects. The lecturer is a mentor and helps students choose projects (considering the knowledge and skills of students and time allocation). Students in teams work on designing, creating and preparing presentations of IoT projects. In the case of a small amount of time, [the Ideation](https://en.wikipedia.org/wiki/Ideation_(creative_process)) method can be used at this stage.
 
 **Time allocation:** 10 mins.
 
@@ -49,7 +49,7 @@ Students present their IoT projects or ideas to others. The lecturer and other s
 
 ### Annotation
 
-Verbal evaluation of the presented projects by the group. Recapitulation of the fulfilment of teaching objectives by the lecturer Knowledge test and 3-2-1 assessment.
+Verbal evaluation of the presented projects by the group. Recapitulation of the fulfilment of teaching objectives by the lecturer. Knowledge test and 3-2-1 assessment.
 
 **Time allocation: All modules:** 0–5 mins.
 

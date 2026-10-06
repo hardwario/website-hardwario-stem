@@ -17,16 +17,16 @@ HARDWARIO Playground je univerzální nástroj pro práci se stavebnicí HARDWAR
 
 :::info
 
-Playground si můžete stáhnout na stránce [Download](https://docs.hardwario.com/tower/desktop-programming/playground-installation/). Vyberte si verzi podle vašeho operačního systému, stáhněte instalační soubor a postupujte podle průvodce instalací.
+Playground si můžete stáhnout na stránce [Download](https://docs.hardwario.com/tower/desktop-programming/playground-installation/). Vyberte si verzi podle svého operačního systému, stáhněte instalační soubor a postupujte podle průvodce instalací.
 
 :::
 
-Po úspěšné instalaci a spuštění HARDWARIO Playground se otevře hlavní okno aplikace. V záložce **Devices** uvidíte seznam připojených zařízení. Pokud je vše správně zapojeno, objeví se zde vaše HARDWARIO zařízení. Na začátku však může být seznam prázdný – v takovém případě zkontrolujte, zda je zařízení správně připojeno přes USB a nainstalovány všechny potřebné ovladače.
+Po úspěšné instalaci a spuštění HARDWARIO Playground se otevře hlavní okno aplikace. V záložce **Devices** uvidíte seznam připojených zařízení. Pokud je vše správně zapojeno, objeví se zde vaše HARDWARIO zařízení. Na začátku však může být seznam prázdný. V takovém případě zkontrolujte, zda je zařízení správně připojeno přes USB a zda jsou nainstalovány všechny potřebné ovladače.
 
 
 ## 2. Radio Dongle
 
-Nyní připojte **Radio Dongle** (USB modul) do volného USB portu vašeho počítače. HARDWARIO Playground by měl zařízení automaticky rozpoznat a zobrazit jej v seznamu **Devices**. Pokud se dongle neobjeví, ujistěte se, že je správně zasunutý.
+Nyní připojte **Radio Dongle** (USB modul) do volného USB portu počítače. HARDWARIO Playground by měl zařízení automaticky rozpoznat a zobrazit jej v seznamu **Devices**. Pokud se dongle neobjeví, ujistěte se, že je správně zasunutý.
 
 <div class="container">
   <div class="row">
@@ -34,13 +34,13 @@ Nyní připojte **Radio Dongle** (USB modul) do volného USB portu vašeho poč�
   </div>
 </div>
 
-## 3. Přehrání firmware
+## 3. Nahrání firmwaru
 
 *Tento krok je volitelný a doporučuje se provést pouze v případě, že si nejste jisti, kdo naposledy a jak pracoval s vaším Radio Donglem.*
 
 V menu vlevo najdete odkaz **Firmware**, kde je potřeba vyhledat `hardwario/twr-gateway-radio-dongle` a stisknout tlačítko **„Flash firmware“**. Tento krok zajistí, že dongle bude mít nejnovější verzi firmwaru, což může vyřešit případné problémy s připojením.
 
-## 4. Připoj Radio Dongle
+## 4. Připojte Radio Dongle
 
 V menu vpravo v sekci **Devices** klikněte na tlačítko **Connect**, čímž se Dongle připojí. Bohužel v tuto chvíli nebudou zobrazeny žádné další efekty ani indikátory připojení.
 
@@ -80,11 +80,11 @@ Otočte **PIR Module** na bok. V sekci **Messages** by se měla objevit položka
 
 :::
 
-## 6. Přehrání firmware PIR Module
+## 6. Nahrání firmwaru do PIR Module
 
 *Tento krok je volitelný a doporučuje se provést, pokud **Core Module** sloužil v jiném projektu a nyní se nehlásí jako `motion-detector`. Také pokud si chcete být jisti, že používáte nejnovější firmware.*
 
-1. Najděte USB kabel pro připojení **Core Modulu** k počítači.  
+1. Najděte USB kabel pro připojení modulu **Core Module** k počítači.  
 2. V levém menu **HARDWARIO Playground** přejděte do sekce **Firmware**.  
 3. V části **Device** uvidíte všechna připojená HARDWARIO zařízení, např. `bc-usb-dongle` a `hio-core-module`. Vyberte `hio-core-module`.  
 4. V sekci firmware vyberte **twr-radio-motion-detector** (zobrazí se i jeho obrázek).  

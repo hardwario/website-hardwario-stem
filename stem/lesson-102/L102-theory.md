@@ -44,7 +44,7 @@ In **HARDWARIO Playground** you can:
 * connect your box (IoT set) to your computer,
 * customize and set the functions of your IoT box,
 * upload firmware to your build (if you don't know what that is, check out [here](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/))
-* or see what your report is doing in clear graphs and visualisations.
+* or see what your build is doing in clear graphs and visualisations.
 
 <div class="container">
   <div class="row">
@@ -52,11 +52,11 @@ In **HARDWARIO Playground** you can:
   </div>
 </div>
 
-### Bookmarks Playground app
+### Playground app tabs
 
 1. **Devices** has the most important role of all the tabs. Pair your build with the USB Dongle and thus with your computer and then you can create.
 2. **Bridge** is the tab for pairing the special Bridge Module
 3. **Functions** is a tab where you simply drag the so-called nodes to determine how your assembly should behave in different situations, for example when you press a button or the ambient temperature changes. All this simple programming works on the Node-RED system, which you can learn more about [here](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
-4. In **Dashboard**, you'll eventually see your box's activities plotted in handy colour charts. Want to track how the temperature in your classroom has risen and fallen? No problem! We've got you covered on how to create a cool Dashboard too [cool tutorial](https://docs.hardwario.com/tower/desktop-programming/data-visualization).
+4. In **Dashboard**, you'll eventually see your box's activities plotted in handy colour charts. Want to track how the temperature in your classroom has risen and fallen? No problem! We have also prepared a [tutorial](https://docs.hardwario.com/tower/desktop-programming/data-visualization) on creating a cool Dashboard.
 5. In **Messages** you will see every value that your assembly records, whether it is a button press, a position change or a temperature measurement.
 6. Finally, there's the **Firmware** tab. Here you can load firmware, the program that controls the device, into your Core Module with a few clicks. You can learn more about the firmware [here](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).

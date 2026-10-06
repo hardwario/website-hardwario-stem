@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 **Push Set** can interact with your world. Get phone notification, play next Spotify song, control your smart lights, trigger the egg timer or send a Tweet to the world.
 
-In this tutorial you create a simple project with a button, that sends you push notification to your phone everytime you press it.
+In this tutorial you create a simple project with a button, that sends a push notification to your phone every time you press it.
 
 
 <div class="container">
@@ -43,7 +43,7 @@ The red LED on the Core Module will light up for 2 seconds when the batteries ar
 
 ## Playground Set-Up
 
-In this step you run the **Playground** application that manages Radio Dongle, Push Button and thanks to the **Node-RED** connects everything together.
+In this step you run the **Playground** application that manages the Radio Dongle and the Push Button and connects everything together through **Node-RED**.
 
 #### Step 1: Download and run the latest [**HARDWARIO Playground**](https://github.com/hardwario/hardwario-playground/releases/tag/v1.7.0)
 
@@ -76,7 +76,7 @@ If you cannot see Radio Dongle in the devices, please see the [Troubleshooting](
   </div>
 </div>
 
-#### **Step 4:** When connected. The already flashed and paired Push Button Kit will be in the paired devices
+#### **Step 4:** Once connected, the already flashed and paired Push Button Kit appears in the paired devices
 
 <div class="container">
   <div class="row">
@@ -128,7 +128,7 @@ In the **Playground** **Functions** tab, add a Blynk IoT node after the **change
 
 Double-click the node, then click the **pencil icon** to set up the Blynk connection. In the **Url** field enter `blynk.cloud`, and into the **Auth Token** and **Template ID** fields copy the values from your device detail in the Blynk IoT web console. Confirm, then point the node at the **Event** (`Button pressed`) you defined on the template so it fires that notification.
 
-#### **Step 3:** Click the **Deploy** button. Everytime you edit the Node-RED flow you have to apply changes!
+#### **Step 3:** Click the **Deploy** button. Every time you edit the Node-RED flow, you have to apply the changes!
 
 ## Action !
 
@@ -148,6 +148,6 @@ The goal of this **Push Button Project** is to show the basics in a few simple s
 * Take a look at the [**Module Overview**](https://docs.hardwario.com/chester/extension-modules/chester-z1/#module-overview).
 * Learn about [**MQTT**](https://docs.hardwario.com/tower/mqtt-protocol/) and [**HARDWARIO MQTT topics**](https://docs.hardwario.com/tower/mqtt-protocol/topics-reference/) to control LEDs and relays.
 * Try other [**integrations**](https://docs.hardwario.com/tower/category/platform-integrations/) with **Grafana**, **Blynk**, **IFTTT**, **Ubidots** and others.
-* Use your [**Raspberry PI**](https://docs.hardwario.com/tower/server-raspberry-pi/) or other
+* Use your [**Raspberry PI**](https://docs.hardwario.com/tower/server-raspberry-pi/) or another single-board computer (SBC) as a server.
 * [**Flash other firmware**](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware) or [**write your own firmware**](https://docs.hardwario.com/chester/category/firmware-sdk/) for the **Core Module**.
 * Check the [**Core Module pinouts**](https://docs.hardwario.com/tower/hardware-modules/header-pinout/#core-module-pinout) and add your own buttons, relays and sensors.

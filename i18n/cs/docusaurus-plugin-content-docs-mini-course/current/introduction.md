@@ -1,14 +1,14 @@
 ---
 slug: /
-title: TOWER Mini kurz
+title: Minikurz TOWER
 description: Praktický minikurz HARDWARIO TOWER pro studenty, učitele a zájemce o IoT, od prvního zapojení po funkční aplikaci.
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
 
-# TOWER Mini kurz
+# Minikurz TOWER
 
-Tento kurz vznikl ve spolupráci HARDWARIO a.s. a Technické univerzity v Liberci v rámci dotační podpory Libereckého kraje. Cílem je poskytnout studentům i učitelům praktický nástroj k objevování světa Internetu věcí (IoT) prostřednictvím elektronické stavebnice TOWER.
+Tento kurz vznikl ve spolupráci HARDWARIO a.s. a Technické univerzity v Liberci v rámci dotační podpory Libereckého kraje. Cílem je poskytnout studentům i učitelům praktický nástroj k objevování světa internetu věcí (IoT) prostřednictvím elektronické stavebnice TOWER.
 
 Kurz je navržen tak, aby účastníky vedl od prvního zapojení modulu až po tvorbu vlastních IoT aplikací.
 
@@ -16,7 +16,7 @@ Kurz je navržen tak, aby účastníky vedl od prvního zapojení modulu až po 
 
 Během kurzu projdete pět výukových lekcí, které kombinují teorii, praktické ukázky a vlastní experimenty:
 
-* Začínáme s TOWER: instalace prostředí, nahrání firmware, připojení senzoru.
+* Začínáme s TOWER: instalace prostředí, nahrání firmwaru, připojení senzoru.
 * Měření a vizualizace dat: práce s teplotou, vlhkostí, světlem a dalšími senzory.
 * Podmíněné reakce: logické uzly, reakce na vstupy, automatizace.
 * Ovládání výstupů: LED pásky, barevné efekty a interaktivní prvky.
@@ -39,11 +39,11 @@ Během kurzu projdete pět výukových lekcí, které kombinují teorii, praktic
 
 * Studenty středních a vysokých škol, kteří chtějí proniknout do světa moderních technologií.
 * Učitele a lektory, kteří hledají praktické výukové materiály do hodin digitálních technologií, informatiky či fyziky.
-* Zájemce o IoT a smart technologie, kteří chtějí získat praktickou zkušenost.
+* Zájemce o IoT a chytré technologie, kteří chtějí získat praktickou zkušenost.
 
 ## Realizace projektu
 
-Projekt byl realizován v akademickém roce 2024/2025 s podporou Regionálního inovačního programu Libereckého kraje. Výsledkem je plně zpracovaná metodika výuky IoT, která je k dispozici online a otevřená dalšímu rozvoji.
+Projekt proběhl v akademickém roce 2024/2025 s podporou Regionálního inovačního programu Libereckého kraje. Výsledkem je plně zpracovaná metodika výuky IoT, která je k dispozici online a otevřená dalšímu rozvoji.
 
 ## Spolufinancováno Libereckým krajem
 

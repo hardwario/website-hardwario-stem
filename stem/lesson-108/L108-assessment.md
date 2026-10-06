@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 **Time allocation**: 5 min.
 
-Perform 3-2-1 Assessment, ie. you specify:
+Perform the 3-2-1 assessment, i.e. list:
 
 * 3 things you didn't know before the lesson
 * 2 things that were a surprise for you under this topic

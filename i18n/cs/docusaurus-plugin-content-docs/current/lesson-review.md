@@ -43,7 +43,7 @@ Týmová práce studentů na zvolených IoT projektech. Lektor je mentorem, pom�
 
 ### Anotace
 
-Studenti prezentují své IoT projekty či nápady ostatním. Lektor a ostatní studenti kriticky hodnotí prezentované myšlenky a přemýšlejí na důležitostí výstupů projektů a témat lekce, včetně důležitosti internetu věcí v reálném světě.  
+Studenti prezentují své IoT projekty či nápady ostatním. Lektor a ostatní studenti kriticky hodnotí prezentované myšlenky a přemýšlejí o důležitosti výstupů projektů a témat lekce, včetně důležitosti internetu věcí v reálném světě.  
 
 **Časová dotace**: 10 min.
 

@@ -13,7 +13,7 @@ title: Předpokládané výsledky a způsob vyhodnocení
 ## Student bude znát:
 
 * Přínosy a rizika internetu věcí
-* MQTT protokol pro internet věcí
+* Protokol MQTT pro internet věcí
 * Přenosové technologie pro internet věcí 
 * Způsob práce s IoT stavebnicí HARDWARIO
 

@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 **Časová dotace**: 10 min.
 
-Studenti si zkoušejí další projekty, které jsou svázány s daným tématem, nebo probíhá tzv. Ideation
+Studenti si zkoušejí další projekty, které jsou svázány s daným tématem, nebo probíhá tzv. Ideation.
 
 ## Další projekty s tématem lekce k vyzkoušení
 
@@ -54,4 +54,4 @@ Studenti si zkoušejí další projekty, které jsou svázány s daným tématem
 
 ### Ideation
 
-Studenti navrhují reálné využití znalostí nabytých teoretickým výkladem a experimenty. Nápady zapisují do grafu, kde na ose x se odhaduje náročnost (náklady) projektu a na ose y dopad realizace řešení.
+Studenti navrhují reálné využití znalostí nabytých teoretickým výkladem a experimenty. Nápady zapisují do grafu, kde osa x udává odhadovanou náročnost (náklady) projektu a osa y dopad zavedení řešení.

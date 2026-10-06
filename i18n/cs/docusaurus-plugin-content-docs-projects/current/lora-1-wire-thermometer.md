@@ -6,9 +6,9 @@ import Image from '@theme/IdealImage';
 
 # LoRa teploměr s 1-Wire rozhraním
 
-S touto sadou můžete měřit **teploty** pomocí jednoho nebo více připojených teplotních senzorů DS18B20 nebo DS18S20. Hodnoty jsou poté bezdrátově odeslány do LoRa gateway.
+S touto sadou můžete měřit **teploty** pomocí jednoho nebo více připojených teplotních senzorů DS18B20 nebo DS18S20. Hodnoty se pak bezdrátově odešlou do brány LoRa.
 
-K přijímání dat můžete použít komunitu The Things Network.
+K příjmu dat můžete použít komunitní síť The Things Network.
 
 ## Co budete potřebovat
 
@@ -16,7 +16,7 @@ K přijímání dat můžete použít komunitu The Things Network.
 * [LoRa Module](https://www.hardwario.store/cz/p/lora-module)
 * [Mini Battery Module](https://www.hardwario.store/cz/p/mini-battery-module)
 * [Sensor Module](https://www.hardwario.store/cz/p/sensor-module)
-* [Teplotní senzor](https://www.hardwario.store/cz/p/temperature-sensor-ds18b20-2m)
+* [Teplotní senzor DS18B20](https://www.hardwario.store/cz/p/temperature-sensor-ds18b20-2m)
 
 ## Nahrání firmwaru
 
@@ -30,11 +30,11 @@ K přijímání dat můžete použít komunitu The Things Network.
 
 ## Konfigurace LoRa
 
-Pro konfiguraci klíčů LoRa postupujte podle návodu [LoRa AT Commands Configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/#lora-configuration)
+Klíče LoRa nakonfigurujete podle návodu [LoRa AT Commands Configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/#lora-configuration).
 
 ##  Přenos dat
 
-LoRa Climate Monitor odešle packet LoRa v následujících případech:
+LoRa Climate Monitor odešle paket LoRa v těchto případech:
 
 * Po zapnutí, když jsou vloženy baterie
 * Každých 15 minut, když jsou naměřené hodnoty stejné
@@ -43,13 +43,13 @@ LoRa Climate Monitor odešle packet LoRa v následujících případech:
 
 ## Čtení dat
 
-Data jsou zakódována v zprávě LoRa. Abyste získali hodnoty zpět, musíte extrahovat správné bity. To je vysvětleno v souboru [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py` python [skript v úložišti](https://github.com/bigclownlabs/bcf-lora-climate-monitor).
+Data jsou zakódována ve zprávě LoRa. Abyste získali hodnoty zpět, musíte extrahovat správné bity. To je vysvětleno v souboru [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py` python [skript v repozitáři](https://github.com/bigclownlabs/bcf-lora-climate-monitor).
 
 Přijatý řetězec HEX můžete předat jako parametr pro `decode.py`:
 
 :::info
 
-Stejný příkaz můžete použít k aktualizaci  **Firmware Flashing Tool** na nejnovější verzi.
+Stejný příkaz můžete použít k aktualizaci **Firmware Flashing Tool** na nejnovější verzi.
 
 :::
 

@@ -52,8 +52,8 @@ Confirm by clicking the **Done** button.
 
 ## Time for action!
 
-1. Using duct tape, stick the box **to a wall inside your dog´s kennel**. 🏡
+1. Using duct tape, stick the box **to a wall inside your dog’s kennel**. 🏡
 2. Watch **how the temperature changes** when your dog is inside and outside the kennel. When your dog is inside, they warm up the kennel a bit. 🐕
    **Tip:** When temperatures drop, put down a blanket or some straw.
-3. If it is -15 °C outside, don´t wait, **let your dog inside the house**, at least in the hallway!❄
+3. If it is -15 °C outside, don’t wait, **let your dog inside the house**, at least in the hallway!❄
 4. Your reward? **A very happy dog**! 👌

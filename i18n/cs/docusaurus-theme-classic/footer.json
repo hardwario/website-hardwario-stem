@@ -1,6 +1,6 @@
 {
   "link.title.Sites": {
-    "message": "Stránky",
+    "message": "Weby",
     "description": "The title of the footer links column with title=Sites in the footer"
   },
   "link.title.Community": {
@@ -12,11 +12,11 @@
     "description": "The title of the footer links column with title=More in the footer"
   },
   "link.item.label.Homepage": {
-    "message": "Homepage",
+    "message": "Hlavní web",
     "description": "The label of footer link with label=Homepage linking to https://hardwario.com"
   },
   "link.item.label.Forum": {
-    "message": "Forum",
+    "message": "Fórum",
     "description": "The label of footer link with label=Forum linking to https://forum.hardwario.com"
   },
   "link.item.label.LinkedIn": {
@@ -44,7 +44,7 @@
     "description": "The footer copyright"
   },
   "link.item.label.Store": {
-    "message": "Store",
+    "message": "E-shop",
     "description": "The label of footer link with label=Store linking to https://www.hardwario.store"
   }
 }

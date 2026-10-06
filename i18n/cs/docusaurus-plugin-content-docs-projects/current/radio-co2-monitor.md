@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Bezdrátový CO₂ monitor
 
-Tento dokument vás provede projektem **Rádiového CO₂ monitoru**. Budete si moci zobrazit panel s údaji o CO₂, teplotě, vlhkosti, okolním osvětlení a atmosférickém tlaku v prostředí **Node-RED**.
+Tento návod vás provede projektem **Bezdrátový CO₂ monitor**. V prostředí **Node-RED** pak uvidíte dashboard s hodnotami CO₂, teploty, vlhkosti, okolního osvětlení a atmosférického tlaku.
 
 ## Blokové schéma
 
@@ -42,7 +42,7 @@ Tento dokument vás provede projektem **Rádiového CO₂ monitoru**. Budete si 
 
 V tomto postupu použijeme **HARDWARIO Playground** k nahrání firmwaru do **Core Module**.
 
-#### Krok 1: Připojte kabel Micro USB k Core Modulu a k počítači
+#### Krok 1: Připojte kabel Micro USB k modulu Core Module a k počítači
 
 #### Krok 2: Spusťte HARDWARIO Playground
 
@@ -51,15 +51,15 @@ Na kartě Firmware vyberte a nahrajte firmware `bcf-radio-co2-monitor` do **Core
 :::warning
 
 **Nahrávání firmwaru do Core Module R1 a R2**  
-Pro rozdíly v nahrávání firmwaru do staršího **Core Module 1** a novějšího **Core Module 2** si prosím přečtěte srovnání **Core Module R1 a R2** v sekci **Hardware**.
+Rozdíly v nahrávání firmwaru do staršího **Core Module 1** a novějšího **Core Module 2** popisuje srovnání **Core Module R1 a R2** v sekci **Hardware**.
 
 :::
 
-#### Krok 3: Odpojte kabel Micro USB od **Core Modulu** a počítače
+#### Krok 3: Odpojte kabel Micro USB od modulu **Core Module** a od počítače
 
 :::success
 
-V tomto bodě je firmware úspěšně nahrán.
+Firmware je úspěšně nahraný.
 
 :::
 
@@ -86,9 +86,9 @@ Ujistěte se, že v **Battery Module** nejsou vloženy žádné baterie.
 
 :::
 
-#### Krok 2: Připojte **CO₂ Module** na **Battery Module**
+#### Krok 2: Nasaďte **CO₂ Module** na **Battery Module**
 
-#### Krok 3: Připojte **Core Module** na **CO₂ Module**
+#### Krok 3: Nasaďte **Core Module** na **CO₂ Module**
 
 #### Krok 4: Připojte **Temperature Tag** do zásuvky na **CO₂ Module**
 
@@ -96,13 +96,13 @@ Ujistěte se, že v **Battery Module** nejsou vloženy žádné baterie.
 
 #### Krok 6: Připojte **Barometer Tag** do zásuvky na **CO₂ Module**
 
-#### Krok 7: Připojte **Cover Module** na **Core Module**
+#### Krok 7: Nasaďte **Cover Module** na **Core Module**
 
 ## Spuštění Playgroundu
 
 :::danger
 
-Pokud používáte nový **HARDWARIO Playground**, použijte záložku **Functions** místo [http://localhost:1880/](http://localhost:1880/). Proces párování nyní probíhá v záložce **Devices**. Pro otestování komunikace použijte záložku **Messages**.
+Pokud používáte nový **HARDWARIO Playground**, použijte záložku **Functions** místo [http://localhost:1880/](http://localhost:1880/). Párování nyní probíhá v záložce **Devices** a komunikaci otestujete v záložce **Messages**.
 
 :::
 
@@ -118,7 +118,7 @@ Pokud používáte nový **HARDWARIO Playground**, použijte záložku **Functio
 [{"id":"2fc604fc.3b6abc","type":"inject","z":"dfc861b.b2a02a","name":"List all gateways","topic":"gateway/all/info/get","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":460,"wires":[["a2c10833.24d5d8"]]},{"id":"1e4502b8.2f63fd","type":"inject","z":"dfc861b.b2a02a","name":"Start node pairing","topic":"gateway/usb-dongle/pairing-mode/start","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":570,"y":580,"wires":[["795ff5a7.8e266c"]]},{"id":"3d844ce2.932864","type":"inject","z":"dfc861b.b2a02a","name":"Stop node pairing","topic":"gateway/usb-dongle/pairing-mode/stop","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":640,"wires":[["5967c452.c838bc"]]},{"id":"f202b253.2705b","type":"inject","z":"dfc861b.b2a02a","name":"List paired nodes","topic":"gateway/usb-dongle/nodes/get","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":520,"wires":[["f0aca138.0b2c3"]]},{"id":"349f02fd.890f6e","type":"inject","z":"dfc861b.b2a02a","name":"Unpair all nodes","topic":"gateway/usb-dongle/nodes/purge","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":700,"wires":[["2f1c5bb6.53d6f4"]]},{"id":"cf61d75d.4ad8f8","type":"mqtt in","z":"dfc861b.b2a02a","name":"","topic":"#","qos":"2","broker":"67b8de4a.029d3","x":530,"y":400,"wires":[["a5cb0658.f5d658"]]},{"id":"a5cb0658.f5d658","type":"debug","z":"dfc861b.b2a02a","name":"","active":true,"console":"false","complete":"false","x":790,"y":400,"wires":[]},{"id":"a2c10833.24d5d8","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":460,"wires":[]},{"id":"f0aca138.0b2c3","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":520,"wires":[]},{"id":"795ff5a7.8e266c","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":580,"wires":[]},{"id":"5967c452.c838bc","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":640,"wires":[]},{"id":"2f1c5bb6.53d6f4","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":700,"wires":[]},{"id":"67b8de4a.029d3","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""},{"id":"717f7c18.ba0a24","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
 ```
 
-It will look like this:
+Bude to vypadat takto:
 
 
 <div class="container">
@@ -127,9 +127,9 @@ It will look like this:
   </div>
 </div><br></br>
 
-Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádio. Tyto příkazy jsou odesílány přes protokol MQTT.
+Úryvek přidá ovládací tlačítka pro příkazy brány a rádia, které se odesílají protokolem MQTT.
 
-#### Krok 4: Nasazení flow pomocí tlačítka **Deploy** v pravém horním rohu:
+#### Krok 4: Nasaďte flow tlačítkem **Deploy** v pravém horním rohu:
 
 #### Krok 5: Otevřete záložku **debug**:
 
@@ -155,13 +155,13 @@ V záložce **debug** uvidíte všechny zprávy MQTT.
 
 :::success
 
-V tomto bodě máte funkční **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** a **HARDWARIO Gateway**.
+Teď máte funkční **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** a **HARDWARIO Gateway**.
 
 :::
 
 ## Rádiové párování
 
-V této části vytvoříme rádiové spojení mezi **Radio Dongle** a **Radio CO₂ Monitorem**.
+V této části vytvoříme rádiové spojení mezi **Radio Dongle** a sestavou **Radio CO₂ Monitor**.
 
 Postupujte podle následujících kroků v prostředí **Node-RED**:
 
@@ -173,7 +173,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
   </div>
 </div>
 
-#### Krok 2: Vložte baterie do **Radio CO₂ Monitoru**, čímž odešlete požadavek na párování \(měla by se také rozsvítit červená LED na **Core Modulu** přibližně na 2 sekundy\)
+#### Krok 2: Vložte baterie do sestavy **Radio CO₂ Monitor**, čímž odešlete požadavek na párování \(červená LED na modulu **Core Module** by se také měla asi na 2 sekundy rozsvítit\)
 
 #### Krok 3: Klikněte na tlačítko **Stop node pairing**.
 
@@ -185,7 +185,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 :::success
 
-V tomto bodě máte navázané rádiové spojení mezi node \(**Radio Motion Detector**\) a bránou \(**Radio Dongle**\).
+Teď máte navázané rádiové spojení mezi uzlem \(**Radio Motion Detector**\) a bránou \(**Radio Dongle**\).
 
 :::
 
@@ -197,7 +197,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 #### Krok 2: Otestujte zařízení
 
-Začněte dýchat na teplotní senzor na **Temperature Tagu**, abyste vyvolali změnu teploty a tím spustili rádiový přenos.
+Dýchněte na teplotní senzor na desce **Temperature Tag**. Změna teploty spustí rádiový přenos.
 
 Poté byste měli vidět podobné zprávy:
 
@@ -209,7 +209,7 @@ Poté byste měli vidět podobné zprávy:
 
 :::success
 
-V tomto bodě máte ověřenou rádiovou komunikaci.
+Teď máte ověřenou rádiovou komunikaci.
 
 :::
 
@@ -218,5 +218,5 @@ V tomto bodě máte ověřenou rádiovou komunikaci.
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Nastavení nástrojového řetězce**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
-* [**Průvodce nástrojovým řetězceme**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
+* [**Průvodce nástrojovým řetězcem**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
 

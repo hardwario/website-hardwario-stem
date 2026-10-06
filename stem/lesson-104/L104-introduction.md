@@ -9,7 +9,7 @@ The goal of the lesson **IoT Thermometer and Hygrometer** is to introduce, withi
 
 During the lesson, a temperature and humidity sensor will be assembled and programmed, graphs will be prepared, and **notifications for exceeding the set temperature** will be configured.
 
-## Co budete v rámci lekce potřebovat?
+## What will you need for the lesson?
 
 * A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed
 * A projector or a large monitor

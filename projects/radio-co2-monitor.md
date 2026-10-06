@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Radio CO₂ Monitor
 
-This document will guide you through the **Radio CO₂ Monitor** project. You will be able to see dashboard with CO2, temperature, humidity, ambient light and atmospheric pressure in **Node-RED**.
+This document will guide you through the **Radio CO₂ Monitor** project. You will be able to see a dashboard with CO2, temperature, humidity, ambient light and atmospheric pressure in **Node-RED**.
 
 ## Block Concept
 
@@ -155,7 +155,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 :::success
 
-At this point, you've got working **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle**and **HARDWARIO Gateway**.
+At this point, you've got working **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** and **HARDWARIO Gateway**.
 
 :::
 
@@ -185,7 +185,7 @@ Follow these steps in **Node-RED**:
 
 :::success
 
-At this point, you've got established a radio link between the node \(**Radio Motion Detector**\) and the gateway \(**Radio Dongle**\).
+At this point, you have established a radio link between the node \(**Radio Motion Detector**\) and the gateway \(**Radio Dongle**\).
 
 :::
 
@@ -208,7 +208,7 @@ You should then see similar messages:
 
 :::success
 
-At this point, you've got verified radio communication.
+At this point, you have verified radio communication.
 
 :::
 

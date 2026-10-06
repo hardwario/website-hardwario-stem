@@ -5,9 +5,9 @@ title_meta: "Úvod (L104: IoT teploměr a vlhkoměr)"
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **IoT teploměr a vlhkoměr** je v rámci jedné vyučovací hodiny představit možnosti uplatnění IoT teploměru a vlhkoměru v domácnosti i průmyslu . 
+Cílem lekce **IoT teploměr a vlhkoměr** je v rámci jedné vyučovací hodiny představit možnosti uplatnění IoT teploměru a vlhkoměru v domácnosti i průmyslu.
 
-V rámci lekce se sestaví a naprogramuje senzor teploty a vlhkosti, připraví grafy a nastaví se notifikace překročení zadané teploty.
+Během lekce studenti sestaví a naprogramují senzor teploty a vlhkosti, připraví grafy a nastaví upozornění na překročení zadané teploty.
 
 ## Co budete v rámci lekce potřebovat?
 

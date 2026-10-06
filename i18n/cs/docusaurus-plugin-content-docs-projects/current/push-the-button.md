@@ -6,9 +6,9 @@ import Image from '@theme/IdealImage';
 
 # Tlačítko Push
 
-**Sada Push** může interagovat s vaším světem. Získejte oznámení na telefonu, přehrajte další skladbu na Spotify, ovládejte své chytré osvětlení, spustíte časovač na vejce nebo pošlete Tweet do světa.
+**Sada Push** dokáže zasáhnout do vašeho okolí: pošle oznámení do telefonu, přehraje další skladbu na Spotify, ovládne chytré osvětlení, spustí minutku nebo odešle tweet do světa.
 
-V tomto tutoriálu vytvoříte jednoduchý projekt s tlačítkem, které vám pokaždé, když na něj kliknete, pošle push notifikaci na váš telefon.
+V tomto návodu vytvoříte jednoduchý projekt s tlačítkem, které vám po každém stisknutí pošle push notifikaci do telefonu.
 
 <div class="container">
   <div class="row">
@@ -17,7 +17,7 @@ V tomto tutoriálu vytvoříte jednoduchý projekt s tlačítkem, které vám po
 </div>
 
 
-## Sestavení hardware
+## Sestavení hardwaru
 
 Budete potřebovat [Sadu Push](https://www.hardwario.store/cz/p/push-set) a [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle).
 
@@ -35,7 +35,7 @@ Sestavte všechny tři moduly dohromady, abyste vytvořili **Sadu Push**. Všimn
 
 :::info
 
-Červená LED dioda na základním modulu se rozsvítí na 2 sekundy, když jsou vloženy baterie. Tímto způsobem víte, že baterie jsou v pořádku a kit funguje správně.
+Po vložení baterií se červená LED na modulu Core Module na 2 sekundy rozsvítí. Podle toho poznáte, že baterie jsou v pořádku a sada funguje správně.
 
 :::
 
@@ -51,7 +51,7 @@ V tomto kroku spustíte aplikaci **Playground**, která spravuje Radio Dongle, P
   </div>
 </div>
 
-#### **Krok 2:** Připojte [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle) k vašemu počítači
+#### **Krok 2:** Připojte [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle) k počítači
 
 <div class="container">
   <div class="row">
@@ -59,7 +59,7 @@ V tomto kroku spustíte aplikaci **Playground**, která spravuje Radio Dongle, P
   </div>
 </div>
 
-#### Krok 3: Přejděte na záložku **Zařízení**, zkontrolujte, zda je rádio dongle detekován, a klikněte na **Připojit**
+#### Krok 3: Přejděte na záložku **Devices**, zkontrolujte, že aplikace Radio Dongle rozpoznala, a klikněte na **Connect**
 
 :::info
 
@@ -73,7 +73,7 @@ Pokud nevidíte Radio Dongle mezi zařízeními, podívejte se na kapitolu [Trou
   </div>
 </div>
 
-#### Krok 4: Po připojení. Již nahraná a spárovaná Sada Push bude v seznamu spárovaných zařízení.
+#### Krok 4: Po připojení se v seznamu spárovaných zařízení objeví sada Push, která už má nahraný firmware a je spárovaná.
 
 <div class="container">
   <div class="row">
@@ -81,7 +81,7 @@ Pokud nevidíte Radio Dongle mezi zařízeními, podívejte se na kapitolu [Trou
   </div>
 </div>
 
-#### Krok 5: Přepněte na záložku **Funkce** a ujistěte se, že vidíte flow na obrázku níže
+#### Krok 5: Přepněte na záložku **Functions** a ujistěte se, že vidíte flow na obrázku níže
 
 <div class="container">
   <div class="row">
@@ -95,7 +95,7 @@ Pokud flow nevidíte, sestavte ho sami. Potřebujete tři uzly zapojené za sebo
 2. Uzel **change**, který nastaví `msg.payload` na text oznámení, který chcete, například `Button pressed, you're the best!`.
 3. Uzel Blynk IoT, který oznámení doručí (ten přidáte v další sekci, jakmile budete mít připravený účet a šablonu Blynk IoT).
 
-Uzel Blynk IoT propojíme v sekci **Dát to všechno dohromady** níže.
+Uzel Blynk IoT připojíme níže v sekci **Propojíme vše dohromady**.
 
 ## Příprava aplikace Blynk IoT
 
@@ -113,19 +113,19 @@ V Blynk IoT se push notifikace odesílají prostřednictvím **Events** (událos
 
 Toto je zpráva, která se objeví na vašem telefonu pokaždé, když stisknete tlačítko. Přesné kroky a snímky obrazovky najdete v [příručce](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
-## Dát to všechno dohromady
+## Propojíme vše dohromady
 
 Posledním krokem je propojit Node-RED s Blynk IoT, aby stisk tlačítka spustil vaši oznamovací událost (Event).
 
 #### Krok 1: Přidejte uzel Blynk IoT
 
-V záložce **Funkce** v **Playground** přidejte za uzel **change** uzel Blynk IoT a propojte je. Uzly Blynk IoT najdete vlevo v paletě.
+V záložce **Functions** v **Playground** přidejte za uzel **change** uzel Blynk IoT a propojte je. Uzly Blynk IoT najdete vlevo v paletě.
 
 #### Krok 2: Nakonfigurujte připojení
 
-Dvojklikněte na uzel a poté klikněte na **ikonu tužky** pro nastavení připojení k Blynk. Do pole **Url** zadejte `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu vašeho zařízení ve webové konzoli Blynk IoT. Potvrďte a poté uzel nasměrujte na **Event** (`Button pressed`), který jste ve šabloně definovali, aby spouštěl danou notifikaci.
+Dvakrát klikněte na uzel a kliknutím na **ikonu tužky** nastavte připojení k Blynku. Do pole **Url** zadejte `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu vašeho zařízení ve webové konzoli Blynk IoT. Potvrďte a poté uzel nasměrujte na **Event** (`Button pressed`), který jste v šabloně definovali, aby spouštěl danou notifikaci.
 
-#### **Krok 3:** Klikněte na tlačítko **Nasadit**. Pokaždé, když upravíte flow Node-RED, musíte změny aplikovat!
+#### **Krok 3:** Klikněte na tlačítko **Deploy**. Pokaždé, když upravíte flow Node-RED, musíte změny aplikovat!
 
 ## Akce!
 
@@ -137,15 +137,15 @@ Nastal čas **ZMÁČKNOUT TLAČÍTKO**
   </div>
 </div>
 
-## Zjistit více
+## Další informace
 
-Cílem tohoto **Push Button Projektu** je ukázat základy v několika jednoduchých krocích. Nyní se můžete dozvědět více procházením **dokumentace** nebo návštěvou **odkazů níže**.
+Cílem projektu **Push Button** je ukázat základy v několika jednoduchých krocích. Víc se dozvíte v **dokumentaci** nebo na **odkazech níže**.
 
-* Podívejte se na dalš HARDWARIO [**projekty**](projects-overview.md).
+* Podívejte se na další [**projekty**](projects-overview.md) HARDWARIO.
 * Prohlédněte si [**přehled modulů**](https://docs.hardwario.com/chester/extension-modules/chester-z1/#module-overview).
 * Naučte se pracovat s [**MQTT**](https://docs.hardwario.com/tower/mqtt-protocol/) a [**HARDWARIO MQTT topics**](https://docs.hardwario.com/tower/mqtt-protocol/topics-reference/) pro ovládání LED a relé.
 * Vyzkoušejte další [**integrace**](https://docs.hardwario.com/tower/category/platform-integrations/) s **Grafana**, **Blynk**, **IFTTT**, **Ubidots** a dalšími.
 * Použijte svůj [**Raspberry PI**](https://docs.hardwario.com/tower/server-raspberry-pi/) nebo jiný jednodeskový počítač \(SBC\) jako server.
 * [**Nahrajte jiný firmware**](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware) nebo si **napište vlastní firmware** pro **Core Module**.
-* Zkontrolujte [**zapojení pinů Core Modulu**](https://docs.hardwario.com/tower/hardware-modules/header-pinout/#core-module-pinout) a připojte vlastní tlačítka, relé a senzory.
+* Zkontrolujte [**zapojení pinů modulu Core Module**](https://docs.hardwario.com/tower/hardware-modules/header-pinout/#core-module-pinout) a připojte vlastní tlačítka, relé a senzory.
 

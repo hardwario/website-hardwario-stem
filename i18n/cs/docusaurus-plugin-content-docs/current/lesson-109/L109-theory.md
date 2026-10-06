@@ -5,7 +5,7 @@ title_meta: "Teorie (L109: IoT monitor půdy)"
 ---
 import Image from '@theme/IdealImage';
 
-**Časová dotace**: 10 mins
+**Časová dotace**: 10 min.
 
 ## Monitoring půdy
 
@@ -20,7 +20,7 @@ Sucha se dělí na čtyři typy:
 * **Hydrologické**: významný pokles hladin povrchových nebo podzemních vod
 * **Socioekonomické**: dopady sucha na kvalitu života a hospodářství
 
-Na druhou stranu i příliš vysoká vlhkost půdy může způsobovat problémy. Například podmáčená půda komplikuje zemědělské práce při setí nebo sklizni. Proto je důležité půdu sledovat – především její vlhkost. Díky IoT monitoringu můžeme například přesněji zavlažovat, zvýšit výnosy a zároveň šetřit vodou.
+Na druhou stranu i příliš vysoká vlhkost půdy může způsobovat problémy. Například podmáčená půda komplikuje zemědělské práce při setí nebo sklizni. Proto je důležité půdu sledovat, především její vlhkost. Díky IoT monitoringu můžeme například přesněji zavlažovat, zvýšit výnosy a zároveň šetřit vodou.
 
 ### Vodní potenciál půdy
 
@@ -34,8 +34,8 @@ Hodnota vodního potenciálu se obvykle udává jako záporný tlak. Například
 
 ### Jak se půda monitoruje
 
-Běžnou metodou měření vlhkosti půdy je rezistivní metoda. Takový senzor funguje na jednoduchém principu – měří vodivost mezi dvěma elektrodami. Pokud je půda vlhká, vodivost je vyšší (odpor nižší), a naopak. Elektrody jsou proto pokoveny na větší ploše, aby se zvýšil kontaktní povrch. Nevýhodou této metody je však oxidace elektrod, která může měření ovlivnit.
+Běžnou metodou měření vlhkosti půdy je rezistivní metoda. Takový senzor funguje na jednoduchém principu: měří vodivost mezi dvěma elektrodami. Pokud je půda vlhká, vodivost je vyšší (odpor nižší), a naopak. Elektrody jsou proto pokoveny na větší ploše, aby se zvýšil kontaktní povrch. Nevýhodou této metody je však oxidace elektrod, která může měření ovlivnit.
 
-Z tohoto důvodu je vhodnější kapacitní metoda. Ta funguje na podobném principu jako dotykové displeje chytrých telefonů – prst změní dielektrické vlastnosti skla při dotyku. Ve stručnosti – dielektrikum je materiál a prostředí okolo elektrod. Voda zásadně mění dielektrické vlastnosti, když se dostane mezi elektrody. Jinými slovy: Dvě kovové elektrody mají jinou kapacitu, když je mezi nimi vzduch, a jinou, když je tam voda. Stejně to funguje, když elektrody vložíte do suché vs. mokré půdy.
+Z tohoto důvodu je vhodnější kapacitní metoda. Ta funguje na podobném principu jako dotykové displeje chytrých telefonů: prst při dotyku změní dielektrické vlastnosti skla. Stručně řečeno, dielektrikum je materiál a prostředí okolo elektrod. Voda zásadně mění dielektrické vlastnosti, když se dostane mezi elektrody. Jinými slovy: Dvě kovové elektrody mají jinou kapacitu, když je mezi nimi vzduch, a jinou, když je tam voda. Stejně to funguje, když elektrody vložíte do suché a do mokré půdy.
 
-V HARDWARIO jsme vyvinuli plně digitální Soil Sensor s širokým rozsahem napájení od 2,8 V do 5,5 V (kompatibilní s Arduino). Využívá průmyslově standardní sběrnici 1-Wire a umožňuje připojit více senzorů paralelně – jejich počet je prakticky neomezený. Je zcela zalitý silikonem a samozřejmě jej lze ponořit do vody. A právě s tímto senzorem budeme v našem experimentu pracovat.
+V HARDWARIO jsme vyvinuli plně digitální Soil Sensor s širokým rozsahem napájení od 2,8 V do 5,5 V (kompatibilní s Arduinem). Využívá průmyslově standardní sběrnici 1-Wire a umožňuje připojit paralelně více senzorů, jejichž počet je prakticky neomezený. Je zcela zalitý silikonem a samozřejmě jej lze ponořit do vody. A právě s tímto senzorem budeme v našem experimentu pracovat.

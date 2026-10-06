@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 Even young programmers want to know what their future holds. The box will tell you. IoT magic will answer all the questions that come into your head. 🔮 😱
 
-Under this project, you will learn to turn the box into an oracle or **magic 8-ball**. ️🎱 Set it to randomly choose one of a number of options when it is shaken.
+In this project, you will learn to turn the box into an oracle or **magic 8-ball**. ️🎱 Set it to randomly choose one of a number of options when it is shaken.
 
 You will need the **box with button and a USB Dongle**. The basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/) is sufficient for this.
 
@@ -21,7 +21,7 @@ After downloading the firmware, you will see that the Alias of your device under
 
 <div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-1.webp')} alt="Playground Devices tab with the paired device listed under the alias future-teller:0"/> </div> </div>
 
-2. In Playground, click on the **Functions tab** \- this is where you will find the programming desktop.
+2. In Playground, click the **Functions tab**, where you will find the programming desktop.
 
 3. Place an **MQTT node** from the Input section onto the desktop.
 <div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-2.webp')} alt="Mqtt in node highlighted in the palette and an mqtt node placed on the flow canvas"/> </div> </div>

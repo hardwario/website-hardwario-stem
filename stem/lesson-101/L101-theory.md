@@ -27,7 +27,7 @@ It is also a phenomenon, a bubble, a threat and an opportunity. An opportunity t
 ### Samples
 
 * [**Risk of data misinterpretation**](https://youtu.be/nwPtcqcqz00)
-* [**Risk of data misinterpretation**](https://youtu.be/_CQA3X-qNgA)
+* [**Risk of invasion of privacy**](https://youtu.be/_CQA3X-qNgA)
 
 ## How IoT helps and threatens us
 
@@ -57,8 +57,8 @@ Quite simply, in IoT we have a tool in our hands with enormous potential to impr
 They are physical devices that measure, control, communicate. These include, but are not limited to:
 
 * Sensors
-* Action members
-* Drivers
+* Actuators
+* Controllers
 
 Another way of looking at THINGS is as a more complex device:
 
@@ -92,7 +92,7 @@ Voice assistants such as Google Assistant, Amazon Alexa, Microsoft Cortana and A
 **Important!**
 Firmware is software for controlling an embedded system. Firmware makes the device behave the way we want it to. For example, it measures the CO2 level every 15 minutes and sends the measured samples to the cloud every hour.
 
-An important feature of the firmware is the power management of the device, which is a critical issue especially for battery-powered products. It is therefore recommended to write the firmware in energy-efficient programming languages (e.g. C) so that the computational operations themselves do not take too long and consume the necessary energy.
+An important feature of the firmware is the power management of the device, which is a critical issue especially for battery-powered products. It is therefore recommended to write the firmware in energy-efficient programming languages (e.g. C) so that the computational operations themselves do not take too long and drain the energy the device needs.
 
 Due to the memory capabilities of embedded devices, it is also necessary to take into account the size of the code. Writing firmware is therefore a very demanding discipline.
 
@@ -129,7 +129,7 @@ So the message says that switch one of the group of switches on the ground floor
 
 :::info
 
-If a particular light bulb subscribes to this message, then it will stay on until the mujdum/grounds/switching/offpinac1 0 message arrives, or when it breaks :)
+If a particular light bulb subscribes to this message, then it will stay on until the mujdum/prizemi/vypinace/vypinac1 0 message arrives, or when it breaks :)
 
 :::
 
@@ -152,7 +152,7 @@ Global transmission systems are mainly used for mobile objects or devices instal
 Currently, the most widely used systems for global wireless transmissions are the mobile operators' technologies, i.e. 2G (GPRS, EDGE), 3G and 4G (LTE) networks. IoT devices are equipped with a SIM card and connect to the Internet through the selected mobile network. The disadvantage of these technologies is their power consumption, so they are not suitable for battery-powered devices. Fortunately, new IoT networks, collectively referred to as LPWANs, have begun to be built.
 
 **Important!**
-[LPWAN](https://en.wikipedia.org/wiki/Low-power_wide-area_network)is from the English Low-Power Wide Area Network, i.e. a network with low power requirements for communication and covering a larger area. These include [NB-IoT](https://en.wikipedia.org/wiki/Narrowband_IoT), [LoRaWAN](https://en.wikipedia.org/wiki/LoRa) and [Sigfox](https://en.wikipedia.org/wiki/Sigfox). Each of these networks has its own specifics, but all are suitable for battery-powered IoT devices operating in locations where there is no standard internet connection (e.g. Wi-Fi). Therefore, they offer perfect IoT solutions in agriculture, forestry, water management.
+[LPWAN](https://en.wikipedia.org/wiki/Low-power_wide-area_network) stands for Low-Power Wide Area Network, i.e. a network with low power requirements for communication and covering a larger area. These include [NB-IoT](https://en.wikipedia.org/wiki/Narrowband_IoT), [LoRaWAN](https://en.wikipedia.org/wiki/LoRa) and [Sigfox](https://en.wikipedia.org/wiki/Sigfox). Each of these networks has its own specifics, but all are suitable for battery-powered IoT devices operating in locations where there is no standard internet connection (e.g. Wi-Fi). Therefore, they offer perfect IoT solutions in agriculture, forestry, water management.
 
 Samples
 
@@ -160,4 +160,4 @@ Samples
 
 ### Wired transmissions
 
-Of course, data from IoT devices can also be transmitted by wire. If conditions allow, you can connect your IoT device to the Internet via Ethernet. However, we more often see a solution where individual IoT devices are wired to the Hub, which is then connected to the Internet. In such cases, standards are used [I²C](https://en.wikipedia.org/wiki/I%c2%b2C), [1-Wire](https://en.wikipedia.org/wiki/1-Wire), [RS-232](https://en.wikipedia.org/wiki/RS-232), [RS485](https://en.wikipedia.org/wiki/RS-485).
+Of course, data from IoT devices can also be transmitted by wire. If conditions allow, you can connect your IoT device to the Internet via Ethernet. However, we more often see a solution where individual IoT devices are wired to the Hub, which is then connected to the Internet. In such cases, standards such as [I²C](https://en.wikipedia.org/wiki/I%c2%b2C), [1-Wire](https://en.wikipedia.org/wiki/1-Wire), [RS-232](https://en.wikipedia.org/wiki/RS-232) and [RS485](https://en.wikipedia.org/wiki/RS-485) are used.

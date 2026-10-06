@@ -16,7 +16,7 @@ import Image from '@theme/IdealImage';
 * Systém Plug&Make, díky kterému se prvky stavějí bez nutnosti pájení a drátování ([videonávod](https://www.youtube.com/watch?v=OCPPKXzCBg0))
 * Bezdrátové řešení s velmi nízkou spotřebou energie, díky čemuž je instalace snadná a jednotky vydrží běžet z baterií i několik let
 * Open-source přístup umožňující integrace s dalšími platformami: [github](https://github.com/hardwario)
-* Vzorový firmware  k okamžitému použití: [github](https://github.com/hardwario)
+* Vzorový firmware k okamžitému použití: [github](https://github.com/hardwario)
 * Široké portfolio modelů pouzder pro tisk na 3D tiskárnách, včetně dostupné služby 3D tisku ([store](https://www.hardwario.store/cz/enclosures))
 * Podrobné návody a technická podpora, které pomáhají zákazníkům při práci se stavebnicí ([dokumentace](https://docs.hardwario.com/tower/) a [fórum](https://forum.hardwario.com/))
 
@@ -37,14 +37,14 @@ import Image from '@theme/IdealImage';
 
 ## Popis aplikace Playground
 
-**HARDWARIO Playground** je aplikace pro nahrávání firmware, párování sestav a programování funkcí IoT stavebnice HARDWARIO TOWER. Je dostupná pro počítače s operačními systémy Windows, Linux, Ubuntu a Apple macOS.
+**HARDWARIO Playground** je aplikace pro nahrávání firmwaru, párování sestav a programování funkcí IoT stavebnice HARDWARIO TOWER. Je dostupná pro počítače s operačními systémy Windows, Linux, Ubuntu a Apple macOS.
 
-V **HARDWARIO Playground** můžeš:
+V **HARDWARIO Playground** můžete:
 
 * připojit svou krabičku (IoT sestavu) k počítači,
 * upravovat a nastavovat funkce své sestavy,
-* nahrávat do sestavy firmware (pokud nevíš, co to je, mrkni [sem](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/))
-* nebo sledovat, co tvá sestava dělá v přehledných grafech a vizualizacích.
+* nahrávat do sestavy firmware (pokud nevíte, co to je, podívejte se [sem](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/))
+* nebo sledovat, co vaše sestava dělá v přehledných grafech a vizualizacích.
 
 <div class="container">
   <div class="row">
@@ -54,9 +54,9 @@ V **HARDWARIO Playground** můžeš:
 
 ### Záložky aplikace Playground
 
-1. **Devices** má úplně nejdůležitější roli ze všech záložek. Spáruješ tam svou sestavu s USB Donglem a tím pádem i s počítačem a pak už můžeš vesele tvořit. 
+1. **Devices** je ze všech záložek nejdůležitější. Spárujete v ní svou sestavu s USB Donglem, a tím i s počítačem, a pak už můžete vesele tvořit. 
 2. **Bridge** je záložka určená pro párování speciálního Bridge Module
-3. **Functions** je záložka, kde si jednoduchým přetahováním takzvaných nodů určíš, jak se má tvoje sestava chovat v různých situacích – třeba když zmáčkneš tlačítko nebo se změní okolní teplota. Celé tohle jednoduché programování funguje na systému Node-RED, o kterém se víc dozvíš [tady](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
-4. V **Dashboardu** časem uvidíš aktivity své krabičky vykreslené v šikovných barevných grafech. Chceš sledovat, jak klesala a stoupala teplota v učebně? Žádný problém! Na to, jak vytvořit vychytaný Dashboard, jsme ti taky připravili [super návod](https://docs.hardwario.com/tower/desktop-programming/data-visualization).
-5. V **Messages** uvidíš každou hodnotu, kterou tvá sestava zaznamená, ať už stisknutím tlačítka, změnou polohy nebo měřením teploty.
-6. A nakonec tu máme záložku **Firmware**. Tady si do svého Core Modulu na pár kliknutí nahraješ firmware, tedy program, který zařízení řídí. Víc o firmwaru se dozvíš [tadyhle](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
+3. **Functions** je záložka, kde si jednoduchým přetahováním takzvaných nodů určíte, jak se má vaše sestava chovat v různých situacích, třeba když zmáčknete tlačítko nebo se změní okolní teplota. Celé toto jednoduché programování běží na systému Node-RED, o kterém se víc dozvíte [tady](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
+4. V **Dashboardu** časem uvidíte aktivitu své krabičky vykreslenou v přehledných barevných grafech. Chcete sledovat, jak v učebně klesala a stoupala teplota? Žádný problém. Jak vytvořit povedený Dashboard, popisuje [návod](https://docs.hardwario.com/tower/desktop-programming/data-visualization), který jsme pro vás připravili.
+5. V **Messages** uvidíte každou hodnotu, kterou vaše sestava zaznamená, ať už stisknutím tlačítka, změnou polohy nebo měřením teploty.
+6. A nakonec tu máme záložku **Firmware**. Tady na pár kliknutí nahrajete do modulu Core Module firmware, tedy program, který zařízení řídí. Víc o firmwaru se dozvíte [tady](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).

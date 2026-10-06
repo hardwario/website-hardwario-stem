@@ -5,27 +5,27 @@ title: Monitor teploty psí boudy
 ## Úvod
 
 
-Zima, že bys ani psa nevyhnal? Hlídej teplotní komfort svého nejlepšího kámoše a sleduj teplotu v jeho boudě. 🐶
+Zima, že by ani psa nevyhnal? Hlídejte teplotní pohodlí svého nejlepšího přítele a sledujte teplotu v jeho boudě. 🐶
 
 
-S tímhle projektem se naučíš **měřit teplotu s IoT a zobrazit ji na grafu**. Postačí ti základní HARDWARIO sada, tedy [**Start Set**](https://www.hardwario.store/p/start-set/). Uvidíš, že ti hafan poděkuje. Třeba míň bobky. Nebo tak něco. 🐩
+S tímto projektem se naučíte **měřit teplotu s IoT a zobrazit ji v grafu**. Stačí vám základní sada HARDWARIO, tedy [**Start Set**](https://www.hardwario.store/p/start-set/). Uvidíte, že vám pes poděkuje. Třeba tím, že bude míň nepořádku. Nebo tak nějak. 🐩
 
 
-## Připrav si krabičku
+## Připravte si krabičku
 
-1. Start Set sestav a spáruj. Na Core Module potřebuješ firmware **radio push button**. Pokud nevíš, jak si firmware stáhnout nebo co to je, [zjistíš to tady](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware)
+1. Start Set sestavte a spárujte. Do modulu Core Module potřebujete firmware **radio push button**. Pokud nevíte, jak si firmware stáhnout nebo co to je, [najdete to tady](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware)
 
-2. Změny teploty uvidíš v Playgroundu v záložce **Messages**.
+2. Změny teploty uvidíte v Playgroundu v záložce **Messages**.
 
 ![MQTT messages](./img/kennel-temperature-monitor/image5.png)
 
-## Nastav si Node-RED
+## Nastavte si Node-RED
 
-1. Programování začni v Node-RED. Nejdřív v Playgroundu klikni na záložku **Functions**.
+1. Programovat začnete v Node-RED. Nejdřív v Playgroundu klikněte na záložku **Functions**.
 
-2. Na čistou plochu přetáhni světle fialový node (bublinu) s názvem **MQTT**. Najdeš ho v sekci Input.
+2. Na čistou plochu přetáhněte světle fialový node (bublinu) s názvem **MQTT**. Najdete ho v sekci Input.
 
-3. Node rozklikni dvojklikem. V řádku **Topic** určíš, co chceš, aby barevný ukazatel zobrazoval. Teď to bude teplota. Proto do řádku zkopíruj zprávu s teplotou ze záložky Messages (bez čísla). Nebo klidně použij tuhle:
+3. Node otevřete dvojklikem. V řádku **Topic** určíte, co má barevný ukazatel zobrazovat. Teď to bude teplota. Proto do řádku zkopírujte zprávu s teplotou ze záložky Messages (bez čísla). Nebo klidně použijte tuto:
 
 ```
 node/push-button:0/thermometer/0:1/temperature
@@ -33,34 +33,34 @@ node/push-button:0/thermometer/0:1/temperature
 
 ![MQTT topic](./img/kennel-temperature-monitor/image1.png)
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
-4. Vedle nodu postav druhý, světle modrý s názvem **Chart** (graf). Najdeš ho v sekci Dashboard. Tímhle nodem určíš, jak bude naměřená teplota znázorněná na obrazovce. Oba nody propoj. 👌
+4. Vedle něj umístěte druhý, světle modrý node s názvem **Chart** (graf). Najdete ho v sekci Dashboard. Tímto nodem určíte, jak se naměřená teplota zobrazí na obrazovce. Oba nody propojte. 👌
 
 ![Node-RED dashboard chart](./img/kennel-temperature-monitor/image4.png)
 
-5. Na node Chart dvakrát klikni. V řádku **X-axis** si nastavíš, za jak dlouhou dobu bude graf teplotu ukazovat. Nastav, kolik potřebuješ.
-Na řádku **Label** si graf libovolně přejmenuj.
+5. Na node Chart dvakrát klikněte. V řádku **X-axis** nastavíte, za jak dlouhé období bude graf teplotu ukazovat. Zvolte, kolik potřebujete.
+V řádku **Label** graf libovolně pojmenujte.
 
 ![Chart settings](./img/kennel-temperature-monitor/image3.png)
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
 
-6. Teď můžeš zmáčknout červené tlačítko **Deploy** v pravém horním rohu obrazovky. 🚨 Tím celý flow aktivuješ.
+6. Teď stiskněte červené tlačítko **Deploy** v pravém horním rohu obrazovky. 🚨 Tím celý flow aktivujete.
 
-❗ **Pozor:** Při každé změně v nodech musíš Deploy mačkat znovu.
+❗ **Pozor:** Po každé změně v nodech musíte Deploy stisknout znovu.
 
-7. Překlikni se do jiné záložky, do **Dashboardu**. Tady je tvůj graf. 👏
+7. Přepněte se na záložku **Dashboard**. Tady je váš graf. 👏
 ![Temperature chart from kennel](./img/kennel-temperature-monitor/image2.png)
 
 ## A akce!
 
-1. Krabičku přilep kobercovou páskou **dovnitř boudy na stěnu**. 🏡
+1. Krabičku přilepte kobercovou páskou **dovnitř boudy na stěnu**. 🏡
 
-2. Sleduj, **jak se mění teplota**, když je hafan venku a když je uvnitř. Pes totiž boudu trochu zahřívá. 🐕
-**Náš tip:** Až teploty klesnou, vylož boudu dekou nebo slámou.
+2. Sledujte, **jak se mění teplota**, když je pes venku a když je uvnitř. Pes totiž boudu trochu zahřívá. 🐕
+**Náš tip:** Až teploty klesnou, vyložte boudu dekou nebo slámou.
 
-3. Když je pod −15 °C na nic nečekej a **pusť psa dovnitř domu**. Ubytuj ho alespoň v předsíni. ❄
+3. Když je pod −15 °C, na nic nečekejte a **pusťte psa dovnitř domu**, aspoň do předsíně. ❄
 
-4. Uvidíš, že **hafan bude spoko**! 👌
+4. Uvidíte, že **pes bude spokojený**! 👌
