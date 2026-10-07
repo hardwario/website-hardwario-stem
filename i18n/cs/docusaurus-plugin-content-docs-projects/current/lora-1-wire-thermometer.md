@@ -24,7 +24,9 @@ K příjmu dat můžete použít komunitní síť The Things Network.
 
 #### Krok 2: Připojte modul Core Module k počítači
 
-#### Krok 3: V aplikaci Playground přejděte na záložku **Firmware**, vyberte `bcf-lora-1wire-thermometer` a nahrajte firmware
+#### Krok 3: V aplikaci Playground přejděte na záložku **Firmware**, vyberte `hardwario/twr-lora-1wire-thermometer` a nahrajte firmware
+
+Tento firmware se v seznamu zobrazí, až zaškrtnete **Show all**.
 
 #### Krok 4: Po nahrání se červená LED na modulu Core Module na 2 sekundy rozsvítí a pak zhasne
 
@@ -43,15 +45,9 @@ Teploměr odešle paket LoRa v těchto případech:
 
 ## Čtení dat
 
-Data jsou zakódovaná ve zprávě LoRa. Hodnoty z ní získáte, když vyberete správné bity; postup popisuje soubor [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py`, pythonový [skript v repozitáři](https://github.com/bigclownlabs/bcf-lora-climate-monitor).
+Data jsou zakódovaná ve zprávě LoRa. Hodnoty z ní získáte, když vyberete správné bity. Udělá to za vás pythonový skript `decode.py` v [repozitáři firmwaru](https://github.com/hardwario/twr-lora-1wire-thermometer).
 
 Přijatý řetězec HEX předejte skriptu `decode.py` jako parametr:
-
-:::info
-
-Stejným příkazem můžete aktualizovat nástroj **Firmware Flashing Tool** na nejnovější verzi.
-
-:::
 
 ```text
 >>> python3 decode.py 001D00E600E8012200E500D600E5

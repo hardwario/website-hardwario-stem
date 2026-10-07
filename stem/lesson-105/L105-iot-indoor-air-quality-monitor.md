@@ -5,4 +5,4 @@ description: "A lesson on indoor air quality: students build a monitor for CO2, 
 ---
 import Image from '@theme/IdealImage';
 
-We will monitor the quality of the climate around us and display the measured temperature, humidity, and carbon dioxide in graphs.
+We will monitor the air quality around us and plot the measured temperature, humidity and carbon dioxide in charts.

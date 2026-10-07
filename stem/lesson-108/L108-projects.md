@@ -5,15 +5,13 @@ title_meta: "Projects (L108: IoT Pulse Monitor)"
 ---
 import Image from '@theme/IdealImage';
 
-Students try out additional projects related to the given topic, or participate in so-called **Ideation**.
+**Time allocation**: 10 min.
+
+Students try out more projects on the lesson topic or look for ideas using the Ideation method.
 
 ## Additional topic-related projects to try out
 
-### Web HARDWARIO
-
-* N/A
-
-###  Hackster.io Platform
+### Hackster.io Platform
 
 
 <a
@@ -59,7 +57,7 @@ Students try out additional projects related to the given topic, or participate 
 
 ### Ideation
 
-Students propose real-life applications of the knowledge gained through theoretical explanations and experiments. They record their ideas in a graph, where the x-axis represents the estimated complexity (cost) of the project, and the y-axis represents the impact of implementing the solution.
+Students suggest real-life uses for the knowledge they gained from the theory and the experiments. They plot their ideas on a graph, with the estimated difficulty (cost) of the project on the x-axis and the impact of the solution on the y-axis.
 
 
 

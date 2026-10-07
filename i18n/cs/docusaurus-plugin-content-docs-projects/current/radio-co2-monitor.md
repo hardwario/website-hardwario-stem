@@ -32,11 +32,11 @@ Tento návod vás provede projektem **Bezdrátový CO₂ monitor**. V prostřed�
 * Jedna z následujících možností:
   
   * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)<br></br>
-    Více informací najdete v dokumentu [**Rychlý start s firmwarem**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
+    Více informací najdete v dokumentu [**Instalace aplikace HARDWARIO Playground**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/).
   * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**<br></br>
     Více informací najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
   * Nainstalovaný **HARDWARIO Firmware Tool**<br></br>
-    Více informací najdete v dokumentu [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
+    Více informací najdete v dokumentu [**Nástroj pro nahrávání firmwaru**](https://docs.hardwario.com/tower/command-line-tools/firmware-tool/).
 
 ## Nahrání firmwaru
 
@@ -46,7 +46,7 @@ Firmware nahrajete do modulu **Core Module** v aplikaci **HARDWARIO Playground**
 
 #### Krok 2: Spusťte HARDWARIO Playground
 
-Na záložce Firmware vyberte firmware `bcf-radio-co2-monitor` a nahrajte ho do modulu **Core Module**.
+Na záložce Firmware vyberte firmware `hardwario/twr-radio-co2-monitor` a nahrajte ho do modulu **Core Module**. Firmware se v seznamu zobrazí, až zaškrtnete **Show all**.
 
 :::warning
 
@@ -217,6 +217,5 @@ Teď máte ověřenou rádiovou komunikaci.
 
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
-* [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
-* [**Průvodce toolchainem**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
+* [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/)
 

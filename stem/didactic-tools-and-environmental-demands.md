@@ -1,29 +1,29 @@
 ---
 slug: didactic-tools-and-environmental-demands
-title: Didactic Tools and Environmental Demands
+title: Teaching Aids and Classroom Requirements
 ---
 import Image from '@theme/IdealImage';
 
-# Didactic Tools and Environmental Demands
+# Teaching Aids and Classroom Requirements
 
 ## Classroom equipment
 
-* Equipment enabling different classroom arrangement according to individual phases:
-  * REALISE: Classic classroom layout
-  * EXPERIMENT and APPLY: Lecturer's workstation and 3 teams with students evenly distributed
-  * REFLECT: An arrangement in a circle or classic classroom arrangement
-* Projector or large format TV
+* Furnishings that let you arrange the classroom differently for each phase:
+  * REALISE: standard classroom layout
+  * EXPERIMENT and APPLY: a workstation for the lecturer and 3 teams with students divided evenly
+  * REFLECT: seating in a circle or a standard classroom layout
+* Projector or large monitor
 * Flipchart
-* HW equipment:
-  * A computer connected to the Internet (at least one for the lecturer, preferably separate computers for the lecturer and 3 groups)
-  * A smartphone connected to the Internet (at least one for the lecturer, preferably separate phones for the lecturer and 3 groups)
-  * HARDWARIO IoT Kit Sets:
+* Hardware:
+  * A computer connected to the internet (at least one for the lecturer, ideally separate computers for the lecturer and the 3 groups)
+  * A smartphone connected to the internet (at least one for the lecturer, ideally separate phones for the lecturer and the 3 groups)
+  * HARDWARIO TOWER IoT kit sets:
     * Start Set
     * Control Set
-* SW equipment:
-  * Web browser (we recommend Google Chrome)
+* Software:
+  * Web browser: we recommend Google Chrome
   * HARDWARIO Playground
 
-## Didactic tools
+## Teaching aids
 
-* Basic stationery (papers, post-its, markers)
+* Basic stationery (paper, sticky notes, markers)

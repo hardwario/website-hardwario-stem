@@ -57,7 +57,7 @@ Radio Dongle můžete připojit také k Raspberry Pi nebo jinému jednodeskovém
 
 ## Stažení HARDWARIO Playground
 
-Stáhněte si nejnovější verzi [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) pro svůj operační systém. Po stažení spusťte aplikaci Playground.
+Stáhněte si nejnovější verzi [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases/latest) pro svůj operační systém. Po stažení spusťte aplikaci Playground.
 
 
 <div class="container">
@@ -76,7 +76,7 @@ K USB portu počítače **připojte jen** dveřní senzor.
 
 #### Krok 2: Nahrajte firmware
 
-V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `bigclownlabs/bcf-radio-door-sensor`, zvolte sériový port zařízení v poli **Device** a klikněte na **FLASH FIRMWARE**.
+V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `hardwario/twr-radio-door-sensor` (zobrazí se, až zaškrtnete **Show all**), zvolte sériový port zařízení v poli **Device** a klikněte na **FLASH FIRMWARE**.
 
 <div class="container">
   <div class="row">
@@ -96,7 +96,7 @@ K USB portu počítače připojte **jen** [Radio Dongle](https://www.hardwario.s
 
 #### Krok 2: Nahrajte firmware
 
-V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `bigclownlabs/bcf-gateway-usb-dongle`, zvolte sériový port zařízení v poli **Device** a klikněte na **FLASH FIRMWARE**.
+V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `hardwario/twr-gateway-radio-dongle`, zvolte sériový port zařízení v poli **Device** a klikněte na **FLASH FIRMWARE**.
 
 <div class="container">
   <div class="row">
@@ -114,7 +114,7 @@ V levém dolním rohu klikněte na **Gateway** a vyberte sériový port zaříze
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-gateway-connect.webp')} alt="Ovládání Gateway v levém dolním rohu s vybraným sériovým portem Radio Donglu"/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-gateway-connect.webp')} alt="Ovládání Gateway v levém dolním rohu s vybraným sériovým portem donglu Radio Dongle"/>
   </div>
 </div>
 
@@ -299,7 +299,7 @@ Teď máte ve službě **IFTTT** funkční **Applet** pro notifikace.
 
 IFTTT zapojíte do Node-RED jednoduchým pluginem, který odesílá notifikace.
 
-#### Krok 1: Klikněte na záložku **MQTT**, pak vpravo nahoře na menu a vyberte **Manage palette**
+#### Krok 1: Otevřete záložku **Node-RED** (v novějších verzích Playgroundu **Functions**), pak vpravo nahoře klikněte na menu a vyberte **Manage palette**
 
 <div class="container">
   <div class="row">

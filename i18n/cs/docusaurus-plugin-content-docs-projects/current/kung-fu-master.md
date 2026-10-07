@@ -6,21 +6,21 @@ import Image from '@theme/IdealImage';
 
 ## Úvod
 
-S touhle hrou se s kamarády nudit nebudete. Nastavte si Start Set tak, aby rozpoznal i ten nejjemnější pohyb.
+S touhle hrou se s kamarády nudit nebudete. Nastavte si Sadu Start tak, aby rozpoznala i ten nejjemnější pohyb.
 
 V tomto projektu se naučíte vytvořit takzvaný **still position detector**, tedy **detektor pohybu**. 👈
 
-Budete potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíte si proto se základní sadou HARDWARIO [**Start Set**](https://www.hardwario.store/cz/p/start-set).
+Budete potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíte si proto se základní [**Sadou Start**](https://www.hardwario.store/cz/p/start-set).
 
 
 ## Stáhněte si nový firmware
 
-1. Pokud jste to ještě neudělali, sestavte Start Set.
+1. Pokud jste to ještě neudělali, sestavte Sadu Start.
 
 2. Do modulu Core Module nahrajte speciální firmware **bcf-radio-still-position-detector** (najdete ho mezi ostatním firmwarem v Playgroundu). S tímto firmwarem bude krabička mnohem citlivější na pohyb a změří, kolik času mezi pohyby uběhne. 👌
-**Náš tip:** Nevíte, jak si firmware stáhnout nebo co to je? [Najdete to tady](https://docs.hardwario.com/tower/firmware-sdk/).
+**Náš tip:** Nevíte, jak si firmware stáhnout nebo co to je? [Najdete to tady](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
 
-3. [Spárujte modul Core Module](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device) s USB donglem. Hned po spárování uvidíte, že se alias modulu Core Module změnil na **still-position-detector**.
+3. [Spárujte modul Core Module](https://docs.hardwario.com/tower/desktop-programming/radio-network-management/#pairing-new-devices) s USB donglem. Hned po spárování uvidíte, že se alias modulu Core Module změnil na **still-position-detector**.
 
 <div class="container">
   <div class="row">
@@ -32,7 +32,7 @@ Budete potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíte
 ## Rozjeďte to v Node-RED
 
 1. V Playgroundu klikněte na **záložku Functions**, kde je programovací plocha [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
-2. Začněte jako vždy: na plochu nejdřív umístěte uzel **MQTT** ze sekce Input.
+2. Začněte jako vždy: na plochu nejdřív umístěte uzel **mqtt in** ze sekce network.
 
 Dvakrát na něj klikněte a do řádku **Topic** zkopírujte tento topic, přes který krabička posílá čas strávený v jedné poloze:
 

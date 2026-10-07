@@ -1,23 +1,23 @@
 ---
 slug: kennel-temperature-monitor-upgrade
-title: Kennel temperature monitor - upgrade
+title: Upgraded kennel temperature monitor
 ---
 import Image from '@theme/IdealImage';
 
 ## Introduction
 
-Do you already have a basic version of the kennel temperature detector? Build an even better one. It will send notifications to your mobile and you will see the temperature in the kennel from anywhere. 🐶
+Already built the basic kennel temperature monitor? Now build an even better one. It sends notifications to your phone, so you'll know about a cold kennel wherever you are. 🐶
 
-In this project, you will learn how to set the box to **send you a message when the temperature drops below a preset value**. 👌 The box won’t start barking, but it´s still a great project. 🐩
+In this project, you will learn to set up the box to **send you a message when the temperature drops below a value you set**. 👌 The box won't start barking, but it's still a great project. 🐩
 
-The basic version of this project can be found here: [Temperature monitor for your hairy watchman: check the temperature in your dog's kennel](/projects/kennel-temperature-monitor/).
+You'll find the basic version of this project here: [A temperature watch for your furry watchman: check the temperature in your dog's kennel](/projects/kennel-temperature-monitor/).
 
-All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/).
+Once again, the basic HARDWARIO set is all you need: the [**Start Set**](https://www.hardwario.store/p/start-set/).
 
 
 ## Prepare Node-RED
 
-1. The firmware you need for this project is the familiar **bcf-radio-push-button**. Have you got it already? What are you waiting for? Pair the box with a Dongle.
+1. This project uses the familiar **twr-radio-push-button** firmware. Already flashed it? Then don't wait: pair the box with the Radio Dongle.
 
 <div class="container">
   <div class="row">
@@ -25,15 +25,15 @@ All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/
   </div>
 </div>
 
-2. In Playground, click on the **Functions** tab and place the same thing on the desktop as in the basic version of the project:
+2. In Playground, switch to the **Functions** tab and place the same nodes on the canvas as in the basic version of the project:
 
-- one **MQTT node** from under the Input section uploading **Topic**
+- one **mqtt in** node from the network section, with this **Topic** again:
 
 ```
 node/push-button:0/thermometer/0:1/temperature
 ```
 
-- and a pointer, that is a **Gauge node** from under the Dashboard section. It should read from -15 to 40 °C. Name it for better orientation. ✍️
+- and a gauge, that is a **Gauge** node from the Dashboard section. It should show a range of −15 to 40 °C. Give it a name so you can find your way around. ✍️
 
 <div class="container">
   <div class="row">
@@ -47,25 +47,39 @@ node/push-button:0/thermometer/0:1/temperature
   </div>
 </div>
 
-Hold onto your hat and let's move on. 🎩
+Hold on to your hats, on we go. 🎩
 
 
 ## Prepare Blynk IoT for the alert
 
-The temperature alert is delivered to your phone through the **Blynk IoT** app as a push notification. And that's exactly what makes the box smart. 😎
+The temperature alert reaches your phone as a push notification from the **Blynk IoT** app. That's what makes the box smart. 😎 Node-RED sends the text of the alert to Blynk, and a Blynk automation turns every new message into a notification.
 
-1. If you don't have one yet, create an account in [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). See [this guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) for how to set up your account, a device template, and a device. You'll need all three. You can also reuse a template from a previous project.
+1. If you don't have a [Blynk IoT](https://blynk.io) account yet, create one. The free plan is enough for this project: at the time of writing, it includes push notifications in the app and up to five automations.
 
-2. In Blynk IoT, the alert isn't placed on the phone screen like a widget. It's sent as an **Event** defined on your template. On the template detail, open the **Events** tab and add a new event (for example, name it `kennel_temp` and give it the message you want to receive, such as _It is too cold in the kennel_). Then turn on **Notifications** for that event so Blynk delivers it to your phone. The [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through the template settings.
+2. Create a device template. [Blynk's quick guide](https://docs.blynk.io/en/getting-started/template-quick-setup) shows you how. You can also reuse a template from an earlier project.
 
-3. Download the **Blynk IoT app** on your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure notifications are allowed for the app so the alert can pop up. 📱 You first have to upgrade your Node-RED before it does anything, though.
+3. In the template, open the **Datastreams** tab, click **New Datastream** and choose **Virtual Pin**. Name the datastream (for example `Message`), pick a free pin (for example V2) and set the **Data Type** to **String**, because the notification will carry your own text.
+
+4. In the datastream settings, let automations use it as a trigger: in the **Automations** section, turn on **Use as Condition**. Create the datastream and save the template.
+
+5. Create a device from the template: in **Devices**, add a new device, choose your template and give the device a name. You'll find its **Auth Token** on the device's **Device Info** tab. You'll need it in Node-RED.
+
+## Create the automation
+
+1. Open **Automations** in Blynk and create a new automation. For the condition (**When**), choose **Device State**, then your device, your datastream and **Is Any**. The automation will then react to every message, even when it's the same as the last one.
+
+2. Under **Do this**, add the action that sends a notification to the mobile app (**Send In-App Notifications**) and choose yourself as the recipient. Put the **Trigger value** placeholder (`{TRIGGER_VALUE}`) in the message. Blynk replaces it with the text that Node-RED sends.
+
+3. Name the automation. **Limit period** sets how soon the automation may run again. The box keeps reporting the temperature while the kennel is cold, so pick a longer period, such as an hour: one alert is enough, you don't need one for every reading. Save the automation.
+
+4. Download the **Blynk IoT** app to your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure notifications are allowed for the app so the alert can appear. 📱 But first you have to upgrade Node-RED, or nothing will happen.
 
 
-## Upgrade in Node-RED
+## Upgrade Node-RED
 
-1. Return to your computer and set up more features in Playground. The first is the **mobile notification**. You make this work with three nodes.
+1. Go back to your computer and set up more features in Playground. The first is the **phone notification**, which you build from three nodes.
 
-- First node: **Switch node** from under the Function section.
+- First: a **Switch** node from the Function section.
 
 <div class="container">
   <div class="row">
@@ -75,11 +89,11 @@ The temperature alert is delivered to your phone through the **Blynk IoT** app a
 
 
 
-In the node, set what you see below:
+In the node, set the same as in the screenshot below:
 
-a. Use **msg.payload** as the selected property;
+a. use **msg.payload** as the property (Property),
 
-b. Select the notification to be sent when the temperature is less than or equal to −15 °C. Work with the **flow.optimalTemp** variable and with the symbol less than/equal to: `**<=**`
+b. send the notification when the temperature drops to the value of the **flow.optimalTemp** variable (for example −15 °C) or below. Use the less-than-or-equal operator `<=` (the screenshot still shows `==`, so change it).
 
 <div class="container">
   <div class="row">
@@ -87,7 +101,7 @@ b. Select the notification to be sent when the temperature is less than or equal
   </div>
 </div>
 
-- Second node: **Change node** from the same section. This affects what message you get on your mobile.
+- Second: a **Change** node from the same section. It sets the message you get on your phone.
 
 <div class="container">
   <div class="row">
@@ -95,24 +109,24 @@ b. Select the notification to be sent when the temperature is less than or equal
   </div>
 </div>
 
-In the node, set what the mobile will tell you when the temperature in the kennel falls below the lowest temperature you set. For example _It's too cold in the kennel_.
+In the node, set what your phone will tell you when the temperature in the kennel drops below the minimum you set. For example _It's too cold in the kennel_.
 
-**Our tip**: Write the message without hooks (háčky) and accent marks (čárky). Unfortunately, Blynk does not understand them.
+**Our tip**: Write the message without accented letters. Unfortunately, Blynk can't display them.
 
-- Third node: the **Blynk IoT node** that can trigger your event (the **log event** node), from under the Blynk IoT section. This provides the connection to the mobile.
-Double-click the node to open it. On the right you'll see **a small pencil**. Click it and a new window opens. In the **Url** field enter `blynk.cloud`, and into the **Auth Token** and **Template ID** fields copy the values from the device detail in the Blynk IoT web app on your computer. Confirm with the **Add** button.
+- Third: the **write** node from the **Blynk IoT** section. It links the flow to your phone. Leave the **Blynk ws** section alone: it belongs to the old Blynk, which no longer works.
+Double-click the node to open it. Next to **Connection** you'll see **a small pencil**. Click it and a new window opens. In the **Url** field enter `blynk.cloud`, and copy the **Auth Token** and **Template ID** from the Blynk web app on your computer: the Auth Token is on the device's **Device Info** tab, the Template ID in the template details. Confirm with **Add**.
 
-Then set the node to fire the **Event** you created (the event code, e.g. `kennel_temp`). This is what turns the too-cold reading into the push notification. Confirm with the **Done** button.
+Then, in the **Virtual Pin** field, enter the number of your datastream's pin (2 for V2). That's what turns a too-cold reading into a push notification: the node writes the message to the datastream, and the automation sends it on. Confirm with **Done**.
 
-**Our tip**: Name the connection in the name line so that you can recognize it later.
+**Our tip**: Name the connection in the Name field so you'll recognize it later.
 
-## Add the flow that monitors the optimum temperature
+## Add the flow that watches the optimal temperature
 
-1. The icing on the cake is to follow. This flow consists of two nodes.
+1. Now for the icing on the cake. This flow has two nodes.
 
-The first is the **Numeric node** from under the Dashboard section. Sounds like some comic book villain, doesn't it? But he's your buddy now.
+The first is a **Numeric** node from the Dashboard section. Sounds like a comic-book villain, doesn't it? But now it's on your side.
 
-The Numeric node lets you set the lowest acceptable temperature right from the Playground Dashboard. **It ensures the threshold is easy to adjust.**
+With the Numeric node, you set the lowest acceptable temperature right from the Dashboard in Playground. **That makes the threshold easy to change.**
 
 <div class="container">
   <div class="row">
@@ -120,7 +134,7 @@ The Numeric node lets you set the lowest acceptable temperature right from the P
   </div>
 </div>
 
-In the node, set the **unit of measure** (°C), the **temperature range** (−15 and 40) and the **node name**.
+2. In the node, set the **unit** (°C), the **temperature range** (−15 to 50) and the **node name**.
 
 <div class="container">
   <div class="row">
@@ -128,7 +142,7 @@ In the node, set the **unit of measure** (°C), the **temperature range** (−15
   </div>
 </div>
 
-3. Place another **Change node** next to it.
+3. Place another **Change** node next to it.
 
 <div class="container">
   <div class="row">
@@ -136,7 +150,7 @@ In the node, set the **unit of measure** (°C), the **temperature range** (−15
   </div>
 </div>
 
-4. In the node, set the minimum temperature value (optimalTemp) to be updated immediately with changes to the Numeric node. Take a look at the screenshot.
+4. Set it so that the minimum temperature (optimalTemp) updates right away whenever the Numeric node changes. Follow the screenshot.
 
 <div class="container">
   <div class="row">
@@ -144,7 +158,7 @@ In the node, set the **unit of measure** (°C), the **temperature range** (−15
   </div>
 </div>
 
-5. Now you only have to **connect it as shown in the screenshot** and confirm with the **Deploy** button. 🙌
+5. Now all that's left is to **wire the nodes as in the screenshot** and confirm with **Deploy**. 🙌 The MQTT node feeds both the gauge and the Switch node, then Switch ➡️ Change ➡️ write; in the second flow, Numeric ➡️ Change. The screenshot comes from an older version of the project: it ends the first flow with the old Blynk **notify** node and has a few more Blynk nodes. Use your write node in place of notify and leave out the other Blynk nodes.
 
 <div class="container">
   <div class="row">
@@ -152,10 +166,10 @@ In the node, set the **unit of measure** (°C), the **temperature range** (−15
   </div>
 </div>
 
-## Ready, steady… go!
+## Ready, steady, go!
 
-1. Stick the box back to the **inner wall of the kennel**.
-2. The temperature measured in the kennel is not only shown in Playground **in the Dashboard tab**…
+1. Stick the box back on the **inside wall of the kennel**.
+2. You'll see the temperature measured in the kennel in Playground **on the Dashboard tab**…
 
 <div class="container">
   <div class="row">
@@ -163,4 +177,4 @@ In the node, set the **unit of measure** (°C), the **temperature range** (−15
   </div>
 </div>
 
-3. Above all, you get a **notification** on your mobile if your dog is too cold, so you can check on the kennel anywhere, anytime. 🕵️ Happy dog = good dog! 🐕
+3. …and above all, you get a **notification** on your phone if your dog is cold, so you can check on the kennel anytime, from anywhere. 🕵️ Happy dog = good dog! 🐕

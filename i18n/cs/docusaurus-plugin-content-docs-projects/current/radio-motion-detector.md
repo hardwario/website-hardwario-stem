@@ -19,7 +19,7 @@ Tento návod vás provede projektem **Bezdrátový detektor pohybu**. S detektor
 ## Požadavky
 
 * Buď [**Sada Motion**](https://www.hardwario.store/cz/p/motion-set), nebo jednotlivé komponenty:
-  * 1x [**Climate Module**](https://www.hardwario.store/cz/p/climate-module)
+  * 1x [**PIR Module**](https://www.hardwario.store/cz/p/pir-module)
   * 1x [**Core Module**](https://www.hardwario.store/cz/p/core-module)
   * 1x [**Mini Battery Module**](https://www.hardwario.store/cz/p/mini-battery-module)
   * 1x [**Radio Dongle**](https://www.hardwario.store/cz/p/radio-dongle)
@@ -27,11 +27,11 @@ Tento návod vás provede projektem **Bezdrátový detektor pohybu**. S detektor
 * Jedna z následujících možností:
 
   * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)<br></br>
-    Více informací najdete v dokumentu [**Rychlý start s firmwarem**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
+    Více informací najdete v dokumentu [**Instalace aplikace HARDWARIO Playground**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/).
   * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**<br></br>
     Více informací najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
   * Nainstalovaný **HARDWARIO Firmware Tool**<br></br>
-    Více informací najdete v dokumentu [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
+    Více informací najdete v dokumentu [**Nástroj pro nahrávání firmwaru**](https://docs.hardwario.com/tower/command-line-tools/firmware-tool/).
 
 ## Nahrání firmwaru
 
@@ -41,7 +41,7 @@ Firmware nahrajete do modulu **Core Module** v aplikaci **HARDWARIO Playground**
 
 #### Krok 2: Nahrajte firmware
 
-Spusťte HARDWARIO Playground, na záložce Firmware vyberte firmware `bcf-radio-motion-detector` a nahrajte ho do modulu **Core Module**.
+Spusťte HARDWARIO Playground, na záložce Firmware vyberte firmware `hardwario/twr-radio-motion-detector` a nahrajte ho do modulu **Core Module**.
 
 :::warning
 
@@ -204,7 +204,7 @@ Pokud máte vhodnou krabičku, můžete do ní sestavu vložit.
 
 :::info
 
-Více o krabičkách najdete v dokumentu [**Krabičky**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
+Krabičky pro sestavy TOWER najdete v e-shopu v kategorii [**Krabičky**](https://www.hardwario.store/cz/enclosures).
 
 :::
 
@@ -377,7 +377,7 @@ V této části propojíme událost pohybu v MQTT s požadavkem HTTP na **IFTTT*
 #### Krok 2: Vložte do flow následující úryvek (pomocí **Menu >> Import**):
 
 ```text
-[{"id":"aa6e1255.ea79f","type":"mqtt in","z":"1683bd68.e7a7b3","name":"","topic":"node/motion-detector:0/pir/-/event-count","qos":"2","broker":"3db59913.baf0c6","x":580,"y":580,"wires":[["fd3ce751.8e9ba8"]]},{"id":"74e6dfc1.7c1dc","type":"http request","z":"1683bd68.e7a7b3","name":"","method":"POST","ret":"txt","url":"https://maker.ifttt.com/trigger/motion/with/key/bbtA7Dn-3HKPG8OcfZMP7WyvKh6I69iEW9j9OtUBGGB","tls":"","x":910,"y":580,"wires":[[]]},{"id":"fd3ce751.8e9ba8","type":"change","z":"1683bd68.e7a7b3","name":"","rules":[{"t":"delete","p":"payload","pt":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":710,"y":680,"wires":[["42aed05e.e145"]]},{"id":"42aed05e.e145","type":"delay","z":"1683bd68.e7a7b3","name":"","pauseType":"delay","timeout":"30","timeoutUnits":"seconds","rate":"1","nbRateUnits":"1","rateUnits":"second","randomFirst":"1","randomLast":"5","randomUnits":"seconds","drop":false,"x":900,"y":680,"wires":[["74e6dfc1.7c1dc"]]},{"id":"3db59913.baf0c6","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
+[{"id":"aa6e1255.ea79f","type":"mqtt in","z":"1683bd68.e7a7b3","name":"","topic":"node/motion-detector:0/pir/-/event-count","qos":"2","broker":"3db59913.baf0c6","x":580,"y":580,"wires":[["fd3ce751.8e9ba8"]]},{"id":"74e6dfc1.7c1dc","type":"http request","z":"1683bd68.e7a7b3","name":"","method":"POST","ret":"txt","url":"https://maker.ifttt.com/trigger/motion/with/key/YOUR_IFTTT_KEY","tls":"","x":910,"y":580,"wires":[[]]},{"id":"fd3ce751.8e9ba8","type":"change","z":"1683bd68.e7a7b3","name":"","rules":[{"t":"delete","p":"payload","pt":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":710,"y":680,"wires":[["42aed05e.e145"]]},{"id":"42aed05e.e145","type":"delay","z":"1683bd68.e7a7b3","name":"","pauseType":"delay","timeout":"30","timeoutUnits":"seconds","rate":"1","nbRateUnits":"1","rateUnits":"second","randomFirst":"1","randomLast":"5","randomUnits":"seconds","drop":false,"x":900,"y":680,"wires":[["74e6dfc1.7c1dc"]]},{"id":"3db59913.baf0c6","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
 ```
 
 Bude to vypadat takto:
@@ -387,6 +387,9 @@ Bude to vypadat takto:
     <Image img={require('./img/radio-motion-detector/radio-motion-detector-node-red-ifttt-snippet.webp')} alt="Flow v Node-RED propojující topic event-count z čidla PIR přes uzly change a delay s uzlem http request"/>
   </div>
 </div><br></br>
+
+V uzlu **http request** nahraďte `YOUR_IFTTT_KEY` klíčem ze stránky dokumentace služby Webhooks (krok 15).
+
 
 :::info
 
@@ -415,5 +418,4 @@ Teď by vám měla přijít push notifikace pokaždé, když detektor zachytí p
 ### Související dokumenty <a id="related-documents"></a>
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
-* [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
-* [**Průvodce toolchainem**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
+* [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/)

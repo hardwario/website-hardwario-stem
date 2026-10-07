@@ -84,7 +84,7 @@ Na trhu je mnoho centrálních hubů. V open-source komunitě patří k nejoblí
 
 ### Ostatní IoT hardware
 
-Na vzestupu jsou hlasoví asistenti jako Google Assistant, Amazon Alexa, Microsoft Cortana nebo Siri od společnosti Apple. Fyzická zařízení, ve kterých asistenti běží, začínají být důležitou součástí IoT řešení, zejména v domácnostech.
+Rozšířili se hlasoví asistenti od společností Amazon, Apple a Google. Fyzická zařízení, ve kterých asistenti běží, jsou důležitou součástí IoT řešení, zejména v domácnostech.
 
 ## IoT software
 
@@ -104,7 +104,7 @@ Přidaná hodnota internetu věcí netkví v samotných zařízeních, ale v ana
 
 ### IoT aplikace
 
-Nabídka aplikací pro IoT je obrovská a dynamicky se rozšiřuje. Velcí hráči, kteří provozují IoT platformy, nabízejí vlastní řešení (např. Microsoft a jeho IoT Central), ale existuje i mnoho vynikajících IoT aplikací od menších společností, například IFTTT nebo Ubidots. Drtivá většina aplikací má desktopovou i mobilní verzi pro chytré telefony.
+Nabídka aplikací pro IoT je obrovská a dynamicky se rozšiřuje. Velcí hráči, kteří provozují IoT platformy, nabízejí vlastní řešení, ale existuje i mnoho vynikajících IoT aplikací od menších společností, například IFTTT nebo Ubidots. Drtivá většina aplikací má desktopovou i mobilní verzi pro chytré telefony.
 
 ## IoT konektivita
 
@@ -151,7 +151,7 @@ Pro IoT zařízení, která většinou nepřenášejí velké objemy dat, se nej
 
 Globální přenosové systémy se používají zejména pro mobilní objekty nebo zařízení instalovaná v místech bez připojení k internetu.
 
-Pro globální bezdrátové přenosy se dnes nejčastěji používají sítě mobilních operátorů, tedy 2G (GPRS, EDGE), 3G a 4G (LTE). IoT zařízení mají SIM kartu a k internetu se připojují přes zvolenou mobilní síť. Nevýhodou těchto technologií je vysoká spotřeba energie, proto se nehodí pro zařízení napájená z baterií. Naštěstí se začaly budovat nové IoT sítě souhrnně označované jako LPWAN.
+Pro globální bezdrátové přenosy se dnes nejčastěji používají sítě mobilních operátorů, tedy 2G (GPRS, EDGE), 4G (LTE) a 5G. IoT zařízení mají SIM kartu a k internetu se připojují přes zvolenou mobilní síť. Nevýhodou těchto technologií je vysoká spotřeba energie, proto se nehodí pro zařízení napájená z baterií. Naštěstí pro ně vznikly nové IoT sítě souhrnně označované jako LPWAN.
 
 **Důležité!**
 

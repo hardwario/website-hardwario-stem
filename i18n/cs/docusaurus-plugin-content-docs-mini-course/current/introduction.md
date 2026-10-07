@@ -20,6 +20,7 @@ Během kurzu projdete pět výukových lekcí, které kombinují teorii, praktic
 * Měření a vizualizace dat: práce s teplotou, vlhkostí, světlem a dalšími senzory.
 * Podmíněné reakce: logické uzly, reakce na vstupy, automatizace.
 * Ovládání výstupů: LED pásky, barevné efekty a interaktivní prvky.
+* Závěr a teorie: jak fungují Node-RED a MQTT a závěrečný projekt, který vše propojí.
 
 ## Co budete potřebovat
 

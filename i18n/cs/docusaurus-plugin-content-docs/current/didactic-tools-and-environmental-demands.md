@@ -18,8 +18,8 @@ import Image from '@theme/IdealImage';
   * Počítač připojený k internetu (minimálně jeden pro lektora, ideálně samostatné počítače pro lektora a 3 skupiny)
   * Chytrý telefon připojený k internetu (minimálně jeden pro lektora, ideálně samostatné telefony pro lektora a 3 skupiny)
   * Sady IoT stavebnice HARDWARIO TOWER:
-    * Start Set
-    * Control Set
+    * Sada Start
+    * Sada Control
 * Softwarové vybavení:
   * Webový prohlížeč: doporučujeme Google Chrome
   * HARDWARIO Playground

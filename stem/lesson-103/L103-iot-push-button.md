@@ -1,6 +1,6 @@
 ---
 slug: iot-push-button
-title: 'L103: IoT button'
+title: 'L103: IoT Button'
 description: "A lesson on the IoT button: students build a wireless button from the HARDWARIO TOWER kit and show its press count and temperature in Playground."
 ---
 import Image from '@theme/IdealImage';

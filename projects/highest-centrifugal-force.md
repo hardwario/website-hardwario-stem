@@ -6,30 +6,30 @@ import Image from '@theme/IdealImage';
 
 ## Introduction
 
-Do you remember the spintop? You might have had a wooden or plastic one, but we bet it wasn't a smart one. Now you can finally make one that registers your centrifugal force. Measure it against your friends to see who is centrifugally the strongest one! 💪
+Do you remember spinning tops? You might have had a wooden or plastic one, but we bet it wasn't a smart one. Now you can finally make one that records your centrifugal force. Then compete with your friends and find out which of you is the centrifugal champion! 💪
 
-In this project, you will learn **to measure the fast spinning of the box**.  👈
+In this project, you will learn **to measure how fast the box spins**. 👈
 
-All you need is the **box with button** and the **USB dongle** in the basic HARDWARIO [Start Set](https://www.hardwario.store/p/start-set/).
+All you need is the **box with a button** and the **USB dongle**, so the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/) will do.
 
 
 ## Download new firmware
 
-1. If you haven't done it yet, put together the Start Set.
-2. Upload new firmware to Core Module: **bcf radio spinning game** (you will find it among other firmware in the Playground). Thanks to this firmware, the box will become sensitive to rotation. 👌
+1. If you haven't done it yet, assemble the Start Set.
+2. Upload the new **bcf radio spinning game** firmware to the Core Module (you'll find it in Playground among the other firmware). It makes the box react to spinning. 👌
 
 
 
-3. <a href="https://docs.hardwario.com/tower/desktop-programming/radio-network-management#pairing-new-devices" target="_blank">Pair the Core Module with the USB Dongle.</a> Right after pairing it, you will notice that your Core Module has changed Alias to **rotation-g-meter**.
+3. <a href="https://docs.hardwario.com/tower/desktop-programming/radio-network-management/#pairing-new-devices" target="_blank">Pair the Core Module with the USB dongle.</a> Right after pairing, you'll see that its Alias has changed to **rotation-g-meter**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-1.webp')} alt="Playground Devices tab: the paired device row with alias rotation-g-meter:0 highlighted"/> </div> </div>
 
-## Build in the Node-RED
+## Build it in Node-RED
 
-1. In the Playground, click on the **Functions tab**, where is the programming desktop Node-RED. 🤖
-2. Start as always: first place the **MQTT node** from the Input section on the desktop.
+1. In Playground, click the **Functions tab**, where you'll find the Node-RED programming workspace. 🤖
+2. Start as always: first place an **mqtt in** node from the **network** section on the workspace.
 
-Double-click on it and copy **Topic** to the field. With this, the box will measure the centrifugal force:
+Double-click it and copy this line into the **Topic** field. It lets the box measure the centrifugal force:
 
 ```
 node/rotation-g-meter:0/rotation-g
@@ -38,9 +38,9 @@ node/rotation-g-meter:0/rotation-g
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-2.webp')} alt="Edit mqtt in node dialog with the rotation-g topic in the highlighted Topic field"/> </div> </div>
 
-Confirm it with the **Done** button.
+Confirm with **Done**.
 
-3. Surprise. 😲 Under the first **MQTT node**, place a second MQTT node from the Input section. This time, save another **Topic** in its settings; with this one, the box will measure the rotation time:
+3. Surprise! 😲 Below the first MQTT node, place a second **mqtt in** node from the **network** section. This time, enter a different **Topic** in its settings, so the box measures how long it spins:
 
 
 ```
@@ -49,11 +49,11 @@ node/rotation-g-meter:0/rotation-time
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-3.webp')} alt="Second MQTT node: Edit dialog with the rotation-time topic in the highlighted Topic field"/> </div> </div>
 
-4. To each node, place one node for javascript. You can find them in **Function** section, under Function (original, right? 🤡).
+4. Next to each of them, add one node for JavaScript. You'll find it in the **function** section under the name function (original, right? 🤡).
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-4.webp')} alt="Node-RED workspace with a Function node highlighted next to each of the two MQTT nodes"/> </div> </div>
 
-5. Double-click on the **upper Function node** and insert this code into the large field. The code will register the record centrifugal force. 💪
+5. Double-click the **upper function node** and paste this code into the large field on the **On Message** tab. It records the highest centrifugal force. 💪
 
 
 ```
@@ -67,13 +67,13 @@ if(lastSpin > flow.get("record"))
 }
 ```
 
-In the **Name** field, name the node as _Save the record_.
+In the **Name** field, name the node _Save the record_.
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-5.webp')} alt="Edit function node dialog with the record-saving code and the Name field highlighted"/> </div> </div>
 
-Confirm it with the **Done** button.
+Confirm with **Done**.
 
-6. Into the **bottom Function node**, insert the code that will register the record spin time. ⏰
+6. In the **lower function node** (again on the **On Message** tab), paste the code that records the longest spin time. ⏰
 
 
 ```
@@ -87,43 +87,43 @@ if(lastSpinTime > flow.get("timeRecord"))
 }
 ```
 
-In the **Name** field, name the node as _Save the record_.
+In the **Name** field, name the node _Save the record_.
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-6.webp')} alt="Edit function node dialog for the bottom node with the spin-time record code and the Name field highlighted"/> </div> </div>
 
-Confirm it with the **Done** button.
+Confirm with **Done**.
 
-7. Under the upper Function node, place the **text node** from the Dashboard section. You can place it elsewhere, but for the sake of clarity it will be better if they are aligned vertically.
+7. Below the upper function node, place a **text** node from the **dashboard** section. You can put it somewhere else, but it's clearer when the nodes sit one under another.
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-7.webp')} alt="Node-RED workspace with a Text node from the Dashboard section highlighted under the upper Function node"/> </div> </div>
 
-In settings, name it _Last spin_. This way, it will show you the value that the box just measured.
+In its settings, name it _Last spin_. It will show the value the box has just measured.
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-8.webp')} alt="Edit text node dialog with the Label field for the last spin value highlighted"/> </div> </div>
 
-8. Place another node under this one; thanks to the bottom one, the values will be registered into a graph. 📈 You will find it as **Chart node** in Dashboard section.
-In the **Label** field, name it as _History_. Into the **X-axis** Label field, set  automatic, which means that the unit will be added automatically.
+8. Below this node, place one more, which plots the values in a chart. 📈 You'll find it as the **chart** node in the **dashboard** section.
+In the **Label** field, name it _History_. In the **X-axis Label** field, choose automatic, so the unit is added automatically.
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-9.webp')} alt="Edit chart node dialog with the Label field and the automatic X-axis Label setting highlighted"/> </div> </div>
 
-9. Under the second javascript, place the **Text node** from the Dashboard section.
-You will determine in it how the length of the latest rotation is displayed: _Time of last spin_.
+9. Below the second JavaScript node, place a **text** node from the **dashboard** section.
+In it, set the label for the time of the last spin: _Time of last spin_.
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-10.webp')} alt="Edit text node dialog with the Label field for the time of the last spin highlighted"/> </div> </div>
 
-10.  Next to each level, place one **Text node** from the Dashboard section. Those will affect the way you see the record time registered in the graph.  Set up the **Record label** and **Record** **time**, respectively.
+10.  After each branch, place one **text** node from the **dashboard** section. They decide how you'll see the records. Set their Labels to **Record** and **Record time**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-11.webp')} alt="Node-RED workspace with the record and record-time Text nodes highlighted next to each flow level"/> </div> </div>
 
-11. And then **connect** it all as shown in the picture. You will have two separate flows on the desktop. In the end, don’t forget to press the **Deploy** button to make it all work. 🚨
+11. Then **connect** everything as shown in the picture. You'll end up with two separate flows on the workspace. Finally, don't forget to press the **Deploy** button to start it all up. 🚨
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-12.webp')} alt="Two finished flows connected in Node-RED with the Deploy button highlighted"/> </div> </div>
 
 ## Give it a spin!
 
-1. Invite all your friends and get them worked up. Have a Coke. 😄
-2. Measure your centrifugal force! One by one, spin it.
-   **Our tip**: For the best spin, make the box stand on its button.
-3. Follow the results in the **Dashboard tab**. So, good luck and …. **spin it like you dare!**
+1. Invite all your friends and get them fired up. Maybe have a cola. 😄
+2. Measure your centrifugal force! Take turns spinning the box.
+   **Our tip**: The box spins best when you stand it on its button.
+3. Follow the results on the **Dashboard** tab. Good luck and… **spin it for all you're worth!**
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-13.webp')} alt="Dashboard with last spin value, history chart, last spin time, record, and record time"/> </div> </div>

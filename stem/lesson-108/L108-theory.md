@@ -5,39 +5,36 @@ title_meta: "Theory (L108: IoT Pulse Monitor)"
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation:** 10 min.
+**Time allocation**: 10 min.
 
-## Energy Consumption Monitoring
+## Measuring energy consumption
 
-A major trend today is the effort to minimize the consumption of electricity, gas, or water. The **Internet of Things (IoT)** enables real-time monitoring and regulation of energy usage.
+Today there is a strong drive to cut the consumption of electricity, gas and water as far as possible. With **IoT**, energy consumption can be monitored and regulated online.
 
-## Monitoring Electricity Consumption
+## Measuring electricity consumption
 
-Electric current can be measured using two basic methods:
+Electric current can be measured in two basic ways:
 
-1. **Direct Measurement**: using an [ammeter](https://en.wikipedia.org/wiki/Ammeter), which measures the magnitude of electric current in a circuit.
-2. **Indirect Measurement**: the electric current is not measured directly, but instead another physical quantity is measured, from which the current and consumption values can be calculated.
+1. **Direct measurement**: with an [ammeter](https://en.wikipedia.org/wiki/Ammeter), which measures the electric current flowing in a circuit.
+2. **Indirect measurement**: instead of the current itself, another physical quantity is measured, and the current and consumption are calculated from it.
 
-### Options for Indirect Measurement of Electric Current:
+### Ways to measure electric current indirectly:
 
 * [Current transformer](https://en.wikipedia.org/wiki/Current_transformer)
 * [Hall sensor](https://en.wikipedia.org/wiki/Hall_effect_sensor)
-* Electricity meter outputs (magnetic, LES, S0, Modbus)
+* Electricity meter outputs (magnetic, LED, S0, Modbus)
 
 ## Pulse monitoring
 
-One of the ways to monitor consumption online is by connecting to **electricity/gas/water meters** and transmitting the number of pulses these meters generate depending on the consumption of the respective medium.
+Another way to monitor consumption online is to **connect to electricity, gas or water meters** and transmit the number of pulses these meters generate as the medium is consumed.
 
-### The most commonly used sensors for pulse monitoring are:
+### The sensors most often used for pulse monitoring:
 
-* **LED sensor**: detects LED pulses on the meter, which blink to indicate consumption
-* **Magnetic sensor**: detects pulses generated with each rotation of a magnet placed on the unit dial
+* **LED sensor**: picks up the pulses of the LED on the meter, which blinks to show consumption
+* **Magnetic sensor**: picks up the pulses created each time a magnet on the meter's units dial turns
 
 <div class="container">
   <div class="row">
     <Image img={require('./pulse-cabel.avif')} alt="Pulse sensor probe on a long grey cable ending in bare wires with a terminal connector"/>
   </div>
 </div>
-
-
-

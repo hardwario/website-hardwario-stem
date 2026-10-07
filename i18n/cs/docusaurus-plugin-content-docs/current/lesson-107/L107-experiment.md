@@ -92,7 +92,7 @@ V experimentu budeme LED pásek ovládat tlačítkem a podle naměřené teploty
 :::info
 
  Pokud se v seznamu objevilo nové zařízení s jiným označením, nahrajte do něj správný firmware.  
- Jak firmware nahrát, popisuje tento návod.  
+ Jak firmware nahrát, popisuje [tento návod](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).  
  Pro tlačítko potřebujete firmware `twr-radio-push-button` a pro ovladač LED pásku `twr-radio-power-controller`.
 
 :::
@@ -114,7 +114,7 @@ V experimentu budeme LED pásek ovládat tlačítkem a podle naměřené teploty
 Pozn.:
 1. Chcete-li data odeslat rychleji, dýchněte na tlačítko.
 2. Jednotka měří teplotu a odesílá ji každých 15 min., stisknutí tlačítka hlásí okamžitě.
-3. Pokud teplota mezi dvěma měřeními vzroste o více než 0,2 °C, jednotka odešle data ihned.
+3. Pokud se teplota od posledního odeslání změní alespoň o 0,2 °C, jednotka odešle data ihned.
 
 :::
 

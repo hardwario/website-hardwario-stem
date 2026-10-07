@@ -10,19 +10,19 @@ I mladí programátoři chtějí vědět, co je v budoucnu čeká. Krabička vá
 
 V tomto projektu se naučíte udělat z krabičky věšteckou kouli neboli **magic 8-ball**. ️🎱 Nastavíte ji tak, aby při zatřesení náhodně zvolila jednu z možností.
 
-Budete potřebovat **krabičku s tlačítkem a USB dongle**. Vystačíte si tedy se základní sadou HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/).
+Budete potřebovat **krabičku s tlačítkem a USB dongle**. Vystačíte si tedy se základní [**Sadou Start**](https://www.hardwario.store/cz/p/start-set) od HARDWARIO.
 
 
 ## Rozjeďte to v Node-RED
 
-1. Start Set [sestavte a spárujte](https://hardwario.academy/). Do modulu Core Module potřebujete firmware **radio-8-ball**.
+1. Sadu Start sestavte a [spárujte](https://docs.hardwario.com/tower/desktop-programming/radio-network-management/#pairing-new-devices). Do modulu Core Module potřebujete firmware **radio-8-ball**.
 
 Po nahrání firmwaru uvidíte, že se Alias vašeho zařízení na záložce Devices změnil na **Future teller**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-1.webp')} alt="Záložka Devices v Playgroundu se spárovaným zařízením pod aliasem future-teller:0"/> </div> </div>
 
 2. V Playgroundu klikněte na **záložku Functions**, kde je programovací plocha.
-3. Na plochu umístěte uzel **MQTT** ze sekce Input.
+3. Na plochu umístěte uzel **mqtt in** ze sekce **network**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-2.webp')} alt="Uzel mqtt in zvýrazněný v paletě a uzel mqtt umístěný na ploše"/> </div> </div>
 
@@ -41,11 +41,11 @@ Potvrďte tlačítkem **Done**.
 
 1. Krabička funguje tak, že vám vyhodí jednu z předem nastavených odpovědí, a to vždy **na základě náhody**. Teď ji nastavíme.
 
-Náhodnou volbu naprogramujete jednoduchým JavaScriptem. Jak na to? Za uzel MQTT umístěte uzel **Function**, který najdete ve stejnojmenné sekci.
+Náhodnou volbu naprogramujete jednoduchým JavaScriptem. Jak na to? Za uzel MQTT umístěte uzel **function**, který najdete ve stejnojmenné sekci.
 
 <div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-4.webp')} alt="Uzel Function zvýrazněný v paletě a umístěný vedle uzlu MQTT future-teller"/> </div> </div>
 
-2. Dvojklikem uzel otevřete. V řádku **Name** ho pojmenujte (třeba 8-ball). Do řádku **Function** zkopírujte tento kód přesně tak, jak to vidíte na obrázku.
+2. Dvojklikem uzel otevřete. V řádku **Name** ho pojmenujte (třeba 8-ball). Na záložku **On Message** zkopírujte tento kód přesně tak, jak to vidíte na obrázku.
 
 
 ```
@@ -69,14 +69,14 @@ Tento kód vybere **jednu ze čtyř možností**:
 
 Potvrďte tlačítkem **Done**.
 
-3. Vedle uzlu 8-ball přidejte uzel **Text** ze sekce Dashboard.
+3. Vedle uzlu 8-ball přidejte uzel **text** ze sekce **dashboard**.
 4. V něm nastavte pole **Label** na Odpověď.
 
 <div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-6.webp')} alt="Dialog Edit text node s Label nastaveným na Odpověď a textovým uzlem na ploše"/> </div> </div>
 
 Potvrďte tlačítkem **Done**.
 
-5. Přidejte na plochu ještě robota, který vám výsledek přečte nahlas. Bude to pořádně strašidelné. 🤖 Najdete ho jako uzel Audio out, rovněž v sekci Dashboard.
+5. Přidejte na plochu ještě robota, který vám výsledek přečte nahlas. Bude to pořádně strašidelné. 🤖 Najdete ho jako uzel **audio out**, rovněž v sekci **dashboard**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-7.webp')} alt="Uzel audio out zvýrazněný v paletě dashboard a umístěný pod flow s odpovědí"/> </div> </div>
 

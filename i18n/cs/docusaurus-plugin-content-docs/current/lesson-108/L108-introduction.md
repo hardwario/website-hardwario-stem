@@ -13,9 +13,9 @@ Studenti si ze sady Sensor sami sestaví a naprogramují zařízení, které po�
 
 * Počítač s nainstalovanou aplikací [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
 * Projektor nebo větší monitor
-* [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER
-* [Sadu Control](https://www.hardwario.store/cz/p/control-set) IoT stavebnice HARDWARIO TOWER
-* Snímače impulzů
+* [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER (použijete z ní Radio Dongle)
+* [Sadu Sensor](https://www.hardwario.store/cz/p/sensor-set) IoT stavebnice HARDWARIO TOWER
+* Snímače impulzů:
   * [Snímač LED impulzů](https://www.hardwario.store/cz/p/led-pulse-sensor) nebo
   * [Snímač magnetických impulzů](https://www.hardwario.store/cz/p/magnetic-pulse-sensor) nebo 
-  * [Snímač magnetických impulzů pro vodoměry](https://www.hardwario.store/cz/p/magnetic-pulse-sensor)
+  * Snímač magnetických impulzů pro vodoměry

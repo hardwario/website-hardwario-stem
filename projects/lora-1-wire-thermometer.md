@@ -4,11 +4,11 @@ title: LoRa 1-Wire thermometer
 ---
 import Image from '@theme/IdealImage';
 
-# LoRa 1-Wire thermometer
+# LoRa 1-Wire Thermometer
 
-With this kit, you can measure **temperatures** with a single or multiple connected DS18B20 or DS18S20 temperature sensors. Then the values are sent wirelessly to the LoRa gateway.
+With this kit you can measure **temperatures** with one or more connected DS18B20 or DS18S20 temperature sensors. The values are then sent wirelessly to a LoRa gateway.
 
-You can use the community network The Things Network to receive the data.
+To receive the data, you can use The Things Network, a community network.
 
 ## What You Will Need
 
@@ -20,38 +20,34 @@ You can use the community network The Things Network to receive the data.
 
 ## Firmware Upload
 
-#### Step 1: Download the latest [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+#### Step 1: Download the latest [**HARDWARIO Playground**](https://github.com/hardwario/hardwario-playground/releases/latest)
 
-#### Step 2: Connect the Core Module to your computer.
+#### Step 2: Connect the Core Module to your computer
 
-#### Step 3: In Playground, go to the **Firmware** tab, select `bcf-lora-1wire-thermometer` and flash the firmware.
+#### Step 3: In Playground, open the **Firmware** tab, select `hardwario/twr-lora-1wire-thermometer` and flash the firmware
 
-#### Step 4: After upload, the red LED on the Core Module will turn on for 2 seconds, then it will turn off.
+The firmware appears in the list only after you tick **Show all**.
+
+#### Step 4: After the upload, the red LED on the Core Module lights up for 2 seconds and then goes off
 
 ## LoRa Configuration
 
-For configuring the LoRa keys please follow [LoRa AT Commands Configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/#lora-configuration) tutorial.
+To configure the LoRa keys, follow the [LoRa AT Commands Configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/#lora-configuration) guide.
 
-## Transmitting the data
+## Transmitting the Data
 
-The LoRa 1-Wire thermometer sends a LoRa packet when:
+The thermometer sends a LoRa packet:
 
-* After power-up, when the batteries are inserted
-* Every 15 minutes when the measured values are the same
-* After pressing the button
-* When you type `AT$SEND` to the console
+* After power-up, that is, when you insert the batteries
+* Every 15 minutes if the measured values do not change
+* When you press the button
+* When you enter `AT$SEND` in the console
 
 ## Reading the Data
 
-The data are encoded in the LoRa message. You need to extract the right bits to get the values back. This is explained in the [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer) file. You can also use the `decode.py` python [script in the repository](https://github.com/bigclownlabs/bcf-lora-climate-monitor).
+The data is encoded in the LoRa message, and you get the values back by extracting the right bits. The Python script `decode.py` in the [firmware repository](https://github.com/hardwario/twr-lora-1wire-thermometer) does this for you.
 
-You can pass the received HEX string as a parameter for the `decode.py`:
-
-:::info
-
-You can use the same command to upgrade **Firmware Flashing Tool** to the latest version
-
-:::
+Pass the received HEX string to `decode.py` as a parameter:
 
 ```text
 >>> python3 decode.py 001D00E600E8012200E500D600E5

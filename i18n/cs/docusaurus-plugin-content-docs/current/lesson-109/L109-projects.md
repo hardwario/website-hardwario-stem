@@ -10,7 +10,9 @@ import React from 'react';
 
 Studenti zkoušejí další projekty k tématu lekce nebo hledají nápady metodou Ideation.
 
-## Platforma Hackster.io
+## Další projekty s tématem lekce k vyzkoušení
+
+### Platforma Hackster.io
 
 <a
   href="https://www.hackster.io/jakub-smejkal/measure-soil-moisture-with-hardwario-iot-kit-9ae766"
@@ -139,11 +141,9 @@ Studenti zkoušejí další projekty k tématu lekce nebo hledají nápady metod
   </div>
 </a>
 
-## Ideation
+### Ideation
 
-Studenti navrhují reálné využití znalostí, které získali z teoretického výkladu a experimentů.
-
-Nápady zapisují do grafu, kde osa x udává odhadovanou náročnost (náklady) projektu a osa y odhadovaný dopad zavedení řešení.
+Studenti navrhují reálné využití znalostí, které získali z teoretického výkladu a experimentů. Nápady zapisují do grafu, kde osa x udává odhadovanou náročnost (náklady) projektu a osa y dopad zavedení řešení.
 
 <div class="container">
   <div class="row">

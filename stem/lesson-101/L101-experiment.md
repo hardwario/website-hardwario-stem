@@ -1,7 +1,7 @@
 ---
 slug: what-is-iot-experiment
 title: Experiment
-title_meta: "Experiment (L101: What is the Internet of Things - IoT)"
+title_meta: "Experiment (L101: What Is the Internet of Things)"
 ---
 import Image from '@theme/IdealImage';
 
@@ -9,17 +9,17 @@ import Image from '@theme/IdealImage';
 
 ## Universal IoT button
 
-### Description of the experiment
+### Experiment Description
 
-From the HARDWARIO kit we can build a universal wireless button. 
+We will use the HARDWARIO kit to build a universal wireless button. 
 
-As part of the experiment, we will understand:
+In this experiment, we will learn:
 
 * how easy it is to work with the HARDWARIO TOWER IoT kit
 
-### Steps of the experiment
+### Experiment Steps
 
-#### Button assembly 
+#### Assembling the Button
 
 <div class="container">
   <div class="row">
@@ -27,10 +27,10 @@ As part of the experiment, we will understand:
   </div>
 </div>
 
-#### Modules in the assembly:
+#### Modules in the setup:
 
 * Core Module
 * Mini Battery Module
 * Push Button Module
 
-Build the unit by following the [video tutorial](https://www.youtube.com/watch?v=OCPPKXzCBg0).
+Assemble the unit following the [video tutorial](https://www.youtube.com/watch?v=OCPPKXzCBg0).

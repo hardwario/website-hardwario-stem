@@ -10,14 +10,14 @@ Ani mobilní telefon není neomylný! Občas vás může zradit a nevzbudit. Kdy
 
 V tomto projektu se naučíte, **jak chytrým tlačítkem odeslat oznámení**. 📩
 
-Stačí vám k tomu základní sada HARDWARIO [**Start Set**](https://www.hardwario.store/cz/p/start-set).
+Stačí vám k tomu základní [**Sada Start**](https://www.hardwario.store/cz/p/start-set) od HARDWARIO.
 
 
 ## Rozjeďte to v Node-RED
 
-1. Sestavte Start Set a spárujte ho. Pokud to děláte poprvé, připravili jsme pro vás jednoduchý návod. Do modulu Core Module budete potřebovat firmware pro rádiové tlačítko. Pokud nevíte, jak firmware nahrát nebo co to vlastně je, najdete to [tady](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
-2. V Playgroundu klikněte na záložku **Functions**, kde najdete programovací prostředí [Node-RED](https://docs.hardwario.com/tower/platform-integrations/blynk-app/#node-red-setup). 🤖
-3. Z panelu vlevo přetáhněte na plochu Node-RED uzel **MQTT** ze sekce Input.
+1. Sestavte Sadu Start a spárujte ji. Do modulu Core Module budete potřebovat firmware **twr-radio-push-button**. Pokud to děláte poprvé nebo nevíte, co to firmware vlastně je a jak ho nahrát, připravili jsme pro vás [jednoduchý návod](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
+2. V Playgroundu klikněte na záložku **Functions**, kde najdete programovací prostředí [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/). 🤖
+3. Z palety vlevo přetáhněte na plochu Node-RED uzel **mqtt in** ze sekce **network**.
 
 <div class="container">
   <div class="row">
@@ -35,7 +35,7 @@ Potvrďte tlačítkem **Done**.
 
 ## Napište text omluvy
 
-1. Text omluvy nastavíte také v Node-RED. Vedle uzlu MQTT umístěte uzel **Change** ze sekce **Functions**. Ten určuje, jaká zpráva se odešle.
+1. Text omluvy nastavíte také v Node-RED. Vedle uzlu MQTT umístěte uzel **change** ze sekce **function**. Ten určuje, jaká zpráva se odešle.
 
 <div class="container">
   <div class="row">
@@ -57,23 +57,37 @@ Potvrďte tlačítkem **Done**. 👏
 
 ## Připravte Blynk IoT na oznámení
 
-Omluva dorazí učiteli do telefonu jako push notifikace z aplikace **Blynk IoT**. 📱
+Omluva dorazí učiteli do telefonu jako push notifikace z aplikace **Blynk IoT**. 📱 Node-RED pošle text omluvy do Blynku a automatizace v Blynku z každé nové zprávy udělá notifikaci.
 
-1. Pokud ještě nemáte účet v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/), založte si ho. [V tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) zjistíte, jak nastavit účet, šablonu zařízení (template) a zařízení (device). Budete potřebovat všechny tři. Můžete také znovu použít šablonu z některého předchozího projektu.
+1. Pokud ještě nemáte účet v [Blynk IoT](https://blynk.io), založte si ho. Na tento projekt stačí bezplatný tarif: v době psaní návodu zahrnuje push notifikace v aplikaci a až pět automatizací.
 
-2. V Blynk IoT se oznámení nepřidává na obrazovku telefonu jako widget. Odesílá se jako událost (**Event**) definovaná v šabloně. V detailu šablony otevřete záložku **Events** a přidejte novou událost (pojmenujte ji třeba `apology` a zadejte jí zprávu). Pak pro tuto událost zapněte **Notifications**, aby ji Blynk doručil do telefonu. [Návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) vás nastavením šablony provede.
+2. Vytvořte šablonu zařízení (template). Jak na to, ukazuje [rychlý návod Blynku](https://docs.blynk.io/en/getting-started/template-quick-setup). Můžete také znovu použít šablonu z některého předchozího projektu.
 
-3. Stáhněte si do telefonu **aplikaci Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlaste se stejným účtem. Zkontrolujte, že má aplikace povolená oznámení, aby se omluva mohla zobrazit. ✉️
+3. V šabloně otevřete záložku **Datastreams**, klikněte na **New Datastream** a vyberte **Virtual Pin**. Datastream pojmenujte (třeba `Zprava`), vyberte volný pin (třeba V2) a jako datový typ (**Data Type**) zvolte **String**, protože notifikace ponese váš vlastní text.
+
+4. V nastavení datastreamu povolte, aby ho automatizace mohly použít jako spouštěč: v části **Automations** zapněte **Use as Condition**. Datastream vytvořte a šablonu uložte.
+
+5. Ze šablony založte zařízení: v sekci **Devices** přidejte nové zařízení, vyberte svou šablonu a zařízení pojmenujte. Na jeho záložce **Device Info** najdete **Auth Token**, který budete potřebovat v Node-RED.
+
+## Vytvořte automatizaci
+
+1. V Blynku otevřete **Automations** a založte novou automatizaci. Jako podmínku (**When**) zvolte **Device State**, pak své zařízení, svůj datastream a **Is Any**. Automatizace tak zareaguje na každou zprávu, i když bude stejná jako minulá.
+
+2. V části **Do this** přidejte akci, která pošle notifikaci do mobilní aplikace (**Send In-App Notifications**), a jako příjemce zvolte sebe. Do textu notifikace vložte zástupný symbol **Trigger value** (`{TRIGGER_VALUE}`). Blynk za něj dosadí text, který mu pošle Node-RED.
+
+3. Automatizaci pojmenujte. **Limit period** určuje, za jak dlouho se automatizace smí spustit znovu: zvolte co nejkratší dobu, jinak by druhá zpráva odeslaná krátce po první nedorazila. Automatizaci uložte.
+
+4. Stáhněte si do telefonu **aplikaci Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlaste se stejným účtem. Zkontrolujte, že má aplikace povolená oznámení, aby se omluva mohla zobrazit. ✉️
 
 ## Nastavte odeslání omluvy
 
-1. Vraťte se do Playgroundu. Na plochu Node-RED přidejte za uzel Change s omluvou uzel ze sekce **Blynk IoT**, který umí spustit vaši událost (uzel **log event**). 📮
+1. Vraťte se do Playgroundu. Na plochu Node-RED přidejte za uzel change s omluvou uzel **write** ze sekce **Blynk IoT**. Sekci **Blynk ws** nepoužívejte, patří ke starému Blynku, který už nefunguje. 📮
 
-2. Dvojklikem uzel otevřete. Vpravo uvidíte **malou tužku**. Klikněte na ni a otevře se nové okno. Do pole **Url** zadejte `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu zařízení ve webové aplikaci Blynk IoT na počítači. Potvrďte tlačítkem **Add**.
+2. Dvojklikem uzel otevřete. Vedle pole **Connection** uvidíte **malou tužku**. Klikněte na ni a otevře se nové okno. Do pole **Url** zadejte `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z webové aplikace Blynk na počítači: Auth Token najdete na záložce **Device Info** zařízení, Template ID v detailu šablony. Potvrďte tlačítkem **Add**.
 
-3. Nastavte uzel tak, aby spouštěl událost (**Event**), kterou jste vytvořili (kód události, např. `apology`). Právě tím se stisk tlačítka promění v push notifikaci. Potvrďte tlačítkem **Done**.
+3. Do pole **Virtual Pin** zadejte číslo pinu svého datastreamu (pro V2 je to 2). Právě tím se stisk tlačítka promění v push notifikaci: uzel zapíše omluvu do datastreamu a automatizace ji pošle dál. Potvrďte tlačítkem **Done**.
 
-4. **Propojte uzly** tak, aby se stisk tlačítka ➡️ proměnil v omluvu, ➡️ která spustí událost v Blynk IoT, ➡️ jež dorazí učiteli do mobilu. Pak stiskněte tlačítko **Deploy** a klidně si oddechněte: omluva, která vám zachrání kůži, až přijdete pozdě, je připravená! 🙏
+4. **Propojte uzly** tak, aby se stisk tlačítka ➡️ proměnil v omluvu, ➡️ která odejde do Blynk IoT ➡️ a dorazí učiteli do mobilu. Pak stiskněte tlačítko **Deploy** a klidně si oddechněte: omluva, která vám zachrání kůži, až přijdete pozdě, je připravená! 🙏
 
 ## Připravit, pozor… start!
 

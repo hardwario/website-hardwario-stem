@@ -1,51 +1,51 @@
 ---
 slug: apology-to-teachers
-title: Apology to teachers
+title: Apology to your teacher
 ---
 import Image from '@theme/IdealImage';
 
 ## Introduction
 
- Even a mobile phone isn´t infallible! It may sometimes let you down and not wake you up. If it happens to you, don't despair. Press 👇 the smart button to apologize to your teacher before they inform your parents. 
+Even a mobile phone isn't perfect! Sometimes it lets you down and doesn't wake you up. When that happens, don't panic. Press 👇 the smart button and apologize to your teacher before they tell your parents.
 
-In this project, you will learn **how to send a notification using a smart button**. 📩
+In this project, you will learn **how to send a notification with a smart button**. 📩
 
-All you need for this is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set).
-
+All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set).
 
 
 ## Make it happen in Node-RED
 
-1. Put the Start set together and pair it: If you are doing this for the first time, we've prepared a simple guide for you. You need the radio push button firmware for the Core Module. If you don't know how to download the firmware or what it is, [you can find out here](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
-2. In Playground, click the **Functions tab** where the [Node-RED](https://docs.hardwario.com/tower/platform-integrations/blynk-app/#node-red-setup) programming area is.🤖
-3. Place the **MQTT** node from the Input section on the Node-RED area.
-   
+1. Assemble the Start Set and pair it. The Core Module needs the **twr-radio-push-button** firmware. If you're doing this for the first time, or you're not sure what firmware is and how to upload it, we've prepared [a simple guide](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
+2. In Playground, click the **Functions** tab, where you'll find the [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/) programming workspace. 🤖
+3. From the palette on the left, drag the **mqtt in** node from the **network** section onto the Node-RED workspace.
+
 <div class="container">
   <div class="row">
     <Image img={require('./img/apology-to-teachers/apology-to-teachers-1.webp')} alt="Node-RED palette with the mqtt in node highlighted and an mqtt node placed on the flow canvas"/>
   </div>
 </div>
 
-4. In the node, set the key function, i.e. push button. Double-click on the node and **copy the following line into the Topic field**:
+4. Set up the key function in the node: the button press. Double-click the node to open its settings and **copy this line into the Topic field**:
 
 ```
 node/push-button:0/push-button/-/event-count
 ```
 
-Confirm with the **Done** button.
+Confirm with **Done**.
 
-## Set content of the apology
+## Write your apology
 
-1. You also determine the content of the apology in Node-RED. Place **Change node** from the Functions section next to the MQTT node. This determines what message is sent.
+1. You write the apology in Node-RED too. Next to the MQTT node, place a **change** node from the **function** section. It decides which message gets sent.
+
 <div class="container">
   <div class="row">
     <Image img={require('./img/apology-to-teachers/apology-to-teachers-2.webp')} alt="Change node highlighted in the palette, with a set msg.payload node placed next to the push-button MQTT node"/>
   </div>
 </div>
 
-2. Double-click on the node and set the **msg. payload** rule in the **Rules** field (see screenshot below). This sets the message content. Keep in mind that the notification does not display Czech accent marks (čárky) and hooks (háčky), and don't forget to sign it. The message may read like this:
+2. Double-click the node and set a rule for **msg.payload** in the **Rules** field (see the screenshot below). This is the text of your message. Keep in mind that the notification can't show accented letters such as č or á, and don't forget to sign it. Your message could read like this:
 
-_Dear Mr. Woodpecker, I'm sorry, but unfortunately my dog ate my alarm clock. I'll come a.s.a.p. Evzen (your favorite pupil, who does not deserve to have a note sent home to his parents)._
+_Dear Mr. Woodpecker, I'm sorry, but my dog ate my alarm clock. I'll be there as soon as I can. Evzen (your favorite pupil, who doesn't deserve a note home)._
 
 <div class="container">
   <div class="row">
@@ -53,29 +53,43 @@ _Dear Mr. Woodpecker, I'm sorry, but unfortunately my dog ate my alarm clock. I'
   </div>
 </div>
 
-Confirm with the **Done** button.👏
+Confirm with **Done**. 👏
 
 ## Prepare Blynk IoT for notifications
 
-The apology reaches the teacher's phone as a push notification through the **Blynk IoT** app. 📱
+The apology reaches your teacher's phone as a push notification from the **Blynk IoT** app. 📱 Node-RED sends the text to Blynk, and a Blynk automation turns every new message into a notification.
 
-1. If you don't have one yet, create an account in [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). See [this guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) for how to set up your account, a device template, and a device. You'll need all three. You can also reuse a template from a previous project.
+1. If you don't have a [Blynk IoT](https://blynk.io) account yet, create one. The free plan is enough for this project: at the time of writing, it includes push notifications in the app and up to five automations.
 
-2. In Blynk IoT, a notification isn't placed on the phone screen like a widget. It's sent as an **Event** defined on your template. On the template detail, open the **Events** tab and add a new event (for example, name it `apology` and give it a message). Then turn on **Notifications** for that event so Blynk delivers it to your phone. The [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through the template settings.
+2. Create a device template. [Blynk's quick guide](https://docs.blynk.io/en/getting-started/template-quick-setup) shows you how. You can also reuse a template from an earlier project.
 
-3. Download the **Blynk IoT app** on your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure notifications are allowed for the app so the apology can pop up. ✉️
+3. In the template, open the **Datastreams** tab, click **New Datastream** and choose **Virtual Pin**. Name the datastream (for example `Message`), pick a free pin (for example V2) and set the **Data Type** to **String**, because the notification will carry your own text.
+
+4. In the datastream settings, let automations use it as a trigger: in the **Automations** section, turn on **Use as Condition**. Create the datastream and save the template.
+
+5. Create a device from the template: in **Devices**, add a new device, choose your template and give the device a name. You'll find its **Auth Token** on the device's **Device Info** tab. You'll need it in Node-RED.
+
+## Create the automation
+
+1. Open **Automations** in Blynk and create a new automation. For the condition (**When**), choose **Device State**, then your device, your datastream and **Is Any**. The automation will then react to every message, even when it's the same as the last one.
+
+2. Under **Do this**, add the action that sends a notification to the mobile app (**Send In-App Notifications**) and choose yourself as the recipient. Put the **Trigger value** placeholder (`{TRIGGER_VALUE}`) in the message. Blynk replaces it with the text that Node-RED sends.
+
+3. Name the automation. **Limit period** sets how soon the automation may run again: choose the shortest option, otherwise a second message sent soon after the first won't arrive. Save the automation.
+
+4. Download the **Blynk IoT app** to your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure the app is allowed to show notifications, so the apology can pop up. ✉️
 
 ## Set up sending the apology
 
-1. Now return to Playground. On the Node-RED canvas, add a node from the **Blynk IoT** section that can trigger your event (the **log event** node) after the Change node with your apology. 📮
+1. Go back to Playground. On the Node-RED workspace, add the **write** node from the **Blynk IoT** section after the change node with your apology. Leave the **Blynk ws** section alone: it belongs to the old Blynk, which no longer works. 📮
 
-2. Double-click the node to open it. On the right you'll see **a small pencil**. Click it and a new window opens. In the **Url** field enter `blynk.cloud`, and into the **Auth Token** and **Template ID** fields copy the values from the device detail in the Blynk IoT web app on your computer. Confirm with the **Add** button.
+2. Double-click the node to open it. Next to **Connection** you'll see **a small pencil**. Click it to open a new window. In the **Url** field enter `blynk.cloud`, and copy the **Auth Token** and **Template ID** from the Blynk web app on your computer: the Auth Token is on the device's **Device Info** tab, the Template ID in the template details. Confirm with **Add**.
 
-3. Set the node to fire the **Event** you created (the event code, e.g. `apology`). This is what turns the button press into the push notification. Confirm with the **Done** button.
+3. In the **Virtual Pin** field, enter the number of your datastream's pin (2 for V2). This is what turns the button press into a push notification: the node writes the apology to the datastream, and the automation sends it on. Confirm with **Done**.
 
-4. **Connect the nodes** so the click on the box ➡️ becomes your apology ➡️ that fires the Blynk IoT event ➡️ which arrives on the teacher's mobile. Then press the **Deploy** button and relax: the apology that will save your life if you are late is ready! 🙏
+4. **Connect the nodes** so the button press ➡️ turns into your apology, ➡️ which goes to Blynk IoT ➡️ and lands on your teacher's phone. Then press **Deploy** and relax: the apology that will save your skin when you're late is ready! 🙏
 
 ## Ready, steady… go!
 
-1. Do you want to try it? **Use your own account for testing purposes** so the notification lands on your phone.
-2. Confirm with Deploy again, then just press the button and ... hey presto, **someone gets your message**! 💌
+1. Want to try it out? **Test it with your own account**, so the notification lands on your own phone.
+2. Press **Deploy** again, then press the button and… hey presto, **someone has just got your message**! 💌

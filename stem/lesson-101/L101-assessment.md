@@ -1,15 +1,14 @@
 ---
 slug: what-is-iot-assessment
 title: Assessment
-title_meta: "Assessment (L101: What is the Internet of Things - IoT)"
+title_meta: "Assessment (L101: What Is the Internet of Things)"
 ---
 import Image from '@theme/IdealImage';
 
 **Time allocation**: 5 min.
 
-We will conduct a 3-2-1 Assessment, i.e. students will indicate:
+We will do a 3-2-1 assessment, i.e. students state:
 
 * 3 things they didn't know before the lesson
-* 2 things that came as a surprise to them in the context of the topic under discussion
+* 2 things that surprised them in the topic discussed
 * 1 thing that is still unclear to them
-

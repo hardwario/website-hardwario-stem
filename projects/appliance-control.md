@@ -1,75 +1,75 @@
 ---
 slug: appliance-control
-title: Appliance Control
+title: Appliance control
 ---
 
 ## Introduction
 
-With the Control kit, you can use the integrated power relay (230V/16A) to control household appliances such as a lamp, fan, or even a water pump. You can also use the Control kit to manage a digital LED strip.
+The Control Set has a built-in power relay (230 V / 16 A), so you can use it to switch household appliances such as a lamp, a fan or even a water pump. It can also drive a digital LED strip.
 
-In this project, we’ll use the relay to control a desk lamp and display the surrounding temperature using a programmable LED strip. This setup is perfect for smart lighting at home, in the office, or even for a Christmas tree.
+In this project, we'll use the relay to control a desk lamp and show the room temperature on a programmable LED strip. It's a great start for smart lighting at home, in the office or even on a Christmas tree.
 
-The kit includes 3 modules, a power adapter, a 3D-printed case, mounting rubber bands, and a 72-pixel LED strip.
+The set contains 3 modules, a power adapter, a 3D-printed enclosure, rubber bands to hold everything in place and an LED strip with 72 pixels.
 
-**The kit does not include the Radio Dongle, which is required to create the network.**
+**The Radio Dongle, which you need to create the network, is not included in the set.**
 
-Make sure you have everything needed for this project:
+Before you start, check that you have everything the project needs.
 
-## Assemble the Kit
-
-
-1. Attach the red **Core Module** to the yellow **Power Module**. To ensure proper alignment, one pin is missing and one hole in the connector is blocked. Be careful during assembly to avoid bending the pins. Bent pins can easily be straightened.
-2. Attach the black Cover Module on top of the red **Core Module**.
-3. Place the entire assembly **into the 3D-printed case** and secure it with rubber bands.
-4. Connect the included **LED strip **to the **Power Module** connector located at the bottom of the case.
-5. Prepare the **power adapter**, but do not plug it in yet.
+## Assemble the set
 
 
-## Start Your Own Radio Network
+1. Attach the red **Core Module** to the yellow **Power Module**. One pin is missing and one hole in the connector is blocked, so the modules only fit one way round. Take care not to bend the pins as you put them together. If you do bend one, you can easily straighten it again.
+2. Put the black **Cover Module** on top of the red **Core Module**.
+3. Place the whole assembly **in the 3D-printed enclosure** and secure it with the **rubber bands**.
+4. Plug the included **LED strip** into the **Power Module** connector at the bottom of the enclosure.
+5. Have the **power adapter** ready, but don't plug it in yet.
 
-If you already have a **Radio Dongle** from another kit, you can skip this step.
+
+## Start your own radio network
+
+If you already have a **Radio Dongle** from another set, you can skip this step.
 
 
 
-1. Open the HARDWARIO Playground application on your computer. If you haven’t installed it yet, follow [this](https://docs.hardwario.com/tower/desktop-programming/playground-installation/#download) guide.
+1. Open HARDWARIO Playground on your computer. If you don't have it yet, install it by following [this](https://docs.hardwario.com/tower/desktop-programming/playground-installation/#download) guide.
 2. In Playground, open the **Devices** tab.
-3. Plug your USB Radio Dongle into your computer. It will appear in the **Radio Dongle** dropdown at the top.
-4. Click **Connect** to automatically start your radio network.
+3. Plug the USB Radio Dongle into your computer. It appears at the top, in the **Radio Dongle** dropdown.
+4. Click **Connect** and the radio network starts automatically.
 
-## Connect Your Control Kit
+## Connect the Control Set
 
-1. If you only have the Control kit and see a Push Button device in the device list (in Playground), you can delete it. If you also want to use other kits, do not delete anything.
+1. If you only have the Control Set and you see a Push Button device in the device list in Playground, you can delete it. If you want to use other sets as well, don't delete anything.
 2. In Playground, click the **Start pairing** button.
-3. Take the Control kit connector and plug it into the case. Then connect the power adapter to an outlet.
-4. Once paired successfully, a device named **Power Control** should appear in the list.
+3. Take the Control Set connector and plug it into the enclosure. Then plug the power adapter into a socket.
+4. Once pairing succeeds, a device called **Power Control** should appear in the list.
 
-## Test the Communication
+## Test the communication
 
-As mentioned earlier, the device can send more than just button press messages. It also sends data about temperature and orientation. Try the following to see what messages your device sends:
+Besides button presses, the device also sends temperature and orientation data. See for yourself which messages it sends:
 
-1. Open the Messages tab in Playground.
-2. You’ll see a list of messages your button has sent through the Radio Dongle to your computer.
-3. Press the button a few times and watch the press count increase.
-4. Blow warm air onto the device: the temperature will rise and appear in the messages.
-5. The last type of message is the orientation of the device. It works like a die (dice), try rotating it to find when positions 1, 2, 3...6 appear.
+1. Open the **Messages** tab in Playground.
+2. You'll see a list of the messages your button has sent to your computer through the Radio Dongle.
+3. Press the button a few times and watch the press count go up.
+4. Breathe warm air on the device: the temperature rises and shows up among the messages.
+5. The last type of message is the orientation of the device. It works like rolling a die: turn the device around and find out when positions 1, 2, 3…6 appear.
 
-![Node-RED](./img/appliance-control/image3.png " Node-RED")
+![Node-RED](./img/appliance-control/image3.png "Node-RED")
 
-## Your First Project
+## Your first project
 
-In many tutorials, the first project is “Hello World!” Let’s do something more exciting: we’ll display temperature data on a graph!
+Many tutorials start with "Hello World!" We'll do something more exciting: we'll show the temperature on a gauge!
 
-1. Open the **Functions** tab in Playground.
-2. This is an embedded **Node-RED** app. There’s great documentation, support, and a large user community. It’s based on **visual programming**: drag and drop functional blocks (called **nodes**) onto the workspace and connect them to create a working application (a flow).
+1. In Playground, open the **Functions** tab.
+2. This is the built-in **Node-RED** app. It has great documentation, support and a large community of users. It works by **visual programming**: you drag blocks called **nodes** onto the workspace and connect them to **build a working application** (a flow).
 3. Delete the two default nodes from the workspace.
-4. Add a **mqtt in** node from the **network** section on the left. Drag it to the workspace and double-click it.
-5. A configuration window will open. You need to fill in the **Topic** field, which determines what messages this flow will receive.
-6. Go back to the **Messages** tab in Playground and find a temperature message. Next to the temperature value, you'll see an identifier like this: `node/push-button:0/thermometer/0:1/temperature` this is the **topic**.
-7. Copy this topic, return to **Functions**, paste it into the **Topic** field, and click **Done**.
-8. Now add a **Gauge** node from the **dashboard** section.
-9. Double-click the Gauge node to configure it. In the ***Range*** section, change the **max** value to **50**, then click **Done**.
-10. Connect both nodes. Simply click and drag from the gray square of one node to the other.
-11. Click **Deploy** in the top-right corner to launch the application. Then switch to the **Dashboard** tab in Playground.
-12. Blow on the device to trigger an immediate temperature update, and you’ll see the current temperature in the graph.
+4. Start with an **mqtt in** node from the **network** section on the left. Drag it onto the workspace and double-click it.
+5. A settings window opens. Fill in the **Topic** field, which decides which messages this flow receives.
+6. Go back to the **Messages** tab in Playground and find a temperature message. Next to the temperature value you'll see the message identifier, for example `node/push-button:0/thermometer/0:1/temperature`. That's the **topic**.
+7. Copy the topic, return to the **Functions** tab, paste it into the **Topic** field and click **Done**.
+8. Now add a **gauge** node from the **dashboard** section.
+9. Double-click it to open its settings. Under ***Range***, change the **max** value to **50** and click **Done**.
+10. Connect the two nodes: grab the small grey square of one node with the mouse and drag it to the other node.
+11. Click **Deploy** in the top right corner to start the application. Then switch to the **Dashboard** tab in Playground.
+12. Breathe on the device so that it sends a temperature message straight away. The gauge shows the current temperature.
 
-**Tip for your next experiment:** Try displaying the device’s orientation and button press count on the dashboard too. The possibilities in Playground are endless!
+**Tip for your next experiment:** Try showing the orientation of the device and the number of button presses on the dashboard too. Playground's possibilities are endless!

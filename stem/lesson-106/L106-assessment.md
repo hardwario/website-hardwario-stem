@@ -5,7 +5,7 @@ title_meta: "Assessment (L106: IoT Vibration Monitor)"
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation**: 5 min. 
+**Time allocation**: 5 min.
 
 We will do a 3-2-1 assessment, i.e. students state:
 

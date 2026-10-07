@@ -11,10 +11,6 @@ Studenti zkoušejí další projekty k tématu lekce nebo hledají nápady metod
 
 ## Další projekty s tématem lekce k vyzkoušení
 
-### Web HARDWARIO
-
-* Zatím žádné
-
 ### Platforma Hackster.io
 
 <a

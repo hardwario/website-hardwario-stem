@@ -27,7 +27,7 @@ Node-RED je vizuální prostředí pro „tokové“ programování, které se �
 - Skládá se z **uzlů** (nodes), které zprávy přijímají, zpracovávají a odesílají.
 - Uzly se spojují do **toků** (flows).
 - Zpráva (message) má většinou dvě důležité části:
-  - `topic`: téma, kategorie/kanál zprávy
+  - `topic`: kategorie neboli kanál zprávy
   - `payload`: obsah zprávy, např. číslo, text nebo objekt **JSON**
 - Uzly jako **Switch**, **Change**, **Function** nebo **Debug** zprávy mění, filtrují nebo na ně reagují.
 - Playground využívá **Node-RED** pro vizuální skládání toků, testování a interakci se zařízeními.
@@ -36,7 +36,7 @@ Node-RED je vizuální prostředí pro „tokové“ programování, které se �
 
 **MQTT** je protokol pro zasílání zpráv, obzvláště vhodný pro IoT.
 
-- Princip *publish / subscribe*: zařízení (publisher) odesílá zprávy na dané téma (topic) a jiná zařízení (subscribers) se k tématu přihlásí a zprávy přijímají.
+- Princip *publish / subscribe*: zařízení (publisher) odesílá zprávy do určitého topicu a jiná zařízení (subscribers) se k tomuto topicu přihlásí a zprávy přijímají.
 - Rozdíl oproti přímému posílání: publisher neví, kdo zprávu přijme; subscriber neví, kdo ji odeslal.
 - **Broker** je server, který všechny zprávy zprostředkovává.
 - Důležité vlastnosti:

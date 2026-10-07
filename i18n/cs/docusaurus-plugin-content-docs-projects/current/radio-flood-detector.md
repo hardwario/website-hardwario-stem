@@ -28,7 +28,7 @@ Tento návod vás provede projektem **Bezdrátový detektor zaplavení**. S dete
 * Jedna z následujících možností:
   * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)
 
-    Více informací najdete v dokumentu [**Rychlý start s firmwarem**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
+    Více informací najdete v dokumentu [**Instalace aplikace HARDWARIO Playground**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/).
 
   * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**
 
@@ -36,7 +36,7 @@ Tento návod vás provede projektem **Bezdrátový detektor zaplavení**. S dete
 
   * Nainstalovaný **HARDWARIO Firmware Tool**
 
-    Více informací najdete v dokumentu [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
+    Více informací najdete v dokumentu [**Nástroj pro nahrávání firmwaru**](https://docs.hardwario.com/tower/command-line-tools/firmware-tool/).
 
 ## Nahrání firmwaru
 
@@ -46,7 +46,7 @@ Firmware nahrajete do modulu **Core Module** v aplikaci **HARDWARIO Playground**
 
 ### Krok 2: Nahrajte firmware
 
-Spusťte HARDWARIO Playground, na záložce Firmware vyberte firmware `bcf-radio-flood-detector` a nahrajte ho do modulu **Core Module**:
+Spusťte HARDWARIO Playground, na záložce Firmware vyberte firmware `hardwario/twr-radio-flood-detector` a nahrajte ho do modulu **Core Module**. Firmware se v seznamu zobrazí, až zaškrtnete **Show all**.
 
 :::warning
 
@@ -82,6 +82,8 @@ Podívejte se na krátké video s jednoduchou ukázkou krok za krokem:
 ### Krok 1: Začněte modulem **Mini Battery Module**
 
 ### Krok 2: Nasaďte **Core Module** na **Mini Battery Module**
+
+## Příprava Playgroundu
 
 :::danger
 
@@ -202,7 +204,7 @@ Pokud máte vhodnou krabičku, můžete do ní sestavu vložit.
 
 :::info
 
-Více o krabičkách najdete v dokumentu [**Krabičky**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
+Krabičky pro sestavy TOWER najdete v e-shopu v kategorii [**Krabičky**](https://www.hardwario.store/cz/enclosures).
 
 :::
 
@@ -390,7 +392,7 @@ Bude to vypadat takto:
 
 :::
 
-### Krok 3: Dvakrát klikněte na uzel **IFTTT node** a upravte klíč IFTTT, který jste získali v předchozí části
+### Krok 3: Dvakrát klikněte na uzel **IFTTT** a upravte klíč IFTTT, který jste získali v předchozí části
 
 <div class="container">
   <div class="row">
@@ -411,6 +413,5 @@ Teď by vám měla přijít push notifikace, když kontakty senzoru zaplavení s
 ### Související dokumenty <a id="related-documents"></a>
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
-* [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
-* [**Průvodce toolchainem**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
+* [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/)
 

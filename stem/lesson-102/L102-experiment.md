@@ -7,33 +7,37 @@ import Image from '@theme/IdealImage';
 
 **Time allocation**: 10 min.
 
-## Experiment 1 - Building TOWER kits
+## Experiment 1: Building TOWER assemblies
 
 **Time allocation**: 5 min.
 
-### Experiment description
+### Experiment Description
 
-Several teams of students will use the HARDWARIO kit to build sample sets. A list of these is available in the [online store](https://www.hardwario.store/tower).
+Several teams of students use the HARDWARIO kit to build sample assemblies. You will find an overview of them in the [store](https://www.hardwario.store/tower).
 
-## Experiment 2 - Creating flow in Playground
+## Experiment 2: Creating a flow in Playground
 
 **Time allocation**: 5 min.
 
-### Experiment description
+### Experiment Description
 
-In Playground, we will create a sample flow showing the weight of the students.
+In the Playground app, we will create a sample flow that displays the students' weight.
 
 #### Experiment procedure
 
-1. Download and install the Playground app on your computer
-2. In the Functions tab, create a new flow:
-    a. insert mqtt in (double-click the node and fill in topic cesko/city/name/weight + confirm Done)
-    b. insert dashboard text (double-click the node to change Label to weight + confirm Done)
-    c. connect the nodes with a wire
-    d. click Deploy
-3. In the Messages tab, subscribe to messages cesko/# (note: first remove bridge/# by clicking its cross)
-4. Send a message with your topic and a payload: your weight in kg
-5. Go to the Dashboard tab and you should see your weight
+1. Download the Playground app and install it on your computer
+2. On the **Functions** tab, create a new flow:
+
+    a. add an **mqtt in** node (double-click it to open it, enter cesko/city/name/weight in the **Topic** field and confirm with **Done**)
+
+    b. add a **text** node from the dashboard section (double-click it to open it, change the **Label** to weight and confirm with **Done**)
+    
+    c. connect the two nodes with a wire
+
+    d. click **Deploy**
+3. On the **Messages** tab, subscribe to the messages cesko/# (note: first remove bridge/# by clicking its cross)
+4. Send a message with your topic and a payload containing your weight in kg
+5. Go to the **Dashboard** tab, where you will see your weight
 
 <div class="container">
   <div class="row">

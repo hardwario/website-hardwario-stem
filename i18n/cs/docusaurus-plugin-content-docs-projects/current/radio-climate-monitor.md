@@ -28,11 +28,11 @@ Tento návod vás provede projektem **Bezdrátový monitor klimatu**. V prostře
 * Jedna z těchto možností:
 
   * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)<br></br>
-    Více informací najdete v dokumentu [**Rychlý start s firmwarem**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
+    Více informací najdete v dokumentu [**Instalace aplikace HARDWARIO Playground**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/).
   * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**<br></br>
     Více informací najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
   * Nainstalovaný **HARDWARIO Toolchain**<br></br>
-    Více informací najdete v dokumentu [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
+    Více informací najdete v dokumentu [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/).
 
 ## Nahrání firmwaru
 
@@ -40,7 +40,7 @@ Firmware nahrajete do modulu **Core Module** v aplikaci **HARDWARIO Playground**
 
 #### Krok 1: Připojte modul **Core Module** kabelem Micro USB k počítači
 
-#### Krok 2: Spusťte HARDWARIO Playground, na záložce Firmware vyberte firmware `bcf-radio-climate-monitor` a nahrajte ho do modulu **Core Module**
+#### Krok 2: Spusťte HARDWARIO Playground, na záložce Firmware vyberte firmware `hardwario/twr-radio-climate-monitor` a nahrajte ho do modulu **Core Module**
 
 :::warning
 
@@ -212,12 +212,12 @@ Pokud máte vhodnou krabičku, můžete do ní sestavu vložit.
 
 :::info
 
-Více o krabičkách najdete v dokumentu [**Krabičky**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
+Krabičky pro sestavy TOWER najdete v e-shopu v kategorii [**Krabičky**](https://www.hardwario.store/cz/enclosures).
 
 :::
 
 ### Související dokumenty <a id="related-documents"></a>
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
-* [**Nastavení toolchainu**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects)
-* [**Průvodce toolchainem**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects)
+* [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/)
+* [**Vizualizace v Grafaně**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects)

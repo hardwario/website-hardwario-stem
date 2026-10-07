@@ -39,13 +39,13 @@ Tento návod vás provede projektem **Bezdrátový senzor VOC**. V prostředí *
 
 * Jedna z následujících možností:
     * Nainstalovaný **HARDWARIO Playground** (doporučeno)<br></br>
-      Více informací najdete v dokumentu [**Rychlý start s firmwarem**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
+      Více informací najdete v dokumentu [**Instalace aplikace HARDWARIO Playground**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/).
 
     * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**<br></br>
       Více informací najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
 
     * Nainstalovaný **HARDWARIO Toolchain**<br></br>
-      Více informací najdete v dokumentu [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
+      Více informací najdete v dokumentu [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/).
 
 ### Nahrání firmwaru <a id="firmware-upload"></a>
 
@@ -260,13 +260,13 @@ Místo následujících kroků můžete do flow vložit tento úryvek (pomocí *
 [{"id":"7018e288.6b887c","type":"ui_gauge","z":"ddfb24d2.43ab28","name":"","group":"d493d306.06098","order":0,"width":0,"height":0,"gtype":"gage","title":"Gauge","label":"units","format":"{{value}}","min":0,"max":"200","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","x":610,"y":300,"wires":[]},{"id":"c6695f10.80722","type":"ui_gauge","z":"ddfb24d2.43ab28","name":"","group":"d493d306.06098","order":0,"width":0,"height":0,"gtype":"gage","title":"Gauge","label":"units","format":"{{value}}","min":"10","max":"30","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","x":610,"y":360,"wires":[]},{"id":"70a87b55.8df274","type":"ui_gauge","z":"ddfb24d2.43ab28","name":"","group":"d493d306.06098","order":0,"width":0,"height":0,"gtype":"gage","title":"Gauge","label":"units","format":"{{value}}","min":0,"max":"100","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","x":610,"y":420,"wires":[]},{"id":"fbc3fd9a.b2e59","type":"mqtt in","z":"ddfb24d2.43ab28","name":"","topic":"node/836d1983a754/voc-sensor/0:0/tvoc","qos":"2","broker":"83f37d33.4979e","x":220,"y":300,"wires":[["7018e288.6b887c"]]},{"id":"4745398e.bacaf8","type":"mqtt in","z":"ddfb24d2.43ab28","name":"","topic":"node/836d1983a754/hygrometer/0:4/relative-humidity","qos":"2","broker":"83f37d33.4979e","x":260,"y":420,"wires":[["70a87b55.8df274"]]},{"id":"92e3a555.616f58","type":"mqtt in","z":"ddfb24d2.43ab28","name":"","topic":"node/836d1983a754/thermometer/0:0/temperature","qos":"2","broker":"83f37d33.4979e","x":250,"y":360,"wires":[["c6695f10.80722"]]},{"id":"d493d306.06098","type":"ui_group","z":"","name":"Default","tab":"afe7e4c8.941208","disp":true,"width":"6","collapse":false},{"id":"83f37d33.4979e","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""},{"id":"afe7e4c8.941208","type":"ui_tab","z":"","name":"Home","icon":"dashboard"}]
 ```
 
-#### Krok 1: Vložte tři uzly **MQTT input**
+#### Krok 1: Ze sekce **network** vložte tři uzly **mqtt in**
 
-#### Krok 2: Ze sekce **Dashboard** vložte tři uzly **Gauge**. U každého otevřete nastavení a vyplňte správné hodnoty **Group** a **Range**
+#### Krok 2: Ze sekce **dashboard** vložte tři uzly **Gauge**. U každého otevřete nastavení a vyplňte správné hodnoty **Group** a **Range**
 
-#### Krok 3: Každý uzel **MQTT input** propojte s jedním uzlem **Gauge**
+#### Krok 3: Každý uzel **mqtt in** propojte s jedním uzlem **Gauge**
 
-#### Krok 4: Ve všech třech uzlech **MQTT input** nastavte správné topicy MQTT
+#### Krok 4: Ve všech třech uzlech **mqtt in** nastavte správné topicy MQTT
 
 #### Krok 5: Uzly by měly vypadat jako na obrázku níže
 
@@ -293,5 +293,4 @@ Projekt je hotový, gratulujeme!
 ### Související dokumenty <a id="related-documents"></a>
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
-* [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
-* [**Průvodce toolchainem**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
+* [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/)

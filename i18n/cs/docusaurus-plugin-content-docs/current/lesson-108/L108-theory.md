@@ -22,7 +22,7 @@ Elektrický proud lze měřit dvěma základními metodami:
 ### Možnosti nepřímého měření elektrického proudu:
 - Proudový [transformátor](https://cs.wikipedia.org/wiki/Transform%C3%A1tor)  
 - [Hallova sonda](https://cs.wikipedia.org/wiki/Hallova_sonda)
-- Výstupy elektroměru (magnetický, LES, S0, Modbus)
+- Výstupy elektroměru (magnetický, LED, S0, Modbus)
 
 
 ## Monitoring impulzů

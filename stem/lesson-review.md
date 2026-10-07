@@ -1,55 +1,54 @@
 ---
 slug: lesson-review
-title: Time Allocation
+title: Lesson Time Allocation
 ---
 
-**Our STEM lessons are prepared so that they can be implemented in one lesson**, so they have a time limit of 45 min. Each lesson can be extended by extending student experiments and projects.
+**Our STEM lessons are designed to fit into a single class period**, so each one takes **45 minutes**. Any lesson can be extended by expanding the experiments and the student projects.
 
-## Introduction
+## Introduction to the lesson
 
-### Annotation
+### Overview
 
-Welcome students and presentation of the lesson. Introduction to individual phases of the lesson according to the pedagogical framework. Mutual introduction of students and their expectations and needs.
+The lecturer welcomes the students and outlines the lesson, introducing its individual phases according to the pedagogical framework. The students introduce themselves to each other and share their expectations and needs, then complete the knowledge test.
 
-**Time allocation:** 0–5 mins. 
+**Time allocation**: 0–5 min.
 
-## Theoretical Preparation
+## Theoretical preparation
 
-### Annotation
+### Overview
 
-Theoretical preparation for experiments and individual work of students. The lecturer has the main role, students are informed about the aims of the teaching and theories related to the selected topic.
+Theoretical preparation for the experiments and the students' independent work. The lecturer leads this phase and introduces the students to the learning objectives and the theory behind the chosen topic.
 
-**Time allocation:** 10 mins.
+**Time allocation**: 10 min.
 
-## Experiment - Practical Preparation
+## Experiment: hands-on preparation
 
-### Annotation
+### Overview
 
-Practical preparation for individual work of students. The lecturer leads experiments, students under his supervision work on sample IoT projects related to the topic of the lesson.
+Hands-on preparation for the students' independent work. The lecturer leads the experiments, and the students work on sample IoT projects on the lesson topic under the lecturer's guidance.
 
-**Time allocation:** 10 mins.
+**Time allocation**: 10 min.
 
-## Apply - Students Projects
+## Apply: student projects
 
-### Annotation
+### Overview
 
-The teamwork of students on selected IoT projects. The lecturer is a mentor and helps students choose projects (considering the knowledge and skills of students and time allocation). Students in teams work on designing, creating and preparing presentations of IoT projects. In the case of a small amount of time, [the Ideation](https://en.wikipedia.org/wiki/Ideation_(creative_process)) method can be used at this stage.
+The students work in teams on IoT projects of their choice. The lecturer acts as a mentor and helps them choose their projects (taking into account their knowledge, skills and the time available). In their teams, the students design and build the projects and prepare presentations of them. If time is short, the [Ideation](https://en.wikipedia.org/wiki/Ideation_(creative_process)) method can be used in this phase.
 
-**Time allocation:** 10 mins.
+**Time allocation**: 10 min.
 
-## Reflect - Projects Presentations
+## Reflect: project presentations
 
-### Annotation
+### Overview
 
-Students present their IoT projects or ideas to others. The lecturer and other students critically evaluate the ideas presented and think about the importance of project outputs and lesson topics, including the importance of the Internet of Things in the real world. 
+The students present their IoT projects or ideas to the others. The lecturer and the other students evaluate the ideas critically and consider the significance of the project results and the lesson topics, and the role the Internet of Things plays in the real world.
 
-**Time allocation:** 10 mins.
+**Time allocation**: 10 min.
 
-## Assessment and Conclusion Of Lesson
+## Assessment and conclusion
 
-### Annotation
+### Overview
 
-Verbal evaluation of the presented projects by the group. Recapitulation of the fulfilment of teaching objectives by the lecturer. Knowledge test and 3-2-1 assessment.
+The group gives verbal feedback on the presented projects. The lecturer sums up how well the learning objectives were met. The students take the knowledge test again and complete the 3-2-1 assessment.
 
-**Time allocation:** 0–5 mins.
-
+**Time allocation**: 0–5 min.

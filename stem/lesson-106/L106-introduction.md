@@ -5,7 +5,7 @@ title_meta: "Introduction (L106: IoT Vibration Monitor)"
 ---
 import Image from '@theme/IdealImage';
 
-The goal of the **IoT Vibration Monitor** lesson is to introduce students to one of the most common Industry 4.0 projects: predictive maintenance using vibration monitoring.
+The **IoT Vibration Monitor** lesson introduces students to one of the most common Industry 4.0 projects: predictive maintenance based on vibration monitoring.
 
 ## What will you need for the lesson?
 

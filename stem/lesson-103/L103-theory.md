@@ -1,39 +1,38 @@
 ---
 slug: iot-push-button-theory
 title: Theory
-title_meta: "Theory (L103: IoT button)"
+title_meta: "Theory (L103: IoT Button)"
 ---
 import Image from '@theme/IdealImage';
 
 **Time allocation**: 10 min.
 
-## Meaning and function of the IoT button
+## What an IoT button is for and how it works
 
-Buttons are one of the most basic and widely used devices at home, at school, and at work. They accompany us throughout the day, from turning off the alarm clock to turning off the TV with the remote control. Converting buttons into IoT devices brings many advantages:
+The button is one of the most basic and widely used devices at home, at school and at work. Buttons accompany us all day long, from silencing the alarm clock to turning off the TV with the remote control. Turning a button into an IoT device brings a number of benefits:
 
-* Adds a timestamp to the button press
-* Allows the button to be pressed from anywhere
-* Speeds up the transmission of the button press information to other recipients
+* Every press gets a timestamp
+* It can be pressed from anywhere
+* Information about the press reaches other recipients faster
 
-## Use of the IoT Button in Real Life
+## Uses of the IoT button in real life
 
 The IoT button is used in many fields and everyday situations:
 
 ### Home
 
-* Smart doorbell: e.g. on your smartphone you can see that someone is ringing at your home
-* Automatic ordering of frequently purchased goods: e.g. a button near laundry detergent
-* Summoning a household member: e.g. calling for dinner
-* Device control: e.g. remote control of a door, gate, or garage door
+* Smart doorbell: e.g. our smartphone shows that someone is ringing at our door
+* Automatic reordering of frequently bought goods: e.g. a button next to the laundry detergent
+* Calling a household member: e.g. calling everyone to dinner
+* Device control: e.g. remote control of a door, gate or garage door
 
 ### Work
 
 * Reporting production status: e.g. the [ANDON](https://en.wikipedia.org/wiki/Andon_(manufacturing)) system
-* Reporting a request: e.g. summoning maintenance to a workstation
+* Reporting a request: e.g. calling maintenance to a workstation
 * Recording operations: e.g. logging defective products
-
 
 ### School
 
-* Reporting a request: e.g. calling the cleaners to the toilets
-* Device control: e.g. remote control of the gym door 
+* Reporting a request: e.g. calling the cleaners to the restrooms
+* Device control: e.g. remote control of the gym door

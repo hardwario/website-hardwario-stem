@@ -12,18 +12,18 @@ V tomto návodu vytvoříte jednoduchý projekt s tlačítkem, které vám po ka
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-button-garage.webp')} alt="Ruka mačkající tlačítko na sestavě Push Button Kit před garážovými vraty"/>
+    <Image img={require('./img/push-the-button/push-the-button-button-garage.webp')} alt="Ruka tiskne tlačítko na Sadě Push před garážovými vraty"/>
   </div>
 </div>
 
 
 ## Sestavení hardwaru
 
-Budete potřebovat [sadu Push](https://www.hardwario.store/cz/p/push-set) a [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle).
+Budete potřebovat [Sadu Push](https://www.hardwario.store/cz/p/push-set) a [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle).
 
 #### Krok 1: Sestavení
 
-Složte všechny tři moduly dohromady do **sady Push**. Na obrázku níže si všimněte, jak má být otočený modul Mini Battery Module.
+Složte všechny tři moduly dohromady do **Sady Push**. Na obrázku níže si všimněte, jak má být otočený modul Mini Battery Module.
 
 <div class="container">
   <div class="row">
@@ -51,7 +51,7 @@ V tomto kroku spustíte aplikaci **Playground**. Ta spravuje Radio Dongle a tla�
   </div>
 </div>
 
-#### **Krok 2:** Připojte [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle) k počítači
+#### Krok 2: Připojte [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle) k počítači
 
 <div class="container">
   <div class="row">
@@ -63,7 +63,7 @@ V tomto kroku spustíte aplikaci **Playground**. Ta spravuje Radio Dongle a tla�
 
 :::info
 
-Pokud Radio Dongle mezi zařízeními nevidíte, podívejte se do kapitoly [Řešení problémů](https://docs.hardwario.com/tower/firmware-sdk/how-to/how-to-push-button/).
+Pokud Radio Dongle mezi zařízeními nevidíte, podívejte se do kapitoly [Řešení problémů](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/#troubleshooting).
 
 :::
 
@@ -73,15 +73,15 @@ Pokud Radio Dongle mezi zařízeními nevidíte, podívejte se do kapitoly [Ře�
   </div>
 </div>
 
-#### Krok 4: Po připojení se v seznamu spárovaných zařízení objeví sada Push, která už má nahraný firmware a je spárovaná
+#### Krok 4: Po připojení se v seznamu spárovaných zařízení objeví Sada Push, která už má nahraný firmware a je spárovaná
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connected.webp')} alt="Připojený Radio Dongle a spárovaný Push Button Kit uvedený v seznamu jako push-button:0"/>
+    <Image img={require('./img/push-the-button/push-the-button-playground-devices-connected.webp')} alt="Připojený Radio Dongle a spárovaná Sada Push uvedená v seznamu jako push-button:0"/>
   </div>
 </div>
 
-#### Krok 5: Přepněte na záložku **Functions** a ujistěte se, že vidíte flow na obrázku níže
+#### Krok 5: Přepněte na záložku **Functions** a sestavte flow podle obrázku níže
 
 <div class="container">
   <div class="row">
@@ -89,43 +89,59 @@ Pokud Radio Dongle mezi zařízeními nevidíte, podívejte se do kapitoly [Ře�
   </div>
 </div>
 
-Pokud flow nevidíte, sestavte ho sami. Potřebujete tři uzly zapojené za sebou:
+Potřebujete tři uzly zapojené za sebou:
 
-1. Uzel **MQTT in**, který odebírá topic stisku tlačítka `node/push-button:0/push-button/-/event-count`.
+1. Uzel **mqtt in**, který odebírá topic stisku tlačítka `node/push-button:0/push-button/-/event-count`.
 2. Uzel **change**, který nastaví `msg.payload` na požadovaný text oznámení, například `Button pressed, you're the best!`.
-3. Uzel Blynk IoT, který oznámení doručí (přidáte ho později, až budete mít připravený účet a šablonu Blynk IoT).
+3. Uzel **write** ze sekce Blynk IoT, který text předá Blynku (přidáte ho později, až budete mít připravený účet a šablonu Blynk IoT).
 
-Uzel Blynk IoT připojíme níže v sekci **Všechno dohromady**.
+Obrázek ukazuje původní flow, který končil uzlem pro oznámení ze starého Blynku. Pokud tenhle flow v Playgroundu máte, jeho poslední uzel smažte: už nefunguje a jeho místo zaujme uzel write. Uzel write připojíme níže v sekci **Všechno dohromady**.
 
 ## Příprava aplikace Blynk IoT
 
-V tomto kroku nastavíte **Blynk IoT**, aby vám do telefonu chodila oznámení z aplikace **HARDWARIO Playground**. Starší aplikace Blynk Legacy byla ukončena, proto používáme aktuální platformu **Blynk IoT**.
+V tomto kroku nastavíte **Blynk IoT**, aby vám do telefonu chodila oznámení z aplikace **HARDWARIO Playground**. Starší aplikace Blynk Legacy byla ukončena, proto používáme aktuální platformu **Blynk IoT**. Node-RED pošle text oznámení do Blynku a automatizace v Blynku z každé nové zprávy udělá push notifikaci.
 
-#### Krok 1: Vytvořte účet, šablonu a zařízení v Blynk IoT
+#### Krok 1: Vytvořte účet a šablonu v Blynk IoT
 
-Pokud ještě účet nemáte, vytvořte si ho v **Blynk IoT** a nastavte zařízení. Celý postup popisuje [tato příručka](https://docs.hardwario.com/tower/platform-integrations/blynk-app/): účet, **šablonu** (template), **datastreamy** i **zařízení**. Pokud už máte šablonu z předchozího projektu, můžete ji použít znovu.
+Pokud ještě nemáte účet v [Blynk IoT](https://blynk.io), založte si ho. Na tento projekt stačí bezplatný tarif: v době psaní návodu zahrnuje push notifikace v aplikaci a až pět automatizací.
 
-Poté si do telefonu stáhněte aplikaci **Blynk IoT** z [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlaste se stejnými údaji.
+Pak vytvořte šablonu zařízení (template). Jak na to, ukazuje [rychlý návod Blynku](https://docs.blynk.io/en/getting-started/template-quick-setup). Pokud už máte šablonu z předchozího projektu, můžete ji použít znovu.
 
-#### Krok 2: Definujte v šabloně událost (Event) pro oznámení
+#### Krok 2: Přidejte datastream pro zprávu
 
-V Blynk IoT se push notifikace posílají přes události (**Events**). Otevřete svou šablonu ve webové konzoli Blynk IoT a vytvořte novou událost (**Event**), například s názvem `Button pressed`. V nastavení události zapněte **Notifications** a vyberte, kdo má na propojeném zařízení push notifikaci dostávat.
+V šabloně otevřete záložku **Datastreams**, klikněte na **New Datastream** a vyberte **Virtual Pin**. Datastream pojmenujte (třeba `Zprava`), vyberte volný pin (třeba V2) a jako datový typ (**Data Type**) zvolte **String**, protože notifikace ponese váš vlastní text.
 
-Tato zpráva se vám objeví v telefonu při každém stisknutí tlačítka. Přesný postup se snímky obrazovky najdete v [příručce](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+V nastavení datastreamu povolte, aby ho automatizace mohly použít jako spouštěč: v části **Automations** zapněte **Use as Condition**. Datastream vytvořte a šablonu uložte.
+
+#### Krok 3: Založte zařízení
+
+Ze šablony založte zařízení: v sekci **Devices** přidejte nové zařízení, vyberte svou šablonu a zařízení pojmenujte. Na jeho záložce **Device Info** najdete **Auth Token**, který budete potřebovat v Node-RED.
+
+#### Krok 4: Vytvořte automatizaci
+
+V Blynku otevřete **Automations** a založte novou automatizaci. Jako podmínku (**When**) zvolte **Device State**, pak své zařízení, svůj datastream a **Is Any**. Automatizace tak zareaguje na každé stisknutí, i když bude text stejný jako minule.
+
+V části **Do this** přidejte akci, která pošle notifikaci do mobilní aplikace (**Send In-App Notifications**), a jako příjemce zvolte sebe. Do textu notifikace vložte zástupný symbol **Trigger value** (`{TRIGGER_VALUE}`). Blynk za něj dosadí text, který mu pošle Node-RED.
+
+Automatizaci pojmenujte. **Limit period** určuje, za jak dlouho se automatizace smí spustit znovu: zvolte co nejkratší dobu, jinak by vám oznámení o druhém stisknutí krátce po prvním nedorazilo. Automatizaci uložte.
+
+#### Krok 5: Nainstalujte si aplikaci do telefonu
+
+Stáhněte si do telefonu aplikaci **Blynk IoT** z [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlaste se stejným účtem. Zkontrolujte, že má aplikace povolená upozornění, aby se zpráva mohla zobrazit.
 
 ## Všechno dohromady
 
-Zbývá propojit Node-RED s Blynk IoT, aby stisk tlačítka spustil vaši událost s oznámením.
+Zbývá propojit Node-RED s Blynk IoT, aby stisk tlačítka poslal váš text do datastreamu a automatizace z něj udělala oznámení.
 
-#### Krok 1: Přidejte uzel Blynk IoT
+#### Krok 1: Přidejte uzel write z Blynk IoT
 
-V aplikaci **Playground** na záložce **Functions** přidejte za uzel **change** uzel Blynk IoT a oba propojte. Uzly Blynk IoT najdete v paletě vlevo.
+V aplikaci **Playground** na záložce **Functions** přidejte za uzel **change** uzel **write** ze sekce **Blynk IoT** a oba propojte. Sekci **Blynk ws** nepoužívejte, patří ke starému Blynku, který už nefunguje.
 
 #### Krok 2: Nastavte připojení
 
-Dvakrát klikněte na uzel a kliknutím na **ikonu tužky** nastavte připojení k Blynku. Do pole **Url** zadejte `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu zařízení ve webové konzoli Blynk IoT. Potvrďte a pak v uzlu vyberte událost (**Event**) `Button pressed`, kterou jste definovali v šabloně, aby uzel spouštěl její notifikaci.
+Dvakrát klikněte na uzel. Vedle pole **Connection** uvidíte **malou tužku**. Klikněte na ni a otevře se nové okno. Do pole **Url** zadejte `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z webové konzole Blynk IoT: Auth Token najdete na záložce **Device Info** zařízení, Template ID v detailu šablony. Potvrďte tlačítkem **Add**. Pak do pole **Virtual Pin** zadejte číslo pinu svého datastreamu (pro V2 je to 2) a potvrďte tlačítkem **Done**.
 
-#### **Krok 3:** Klikněte na tlačítko **Deploy**. Po každé úpravě flow v Node-RED musíte změny znovu nasadit!
+#### Krok 3: Klikněte na tlačítko **Deploy**. Po každé úpravě flow v Node-RED musíte změny znovu nasadit!
 
 ## Akce!
 
@@ -133,7 +149,7 @@ Nastal čas **stisknout tlačítko**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/push-the-button/push-the-button-push-the-button.webp')} alt="Kreslený prst mačkající tlačítko na sestavě Push Button Kit"/>
+    <Image img={require('./img/push-the-button/push-the-button-push-the-button.webp')} alt="Kreslený prst tiskne tlačítko na Sadě Push"/>
   </div>
 </div>
 
@@ -142,9 +158,9 @@ Nastal čas **stisknout tlačítko**
 Cílem projektu **Push Button** je ukázat základy v několika jednoduchých krocích. Víc se dozvíte v **dokumentaci** nebo v **odkazech níže**.
 
 * Podívejte se na další [**projekty**](projects-overview.md) HARDWARIO.
-* Prohlédněte si [**přehled modulů**](https://docs.hardwario.com/chester/extension-modules/chester-z1/#module-overview).
+* Prohlédněte si [**přehled modulů**](https://docs.hardwario.com/tower/hardware-modules/).
 * Naučte se, jak pomocí [**MQTT**](https://docs.hardwario.com/tower/mqtt-protocol/) a [**HARDWARIO MQTT topics**](https://docs.hardwario.com/tower/mqtt-protocol/topics-reference/) ovládat LED a relé.
 * Vyzkoušejte další [**integrace**](https://docs.hardwario.com/tower/category/platform-integrations/): **Grafana**, **Blynk**, **IFTTT**, **Ubidots** a další.
 * Použijte svůj [**Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/) nebo jiný jednodeskový počítač \(SBC\) jako server.
-* [**Nahrajte jiný firmware**](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware) nebo si **napište vlastní firmware** pro modul **Core Module**.
+* [**Nahrajte jiný firmware**](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/) nebo si [**napište vlastní firmware**](https://docs.hardwario.com/tower/firmware-sdk/) pro modul **Core Module**.
 * Zkontrolujte [**zapojení pinů modulu Core Module**](https://docs.hardwario.com/tower/hardware-modules/header-pinout/#core-module-pinout) a připojte vlastní tlačítka, relé a senzory.

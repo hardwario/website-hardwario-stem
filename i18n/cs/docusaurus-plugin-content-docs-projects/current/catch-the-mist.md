@@ -10,13 +10,13 @@ Určitě to znáte. V lednici si schováváte poslední kousek dortu z narozenin
 
 V tomto projektu se naučíte vyrobit **detektor otevírání ledničky**. 👈
 
-Budete potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíte si tedy se základní sadou HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/).
+Budete potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíte si tedy se základní [**Sadou Start**](https://www.hardwario.store/cz/p/start-set) od HARDWARIO.
 
 
 ## Stáhněte si nový firmware
 
-1. Pokud jste to ještě neudělali, sestavte [Start Set](https://www.hardwario.store/p/start-set/).
-2. Do modulu Core Module nahrajte speciální firmware **bcf-radio-x-axis-detector** (najdete ho v Playgroundu mezi ostatními firmwary). Díky němu bude krabička reagovat na pohyb. 👌
+1. Pokud jste to ještě neudělali, sestavte [Sadu Start](https://www.hardwario.store/cz/p/start-set).
+2. Do modulu Core Module nahrajte speciální firmware **twr-radio-move-detector-x-axis** (najdete ho v Playgroundu mezi ostatními firmwary). Díky němu bude krabička reagovat na pohyb. 👌
 3. Modul Core Module spárujte s USB donglem. Hned po spárování uvidíte, že se jeho Alias změnil na **x-axis-detector**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-1.webp')} alt="Záložka Devices v Playgroundu se spárovaným Core Module pod aliasem x-axis-detector:0"/> </div> </div>
@@ -24,7 +24,7 @@ Budete potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíte
 ## Rozjeďte to v Node-RED
 
 1. V Playgroundu klikněte na **záložku Functions**, kde je programovací plocha Node-RED.
-2. Začněte jako vždycky: na plochu nejdřív umístěte uzel **MQTT** ze sekce Input.
+2. Začněte jako vždycky: na plochu nejdřív umístěte uzel **mqtt in** ze sekce **network**.
 Dvakrát na něj klikněte a do pole **Topic** zkopírujte tento řádek, podle kterého krabička pozná pohyb:
 
 ```
@@ -34,10 +34,10 @@ node/x-axis-detector:0/accelerometer/-/event-count
 
 Potvrďte tlačítkem **Done**.
 
-3. Teď přidáte kousek JavaScriptu. 🙌 Nejdřív na plochu umístěte uzel Function ze stejnojmenné sekce…
+3. Teď přidáte kousek JavaScriptu. 🙌 Nejdřív na plochu umístěte uzel **function** ze stejnojmenné sekce…
 
 
-4. …a pak na něj dvakrát klikněte. **Do pole Function zkopírujte tento kód**, který bude počítat, kolikrát se lednice otevřela:
+4. …a pak na něj dvakrát klikněte. **Na záložku On Message zkopírujte tento kód**, který bude počítat, kolikrát se lednice otevřela:
 
 ```
 var count = flow.get("count") || 0;
@@ -54,10 +54,10 @@ Uzel ještě pojmenujte v řádku **Name**, třeba **Počítadlo**.
 Potvrďte tlačítkem **Done**.
 
 
-5. Vedle něj umístěte poslední uzel, **Text** ze sekce Dashboard.
+5. Vedle něj umístěte poslední uzel, **text** ze sekce **dashboard**.
 
 
-6. V nastavení uzlu přepište pole Label na text, který se má při počítání zobrazovat, třeba **Otevřená lednice**.
+6. V nastavení uzlu přepište pole **Label** na text, který se má při počítání zobrazovat, třeba **Otevřená lednice**.
 
 
 <div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-4.webp')} alt="Dialog Edit text node s polem Label nastaveným na Otevřená lednice"/> </div> </div>

@@ -1,6 +1,6 @@
 ---
 slug: node-red-and-start-set
-title: Node-RED a Start Set
+title: Node-RED a Sada Start
 ---
 ## Úvod
 
@@ -28,4 +28,4 @@ Abychom mohli počet stisknutí zobrazit, musíme ho nejdřív někde získat.
 9. Dvojklikem otevřete jeho nastavení a v sekci **Range** změňte hodnotu **max** na **50**. Nastavení uložte tlačítkem **Done**.
 10. Oba uzly propojte. Je to snadné: klikněte na šedý čtvereček jednoho uzlu a myší ho přetáhněte k šedému čtverečku druhého uzlu.
 11. Tlačítkem **Deploy** vpravo nahoře aplikaci spusťte a pak v Playgroundu přepněte na záložku **Dashboard**.
-12. Dýchněte na zařízení, aby hned odeslalo zprávu s teplotou, a je to! V grafu uvidíte aktuální teplotu.
+12. Dýchněte na zařízení, aby hned odeslalo zprávu s teplotou, a je to! Na budíku uvidíte aktuální teplotu.

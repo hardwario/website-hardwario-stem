@@ -5,8 +5,8 @@ title_meta: "Presentation (L105: IoT Indoor Air Quality Monitor)"
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation:** 5 minutes
+**Time allocation**: 5 min.
 
 Students present their ideas and projects to their classmates.
 
-They discuss and suggest where IoT Indoor Air Quality Monitoring can be applied in a way that creates something meaningful.
+They discuss and suggest where IoT monitoring of indoor air quality can be used to create something meaningful.

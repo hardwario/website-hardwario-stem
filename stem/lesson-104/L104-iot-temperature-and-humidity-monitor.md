@@ -5,4 +5,4 @@ description: "A lesson on measuring temperature and humidity: students connect a
 ---
 import Image from '@theme/IdealImage';
 
-We will build a **thermometer with a hygrometer** and display the graphs in the Playground application.
+We will build a thermometer with a hygrometer and plot the readings as charts in the Playground app.

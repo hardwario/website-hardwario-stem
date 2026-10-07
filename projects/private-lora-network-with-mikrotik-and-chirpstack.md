@@ -1,86 +1,84 @@
 ---
 slug: private-lora-network-with-mikrotik-and-chirpstack
-title: Private lora network
+title: Private LoRa network
 ---
 import Image from '@theme/IdealImage';
 
-# Private LoRa network with Mikrotik & ChirpStack
+# Private LoRa Network with MikroTik and ChirpStack
 
-This tutorial explains how to set-up private LoRaWAN network with Mikrotik wAP LR8 kit and ChirpStack running on any Linux computer.
+This tutorial explains how to set up a private LoRaWAN network with the MikroTik wAP LR8 kit and ChirpStack running on any Linux computer.
 
-## Mikrotik wAP LR9 kit quick start
+## MikroTik wAP LR8 Kit Quick Start
 
-Connect to your Mikrotik with instructions on official [wAP LR8 kit page](https://help.mikrotik.com/docs/display/UM/wAP+LR8+kit). First connection is over the WiFi only. We change that later.
+Connect to the MikroTik following the official [wAP LR8 kit quick guide](https://help.mikrotik.com/docs/spaces/QG/pages/15303333/Quick+Guide+G17-a+-+wAP+LR8+kit). The first connection works over Wi-Fi only; we'll change that later.
 
 :::info
 
-In case you would need to factory reset Mikrotik, [follow these instructions](https://wiki.mikrotik.com/wiki/Manual:Reset). Just make sure you follow the right green LED which is the WiFi LED under the power barrel jack.
+If you ever need to reset the MikroTik to factory settings, [follow these instructions](https://help.mikrotik.com/docs/spaces/ROS/pages/24805498/RouterOS+configuration+reset). Watch the right green LED: the Wi-Fi LED under the power jack.
 
-
-
-Inside the unit on LoRa card is another green LED which is blinking after start and it is bit confusing. Do not follow that green LED inside unit.
+There is another green LED inside the unit, on the LoRa card, which blinks after startup and can be confusing. Ignore that one.
 
 :::
 
-## Enable ethernet interface connection/disable WLAN
+## Connect over Ethernet and Disable WLAN
 
-Optional. By default the firewall is set that you cannot connect to RouterOS configuration over ethernet. You enable that by disabling all rules in Firewall. Go to IP &gt; Firewall and disable all the rules by clicking on the "D" button next to them.
+This step is optional. By default, the firewall does not let you reach the RouterOS configuration over Ethernet. To allow it, disable all firewall rules: go to IP &gt; Firewall and click the "D" button next to each rule.
 
-Ethernet should now work and lease a DHCP address. Now you could connect to the RouterOS over ethernet.
+Ethernet should now work and get an address from DHCP, so you can connect to RouterOS over Ethernet.
 
-You can also optionally completely disable WLAN. You do that in Interfaces where you disable "wlan1".
+You can also turn WLAN off completely: in Interfaces, disable "wlan1".
 
 ## Enable LoRa
 
-LoRa is disabled by default. Enable it in LoRa menu and press "E" to enable it. In the traffic tab you should see incoming packets. They are encrypted so you can see correctly just Dev Addr, but it is quite useful to see the hardware is working correctly.
+LoRa is disabled by default. Enable it in the LoRa menu with the "E" button. The Traffic tab should then show incoming packets. They are encrypted, so only the Dev Addr is readable, but at least you can see that the hardware works.
 
 ## Install ChirpStack
 
-In this part you install **ChirpStack Gateway Bridge, ChirpStack Network Server, ChirpStack Application Server** to your Linux server. Your Mikrotik wAP LR9 will then later connect to this server and will forward LoRa packets there.
+In this part you install **ChirpStack Gateway Bridge, ChirpStack Network Server, ChirpStack Application Server** on your Linux server. Your MikroTik wAP LR8 then connects to this server and forwards the LoRa packets to it.
 
-For Debian you can follow [Debian/Ubuntu install tutorial](https://www.chirpstack.io/guides/debian-ubuntu/), otherwise see this [generic installation page](https://www.chirpstack.io/docs/chirpstack/downloads.html).
-
-:::info
-
-In the Debian/Ubuntu installation tutorial there is a PostgreSQL table creation script. You can copy complete script and paste it into the PostgreSQL console. After table creation you just press enter and that executes the last command to exit the prompt.
-
-:::
-
-## Connect to Network Server
+On Debian, follow the [Debian/Ubuntu installation guide](https://www.chirpstack.io/guides/debian-ubuntu/); otherwise, see the [generic installation page](https://www.chirpstack.io/docs/chirpstack/downloads.html).
 
 :::info
 
-Do not forget to open port 8080 in your server firewall for Chirp web page and 1700 for the Gateway Bridge. Also if you use MQTT open port 1883. If you use `ufw` then type `sudo ufw allow 8080`.
+The Debian/Ubuntu installation guide includes a script that creates the PostgreSQL tables. You can copy the whole script and paste it into the PostgreSQL console. Once the tables are created, press Enter: this runs the last command, which exits the console.
 
 :::
 
-Follow instructions [how to connect to ChirpStack Application Server](https://www.chirpstack.io/guides/first-gateway-device/).
-
-## Connect Mikrotik gateway to ChirpStack
-
-Open the LoRa menu on the Mikrotik configuration. In previous step we've enabled LoRa hardware. Now it's time to set up the ChirpStack Gateway Server IP. Go to LoRa &gt; Servers and set the IP of your server and both ports to 1700.
-
-The second step is to go to Devices, open gateway detail and in Network Servers you have to choose the added network server. It may be needed to disable LoRa temporarily to change this settings.
-
-You also should set Network type to Private. Then also you need to set private configuration to all your LoRaWAN nodes.
-
-In the left menu in Log you should see "Forwarder started" text 
+## Connect to the Network Server
 
 :::info
 
-On your server you can run `sudo journalctl -f -n 100 -u chirpstack-gateway-bridge.service` and see the logs of incoming messages to make sure the connection is set up correctly.
+Don't forget to open port 8080 in your server firewall for the ChirpStack web interface and port 1700 for the Gateway Bridge. If you use MQTT, open port 1883 as well. With `ufw`, just run `sudo ufw allow 8080`.
 
 :::
 
-## Set gateway and devices to ChirpStack
+Then follow the guide on [how to connect to the ChirpStack Application Server](https://www.chirpstack.io/guides/first-gateway-device/).
 
-Then follow [these steps in ChirpStack tutorial](https://www.chirpstack.io/guides/first-gateway-device/) to add your network-server, gateway, organization and profiles as explained
+## Connect the MikroTik Gateway to ChirpStack
 
-## Useful links & Tutorials
+In the MikroTik configuration, open the LoRa menu. We enabled the LoRa hardware in a previous step; now we set the IP address of the ChirpStack Gateway Server. Go to LoRa &gt; Servers, enter your server's IP address and set both ports to 1700.
 
-[HARDWARIO Kit LoRa AT commands configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/)
+Next, go to Devices, open the gateway detail and select the network server you added under Network Servers. You may need to disable LoRa temporarily before you can change this setting.
 
-[HARDWARIO LoRa Tester with LCD & GPS](https://www.hackster.io/160709/lora-tester-with-lcd-gps-open-configurable-low-power-4a5b61), more information also in our e-shop.
+Also set Network type to Private. All your LoRaWAN nodes then need the private configuration as well.
+
+In the left menu, under Log, the text "Forwarder started" should appear.
+
+:::info
+
+On the server, you can run `sudo journalctl -f -n 100 -u chirpstack-gateway-bridge.service` and check the log of incoming messages to confirm that the connection is set up correctly.
+
+:::
+
+## Add the Gateway and Devices in ChirpStack
+
+Then follow [these steps in the ChirpStack guide](https://www.chirpstack.io/guides/first-gateway-device/) to add the network server, gateway, organization and profiles.
+
+## Useful Links and Guides
+
+[Configuring the HARDWARIO LoRa Kit with AT Commands](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/)
+
+[HARDWARIO LoRa Tester with LCD & GPS](https://www.hackster.io/160709/lora-tester-with-lcd-gps-open-configurable-low-power-4a5b61); you'll find more information in our store as well.
 
 [HARDWARIO LoRa Climate Kit](https://www.hackster.io/hubmartin/lora-climate-monitor-easy-open-low-power-and-with-graphs-7bacc2)
 

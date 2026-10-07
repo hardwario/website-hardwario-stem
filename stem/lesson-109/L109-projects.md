@@ -6,11 +6,13 @@ title_meta: "Projects (L109: IoT Soil Monitor)"
 import Image from '@theme/IdealImage';
 import React from 'react';
 
-**Time allocation**: 10 mins
+**Time allocation**: 10 min.
 
-Students try out additional projects related to the given topic, or participate in what is called Ideation.
+Students try out more projects on the lesson topic or look for ideas using the Ideation method.
 
-## Hackster.io platform
+## Additional topic-related projects to try out
+
+### Hackster.io Platform
 
 <a
   href="https://www.hackster.io/jakub-smejkal/measure-soil-moisture-with-hardwario-iot-kit-9ae766"
@@ -139,11 +141,9 @@ Students try out additional projects related to the given topic, or participate 
   </div>
 </a>
 
-## Ideation
+### Ideation
 
-Students design real-life applications of the knowledge acquired through theoretical explanations and experiments.
-
-They write their ideas on a graph, where the x-axis estimates the difficulty (cost) of the project and the y-axis estimates the impact of implementing the solution.
+Students suggest real-life uses for the knowledge they gained from the theory and the experiments. They plot their ideas on a graph, with the estimated difficulty (cost) of the project on the x-axis and the impact of the solution on the y-axis.
 
 <div class="container">
   <div class="row">

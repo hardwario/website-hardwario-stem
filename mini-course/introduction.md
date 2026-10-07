@@ -8,42 +8,43 @@ import Image from '@theme/IdealImage';
 
 # TOWER Mini Course
 
-This course was created in cooperation between **HARDWARIO a.s.** and the **Technical University of Liberec** within the framework of the grant support from the Liberec Region. The aim is to provide students and teachers with a practical tool to explore the world of the Internet of Things (IoT) through the **HARDWARIO TOWER electronic kit**.
+This course was created by **HARDWARIO a.s.** together with the **Technical University of Liberec**, with grant support from the Liberec Region. Its aim is to give students and teachers a practical tool for exploring the Internet of Things (IoT) with the **HARDWARIO TOWER electronic kit**.
 
-The course is designed to guide participants from the connection of the very first module to the creation of their own IoT applications.
+The course takes participants from connecting their very first module to building their own IoT applications.
 
-## What to Expect
+## What to expect
 
-Throughout the course, you will go through five lessons that combine theory, practical demonstrations, and hands-on experiments:
+Over five lessons, you will combine theory, practical demonstrations and your own experiments:
 
-* Getting Started with TOWER: environment installation, firmware upload, sensor connection.  
-* Measuring and Visualizing Data: working with temperature, humidity, light, and other sensors.  
-* Conditional Reactions: logic nodes, input responses, automation.  
-* Controlling Outputs: LED strips, color effects, and interactive elements.  
+* Getting started with TOWER: installing the environment, uploading firmware, connecting a sensor.
+* Measuring and visualizing data: working with temperature, humidity, light and other sensors.
+* Conditional reactions: logic nodes, responding to inputs, automation.
+* Controlling outputs: LED strips, color effects and interactive elements.
+* Wrap-up and theory: how Node-RED and MQTT work, and a final project that ties it all together.
 
-## What You Need
+## What you need
 
-* A computer with **Windows 10 or newer**, **macOS 15 or newer**, or a **Linux desktop** (Ubuntu 24.04 / Fedora 42 or newer is supported), one free USB port, and permission to install software and USB drivers.
+* A computer with **Windows 10 or newer**, **macOS 15 or newer** or a **Linux desktop** (Ubuntu 24.04 / Fedora 42 or newer is supported), one free USB port and permission to install software and USB drivers.
 * **HARDWARIO Playground**: a free download; Lesson 1 walks you through the installation.
-* The HARDWARIO TOWER hardware used across the lessons: **Radio Dongle, Core Module, Battery Module, Mini Battery Module, PIR Module, Climate Module, Button Module, LCD Module, Power Module, Cover Module**, a USB cable, an LED strip, a DC adapter, and the 3D-printed enclosures, plus **six AAA batteries** (four for the Battery Module, two for the Mini Battery Module).
+* The HARDWARIO TOWER hardware used in the lessons: **Radio Dongle, Core Module, Battery Module, Mini Battery Module, PIR Module, Climate Module, Button Module, LCD Module, Power Module, Cover Module**, a USB cable, an LED strip, a DC adapter and the 3D-printed enclosures, plus **six AAA batteries** (four for the Battery Module, two for the Mini Battery Module).
 * Internet access for the downloads. **No accounts or cloud services are needed.**
 
-## Course Benefits
+## Course benefits
 
-* Practical **STEM education** combining electronics, programming, and digital skills.  
-* Development of critical and logical thinking, teamwork, and creativity.  
-* Ready-to-use teaching materials and guides for educators, making it easy to integrate IoT into lessons.  
-* Inspiration for students to pursue technical careers and engage in the regional innovation ecosystem.  
+* Practical **STEM education** that combines electronics, programming and digital skills.
+* Developing critical and logical thinking, teamwork and creativity.
+* Ready-made teaching materials and guides that make it easy for teachers to bring IoT into their lessons.
+* Inspiration for students to pursue technical careers and get involved in the region's innovation ecosystem.
 
-## Who Is This Course For
+## Who the course is for
 
-* High school and university students who want to dive into the world of modern technologies.  
-* Teachers and educators looking for practical teaching materials for classes in digital technologies, informatics, or physics.  
-* Enthusiasts of IoT and smart technologies who want to gain hands-on experience.  
+* High school and university students who want to explore modern technology.
+* Teachers and educators looking for practical materials for lessons in digital technology, computer science or physics.
+* IoT and smart-technology enthusiasts who want hands-on experience.
 
-## Project Implementation
+## About the project
 
-The project was carried out in the academic year **2024/2025** with the support of the **Regional Innovation Program of the Liberec Region**. The result is a fully developed IoT teaching methodology, available online and open for further development.
+The project ran in the **2024/2025** academic year with support from the **Regional Innovation Program of the Liberec Region**. The result is a complete IoT teaching methodology, available online and open to further development.
 
 ## Co-funded by the Liberec Region
 

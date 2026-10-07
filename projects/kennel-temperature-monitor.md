@@ -4,56 +4,56 @@ title: Kennel temperature monitor
 ---
 ## Introduction
 
-Is it so cold that you can’t even get the dog out? Want to find out what temperature is the most comfortable for your best friend? Then why not monitor the temperature in their kennel? 🐶
+Is it the kind of cold you wouldn't send a dog out in? Keep your best friend comfortable and track the temperature in their kennel. 🐶
 
-This project teaches you how to **measure temperature with IoT and display it on a chart**. All you need is the basic HARDWARIO [Start Set](https://www.hardwario.store/p/start-set/). Hopefully your dog will reward you for your efforts with less unsightly mess, or something like that. 🐩
+This project teaches you to **measure temperature with IoT and show it on a chart**. All you need is the basic HARDWARIO set, the [Start Set](https://www.hardwario.store/p/start-set/). Your dog might thank you by making less mess. Or something like that. 🐩
 
 
 ## Prepare the box
 
-1. Put the Start Set together and pair it. You need the **radio-push-button** firmware for the Core Module. If you don't know how to download the firmware or what it is, [you can find out more here](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware)
-2. The temperature changes are displayed in the **Messages** tab in Playground.
+1. Assemble and pair the Start Set. The Core Module needs the **twr-radio-push-button** firmware. If you don't know how to get the firmware or what it is, [you'll find out here](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
+2. You'll see the temperature change in the **Messages** tab in Playground.
 
-![MQTT messages](./img/kennel-temperature-monitor/image5.png)
+![Playground Messages tab with temperature messages](./img/kennel-temperature-monitor/image5.png)
 
 ## Set up Node-RED
 
-1. Start programming in Node-RED. Firstly, click the **Functions** tab in Playground.
-2. From the Input section, take the light purple **MQTT** node (bubble) and place it onto the empty desktop.
-3. Double-click the node. In the **Topic** line specify what you want the chart to display. This now represents temperature. Copy the temperature message from the Messages tab (without a number) to the line. Alternatively, use this:
+1. You'll program in Node-RED. First, click the **Functions** tab in Playground.
+2. Drag a light purple **mqtt in** node (a bubble) onto the empty canvas. You'll find it in the network section.
+3. Double-click the node to open it. In the **Topic** field you choose what the chart will show. This time it's temperature, so copy the temperature message from the Messages tab (without the number) into the field. Or simply use this one:
 
 
 ```
 node/push-button:0/thermometer/0:1/temperature
 ```
 
-![MQTT topic](./img/kennel-temperature-monitor/image1.png)
+![MQTT node with the temperature topic](./img/kennel-temperature-monitor/image1.png)
 
-Confirm by clicking the **Done** button.
+Confirm with **Done**.
 
-4. Next to the MQTT node place a second one, this time a blue **Chart** node. This node can be found in the Dashboard section. This node is used to determine how the measured temperature is displayed on screen. Link both nodes together. 👌
+4. Next to it, place a second, light blue node called **Chart**. You'll find it in the Dashboard section. This node decides how the measured temperature appears on the screen. Wire the two nodes together. 👌
 
 ![Node-RED dashboard chart](./img/kennel-temperature-monitor/image4.png)
 
-5. Double-click on the Chart node. In the **X-axis** line, you can set the period of time the data in the chart will be displayed. This can be as long as you like, you choose.
-   In the **Label** line, give your chart a name.
+5. Double-click the Chart node. In the **X-axis** field, set how long a period the chart covers. Pick any length you like.
+   In the **Label** field, give the chart any name you like.
 
 ![Chart settings](./img/kennel-temperature-monitor/image3.png)
 
-Confirm by clicking the **Done** button.
+Confirm with **Done**.
 
-6. Now click the **Deploy** button 🚨 in the top right corner to get everything up and running.
+6. Now click the red **Deploy** button in the top right corner of the screen. 🚨 That starts the whole flow.
 
-❗ **Beware**: Every time you change the nodes you have to press Deploy again.
+❗ **Watch out**: Every time you change the nodes, you have to click Deploy again.
 
-7. Click on **Dashboard**. Your temperature chart will be displayed. 👏
+7. Switch to the **Dashboard** tab. There's your chart. 👏
 
-![Temperature chart from kennel](./img/kennel-temperature-monitor/image2.png)
+![Temperature chart from the kennel](./img/kennel-temperature-monitor/image2.png)
 
 ## Time for action!
 
-1. Using duct tape, stick the box **to a wall inside your dog’s kennel**. 🏡
-2. Watch **how the temperature changes** when your dog is inside and outside the kennel. When your dog is inside, they warm up the kennel a bit. 🐕
-   **Tip:** When temperatures drop, put down a blanket or some straw.
-3. If it is -15 °C outside, don’t wait, **let your dog inside the house**, at least in the hallway!❄
-4. Your reward? **A very happy dog**! 👌
+1. Stick the box **to the inside wall of the kennel** with double-sided tape. 🏡
+2. Watch **how the temperature changes** when your dog is outside and when it's inside. Your dog warms the kennel up a little with its body. 🐕
+   **Our tip:** When temperatures drop, line the kennel with a blanket or straw.
+3. When it's below −15 °C outside, don't wait: **let your dog into the house**, at least into the hallway. ❄
+4. Your reward? **A happy dog**! 👌

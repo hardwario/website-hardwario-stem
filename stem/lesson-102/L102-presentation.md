@@ -7,6 +7,6 @@ import Image from '@theme/IdealImage';
 
 **Time allocation**: 5 min.
 
-Students present their ideas and projects to other students.
+Students present their ideas and projects to their classmates.
 
-They discuss and suggest where IoT building blocks can be deployed to create something meaningful.
+They discuss and suggest where the IoT kit can be used to create something meaningful.

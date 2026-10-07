@@ -9,13 +9,13 @@ import Image from '@theme/IdealImage';
 
 Tento návod popisuje, jak postavit soukromou síť LoRaWAN se sadou MikroTik wAP LR8 kit a serverem ChirpStack na libovolném počítači s Linuxem.
 
-## Rychlý start se sadou MikroTik wAP LR9
+## Rychlý start se sadou MikroTik wAP LR8
 
-K zařízení MikroTik se připojte podle pokynů na oficiální [stránce sady wAP LR8](https://help.mikrotik.com/docs/display/UM/wAP+LR8+kit). Poprvé se můžete připojit jen přes Wi-Fi, to později změníme.
+K zařízení MikroTik se připojte podle oficiálního [rychlého návodu k sadě wAP LR8](https://help.mikrotik.com/docs/spaces/QG/pages/15303333/Quick+Guide+G17-a+-+wAP+LR8+kit). Poprvé se můžete připojit jen přes Wi-Fi, to později změníme.
 
 :::info
 
-Pokud budete potřebovat obnovit tovární nastavení zařízení MikroTik, [postupujte podle těchto pokynů](https://wiki.mikrotik.com/wiki/Manual:Reset). Řiďte se přitom správnou zelenou LED: je to LED Wi-Fi pod napájecím konektorem.
+Pokud budete potřebovat obnovit tovární nastavení zařízení MikroTik, [postupujte podle těchto pokynů](https://help.mikrotik.com/docs/spaces/ROS/pages/24805498/RouterOS+configuration+reset). Řiďte se přitom správnou zelenou LED: je to LED Wi-Fi pod napájecím konektorem.
 
 Uvnitř jednotky je na kartě LoRa další zelená LED, která po spuštění bliká a trochu mate. Tou se neřiďte.
 
@@ -35,7 +35,7 @@ LoRa je ve výchozím nastavení vypnutá. Zapnete ji v menu LoRa tlačítkem �
 
 ## Instalace serveru ChirpStack
 
-V této části nainstalujete na svůj linuxový server **ChirpStack Gateway Bridge, ChirpStack Network Server, ChirpStack Application Server**. Zařízení MikroTik wAP LR9 se pak k tomuto serveru připojí a bude mu předávat pakety LoRa.
+V této části nainstalujete na svůj linuxový server **ChirpStack Gateway Bridge, ChirpStack Network Server, ChirpStack Application Server**. Zařízení MikroTik wAP LR8 se pak k tomuto serveru připojí a bude mu předávat pakety LoRa.
 
 Na Debianu postupujte podle [návodu k instalaci pro Debian/Ubuntu](https://www.chirpstack.io/guides/debian-ubuntu/), jinak použijte [obecnou stránku k instalaci](https://www.chirpstack.io/docs/chirpstack/downloads.html).
 

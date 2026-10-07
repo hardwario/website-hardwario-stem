@@ -12,10 +12,10 @@ K příjmu dat můžete použít komunitní síť The Things Network.
 
 ## Co budete potřebovat
 
-* [Core Module](https://www.hardwario.store/p/core-module)
-* [LoRa Module](https://www.hardwario.store/p/lora-module)
-* [Mini Battery Module](https://www.hardwario.store/p/mini-battery-module)
-* [Climate Module](https://www.hardwario.store/p/climate-module)
+* [Core Module](https://www.hardwario.store/cz/p/core-module)
+* [LoRa Module](https://www.hardwario.store/cz/p/lora-module)
+* [Mini Battery Module](https://www.hardwario.store/cz/p/mini-battery-module)
+* [Climate Module](https://www.hardwario.store/cz/p/climate-module)
 
 ## Nahrání firmwaru
 
@@ -23,7 +23,9 @@ K příjmu dat můžete použít komunitní síť The Things Network.
 
 #### Krok 2: Připojte modul Core Module k počítači
 
-#### Krok 3: V aplikaci Playground přejděte na záložku **Firmware**, vyberte `bcf-lora-climate-monitor` a nahrajte firmware
+#### Krok 3: V aplikaci Playground přejděte na záložku **Firmware**, vyberte `hardwario/twr-lora-climate-monitor` a nahrajte firmware
+
+Tento firmware se v seznamu zobrazí, až zaškrtnete **Show all**.
 
 #### Krok 4: Po nahrání se červená LED na modulu Core Module na 2 sekundy rozsvítí a pak zhasne
 
@@ -44,7 +46,7 @@ LoRa Climate Monitor odešle paket LoRa v těchto případech:
 ## Čtení dat
 
 
-Data jsou zakódovaná ve zprávě LoRa. Hodnoty z ní získáte, když vyberete správné bity; postup popisuje soubor [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py`, pythonový [skript v repozitáři](https://github.com/bigclownlabs/bcf-lora-climate-monitor). Ve stejném adresáři je i `decode.js`, kterým můžete hodnoty dekódovat přímo v backendu TTN a poslat je například rovnou do Ubidots.
+Data jsou zakódovaná ve zprávě LoRa. Hodnoty z ní získáte, když vyberete správné bity; postup popisuje soubor [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py`, pythonový [skript v repozitáři](https://github.com/bigclownlabs/bcf-lora-climate-monitor). Ve stejném adresáři je i `ttn.js`, kterým můžete hodnoty dekódovat přímo v backendu TTN a poslat je například rovnou do Ubidots.
 
 Přijatý řetězec HEX předejte skriptu `decode.py` jako parametr:
 

@@ -49,7 +49,7 @@ Tento návod vás provede projektem **Bezdrátový půdní senzor**. Vlhkost pů
 
 * Budete potřebovat **Raspberry Pi** s nainstalovanou distribucí **HARDWARIO Raspbian**. Postup najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
 
-Naměřená data se budou ukládat a zobrazovat v Grafaně na [**Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/login-guide). Můžete použít i svůj počítač, stačí postupovat podle dokumentu [**Rychlý start s firmwarem**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
+Naměřená data se budou ukládat a zobrazovat v Grafaně na [**Raspberry Pi**](https://www.hardwario.store/cz/p/raspberry-pi-cm4108016). Můžete použít i svůj počítač, stačí postupovat podle dokumentu [**Instalace aplikace HARDWARIO Playground**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/).
 
 ## Připojení k Raspberry Pi
 
@@ -69,7 +69,7 @@ Teď nahrajte firmware do modulu **Core Module**.
 
 :::info
 
-Pokud od instalace Playgroundu uplynula delší doba, možná budete chtít aktualizovat dostupné firmwary příkazem `bcf update`.
+Pokud od instalace systému uplynula delší doba, možná budete chtít aktualizovat dostupné firmwary příkazem `bcf update`.
 
 :::
 
@@ -80,7 +80,11 @@ Rozdíly v nahrávání firmwaru do staršího **Core Module 1** a novějšího 
 
 :::
 
-Spusťte **HARDWARIO Playground**, na záložce Firmware vyberte firmware `bcf-radio-soil-sensor` a nahrajte ho do modulu **Core Module**:
+Na **Raspberry Pi** nahrajte firmware nástrojem **HARDWARIO Firmware Tool**:
+
+```text
+bcf flash hardwario/twr-radio-soil-sensor:latest
+```
 
 #### Krok 3: Odpojte kabel Micro USB od modulu **Core Module** a od **Raspberry Pi**
 
@@ -184,7 +188,7 @@ Pokud máte vhodnou krabičku, můžete do ní sestavu vložit.
 
 :::info
 
-Více o krabičkách najdete v dokumentu [**Krabičky**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
+Krabičky pro sestavy TOWER najdete v e-shopu v kategorii [**Krabičky**](https://www.hardwario.store/cz/enclosures).
 
 :::
 
@@ -215,21 +219,21 @@ sudo nano /etc/bigclown/mqtt2influxdb.yml
 Na konec souboru přidejte tyto řádky:
 
 ```text
-- measurement: moisture
+  - measurement: moisture
     topic: node/+/soil-sensor/+/moisture
     fields:
-        value: $.payload
+      value: $.payload
     tags:
-        id: $.topic[1]
-        channel: $.topic[3]
+      id: $.topic[1]
+      channel: $.topic[3]
 
-- measurement: temperature
+  - measurement: temperature
     topic: node/+/soil-sensor/+/temperature
     fields:
-        value: $.payload
+      value: $.payload
     tags:
-        id: $.topic[1]
-        channel: $.topic[3]
+      id: $.topic[1]
+      channel: $.topic[3]
 ```
 
 #### Krok 3: Ověřte, že je konfigurace platná. Pokud ne, je v souboru YAML chyba ve formátování

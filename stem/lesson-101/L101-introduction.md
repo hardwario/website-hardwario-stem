@@ -1,14 +1,14 @@
 ---
 slug: what-is-iot-introduction
 title: Introduction
-title_meta: "Introduction (L101: What is the Internet of Things - IoT)"
+title_meta: "Introduction (L101: What Is the Internet of Things)"
 ---
 import Image from '@theme/IdealImage';
 
-The aim of the lesson **What is the Internet of Things (IoT)** is to introduce the possibilities of the Internet of Things in one lesson. During the lesson, students will learn about popular IoT technologies and get a basic idea of the purpose and real-world applications of IoT.
+The goal of the **What Is the Internet of Things (IoT)** lesson is to show, within a single class period, what the Internet of Things makes possible. Students learn about widely used IoT technologies and get a basic idea of what the Internet of Things is for and where it is used in practice.
 
 ## What will you need for the lesson?
 
 * A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed
-* Projector or larger monitor
-* [Start Set](https://www.hardwario.store/p/start-set) of the HARDWARIO TOWER IoT kit
+* A projector or large monitor
+* [Start Set](https://www.hardwario.store/p/start-set) from the HARDWARIO TOWER IoT kit

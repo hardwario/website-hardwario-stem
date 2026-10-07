@@ -5,12 +5,12 @@ title_meta: "Introduction (L104: IoT Thermometer and Hygrometer)"
 ---
 import Image from '@theme/IdealImage';
 
-The goal of the lesson **IoT Thermometer and Hygrometer** is to introduce, within a single class session, the possibilities of using an IoT thermometer and hygrometer both in households and in industry.
+The goal of the **IoT Thermometer and Hygrometer** lesson is to show, within a single class period, what an IoT thermometer and hygrometer are useful for at home and in industry.
 
-During the lesson, a temperature and humidity sensor will be assembled and programmed, graphs will be prepared, and **notifications for exceeding the set temperature** will be configured.
+During the lesson, students build and program a temperature and humidity sensor and display the readings in charts and gauges.
 
 ## What will you need for the lesson?
 
 * A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed
-* A projector or a large monitor
+* A projector or large monitor
 * [Bridge Set](https://www.hardwario.store/p/bridge-set) from the HARDWARIO TOWER IoT kit

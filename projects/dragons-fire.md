@@ -1,63 +1,65 @@
 ---
 slug: dragons-fire
-title: Dragons fire
+title: Dragon's breath
 ---
 
-Have fun with your friends with IoT. Which of you has the hottest or coldest breath? You decide what will help you win. As they say, anything goes!😱
+## Introduction
 
-This project teaches you how to **measure temperature with IoT**. All you need is the basic HARDWARIO [Start Set](https://www.hardwario.store/p/start-set/).
+Have some IoT fun with your friends. Which of you has the hottest breath, and which the coldest? How you help yourself win is up to you. Anything goes. 😱
+
+In this project, you will learn **how to measure temperature with IoT**. All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/).
 
 
 ## Prepare the box
 
-1. Put the Start Set together and pair it: You need the **radio push button** firmware for the Core Module. 
-2. In Playground, open the **Messages** tab. Here you will see temperature changes. The temperature is measured automatically, either regularly after 15 seconds, or when there is a major change. And that is what we will use.
+1. Assemble the Start Set and pair it. The Core Module needs the **twr-radio-push-button** firmware.
+
+2. In Playground, open the **Messages** tab. That's where you'll see the temperature changes. The box sends the temperature on its own: regularly every 15 minutes, and straight away whenever it changes by at least 0.2 °C. That's exactly what we'll use.
 
 
-![messages](./img/dragons-fire/image4.png)
+![Messages tab in Playground](./img/dragons-fire/image4.png)
 
 ## Set up Node-RED
 
-1. Messages may not be enough for you.✌️ Set up your own colour temperature indicator with the bubbles in Node-RED. Firstly, click on the **Functions** tab in Playground.
-2. From the Input section, take the light purple **MQTT** node (bubble) and place it onto the empty desktop.
-3. Double-click the node. In the **Topic** line specify what you want the colour indicator to display. This now represents temperature. Copy the temperature message from the Messages tab (without a number) to the line. Alternatively, use this:
+1. The Messages tab may not be enough for you. ✌️ Build your own colorful temperature gauge from bubbles in Node-RED. First, click the **Functions** tab in Playground.
 
+2. Place a light purple node (bubble) called **mqtt in** on the empty workspace. You'll find it in the **network** section.
 
+3. Double-click the node to open it. In the **Topic** field, you decide what the colorful gauge will show: this time, the temperature. So copy the temperature message from the Messages tab into the field (without the number), or simply use this one:
 ```
 node/push-button:0/thermometer/0:1/temperature
 ```
 
 ![MQTT topic](./img/dragons-fire/image3.png)
 
-Confirm by clicking the **Done** button.
+Confirm with **Done**.
 
-4. Next to the MQTT node place a second one, this time a blue **Gauge** node. This node can be found in the Dashboard section. This node is used to determine how the measured temperature is displayed on screen: as an indicator. Link both nodes together.
+4. Next to the node, place a second one, this time the blue **gauge** node. You'll find it in the **dashboard** section. This node decides how the measured temperature appears on screen: as a gauge. Connect the two nodes.
 
 ![Gauge chart](./img/dragons-fire/image1.png)
 
-5. Double-click on the Gauge node. In the **Type** line, set how the graph will be displayed (Gauge is best). In the **Range** line, adjust the minimum and maximum value of the indicator (try 0 and 50).
+5. Double-click the gauge node. In the **Type** field, you set how the gauge looks (Gauge works best). In the **Range** field, you set its minimum and maximum value (try 0 and 50).
 
 ![Node-RED](./img/dragons-fire/image2.png)
 
-Confirm by clicking the **Done** button.
+Confirm with **Done**.
+**Our tip:** You can rename your gauge in the **Label** field.
 
-**Tip**: In the **Label** line, rename your indicator.
+6. Now press the red **Deploy** button in the top right corner of the screen. 🚨 That starts the whole flow.
+❗ **Watch out**: every time you change the nodes, you have to press Deploy again.
 
-6. Now click the **Deploy** button 🚨 in the top right corner to get everything up and running.
-
-**❗ Beware:** Every time you change the nodes you have to press Deploy again.
-
-7. Click on **Dashboard**. Your temperature indicator will be displayed. 😲
+7. Switch to the **Dashboard** tab. That's where you'll find your gauge. 😲
 
 ![Node-RED](./img/dragons-fire/image5.png)
 
 ## Start the game with your friends
 
-1. **Sit with your friends at a table.**
-2. First of all, measure who's hiding their **dragons fire**. 🔥 **One by one breathe on the box**. All aids are allowed; try warming up your breath with what you have on hand. Go wild and try anything and everything. 🙌
-❓ **Try**: What makes your breath warmer? Hot tea or chilli peppers?
+1. **Sit around a table with your friends.**
 
-3. After the first round, discover who has the **frostiest breath**. ❄ Who can cool their breath down the most?
-❓  **Try:** What makes your breath colder? An ice cube or cool chewing gum?
+2. First, find out who's hiding **dragon fire** inside. 🔥 **Take turns breathing on the box**. Any help is allowed: try warming up your breath with whatever you have to hand. Try anything and everything. 🙌
+❓ **Try it:** What warms your breath more, hot tea or chilli peppers?
 
-4. **Write down the best results** and try to beat them the next time you play.
+3. After the first round comes the **frosty round**. ❄ Who can cool their breath down to make it **the coldest**?
+❓ **Try it:** What cools your breath more, an ice cube or minty chewing gum?
+
+4. **Write down the records** and try to beat them next time you play.

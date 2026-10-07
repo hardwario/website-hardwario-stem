@@ -8,6 +8,6 @@ import Image from '@theme/IdealImage';
 
 # TOWER Projects and Tutorials
 
-Explore practical projects that combine TOWER modules, sensors, sub-GHz radio, MQTT, Node-RED, and external IoT services. Each tutorial provides a concrete outcome and the steps needed to reproduce it.
+Explore hands-on projects that combine TOWER modules, sensors, sub-GHz radio, MQTT, Node-RED and external IoT services. Each tutorial leads to a concrete result and describes every step you need to reproduce it.
 
-Use the [projects overview](projects-overview.md) to choose a project by topic, or continue with the next tutorial in the sidebar.
+Pick a project by topic in the [projects overview](projects-overview.md), or continue with the next tutorial in the sidebar.

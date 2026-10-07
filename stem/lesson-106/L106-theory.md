@@ -9,23 +9,23 @@ import Image from '@theme/IdealImage';
 
 ## Industry 4.0
 
-**Industry 4.0** (also referred to as **Work 4.0** or the **Fourth Industrial Revolution**) is a term used to describe the current trend of digitization, related automation of production, and the changes in the labor market that it brings with it. (Source: [Wikipedia](https://en.wikipedia.org/wiki/Fourth_Industrial_Revolution))
+**Industry 4.0** (also called **Work 4.0** or the **Fourth Industrial Revolution**) is the name for today's trend of digitalization, the automation of production that goes with it, and the changes it will bring to the labor market. (Source: [Wikipedia](https://en.wikipedia.org/wiki/Fourth_Industrial_Revolution))
 
 <div class="container">
   <div class="row">
     <Image img={require('./industry-4.0.png')} alt="Timeline of the four industrial revolutions: mechanization, mass production, computers, cyber-physical systems"/>
   </div>
 </div>
-*Image illustrating the four industrial revolutions.*
+*The four industrial revolutions.*
 
-**Predictive Maintenance (Source: [Wikipedia](https://en.wikipedia.org/wiki/Predictive_maintenance))**
+**Predictive maintenance (Source: [Wikipedia](https://en.wikipedia.org/wiki/Predictive_maintenance))**
 
-When implementing predictive maintenance, data from sensors, control units, technician reports, complaints, the number of defective products, staffing, and other data sources affecting operations are statistically analyzed. Based on identified correlations and causalities between various factors, planned maintenance and part replacement are scheduled **before the components’ service life ends**.
+Predictive maintenance statistically evaluates data from sensors and control units, technicians' reports, customer complaints, the number of defective products, staffing levels and other information on the factors that affect operations. Maintenance is planned from the correlations and causal links found between these factors, and parts are replaced before they reach the end of their service life.
 
-**Early notification of an emerging fault can significantly reduce costs associated with production downtime**, such as waiting for spare parts.
+**An early warning of an approaching fault can greatly reduce the cost of production downtime, such as waiting for spare parts.**
 
 ## Accelerometer
 
-An **accelerometer** is a component or device that measures **linear and rotational acceleration**. It is used in modern electronics for example to detect orientation (for screen rotation in mobile devices), in game controllers (to detect the position of the controller), in camera stabilizers, or to detect vibration or fall (such as in hard drives to safely park the read/write heads before impact).
+An **accelerometer** is a component or instrument that measures acceleration, both linear and rotational. In modern electronics, accelerometers detect orientation (rotating the screen of a mobile device), track the position of game controllers, stabilize the image in cameras, and detect vibration or a fall (hard drives use them to park their read heads safely before impact).
 
 Source: https://en.wikipedia.org/wiki/Accelerometer

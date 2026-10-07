@@ -1,30 +1,30 @@
 ---
 slug: node-red-and-start-set
-title: Node-RED and the Start set
+title: Node-RED and the Start Set
 ---
 ## Introduction
 
-Node-RED is a simple yet powerful tool, and now we will show how to create a basic dashboard to display information about the number of button presses, temperature, and tilt status.
+Node-RED is a simple but powerful tool. Here we'll show you how to build a basic dashboard that displays the number of button presses, the temperature and the tilt state.
 
 ## How many times have I pressed the button?
 
-To display the button press count, we first need to retrieve that value.
+Before we can display the number of presses, we have to get it from somewhere.
 
-1. If you haven't already, start **HARDWARIO Playground**. From the previous tutorial, we know that data appears in **Messages**, and if you click on the line with the topic `node/motion-detector:0/push-button/-/event-count`, it gets copied to the clipboard, which is confirmed by a pop-up info panel.
+1. If it isn't running yet, start **HARDWARIO Playground**. You know from the previous tutorial that the data shows up in **Messages**. Click the line with the topic `node/motion-detector:0/push-button/-/event-count` and it is copied to the clipboard; a pop-up info panel confirms it.
 
-> If you have multiple **Push Button** modules paired, they will differ by the number after \`motion-detector:\`
+> If you have more than one **Push Button** module paired, they differ in the number after \`motion-detector:\`
 
-2. Now go to **Functions**. This is the embedded **Node-RED** application. It has excellent documentation, support, and a large user community. It works on the principle of **visual programming**: you add functional blocks (called **nodes**) to the canvas and by connecting them, **you create a functional application** (flow).
+2. Now go to **Functions**. This is the built-in **Node-RED** application, which comes with excellent documentation, support and a large user community. It is based on **visual programming**: you place function blocks, called **nodes**, on the canvas and wire them together to **build a working application** (a flow).
 3. Delete the two nodes that are already on the canvas.
-4. Start by adding an **mqtt in** node. You can find it in the **network** section on the left. Drag it onto the canvas.
+4. Start with an **mqtt in** node. You'll find it in the **network** section on the left; drag it onto the canvas.
 
 ![Run it in Node-RED](./img/node-red-and-start-set/image3.png "Run it in Node-RED")
 
-5. Double-click it to open its settings window, where you need to fill in the **topic** field. This determines which messages we want to receive in this flow.
-6. Go back to the **Messages** tab in Playground and find the message with the temperature. Besides the temperature value, you’ll also see the message ID, which looks like this: `node/push-button:0/thermometer/0:1/temperature`. This is the **topic**.
-7. Copy this topic, go back to the **Functions** section, paste it into the **Topic** field, and save the settings by clicking **Done**.
-8. Now drag a **Gauge** node onto the canvas: you’ll find it in the **dashboard** section.
-9. Double-click it to open its settings. Change the **max** value in the **Range** section to **50**. Save the settings by clicking **Done**.
-10. Connect the two nodes. It’s easy: just click the gray square of one node and drag it to the gray square of the other node.
-11. Click the **Deploy** button in the top right to start the application, then switch to the **Dashboard** tab in Playground.
-12. Blow on the device to trigger an immediate temperature message, and voilà! You'll see the current temperature in the graph.
+5. Double-click it to open its settings. Fill in the **topic** field here; it determines which messages this flow receives.
+6. Go back to the **Messages** tab in Playground and find the temperature message. Next to the temperature value you'll see the message identifier, which looks like this: `node/push-button:0/thermometer/0:1/temperature`. That is the **topic**.
+7. Copy the topic, go back to **Functions**, paste it into the **Topic** field and save the settings with **Done**.
+8. Now drag a **Gauge** node onto the canvas. You'll find it in the **dashboard** section.
+9. Double-click it to open its settings and change **max** in the **Range** section to **50**. Save the settings with **Done**.
+10. Wire the two nodes together. It's easy: click the gray square on one node and drag it to the gray square on the other.
+11. Click **Deploy** in the top right to start the application, then switch to the **Dashboard** tab in Playground.
+12. Breathe on the device so it sends a temperature message right away, and that's it! The gauge shows the current temperature.

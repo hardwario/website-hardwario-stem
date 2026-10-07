@@ -5,29 +5,32 @@ title_meta: "Theory (L105: IoT Indoor Air Quality Monitor)"
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation**: 10 mins.
+**Time allocation**: 10 min.
 
-## Indoor Air Quality
+## Indoor air quality
 
-#### Important!
-In classrooms we often encounter climatic discomfort that can affect the work of both teachers and pupils. The main factor affecting, among other things, pupil concentration is the amount of CO2 in the air.
+**Important!**
 
-Because of thermal insulation and window replacement, buildings no longer "breathe naturally". While there is a normal amount of CO2 in the outdoor environment of 400 ppm, in classes it often reaches over 2000 ppm, resulting in fatigue, reduced concentration and headaches.
+Indoors (in a classroom, an office or at home), we often find an unpleasant indoor climate that can lower our performance. The main cause is the amount of CO2 in the air. Because of thermal insulation and window replacement, buildings no longer “breathe naturally”. While the normal CO2 concentration outdoors is 400 ppm (0.04%), indoors it often exceeds 2000 ppm (0.2%). This leads to fatigue, poorer concentration and headaches.
 
-In addition to the amount of CO2 in the air, the indoor climate monitor also measures temperature, humidity and air pressure.
+Another important aspect of indoor air quality is thermal comfort, that is, how a person perceives the environment. Objectively, it depends mainly on the air temperature and humidity.
 
-Volatile organic compounds or VOCs are organic chemicals that become gas at room temperature and are the main source of air pollution at ground level. The common term used to measure VOC is “Total VOC” or TVOC. TVOC means the total concentration of multiple VOCs present simultaneously in the air. Acceptable TVOC levels are in the range of up to 0.5 mg/m3, or 500 ppb (parts-per-billion), which is 0.00005%. Higher levels of VOCs are considered harmful because VOCs have a significant impact on human health. Exposure to VOCs may cause eye, nose and throat irritation, as well as upper respiratory tract infection, nausea, allergic reactions and headaches, etc. Long term exposure to higher VOC concentrations may cause chronic respiratory disease or lung cancer.
+Volatile organic compounds (VOCs) are organic compounds that turn into gas at room temperature. They are the main source of air pollution at ground level. VOC measurements commonly use the quantity “Total VOC”, or TVOC: the combined concentration of several VOCs present in the air at the same time. The acceptable TVOC level is up to 0.5 mg/m³, or 500 ppb (parts per billion), which is 0.00005%. Higher VOC concentrations are considered harmful, because VOCs have a significant effect on human health. They can cause irritation of the eyes, nose and throat, upper respiratory tract infections, nausea, allergic reactions, headaches and other problems. Long-term exposure to higher VOC concentrations can even cause chronic respiratory diseases or lung cancer.
 
-#### Topic Overlap:
+### Sources
 
+* [How CO2 concentration affects the human body](https://vetrani.tzb-info.cz/vnitrni-prostredi/7132-oxid-uhlicity-utajeny-nepritel) (in Czech)
+* [How CO2 affects plants](https://uroda.cz/oxid-uhlicity-rostlinam-prospiva/) (in Czech)
+* [CO2 levels in schools](https://www.idnes.cz/zpravy/domaci/skoly-tridy-oxid-uhlicity-rekonstrukce.A171127_213307_domaci_mok) (in Czech)
+* [Thermal comfort](https://en.wikipedia.org/wiki/Thermal_comfort)
 
-* Biology: Atmosphere (greenhouse gases), photosynthesis, experiments such as measuring the amount of CO2 in the enclosed space (greenhouse) near plants and comparing its amount in day and night hours
+### Cross-curricular links
+
+* Biology: the atmosphere (greenhouse gases), photosynthesis, experiments such as measuring the CO2 concentration near plants in an enclosed space (a greenhouse) and comparing the values by day and by night
 * Chemistry: greenhouse gases, dry ice
-* Health education: the impact of carbon dioxide on human health, human protection (CO2 fire extinguishers)
+* Health education: the effect of carbon dioxide on human health, protecting people (CO2 fire extinguishers)
 
-#### Demonstrations
-
+### Examples
 
 * CO2 and climate change: https://youtu.be/G0wNsQm0ypA
 * CO2 and photosynthesis: https://youtu.be/mmavdDgKMhk
-

@@ -5,13 +5,11 @@ title_meta: "Projekty (L108: IoT čítač impulzů)"
 ---
 import Image from '@theme/IdealImage';
 
+**Časová dotace**: 10 min.
+
 Studenti zkoušejí další projekty k tématu lekce nebo hledají nápady metodou Ideation.
 
 ## Další projekty s tématem lekce k vyzkoušení
-
-### Web HARDWARIO
-
-* Zatím žádné
 
 ### Platforma Hackster.io
 

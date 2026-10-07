@@ -7,6 +7,6 @@ import Image from '@theme/IdealImage';
 
 **Time allocation**: 5 min.
 
-Students present their ideas and projects to other students.
+Students present their ideas and projects to their classmates.
 
-They discuss and propose where the pulse monitor can be applied in a meaningful and practical way.
+They discuss and suggest where a pulse counter can be used to create something meaningful.

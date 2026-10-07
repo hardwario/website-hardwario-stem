@@ -11,7 +11,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'L101: What is IoT',
+      label: 'L101: What Is the Internet of Things',
       link: {
         type: 'doc',
         id: 'lesson-101/L101-what-is-iot',
@@ -47,7 +47,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'L103: IoT Push Button',
+      label: 'L103: IoT Button',
       link: {
         type: 'doc',
         id: 'lesson-103/L103-iot-push-button',
@@ -65,7 +65,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'L104: IoT Temperature and Humidity Sensor',
+      label: 'L104: IoT Thermometer and Hygrometer',
       link: {
         type: 'doc',
         id: 'lesson-104/L104-iot-temperature-and-humidity-monitor',
@@ -83,7 +83,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'L105: IoT Air Quality Monitor',
+      label: 'L105: IoT Indoor Air Quality Monitor',
       link: {
         type: 'doc',
         id: 'lesson-105/L105-iot-indoor-air-quality-monitor',

@@ -9,4 +9,4 @@ import Image from '@theme/IdealImage';
 
 Students present their ideas and projects to their classmates.
 
-They discuss and suggest where IoT vibration monitoring can be applied in a way that creates something meaningful.
+They discuss and suggest where IoT vibration monitoring can be used to create something meaningful.

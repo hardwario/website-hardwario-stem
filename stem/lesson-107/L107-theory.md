@@ -10,25 +10,25 @@ import Image from '@theme/IdealImage';
 ## Light
 
 Light is the **visible part of [electromagnetic radiation](https://en.wikipedia.org/wiki/Electromagnetic_radiation)**.
-Its **[frequency](https://en.wikipedia.org/wiki/Frequency)** ranges approximately between 3.9×10¹⁴ and 7.9×10¹⁴ Hz, which corresponds to **wavelengths** in a vacuum from **390 to 760 [nm](https://en.wikipedia.org/wiki/Metre)**. 
+Its **[frequency](https://en.wikipedia.org/wiki/Frequency)** ranges from about *3.9×10¹⁴* to *7.9×10¹⁴* [Hz](https://en.wikipedia.org/wiki/Hertz), which corresponds to **wavelengths** in a vacuum of **390 to 760 [nm](https://en.wikipedia.org/wiki/Metre)**. 
 
-This range lies between [ultraviolet](https://en.wikipedia.org/wiki/Ultraviolet) (UV) and [infrared](https://en.wikipedia.org/wiki/Infrared) (IR) radiation.
-A broader spectrum extending into UV and IR is also considered light in some scientific fields.
+This band lies between [ultraviolet](https://en.wikipedia.org/wiki/Ultraviolet) (UV) and [infrared](https://en.wikipedia.org/wiki/Infrared) (IR) radiation.
+Some fields of science also count a wider spectrum, reaching into the UV and IR, as light.
 
 Light can be described in several ways:
 
-- **[Photometrically](https://en.wikipedia.org/wiki/Photometry_(optics))**: by [luminance](https://en.wikipedia.org/wiki/Luminance) or [luminous flux](https://en.wikipedia.org/wiki/Luminous_flux)
-- **[Colorimetrically](https://en.wikipedia.org/wiki/Colorimetry)**: by color and [spectrum](https://en.wikipedia.org/wiki/Frequency)
-- **By [coherence](https://en.wikipedia.org/wiki/Coherence)** and **[polarization](https://en.wikipedia.org/wiki/Polarization_(waves))**
+- **[Photometrically](https://en.wikipedia.org/wiki/Photometry_(optics))**: for example by [luminous intensity](https://en.wikipedia.org/wiki/Luminous_intensity) or [luminous flux](https://en.wikipedia.org/wiki/Luminous_flux)
+- **[Colorimetrically](https://en.wikipedia.org/wiki/Colorimetry)**: by its color and [spectrum](https://en.wikipedia.org/wiki/Frequency)
+- **By its [coherence](https://en.wikipedia.org/wiki/Coherence)** and **[polarization](https://en.wikipedia.org/wiki/Polarization_(waves))**
 
 
 :::info
-These properties determine how light behaves during reflection, refraction, passage through materials, interference, and diffraction.
+These properties determine how light behaves when it is reflected, refracted, passes through a material, interferes or diffracts.
 :::
 
-Due to wave–particle duality, light exhibits the properties of both **[particles](https://en.wikipedia.org/wiki/Particle)** and **[waves](https://en.wikipedia.org/wiki/Wave)**.
+> Thanks to wave–particle duality, light has the properties of both **[particles](https://en.wikipedia.org/wiki/Particle)** and **[waves](https://en.wikipedia.org/wiki/Wave)**.
 
-Different light frequencies are perceived as different [colors](https://en.wikipedia.org/wiki/Color): from **[red](https://en.wikipedia.org/wiki/Red)** (lowest frequency, longest wavelength) to **[violet](https://en.wikipedia.org/wiki/Violet_(color))** (highest frequency, shortest wavelength).
+We perceive different frequencies of light as different [colors](https://en.wikipedia.org/wiki/Color): from **[red](https://en.wikipedia.org/wiki/Red)** (lowest frequency, longest wavelength) to **[violet](https://en.wikipedia.org/wiki/Violet_(color))** (highest frequency, shortest wavelength).
 
 <div class="container">
   <div class="row">
@@ -36,36 +36,36 @@ Different light frequencies are perceived as different [colors](https://en.wikip
   </div>
 </div>
 
-On the shortwave side beyond visible light lies **[UV radiation](https://en.wikipedia.org/wiki/Ultraviolet)**, which affects human skin and causes **[tanning](https://en.wikipedia.org/wiki/Sun_tanning)**.
-On the opposite side is **[IR radiation](https://en.wikipedia.org/wiki/Infrared)**, invisible to the human eye, but we feel its **[heat](https://en.wikipedia.org/wiki/Heat)** through skin receptors.
+Beyond the visible spectrum, on the short-wave side, lies **[UV radiation](https://en.wikipedia.org/wiki/Ultraviolet)**, which acts on human skin and causes **[tanning](https://en.wikipedia.org/wiki/Sun_tanning)**.
+On the opposite side is **[IR radiation](https://en.wikipedia.org/wiki/Infrared)**: the human eye cannot see it, but we feel its **[heat](https://en.wikipedia.org/wiki/Heat)** through receptors in the skin.
 
 ---
 
-## Visual Comfort
+## Visual comfort
 
-**Light intensity** is one of the key environmental factors in interior spaces.
-Adequate lighting positively affects our **mood, productivity, and health**. It helps create a pleasant atmosphere, improves focus, and enhances overall comfort.
+**Illuminance** is one of the main parameters of the indoor environment.
+Enough light has a positive effect on our **mood, performance and health**. It helps create a pleasant atmosphere and improves concentration and overall comfort.
 
-Besides the amount of light, the **color of light** is also important. There are various shades even within “white” light:
+Besides the amount of light, the **color of light** matters too. Even “white” light comes in several shades:
 
-* **Warm white**: resembles incandescent light, is cozy, and is used in living rooms, bedrooms, and children’s rooms. Less suitable for detailed visibility.
-* **Cool white**: more neutral light that enhances contrast; ideal for kitchens, bathrooms, or toilets.
-* **Daylight white**: bright with a slightly bluish tint, similar to daylight. Commonly used in **well-lit workspaces**.
+* **Warm white**: resembles the light of an incandescent bulb. It feels cozy and is used mainly in living rooms, bedrooms and children's rooms. Its drawback is that details are harder to see.
+* **Cool white**: a more neutral light that shows contrast more clearly. It suits kitchens, bathrooms and toilets.
+* **Daylight white**: a bright, slightly bluish shade close to daylight. It is often used in **well-lit workspaces**.
 
 ---
 
 ## RGB
 
-**[RGB](https://en.wikipedia.org/wiki/RGB_color_model)** is a color model that uses three primary colors: **red, green, and blue**.
-For example, it is used for **emissive color mixing** in monitors and projectors. Unlike the **[CMYK](https://en.wikipedia.org/wiki/CMYK_color_model)** model, RGB does not require external light, because the device emits light on its own.
+**[RGB](https://en.wikipedia.org/wiki/RGB_color_model)** is a color model built on three primary colors: **red, green and blue**.
+It is used for **mixing emitted light**, for example in monitors and projectors. Unlike the **[CMYK](https://en.wikipedia.org/wiki/CMYK_color_model)** model, RGB needs no external light source, because the device emits light itself.
 
-Typical wavelengths:
+Standard wavelengths:
 
 * Red: 700 nm  
 * Green: 546.1 nm  
 * Blue: 435.8 nm
 
-Colors are created by mixing the intensity of these components:
+Colors are created by combining the intensities of these components:
 
 | R   | G   | B   | Color     |
 | --- | --- | --- | --------- |
@@ -84,4 +84,4 @@ Colors are created by mixing the intensity of these components:
 
 - [Wikipedia: Light](https://en.wikipedia.org/wiki/Light)  
 - [Wikipedia: RGB](https://en.wikipedia.org/wiki/RGB_color_model)  
-- [ASB Portal: Lighting Comfort](https://www.asb-portal.cz/stavebnictvi/technicka-zarizeni-budov/osvetleni-a-elektroinstalace/svetelna-pohoda-ve-vnitrnim-prostredi)
+- [ASB Portal: Visual comfort](https://www.asb-portal.cz/stavebnictvi/technicka-zarizeni-budov/osvetleni-a-elektroinstalace/svetelna-pohoda-ve-vnitrnim-prostredi)

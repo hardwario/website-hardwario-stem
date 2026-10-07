@@ -7,19 +7,19 @@ import Image from '@theme/IdealImage';
 ## Úvod
 
 Proč hrát flašku s opravdovou lahví, když vám stačí chytrá krabička?
-Nastavte si Start Set tak, aby náhodně vybral jednoho člena skupiny, ať už na párty, při losování výherce, nebo když se rozhoduje, kdo bude uklízet.
+Nastavte si Sadu Start tak, aby náhodně vybrala jednoho člena skupiny, ať už na párty, při losování výherce, nebo když se rozhoduje, kdo bude uklízet.
 
 V tomto projektu se naučíte nastavit krabičku tak, aby **náhodně vybrala jednoho člena** vaší skupiny. 😱
 
-Budete potřebovat **krabičku s tlačítkem** a **USB dongle**. Stačí vám tedy základní sada HARDWARIO [Start Set](https://www.hardwario.store/cz/p/start-set).
+Budete potřebovat **krabičku s tlačítkem** a **USB dongle**. Stačí vám tedy základní [Sada Start](https://www.hardwario.store/cz/p/start-set) od HARDWARIO.
 
 ## Rozjeďte to v Node-RED
 
-1. Sestavte Start Set a spárujte ho.
+1. Sestavte Sadu Start a spárujte ji. Do modulu Core Module nahrajte firmware **twr-radio-move-detector-x-axis**, díky kterému krabička reaguje na pohyb.
 2. V Playgroundu klikněte na záložku **Functions**, kde najdete programovací plochu.
-3. Jdeme na to. 🤞 Umístěte na plochu uzel **MQTT** ze sekce Input.
+3. Jdeme na to. 🤞 Umístěte na plochu uzel **mqtt in** ze sekce **network**.
 
-Dvojklikem uzel otevřete a nastavte klíčovou funkci, tedy stisknutí tlačítka.
+Dvojklikem uzel otevřete a nastavte klíčovou funkci, tedy reakci krabičky na pohyb.
 
 **Do pole Topic zkopírujte tento řádek**:
 
@@ -33,15 +33,15 @@ Potvrďte tlačítkem **Done**.
 
 ## Nastavte náhodný výběr
 
-1. Náhodný výběr naprogramujete jednoduchým JavaScriptem. Nebojte se, pomůžeme vám. Nejdřív umístěte vedle uzlu MQTT uzel **Function** ze sekce Function.
+1. Náhodný výběr naprogramujete jednoduchým JavaScriptem. Nebojte se, pomůžeme vám. Nejdřív umístěte vedle uzlu MQTT uzel **function** ze sekce **function**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-2.webp')} alt="Uzel Function zvýrazněný v paletě a umístěný vedle uzlu MQTT akcelerometru"/> </div> </div>
 
-2. Dvojklikem uzel otevřete. Do řádku **Name** zadejte jeho název (*třeba Náhodná volba*). Do pole **Function** zkopírujte tento kód přesně tak, jak ho vidíte na obrázku.
-Kód vylosuje jednoho z účastníků.
+2. Dvojklikem uzel otevřete. Do řádku **Name** zadejte jeho název (*třeba Náhodná volba*). Na záložku **On Message** zkopírujte tento kód.
+Kód vylosuje jednoho z účastníků, každého se stejnou šancí.
 
 ```
-var rand = Math.round( Math.random() * (flow.get("numberOfContestants") - 1));
+var rand = Math.floor(Math.random() * flow.get("numberOfContestants"));
 msg.payload = flow.get("contestantArr")[rand];
 return msg;
 ```
@@ -50,7 +50,7 @@ return msg;
 
 Potvrďte tlačítkem **Done**.
 
-3. Vedle uzlu Náhodná volba přidejte další uzel, **Delay** (najdete ho také v sekci Function). Odpověď se díky němu trochu zpozdí a napětí poroste. Baf! 😲
+3. Vedle uzlu Náhodná volba přidejte další uzel, **delay** (najdete ho také v sekci **function**). Odpověď se díky němu trochu zpozdí a napětí poroste. Baf! 😲
 
 <div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-4.webp')} alt="Uzel Delay zvýrazněný v paletě, uzel delay 5s je umístěný za funkcí Random pick"/> </div> </div>
 
@@ -60,7 +60,7 @@ Potvrďte tlačítkem **Done**.
 
 Potvrďte tlačítkem **Done**.
 
-5. Nad všechny tyto uzly umístěte uzel, který nastaví zprávu zobrazenou během losování. Použijte k tomu uzel **Change** ze stejné sekce.
+5. Nad všechny tyto uzly umístěte uzel, který nastaví zprávu zobrazenou během losování. Použijte k tomu uzel **change** ze stejné sekce.
 
 <div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-6.webp')} alt="Uzel Change zvýrazněný v paletě, uzel set msg.payload je umístěný nad losovacím flow"/> </div> </div>
 
@@ -70,7 +70,7 @@ Potvrďte tlačítkem **Done**.
 
 ## Nastavte účastníky
 
-1. Vaše loterie se neobejde bez tlačítka, které vynuluje tabulku, abyste mohli hrát dál. Pod uzel **MQTT** umístěte uzel **Button**, tentokrát ze sekce **Dashboard**.
+1. Vaše loterie se neobejde bez tlačítka, které vynuluje tabulku, abyste mohli hrát dál. Pod uzel **MQTT** umístěte uzel **button**, tentokrát ze sekce **dashboard**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-8.webp')} alt="Uzel button zvýrazněný v paletě dashboard a umístěný pod uzlem MQTT"/> </div> </div>
 
@@ -80,7 +80,7 @@ Potvrďte tlačítkem **Done**.
 
 Potvrďte tlačítkem **Done**.
 
-3. Jedeme dál! Teď nastavte všechny kamarády, kteří budou hrát, zatím anonymně. Přidejte je na plochu jako uzly **Text input** ze sekce **Dashboard**, tolik uzlů, kolik vás je.
+3. Jedeme dál! Teď nastavte všechny kamarády, kteří budou hrát, zatím anonymně. Přidejte je na plochu jako uzly **text input** ze sekce **dashboard**, tolik uzlů, kolik vás je.
 
 <div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-10.webp')} alt="Uzel text input zvýrazněný v paletě a pět uzlů text input umístěných na ploše"/> </div> </div>
 
@@ -95,8 +95,8 @@ Totéž nastavte u každého uzlu s účastníkem.
 
 Potvrďte tlačítkem **Done**.
 
-5. Vedle účastníků umístěte další kód v JavaScriptu. Přiřadí jména účastníků na správná místa. Opět ho vložíte jako uzel **Function**.
-6. Dvojklikem na uzel otevřete jeho nastavení. Do řádku **Name** napište název uzlu a do pole **Function** zkopírujte tento kód:
+5. Vedle účastníků umístěte další kód v JavaScriptu. Přiřadí jména účastníků na správná místa. Opět ho vložíte jako uzel **function**.
+6. Dvojklikem na uzel otevřete jeho nastavení. Do řádku **Name** napište název uzlu a na záložku **On Message** zkopírujte tento kód:
 
 ```
 var contestants = flow.get("numberOfContestants") || 0;
@@ -110,19 +110,20 @@ if(contestants != 1)
 }
 
 flow.set("contestantArr", contestantArray);
+return msg;
 ```
 
-Zkontrolujte, že má uzel opravdu jen jeden výstup. ❗
+Zkontrolujte, že má uzel opravdu jen jeden výstup (pole **Outputs** na záložce **Setup**). ❗
 
 <div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-12.webp')} alt="Dialog Edit function node pojmenovaný Fate, choose one of them s kódem ukládajícím jednotlivé účastníky"/> </div> </div>
 
 Potvrďte tlačítkem **Done**.
 
-7. Nebojte, už jsme skoro u konce. 🙌 Umístěte na plochu uzel **Change**. Postará se o to, aby se při resetu vše vrátilo do původního stavu. 🖖
+7. Nebojte, už jsme skoro u konce. 🙌 Umístěte na plochu uzel **change**. Postará se o to, aby se při resetu vše vrátilo do původního stavu. 🖖
 
 <div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-13.webp')} alt="Druhý uzel set msg.payload zvýrazněný pod uzly účastníků"/> </div> </div>
 
-8. V nastavení tohoto uzlu vyplňte dvě pravidla (**Rules**) podle obrázku. První bude **Delete | flow | ContestantArr**. Další pravidlo přidáte malým tlačítkem **+ Add** pod polem. V tomto druhém pravidle nastavte **Delete | flow | numberOfContestants**.
+8. V nastavení tohoto uzlu vyplňte dvě pravidla (**Rules**) podle obrázku. První bude **Delete | flow | contestantArr**. Další pravidlo přidáte malým tlačítkem **+ Add** pod polem. V tomto druhém pravidle nastavte **Delete | flow | numberOfContestants**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-14.webp')} alt="Dialog Edit change node se dvěma pravidly Delete, která mažou contestantArr a numberOfContestants"/> </div> </div>
 
@@ -130,7 +131,7 @@ Potvrďte tlačítkem **Done**.
 
 ## Vybrán může být jen jeden
 
-1. Umístěte na plochu poslední uzel. Oznámí, kdo byl vybrán. 🙏 Najdete ho jednoduše jako uzel **Text** v sekci Dashboard.
+1. Umístěte na plochu poslední uzel. Oznámí, kdo byl vybrán. 🙏 Najdete ho jednoduše jako uzel **text** v sekci **dashboard**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-15.webp')} alt="Uzel text zvýrazněný v paletě dashboard a umístěný na konec flow"/> </div> </div>
 
@@ -148,7 +149,7 @@ Potvrďte tlačítkem **Done**.
 
 ## Ať zábava začne!
 
-1. A teď hurá do akce! Na záložce **Dashboard** zadejte jména všech účastníků. Pokud jste v uzlech pro jednotlivé účastníky nenastavili automatické obnovení, nezapomeňte po každém jménu stisknout klávesu Enter. 👈
+1. A teď hurá do akce! Na záložce **Dashboard** zadejte jména všech účastníků. Pokud jste v uzlech pro jednotlivé účastníky nenastavili automatické obnovení, nezapomeňte po každém jménu stisknout klávesu Enter. Pak krabičkou pohněte a losování začne. 👈
 
 <div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-18.webp')} alt="Dashboard s tlačítkem Reset, pěti poli se jmény účastníků a vylosovaným jménem dole"/> </div> </div>
 

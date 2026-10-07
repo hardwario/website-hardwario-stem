@@ -1,10 +1,10 @@
 # Projects Overview
 
-In this category you will find prepared HARDWARIO projects you can create. Each project has its own pre-built firmware, so you only upload it.
+This category collects ready-made HARDWARIO projects you can build yourself. Each one comes with its own pre-built firmware, so all you have to do is upload it.
 
-## Hackster.io External Projects <a id="hackster-io-external-projects"></a>
+## External Projects on Hackster.io <a id="hackster-io-external-projects"></a>
 
-Many other projects are published on [Hackster.io HARDWARIO Platform Page](https://www.hackster.io/hardwario/projects).
+You'll find many more projects on the [HARDWARIO page on Hackster.io](https://www.hackster.io/hardwario/projects).
 
 * [Use Android to Flash STM32 HARDWARIO Modules](https://www.hackster.io/hubmartin/use-android-to-flash-stm32-bigclown-modules-3e03ee)
 * [Easy Mail Box Notification to Your Phone](https://www.hackster.io/hubmartin/easy-mail-box-notification-to-your-phone-fe6169)

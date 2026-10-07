@@ -6,20 +6,20 @@ import Image from '@theme/IdealImage';
 
 ## Introduction
 
-Do you have a diary, poems or a top secret government-issued document in your drawer? If it's something nobody should see, secure it. 🔒 Turn your IoT Start Set into a drawer monitor and get alerts on your mobile phone. 📲
+Do you keep a diary, poems or a top-secret government document in your drawer? If nobody should see it, protect it. 🔒 Turn your Start Set into an IoT drawer guard that sends alerts to your phone. 📲
 
-This project teaches you how to create a **drawer monitor that sends alerts to your mobile phone when someone opens your drawer**. 👈
+In this project, you will learn to build a **drawer detector that alerts your phone when someone opens the drawer**. 👈
 
-You only need a **box with a button** and a **Radio Dongle**. That's why the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/) is perfect.
+You only need a **box with a button** and a **Radio Dongle**, so the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/) is all you need.
 
 
-## Download the firmware
+## Download the new firmware
 
-1. Upload special firmware to the Core Module, specifically **bcf-radio-x-axis-detector** (you can find it among other firmware in the Playground). Thanks to this firmware, the box will be more sensitive to movement. 👌
+1. Flash the special **twr-radio-move-detector-x-axis** firmware to the Core Module (you'll find it among the other firmware in Playground). It makes the box more sensitive to movement. 👌
 
-**Our tip:** Don't know how to download firmware or what it is? [Find out here](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware)
+**Our tip:** Don't know how to get the firmware or what it is? [Find out here](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
 
-2. [Pair the Core Module with the USB Dongle](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device). Right after pairing, you'll see that your Core Module has changed its Alias to **x-axis-detector**.
+2. [Pair the Core Module with the Radio Dongle](https://docs.hardwario.com/tower/desktop-programming/radio-network-management/#pairing-new-devices). Right after pairing, you'll see the Core Module's alias change to **x-axis-detector**.
 
 <div class="container">
   <div class="row">
@@ -30,28 +30,38 @@ You only need a **box with a button** and a **Radio Dongle**. That's why the bas
 
 ## Prepare the Blynk IoT app
 
-The box will report to your smartphone through the **Blynk IoT** app. 📱 You'll set up two things there: a **switch** to arm and disarm the detector, and a **push notification** that fires when someone opens the drawer.
+Your box reports to your phone through the **Blynk IoT** app. 📱 You'll set up two things there: a **switch** that turns the detector on and off, and a **push notification** that arrives when someone opens the drawer. Node-RED sends the text of the alert to Blynk, and a Blynk automation turns every new message into a notification.
 
-1. If you don't have one yet, create an account in [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). See [this guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) for how to set up your account, a device template, and a device. You'll need all three. You can also reuse a template from a previous project.
+1. If you don't have a [Blynk IoT](https://blynk.io) account yet, create one. The free plan is enough for this project: at the time of writing, it includes push notifications in the app and up to five automations.
 
-2. **Add a Datastream for the detector state.** On the template detail, open the **Datastreams** tab, click **Edit** in the top right, then **+ New Datastream** and choose **Virtual Pin**. Pick a free Pin and choose the **Integer** type with a range of **0–1** (0 = off, 1 = on). Note the Pin number. You'll need it in Node-RED. Click **Create**, then **Save** the template.
+2. Create a device template. [Blynk's quick guide](https://docs.blynk.io/en/getting-started/template-quick-setup) shows you how. You can also reuse a template from an earlier project.
 
-3. **Add a notification Event.** On the template, open the **Events** tab and add a new event (for example, name it `drawer` and give it the message you want to receive. Be careful, Blynk doesn't handle accents and special characters 🤷). Turn on **Notifications** for that event so Blynk delivers the alert to your phone. The [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through the template settings.
+3. **Add a datastream for the message.** In the template, open the **Datastreams** tab, click **Edit** in the top right, then **New Datastream**, and choose **Virtual Pin**. Name the datastream (for example `Message`), pick a free pin (for example V2) and set the **Data Type** to **String**, because the notification will carry your own text. In the datastream settings, let automations use it as a trigger: in the **Automations** section, turn on **Use as Condition**. Create the datastream.
 
-4. If you don't have a device yet, **create a device** from your template, as described in [the same guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+4. **Add a datastream for the detector state.** Add one more **Virtual Pin** datastream (for example `Detector` on V3) and choose the **Integer** type with a range of **0–1** (0 = off, 1 = on). Click **Create** and save the template with **Save**.
 
-5. Download the **Blynk IoT app** on your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure notifications are allowed for the app so the alert can pop up. 📱
+5. Create a device from the template: in **Devices**, add a new device, choose your template and give the device a name. You'll find its **Auth Token** on the device's **Device Info** tab. You'll need it in Node-RED.
 
-6. On your phone, open the device and set up its dashboard: add a **Button** widget, set it to **Switch** mode, and bind it to the detector-state Datastream you created. This is how you'll conveniently arm and disarm the detector from your phone.
+## Create the automation
+
+1. Open **Automations** in Blynk and create a new automation. For the condition (**When**), choose **Device State**, then your device, the message datastream and **Is Any**. The automation will then react to every message, even when it's the same as the last one.
+
+2. Under **Do this**, add the action that sends a notification to the mobile app (**Send In-App Notifications**) and choose yourself as the recipient. Put the **Trigger value** placeholder (`{TRIGGER_VALUE}`) in the message. Blynk replaces it with the text that Node-RED sends.
+
+3. Name the automation. **Limit period** sets how soon the automation may run again: choose the shortest option, otherwise a second message sent soon after the first won't arrive. Save the automation.
+
+4. Download the **Blynk IoT app** to your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure notifications are allowed for the app so the alert can pop up. 📱
+
+5. On your phone, open the device and set up its dashboard: add a **Button** widget, switch it to **Switch** mode and assign it the detector-state datastream. Now you can turn the detector on and off from your phone whenever you like.
 
 
 ## Set up the message in Node-RED
 
-1. In the Playground, click on the **Functions tab**, where the Node-RED programming canvas is located.
+1. In Playground, click the **Functions tab**, home of the [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/) programming canvas.
 
-2. Start as always: first place an **MQTT node** from the Input section on the canvas.
+2. Start as always: first place an **mqtt in** node from the network section on the canvas.
 
-Double-click on it and copy the **Topic** into the line, which the box uses to detect movement changes:
+Double-click it and copy this topic into the **Topic** field. The box uses it to report movement:
 
 ```
 node/x-axis-detector:0/accelerometer/-/event-count
@@ -63,7 +73,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
   </div>
 </div>
 
-3. Next to this node, place a **Switch node** from the **Function** section. Thanks to this node, you can turn off detection when you're home and opening the drawer yourself.
+3. Next to this node, place a **Switch** node from the **Function** section. With it, you can turn detection off when you're home and opening the drawer yourself.
 
 <div class="container">
   <div class="row">
@@ -71,7 +81,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
   </div>
 </div>
 
-4. Inside the node, change the Property line to **flow.active**. In the line below, enter the number **1**. With this number one, the notification will be sent when the button is on, otherwise it will be discarded. Look at the picture.
+4. In the node, change the Property field to **flow.active** and enter the number **1** in the field below it. Thanks to the 1, the notification goes out only when the switch is on; otherwise it's dropped. Follow the screenshot.
 
 <div class="container">
   <div class="row">
@@ -79,7 +89,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
   </div>
 </div>
 
-5. After this, place another **Change node** from the Function section.
+5. After it, place a **Change** node from the Function section.
 
 <div class="container">
   <div class="row">
@@ -87,7 +97,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
   </div>
 </div>
 
-6. In it, set up the **message that will be sent to your mobile**. Be careful, Blynk doesn't handle accents and special characters. 🤷
+6. In it, set the **message you'll get on your phone**. Careful: Blynk can't handle accented letters. 🤷
 
 <div class="container">
   <div class="row">
@@ -95,34 +105,34 @@ node/x-axis-detector:0/accelerometer/-/event-count
   </div>
 </div>
 
-7. At the end of this food chain, place a node from the **Blynk IoT** section that can trigger your event (the **log event** node).
+7. At the end of this food chain, place the **write** node from the **Blynk IoT** section. Leave the **Blynk ws** section alone: it belongs to the old Blynk, which no longer works.
 
-8. Double-click the node to open it. On the right you'll see a **small pencil**. Click it and a new window opens. In the **Url** field enter `blynk.cloud`, and into the **Auth Token** and **Template ID** fields copy the values from the device detail in the Blynk IoT web app on your computer. Confirm with the **Add** button.
+8. Double-click it to open its settings. Next to **Connection** you'll see a **small pencil**. Click it and a new window opens. In the **Url** field enter `blynk.cloud`, and copy the **Auth Token** and **Template ID** from the Blynk web app on your computer: the Auth Token is on the device's **Device Info** tab, the Template ID in the template details. Confirm with **Add**.
 
-**Our tip:** Name the connection so you'll easily recognize it in other nodes later.
+**Our tip:** Name the connection so you'll easily recognize it in other nodes.
 
-9. Set the node to fire the **Event** you created (the event code, e.g. `drawer`). This is what turns the drawer opening into the push notification. Confirm with the **Done** button.
+9. In the **Virtual Pin** field, enter the number of the message datastream's pin (2 for V2). That turns opening the drawer into a push notification: the node writes the message to the datastream, and the automation sends it on. Confirm with **Done**.
 
-10. Now **connect this chain**: MQTT ➡️ Switch ➡️ Change ➡️ Blynk IoT log event. And let's move on.
+10. Now **wire up the whole chain**: MQTT ➡️ Switch ➡️ Change ➡️ Blynk IoT write. On we go.
 
 ## Set up the detector switch in Node-RED
 
-This second chain reads the **Switch** widget from your phone, so you can arm and disarm the detector remotely.
+The second chain reads the **Switch** widget on your phone, so you can turn the detector on and off remotely.
 
-1. Start another chain. Place a **Write node** from the **Blynk IoT** section on the canvas. This reads the switch state.
+1. Start another chain: place a **write event** node from the **Blynk IoT** section on the canvas. It receives the switch state from your phone.
 
-2. Double-click it to open the settings. In the **Connection** line, select the connection you set up in the log event node above. In the **Virtual Pin** line, enter the number of the detector-state Datastream you created in Blynk (without the letter "V"). Confirm with the **Done** button.
+2. Double-click it to open it. In the **Connection** field, select the connection you set up above in the write node. In the **Virtual Pin** field, enter the pin number of the detector-state datastream (3 for V3). Confirm with **Done**.
 
-3. And the last node to the party. Place a **Change node** from the Function section on the canvas.
+3. And the last node joins the party: place a **Change** node from the Function section on the canvas.
 
-4. You'll set up the node to react to turning the switch off and on in Blynk. Double-click to open it and set the Rules fields to **flow.active** and **msg.payload** respectively, so the switch value is stored in `flow.active` (which the Switch node in the first chain checks).
+4. Set the node up to react when you turn the switch on or off in Blynk. Double-click it and enter **flow.active** and **msg.payload** in the Rules fields, so the switch value is stored in the `flow.active` variable, which the Switch node in the first chain checks.
 
-5. Now **connect these two beauties**. Don't forget to also click the **Deploy** button at the top right so everything gets activated.
+5. Now **wire these two together**. Don't forget to click the **Deploy** button in the top right, too, so everything starts.
 
-## Start the trap
+## Set the trap
 
-1. **Place the box in the drawer** lying flat.
+1. **Lay the box flat in the drawer.**
 
-2. Control everything else from your mobile phone. 📱 Open the device in the Blynk IoT app and **arm the detector** by flipping the Switch widget to the ON position.
+2. You control everything else from your phone. 📱 Open the device in the Blynk IoT app and **turn on the detector** by flipping the Switch widget to ON. (If it's already on from earlier, switch it off and on again, so Node-RED learns its state.)
 
-3. And wait for the mouse to get caught. 🥁 As soon as someone opens the drawer, a **push notification pops up on your mobile**. Meanwhile, **plan what you'll do with the sneaky troublemaker**. We recommend making them do your chores for a week. They deserve it.
+3. And wait for the mouse to take the bait. 🥁 As soon as someone opens the drawer, **a push notification pops up on your phone**. Meanwhile, **plan what to do with the sneaky intruder**. We suggest making them do your chores for a week. They deserve it.

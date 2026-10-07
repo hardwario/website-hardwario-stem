@@ -5,15 +5,17 @@ title_meta: "Introduction (L109: IoT Soil Monitor)"
 ---
 import Image from '@theme/IdealImage';
 
-The goal of the IoT Soil Monitor lesson is to introduce soil monitoring, especially soil moisture, in one lesson. In the lesson, students will learn the definition of drought, soil water potential and how to measure soil moisture. 
+The **IoT Soil Monitor** lesson looks at a topical subject, soil monitoring, from several angles.
 
-Students will build their own soil capacitance sensor, create graphs of the measured values and a system of colour-coded indications of exceeding the set limits of soil moisture and temperature. 
+Students build and program their own device that measures soil temperature and moisture. The hands-on experiments make it easier for them to grasp and remember what causes a lack of soil moisture and what it leads to.
 
 ## What will you need for the lesson?
 
-* A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed 
-* Projector or larger monitor 
-* [HARDWARIO TOWER IoT Sensor Set](https://www.hardwario.store/p/sensor-set)
-* [Radio Dongle HARDWARIO TOWER](https://www.hardwario.store/p/radio-dongle)
-* [Soil Sensor HARDWARIO](https://www.hardwario.store/p/soil-sensor)
-* Water jar or pot with soil
+* A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed
+* A projector or large monitor
+* [Start Set](https://www.hardwario.store/p/start-set) from the HARDWARIO TOWER IoT kit (you will use its Radio Dongle)
+* [Sensor Set](https://www.hardwario.store/p/sensor-set) from the HARDWARIO TOWER IoT kit
+* [Control Set](https://www.hardwario.store/p/control-set) from the HARDWARIO TOWER IoT kit
+* An [LED strip](https://www.hardwario.store/p/led-strip-rgbw-1m) with 144 LEDs
+* The [HARDWARIO Soil Sensor](https://www.hardwario.store/p/soil-sensor)
+* A glass of water and a container of soil

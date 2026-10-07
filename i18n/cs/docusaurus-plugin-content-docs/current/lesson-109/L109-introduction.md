@@ -13,7 +13,9 @@ Studenti si sami sestaví a naprogramují zařízení k měření teploty a vlhk
 
 * Počítač s nainstalovanou aplikací [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) 
 * Projektor nebo větší monitor
-* [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER
-* [Sadu Sensor](https://www.hardwario.store/cz/p/sensor-set) stavebnice HARDWARIO TOWER
-* [HARDWARIO Soil Sensor](https://www.hardwario.store/p/soil-sensor)
+* [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER (použijete z ní Radio Dongle)
+* [Sadu Sensor](https://www.hardwario.store/cz/p/sensor-set) IoT stavebnice HARDWARIO TOWER
+* [Sadu Control](https://www.hardwario.store/cz/p/control-set) IoT stavebnice HARDWARIO TOWER
+* [LED pásek](https://www.hardwario.store/cz/p/led-strip-rgbw-1m) se 144 LED
+* [HARDWARIO Soil Sensor](https://www.hardwario.store/cz/p/soil-sensor)
 * Sklenice s vodou, nádoba s hlínou

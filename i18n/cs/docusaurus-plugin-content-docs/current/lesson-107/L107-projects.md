@@ -5,14 +5,12 @@ title_meta: "Projekty (L107: IoT osvětlení)"
 ---
 import Image from '@theme/IdealImage';
 
+**Časová dotace**: 10 min.
+
 Studenti zkoušejí další projekty k tématu lekce nebo hledají nápady metodou Ideation.
 
 
 ## Další projekty s tématem lekce k vyzkoušení
-
-### Web HARDWARIO
-
-* Zatím žádné
 
 ### Platforma Hackster.io
 

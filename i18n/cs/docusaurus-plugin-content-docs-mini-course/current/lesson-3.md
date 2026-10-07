@@ -13,7 +13,7 @@ Už umíte připojit moduly **HARDWARIO TOWER** a zobrazit jejich výstupy v gra
 
 V této lekci se ponoříme hlouběji do programování v prostředí **HARDWARIO Playground**. Naučíte se:
 - pracovat se zprávami (**messages**)
-- filtrovat je podle tématu
+- filtrovat je podle topicu
 - vytvářet podmíněné výstupy (např. rozsvítit LED, jen když hodnota splní určitou podmínku)
 
 Díky tomu začnete programovat **chování systému**, nejen sbírat data.
@@ -27,10 +27,10 @@ Díky tomu začnete programovat **chování systému**, nejen sbírat data.
 
 ## 3. Kdo to všechno začne
 
-Svůj flow začněte uzlem **mqtt in**, který bude odebírat zprávy o orientaci. V mém případě se téma jmenuje `node/motion-detector:0/orientation`, ale u vás se může mírně lišit podle názvu zařízení.
+Svůj flow začněte uzlem **mqtt in**, který bude odebírat zprávy o orientaci. V mém případě se topic jmenuje `node/motion-detector:0/orientation`, ale u vás se může mírně lišit podle názvu zařízení.
 
 :::info
-Aby bylo možné s nějakou zprávou pracovat, musí nejprve vůbec přijít. Pro testování se skvěle hodí **PIR senzor**, konkrétně jeho gyroskop, protože množství a četnost zpráv můžete snadno ovlivnit pouhým překlápěním modulu.
+Aby bylo možné s nějakou zprávou pracovat, musí nejprve vůbec přijít. Pro testování se skvěle hodí **PIR senzor**, konkrétně akcelerometr v jeho modulu Core Module, protože množství a četnost zpráv můžete snadno ovlivnit pouhým překlápěním modulu.
 :::
 
 Co uzel vrací, už víte z předchozí lekce: výstup lze například vykreslit do grafu. Pro lepší pochopení ale doporučujeme napojit výstup uzlu **mqtt in** na uzel **debug**.  
@@ -85,7 +85,7 @@ Pokud máte z předchozí lekce i uzel **Gauge**, uvidíte zároveň aktuální 
 
 ## 8. Hlídač
 
-Zatím jste **PIR Module** používali jako **gyroskopickou kostku**.
+Zatím jste **PIR Module** používali jako **hrací kostku**, která pozná, na které stěně leží.
 
 Nyní jej využijte opravdu jako **detektor pohybu**!  
 

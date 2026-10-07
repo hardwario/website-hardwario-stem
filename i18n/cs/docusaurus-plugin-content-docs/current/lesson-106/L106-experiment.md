@@ -44,7 +44,7 @@ Připojte Core Module USB kabelem k počítači. V aplikaci Playground (pokud ji
 
 :::info
 
-Podívejte se na podrobný návod k [nahrání firmwaru do modulu Core Module](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
+Podívejte se na podrobný návod k [nahrání firmwaru do modulu Core Module](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
 
 :::
 
@@ -67,7 +67,7 @@ Podívejte se na podrobný návod k [nahrání firmwaru do modulu Core Module](h
 
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-vibration-diagram.png')} alt="Flow v Node-RED: téma magnitude ze zařízení vibration-monitor napojené na uzel grafu Vibrations in time"/>
+    <Image img={require('./stem-vibration-diagram.png')} alt="Flow v Node-RED: topic magnitude ze zařízení vibration-monitor napojené na uzel grafu Vibrations in time"/>
   </div>
 </div>
 

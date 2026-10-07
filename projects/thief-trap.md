@@ -6,24 +6,24 @@ import Image from '@theme/IdealImage';
 
 ## Introduction
 
-Is your younger brother entering your room? Are you going on holiday and afraid someone will steal your treasure? Set up an alarm against all thieves. 👮
+Does your younger brother sneak into your room? Going on vacation and worried someone will steal your treasure? Set up an alarm against all intruders. 👮
 
-In this project, you will learn how to create a **detector that sends notifications to your mobile if someone else is in your room**. 👁️
+In this project, you will learn to build a **detector that alerts your phone when someone else is in your room**. 👁️
 
-If you already have the Start Set, you will only need the [**PIR Module**](https://www.hardwario.store/p/pir-module/). Alternatively, the [Motion Set](https://www.hardwario.store/p/motion-set) contains all the equipment you need.
+If you already have the Start Set, you will also need the [**PIR Module**](https://www.hardwario.store/p/pir-module/). The [Motion Set](https://www.hardwario.store/p/motion-set) has everything you need.
 
 
 ## Download the new firmware
 
-1. If you haven´t done so yet, put the Motion Set together.
+1. If you haven't done so yet, assemble the Motion Set.
 
-2. Load special firmware onto the Core Module, namely bcf-radio-burglar-alarm (you will find it among the other firmware in Playground). With this firmware the box will reveal intruders and burglars.👂
+2. Flash the special **twr-radio-burglar-alarm** firmware to the Core Module (you'll find it among the other firmware in Playground). With this firmware, the box catches intruders. 👂
 
 ![Motion Set assembly](./img/thief-trap/image20.png)
 
-**Our tip**: You don’t know how to download the firmware or what is it? [You'll find out here](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
+**Our tip**: Don't know how to get the firmware or what it is? [Find out here](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
 
-3. Pair the Core Module with a USB Dongle. Right after pairing, you will see that your Core Module has changed the Alias to **Burglar alarm**.
+3. Pair the Core Module with the Radio Dongle. Right after pairing, you'll see the Core Module's alias change to **burglar-alarm**.
 
 <div class="container">
   <div class="row">
@@ -31,30 +31,44 @@ If you already have the Start Set, you will only need the [**PIR Module**](https
   </div>
 </div>
 
-❓ **Did you know**? In English, a burglar is a sort of thief. For example, Bilbo Baggins from the Hobbit was a thief. He stole from the dragon's treasury! 🐉
+❓ **Did you know?** A burglar is a thief who breaks into buildings. In The Hobbit, Bilbo Baggins was hired as a burglar, and he really did steal from a dragon's treasure hoard. 🐉
 
 
 ## Prepare Blynk IoT for notifications
 
-Your box connects to your smartphone thanks to the **Blynk IoT** app, where the alarm will arrive as a push notification. 📱
+Your box connects to your phone through the **Blynk IoT** app, where the alarm arrives as a push notification. 📱 Node-RED sends the text of the alarm to Blynk, and a Blynk automation turns every new message into a notification.
 
-1. If you don't have one yet, create an account in [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). See [this guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) for how to set up your account, a device template, and a device. You'll need all three. You can also reuse a template from a previous project.
+1. If you don't have a [Blynk IoT](https://blynk.io) account yet, create one. The free plan is enough for this project: at the time of writing, it includes push notifications in the app and up to five automations.
 
-2. In Blynk IoT, a push notification isn't placed on the phone screen like a widget. It's sent as an **Event** defined on your template. On the template detail, open the **Events** tab and add a new event (for example, name it `thief` and give it the message you want to receive, such as "Someone's in your room"). Then turn on **Notifications** for that event so Blynk delivers it to your phone. The [guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) walks through the template settings.
+2. Create a device template. [Blynk's quick guide](https://docs.blynk.io/en/getting-started/template-quick-setup) shows you how. You can also reuse a template from an earlier project.
 
-3. You also want to arm and disarm the alarm from your phone so it doesn't bleep when you are home. 🔕 Add a **Datastream** on the same template (a virtual pin) and place a **switch** widget on it in the app. The switch sends `1` (armed) or `0` (disarmed). You'll read this value back in Node-RED in a moment.
+3. You'll also want to turn the alarm on and off from your phone, so it doesn't beep while you're home. 🔕 In the template, open the **Datastreams** tab, click **New Datastream** and choose **Virtual Pin**. Name the datastream (for example `Alarm`), pick pin V2 and choose the **Integer** type with a range of **0–1**. The switch on your phone will send `1` (on) or `0` (off), and you'll read this value in Node-RED in a moment.
 
-4. Download the **Blynk IoT app** on your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure notifications are allowed for the app so the alarm can pop up. 🚨
+4. Add a second **Virtual Pin** datastream for the alarm message. Name it (for example `Message`), pick pin V3 and set the **Data Type** to **String**, because the notification will carry your own text. In its settings, let automations use it as a trigger: in the **Automations** section, turn on **Use as Condition**. Create the datastream and save the template.
+
+5. Create a device from the template: in **Devices**, add a new device, choose your template and give the device a name. You'll find its **Auth Token** on the device's **Device Info** tab. You'll need it in Node-RED.
+
+## Create the automation
+
+1. Open **Automations** in Blynk and create a new automation. For the condition (**When**), choose **Device State**, then your device, the message datastream (V3) and **Is Any**. The automation will then react to every message, even when it's the same as the last one.
+
+2. Under **Do this**, add the action that sends a notification to the mobile app (**Send In-App Notifications**) and choose yourself as the recipient. Put the **Trigger value** placeholder (`{TRIGGER_VALUE}`) in the message. Blynk replaces it with the text that Node-RED sends.
+
+3. Name the automation. **Limit period** sets how soon the automation may run again: choose the shortest option, otherwise you won't get a message about movement that comes soon after the first. Save the automation.
+
+4. Download the **Blynk IoT app** to your phone from the [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) or [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) and sign in with the same account. Make sure notifications are allowed for the app so the alarm can pop up. 🚨
+
+5. On your phone, open the device and set up its dashboard: add a **Button** widget, switch it to **Switch** mode and assign it the alarm datastream (V2).
 
 
-## Read the arming switch in Node-RED
+## Read the alarm switch in Node-RED
 
-1. In Playground, click the **Functions tab** where the [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/) programming desktop is.🤖
-2. Start programming and jump right in. The first node will contain a small javascript code. Place it on the desktop using the **Function node** from under the section of the same name.
+1. In Playground, click the **Functions tab**, home of the [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/) programming canvas. 🤖
+2. Dive right into programming. The first node holds a small piece of JavaScript. Place it on the canvas as a **Function** node from the section of the same name.
 
-Double-click on it and type the node name in the Name field: Int parser.
+Double-click it and type the node name in the **Name** field: Int parser.
 
-Subsequently, copy the following simple javascript code into the Function field:
+Then copy this simple code into the Function field:
 
 ```
 msg.payload = parseInt(msg.payload); return msg;
@@ -66,7 +80,7 @@ msg.payload = parseInt(msg.payload); return msg;
   </div>
 </div>
 
-3. Now add a node with which you can turn the thief monitoring on and off. This is to keep the phone from bleeping when you are home. 🔕 Do it using the **Switch node** under the Dashboard section.
+3. Now add a node for turning the guarding on and off, so your phone doesn't raise the alarm when you're home yourself. 🔕 Use the **Switch** node from the Dashboard section for this.
 
 <div class="container">
   <div class="row">
@@ -74,9 +88,9 @@ msg.payload = parseInt(msg.payload); return msg;
   </div>
 </div>
 
-4. Double-click on the node and change its **Label** to Trigger. Then adjust **On Payload** and **Off Payload** to 1 and 0 (as shown in the screenshot).
+4. Double-click the node and change its **Label** to Trigger. Then set **On Payload** and **Off Payload** to 1 and 0 (see the screenshot).
 
-Confirm with the **Done** button.
+Confirm with **Done**.
 
 <div class="container">
   <div class="row">
@@ -84,13 +98,15 @@ Confirm with the **Done** button.
   </div>
 </div>
 
-5. You also want to arm the alarm from your phone. Add a node from the **Blynk IoT** section that reads a datastream (the **read / input** node) and point it at the virtual pin of the arming switch you created on the template.
+5. You'll turn the alarm on from your phone, too. Add a **write event** node from the **Blynk IoT** section (not from **Blynk ws**, which belongs to the old Blynk that no longer works). It receives the value of the alarm datastream from the app.
 
-6. Double-click it to open it. On the right you'll see **a small pencil**. Click it and a new window opens. In the **Url** field enter `blynk.cloud`, and into the **Auth Token** and **Template ID** fields copy the values from the device detail in the Blynk IoT web app on your computer. Confirm with the **Add** button. (You'll reuse this same connection for every Blynk IoT node in this project.)
+6. Double-click it to open it. Next to **Connection** you'll see **a small pencil**. Click it and a new window opens. In the **Url** field enter `blynk.cloud`, and copy the **Auth Token** and **Template ID** from the Blynk web app on your computer: the Auth Token is on the device's **Device Info** tab, the Template ID in the template details. Confirm with **Add**. Then enter 2 in the **Virtual Pin** field (for V2) and confirm with **Done**. (You'll use the same connection for every Blynk IoT node in this project.)
 
-7. Behind both the Dashboard switch and the Blynk IoT read node, place a javascript **Function node**. With it, the project remembers whether the alarm is currently armed, whether set from your computer (Dashboard) or from your phone (Blynk IoT).
+7. So that the switch on your phone follows the one on the Dashboard, add a **write** node from the same **Blynk IoT** section. Select the same connection, enter 2 in the **Virtual Pin** field and confirm with **Done**.
 
-In the **Name** line, fill in the Notification setting status and copy the following code into the **Function** field:
+8. Behind both the Dashboard switch and the Blynk IoT write event node, place a **Function** node with JavaScript. With it, the project remembers whether the alarm is currently on, whether you switched it on from the computer (Dashboard) or from your phone (Blynk IoT).
+
+In the **Name** field, enter Notification setting status, and copy this code into the **Function** field:
 
 ```
 if(msg.payload == "1") { flow.set("alarmOn", 1); } else { flow.set("alarmOn", 0); } return msg;
@@ -98,21 +114,21 @@ if(msg.payload == "1") { flow.set("alarmOn", 1); } else { flow.set("alarmOn", 0)
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/thief-trap/thief-trap-10.webp')} alt="Node-RED flow with the notification-status Function node highlighted behind the switch and Blynk read nodes"/>
+    <Image img={require('./img/thief-trap/thief-trap-10.webp')} alt="Node-RED flow with the notification-status Function node highlighted next to the switch and Blynk write event nodes"/>
   </div>
 </div>
 
-8. Now connect the whole flow. Don't go just yet though. You still need to set up two more miniflows.
+9. Then wire up the whole flow: write event ➡️ Int parser ➡️ Trigger switch ➡️ write. Also connect both the write event node and the Trigger switch to the Notification setting status node. Don't leave just yet, though: two more mini flows are waiting for you.
 
 
 
 ## Program the main sensor
 
-1. The whole project works on the principle of a motion sensor. When an intruder or thief enters your room, the box notices it and activates the alarm.
+1. The whole project works like a motion detector: when an intruder gets into your room, the box notices and sets off the alarm.
 
-By measuring the ambient temperature, the alarm can change its status to keep itself in a low power mode in order to not drain the batteries in the box too much.🔋
+Thanks to the ambient temperature measurement, the alarm can switch its state while staying in low-power mode, so it doesn't drain the batteries in the box. 🔋
 
-In the next flow, start with the good old **MQTT node** from under the Input section. In the node, set the temperature measurement as **Topic**:
+So start the next flow with the good old **mqtt in** node from the network section. Set the temperature measurement as its **Topic**:
 
 ```
 node/burglar-alarm:0/thermometer/0:1/temperature
@@ -124,14 +140,14 @@ node/burglar-alarm:0/thermometer/0:1/temperature
   </div>
 </div>
 
-2. Place another Function node right behind it. In the Name field, write the Alarm Status and use the following code:
+2. Right behind it, place another Function node. Write Alarm status in the Name field and use this code:
 
 
 ```
 msg.payload = flow.get("alarmOn"); return msg;
 ```
 
-Due to this node, the sensor will only be active if you trigger it by a button in Blynk or on a computer.
+Thanks to this node, the sensor is active only when you switch it on in Blynk or on the computer.
 
 <div class="container">
   <div class="row">
@@ -139,13 +155,13 @@ Due to this node, the sensor will only be active if you trigger it by a button i
   </div>
 </div>
 
-3. For the best bit of all, place the MQTT node from under the **Output** section onto the desktop (watch it ❗).
+3. Third time's the charm: place an MQTT node on the canvas, this time the **mqtt out** node from the network section (careful, out, not in ❗).
 
-In the node, set _node/burglar-alarm:0/alarm/-/set/state_ as the Topic, through which the sensor sends its status to the alarm. If the switch in Blynk or Dashboard is turned on, the alarm is activated. 👮
+In it, set _node/burglar-alarm:0/alarm/-/set/state_ as the Topic. Through it, the flow sends the alarm its state. If the switch in Blynk or on the Dashboard is on, the alarm turns on. 👮
 
 
 
-4. Subsequently **connect** these three elements together.
+4. Then **wire up** these three.
 
 <div class="container">
   <div class="row">
@@ -155,9 +171,9 @@ In the node, set _node/burglar-alarm:0/alarm/-/set/state_ as the Topic, through 
 
 ## Set up your message
 
-1. In the last miniflow, you set up the message that is sent to your mobile when the alarm detects someone. 📩
+1. In the last mini flow, you'll set up the message that reaches your phone when the alarm catches someone. 📩
 
-Place the **MQTT node from under the Input section** onto your desktop. In the node, set the **Topic** as node/burglar-alarm:0/pir/-/event-count. This means that the node will be activated if it is active and someone passes by it. Simply, a smart motion sensor.
+First place an **mqtt in** node from the network section on the canvas and set its **Topic** to node/burglar-alarm:0/pir/-/event-count. The node fires when the alarm is on and someone walks past the box. Simply put, a smart motion detector.
 
 <div class="container">
   <div class="row">
@@ -165,13 +181,13 @@ Place the **MQTT node from under the Input section** onto your desktop. In the n
   </div>
 </div>
 
-2. A short javascript code should follow it, namely a **Function node**. As the **Name** set _Message_ with this code right here:
+2. Next comes a little JavaScript, a **Function** node. Set its **Name** to _Message_ and use this code:
 
 ```
 msg.payload = "Someone's in your room"; return msg;
 ```
 
-**Our tip**: Feel free to rewrite the message in the code, but remember that Blynk does not read hooks (háčky) and accent marks (čárky). Otherwise it´s double Dutch! 🤷
+**Our tip**: Feel free to change the message in the code, but remember that Blynk can't read accented letters. To Blynk, they're all Greek. 🤷
 
 <div class="container">
   <div class="row">
@@ -179,13 +195,13 @@ msg.payload = "Someone's in your room"; return msg;
   </div>
 </div>
 
-3. Finally, place a node from the **Blynk IoT** section that can fire your event (the **log event** node). It reuses the connection you set up earlier (Url `blynk.cloud`, Auth Token + Template ID), so you don't need the pencil again. Double-click it and set it to fire the **Event** you created on the template (its code, e.g. `thief`). This is what turns the detected motion into the push notification on your phone.
+3. Finally, place a **write** node from the **Blynk IoT** section. It uses the connection you set up earlier (Url `blynk.cloud`, Auth Token + Template ID), so you don't need the pencil again. Double-click it, select that connection and enter 3 in the **Virtual Pin** field, the pin of the message datastream. Confirm with **Done**. That's what turns the detected motion into a push notification: the node writes the message to the datastream, and the automation sends it on to your phone.
 
-4. **Connect** these elements so the motion ➡️ becomes your message ➡️ that fires the Blynk IoT event ➡️ which arrives on your mobile. 👾 Finally, press the red **Deploy** button.
+4. **Wire up** the nodes so that the motion ➡️ becomes your message, ➡️ which goes to Blynk IoT ➡️ and lands on your phone. 👾 Finally, press the red **Deploy** button.
 
-## Ready, steady… go!
+## Ready, steady, go!
 
-1. When you want to trigger the alarm, **set the switch** on your computer (in the Dashboard tab) or on your mobile. Both buttons work together, so you can set either one or the other.
+1. When you want to turn the alarm on, **flip the switch** on your computer (on the Dashboard tab) or on your phone. The two switches work together, so either one will do.
 
 <div class="container">
   <div class="row">
@@ -193,8 +209,8 @@ msg.payload = "Someone's in your room"; return msg;
   </div>
 </div>
 
-2. Place your box near the door. When the box detects movement, **it will send a notification to your mobile**.
+2. Put your box by the door. As soon as it detects movement, **it sends an alert to your phone**.
 
-![Set the switch](./img/thief-trap/image9.png)
+![Alarm notification on a phone](./img/thief-trap/image9.png)
 
-Thieves beware! The law is here! 😱
+Thieves, beware! The law is here! 😱

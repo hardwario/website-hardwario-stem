@@ -6,9 +6,9 @@ import Image from '@theme/IdealImage';
 
 # Radio Climate Monitor
 
-This document will guide you through the **Radio Climate Monitor** project. You will be able to see dashboard with temperature, humidity, ambient light and atmospheric pressure in **Node-RED**.
+This guide walks you through the **Radio Climate Monitor** project. At the end, you'll see a dashboard in **Node-RED** with temperature, humidity, ambient light and atmospheric pressure.
 
-## Block Concept
+## Block Diagram
 <div class="container">
   <div class="row">
     <Image img={require('./img/radio-climate-monitor/radio-climate-monitor-block-diagram.webp')} alt="Block diagram: Radio Climate Monitor Kit linked over sub-GHz radio to the Radio Dongle and Node-RED gateway stack"/>
@@ -17,48 +17,48 @@ This document will guide you through the **Radio Climate Monitor** project. You 
 
 ### Requirements <a id="requirements"></a>
 
-* Either [Clime Set](https://www.hardwario.store/p/clime-set), or individual components:
+* Either the [Clime Set](https://www.hardwario.store/p/clime-set) or these individual components:
   
   * 1x [Climate Module](https://www.hardwario.store/p/climate-module)
   * 1x [Core Module](https://www.hardwario.store/p/core-module)
   * 1x [Mini Battery Module](https://www.hardwario.store/p/mini-battery-module)
   * 1x [Radio Dongle](https://www.hardwario.store/p/radio-dongle)
   
-* One of these options:
+* One of the following:
   
   * **HARDWARIO Playground** installed \(recommended\)
-    You can find more information in the [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/) document.
+    See [**Playground Installation**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/) for details.
   * **Raspberry Pi** with the **HARDWARIO Raspbian** distribution
-    You can find more information in the document [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/).
+    See [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/) for details.
   * **HARDWARIO Toolchain** installed
-    You can find more information in the document [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
+    See [**Command Line Tools**](https://docs.hardwario.com/tower/command-line-tools/) for details.
 
 ## Firmware Upload
 
-In this procedure we will use the **HARDWARIO Playground** to upload firmware to the **Core Module**.
+You'll upload the firmware to the **Core Module** with **HARDWARIO Playground**.
 
-#### Step 1: Connect the Micro USB cable to the **Core Module** and your computer
+#### Step 1: Connect the **Core Module** to your computer with a Micro USB cable
 
-#### Step 2: Run the HARDWARIO Playground. In the Firmware tab choose and upload the `bcf-radio-climate-monitor` firmware to the **Core Module**
+#### Step 2: Start HARDWARIO Playground, select the `hardwario/twr-radio-climate-monitor` firmware on the Firmware tab and upload it to the **Core Module**
 
 :::warning
 
-**Flashing Core Module R1 & R2**
-For differences of flashing older **Core Module 1** and newer **Core Module 2** please read **Core Module R1 and R2 comparison** in the **Hardware section**
+**Flashing Core Module R1 and R2**
+The older **Core Module 1** and the newer **Core Module 2** are flashed differently; see **Core Module R1 and R2 comparison** in the **Hardware section**.
 
 :::
 
-#### Step 3: Remove the Micro USB cable from the **Core Module** and your computer
+#### Step 3: Disconnect the Micro USB cable from the **Core Module** and the computer
 
 :::success
 
-At this point your firmware is successfully uploaded.
+Your firmware is now uploaded.
 
 :::
 
-## Hardware Assembling
+## Hardware Assembly
 
-See short video with easy step by step demonstration:
+Watch this short video for a simple step-by-step demonstration:
 
 
 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
@@ -78,19 +78,19 @@ See short video with easy step by step demonstration:
 
 :::warning
 
-Make sure the **Mini Battery Module** does not have batteries inserted.
+Check that there are no batteries in the **Mini Battery Module**.
 
 :::
 
-#### **Step 2:** Plug the **Core Module** on top of the **Mini Battery Module**
+#### **Step 2:** Plug the **Core Module** onto the **Mini Battery Module**
 
-#### **Step 3:** Plug the **Climate Module** on top of the **Core Module**
+#### **Step 3:** Plug the **Climate Module** onto the **Core Module**
 
-## Playground Bootstrap
+## Playground Setup
 
 :::danger
 
-If you are using the new **HARDWARIO Playground**, then use the **Functions** tab instead of using [**http://localhost:1880/**](http://localhost:1880/). Also the pairing process is now done in **Devices** tab. For communication test use the **Messages** tab.
+If you use the new **HARDWARIO Playground**, open the **Functions** tab instead of [**http://localhost:1880/**](http://localhost:1880/). Pairing now happens on the **Devices** tab, and you test communication on the **Messages** tab.
 
 :::
 
@@ -98,15 +98,15 @@ If you are using the new **HARDWARIO Playground**, then use the **Functions** ta
 
 [http://localhost:1880/](http://localhost:1880/)
 
-#### Step 2: You should see the empty workspace with **Flow 1**
+#### Step 2: You should see an empty workspace with **Flow 1**
 
-#### Step 3: Insert the following snippet in the flow \(using **Menu &gt;&gt; Import**\) and click in **Flow 1** tab
+#### Step 3: Import the following snippet into the flow \(**Menu &gt;&gt; Import**\) and click the **Flow 1** tab
 
 ```text
 [{"id":"2fc604fc.3b6abc","type":"inject","z":"dfc861b.b2a02a","name":"List all gateways","topic":"gateway/all/info/get","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":460,"wires":[["a2c10833.24d5d8"]]},{"id":"1e4502b8.2f63fd","type":"inject","z":"dfc861b.b2a02a","name":"Start node pairing","topic":"gateway/usb-dongle/pairing-mode/start","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":570,"y":580,"wires":[["795ff5a7.8e266c"]]},{"id":"3d844ce2.932864","type":"inject","z":"dfc861b.b2a02a","name":"Stop node pairing","topic":"gateway/usb-dongle/pairing-mode/stop","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":640,"wires":[["5967c452.c838bc"]]},{"id":"f202b253.2705b","type":"inject","z":"dfc861b.b2a02a","name":"List paired nodes","topic":"gateway/usb-dongle/nodes/get","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":520,"wires":[["f0aca138.0b2c3"]]},{"id":"349f02fd.890f6e","type":"inject","z":"dfc861b.b2a02a","name":"Unpair all nodes","topic":"gateway/usb-dongle/nodes/purge","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":700,"wires":[["2f1c5bb6.53d6f4"]]},{"id":"cf61d75d.4ad8f8","type":"mqtt in","z":"dfc861b.b2a02a","name":"","topic":"#","qos":"2","broker":"67b8de4a.029d3","x":530,"y":400,"wires":[["a5cb0658.f5d658"]]},{"id":"a5cb0658.f5d658","type":"debug","z":"dfc861b.b2a02a","name":"","active":true,"console":"false","complete":"false","x":790,"y":400,"wires":[]},{"id":"a2c10833.24d5d8","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":460,"wires":[]},{"id":"f0aca138.0b2c3","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":520,"wires":[]},{"id":"795ff5a7.8e266c","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":580,"wires":[]},{"id":"5967c452.c838bc","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":640,"wires":[]},{"id":"2f1c5bb6.53d6f4","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":700,"wires":[]},{"id":"67b8de4a.029d3","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""},{"id":"717f7c18.ba0a24","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
 ```
 
-It will look like this:
+It looks like this:
 
 
 <div class="container">
@@ -117,11 +117,11 @@ It will look like this:
 
 :::info
 
-This snippet provides control buttons for gateway/radio commands. These commands are sent over the MQTT protocol.
+The snippet adds buttons for the gateway and radio commands, which are sent over MQTT.
 
 :::
 
-#### Step 4: Deploy the flow using the **Deploy** button in the top-right corner
+#### Step 4: Deploy the flow with the **Deploy** button in the top-right corner
 
 #### Step 5: Open the **debug** tab
 
@@ -133,11 +133,11 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 :::info
 
-In the **debug** tab, you will be able to see all the MQTT messages.
+The **debug** tab shows all MQTT messages.
 
 :::
 
-#### Step 6: Click on the **List all gateways** button. You should see a response like this in the **debug** tab
+#### Step 6: Click the **List all gateways** button. The **debug** tab should show a response like this
 
 <div class="container">
   <div class="row">
@@ -147,17 +147,17 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 :::success
 
-At this point, you've got working **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** and **HARDWARIO Gateway**.
+You now have working **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** and **HARDWARIO Gateway**.
 
 :::
 
 ## Radio Pairing
 
-In this section, we will create a radio link between the **Radio Dongle** and the **Radio Climate Monitor**.
+In this section, we'll establish a radio link between the **Radio Dongle** and the **Radio Climate Monitor**.
 
-Follow these steps in **Node-RED**:
+In **Node-RED**, follow these steps:
 
-#### Step 1: Click on the **Start node pairing** button
+#### Step 1: Click the **Start node pairing** button
 
 <div class="container">
   <div class="row">
@@ -165,11 +165,11 @@ Follow these steps in **Node-RED**:
   </div>
 </div>
 
-#### Step 2: Pair Climate Monitor
+#### Step 2: Pair the Climate Monitor
 
-Insert the batteries into the **Radio Climate Monitor** to send the pairing request \(you should also see the red LED on the **Core Module** to be on for about 2 seconds\).
+Insert the batteries into the **Radio Climate Monitor** to send the pairing request \(the red LED on the **Core Module** should also light up for about 2 seconds\).
 
-#### Step 3: Click on the **Stop node pairing** button
+#### Step 3: Click the **Stop node pairing** button
 
 <div class="container">
   <div class="row">
@@ -179,21 +179,21 @@ Insert the batteries into the **Radio Climate Monitor** to send the pairing requ
 
 :::success
 
-At this point, you've got established a radio link between the node \(**Radio Climate Monitor**\) and the gateway \(**Radio Dongle**\).
+You now have a radio link between the node \(**Radio Climate Monitor**\) and the gateway \(**Radio Dongle**\).
 
 :::
 
 ## Communication Test
 
-Follow these steps in **Node-RED**:
+In **Node-RED**, follow these steps:
 
-#### Step 1: Switch to **debug** tab on the right
+#### Step 1: Switch to the **debug** tab on the right
 
-#### Step 2: Test connection
+#### Step 2: Test the connection
 
-Start breathing on the temperature sensor on the **Climate Module** to invoke a change of temperature and hence trigger a radio transmission.
+Breathe on the temperature sensor on the **Climate Module**. The change in temperature triggers a radio transmission.
 
-You should then see similar messages:
+You should then see messages like these:
 
 
 <div class="container">
@@ -204,22 +204,22 @@ You should then see similar messages:
 
 :::success
 
-At this point, you've got verified radio communication.
+Radio communication is now verified.
 
 :::
 
 ## Enclosure
 
-Optionally put the assembly into the appropriate enclosure, if you have one.
+If you have a suitable enclosure, you can put the assembly into it.
 
 :::info
 
-You can find more information about the enclosures in the document [**Enclosures**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
+You'll find enclosures for TOWER kits in the [**Enclosures**](https://www.hardwario.store/enclosures) category of the HARDWARIO Store.
 
 :::
 
 ### Related Documents
 
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
-* [**Toolchain Setup**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects)
-* [**Toolchain Guide**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects)
+* [**Command Line Tools**](https://docs.hardwario.com/tower/command-line-tools/)
+* [**Grafana Visualization**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization/#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects)

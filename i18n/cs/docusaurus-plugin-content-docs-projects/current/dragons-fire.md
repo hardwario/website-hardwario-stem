@@ -7,14 +7,14 @@ title: Dračí dech
 
 Užijte si s kamarády zábavu s IoT. Kdo z vás bude mít nejžhavější, nebo nejchladnější dech? Čím si k vítězství pomůžete, je na vás. Povoleno je všechno. 😱
 
-V tomto projektu se naučíte **měřit teplotu pomocí IoT**. Stačí vám základní sada HARDWARIO [**Start Set**](https://www.hardwario.store/cz/p/start-set/).
+V tomto projektu se naučíte **měřit teplotu pomocí IoT**. Stačí vám základní [**Sada Start**](https://www.hardwario.store/cz/p/start-set) od HARDWARIO.
 
 
 ## Připravte si krabičku
 
-1. Start Set sestavte a spárujte. Do modulu Core Module potřebujete firmware **radio push button**.
+1. Sadu Start sestavte a spárujte. Do modulu Core Module potřebujete firmware **twr-radio-push-button**.
 
-2. Otevřete v Playgroundu záložku **Messages**. Uvidíte v ní změny teploty. Teplota se měří automaticky, a to buď pravidelně každých 15 sekund, nebo když se výrazně změní. Právě toho využijeme.
+2. Otevřete v Playgroundu záložku **Messages**. Uvidíte v ní změny teploty. Krabička teplotu posílá sama, a to pravidelně každých 15 minut a navíc hned, jakmile se změní aspoň o 0,2 °C. Právě toho využijeme.
 
 
 ![Záložka Messages v Playgroundu](./img/dragons-fire/image4.png)
@@ -23,7 +23,7 @@ V tomto projektu se naučíte **měřit teplotu pomocí IoT**. Stačí vám zák
 
 1. Záložka Messages vám možná stačit nebude. ✌️ Postavte si z bublin v Node-RED vlastní barevný ukazatel teploty. Nejdřív v Playgroundu klikněte na záložku **Functions**.
 
-2. Na prázdnou plochu umístěte světle fialový uzel (bublinu) s názvem **MQTT**. Najdete ho v sekci Input.
+2. Na prázdnou plochu umístěte světle fialový uzel (bublinu) s názvem **mqtt in**. Najdete ho v sekci **network**.
 
 3. Uzel otevřete dvojklikem. V řádku **Topic** určíte, co má barevný ukazatel zobrazovat, tentokrát teplotu. Do řádku proto zkopírujte zprávu s teplotou ze záložky Messages (bez čísla), nebo klidně použijte tuto:
 ```
@@ -34,7 +34,7 @@ node/push-button:0/thermometer/0:1/temperature
 
 Potvrďte tlačítkem **Done**.
 
-4. Vedle uzlu umístěte druhý, tentokrát modrý uzel s názvem **Gauge**. Najdete ho v sekci Dashboard. Tento uzel určuje, jak se naměřená teplota zobrazí na obrazovce: jako ukazatel. Oba uzly propojte.
+4. Vedle uzlu umístěte druhý, tentokrát modrý uzel s názvem **gauge**. Najdete ho v sekci **dashboard**. Tento uzel určuje, jak se naměřená teplota zobrazí na obrazovce: jako ukazatel. Oba uzly propojte.
 
 ![Ukazatel Gauge](./img/dragons-fire/image1.png)
 

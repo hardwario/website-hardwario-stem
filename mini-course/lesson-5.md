@@ -1,59 +1,59 @@
 ---
 slug: lesson-5
-title: Lesson 5 - Wrap-up and Theory
+title: Lesson 5 – Wrap-up and theory
 ---
 
 **Duration:** 45 minutes  
-**Target group:** individuals, pairs, or class  
+**Target group:** individuals, pairs or the whole class  
 
-**Task:** Summarize what you have learned, understand the theory of **Node-RED** and **MQTT**, and create a small project that ties everything together.
+**Task:** Sum up what you have learned, get to know the theory behind **Node-RED** and **MQTT**, and build a small project that ties it all together.
 
-## 1. Summary of what we have achieved
+## 1. What you have achieved
 
 In the previous lessons, you:
 
-- prepared the **HARDWARIO TOWER**, paired modules, installed firmware,  
-- measured various values (temperature, orientation, motion),  
-- created graphs and dashboards in Playground,  
-- filtered messages, used conditions,  
+- prepared the **HARDWARIO TOWER** kit, paired modules and uploaded firmware,  
+- measured various quantities (temperature, orientation, motion),  
+- created charts and dashboards in Playground,  
+- filtered messages and used conditions,  
 - controlled the LED strip and other outputs.  
 
-> The purpose of this lesson is to connect all this knowledge, understand how it works “under the hood,” and try it out in one complete project.
+> In this lesson, you will connect all this knowledge, understand how it works “under the hood” and try it out in one complete project.
 
 ## 2. What is Node-RED
 
-Node-RED is a visual environment for “flow-based” programming, often used in IoT.
+Node-RED is a visual environment for “flow-based” programming that is often used in IoT.
 
-- It consists of **nodes** that receive, process, and send messages.  
+- It is made of **nodes** that receive, process and send messages.  
 - Nodes are connected into **flows**.  
 - A message usually has two important parts:  
-  - `topic`: subject, category/channel of the message  
-  - `payload`: the content of the message, e.g., a number, text, or a **JSON** object  
-- Nodes such as **Switch**, **Change**, **Function**, **Debug** allow you to modify, filter, or react to messages.  
-- Playground uses **Node-RED** for visually building flows, testing, and interacting with devices.  
+  - `topic`: the category or channel of the message  
+  - `payload`: the content of the message, for example a number, text or a **JSON** object  
+- Nodes such as **Switch**, **Change**, **Function** or **Debug** modify messages, filter them or react to them.  
+- Playground uses **Node-RED** to build flows visually, test them and interact with devices.  
 
 ## 3. What is MQTT
 
-**MQTT** is a messaging protocol, particularly suitable for IoT.
+**MQTT** is a messaging protocol that is especially well suited to IoT.
 
-- Principle *publish / subscribe*: a device (publisher) sends messages on a certain topic, and other devices (subscribers) subscribe to that topic and receive messages.  
-- Difference compared to direct sending: the publisher does not know who will receive the message; the subscriber does not know who sent it.  
-- A **broker** is the server that mediates all messages.  
+- The *publish / subscribe* principle: a device (publisher) sends messages to a certain topic, and other devices (subscribers) subscribe to that topic and receive the messages.  
+- The difference from sending directly: the publisher does not know who will receive the message, and the subscriber does not know who sent it.  
+- A **broker** is the server that relays all the messages.  
 - Important features:  
-  - topic hierarchy (e.g., `home/room1/temperature`)  
-  - possible QoS levels (Quality of Service): e.g., “delivered at least once,” “delivered exactly once”  
-  - retained messages: the last message can be stored and new subscribers will receive it immediately upon subscribing  
-- Security: authentication, encrypted communication, careful management of keys / tokens.  
+  - a hierarchy of topics (for example `home/room1/temperature`)  
+  - QoS (Quality of Service) levels, for example “delivered at least once” or “delivered exactly once”  
+  - retained messages: the last message can be stored, and new subscribers receive it as soon as they subscribe  
+- Security: authentication, encrypted communication, careful management of keys and tokens.  
 
-## 4. How everything fits together – architecture
+## 4. How it all fits together: the architecture
 
-Here is a simplified diagram of how the message flow works in your projects:
+In a simplified view, a message travels through your projects like this:
 
-- The sensor module measures and sends data to **HARDWARIO Playground**.  
-- The **HARDWARIO Playground** application takes the message received by the **Radio Dongle** and publishes it via the **MQTT** protocol.  
-- **Node-RED** processes the message from **MQTT**: it can filter, react, or forward it again through **MQTT**.  
-- The broker distributes the messages to those interested: applications, output modules, dashboards.  
-- Outputs react: LEDs, notifications, etc.  
+- The sensor module measures and sends the data to **HARDWARIO Playground**.  
+- The **HARDWARIO Playground** application takes the message that the **Radio Dongle** received over the radio and publishes it over the **MQTT** protocol.  
+- **Node-RED** processes the message from **MQTT**: it can filter it, react to it or pass it on again over **MQTT**.  
+- The broker delivers the messages to everyone who subscribes to them: applications, output modules and dashboards.  
+- The outputs react: LEDs, notifications and so on.  
 
 ## 5. Final project
 
@@ -61,29 +61,29 @@ Try the following project:
 
 **Task:**
 
-1. Use a sensor (e.g., temperature) and a motion/orientation detection module.  
-2. When the temperature exceeds the set threshold *and* motion/orientation change is detected, then:  
+1. Use a sensor (for example a temperature sensor) and a module that detects motion or orientation.  
+2. When the temperature exceeds the set threshold *and* the sensor detects motion or a change in orientation at the same time:  
 
    - the LED strip lights up red,  
-   - a message is displayed in **HARDWARIO Playground**.  
+   - a message appears in **HARDWARIO Playground**.  
 
-3. Show a dashboard with the current temperature, motion/orientation status, and LED strip status.  
-4. Draw the message flow: topic(s), payloads, nodes in **Node-RED**, who publishes / subscribes.  
+3. Show the current temperature, the motion or orientation status and the LED strip status on a dashboard.  
+4. Draw the message flow: the topics, payloads, nodes in **Node-RED**, and who publishes and subscribes to what.  
 
-## 6. Good practices and what to watch out for
+## 6. Good practice and pitfalls
 
-- Name topics carefully: clarity helps.  
-- Don’t send data unnecessarily often: it saves the network and device resources.  
-- Security: never share passwords / tokens / keys. Always use strong ones.  
-- Monitor what happens in case of outages or errors: what if the sensor doesn’t send, or the **MQTT broker** is unavailable?  
+- Name your topics carefully; clarity pays off.  
+- Don’t send data more often than you need to; it saves the network and the device’s resources.  
+- Security: never share passwords, tokens or keys, and choose strong passwords and keys.  
+- Check what happens in case of an outage or error: what if a message from the sensor does not arrive or the **MQTT broker** is unavailable?  
 
 ## 7. Reflection and sharing
 
-- What was the hardest part for you? What was the easiest?  
-- Which part would you like to explore in more depth (e.g., how **MQTT** works, security, databases…)?  
-- Share your project or message flow with others: explain how you built it.  
+- What was the hardest part for you? And the easiest?  
+- Which part would you like to explore in more depth (for example how **MQTT** works, security, databases…)?  
+- Share your project or message flow with others and explain how you built it.  
 
 ## Summary ✅
 
-Congratulations! You have completed the entire course. You now know **HARDWARIO TOWER** not only practically, but also on a theoretical level.  
-You already have the basics to build your own IoT projects, and you can continue expanding them with your own ideas.  
+Congratulations! You have completed the whole course, and you now know the **HARDWARIO TOWER** kit both in practice and in theory.  
+You have the basics for your own IoT projects and can keep developing them with your own ideas.  

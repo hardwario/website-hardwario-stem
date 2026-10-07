@@ -12,12 +12,12 @@ V tomto projektu se naučíte **uložit nejvyšší naměřenou hodnotu, nastavi
 
 Základní verzi projektu najdete tady: [IoT párty hra: máte v sobě dračí oheň, nebo mrazivý dech?](/cs/projects/dragons-fire/)
 
-I tentokrát vám stačí základní sada HARDWARIO [**Start Set**](https://www.hardwario.store/cz/p/start-set/).
+I tentokrát vám stačí základní [**Sada Start**](https://www.hardwario.store/cz/p/start-set) od HARDWARIO.
 
 
 ## Připravte si Node-RED
 
-1. Start Set sestavte a spárujte. Do modulu Core Module budete potřebovat opět starý známý firmware **bcf-radio-push-button**.
+1. Sadu Start sestavte a spárujte. Do modulu Core Module budete potřebovat opět starý známý firmware **twr-radio-push-button**.
 
 <div class="container">
   <div class="row">
@@ -33,7 +33,7 @@ Sestavte tento flow, se kterým odhalíte **nejžhavějšího draka** z vaší p
 
 **Potřebujete poradit, jak na to?**
 
-- Uzel **MQTT** ze sekce Input má v poli Topic krátké stisknutí tlačítka:
+- Uzel **mqtt in** ze sekce **network** má v poli Topic krátké stisknutí tlačítka:
 
 ```
 node/push-button:0/push-button/-/event-count
@@ -172,7 +172,7 @@ Hračka? Tak přidejte ještě jeden **timestamp flow**, kterým budete měnit t
 
 ### Potřebujete poradit, jak na to?
 
-- První uzel se jmenuje **Inject** a najdete ho v sekci Input. Každou sekundu kontroluje, která soutěž právě běží: podle dlouhého nebo krátkého stisknutí tlačítka pozná, jestli se soutěží o nejchladnější, nebo nejžhavější dech, a tuto soutěž pak vypíše.
+- První uzel se jmenuje **inject** a najdete ho v sekci **common**. Každou sekundu kontroluje, která soutěž právě běží: podle dlouhého nebo krátkého stisknutí tlačítka pozná, jestli se soutěží o nejchladnější, nebo nejžhavější dech, a tuto soutěž pak vypíše.
 
 ![Uzel Inject](./img/dragons-fire-level-2/image12.png)
 

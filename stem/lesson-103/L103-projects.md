@@ -1,15 +1,15 @@
 ---
 slug: iot-push-button-application
 title: Projects
-title_meta: "Projects (L103: IoT button)"
+title_meta: "Projects (L103: IoT Button)"
 ---
 import Image from '@theme/IdealImage';
 
-Students try out other projects related to the given topic, or engage in so-called Ideation.
+Students try out more projects on the lesson topic or look for ideas using the Ideation method.
 
-## Other projects with the lesson topic to try out
+## Additional topic-related projects to try out
 
-### Platform Hackster.io
+### Hackster.io Platform
 
 <a
   href="https://www.hackster.io/154024/hardwario-iot-kit-smart-doorbell-398f3d"
@@ -91,4 +91,4 @@ Students try out other projects related to the given topic, or engage in so-call
 
 ### Ideation
 
-Students propose practical applications for the knowledge acquired through theoretical explanations and experiments. They record their ideas in a graph, where the x-axis represents the estimated complexity (cost) of the project and the y-axis represents the impact of implementing the solution.
+Students suggest real-life uses for the knowledge they gained from the theory and the experiments. They plot their ideas on a graph, with the estimated difficulty (cost) of the project on the x-axis and the impact of the solution on the y-axis.

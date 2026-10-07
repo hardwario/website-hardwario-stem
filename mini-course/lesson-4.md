@@ -1,6 +1,6 @@
 ---
 slug: lesson-4
-title: Lesson 4 - Lights!
+title: Lesson 4 – Lights!
 ---
 import Image from '@theme/IdealImage';
 
@@ -9,31 +9,31 @@ import Image from '@theme/IdealImage';
 
 ## 1. Introduction
 
-In **HARDWARIO Playground**, you already know how to find inputs, process them, and print them to the **Dashboard**.  
-This gave you the basic skills for working with sensors and data visualization.  
+In **HARDWARIO Playground**, you can already find inputs, process them and write them to the **Dashboard**.  
+That gave you the basic skills for working with sensors and visualizing data.  
 
-The next lesson will be a game with an **LED strip**, which will bring light to this part of the work and open new possibilities for creative use.
+In this lesson, you will play with an **LED strip**, which brings light into your work and opens up new creative possibilities.
 
-## 2. What’s Ready
+## 2. What’s ready
 
 ✅ A prepared and paired **Button Module** or **PIR Module**  
-✅ Knowledge of working with messages in Playground (the **Change** and **Switch** nodes)  
-✅ **Power Module** and **LED strip**  
+✅ Knowing how to work with messages in Playground (the **Change** and **Switch** nodes)  
+✅ A **Power Module** and an **LED strip**  
 
-## 3. Flash Firmware for the Power Module
+## 3. Flash the Power Module firmware
 
-1. Connect the **Power Module** using a USB cable.  
-2. In the **Firmware** tab, select the latest version.  
-   - Mine had `twr-radio-power-controller-rgb150` installed, but it’s definitely good to update it.  
-3. The LED strip does not need to be connected at this moment, but it won’t cause any issues if it is.
+1. Connect the **Power Module** to your computer with a USB cable.  
+2. On the **Firmware** tab, select the latest version.  
+   - Mine had `twr-radio-power-controller-rgb150` installed, but an update certainly won’t hurt.  
+3. The LED strip does not need to be connected now, but it does no harm if it is.
 
 ## 4. Pair the Power Module
 
-The Power Module is unique in that it **does not have batteries**. It is powered directly from a power source.  
+The Power Module differs from the other modules in that it **has no batteries**: it is powered directly from a power supply.  
 
-1. In the **Devices** tab, click **Start pairing**.  
-2. Plug the Power Module into the power source: this puts it into pairing mode.  
-3. After pairing, the Power Module appears as `power-controller:0`.
+1. On the **Devices** tab, click **Start pairing**.  
+2. Connect the Power Module to the power supply. This switches it to pairing mode.  
+3. After pairing, the Power Module reports as `power-controller:0`.
 
 <div class="container">
   <div class="row">
@@ -41,28 +41,28 @@ The Power Module is unique in that it **does not have batteries**. It is powered
   </div>
 </div>
 
-## 5. Start It Up!
+## 5. Start it up!
 
-Programming in the flow again begins with a message that triggers something. There are several options:
+Once again, start the flow with an input that sends messages. There are several options:
 
-✅ **Button Module**: monitoring a button press  
-✅ **PIR Module**: monitoring orientation  
-✅ **Any module**: all of them have temperature, which you can change (a more patient option 😊)
+✅ **Button Module**: watching for a button press  
+✅ **PIR Module**: watching the orientation  
+✅ **Any module**: they all measure temperature (the option for the patient 😊)
 
-## 6. What to Send to the Power Module
+## 6. What to send to the Power Module
 
 So far, you have used the **mqtt in** node to read from sensors.  
 Now we need to **write** to the device → we use **mqtt out**.  
 
-The topic that lights up the strip, for example, is: `node/power-controller:0/led-strip/-/color/set`
+A topic that lights up the strip is, for example: `node/power-controller:0/led-strip/-/color/set`
 
-## 7. What Message to Send
+## 7. What message to send
 
-Directly connecting an input (e.g., `Button` with message `1`) to an output (LED strip setting) won’t lead to the desired result.  
+If you connect an input (for example `Button` with the message `1`) directly to an output (the strip setting), it will not work correctly.  
 
-Therefore, use a **Change** node, where you reassign `msg.payload` to a color value in RGB hex code (for example, red: `"#FF0000"`).
+That is why you use a **Change** node and set `msg.payload` in it to a color in hexadecimal RGB code (for example red: `"#FF0000"`).
 
-👉 If you’re not familiar with RGB color coding, we recommend checking available [color tables](https://www.w3schools.com/colors/colors_rgb.asp).
+👉 If you don’t know RGB color codes, look them up in a [color table](https://www.w3schools.com/colors/colors_rgb.asp).
 
 <div class="container">
   <div class="row">
@@ -70,13 +70,13 @@ Therefore, use a **Change** node, where you reassign `msg.payload` to a color va
   </div>
 </div>
 
-## 8. Playing with Code
+## 8. Playing with code
 
-For code that can change the LED strip color based on PIR sensor orientation:
+This is how you build code that changes the LED strip color according to the PIR sensor orientation:
 
 1. Add a **Switch** node.  
-2. According to orientation (1–6), set a different color (`msg.payload`).  
-3. Send it via **mqtt out** to the Power Module.
+2. Set a different color (`msg.payload`) for each orientation (1–6).  
+3. Send it to the Power Module through **mqtt out**.
 
 <div class="container">
   <div class="row">
@@ -84,26 +84,25 @@ For code that can change the LED strip color based on PIR sensor orientation:
   </div>
 </div>
 
-## 9. Colors and Effects
+## 9. Colors and effects
 
-It would be a shame not to light up the LED lights in their full range, so don’t hesitate to try, for example, the command `node/power-controller:0/led-strip/-/effect/set`, to which you pass the message:  
+It would be a shame not to use the strip to the full. Try, for example, the command `node/power-controller:0/led-strip/-/effect/set` with this message:  
 
 ```json
 {"type":"rainbow", "wait":10}
 ```
 
-Are your eyes hurting from too much brightness? `node/power-controller:0/led-strip/-/brightness/set` takes values from 0–100 as the message and sets the brightness.
+Are your eyes hurting from too much brightness? `node/power-controller:0/led-strip/-/brightness/set` takes a value from 0–100 as the message and sets the brightness accordingly.
 
 ## 10. Addressing
-The LED strip can also be addressed per individual LED using `node//led-strip/-/set-pixel/set`, the message then contains information like `{"type":"rainbow", "wait":10}`.
+
+You can also address the strip in sections, down to single LEDs. The topic for this is `node/power-controller:0/led-strip/-/compound/set`. The message holds a list of pairs: the number of LEDs and their color. For example, this message lights the first 20 LEDs red and the next 20 green:
 
 ```json
-{"type":"rainbow", "wait":10}
+[20, "#ff0000", 20, "#00ff00"]
 ```
-
-Are your eyes hurting from too much brightness? `node/power-controller:0/led-strip/-/brightness/set` takes values from 0–100 as the message and sets the brightness.
 
 ## 11. Summary
 
-You have paired the Power Module with firmware for the LED strip.  
-You know how to light up the LED strip in different colors and even add effects.
+You have paired the Power Module with the LED strip firmware.  
+You can light up the LED strip in different colors and even add effects.

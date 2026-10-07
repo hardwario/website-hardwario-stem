@@ -12,12 +12,12 @@ Ať už máte doma leguána, želvu, hada nebo gekona, určitě chcete, aby se u
 
 S tímto projektem se naučíte **měřit čtyři klimatické veličiny a zobrazit je v grafech**: teplotu, vlhkost, osvětlenost a tlak vzduchu. Za odměnu vám možná vaši zelení kamarádi povyprávějí historky svých dinosauřích předků. 🦖 Nebo něco takového.
 
-Pokud máte Start Set, budete k němu potřebovat ještě [Climate Module](https://www.hardwario.store/p/climate-module/). **Kompletní** výbavu najdete v sadě [Clime Set](https://www.hardwario.store/p/clime-set).
+Pokud máte Sadu Start, budete k ní potřebovat ještě [Climate Module](https://www.hardwario.store/cz/p/climate-module/). **Kompletní** výbavu najdete v [Sadě Clime](https://www.hardwario.store/cz/p/clime-set).
 
 
 ## Připravte si krabičku
 
-1. Sestavte a spárujte Clime Set. Pokud to děláte poprvé, [máme pro vás jednoduchou příručku](https://hardwario.academy/). Postup je stejný jako u sady Start Set. Do modulu Core Module potřebujete firmware **radio climate monitor**. Pokud nevíte, jak si firmware stáhnout nebo co to je, <a href="https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware" target="_blank">najdete to tady</a>.
+1. Sestavte a spárujte Sadu Clime. Pokud to děláte poprvé, [máme pro vás jednoduchou příručku](/mini-course/lesson-1/). Postup je stejný jako u Sady Start. Do modulu Core Module potřebujete firmware **twr-radio-climate-monitor**. Pokud nevíte, jak si firmware stáhnout nebo co to je, <a href="https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/" target="_blank">najdete to tady</a>.
 2. Změny teploty, osvětlenosti, vlhkosti a tlaku vzduchu uvidíte v Playgroundu v záložce **Messages**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-1.webp')} alt="Záložka Messages v Playgroundu s topicy climate-monitor a hodnotami teploty, orientace a přítomnosti"/> </div> </div>
@@ -25,7 +25,7 @@ Pokud máte Start Set, budete k němu potřebovat ještě [Climate Module](https
 ## Nastavte si Node-RED
 
 1. Programovat začnete v Node-RED. Nejdřív v Playgroundu klikněte na záložku **Functions**.
-2. Na prázdnou plochu přetáhněte světle fialový uzel (bublinu) s názvem **MQTT**. Najdete ho v sekci Input.
+2. Na prázdnou plochu přetáhněte světle fialový uzel (bublinu) s názvem **mqtt in**. Najdete ho v sekci network.
 3. Uzel otevřete dvojklikem. V řádku **Topic** určíte, co má barevný ukazatel zobrazovat. Teď to bude teplota. Do řádku proto zkopírujte zprávu s teplotou ze záložky Messages (bez čísla). Nebo klidně použijte tuto:
 
 
@@ -67,7 +67,7 @@ V novém uzlu **Gauge** nastavte **Range** 0 až 100 a do **Value format** zadej
 node/climate-monitor:0/barometer/0:0/pressure
 ```
 
-Do nového uzlu **Gauge** opět zadejte rozsah 0 až 10 000. Jednotku tentokrát nastavovat nemusíte, ale název a barvu klidně přidejte.
+Do nového uzlu **Gauge** zadejte rozsah 80 000 až 110 000. Senzor posílá tlak vzduchu v pascalech a při zemi je to kolem 100 000 Pa. Jednotku tentokrát nastavovat nemusíte, ale název a barvu klidně přidejte.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-6.webp')} alt="Uzel MQTT pro tlak se zvýrazněným ukazatelem Gauge; dialog ukazuje Label a rozsah 0 až 10000"/> </div> </div>
 
@@ -77,7 +77,7 @@ Pod uzly Gauge pro vlhkost, osvětlenost a tlak proto přidejte po jednom uzlu *
 
 13. Všechny tři uzly postupně otevřete a v **Label** je pojmenujte stejně jako sousední uzly Gauge. V **X-axis** pokaždé nastavte, za jaké období chcete výsledky zobrazovat (hodina by tam už měla být nastavená automaticky).
 
-Do **Y-axis** pak vyplňte stejné rozsahy jako u sousedních uzlů Gauge, tedy u vlhkosti 0 až 100, u tlaku a osvětlenosti 0 až 10 000.
+Do **Y-axis** pak vyplňte stejné rozsahy jako u sousedních uzlů Gauge, tedy u vlhkosti 0 až 100, u osvětlenosti 0 až 10 000 a u tlaku 80 000 až 110 000.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-7.webp')} alt="Dialog Edit chart node se zvýrazněnými poli Label, interval osy X a rozsah osy Y a třemi uzly Chart ve flow"/> </div> </div>
 
@@ -97,7 +97,7 @@ Otevřete ho a pole **Range** a **Value format** vyplňte úplně stejně jako u
 
 Otevřete ho a nastavte v něm pod sebe **flow.optimal** a **msg.payload** (tak jako na obrázku).
 
-**K čemu to je**: Pomocí těchto dvou uzlů (Numeric a Change) nastavíte ideální teplotu, na jejíž překročení vás hlídač upozorní. 👮 V uzlu Numeric budete na Dashboardu určovat optimální teplotu a uzel Change ji uloží do proměnné flow.optimal. S tou pracují další uzly, které přidáme teď.
+**K čemu to je**: Pomocí těchto dvou uzlů (Numeric a Change) nastavíte ideální teplotu a hlídač vás upozorní, když se od ní naměřená teplota odchýlí. 👮 V uzlu Numeric budete na Dashboardu určovat optimální teplotu a uzel Change ji uloží do proměnné flow.optimal. S tou pracují další uzly, které přidáme teď.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-9.webp')} alt="Uzel Change vedle uzlu Numeric; dialog se zvýrazněným pravidlem Set flow.optimal na msg.payload"/> </div> </div>
 

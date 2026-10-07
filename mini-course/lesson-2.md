@@ -1,6 +1,6 @@
 ---
 slug: lesson-2
-title: Lesson 2 - Measure and draw
+title: Lesson 2 – Measure and plot
 ---
 import Image from '@theme/IdealImage';
 
@@ -8,43 +8,43 @@ import Image from '@theme/IdealImage';
 🧑‍💻 **Duration:** 30 minutes  
 🎯 **Target audience:** individuals and small groups  
 
-## 1. Introduction to Visual Programming
+## 1. Introduction to visual programming
 
-Playground allows programming by dragging and dropping blocks and responds immediately to connected modules.
+In Playground, you program by dragging and dropping blocks, and the application reacts immediately to the connected modules.
 
-## 2. Getting Started with HARDWARIO Playground
+## 2. Getting started with HARDWARIO Playground
 
-Make sure you have everything ready from the previous lesson:
+Check that you have everything ready from the previous lesson:
 
  ✅ Playground is running  
- ✅ Dongle is connected  
- ✅ PIR sensor has batteries  
- ✅ In **Messages**, you can see the outputs from the PIR sensor  
+ ✅ The dongle is connected  
+ ✅ The PIR sensor has batteries  
+ ✅ In **Messages**, you can see the outputs of the PIR sensor  
 
-## 3. First Program
+## 3. First program
 
-Create a program to process the outputs from the **PIR Module**.
+Create a program that processes the outputs of the **PIR Module**.
 
 :::info
 
-This text is not a complete **Node-RED** documentation.  
-For a deeper understanding, we recommend the [official examples](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
+This text does not replace the full **Node-RED** documentation.  
+To go deeper, we recommend the [official examples](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
 
 :::
 
-**Task:** Prepare an **overview dashboard** with the following elements:
+**Task:** Build an **overview dashboard** with these elements:
 
-- 🧭 **Gauge** for PIR Module orientation  
-- 📈 **Graph of orientation over time**  
-- 🌡️ **Graph of temperature over time**  
+- 🧭 **Gauge** for the **PIR Module** orientation  
+- 📈 **Chart of orientation over time**  
+- 🌡️ **Chart of temperature over time**  
 
-👉 Pay attention to axis labels:
+👉 Mind the axis labels:
 - **X-axis**: time  
 - **Y-axis**: value  
   
-## 4. Example Solution
+## 4. Example solution
 
-Function for processing data from the **PIR Module**
+The function that processes data from the **PIR Module**
 
 <div class="container">
   <div class="row">
@@ -53,7 +53,7 @@ Function for processing data from the **PIR Module**
 </div>
 <br></br>
 
-Resulting dashboard
+The resulting dashboard
 
 <div class="container">
   <div class="row">
@@ -64,11 +64,11 @@ Resulting dashboard
 
 ## 5. Summary
 
-✅ You have learned how to connect modules, monitor their outputs, and display them graphically.  
+✅ You can now connect modules, watch their outputs and display them graphically.  
 
-👉 Try also connecting the **Climate Module** and monitor pressure, humidity, or light.  
+👉 Also try connecting the **Climate Module** and watching pressure, humidity or illuminance.  
 
 :::info
-In this lesson, the **PIR Module** was used for orientation and temperature.  
-Its motion detection is less suitable for quick testing, but you can try it if the surroundings are calm.
+In this lesson, you used the orientation and temperature of the **PIR Module**.  
+Its motion detection is less suited to quick testing, but you can try it when nothing is moving around you.
 :::

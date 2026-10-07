@@ -68,7 +68,7 @@ Proto použijte uzel **Change** a nastavte v něm `msg.payload` na barvu v hexad
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/iot-function-led1.webp')} alt="Flow v Node-RED: vstup orientace přes uzel Change Color R do tématu pro nastavení barvy LED pásku"/>
+    <Image img={require('./img/iot-function-led1.webp')} alt="Flow v Node-RED: vstup orientace přes uzel Change Color R do topicu pro nastavení barvy LED pásku"/>
   </div>
 </div>
 
@@ -96,12 +96,10 @@ Byla by škoda nevyužít možnosti pásku naplno. Vyzkoušejte třeba příkaz 
 Bolí vás oči z přílišného jasu? `node/power-controller:0/led-strip/-/brightness/set` přijímá jako zprávu hodnotu 0–100 a podle ní nastaví jas.
 
 ## 10. Adresace
-Pásek lze adresovat i po jednotlivých LED pomocí `node//led-strip/-/set-pixel/set`. Zpráva pak obsahuje informace:
+Pásek lze adresovat i po úsecích, a to až po jednotlivé LED. Slouží k tomu topic `node/power-controller:0/led-strip/-/compound/set`. Zpráva obsahuje seznam dvojic: počet LED a jejich barvu. Tato zpráva například rozsvítí prvních 20 LED červeně a dalších 20 zeleně:
 ```json
-{"type":"rainbow", "wait":10}
+[20, "#ff0000", 20, "#00ff00"]
 ```
-
-Bolí vás oči z přílišného jasu? `node/power-controller:0/led-strip/-/brightness/set` přijímá jako zprávu hodnotu 0–100 a podle ní nastaví jas.
 
 ## 11. Shrnutí
 

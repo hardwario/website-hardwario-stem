@@ -6,132 +6,132 @@ import Image from '@theme/IdealImage';
 
 ## Introduction
 
-Whether you have an iguana, turtle, snake or gecko, you definitely want them to be as comfortable as possible at home. 👌🦎 Monitor the climate in their terrarium and make sure your green buddy has ideal living conditions.
+Whether you keep an iguana, a turtle, a snake or a gecko, you want it to feel as comfortable as possible at your place. 👌🦎 Monitor the climate in the terrarium and find out whether your green friend has ideal living conditions.
 
 
-In this project, you will learn **how to measure four climate values and display them in graphs**: temperature, humidity, luminosity and air pressure. Who knows? Your green buddies may reward you with a few stories about their dinosaur ancestors! 🦖 Or something like that.
+In this project, you will learn to **measure four climate values and show them in charts**: temperature, humidity, illuminance and air pressure. As a reward, your green friends might tell you a few stories about their dinosaur ancestors. 🦖 Or something like that.
 
-If you already have the Start Set, you will only need the [Climate Module](https://www.hardwario.store/p/climate-module/). Alternatively, the [Clime Set](https://www.hardwario.store/p/clime-set) contains **all the equipment** you need.
+If you already have the Start Set, you will also need the [Climate Module](https://www.hardwario.store/p/climate-module/). The [Clime Set](https://www.hardwario.store/p/clime-set) has **everything** you need.
 
 
 ## Prepare the box
 
-1. Put the Clime Set together and pair it.  You need the **radio climate monitor** firmware for the Core Module. If you don't know how to download the firmware or what it is, <a href="https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware" target="_blank">you can find out here</a>.
+1. Assemble and pair the Clime Set. If this is your first time, [we have a simple guide for you](/mini-course/lesson-1/); the steps are the same as for the Start Set. The Core Module needs the **twr-radio-climate-monitor** firmware. If you don't know how to get the firmware or what it is, <a href="https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/" target="_blank">you'll find out here</a>.
 
 
-2. You can monitor changes in temperature, light, humidity and air pressure under the **Messages** tab in Playground.
+2. You'll see the temperature, illuminance, humidity and air pressure change in the **Messages** tab in Playground.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-1.webp')} alt="Playground Messages tab listing climate-monitor topics with temperature, orientation, and presence values"/> </div> </div>
 
 ## Set up Node-RED
 
-1. Start programming in Node-RED. First, click on the **Functions** tab in Playground.
+1. You'll program in Node-RED. First, click the **Functions** tab in Playground.
 
-2. Drag a light purple **MQTT node** (bubble) onto the empty desktop. You can find it under the Input section.
+2. Drag a light purple **mqtt in** node (a bubble) onto the empty canvas. You'll find it in the network section.
 
-3. Double-click the node. In the **Topic** line you specify what you want the color indicator to display. On this occasion it will be temperature. Copy the temperature message from the Messages tab (without a number) to the line. Alternatively, just use this:
+3. Double-click the node to open it. In the **Topic** field you choose what the colored gauge will show. This time it's temperature, so copy the temperature message from the Messages tab (without the number) into the field. Or simply use this one:
 
 ```
 node/climate-monitor:0/thermometer/0:0/temperature
 ```
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-2.webp')} alt="Edit mqtt in node dialog with the climate-monitor temperature topic in the highlighted Topic field"/> </div> </div>
-Confirm with the **Done** button.
+Confirm with **Done**.
 
-4. Next to the node place a second one, this time light blue named **Gauge** (pointer). You will find it under the Dashboard section. This node determines how the measured temperature will be displayed on the screen.
+4. Next to it, place a second, light blue node called **Gauge**. You'll find it in the Dashboard section. This node decides how the measured temperature appears on the screen.
 
-5. Double-click on the Gauge node. In the **Range** line set the temperature range you would like to see on the pointer. 0 to 40 °C should be sufficient.
-In the **Label** line, rename the graph as you please and in the **Value format** line fill in the temperature unit, i.e. °C. If you want, you can also choose the color of the pointer in the **Colour gradient** line .
+5. Double-click the Gauge node. In the **Range** field, set the temperature range the gauge will show. 0 to 40 °C is enough.
+In the **Label** field, give the gauge any name you like, and add the temperature unit, °C, in the **Value format** field. If you like, also pick a color for the gauge in the **Colour gradient** field.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-3.webp')} alt="Edit gauge node dialog for temperature: Label, value format with degrees Celsius, and range 0 to 40 highlighted"/> </div> </div>
-Confirm with the **Done** button.
+Confirm with **Done**.
 
-6. The temperature measurement is ready, so let´s move on to setting the other values. Under the temperature measuring nodes, add two more identical nodes, namely **MQTT** and **Gauge**.
+6. Temperature is done, so move on to the other values. Below the temperature nodes, add two more of the same nodes: **MQTT** and **Gauge**.
 
-7. This time copy the Topic for measuring humidity to the **MQTT node**. It looks like this: node/climate-monitor:0/hygrometer/0:4/relative-humidity.
-In the new **Gauge node** set the **Range** to 0 to 100 and enter % in the **Value format** line (humidity is measured as a percentage). Do not forget to name the pointer or select a color.
+7. This time, copy the humidity topic into the **MQTT** node. It looks like this: node/climate-monitor:0/hygrometer/0:4/relative-humidity.
+In the new **Gauge** node, set **Range** to 0 to 100 and enter % in **Value format** (humidity is measured in percent). Don't forget to name the gauge, and give it a color if you like.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-4.webp')} alt="Humidity MQTT node with its Gauge highlighted; edit dialog shows Label, percent value format, and range 0 to 100"/> </div> </div>
 
-8. Now we go to the light pointer. 💡 The procedure is exactly the same: one **MQTT node** and one **Gauge node**.
+8. Next up is the illuminance gauge. 💡 The steps are exactly the same: one **MQTT** node and one **Gauge** node.
 
-9. Copy the following Topic into the **MQTT node**: node/climate-monitor:0/lux-meter/0:0/illuminance. In the **Gauge node**, set the range to 0 to 10,000 and enter light unit lx (so-called lux) in the **Value format** line. As before, you can choose the name and color again.
+9. Copy this topic into the **MQTT** node: node/climate-monitor:0/lux-meter/0:0/illuminance. In the **Gauge** node, set the range to 0 to 10,000 this time and enter the illuminance unit, lx (lux), in **Value format**. Again, pick a name and a color if you like.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-5.webp')} alt="Illuminance MQTT node with its Gauge highlighted; edit dialog shows lx value format and range 0 to 10000"/> </div> </div>
 
-10. Three of the four steps have already been covered. All that remains to do is to add the last value to measure: air pressure. Once again, add one **MQTT node** and one **Gauge node**.
+10. Three values down, one to go: air pressure. Add one more **MQTT** node and one more **Gauge** node.
 
-11. Copy the **Topic** to measure the air pressure into the MQTT node:
+11. Copy the **Topic** for air pressure into the MQTT node:
 
 ```
 node/climate-monitor:0/barometer/0:0/pressure
 ```
-In the new **Gauge**, add the 0 to 10,000 range again. This time you do not have to set the unit, but feel free to add a name and choose a color.
+In the new **Gauge** node, set the range to 80,000 to 110,000. The sensor sends air pressure in pascals, and near the ground it is around 100,000 Pa. You don't need to set the unit this time, but feel free to add a name and a color.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-6.webp')} alt="Pressure MQTT node with its Gauge highlighted; edit dialog shows the Label and range 0 to 10000"/> </div> </div>
 
-12. In order that you don't only see the current numbers, also add graphs to the three values to clearly show how humidity, luminosity and air pressure have evolved over the last hour. 📈
+12. To see more than just the current numbers, add charts for three of the values. They show at a glance how humidity, illuminance and air pressure changed over the last hour. 📈
 
-Under the Gauge nodes for humidity, luminosity and pressure, add one **Chart node** from under the Dashboard section.
+Below the Gauge nodes for humidity, illuminance and pressure, add one **Chart** node each from the Dashboard section.
 
-13. Gradually click through all three nodes and name them in **Label** just like the adjacent Gauge nodes. For the **X-axis** always set what time interval you want to display the results for (every hour should already be set automatically there).
+13. Open the three nodes one by one and give each the same **Label** as the Gauge node next to it. In **X-axis**, set the period you want to see the results for (one hour should already be set).
 
-For the **Y-axis** fill in the same ranges that you entered for the adjacent Gauges, i.e. for humidity 0 to 100, for pressure and luminance 0 to 10,000.
+In **Y-axis**, enter the same ranges as in the neighboring Gauge nodes: 0 to 100 for humidity, 0 to 10,000 for illuminance and 80,000 to 110,000 for pressure.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-7.webp')} alt="Edit chart node dialog with Label, X-axis interval, and Y-axis range highlighted, and three chart nodes in the flow"/> </div> </div>
-Done! Before you start measuring, add one more clever feature: a virtual guard.
+Done! Before you start measuring, add one more neat feature: a virtual guard.
 
 ## Add the ideal temperature indicator
 
-The virtual guard will alert you whenever the temperature in your lizard´s terrarium is not right. 🐍 You will need several nodes to build it.
+The virtual guard tells you whenever your reptile's terrarium is not at the right temperature. 🐍 You'll build it from several nodes.
 
-1. Above everything you've created, add a **Numeric node** from under the Dashboard section (123 is written on it).
-Click on it and fill in the **Range** and **Value format** lines just like for the first Gauge. If you can't remember, check out the screenshot below. Do not forget to name the node in the Label, e.g. Ideal temperature.
+1. Above everything you've built so far, add a **Numeric** node from the Dashboard section. You'll recognize it by the 123 on it.
+Open it and fill in **Range** and **Value format** exactly as for the first Gauge node. If you don't remember them, check the screenshot below. Don't forget to name the node in the Label field, for example Ideal temperature.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-8.webp')} alt="Numeric node on the canvas; edit dialog with Label, value format with degrees Celsius, and range 0 to 40 highlighted"/> </div> </div>
 
-2. Add another node next to it, but this time a **Change node** from under the Function section.
-Click on it and set it to **flow.optimal** and **msg.payload** (as shown in the screenshot).
-**What this is for**: These two nodes (Numeric and Change) allow you to set the ideal temperature; the guard will alert you if it is exceeded. 👮 The Numeric node is used to determine the optimal temperature in the Dashboard and the Change node for setting it to flow.optimal. Other nodes, which we will now add, work with it.
+2. Right next to it, add another node, a new one this time: a **Change** node from the Function section.
+Open it and set **flow.optimal** and **msg.payload** in it, one below the other (as in the screenshot).
+**What this is for**: These two nodes (Numeric and Change) set the ideal temperature, and the guard warns you when the measured temperature is off. 👮 You'll set the optimal temperature with the Numeric node on the Dashboard, and the Change node stores it in the flow.optimal variable. The nodes you add next work with that variable.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-9.webp')} alt="Change node next to the Numeric node; edit dialog with rule Set flow.optimal to msg.payload highlighted"/> </div> </div>
 
-3. Now place a **Switch node**, which can also be found under the **Function** section. Drag and place it next to the MQTT node for temperature measurement and click on it.
+3. Now it's time for a **Switch** node, which is also in the **Function** section. Drag it next to the MQTT node for temperature and open it.
 
-In it, set three different situations that can occur when monitoring the ideal temperature. That is, the temperature is just right, too low or too high.
+In it, you'll set up three situations that can happen while you watch the ideal temperature: the temperature is just right, too low or too high.
 
-4. Double-click on the small **\+ add** button to create three possible situations in the node. Then adjust them exactly as shown in the screenshot below. Notice that on each line there is “**flow.optimal**”. The program always checks what the value of the variable is and knows the right situation accordingly.
+4. Click the small **+add** button twice so the node has three situations. Then set them up exactly as in the screenshot below. Notice that every line contains “**flow.optimal**”. The program always checks the current value of this variable and uses it to tell which situation it is.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-10.webp')} alt="Edit switch node dialog with three rules comparing msg.payload against flow.optimal, outputs 1 to 3"/> </div> </div>
 
-5. Now is the time to set up messages to alert you to all three possible situations. To do this, place three **Change nodes** below each other next to the Switch node.
+5. Now set up the messages that tell you about all three situations. Place three **Change** nodes one below the other next to the Switch node.
 
-6. One by one click on all three Change nodes and write messages in them, such as ‘Temperature too high / low / just right’.
-If you want to set the **Switch node** exactly according to our screenshot, then write a message in the upper **Change node** for too high temperature, in the middle node for too low temperature and in the lower node for the optimal temperature.
+6. Open the three Change nodes one by one and write a message in each, for example ‘Temperature too high / too low / just right’.
+If you set up the **Switch** node exactly as in our screenshot, write the too-high message in the top **Change** node, the too-low message in the middle one and the just-right message in the bottom one.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-11.webp')} alt="Three Change nodes next to the Switch node; edit dialog with the too-high temperature message highlighted"/> </div> </div>
 
-7. Just one more node to go and you can run the program! 🏎️ Add a **Text node** from under the **Dashboard** section after the three Change nodes. This is for displaying the messages you set up in the previous step.
+7. Just one more node and you can start it all up! 🏎️ After the three Change nodes, add a **Text** node from the **Dashboard** section. It shows the messages you set up in the previous step.
 
-8. Click on the node and name it on the **Label** line, e.g. Temperature status.
+8. Open the node and name it in the **Label** field, for example Temperature status.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-13.webp')} alt="Text node after the Change nodes; edit dialog with the temperature status Label highlighted"/> </div> </div>
 
-9. Done! Now connect the whole flow according to our screenshot. Alternatively, if you feel up to it, connect it yourself, and then just check it according to our screenshot.💪
+9. Done! Now wire up the whole flow as in our screenshot. If you feel up to it, wire it yourself and then just check it against the screenshot. 💪
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-14.webp')} alt="Complete connected flow: four sensor branches with gauges and charts plus the ideal temperature guard, Deploy highlighted"/> </div> </div>
 
-10. Click the **Deploy** button in the top right to start the entire mega flow. In the Dashboard, you will see the measured values roughly like this:
+10. Click the **Deploy** button in the top right to start this whole big flow. The Dashboard will show your measurements roughly like this:
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-15.webp')} alt="Dashboard gauges showing temperature, humidity, and illuminance values"/> </div> </div>
 
-## Ready, steady… go!
+## Ready, steady, go!
 
-1. Securely attach the box **to the terrarium of your reptile brother or sister** with adhesive tape. 🏡
+1. Tape the box firmly **inside the terrarium of your scaly little brother or sister**. 🏡
 
-2. In the Dashboard, find the **optimal temperature setting** and use the two arrows to select the one that your iguana, snake or turtle needs. Find the ideal value for your pet on the Internet.
+2. On the Dashboard, find the **optimal temperature setting** and use the two arrows to choose the temperature your iguana, snake or turtle needs. Look up the ideal value for your pet online.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-16.webp')} alt="Dashboard detail: the optimal temperature setting with arrows and the temperature status message highlighted"/> </div> </div>
 
-3. Check if your buddy's terrarium is at the ideal temperature, and monitor **increases and decreases** in pressure, luminosity and humidity.
-4. If the measured temperature differs too much from the ideal one, go to a pet store or your vet to make sure your reptile is **fit, healthy and happy**. 👌
+3. Check that your pet has the ideal temperature, and watch how pressure, illuminance and humidity **rise and fall**.
+4. If the measured temperature is far off the ideal one, ask for advice at a pet store or your vet, so your reptile stays **perfectly happy**. 👌

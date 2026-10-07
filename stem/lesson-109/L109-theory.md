@@ -5,31 +5,37 @@ title_meta: "Theory (L109: IoT Soil Monitor)"
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation**: 10 mins
+**Time allocation**: 10 min.
 
 ## Soil monitoring
 
-### What is drought 
+### What is drought
 
-Drought is difficult to define because its meaning varies from region to region. In Bali, for example, drought is considered to be a period of six days without rain; in the desert regions, it is logically quite different. In general, drought occurs when there is a lack of rainfall over a prolonged period of time that leads to a shortage of water for an activity, a group of people or the environment. 
+Drought is hard to define, because its meaning differs from region to region. In Bali, for example, six days without rain count as a drought, while in desert regions the word naturally means something quite different. In general, a drought occurs when there is too little rainfall over a longer period and, as a result, not enough water for an activity, a group of people or the environment.
 
-Droughts are divided into four types: 
+We distinguish four types of drought:
 
-* **Meteorological**: negative deviation of rainfall from normal over a period of time.
-* **Agricultural**: soil drought, lack of moisture for crops 
-* **Hydrological**: significant reduction in water levels 
-* **Socio-economic**: impacts of drought on quality of life 
+* **Meteorological**: rainfall below normal over a certain period
+* **Agricultural**: soil drought, that is, a lack of moisture for crops
+* **Hydrological**: a significant drop in surface water or groundwater levels
+* **Socio-economic**: the impact of drought on quality of life and the economy
 
-On the other hand, high soil moisture can also cause problems. For example, waterlogged soil complicates agricultural work during sowing or harvesting. It is therefore important to monitor the soil and especially soil moisture. With IoT monitoring, for example, we can irrigate more precisely and thus increase crop yields while saving water. 
+On the other hand, soil that is too moist can also cause problems. Waterlogged soil, for example, makes sowing and harvesting harder. That is why it is important to monitor soil, above all its moisture. With IoT monitoring we can, for example, irrigate more precisely, increase yields and save water at the same time.
 
-### Soil water potential 
+### Soil water potential
 
-The water availability for plants is determined by the water potential of the soil. More precisely, it is the force that a plant must overcome to obtain water from the soil and the force that determines the distribution of soil moisture and the transport of solutions through the soil. The value of soil water potential is most often expressed in units of pressure and negative values. For example, if it is 0 MPa, it is full water capacity, all pores are filled with water and the plant has problems getting enough oxygen. If the values are in the range -0.005 to -0.015 MPa, it is a field water capacity, water is in the capillary pores and the plant has enough water and air. The wilting point occurs at -1.5 MPa, when transpiration exceeds water uptake by the wilting plant. 
+The availability of water to plants is determined by the soil water potential. More precisely, it is the force a plant has to overcome to draw water from the soil, and at the same time the force that determines how moisture is distributed and how solutions move through the soil.
 
-### How the soil is monitored
+Water potential is usually given as a negative pressure. For example:
 
-A common method of measuring soil moisture is the resistivity method. Such a sensor works on a trivial principle: it measures the conductivity between two electrodes. If the soil is moist, you get a higher conductivity (lower resistance) and vice versa. The electrodes are therefore plated over a large area to increase the contact area. A complication with this method of measurement is oxidation. 
+* **0 MPa**: full water capacity; all pores are filled with water and the plant struggles to take in oxygen
+* **-0.005 to -0.015 MPa**: field capacity; water sits in the capillary pores and the plant has enough water and air
+* **-1.5 MPa**: the wilting point, where transpiration exceeds water uptake and the plant wilts
 
-Therefore, the capacitance method is a more suitable method. This is a similar principle to that of smartphone touchscreens. Your finger changes the dielectric properties when it touches the glass. Briefly, the dielectric is the material and the environment you have around the electrodes. Also, water changes dielectric properties when it gets between the electrodes. In other words: Two pieces of metal (electrodes) have different capacitance to each other when air is there or when water is there. It's the same when you put them in dry soil versus wet soil. 
+### How soil is monitored
 
-At HARDWARIO we have developed a fully digital Soil Sensor, with a wide power range from 2.8V to 5.5V (Arduino compatible). It uses an industry-standard 1-Wire bus and allows multiple sensors to be connected in parallel (the number of sensors is virtually unlimited). It is fully sealed with silicone and can of course be submerged in water. And we will experiment with this sensor.
+Soil moisture is commonly measured with the resistive method. The sensor works on a simple principle: it measures the conductivity between two electrodes. Moist soil conducts better (lower resistance), dry soil worse. The electrodes are plated over a larger area so that their contact surface with the soil is as large as possible. The drawback of this method is electrode oxidation, which can affect the measurement.
+
+That is why the capacitive method is more suitable. It works on a principle similar to smartphone touchscreens: a finger touching the glass changes the dielectric properties. Put simply, the dielectric is the material and environment around the electrodes. Water changes the dielectric properties considerably when it gets between the electrodes. In other words, two metal electrodes have one capacitance when there is air between them and another when there is water. The same happens when you put the electrodes into dry soil and into wet soil.
+
+At HARDWARIO, we have developed the fully digital Soil Sensor with a wide supply voltage range from 2.8 V to 5.5 V (Arduino compatible). It communicates over the industry-standard 1-Wire bus, which can carry several sensors connected in parallel; their number is practically unlimited. The sensor is fully sealed in silicone, so it can of course be submerged in water. This is the sensor we will work with in the experiment.

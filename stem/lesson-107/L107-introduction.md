@@ -5,7 +5,7 @@ title_meta: "Introduction (L107: IoT Light Monitor)"
 ---
 import Image from '@theme/IdealImage';
 
-The goal of the **IoT Light Monitor** lesson is to introduce students to the benefits of so-called smart lighting, which include increased comfort and, above all, energy savings. During the experiment, we will demonstrate remote light control from a smartphone and adjust lighting to current conditions.
+The **IoT Light Monitor** lesson introduces students to the benefits of smart lighting: more comfort and, above all, energy savings. In the experiment, we will show how to control lights remotely with a wireless button and how to adapt the lighting to current conditions.
 
 ## What will you need for the lesson?
 
@@ -13,4 +13,4 @@ The goal of the **IoT Light Monitor** lesson is to introduce students to the ben
 * A projector or large monitor
 * [Start Set](https://www.hardwario.store/p/start-set) from the HARDWARIO TOWER IoT kit
 * [Control Set](https://www.hardwario.store/p/control-set) from the HARDWARIO TOWER IoT kit
-* [LED Strip](https://www.hardwario.store/p/led-strip-rgbw-1m) with 144 LEDs
+* An [LED strip](https://www.hardwario.store/p/led-strip-rgbw-1m) with 144 LEDs

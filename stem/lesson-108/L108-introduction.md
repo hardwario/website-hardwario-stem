@@ -5,17 +5,17 @@ title_meta: "Introduction (L108: IoT Pulse Monitor)"
 ---
 import Image from '@theme/IdealImage';
 
-The aim of the **IoT Pulse Monitor** lesson is to show students the possibilities of online energy consumption monitoring (electricity, gas, water) using a pulse counter.
+The **IoT Pulse Monitor** lesson shows students how a pulse counter can track energy consumption (electricity, gas and water) online.
 
-Students will build and program a device themselves to monitor pulses using the Sensor Set and a connected LED or magnetic sensor for converting meter impulses.
+Students build and program their own device from the Sensor Set. It counts the meter's pulses, picked up by a connected LED or magnetic sensor.
 
 ## What will you need for the lesson?
 
 * A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed
 * A projector or large monitor
-* [Start Set](https://www.hardwario.store/p/start-set) of the HARDWARIO TOWER IoT kit
-* [Control Set](https://www.hardwario.store/cz/search?phrase=sada%20control) of the HARDWARIO TOWER IoT kit
-* Pulse Sensors:
-	* [LED Pulse Sensor](https://www.hardwario.store/p/led-pulse-sensor)
-	* [Magnetic Pulse Sensor](https://www.hardwario.store/p/magnetic-pulse-sensor)
-	* Magnetic Pulse Sensor for Water Meters
+* [Start Set](https://www.hardwario.store/p/start-set) from the HARDWARIO TOWER IoT kit (you will use its Radio Dongle)
+* [Sensor Set](https://www.hardwario.store/p/sensor-set) from the HARDWARIO TOWER IoT kit
+* Pulse sensors:
+  * [LED Pulse Sensor](https://www.hardwario.store/p/led-pulse-sensor), or
+  * [Magnetic Pulse Sensor](https://www.hardwario.store/p/magnetic-pulse-sensor), or
+  * Magnetic pulse sensor for water meters

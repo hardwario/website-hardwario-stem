@@ -6,9 +6,9 @@ import Image from '@theme/IdealImage';
 
 # LoRa Climate Monitor
 
-With this kit, you can measure **temperature**, **humidity**, **luminosity** and **pressure**. Then the values are sent wirelessly to the LoRa gateway.
+With this kit you can measure **temperature**, **humidity**, **illuminance** and **pressure**. The values are then sent wirelessly to a LoRa gateway.
 
-You can use the community network The Things Network to receive the data.
+To receive the data, you can use The Things Network, a community network.
 
 ## What You Will Need
 
@@ -19,32 +19,34 @@ You can use the community network The Things Network to receive the data.
 
 ## Firmware Upload
 
-#### Step 1: Download the latest [**HARDWARIO Playground**](https://github.com/bigclownlabs/bch-playground/releases/latest)
+#### Step 1: Download the latest [**HARDWARIO Playground**](https://github.com/hardwario/hardwario-playground/releases/latest)
 
-#### Step 2: Connect the Core Module to your computer.
+#### Step 2: Connect the Core Module to your computer
 
-#### Step 3: In Playground, go to the **Firmware** tab, select `bcf-lora-climate-monitor` and flash the firmware.
+#### Step 3: In Playground, open the **Firmware** tab, select `hardwario/twr-lora-climate-monitor` and flash the firmware
 
-#### Step 4: After upload, the red LED on the Core Module will turn on for 2 seconds, then it will turn off.
+The firmware appears in the list only after you tick **Show all**.
+
+#### Step 4: After the upload, the red LED on the Core Module lights up for 2 seconds and then goes off
 
 ## LoRa Configuration
 
-For configuring the LoRa keys please follow [LoRa AT Commands Configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/) tutorial.
+To configure the LoRa keys, follow the [LoRa AT Commands Configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/) guide.
 
-## Transmitting the data
+## Transmitting the Data
 
-The LoRa Climate Monitor sends a LoRa packet when:
+The LoRa Climate Monitor sends a LoRa packet:
 
-* After power-up, when the batteries are inserted
-* Every 15 minutes when the measured values are the same
-* After pressing the button
-* When you type `AT$SEND` to the console
+* After power-up, that is, when you insert the batteries
+* Every 15 minutes if the measured values do not change
+* When you press the button
+* When you enter `AT$SEND` in the console
 
 ## Reading the Data
 
-The data are encoded in the LoRa message. You need to extract the right bits to get the values back. This is explained in the [README.md file](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). You can also use the `decode.py` python [script in the repository](https://github.com/bigclownlabs/bcf-lora-climate-monitor). In the same directory there is also `decode.js` which you can use in the TTN backend to decode values and send them for example directly to Ubidots.
+The data is encoded in the LoRa message, and you get the values back by extracting the right bits; the [README.md file](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer) explains how. You can also use `decode.py`, a Python [script in the repository](https://github.com/bigclownlabs/bcf-lora-climate-monitor). The same directory also contains `ttn.js`, which decodes the values directly in the TTN backend so you can pass them on, for example straight to Ubidots.
 
-You can pass the received HEX string as a parameter for the `decode.py`:
+Pass the received HEX string to `decode.py` as a parameter:
 
 ```text
 >>> python3 decode.py 011b0100f5600024c313

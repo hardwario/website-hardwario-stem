@@ -6,29 +6,29 @@ import Image from '@theme/IdealImage';
 
 ## Introduction
 
-Raise the IQ of your family washing machine. 🤖 Using the IoT box, programme a notification to let your parents know that the load has been finished.
+Raise your family washing machine's IQ. 🤖 With the IoT box, you'll program a notification that tells your parents the laundry is done.
 
-In this project, you will learn to set up the box so that it recognizes when the washing machine is finished and sends a notification to the mobile. 📱 👈
+In this project, you will learn to **set up the box to recognize when the washing machine has finished** and **send a notification to a phone**. 📱 👈
 
-All you need is the box with the button and the USB dongle. You will be all set with the basic HARDWARIO kit, the [Start Set](https://www.hardwario.store/p/start-set/).
+You only need a **box with a button** and a **Radio Dongle**, so the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/) is all you need.
 
 
-## Download new firmware
+## Download the new firmware
 
-1. Upload new firmware to the Core Module: **bcf-radio-washing-machine-monitor** (you will find it among other firmware in the Playground). Thanks to this firmware, the box will be more sensitive to vibrations of the washing machine. 🔃
+1. Flash the new **bcf-radio-washing-machine-monitor** firmware to the Core Module (you'll find it among the other firmware in Playground). It makes the box more sensitive to the washing machine's vibrations. 🔃
 
-**Our tip:** If you don’t know how to download the firmware or what it is, [you will find out here](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware).
+**Our tip:** Don't know how to get the firmware or what it is? [Find out here](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
 
-2. [Pair the Core Module with the USB Dongle](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device). Right after pairing it, you will see that your Core Module changed Alias to **washing-machine-detector**. 👌
+2. [Pair the Core Module with the Radio Dongle](https://docs.hardwario.com/tower/desktop-programming/radio-network-management/#pairing-new-devices). Right after pairing, you'll see the Core Module's alias change to **washing-machine-detector**. 👌
 
-![HARDWARIO Playground devices list](./img/smart-washing-machine/image4.png)
+![Playground device list with the paired washing-machine-detector](./img/smart-washing-machine/image4.png)
 
-## Get it started in the Node-RED
+## Get it going in Node-RED
 
-1. In the Playground, click on the **Functions tab**, where the [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming) programming desktop is located. 🤖
-2. Start as usual: first, place the **MQTT node** from the Input section on the desktop.
+1. In Playground, click the **Functions tab**, home of the [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming) programming canvas. 🤖
+2. Start as always: first place an **mqtt in** node from the network section on the canvas.
 
-Double-click on it and copy **Topic** in the field. With this, the box will know when the washing machine stops shaking:
+Double-click it and copy this topic into the **Topic** field. The box uses it to report that the washing machine has stopped shaking:
 
 ```
 node/washing-machine-detector:0/washing/finished
@@ -40,9 +40,9 @@ node/washing-machine-detector:0/washing/finished
   </div>
 </div>
 
-Confirm it with the **Done** button.
+Confirm with **Done**.
 
-3. Place the **Change node** from the Functions section next to it.
+3. Next to it, place a **Change** node from the Function section.
 
 <div class="container">
   <div class="row">
@@ -51,11 +51,11 @@ Confirm it with the **Done** button.
 </div>
 
 
-4. Inside the Change node, **set up a message** that will be sent to your parents’ mobile after the washing is done. The message should be free of diacritics.
-   Here’s a little inspiration:
-       - There’s clean laundry for you.
-       - I am finished. Do I get a week holiday now?
-       - Done and leave me alone. Your washing machine.
+4. In the Change node, **set the message** your parents will get on their phone when the laundry is done. Leave out accented letters.
+A little inspiration:
+    - Your clean laundry is waiting.
+    - I'm done. Do I get a week off now?
+    - Washing's done, so leave me alone. Your washing machine.
 
 <div class="container">
   <div class="row">
@@ -63,85 +63,85 @@ Confirm it with the **Done** button.
   </div>
 </div>
 
-Confirm it with the **Done** button.
+Confirm with **Done**.
 
 ## Prepare the Blynk IoT app
 
-1. If you don’t have one yet, create an account in the [Blynk IoT](https://blynk.io) app. See [this guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) for how to do it. It also covers how to create templates and datastreams. You’ll need both.
+1. If you don't have an account yet, create one in the [Blynk IoT](https://blynk.io) app. [This guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) shows how, and also how to create templates and datastreams. You'll need both.
 
-2. The second step is to create a device template. You’ll find how to do it [in the same guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). You can also reuse a template from previous projects if you have one.
+2. Next, create a device template, again following [the same guide](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). If you already have a template from previous projects, feel free to reuse it.
 
-3. Now set up a new Datastream. On the template detail, click the **Datastreams** tab. In the top right, click **Edit**. A **+ New Datastream** button appears. Click it, choose **Virtual Pin**, and a dialog opens:
+3. Now set up a new datastream. In the template detail, click the **Datastreams** tab and then **Edit** in the top right. A **+ New Datastream** button appears. Click it, choose **Virtual Pin**, and a dialog opens:
 
-![HARDWARIO Add Blynk IoT datastream](./img/smart-washing-machine/add-datastream-1.png)
+![Blynk IoT: adding a new datastream](./img/smart-washing-machine/add-datastream-1.png)
 
-4. Set a name for the new Datastream and pick one of the free Pins. We’ll want to send your own custom message in the mobile notification, so **choose the String data type** (a text string).
+4. Name the new datastream and pick one of the free pins. We want the phone notification to show your own message, so **choose String as the data type** (a text string).
 
-5. At the bottom of the dialog, also expand **Advanced settings** and tick the last option, **Expose to Automation**, so we can use it in automations. In the selector next to it, choose **Sensor** and also tick **Available in Conditions**. Create the Datastream by clicking **Create**.
+5. At the bottom of the dialog, also expand **Advanced settings** and tick the last option, **Expose to Automation**, so the datastream can be used in automations. In the menu next to it, choose **Sensor** and also tick **Available in Conditions**. Create the datastream by clicking **Create**.
 
-![HARDWARIO Add Blynk IoT datastream](./img/smart-washing-machine/add-datastream-2.png)
+![Blynk IoT: datastream advanced settings](./img/smart-washing-machine/add-datastream-2.png)
 
-6. In the top right, save your work with the **Save** button.
+6. Save your work with the **Save** button in the top right.
 
 ## Create a device
 
-If you don’t have one yet, create a device from the template you made. We describe how to do it [in the guide you already know](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+If you don't have a device yet, create one from your template. We describe how [in the guide you already know](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
 ## Create an automation
 
 1. Switch to the **Automation** section and click the **+ Create Automation** button.
 
-![HARDWARIO Add Blynk IoT automation](./img/smart-washing-machine/add-automation-1.png)
+![Blynk IoT: creating an automation](./img/smart-washing-machine/add-automation-1.png)
 
-2. From the available options, choose **Device State**. The automation evaluates every time you send a message to the app.
+2. From the options offered, choose **Device State**. The automation runs every time you send a message to the app.
 
-![HARDWARIO Add Blynk IoT automation](./img/smart-washing-machine/add-automation-2.png)
+![Blynk IoT: choosing the Device State trigger](./img/smart-washing-machine/add-automation-2.png)
 
-3. Setting up the automation is simple. In the **When** section you set when the automation should run, and in the **Do this** section what should happen next.
+3. Setting up the automation is simple: in the **When** section you set when it should run, and in the **Do this** section what should happen next.
 
-4. First, set up the **When** section. Choose your device and the **Datastream you created**. A third selector appears; leave it set to **Is Any**.
+4. Set up the **When** section first: choose your device and the **datastream you created**. A third menu appears; leave it set to **Is Any**.
 
-5. In the **Do This** section, click **Send app notification** and set the recipient. To keep it simple, set yourself. Into the **Subject** and **Message** fields, drag the **Trigger value** item with your mouse. It’s the variable that holds the text of your message.
+5. In the **Do This** section, click **Send app notification** and set the recipient. To keep it simple, choose yourself. With your mouse, drag the **Trigger value** item into the **Subject** and **Message** fields. It's the variable that holds the text of your message.
 
-6. Finally, don’t forget to set the **automation name**. In the **Limit period** select, you can limit how soon the next notification can arrive after one is sent.
+6. Finally, don't forget to fill in the **automation name**. In the **Limit period** menu, you can set how soon another notification may follow the previous one.
 
-![HARDWARIO Add Blynk IoT automation](./img/smart-washing-machine/add-automation-3.png)
+![Blynk IoT: automation settings](./img/smart-washing-machine/add-automation-3.png)
 
-7. Save the automation by clicking **Save**.
+7. Save the automation with the **Save** button.
 
-## Set up your mobile
+## Set up the phone
 
-1. It’s time to steal your mom’s or dad’s mobile and set up their own Blynk IoT. If you don’t know Blynk yet, [**check out the guide**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+1. Time to steal your mom's or dad's phone for a minute and set up Blynk IoT on it. If you're new to Blynk, [**check out the guide**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
-2. In Blynk, sign in with your account.
+2. Sign in to Blynk with your account.
 
 ## Finish the programming
 
-1. Go back to your computer. On the Node-RED canvas, add a green **Write node** after both nodes. You’ll find it on the left under the **Blynk IoT** section (Careful! Not Blynk ws).
+1. Go back to your computer. On the Node-RED canvas, add a **green Write node** after the two nodes. You'll find it on the left in the **Blynk IoT** section (careful, not Blynk ws).
 
-![Blynk IoT - HARDWARIO Playground](./img/smart-washing-machine/playground-1.png)
+![Blynk IoT nodes in HARDWARIO Playground](./img/smart-washing-machine/playground-1.png)
 
-2. Double-click the node. Then click the **pencil**. ✏
+2. Double-click the node, then click the **pencil**. ✏
 
-![Blynk Connection settings](./img/smart-washing-machine/playground-2.png)
+![Blynk connection settings](./img/smart-washing-machine/playground-2.png)
 
-3. A window has opened for pairing with Blynk. Here set the **Url** to ``blynk.cloud``, and into the **Auth Token** and **Template ID** fields copy the values from the device detail in the web app on your computer.
+3. A window opens for connecting to Blynk. Enter ``blynk.cloud`` in the **Url** field, and copy the values from the device detail in the web app on your computer into the **Auth Token** and **Template ID** fields.
 
-![Blynk IoT - HARDWARIO Playground](./img/smart-washing-machine/playground-3.png)
+![Blynk IoT connection in HARDWARIO Playground](./img/smart-washing-machine/playground-3.png)
 
-Confirm the settings with the **Add** button.
+Confirm the settings with **Add**.
 
-4. Fill in the virtual Pin number of the Datastream you created and save everything with the **Done** button.
+4. Fill in the virtual pin number of the datastream you created and save everything with **Done**.
 
-5. All that’s left is to **connect** it and send a command to the space with the red **Deploy** button on the top right. 👏
+5. All that's left is to **wire the nodes together** and send the command off into space with the red **Deploy** button in the top right. 👏
 
-![Deploy flow in Node-RED](./img/smart-washing-machine/playground-4.png)
+![Deploying the flow in Node-RED](./img/smart-washing-machine/playground-4.png)
 
 ## Give it a spin!
 
-1. **Put the box on the washing machine.** Stick it with a small piece of tape to prevent it from falling.
+1. **Put the box on the washing machine** and stick it down with a small piece of tape so it doesn't fall off.
 
-2. **The box will recognize when the washing machine finishes**, because it will stop shaking. It will send a message to your mom’s or dad’s mobile.
-Cool, huh? All of a sudden, you are **living in a smart household**! 🤡
+2. **The box recognizes when the washing machine has finished**, because it stops shaking, and sends a message to your mom's or dad's phone.
+Cool, right? Suddenly you're **living in a smart home**! 🤡
 
-![Get Notification on Phone](./img/smart-washing-machine/blynk-notification.jpg)
+![Notification on the phone](./img/smart-washing-machine/blynk-notification.jpg)

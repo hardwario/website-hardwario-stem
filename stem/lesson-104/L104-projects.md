@@ -7,9 +7,9 @@ import Image from '@theme/IdealImage';
 
 **Time allocation**: 10 min. 
 
-Students try out additional projects related to the lesson topic, or participate in an Ideation session
+Students try out more projects on the lesson topic or look for ideas using the Ideation method.
 
-## Other topic-related projects to try
+## Additional topic-related projects to try out
 
 ### Hackster.io Platform
 
@@ -54,4 +54,4 @@ Students try out additional projects related to the lesson topic, or participate
 
 ### Ideation
 
-Students propose real-world applications of the knowledge gained through theoretical explanations and experiments. They write their ideas into a graph, where the x-axis estimates the difficulty (cost) of the project and the y-axis represents the impact of the solution.
+Students suggest real-life uses for the knowledge they gained from the theory and the experiments. They plot their ideas on a graph, with the estimated difficulty (cost) of the project on the x-axis and the impact of the solution on the y-axis.

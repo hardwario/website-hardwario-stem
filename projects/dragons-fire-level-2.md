@@ -1,23 +1,23 @@
 ---
 slug: dragons-fire-level-2
-title: Dragons fire level 2
+title: "Dragon's breath: level 2"
 ---
 import Image from '@theme/IdealImage';
 
 ## Introduction
 
-Do you dare? Create two of your favorite competitions by building just one project, switching between them as you like! Everyone will have fun at your party. 🕺
+Are you up for it? Build one project with two favorite competitions and switch between them whenever you like! Your party is guaranteed to be fun. 🕺
 
-In this project, you will learn how to **save the highest measured value and determine different competitions in one project and switch between them**.
+In this project, you will learn how to **save the highest measured value, set up several types of competition in one project and switch between them**.
 
-The basic version of this project can be found here: [IoT party game: Do you have a dragon´s fire or freezing breath in you?](/projects/dragons-fire/)
+You'll find the basic version of the project here: [IoT party game: do you have dragon fire or frosty breath inside you?](/projects/dragons-fire/)
 
-All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set).
+Once again, the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set) is all you need.
 
 
 ## Prepare Node-RED
 
-1. Put the Starter Kit together and pair it. On the Core Module you will need the familiar **bcf-radio-push-button** firmware again.
+1. Assemble the Start Set and pair it. The Core Module needs the good old **twr-radio-push-button** firmware again.
 <div class="container">
   <div class="row">
     <Image img={require('./img/push-the-button/push-the-button-playground-devices-connected.webp')} alt="Playground Devices tab with the paired Core Module listed under the alias push-button:0"/>
@@ -26,18 +26,18 @@ All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/
 
 ## Measure the hottest breath
 
-Build this flow to detect which of your party buddies has the **hottest dragon´s breath**. 🐉 To start measuring the highest temperature, **briefly press and release the button**.
+Build this flow to find out who in your group is the **hottest dragon**. 🐉 The highest temperature starts being measured after a **short press of the button**.
 ![Measure the hottest breath](./img/dragons-fire-level-2/image9.png)
 
-**Do you need advice on how to do this?**
+**Need a hint?**
 
-- The **MQTT node** under the Input section hides Topic with a short press of the button:
+- The **mqtt in** node from the **network** section has the short button press in its Topic field:
 
 ```
 node/push-button:0/push-button/-/event-count
 ```
 
-- The javascript code under the **Function node** looks like this
+- The JavaScript code in the **Function** node looks like this:
 
 ```
 var hottestTemp = flow.get("hottestTemp");
@@ -54,28 +54,28 @@ if(!flow.get("pressed")) {
   }
 }
 ```
-- The highest temperature is recorded under the **Text node**. Do not forget to enter the value `{{msg.payload}}°C` in the Value format line.
-- The **Change node** lists the participant with the hottest breath; you have to set the flow in it. contestantName
+- The lower **Text** node records the highest temperature. Don't forget to enter `{{msg.payload}}°C` in its Value format field.
+- The **Change** node shows the participant with the hottest breath. Set flow. contestantName in it.
 ![Change node](./img/dragons-fire-level-2/image8.png)
-- The flow ends with an ordinary **Text node**.
+- The flow ends with an ordinary **Text** node.
 
 ## Measure the coldest breath
 
-Place the next flow below the previous one. With this, you'll be able to measure which one of you has the coldest breath to be anointed the **Night King.** ❄ To start measuring the coldest temperature, **press and hold the button**.
+Place another flow below the previous one. With it, you'll find out which of you breathes so cold you could **rival the Night King**. ❄ The lowest temperature only starts being measured after a **long press of the button**.
 
-**Our tip**: Avoid generating a similar flow from scratch by simply copying and rewriting the nodes. Copy and paste with **CTRL + C & CTRL + V**; this can be applied to several nodes at once. Hurray! 🙌
+**Our tip**: You don't have to build a similar flow from scratch: just copy the nodes and edit them. **Ctrl+C and Ctrl+V** is all it takes, even for several nodes at once. Hooray! 🙌
 
 ![Measure the coldest breath](./img/dragons-fire-level-2/image1.png)
 
-**Do you need advice on how to do this?**
+**Need a hint?**
 
-- Under Topic in the **MQTT node** there is a press and hold button:
+- This time, the Topic field in the **MQTT** node matches a long button press:
 
 ```
 node/push-button:0/push-button/-/hold-count
 ```
 
-- The javascript code under the **Function node** looks like this:
+- This time, the code in the **Function** node looks like this:
 
 ```
 var coldestTemp = flow.get("coldestTemp");
@@ -94,27 +94,27 @@ if(!flow.get("holded")) {
 
 ```
 
-- **Both Text nodes are the same as in the previous flow**, with the only change that needs to be made being that the hottest is changed to the coldest.
+- **Both Text nodes are the same as in the previous flow**; just change hottest to coldest.
 
-- **The Change node is the same as in the previous flow**.
+- **The Change node is the same as in the previous flow.**
 
-❗ **Our tip**: Something isn't working as it should? Add the Debug node to your desktop to help remove any bugs. 🐞
+❗ **Our tip**: Something not working the way it should? Add a Debug node to the workspace to help you track down any bugs. 🐞
 
-## Set continuous measurement
+## Set up continuous measurement
 
-Create a new flow and place it under both previous ones. With this flow, you measure every attempt. In addition, the table remembers the names of the participants.
+Create a new flow and place it below the other two. This flow measures every attempt, and the table also remembers the participants' names.
 
 ![Continuous measurement flow](./img/dragons-fire-level-2/image15.png)
 
-**Do you need advice on how to do this?**
+**Need a hint?**
 
-- The temperature measurement is under Topic in the **MQTT node**:
+- The Topic field in the **MQTT** node holds the temperature measurement:
 
 ```
 node/push-button:0/thermometer/0:1/temperature
 ```
 
-- The javascript code under the **Function node** looks like this:
+- The code in the **Function** node looks like this:
 
 ```
 var temp = msg.payload;
@@ -132,75 +132,75 @@ else if(flow.get("holded")) {
 }
 ```
 
-- The dark blue **Text node** shows the temperature measured by the box for the current competitor in degrees Celsius: `{{msg.payload}}°C`
+- The dark blue **Text** node shows the temperature the box measures for the current contestant, in degrees Celsius: `{{msg.payload}}°C`
 
-- If the **Text Input node** (the light blue one) has zero in the Delay line, then you must confirm the name of the competitor in the table by pressing Enter.
+- The **Text input** node (the light blue one) has zero in its Delay field, so you have to confirm each contestant's name in the table with the Enter key.
 
-- The **Change node** has two rules. The first rule leaves the value empty until it registers the first temperature. The second one sets the average temperature to 30 °C, meaning that warmer results will be above 30 °C and cooler ones below it.
+- The **Change** node has two rules. The first leaves the value empty until the first temperature arrives. The second sets the average temperature to 30 °C, so warmer results will be above 30 °C and cooler ones below it.
 
 ![Continuous measurement](./img/dragons-fire-level-2/image3.png)
 
-- Under the **Function node**, the javascript code for storing names looks like this:
+- The **Function** node with the code that stores the names looks as simple as this:
 
 ```
 flow.set("contestantName", msg.payload);
 return msg;
 ```
 
-- The last **Text node ** is simply a text node that announces the current competitor. Voilà!
+- The last **Text** node is an ordinary text node that announces the current contestant. Voilà!
 
-## Set type of competition
+## Set the type of competition
 
-Easy peasy? Just add one **timestamp flow** to change the game type! A short press on the button measures the hottest breath and a long press on the button measures the coldest breath. Fantastic! 👍
+Too easy? Then add one more **timestamp flow** that switches the type of game! A short press of the button measures the hottest breath, a long press the coldest. Brilliant! 👍
 
 ![Timestamp flow](./img/dragons-fire-level-2/image4.png)
 
-### Do you need advice on how to do this?
+### Need a hint?
 
-- The first node is called **Inject**, which can be found under the Input section. It checks every second which competition is running. By pressing the button for a long or short time, it will determine whether the competition is for the coldest or hottest breath, and will open the competition accordingly.
+- The first node is called **inject**, and you'll find it in the **common** section. Every second, it checks which competition is running: from the long or short button press it knows whether you're competing for the coldest or the hottest breath, and then it displays that competition.
 
 ![Inject](./img/dragons-fire-level-2/image12.png)
 
-Set it to repeat after one second.
+Set it to repeat every second.
 
 ![Interval setting](./img/dragons-fire-level-2/image5.png)
 
-- The upper **Switch node** responds to a short press of the button and contains _is true_.
+- **The upper Switch node** reacts to a short button press and contains _is true_.
 
 ![Switch node](./img/dragons-fire-level-2/image7.png)
 
-- The lower **Switch node** responds to the button being pressed and held and also contains _is true_.
+- **The lower Switch node** reacts to holding the button down and also contains _is true_.
 
 ![Lower Switch node](./img/dragons-fire-level-2/image2.png)
 
-- All three Change nodes contain a message. The upper node contains a message announcing the **hottest breath competition**:
+- All three Change nodes contain a message. The upper one announces the **hottest breath competition**:
 
 ![Hottest breath competition](./img/dragons-fire-level-2/image13.png)
 
-The middle Change node contains a message announcing **no competition is running at the moment**:
+The middle one says that **no competition is running right now**:
 
 ![No competition running](./img/dragons-fire-level-2/image14.png)
 
-The lower Change node announces the **coldest breath competition**:
+The lower one announces the **coldest breath competition**:
 
 ![Coldest breath competition](./img/dragons-fire-level-2/image10.png)
 
-- The closing **Text node** announces the type of competition.
+- The final **Text** node announces the type of competition.
 
-## Set default values
+## Set the default values
 
-Hold onto your hat, we're heading into the final stretch. The last flow sets the **default values**: 30 °C as an optimum temperature, a very low starting value for the highest temperature and a very high starting value for the lowest temperature. The actual measured temperatures are then compared with these temperatures.
+Hold on to your hats, we're heading into the final. The last flow sets the **default values**: 30 °C as the optimum temperature, a very low starting value for the highest temperature and a very high starting value for the lowest temperature. The real measured temperatures are then compared with these values.
 
 ![Timestamp value setting](./img/dragons-fire-level-2/image17.png)
 
 
-### Do you need advice on how to do this?
+### Need a hint?
 
-- The **Inject node** contains a checked box with which the default values are set just a moment after pressing the Deploy button.
+- The **Inject** node has a box ticked that sets the default values a moment after you press the Deploy button.
 
 ![Inject node](./img/dragons-fire-level-2/image11.png)
 
-- The **Function node** contains javascript code that sets the default values.
+- The **Function** node contains the JavaScript that sets the default values.
 
 ```
 flow.set("contestantTemp", 30);
@@ -209,23 +209,23 @@ flow.set("coldestTemp", 100);
 return msg;
 ```
 
-## Look at the result.
+## Admire your work
 
-That's how sexy your desktop looks now. Enjoy it, just like when you saw the sea for the first time ... 🌊 Just one more second ... and another ... and then press your good old friend **Deploy** in the top right.
+This is how great your workspace looks now. Enjoy the view like the first time you saw the sea… 🌊 Just a moment longer… and another… Then press your good old friend **Deploy** in the top right corner.
 
 ![Deploy](./img/dragons-fire-level-2/image18.png)
 
 ## Let's compete!
 
-As you may have noticed, the box reacts to a short press of the button: which starts the **hottest breath competition**, and press and hold: which starts the **coldest breath competition**.
+1. As you've probably noticed, the box tells two kinds of press apart: a short press starts the **hottest breath competition**, a long press the **coldest breath competition**.
 
-### How to compete?
+### How to compete
 - Open the **Dashboard** tab in Playground.
-- First write the name of the competitor
+- First, type the contestant's name
 - and confirm it with **Enter**.
-- Subsequently, **briefly press or press and hold** to select the type of competition. 👇
-- When the first competitor has tried their luck, **briefly press or press and hold the button** to end the current competition and save the results.
-- For the next competitors follow the same procedure, one at a time.
+- Then choose the type of competition with a **short or long press of the button**. 👇
+- When the contestant has had their go, end the competition and save the result with **a press of the same length**.
+- Do the same for the next contestants, one at a time.
 ![Competitors](./img/dragons-fire-level-2/image16.png)
 
-At this difficulty level, **all help is permitted**! Try what makes your breath hotter or colder. May the best Dragon or Night King win! Fingers crossed it´s you! 💪
+2. At this level too, **any help is allowed**! Find out what heats your breath up the most and what cools it right down. Fingers crossed, dragons! 💪

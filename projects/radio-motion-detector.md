@@ -6,9 +6,9 @@ import Image from '@theme/IdealImage';
 
 # Radio Motion Detector
 
-This document will guide you through the **Radio Motion Detector** project. You will be able to interact with your motion detector in **Node-RED** and trigger the **IFTTT** push notification service when the movement gets detected. You will get the push notification on your smart phone.
+This guide walks you through the **Radio Motion Detector** project. You'll work with the motion detector in **Node-RED**, and when it detects movement, the **IFTTT** service sends a push notification to your smartphone.
 
-## Block Concept
+## Block Diagram
 
 
 <div class="container">
@@ -19,50 +19,50 @@ This document will guide you through the **Radio Motion Detector** project. You 
 
 ## Requirements
 
-* Either [Motion Set](https://www.hardwario.store/p/motion-set), or individual components:
+* Either the [Motion Set](https://www.hardwario.store/p/motion-set) or these individual components:
 
-  * 1x [Climate Module](https://www.hardwario.store/p/climate-module)
+  * 1x [PIR Module](https://www.hardwario.store/p/pir-module)
   * 1x [Core Module](https://www.hardwario.store/p/core-module)
   * 1x [Mini Battery Module](https://www.hardwario.store/p/mini-battery-module)
   * 1x [Radio Dongle](https://www.hardwario.store/p/radio-dongle)
 
-* One of these options:
+* One of the following:
 
   * **HARDWARIO Playground** installed \(recommended\)
-    You can find more information in the [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/) document.
+    See [**Playground Installation**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/) for details.
   * **Raspberry Pi** with the **HARDWARIO Raspbian** distribution
-    You can find more information in the document [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/).
+    See [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/) for details.
   * **HARDWARIO Firmware Tool** installed
-    You can find more information in the document [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
+    See [**Firmware Flashing Tool**](https://docs.hardwario.com/tower/command-line-tools/firmware-tool/) for details.
 
 ## Firmware Upload
 
-In this procedure we will use the **HARDWARIO Playground** to upload firmware to the **Core Module**.
+You'll upload the firmware to the **Core Module** with **HARDWARIO Playground**.
 
-#### Step 1: Connect the Micro USB cable to the **Core Module** and your computer
+#### Step 1: Connect the **Core Module** to your computer with a Micro USB cable
 
-#### Step 2: Flash firmware
+#### Step 2: Flash the firmware
 
-Run the HARDWARIO Playground. In the Firmware tab choose and upload the `bcf-radio-motion-detector` firmware to the **Core Module.**
+Start HARDWARIO Playground, select the `hardwario/twr-radio-motion-detector` firmware on the Firmware tab and upload it to the **Core Module**.
 
 :::warning
 
-**Flashing Core Module R1 & R2**
-For differences of flashing older **Core Module 1** and newer **Core Module 2** please read **Core Module R1 and R2 comparison** in the **Hardware section**
+**Flashing Core Module R1 and R2**
+The older **Core Module 1** and the newer **Core Module 2** are flashed differently; see **Core Module R1 and R2 comparison** in the **Hardware section**.
 
 :::
 
-#### **Step 3:** Remove the Micro USB cable from the **Core Module** and your computer
+#### **Step 3:** Disconnect the Micro USB cable from the **Core Module** and the computer
 
 :::success
 
-At this point your firmware is successfully uploaded.
+Your firmware is now uploaded.
 
 :::
 
-## Hardware Assembling
+## Hardware Assembly
 
-See short video with easy step by step demonstration:
+Watch this short video for a simple step-by-step demonstration:
 
 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
   <iframe
@@ -79,19 +79,19 @@ See short video with easy step by step demonstration:
 
 :::warning
 
-Make sure the **Mini Battery Module** does not have batteries inserted.
+Check that there are no batteries in the **Mini Battery Module**.
 
 :::
 
-#### **Step 2:** Plug the **Core Module** on top of the **Mini Battery Module**
+#### **Step 2:** Plug the **Core Module** onto the **Mini Battery Module**
 
-#### **Step 3:** Plug the **PIR Module** on top of the **Core Module**
+#### **Step 3:** Plug the **PIR Module** onto the **Core Module**
 
-## Playground Bootstrap
+## Playground Setup
 
 :::danger
 
-If you are using the new **HARDWARIO Playground**, then use the **Functions** tab instead of using [**http://localhost:1880/**](http://localhost:1880/). Also the pairing process is now done in **Devices** tab. For communication test use the **Messages** tab.
+If you use the new **HARDWARIO Playground**, open the **Functions** tab instead of [**http://localhost:1880/**](http://localhost:1880/). Pairing now happens on the **Devices** tab, and you test communication on the **Messages** tab.
 
 :::
 
@@ -99,14 +99,14 @@ If you are using the new **HARDWARIO Playground**, then use the **Functions** ta
 
 [http://localhost:1880/](http://localhost:1880/)
 
-#### Step 2: You should see the empty workspace with **Flow 1**
+#### Step 2: You should see an empty workspace with **Flow 1**
 
-#### Step 3: Insert the following snippet in the flow \(using **Menu &gt;&gt; Import**\) and click in **Flow 1** tab
+#### Step 3: Import the following snippet into the flow \(**Menu &gt;&gt; Import**\) and click the **Flow 1** tab
 
 ```text
 [{"id":"2fc604fc.3b6abc","type":"inject","z":"dfc861b.b2a02a","name":"List all gateways","topic":"gateway/all/info/get","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":460,"wires":[["a2c10833.24d5d8"]]},{"id":"1e4502b8.2f63fd","type":"inject","z":"dfc861b.b2a02a","name":"Start node pairing","topic":"gateway/usb-dongle/pairing-mode/start","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":570,"y":580,"wires":[["795ff5a7.8e266c"]]},{"id":"3d844ce2.932864","type":"inject","z":"dfc861b.b2a02a","name":"Stop node pairing","topic":"gateway/usb-dongle/pairing-mode/stop","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":640,"wires":[["5967c452.c838bc"]]},{"id":"f202b253.2705b","type":"inject","z":"dfc861b.b2a02a","name":"List paired nodes","topic":"gateway/usb-dongle/nodes/get","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":520,"wires":[["f0aca138.0b2c3"]]},{"id":"349f02fd.890f6e","type":"inject","z":"dfc861b.b2a02a","name":"Unpair all nodes","topic":"gateway/usb-dongle/nodes/purge","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":700,"wires":[["2f1c5bb6.53d6f4"]]},{"id":"cf61d75d.4ad8f8","type":"mqtt in","z":"dfc861b.b2a02a","name":"","topic":"#","qos":"2","broker":"67b8de4a.029d3","x":530,"y":400,"wires":[["a5cb0658.f5d658"]]},{"id":"a5cb0658.f5d658","type":"debug","z":"dfc861b.b2a02a","name":"","active":true,"console":"false","complete":"false","x":790,"y":400,"wires":[]},{"id":"a2c10833.24d5d8","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":460,"wires":[]},{"id":"f0aca138.0b2c3","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":520,"wires":[]},{"id":"795ff5a7.8e266c","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":580,"wires":[]},{"id":"5967c452.c838bc","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":640,"wires":[]},{"id":"2f1c5bb6.53d6f4","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":700,"wires":[]},{"id":"67b8de4a.029d3","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""},{"id":"717f7c18.ba0a24","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
 ```
-It will look like this:
+It looks like this:
 
 <div class="container">
   <div class="row">
@@ -116,11 +116,11 @@ It will look like this:
 
 :::info
 
-This snippet provides control buttons for gateway/radio commands. These commands are sent over the MQTT protocol.
+The snippet adds buttons for the gateway and radio commands, which are sent over MQTT.
 
 :::
 
-#### Step 4: Deploy the flow using the **Deploy** button in the top-right corner
+#### Step 4: Deploy the flow with the **Deploy** button in the top-right corner
 
 #### Step 5: Open the **debug** tab
 
@@ -132,11 +132,11 @@ This snippet provides control buttons for gateway/radio commands. These commands
 
 :::info
 
-In the **debug** tab, you will be able to see all the MQTT messages.
+The **debug** tab shows all MQTT messages.
 
 :::
 
-#### Step 6: Click on the **List all gateways** button. You should see a response like this in the **debug** tab
+#### Step 6: Click the **List all gateways** button. The **debug** tab should show a response like this
 
 <div class="container">
   <div class="row">
@@ -146,15 +146,15 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 :::success
 
-At this point, you've got working **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** and **HARDWARIO Gateway**.
+You now have working **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** and **HARDWARIO Gateway**.
 
 :::
 
 ## Radio Pairing
 
-In this section, we will create a radio link between the **Radio Dongle** and the **Radio Motion Detector**. Follow these steps in **Node-RED**:
+In this section, we'll establish a radio link between the **Radio Dongle** and the **Radio Motion Detector**. In **Node-RED**, follow these steps:
 
-#### Step 1: Click on the **Start node pairing** button
+#### Step 1: Click the **Start node pairing** button
 
 <div class="container">
   <div class="row">
@@ -162,9 +162,9 @@ In this section, we will create a radio link between the **Radio Dongle** and th
   </div>
 </div>
 
-#### Step 2: Insert the batteries into the **Radio Motion Detector** to send the pairing request (you should also see the red LED on the **Core Module** to be on for about 2 seconds)
+#### Step 2: Insert the batteries into the **Radio Motion Detector** to send the pairing request (the red LED on the **Core Module** should also light up for about 2 seconds)
 
-#### Step 3: Click on the **Stop node pairing** button
+#### Step 3: Click the **Stop node pairing** button
 
 <div class="container">
   <div class="row">
@@ -174,19 +174,19 @@ In this section, we will create a radio link between the **Radio Dongle** and th
 
 :::success
 
-At this point, you've got established a radio link between the node (**Radio Motion Detector**) and the gateway (**Radio Dongle**).
+You now have a radio link between the node (**Radio Motion Detector**) and the gateway (**Radio Dongle**).
 
 :::
 
 ## Communication Test
 
-Follow these steps in **Node-RED**:
+In **Node-RED**, follow these steps:
 
-#### Step 1: Switch to **debug** tab on the right
+#### Step 1: Switch to the **debug** tab on the right
 
-#### Step 2: Start waving your hand in front of the **PIR Module** to trigger a radio transmission.
+#### Step 2: Wave your hand in front of the **PIR Module** to trigger a radio transmission
 
-You should then see similar messages:
+You should then see messages like these:
 
 <div class="container">
   <div class="row">
@@ -196,25 +196,25 @@ You should then see similar messages:
 
 :::success
 
-At this point, you've got verified radio communication.
+Radio communication is now verified.
 
 :::
 
 ## Enclosure
 
-Optionally put the assembly into the appropriate enclosure, if you have one.
+If you have a suitable enclosure, you can put the assembly into it.
 
 :::info
 
-You can find more information about the enclosures in the document [**Enclosures**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
+You'll find enclosures for TOWER kits in the [**Enclosures**](https://www.hardwario.store/enclosures) category of the HARDWARIO Store.
 
 :::
 
 ## Integration with IFTTT
 
-In this section, we will create an **Applet** in the **IFTTT** service. The **Applet** is a sort of event-trigger mechanism.
+In this section, we'll create an **Applet** in the **IFTTT** service. An **Applet** is a rule that responds to an event with an action.
 
-#### Step 1: Open the web-browser and go to [**IFTTT**](https://ifttt.com/)
+#### Step 1: Open a web browser and go to [**IFTTT**](https://ifttt.com/)
 
 <div class="container">
   <div class="row">
@@ -222,7 +222,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### **Step 2:** Log in to IFTTT service. You can sign up using your Google or Facebook identity
+#### **Step 2:** Sign in to IFTTT. You can also sign up with your Google or Facebook account
 
 <div class="container">
   <div class="row">
@@ -230,7 +230,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 3: Go to **My Applets** in the menu and click on the **New Applet** button
+#### Step 3: Go to **My Applets** in the menu and click the **New Applet** button
 
 <div class="container">
   <div class="row">
@@ -238,7 +238,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 4: Click on **+this** in the `if this then that` sentence
+#### Step 4: Click **+this** in the `if this then that` sentence
 
 <div class="container">
   <div class="row">
@@ -246,7 +246,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 5: Find a service with the name **Webhooks** and select it
+#### Step 5: Search for the **Webhooks** service and select it
 
 <div class="container">
   <div class="row">
@@ -254,7 +254,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 6: Click on **Receive a web request**
+#### Step 6: Click **Receive a web request**
 
 <div class="container">
   <div class="row">
@@ -262,7 +262,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### **Step 7:** Type `motion` in the **Event Name** field and click on **Create Trigger**
+#### **Step 7:** Type `motion` in the **Event Name** field and click **Create Trigger**
 
 <div class="container">
   <div class="row">
@@ -270,7 +270,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### **Step 8:** Click on **+that** in the `if this then that` sentence
+#### **Step 8:** Click **+that** in the `if this then that` sentence
 
 <div class="container">
   <div class="row">
@@ -278,7 +278,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 9: Find action service with the name **Notifications** and select it
+#### Step 9: Search for the **Notifications** action service and select it
 
 <div class="container">
   <div class="row">
@@ -286,7 +286,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 10: Click on **Send a notification from the IFTTT app**
+#### Step 10: Click **Send a notification from the IFTTT app**
 
 <div class="container">
   <div class="row">
@@ -294,7 +294,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### **Step 11:** Edit the **Notification** field and insert the text `The motion detected on {{OccurredAt}}` and push the **Create action** button
+#### **Step 11:** Enter the text `The motion detected on {{OccurredAt}}` in the **Notification** field and click the **Create action** button
 
 <div class="container">
   <div class="row">
@@ -302,7 +302,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 12: Click on the **Finish** button
+#### Step 12: Click the **Finish** button
 
 <div class="container">
   <div class="row">
@@ -310,7 +310,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 13: Click on the **Webhooks** button
+#### Step 13: Click the **Webhooks** button
 
 <div class="container">
   <div class="row">
@@ -318,7 +318,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 14: Click on the **Documentation** button
+#### Step 14: Click the **Documentation** button
 
 <div class="container">
   <div class="row">
@@ -326,7 +326,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 15: Click on the **event** field
+#### Step 15: Click the **event** field
 
 <div class="container">
   <div class="row">
@@ -334,7 +334,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 16: Insert the name `motion` in the **event** field and keep the window open
+#### Step 16: Enter `motion` in the **event** field and keep the window open
 
 <div class="container">
   <div class="row">
@@ -342,11 +342,11 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 17: Install on your smartphone
+#### Step 17: Install the app on your phone
 
-Install the **IFTTT** app on your smart phone and sign in using the same account as you just used to create the applet. Allow the app to use the push notifications when asked
+Install the **IFTTT** app on your smartphone and sign in with the account you used to create the applet. When the app asks, allow push notifications.
 
-#### Step 18: Test it
+#### Step 18: Try it out
 
 <div class="container">
   <div class="row">
@@ -354,9 +354,9 @@ Install the **IFTTT** app on your smart phone and sign in using the same account
   </div>
 </div>
 
-#### Step 19: You should receive the push notification on your smart phone within a few seconds
+#### Step 19: A push notification should arrive on your smartphone within a few seconds
 
-#### Step 20: Copy this URL to the clipboard for later use
+#### Step 20: Copy the URL to the clipboard; you'll need it later
 
 <div class="container">
   <div class="row">
@@ -366,23 +366,23 @@ Install the **IFTTT** app on your smart phone and sign in using the same account
 
 :::success
 
-At this point, you've got working notification **Applet** in the **IFTTT** service.
+You now have a working notification **Applet** in the **IFTTT** service.
 
 :::
 
-## Connect IFTTT in Node-RED
+## Connect Node-RED to IFTTT
 
-In this section, we will create a link between the motion event on MQTT and HTTP request to **IFTTT** which will trigger the push notification.
+In this section, we'll link the motion event on MQTT to an HTTP request to **IFTTT**, which triggers the push notification.
 
 #### Step 1: Switch to your **Node-RED** flow
 
-#### Step 2: Insert the following snippet in the flow (using **Menu >> Import**):
+#### Step 2: Import the following snippet into the flow (**Menu >> Import**)
 
 ```text
-[{"id":"aa6e1255.ea79f","type":"mqtt in","z":"1683bd68.e7a7b3","name":"","topic":"node/motion-detector:0/pir/-/event-count","qos":"2","broker":"3db59913.baf0c6","x":580,"y":580,"wires":[["fd3ce751.8e9ba8"]]},{"id":"74e6dfc1.7c1dc","type":"http request","z":"1683bd68.e7a7b3","name":"","method":"POST","ret":"txt","url":"https://maker.ifttt.com/trigger/motion/with/key/bbtA7Dn-3HKPG8OcfZMP7WyvKh6I69iEW9j9OtUBGGB","tls":"","x":910,"y":580,"wires":[[]]},{"id":"fd3ce751.8e9ba8","type":"change","z":"1683bd68.e7a7b3","name":"","rules":[{"t":"delete","p":"payload","pt":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":710,"y":680,"wires":[["42aed05e.e145"]]},{"id":"42aed05e.e145","type":"delay","z":"1683bd68.e7a7b3","name":"","pauseType":"delay","timeout":"30","timeoutUnits":"seconds","rate":"1","nbRateUnits":"1","rateUnits":"second","randomFirst":"1","randomLast":"5","randomUnits":"seconds","drop":false,"x":900,"y":680,"wires":[["74e6dfc1.7c1dc"]]},{"id":"3db59913.baf0c6","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
+[{"id":"aa6e1255.ea79f","type":"mqtt in","z":"1683bd68.e7a7b3","name":"","topic":"node/motion-detector:0/pir/-/event-count","qos":"2","broker":"3db59913.baf0c6","x":580,"y":580,"wires":[["fd3ce751.8e9ba8"]]},{"id":"74e6dfc1.7c1dc","type":"http request","z":"1683bd68.e7a7b3","name":"","method":"POST","ret":"txt","url":"https://maker.ifttt.com/trigger/motion/with/key/YOUR_IFTTT_KEY","tls":"","x":910,"y":580,"wires":[[]]},{"id":"fd3ce751.8e9ba8","type":"change","z":"1683bd68.e7a7b3","name":"","rules":[{"t":"delete","p":"payload","pt":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":710,"y":680,"wires":[["42aed05e.e145"]]},{"id":"42aed05e.e145","type":"delay","z":"1683bd68.e7a7b3","name":"","pauseType":"delay","timeout":"30","timeoutUnits":"seconds","rate":"1","nbRateUnits":"1","rateUnits":"second","randomFirst":"1","randomLast":"5","randomUnits":"seconds","drop":false,"x":900,"y":680,"wires":[["74e6dfc1.7c1dc"]]},{"id":"3db59913.baf0c6","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
 ```
 
-It will look like this:
+It looks like this:
 
 <div class="container">
   <div class="row">
@@ -390,13 +390,16 @@ It will look like this:
   </div>
 </div><br></br>
 
+In the **http request** node, replace `YOUR_IFTTT_KEY` with the key shown on your Webhooks documentation page (step 15).
+
+
 :::info
 
-This snippet creates a connection between the MQTT topic `node/motion-detector:0/pir/-/event-count` and an HTTP request. Before passing the message to the HTTP request, we remove the `payload` parameter since it would be used in the HTTP request body.
+The snippet connects the MQTT topic `node/motion-detector:0/pir/-/event-count` to an HTTP request. Before the message goes to the HTTP request, we remove the `payload` parameter, because it would otherwise be used as the request body.
 
 :::
 
-#### Step 3: Double click on **http request** node and edit the IFTTT URL obtained in the previous section:
+#### Step 3: Double-click the **http request** node and enter the IFTTT URL you got in the previous section
 
 <div class="container">
   <div class="row">
@@ -404,18 +407,17 @@ This snippet creates a connection between the MQTT topic `node/motion-detector:0
   </div>
 </div>
 
-#### Step 4: Save the URL by clicking on the **Done** button
+#### Step 4: Save the URL with the **Done** button
 
-#### Step 5: Deploy the flow using the **Deploy** button in the top-right corner
+#### Step 5: Deploy the flow with the **Deploy** button in the top-right corner
 
 :::success
 
-At this point, you should get a push notification whenever motion is detected.
+You should now get a push notification whenever motion is detected.
 
 :::
 
 ### Related Documents <a id="related-documents"></a>
 
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
-* [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
-* [**Toolchain Guide**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
+* [**Command Line Tools**](https://docs.hardwario.com/tower/command-line-tools/)
