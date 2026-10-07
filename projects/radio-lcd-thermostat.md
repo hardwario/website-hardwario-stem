@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Radio LCD Thermostat
 
-This document will guide you through the **Radio LCD Thermostat** project. With this gadget you will be able to control remotly you temperature.
+This document will guide you through the **Radio LCD Thermostat** project. With this gadget, you will be able to control the temperature remotely.
 
 ## Block Concept
 

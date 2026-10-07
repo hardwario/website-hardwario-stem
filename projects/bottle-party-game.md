@@ -73,7 +73,7 @@ Confirm it with the **Done** button.
 
 <div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-10.webp')} alt="Text input node highlighted in the palette, with five text input nodes placed on the canvas"/> </div> </div>
 
-4. Within each node, rewrite the **Label** line to Participant + a number from one to as many as you are. So it will go Participant 1, Participant 2… you know the rest. In the **Delay** field, fill in the number 0. **Uncheck** the box just bellow it to really reset the fields after the reset. Do all this with all nodes with participants.
+4. Within each node, rewrite the **Label** line to Participant + a number from one to as many as you are. So it will go Participant 1, Participant 2… you know the rest. In the **Delay** field, fill in the number 0. **Uncheck** the box just below it to really reset the fields after the reset. Do all this with all nodes with participants.
 
 <div class="container"> <div class="row"> <Image img={require('./img/bottle-party-game/bottle-party-game-11.webp')} alt="Edit text input node dialog with Label Participant 2, Delay set to 0 and the pass-through box unchecked"/> </div> </div>
 
@@ -81,8 +81,8 @@ Confirm it with the **Done** button.
 
 5. Set up another javascript next to the participants. This javascript assigns the names of the participants to the corresponding place. Again, you will insert it as a **Function** node.
 
-6. Double-click on the node to open its settings. In the **Label** line, fill in the name of the node and copy this code into the **Function** field:
-7. 
+6. Double-click on the node to open its settings. In the **Name** line, fill in the name of the node and copy this code into the **Function** field:
+
 ```
 var contestants = flow.get("numberOfContestants") || 0;
 var contestantArray = flow.get("contestantArr") || [msg.payload];

@@ -5,7 +5,7 @@ title_meta: "Prezentace (L109: IoT monitor půdy)"
 ---
 import Image from '@theme/IdealImage';
 
-**Časová dotace**: 10 mins
+**Časová dotace**: 10 min.
 
 Studenti prezentují své nápady a projekty ostatním studentům.
 

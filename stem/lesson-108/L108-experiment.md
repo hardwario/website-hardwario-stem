@@ -5,7 +5,7 @@ title_meta: "Experiment (L108: IoT Pulse Monitor)"
 ---
 import Image from '@theme/IdealImage';
 
-**Time allocation** 10 min.
+**Time allocation**: 10 min.
 
 ## Transmitting the pulse count
 
@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
 
 As part of the experiment, we will transmit the number of pulses using an **LED** or a **magnetic sensor**.
 
-## Experiment Step
+## Experiment Steps
 
 ### 1. Building the Sensor Set
 

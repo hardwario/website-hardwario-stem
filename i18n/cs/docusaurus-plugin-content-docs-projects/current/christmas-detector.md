@@ -1,104 +1,104 @@
 ---
 slug: christmas-detector
-title: Detektor Vánoc
+title: Detektor Ježíška
 ---
 import Image from '@theme/IdealImage';
 
 ## Úvod
 
-Ježíšek je ultratajná osoba, ale s IoT ho můžeš načapat přímo při rozdávání dárků. 🎄 Pomůže ti k tomu PIR Module: detektor pohybu
+Ježíšek je nesmírně tajemná bytost, ale s IoT ho můžete načapat přímo při nadílce. 🎄 Pomůže vám s tím detektor pohybu PIR Module.
 
-S tímhle projektem se naučíš **detekovat pohyb ve vzdáleném pokoji**. Díky tomu si můžeš ověřit, jestli po českých domácnostech chodí Santa, Ježíšek, Děda Mráz nebo někdo úplně jiný. 😲
+V tomto projektu se naučíte **zaznamenat pohyb ve vzdálené místnosti**. Díky tomu si můžete ověřit, jestli k vám domů chodí Santa, Ježíšek, Děda Mráz, nebo někdo úplně jiný. 😲
 
-Pokud máš Starter Set, budeš k němu potřebovat ještě [PIR Module](https://www.hardwario.store/p/pir-module/). **Kompletní výbavu** najdeš v sadě [Motion Set](https://www.hardwario.store/p/motion-set).
+Pokud máte Start Set, budete k němu potřebovat ještě [PIR Module](https://www.hardwario.store/p/pir-module/). **Kompletní výbavu** najdete v sadě [Motion Set](https://www.hardwario.store/p/motion-set).
 
 
-## Připrav si krabičku
+## Připravte si krabičku
 
-1. Sestav svůj Set. Na Core Module potřebuješ firmware **bcf-radio-motion-detector**. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-1.webp')} alt="Záložka Firmware v Playgroundu s vybraným firmwarem twr-radio-motion-detector k nahrání"/> </div> </div>
+1. Sestavte sadu. Do modulu Core Module potřebujete firmware **bcf-radio-motion-detector**. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-1.webp')} alt="Záložka Firmware v Playgroundu s vybraným firmwarem twr-radio-motion-detector k nahrání"/> </div> </div>
 
-2. Při správně nainstalovaném firmware uvidíš v Playgroundu na záložce Devices Alias jako **motion-detector**.
+2. Pokud se firmware nahrál správně, uvidíte v Playgroundu na záložce Devices alias **motion-detector**.
 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-2.webp')} alt="Záložka Devices v Playgroundu se spárovaným zařízením pod aliasem motion-detector:0"/> </div> </div>
 
-## Nastav si Node-RED
+## Nastavte si Node-RED
 
-1. Programování odstartuj v Node-RED. Nejdřív v Playgroundu klikni na záložku **Functions**.
-2. Na volnou plochu si přetáhni světle fialový node (bublinu) s názvem **MQTT**. Najdeš ho v sekci Input.
+1. Programovat začnete v Node-RED. Nejdřív v Playgroundu klikněte na záložku **Functions**.
+2. Na prázdnou plochu přetáhněte světle fialový uzel (bublinu) s názvem **MQTT**. Najdete ho v sekci Input.
 
 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-3.webp')} alt="Uzel mqtt in zvýrazněný v paletě a uzel mqtt umístěný na ploše"/> </div> </div>
 
-3. Node rozklikni dvojklikem. V řádku **Topic** určíš klíčovou hodnotu. Teď to bude počítadlo pohybů, které jsou zaznamenány:
+3. Uzel otevřete dvojklikem. Do řádku **Topic** zadejte klíčovou hodnotu. Uzel teď bude počítat zaznamenané pohyby:
 
 
 ```
 node/motion-detector:0/pir/-/event-count
 ```
 
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-4.webp')} alt="MQTT uzel na ploše s tématem event-count PIR čidla motion-detectoru"/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-4.webp')} alt="Uzel MQTT na ploše s tématem event-count PIR čidla motion-detectoru"/> </div> </div>
 
-Potvrď pomocí tlačítka **Done**.
+Potvrďte tlačítkem **Done**.
 
-4. Za tenhle node postav node **Switch** ze sekce Function. Díky němu zařízení pozná, že je detektor zapnutý a může hlásit veškerý pohyb.
-5. Uvnitř nodu vyplň řádek **Property** jako _flow_. _detectorActive_ a podmínku uvnitř pole uprav na _is true_ (mrkej na obrázek).
-**Náš tip**: Přečti si o téhle funkci víc.
+4. Za tento uzel umístěte uzel **Switch** ze sekce Function. Díky němu zařízení pozná, že je detektor zapnutý a může hlásit každý pohyb.
+5. V uzlu vyplňte řádek **Property** jako _flow_. _detectorActive_ a podmínku v poli upravte na _is true_ (viz obrázek).
+**Náš tip**: Přečtěte si o této funkci víc.
 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-5.webp')} alt="Dialog Edit switch node kontrolující vlastnost flow.detectorActive s podmínkou is true"/> </div> </div>
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
-6. Teď přijde **node Change** ze stejné sekce Function.
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-6.webp')} alt="Change node zvýrazněný v paletě, uzel set msg.payload je umístěný za uzlem switch"/> </div> </div>
+6. Za uzel Switch umístěte uzel **Change** ze stejné sekce Function.
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-6.webp')} alt="Uzel Change zvýrazněný v paletě, uzel set msg.payload je umístěný za uzlem switch"/> </div> </div>
 
-7. V něm nastavíš zprávu, která se ti ukáže, jakmile dorazí ten vousáč s dárkama (případně miminko). 🎅 👼 Takže třeba: _Jezisek je v obyvaku_.
-**Náš tip**: Pokud si chceš nastavit i upozornění do mobilu, nepoužívej čárky ani háčky, Blynk to nemá rád.
+7. V něm nastavíte zprávu, která vyskočí, jakmile dorazí vousáč s dárky (nebo Ježíšek). 🎅 👼 Třeba: _Jezisek je v obyvaku_.
+**Náš tip**: Pokud chcete nastavit i upozornění do mobilu, nepoužívejte háčky ani čárky, protože Blynk diakritiku nezobrazuje.
 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-7.webp')} alt="Dialog Edit change node s pravidlem nastavujícím flow.detectorActive na msg.payload"/> </div> </div>
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
-8. Nad tímhle flow načni další, díky kterému budeš moct detektor zapínat a vypínat. Bude se skládat ze dvou nodů. První je **node Switch** ze sekce Dashboard.
+8. Nad tento flow přidejte další, kterým budete detektor zapínat a vypínat. Bude se skládat ze dvou uzlů. První je uzel **Switch** ze sekce Dashboard.
 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-8.webp')} alt="Uzel switch z palety dashboard zvýrazněný a umístěný nad flow detektoru"/> </div> </div>
 
-9. Uvnitř tohohle nodu uprav **Label** na _Stav detektoru_. Takhle bude označený tvůj projekt v Dashboardu.
+9. V tomto uzlu změňte **Label** na _Stav detektoru_. Tak bude váš projekt označený na Dashboardu.
 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-9.webp')} alt="Dialog Edit switch node s Label Stav detektoru a hodnotami true a false"/> </div> </div>
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
-10. Za něj postav **node Change** ze sekce Dashboard. Jojo, ten, co už máš o kousek níž. 👍
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-10.webp')} alt="Change node zvýrazněný v paletě, uzel set msg.payload je umístěný za přepínačem Stav detektoru"/> </div> </div>
+10. Za něj umístěte uzel **Change** ze sekce Function. Ano, stejný, jaký už máte o kousek níž. 👍
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-10.webp')} alt="Uzel Change zvýrazněný v paletě, uzel set msg.payload je umístěný za přepínačem Stav detektoru"/> </div> </div>
 
-11. Uvnitř nastav v poli **Rules** funkci, se kterou zařízení pozná, jestli je tlačítko vypnuté, nebo zapnuté: _flow_. _detectorActive_ (viz obrázek). Pozor na překlepy!
+11. V poli **Rules** nastavte funkci, podle které zařízení pozná, jestli je přepínač zapnutý, nebo vypnutý: _flow_. _detectorActive_ (viz obrázek). Pozor na překlepy!
 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-11.webp')} alt="Dialog Edit change node pro flow přepínače se zvýrazněným pravidlem Set flow.detectorActive na msg.payload"/> </div> </div>
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
-12. Teď všechny nody **pospojuj podle obrázku**, ale ještě nemačkej tlačítko Deploy. Chybí nám poslední node, který přidáme za chviličku. S ním nastavíš upozornění do mobilu. 🤳
-![propojeni nodu](./img/christmas-detector/image13.png)
+12. Teď všechny uzly **propojte podle obrázku**, ale tlačítko Deploy ještě nestiskněte. Chybí poslední uzel, který přidáme za chvilku. S ním nastavíte upozornění do mobilu. 🤳
+![Propojení uzlů](./img/christmas-detector/image13.png)
 
 
-## Připrav Blynk IoT pro upozornění
+## Připravte Blynk IoT na upozornění
 
-Detekce dorazí na tvůj smartphone přes appku **Blynk IoT**, kam zachycený pohyb přiletí jako push notifikace. A to je fakt super. 😎
+Zachycený pohyb vám dorazí do chytrého telefonu jako push notifikace z aplikace **Blynk IoT**. Šikovné, že? 😎
 
-1. Pokud ještě žádný nemáš, založ si účet v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). V [tomhle návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) najdeš, jak si nastavit účet, šablonu zařízení (device template) a zařízení (device). Budeš potřebovat všechny tři. Můžeš taky využít šablonu z některého předchozího projektu.
+1. Pokud ještě nemáte účet v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/), založte si ho. [V tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) najdete, jak nastavit účet, šablonu zařízení (device template) a zařízení (device). Budete potřebovat všechny tři. Můžete také použít šablonu z některého předchozího projektu.
 
-2. V Blynk IoT se push notifikace nepřidává na obrazovku telefonu jako widget. Posílá se jako **Event** definovaný na tvé šabloně. V detailu šablony otevři záložku **Events** a přidej nový event (třeba ho pojmenuj `motion` a dej mu zprávu, kterou chceš dostávat, například _Jezisek je v obyvaku_). Pak pro tenhle event zapni **Notifications**, aby ti ho Blynk doručil na telefon. [Návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) tě nastavením šablony provede.
+2. V Blynk IoT se push notifikace nepřidává na obrazovku telefonu jako widget. Posílá se jako událost (**Event**) definovaná v šabloně. V detailu šablony otevřete záložku **Events** a přidejte novou událost (pojmenujte ji třeba `motion` a zadejte zprávu, kterou chcete dostávat, například _Jezisek je v obyvaku_). Pak pro tuto událost zapněte **Notifications**, aby vám ji Blynk doručil do telefonu. [Návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) vás nastavením šablony provede.
 
-3. Stáhni si do telefonu appku **Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlas se stejným účtem. Ujisti se, že má appka povolená upozornění, aby se zpráva mohla zobrazit. 📱
+3. Stáhněte si do telefonu aplikaci **Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlaste se stejným účtem. Zkontrolujte, že má aplikace povolená upozornění, aby se zpráva mohla zobrazit. 📱
 
-## Propoj mobil s krabičkou
+## Propojte mobil s krabičkou
 
-1. Vrať se k počítači. Na plochu Node-RED postav poslední node celého projektu: node ze sekce **Blynk IoT**, který umí spustit tvůj event (node **log event**). Patří hned za flow se switchem (mrkni na obrázek). 👀 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-13.webp')} alt="Uzel notify pro Blynk zvýrazněný na ploše, umístěný na konec flow detektoru"/> </div> </div>
+1. Vraťte se k počítači. Na plochu Node-RED umístěte poslední uzel celého projektu: uzel ze sekce **Blynk IoT**, který umí spustit vaši událost (uzel **log event**). Patří hned za flow s přepínačem (viz obrázek). 👀 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-13.webp')} alt="Uzel notify pro Blynk zvýrazněný na ploše, umístěný na konec flow detektoru"/> </div> </div>
 
-2. Rozklikni node dvojklikem. Vpravo uvidíš **malou tužtičku**. Klikni na ni a otevře se nové okno. Do pole **Url** zadej `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové appce Blynk na počítači. Potvrď tlačítkem **Add**.
+2. Uzel otevřete dvojklikem. Vpravo uvidíte **malou tužku**. Klikněte na ni a otevře se nové okno. Do pole **Url** zadejte `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu zařízení ve webové aplikaci Blynk na počítači. Potvrďte tlačítkem **Add**.
 
-3. Nastav node tak, aby spouštěl **Event**, který jsi vytvořil (kód eventu, např. `motion`). Právě tohle promění zachycený pohyb v push notifikaci. Potvrď tlačítkem **Done**.
+3. Nastavte uzel tak, aby spouštěl událost (**Event**), kterou jste vytvořili (kód události, např. `motion`). Právě tím se zachycený pohyb promění v push notifikaci. Potvrďte tlačítkem **Done**.
 
-4. Nakonec tenhle zelený node **propoj** s předchozím flow, aby detektor ➡️ spustil Blynk IoT event ➡️ který dorazí na tvůj mobil. Pak zmáčkni červené tlačítko **Deploy**. 🚨
+4. Nakonec tento zelený uzel **propojte** s předchozím flow, aby detektor ➡️ spustil událost v Blynk IoT, ➡️ která dorazí do vašeho mobilu. Pak stiskněte červené tlačítko **Deploy**. 🚨
 
-## A... akce!
+## A… akce!
 
-1. Je čas špehovat toho dárečkového krále. V záložce **Dashboard** v Playgroundu **zapni svůj detektor**. 🕵️
-<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-17.webp')} alt="Hotové flow s přepínačem Stav detektoru a řetězcem PIR eventu končícím uzlem notify"/> </div> </div>
+1. Je nejvyšší čas vyzvědět, kdo nosí dárky. Na záložce **Dashboard** v Playgroundu **zapněte detektor**. 🕵️
+<div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-17.webp')} alt="Hotový flow s přepínačem Stav detektoru a řetězcem události PIR končícím uzlem notify"/> </div> </div>
 
-2. PIR Module vycítí i sebemenší pohyb a zpráva o cizí přítomnosti ti přijde do mobilu raz dva. **Ježíšek nemá šanci**! Honem se běž podívat a načapej ho
+2. PIR Module zachytí i sebemenší pohyb a zprávu, že se něco děje, vám raz dva pošle do mobilu. **Ježíšek nemá šanci**! Rychle se běžte podívat a načapejte ho!
 
-1. Poznámka na okraj: Ježíška si po načapání **udobři**, aby ti doma vůbec nějaké dárky nechal. 😜
+1. Poznámka na okraj: Po načapání si Ježíška **udobřete**, ať vám doma vůbec nějaké dárky nechá. 😜

@@ -23,7 +23,7 @@ This document will guide you through the **Radio Flood Detector** project. You w
   * 1x **HARDWARIO Sensor Module**
   * 1x **HARDWARIO Core Module**
   * 1x **HARDWARIO Mini Battery Module**
-  * 1x **HARDWARIO Radio Dongle**s
+  * 1x **HARDWARIO Radio Dongle**
 * One of these options:
   * **HARDWARIO Playground** installed \(recommended\)
 
@@ -58,7 +58,7 @@ For differences of flashing older **Core Module 1** and newer **Core Module 2** 
 
 :::success
 
-At this point your firmware is :successfully uploaded.
+At this point your firmware is successfully uploaded.
 
 :::
 
@@ -78,7 +78,7 @@ See short video with easy step by step demonstration:
 </div>
 
 
-Step 1: Start with the **Mini Battery Module**
+### Step 1: Start with the **Mini Battery Module**
 
 ### Step 2: Plug the **Core Module** on top of the **Mini Battery Module**
 
@@ -365,7 +365,7 @@ At this point, you've got working notification **Applet** in the **IFTTT** servi
 
 ## Connect IFTTT in Node-RED
 
-In this section, we will create a link between the button event on MQTT and HTTP request to **IFTTT** which will trigger the push notification.
+In this section, we will create a link between the flood event on MQTT and HTTP request to **IFTTT** which will trigger the push notification.
 
 ### Step 1: Switch to your **Node-RED** flow
 

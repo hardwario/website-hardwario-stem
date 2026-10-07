@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
  Even a mobile phone isn´t infallible! It may sometimes let you down and not wake you up. If it happens to you, don't despair. Press 👇 the smart button to apologize to your teacher before they inform your parents. 
 
-Under this project, you will learn **how to send a notification using a smart button**. 📩
+In this project, you will learn **how to send a notification using a smart button**. 📩
 
 All you need for this is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set).
 

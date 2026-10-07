@@ -58,7 +58,7 @@ This code selects **one of four options**:
 - Definitely yes.
 Confirm with the **Done** button.
 
-3. Next to the Random node, add a **Text node**, which can be found under the Dashboard section.
+3. Next to the 8-ball node, add a **Text node**, which can be found under the Dashboard section.
 4. In the node, set **Label** to Answer.
 
 <div class="container"> <div class="row"> <Image img={require('./img/crystal-ball/crystal-ball-6.webp')} alt="Edit text node dialog with the Label set to Odpoved and the text node placed on the canvas"/> </div> </div>

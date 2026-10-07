@@ -9,6 +9,6 @@ The aim of the **Notification IoT Button** lesson is to introduce the endless po
 
 ## What will you need for the lesson?
 
-* Computer with the application installed [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
+* A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed
 * Projector or larger monitor
-* [Start Set](https://www.hardwario.store/p/start-set) HARDWARIO TOWER IoT kit
+* [Start Set](https://www.hardwario.store/p/start-set) of the HARDWARIO TOWER IoT kit

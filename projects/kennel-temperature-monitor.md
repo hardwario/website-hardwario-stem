@@ -20,7 +20,7 @@ This project teaches you how to **measure temperature with IoT and display it on
 
 1. Start programming in Node-RED. Firstly, click the **Functions** tab in Playground.
 2. From the Input section, take the light purple **MQTT** node (bubble) and place it onto the empty desktop.
-3. Double-click the node. In the **Topic** line specify what you want the colour indicator to display. This now represents temperature. Copy the temperature message from the Messages tab (without a number) to the line. Alternatively, use this:
+3. Double-click the node. In the **Topic** line specify what you want the chart to display. This now represents temperature. Copy the temperature message from the Messages tab (without a number) to the line. Alternatively, use this:
 
 
 ```

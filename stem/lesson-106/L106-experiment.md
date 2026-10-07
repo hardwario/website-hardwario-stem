@@ -24,7 +24,8 @@ Communication will take place wirelessly to the **Radio Dongle** plugged into th
 
 ### Assembling the Button
 
-* Modules in the setup:
+**Modules in the setup:**
+
 * Core Module
 * Mini Battery Module
 * Push Button Module

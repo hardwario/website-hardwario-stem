@@ -6,9 +6,9 @@ import Image from '@theme/IdealImage';
 
 # Bezdrátový dveřní senzor
 
-**Bezdrátový dveřní senzor** vás upozorní na telefonu pokaždé, když někdo otevře dveře, okno nebo třeba dózu na sušenky! Lze jej také použít jako upozornění, pokud večer zapomenete zavřít garáž nebo bránu.
+**Bezdrátový dveřní senzor** vám pošle upozornění do telefonu pokaždé, když někdo otevře dveře, okno nebo třeba dózu na sušenky! Hodí se také jako připomínka, když večer zapomenete zavřít garáž nebo bránu.
 
-Může být vybaven magnetem pro snadné uchycení krabičky a funguje na baterie po mnoho let. Instalace je opravdu jednoduchá!
+Krabičku můžete opatřit magnetem, takže ji snadno připevníte, a na baterie senzor vydrží mnoho let. Instalace je opravdu jednoduchá.
 
 <div class="container">
   <div class="row">
@@ -17,14 +17,27 @@ Může být vybaven magnetem pro snadné uchycení krabičky a funguje na bateri
 </div>
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-overview.webp')} alt="Rozložené díly Radio Door Sensoru: moduly, magnetický kontakt, díly krabičky a spojovací materiál"/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-overview.webp')} alt="Rozložené díly senzoru Radio Door Sensor: moduly, magnetický kontakt, díly krabičky a spojovací materiál"/>
   </div>
 </div>
 <div class="container">
   <div class="row">
     <Image  img={require('./img/radio-door-sensor/radio-door-sensor.png')}
-          style={{ backgroundColor: "#fff" }} alt="Blokové schéma: magnetický kontakt připojený k Radio Door Sensoru, rádiem k donglu, Playgroundu a IFTTT"/>
+          style={{ backgroundColor: "#fff" }} alt="Blokové schéma: magnetický kontakt připojený k senzoru Radio Door Sensor, rádiem k donglu, Playgroundu a IFTTT"/>
   </div>
+</div>
+
+## Úvodní video k projektu
+
+<div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
+  <iframe
+  src="https://www.youtube.com/embed/cvO_tXcAvZ8?si=0UJ3TTTpmu1JjB67" title="YouTube video player"
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+    referrerPolicy="strict-origin-when-cross-origin"
+  />
 </div>
 
 ## Požadavky
@@ -33,12 +46,12 @@ Může být vybaven magnetem pro snadné uchycení krabičky a funguje na bateri
 * [**Core Module**](https://www.hardwario.store/cz/p/core-module)
 * [**Battery Module**](https://www.hardwario.store/cz/p/battery-module)
 * [**Sensor Module**](https://www.hardwario.store/cz/p/sensor-module)
-* **Magnetický spínač** \(pro přišroubování SA-201-A, samolepicí SA-203\)
+* **Magnetický kontakt** \(SA-201-A k přišroubování, samolepicí SA-203\)
 * Budete potřebovat počítač s operačním systémem **Windows**, **Linux** nebo **macOS**.
 
 :::info
 
-Můžete také připojit Radio Dongle k Raspberry Pi nebo jinému jednodeskovému počítači. Podívejte se na dokument [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
+Radio Dongle můžete připojit také k Raspberry Pi nebo jinému jednodeskovému počítači. Postup najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
 
 :::
 
@@ -53,15 +66,15 @@ Stáhněte si nejnovější verzi [HARDWARIO Playground](https://github.com/hard
   </div>
 </div><br></br>
 
-Nyní je potřeba se ujistit, že moduly používají nejnovější firmware. Je nutné nahrát firmware do vašeho [**Radio Dongle**](https://www.hardwario.store/cz/p/radio-dongle) a vzdáleného uzlu [**Core Module**](https://www.hardwario.store/cz/p/core-module).
+Teď nahrajte nejnovější firmware do donglu [**Radio Dongle**](https://www.hardwario.store/cz/p/radio-dongle) i do vzdáleného uzlu [**Core Module**](https://www.hardwario.store/cz/p/core-module).
 
 ## Nahrání firmwaru do dveřního senzoru
 
-#### Krok 1: Připojení
+#### Krok 1: Připojte senzor
 
-**Připojte pouze** dveřní senzor k USB portu vašeho počítače.
+K USB portu počítače **připojte jen** dveřní senzor.
 
-#### Krok 2: Nahrání firmwaru
+#### Krok 2: Nahrajte firmware
 
 V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `bigclownlabs/bcf-radio-door-sensor`, zvolte sériový port zařízení v poli **Device** a klikněte na **FLASH FIRMWARE**.
 
@@ -71,17 +84,17 @@ V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `bi
   </div>
 </div>
 
-#### Krok 3: Odpojení
+#### Krok 3: Odpojte senzor
 
-Odpojte **dveřní senzor** od počítače. Vyjměte baterie a ponechte senzor bez napájení pro pozdější proces párování.
+Odpojte **dveřní senzor** od počítače. Vyjměte baterie a nechte senzor bez napájení, dokud ho nebudete párovat.
 
 ## Nahrání firmwaru do Radio Dongle
 
-#### Krok 1: Připojení
+#### Krok 1: Připojte dongle
 
-Připojte **pouze** [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle) k USB portu vašeho počítače.
+K USB portu počítače připojte **jen** [Radio Dongle](https://www.hardwario.store/cz/p/radio-dongle).
 
-#### Krok 2: Nahrání firmwaru
+#### Krok 2: Nahrajte firmware
 
 V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `bigclownlabs/bcf-gateway-usb-dongle`, zvolte sériový port zařízení v poli **Device** a klikněte na **FLASH FIRMWARE**.
 
@@ -91,13 +104,13 @@ V aplikaci Playground přejděte na záložku **Firmware**, vyberte firmware `bi
   </div>
 </div>
 
-#### Krok 3: Nechte připojeno
+#### Krok 3: Nechte dongle připojený
 
 Nechte [**Radio Dongle**](https://www.hardwario.store/cz/p/radio-dongle) připojený k počítači.
 
 ## Spuštění brány
 
-V levém dolním rohu klikněte na **Gateway** a vyberte sériový port zařízení. Text **Gateway** by měl změnit barvu na **zelenou**.
+V levém dolním rohu klikněte na **Gateway** a vyberte sériový port zařízení. Text **Gateway** by se měl zbarvit **zeleně**.
 
 <div class="container">
   <div class="row">
@@ -105,9 +118,9 @@ V levém dolním rohu klikněte na **Gateway** a vyberte sériový port zaříze
   </div>
 </div>
 
-## Spárování Radio Door Sensor
+## Spárování dveřního senzoru
 
-#### Krok 1: Spuštění párování
+#### Krok 1: Spusťte párování
 
 Na záložce **Radio** klikněte na tlačítko **Pairing start**.
 
@@ -117,13 +130,13 @@ Na záložce **Radio** klikněte na tlačítko **Pairing start**.
   </div>
 </div>
 
-#### Krok 2: Přepnutí dveřního senzoru do párovacího režimu
+#### Krok 2: Přepněte senzor do režimu párování
 
-Nyní vložte baterie do dveřního senzoru. Párovací příkaz je odeslán pokaždé, když vložíte baterie do vzdáleného modulu.
+Teď do dveřního senzoru vložte baterie. Vzdálený modul odešle párovací příkaz pokaždé, když do něj vložíte baterie.
 
-#### Krok 3: Ukončení párování
+#### Krok 3: Ukončete párování
 
-Ukončete párování kliknutím na tlačítko **Pairing stop**.
+Párování ukončete tlačítkem **Pairing stop**.
 
 <div class="container">
   <div class="row">
@@ -131,28 +144,28 @@ Ukončete párování kliknutím na tlačítko **Pairing stop**.
   </div>
 </div>
 
-## Otestuje dveřní senzor
+## Otestujte dveřní senzor
 
-#### Krok 1: Přepněte se na záložku **MQTT** a přihlaste se k odběru tématu `#`.
+#### Krok 1: Přepněte se na záložku **MQTT** a přihlaste se k odběru topicu `#`
 
-#### Krok 2: Přikládejte a oddalujte magnet od senzoru – měli byste vidět MQTT zprávy v horním okně.
+#### Krok 2: Přibližte magnet k senzoru a zase ho oddalte. V horním okně byste měli vidět zprávy MQTT
 
-#### Krok 3: Další zprávy jsou stisknutí tlačítka a změna teploty. Vyzkoušejte to!
+#### Krok 3: Zprávy posílá i stisk tlačítka a změna teploty. Vyzkoušejte to!
 
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-mqtt-test.webp')} alt="Záložka MQTT s odběrem tématu # a zprávami o stavu door-sensoru přepínajícími mezi true a false"/>
+    <Image img={require('./img/radio-door-sensor/radio-door-sensor-playground-mqtt-test.webp')} alt="Záložka MQTT s odběrem topicu # a zprávami o stavu door-sensor přepínajícími mezi true a false"/>
   </div>
 </div>
 :::success
-Skvělé! Vytvořili jste rádiovou síť, která přijímá události a měří teplotu.
+Skvělé! Vytvořili jste rádiovou síť, která přijímá události i naměřenou teplotu.
 
 :::
 
 ## Integrace s IFTTT
 
-V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje jako mechanismus pro spouštění událostí.
+V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je pravidlo, které na určitou událost zareaguje akcí.
 
 #### Krok 1: Otevřete webový prohlížeč a přejděte na [**IFTTT**](https://ifttt.com/):
 
@@ -162,7 +175,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-#### Krok 2: Přihlaste se do služby IFTTT. Můžete se zaregistrovat pomocí účtu Google nebo Facebook:
+#### Krok 2: Přihlaste se do služby IFTTT. Zaregistrovat se můžete i účtem Google nebo Facebook:
 
 <div class="container">
   <div class="row">
@@ -170,7 +183,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-#### Krok 3: V menu přejděte do sekce **My Applets** a klikněte na tlačítko **New Applet**:
+#### Krok 3: V menu přejděte do **My Applets** a klikněte na tlačítko **New Applet**:
 
 <div class="container">
   <div class="row">
@@ -178,7 +191,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-#### Krok 4: Klikněte na **+this** ve větě `if this then that`:
+#### Krok 4: Ve větě `if this then that` klikněte na **+this**:
 
 <div class="container">
   <div class="row">
@@ -186,7 +199,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-#### Krok 5: Vyhledejte službu s názvem **Webhooks** a vyberte ji:
+#### Krok 5: Vyhledejte službu **Webhooks** a vyberte ji:
 
 <div class="container">
   <div class="row">
@@ -210,7 +223,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-#### Krok 8: Klikněte na **+that** ve větě `if this then that`:
+#### Krok 8: Ve větě `if this then that` klikněte na **+that**:
 
 <div class="container">
   <div class="row">
@@ -218,7 +231,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-#### Krok 9: Vyhledejte akční službu s názvem **Notifications** a vyberte ji:
+#### Krok 9: Vyhledejte službu pro akci **Notifications** a vyberte ji:
 
 <div class="container">
   <div class="row">
@@ -234,7 +247,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-#### Krok 11: Upravte pole **Notification** a vložte text `Door Sensor Alarm at {{OccurredAt}} !` a poté klikněte na tlačítko **Create action**:
+#### Krok 11: Do pole **Notification** vložte text `Door Sensor Alarm at {{OccurredAt}} !` a klikněte na tlačítko **Create action**:
 
 <div class="container">
   <div class="row">
@@ -266,7 +279,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-#### Krok 15: Nyní máte svůj notifikační klíč. **Nechte si tuto stránku otevřenou, abyste mohli tento klíč později zkopírovat do Node-RED**:
+#### Krok 15: Teď máte svůj klíč pro notifikace. **Nechte tuto stránku otevřenou, klíč budete později kopírovat do Node-RED**:
 
 <div class="container">
   <div class="row">
@@ -274,19 +287,19 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** funguje
   </div>
 </div>
 
-#### Krok 16: Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se pomocí stejného účtu, který jste použili k vytvoření appletu. Při výzvě povolte aplikaci zasílání push notifikací.
+#### Krok 16: Nainstalujte si do chytrého telefonu aplikaci **IFTTT** a přihlaste se stejným účtem, ve kterém jste applet vytvořili. Když se aplikace zeptá, povolte jí push notifikace
 
 :::success
 
-V tomto bodě máte funkční notifikační **Applet** ve službě **IFTTT**.
+Teď máte ve službě **IFTTT** funkční **Applet** pro notifikace.
 
 :::
 
-## Node-RED plug-in pro IFTTT
+## Plugin IFTTT pro Node-RED
 
-Pro použití IFTTT v Node-RED můžeme využít jednoduchý plug-in, který bude odesílat notifikace.
+IFTTT zapojíte do Node-RED jednoduchým pluginem, který odesílá notifikace.
 
-#### Krok 1: Klikněte na záložku **MQTT**, poté v pravém horním rohu na menu a vyberte **Manage palette**.
+#### Krok 1: Klikněte na záložku **MQTT**, pak vpravo nahoře na menu a vyberte **Manage palette**
 
 <div class="container">
   <div class="row">
@@ -294,7 +307,7 @@ Pro použití IFTTT v Node-RED můžeme využít jednoduchý plug-in, který bud
   </div>
 </div>
 
-#### Krok 2: Přepněte se na záložku **Install**, vyhledejte `ifttt` a klikněte na tlačítko **Install**. V zobrazovaném okně klikněte znovu na **Install**.
+#### Krok 2: Přepněte se na záložku **Install**, vyhledejte `ifttt` a klikněte na tlačítko **install**. Ve vyskakovacím okně klikněte znovu na **Install**:
 
 <div class="container">
   <div class="row">
@@ -302,7 +315,7 @@ Pro použití IFTTT v Node-RED můžeme využít jednoduchý plug-in, který bud
   </div>
 </div>
 
-#### Krok 3: Po instalaci uvidíte potvrzení, že nové uzly byly přidány do prostředí Node-RED:
+#### Krok 3: Po instalaci se zobrazí potvrzení, že do Node-RED přibyly nové uzly:
 
 <div class="container">
   <div class="row">
@@ -312,19 +325,19 @@ Pro použití IFTTT v Node-RED můžeme využít jednoduchý plug-in, který bud
 
 :::success
 
-Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho telefonu.
+Skvělé! Díky pluginu pro IFTTT bude Node-RED posílat notifikace přímo do telefonu.
 
 :::
 
-## Import notifikačního flow do Node-RED
+## Import flow pro notifikace do Node-RED
 
-#### Krok 1: Zkopírujte níže uvedený text do schránky:
+#### Krok 1: Zkopírujte do schránky tento text:
 
 ```text
 [{"id":"5ca15197.aef91","type":"mqtt in","z":"49c6b66c.16eaf8","name":"","topic":"node/door-sensor:0/door-sensor/a/state","qos":"2","broker":"67b8de4a.029d3","x":210,"y":100,"wires":[["ccd36bb4.eccae8"]]},{"id":"ccd36bb4.eccae8","type":"switch","z":"49c6b66c.16eaf8","name":"","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"false","vt":"str"}],"checkall":"true","repair":false,"outputs":1,"x":210,"y":220,"wires":[["6cb9da01.6abab4"]]},{"id":"6cb9da01.6abab4","type":"ifttt out","z":"49c6b66c.16eaf8","eventName":"door","key":"","x":210,"y":320,"wires":[]},{"id":"67b8de4a.029d3","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","willTopic":"","willQos":"0","willPayload":""}]
 ```
 
-#### Krok 2: Klikněte na **Menu** v pravém horním rohu, poté vyberte **Import** a následně **Clipboard**:
+#### Krok 2: Klikněte vpravo nahoře na **menu** a vyberte **Import** a **Clipboard**:
 
 <div class="container">
   <div class="row">
@@ -332,7 +345,7 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
   </div>
 </div>
 
-#### Krok 3: Vložte text ze schránky do textového pole a stiskněte **Import**:
+#### Krok 3: Vložte text ze schránky do textového pole a klikněte na **Import**:
 
 <div class="container">
   <div class="row">
@@ -340,9 +353,9 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
   </div>
 </div>
 
-## Nastavení IFTTT klíče
+## Nastavení klíče IFTTT
 
-#### Krok 1: Naimportovali jste flow. Nyní je potřeba vyplnit vlastní **IFTTT klíč**. Poklepejte na uzel **IFTTT**:
+#### Krok 1: Flow je naimportovaný, teď do něj doplňte svůj **klíč IFTTT**. Dvakrát klikněte na uzel **IFTTT**:
 
 <div class="container">
   <div class="row">
@@ -350,7 +363,7 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
   </div>
 </div>
 
-#### Krok 2: Klikněte na **ikonu tužky** a zkopírujte a **vlože klíč** z posledního kroku kapitoly o integraci s IFTTT. Zkontrolujte, že název události (**Event name**) je nastaven na **door**. Poté klikněte na **Done**:
+#### Krok 2: Klikněte na **ikonu tužky** a **vložte klíč** z posledního kroku části Integrace s IFTTT. Zkontrolujte, že je název události (**Event name**) nastavený na **door**. Pak klikněte na **Done**:
 
 <div class="container">
   <div class="row">
@@ -358,9 +371,9 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
   </div>
 </div>
 
-## Spusťte a otestujte své flow!
+## Spusťte a otestujte flow
 
-#### Krok 1: Pokaždé, když změníte flow, musíte kliknout na tlačítko **Deploy** v pravém horním rohu. **Udělějte to prosím nyní**:
+#### Krok 1: Po každé změně flow musíte kliknout na tlačítko **Deploy** v pravém horním rohu. **Udělejte to teď**:
 
 <div class="container">
   <div class="row">
@@ -368,9 +381,9 @@ Skvělé! Plugin pro Node-RED umožní odesílat notifikace přímo do vašeho t
   </div>
 </div>
 
-#### Krok 2: Nyní přiložte magnet k magnetickému senzoru na vašem rádiovém dveřním senzoru a poté jej oddalte. Během několika sekund by vám měla přijít IFTTT notifikace!
+#### Krok 2: Přiložte magnet k magnetickému kontaktu dveřního senzoru a zase ho oddalte. Do několika sekund by vám měla přijít notifikace z IFTTT!
 
-V pravé záložce **debug** byste měli vidět zprávy „true“ a „false“ a během stavu **false** se na chvíli zobrazí zelená vlaječka **Sent!** u uzlu IFTTT.
+Na záložce **debug** vpravo uvidíte zprávy „true“ a „false“. Při stavu **false** se u uzlu IFTTT na chvíli objeví zelený příznak **Sent!**.
 
 <div class="container">
   <div class="row">
@@ -378,7 +391,7 @@ V pravé záložce **debug** byste měli vidět zprávy „true“ a „false“
   </div>
 </div><br></br>
 
-Pokud chcete být upozorňováni na zprávy typu „true“ místo **false**, jednoduše otevřete **switch node** a změňte text `false` v pravidlech na `true`.
+Pokud chcete dostávat upozornění na zprávy „true“ místo **false**, otevřete uzel **switch** a v pravidlech změňte text `false` na `true`.
 
 <div class="container">
   <div class="row">
@@ -388,17 +401,17 @@ Pokud chcete být upozorňováni na zprávy typu „true“ místo **false**, je
 
 :::success
 
-Nyní najděte vhodné místo pro umístění **Radio Door Sensor** a užijte si notifikace, které budete dostávat!
+Teď najděte senzoru **Radio Door Sensor** vhodné místo a užívejte si notifikace!
 
 :::
 
 ## Další funkce
 
-Naimportujte toto flow do Node-RED, které umožní:
+Do Node-RED můžete naimportovat i tento flow, který umí:
 
 * Zobrazit aktuální stav dveří pomocí grafického zámku
 * Zobrazit stopky pro otevřené dveře a vyvolat událost po uplynutí nastaveného času otevření
-* Zkontrolovat stav dveří v nastavený čas a generovat událost
+* Zkontrolovat stav dveří v nastavený čas a vyvolat událost
 
 ```text
 [{"id":"6f038501.0d3aec","type":"mqtt in","z":"84faeffa.c3a93","name":"","topic":"node/door-sensor:0/door-sensor/a/state","qos":"2","broker":"29fba84a.b2af58","x":290,"y":260,"wires":[["27a2954e.e0ee9a"]]},{"id":"968704d7.760558","type":"ui_switch","z":"84faeffa.c3a93","name":"","label":"Doors","group":"57ff470b.93fdf8","order":0,"width":"0","height":"0","passthru":false,"decouple":"true","topic":"","style":"","onvalue":"true","onvalueType":"str","onicon":"fa-lock","oncolor":"green","offvalue":"false","offvalueType":"str","officon":"fa-unlock","offcolor":"red","x":750,"y":260,"wires":[[]]},{"id":"cd19b231.5a539","type":"inject","z":"84faeffa.c3a93","name":"","topic":"","payload":"","payloadType":"date","repeat":"1","crontab":"","once":false,"onceDelay":0.1,"x":210,"y":420,"wires":[["90766ef0.cb081"]]},{"id":"ec67f171.3a0db","type":"ui_text","z":"84faeffa.c3a93","group":"57ff470b.93fdf8","order":0,"width":0,"height":0,"name":"","label":"Opened (sec)","format":"{{msg.payload}}","layout":"row-spread","x":580,"y":380,"wires":[]},{"id":"90766ef0.cb081","type":"function","z":"84faeffa.c3a93","name":"human time","func":"var human = {payload : \"\"};\nvar seconds = {payload : 0};\n\nif(flow.get(\"state\") == \"true\")\n{\n    human.payload = \"CLOSED\";\n} else\n{\n    diff = parseInt((Date.now() - flow.get(\"timestamp\")));\n    human.payload = new Date(diff).toString().slice(16,24);\n    seconds.payload = parseInt(diff/1000);\n}\n\n\nreturn [human, seconds];","outputs":2,"noerr":0,"x":390,"y":420,"wires":[["ec67f171.3a0db"],["fa64f9a0.2e58e8"]],"outputLabels":["human time","seconds"],"icon":"node-red/timer.png"},{"id":"27a2954e.e0ee9a","type":"change","z":"84faeffa.c3a93","name":"","rules":[{"t":"set","p":"state","pt":"flow","to":"payload","tot":"msg"},{"t":"set","p":"timestamp","pt":"flow","to":"","tot":"date"}],"action":"","property":"","from":"","to":"","reg":false,"x":580,"y":260,"wires":[["968704d7.760558"]]},{"id":"3ed1d655.049fda","type":"inject","z":"84faeffa.c3a93","name":"at 22:00","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"00 22 * * *","once":false,"onceDelay":0.1,"x":200,"y":600,"wires":[["66b56029.25196"]]},{"id":"66b56029.25196","type":"switch","z":"84faeffa.c3a93","name":"","property":"state","propertyType":"flow","rules":[{"t":"eq","v":"false","vt":"str"}],"checkall":"true","repair":false,"outputs":1,"x":370,"y":600,"wires":[["bf5ca77b.366198"]]},{"id":"94e19310.ac12e","type":"debug","z":"84faeffa.c3a93","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":770,"y":600,"wires":[]},{"id":"bf5ca77b.366198","type":"change","z":"84faeffa.c3a93","name":"","rules":[{"t":"set","p":"payload","pt":"msg","to":"Door opened at night","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":580,"y":600,"wires":[["94e19310.ac12e"]]},{"id":"fa64f9a0.2e58e8","type":"switch","z":"84faeffa.c3a93","name":"opened for 5 s","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"5","vt":"num"}],"checkall":"true","repair":false,"outputs":1,"x":580,"y":440,"wires":[["e3ba7f50.53703"]]},{"id":"e3ba7f50.53703","type":"debug","z":"84faeffa.c3a93","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":770,"y":440,"wires":[]},{"id":"cd9712a1.91c45","type":"comment","z":"84faeffa.c3a93","name":"Save state to flow and show it on dasboard","info":"","x":300,"y":200,"wires":[]},{"id":"21a591a0.10411e","type":"comment","z":"84faeffa.c3a93","name":"Opened doors stopwatch","info":"","x":250,"y":360,"wires":[]},{"id":"6752875e.0092b8","type":"comment","z":"84faeffa.c3a93","name":"Check door state at 22:00","info":"","x":250,"y":540,"wires":[]},{"id":"29fba84a.b2af58","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","willTopic":"","willQos":"0","willPayload":""},{"id":"57ff470b.93fdf8","type":"ui_group","z":"","name":"Default","tab":"11207769.c31889","disp":true,"width":"6","collapse":false},{"id":"11207769.c31889","type":"ui_tab","z":"","name":"Home","icon":"dashboard"}]

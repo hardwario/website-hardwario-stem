@@ -8,7 +8,7 @@ import React from 'react';
 
 **Time allocation**: 10 mins
 
-Students try out other projects that are linked to the topic, or there is an Ideation
+Students try out additional projects related to the given topic, or participate in what is called Ideation.
 
 ## Hackster.io platform
 

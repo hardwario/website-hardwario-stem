@@ -9,4 +9,4 @@ import Image from '@theme/IdealImage';
 
 Studenti prezentují své nápady a projekty ostatním studentům. 
 
-Diskutují a navrhují, kde se dá ovládání LED pásku nasadit tak, aby vzniklo něco smysluplného.
+Diskutují a navrhují, kde se dá čítač impulzů nasadit tak, aby vzniklo něco smysluplného.

@@ -1,7 +1,7 @@
 ---
 slug: what-is-iot-experiment
 title: Experiment
-title_meta: "Experiment (L101: Co je to Internet věcí - IoT)"
+title_meta: "Experiment (L101: Co je to internet věcí – IoT)"
 ---
 import Image from '@theme/IdealImage';
 
@@ -15,7 +15,7 @@ Ze stavebnice HARDWARIO si postavíme univerzální bezdrátové tlačítko.
 
 V rámci experimentu pochopíme:
 
-* jak se snadno pracuje s IoT stavebnicí HARDWARIO TOWER
+* jak snadno se pracuje s IoT stavebnicí HARDWARIO TOWER
 
 ### Kroky experimentu
 

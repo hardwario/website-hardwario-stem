@@ -102,7 +102,7 @@ In settings, name it _Last spin_. This way, it will show you the value that the 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-8.webp')} alt="Edit text node dialog with the Label field for the last spin value highlighted"/> </div> </div>
 
 8. Place another node under this one; thanks to the bottom one, the values will be registered into a graph. 📈 You will find it as **Chart node** in Dashboard section.
-In the **Label** field, name it as _History_. Into the **X-asis** Label field, set  automatic, which means that the unit will be added automatically.
+In the **Label** field, name it as _History_. Into the **X-axis** Label field, set  automatic, which means that the unit will be added automatically.
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-9.webp')} alt="Edit chart node dialog with the Label field and the automatic X-axis Label setting highlighted"/> </div> </div>
 

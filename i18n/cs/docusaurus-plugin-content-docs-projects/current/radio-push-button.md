@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Bezdrátové tlačítko
 
-Tento dokument vás provede projektem **Bezdrátového tlačítka**. Budete moci komunikovat se svým tlačítkem v prostředí **Node-RED** a spouštět službu push notifikací **IFTTT** při jeho stisknutí. Na svůj chytrý telefon obdržíte upozornění formou push notifikace.
+Tento návod vás provede projektem **Bezdrátové tlačítko**. S tlačítkem budete pracovat v prostředí **Node-RED**, a když ho stisknete, služba **IFTTT** vám pošle push notifikaci do chytrého telefonu.
 
 ## Blokové schéma
 
@@ -27,34 +27,34 @@ Tento dokument vás provede projektem **Bezdrátového tlačítka**. Budete moci
 * Jedna z následujících možností:
   
   * Nainstalovaný **HARDWARIO Playground** (doporučeno)<br></br>
-    Více informací naleznete v dokumentu [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/) document.
+    Více informací najdete v dokumentu [**Rychlý start s firmwarem**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
   * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**<br></br>
-    Více informací naleznete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
+    Více informací najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
   * Nainstalovaný **HARDWARIO Toolchain**<br></br>
-    Více informací naleznete v dokumentu [**Nastavení Toolchain**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
+    Více informací najdete v dokumentu [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
 
 ## Nahrání firmwaru
 
-V tomto postupu použijeme **HARDWARIO Playground** k nahrání firmwaru do **Core Modulu**.
+Firmware nahrajete do modulu **Core Module** v aplikaci **HARDWARIO Playground**.
 
-#### Krok 1: Připojte kabel Micro USB k Core Modulu a k počítači
+#### Krok 1: Připojte modul **Core Module** kabelem Micro USB k počítači
 
-#### Krok 2: Nahrání firmwaru
+#### Krok 2: Nahrajte firmware
 
-Spusťte aplikaci HARDWARIO Playground. Na záložce Firmware vyberte a nahrajte firmware `bcf-radio-push-button` do **Core Modulu**.
+Spusťte HARDWARIO Playground, na záložce Firmware vyberte firmware `bcf-radio-push-button` a nahrajte ho do modulu **Core Module**:
 
 :::warning
 
 **Nahrávání firmwaru do Core Module R1 a R2**
-Pro rozdíly v nahrávání firmwaru do staršího **Core Module 1** a novějšího **Core Module 2** si prosím přečtěte srovnání **Core Module R1 a R2** v sekci **Hardware**.
+Rozdíly v nahrávání firmwaru do staršího **Core Module 1** a novějšího **Core Module 2** popisuje srovnání **Core Module R1 a R2** v sekci **Hardware**.
 
 :::
 
-#### Krok 3: Odpojte kabel Micro USB od Core Modulu a počítače.
+#### Krok 3: Odpojte kabel Micro USB od modulu **Core Module** a od počítače
 
 :::success
 
-V tomto bodě je firmware úspěšně nahrán.
+Firmware je úspěšně nahraný.
 
 :::
 
@@ -73,41 +73,41 @@ Podívejte se na krátké video s jednoduchou ukázkou krok za krokem:
   />
 </div>
 
-#### Krok 1: Začněte s **Mini Battery Module**
+#### Krok 1: Začněte modulem **Mini Battery Module**
 
-#### Krok 2: Připojte **Core Module** na **Mini Battery Module**
+#### Krok 2: Nasaďte **Core Module** na **Mini Battery Module**
 
-#### Krok 3: Připojte **Button Module** na **Core Module**
+#### Krok 3: Nasaďte **Button Module** na **Core Module**
 
-## Spuštění Playgroundu
+## Příprava Playgroundu
 
 :::danger
 
-Pokud používáte nový **HARDWARIO Playground**, použijte záložku **Functions místo** [**http://localhost:1880/**](http://localhost:1880/). Proces párování nyní probíhá na záložce **Devices**. Pro otestování komunikace použijte záložku **Messages**.
+Pokud používáte nový **HARDWARIO Playground**, použijte místo adresy [**http://localhost:1880/**](http://localhost:1880/) záložku **Functions**. Párování teď probíhá na záložce **Devices** a komunikaci otestujete na záložce **Messages**.
 
 :::
 
-#### Krok 1: Otevřete **Node-RED** ve svém webovém prohlížeči.
+#### Krok 1: Otevřete **Node-RED** ve webovém prohlížeči
 
 [http://localhost:1880/](http://localhost:1880/)
 
-#### Krok 2: Měli byste vidět prázdnou pracovní plochu s označením **Flow 1**
+#### Krok 2: Měli byste vidět prázdnou pracovní plochu **Flow 1**
 
-#### Krok 3: Vložte následující úryvek do flow (pomocí **Menu >> Import**) a klikněte na záložku **Flow 1**
+#### Krok 3: Vložte do flow následující úryvek (pomocí **Menu >> Import**) a klikněte na záložku **Flow 1**
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-controls.webp')} alt="Flow v Node-RED s inject tlačítky pro příkazy brány: výpis bran, spuštění a zastavení párování uzlů"/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-gw-controls.webp')} alt="Flow v Node-RED s tlačítky inject pro příkazy brány: výpis bran, spuštění a zastavení párování uzlů"/>
   </div>
 </div><br></br>
 
 :::info
 
-Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádio. Tyto příkazy jsou odesílány přes protokol MQTT.
+Úryvek přidá tlačítka pro příkazy brány a rádia. Příkazy se odesílají protokolem MQTT.
 
 :::
 
-#### Krok 4: Nasazení flow pomocí tlačítka **Deploy** v pravém horním rohu
+#### Krok 4: Nasaďte flow tlačítkem **Deploy** v pravém horním rohu
 
 #### Krok 5: Otevřete záložku **debug**
 
@@ -119,11 +119,11 @@ Tento úryvek poskytuje ovládací tlačítka pro příkazy gateway/rádio. Tyto
 
 :::info
 
-V záložce **debug** budete moci vidět všechny MQTT zprávy.
+Na záložce **debug** uvidíte všechny zprávy MQTT.
 
 :::
 
-#### Krok 6: Klikněte na tlačítko **List all gateways**. V záložce **debug** byste měli vidět odpověď podobnou této.
+#### Krok 6: Klikněte na tlačítko **List all gateways**. Na záložce **debug** byste měli vidět podobnou odpověď
 
 <div class="container">
   <div class="row">
@@ -133,15 +133,15 @@ V záložce **debug** budete moci vidět všechny MQTT zprávy.
 
 :::success
 
-V tomto bodě máte funkční **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** a **HARDWARIO Gateway**.
+Teď máte funkční **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** a **HARDWARIO Gateway**.
 
 :::
 
-## Párování
+## Rádiové párování
 
-V této části vytvoříme rádiové spojení mezi **Radio Dongle** a **Radio Push Button**.
+V této části navážeme rádiové spojení mezi **Radio Dongle** a sestavou **Radio Push Button**.
 
-Postupujte podle následujících kroků v **Node-RED**:
+V prostředí **Node-RED** postupujte takto:
 
 #### Krok 1: Klikněte na tlačítko **Start node pairing**
 
@@ -151,9 +151,9 @@ Postupujte podle následujících kroků v **Node-RED**:
   </div>
 </div>
 
-#### Krok 2: Sestavení
+#### Krok 2: Zapněte sestavu
 
-Vložte baterie do **Radio Push Button**, čímž odešlete požadavek na spárování (měla by se také rozsvítit červená LED na **Core Module** přibližně na 2 sekundy).
+Vložte baterie do sestavy **Radio Push Button**, čímž odešlete požadavek na párování (červená LED na modulu **Core Module** by se také měla asi na 2 sekundy rozsvítit).
 
 #### Krok 3: Klikněte na tlačítko **Stop node pairing**
 
@@ -165,17 +165,17 @@ Vložte baterie do **Radio Push Button**, čímž odešlete požadavek na spáro
 
 :::success
 
-V tomto bodě máte navázané rádiové spojení mezi uzlem (**Radio Push Button**) a bránou (**Radio Dongle**).
+Teď máte navázané rádiové spojení mezi uzlem (**Radio Push Button**) a bránou (**Radio Dongle**).
 
 :::
 
 ## Test komunikace
 
-Postupujte podle těchto kroků v **Node-RED**:
+V prostředí **Node-RED** postupujte takto:
 
-#### Krok 1: Přepněte se na kartu debug vpravo
+#### Krok 1: Přepněte se na záložku **debug** vpravo
 
-#### Krok 2: Stiskněte tlačítko a měli byste vidět zprávy s počítáním
+#### Krok 2: Stiskněte tlačítko. Měli byste vidět zprávy s počtem stisknutí
 
 <div class="container">
   <div class="row">
@@ -185,25 +185,25 @@ Postupujte podle těchto kroků v **Node-RED**:
 
 :::success
 
-V tomto bodě máte ověřenou rádiovou komunikaci.
+Teď máte ověřenou rádiovou komunikaci.
 
 :::
 
-## Enclosure
+## Krabička
 
-Volitelně můžete sestavu vložit do vhodného krytu, pokud jej máte k dispozici.
+Pokud máte vhodnou krabičku, můžete do ní sestavu vložit.
 
 :::info
 
-Více informací o krytech naleznete v dokumentu [**Enclosures**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
+Více o krabičkách najdete v dokumentu [**Krabičky**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
 
 :::
 
-## Integration with IFTTT
+## Integrace s IFTTT
 
-V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ mechanismu pro spouštění událostí.
+V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je pravidlo, které na určitou událost zareaguje akcí.
 
-#### Krok 1: Otevřete webový prohlížeč a přejděte na stránku [**IFTTT**](https://ifttt.com/)
+#### Krok 1: Otevřete webový prohlížeč a přejděte na [**IFTTT**](https://ifttt.com/)
 
 <div class="container">
   <div class="row">
@@ -211,7 +211,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
   </div>
 </div>
 
-#### Krok 2: Přihlaste se do služby IFTTT. Můžete se zaregistrovat nebo přihlásit pomocí svého účtu Google nebo Facebook.
+#### Krok 2: Přihlaste se do služby IFTTT. Zaregistrovat se můžete i účtem Google nebo Facebook
 
 <div class="container">
   <div class="row">
@@ -219,7 +219,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
   </div>
 </div>
 
-#### Krok 3: Přejděte v menu na **My Applets** a klikněte na tlačítko **New Applet**
+#### Krok 3: V menu přejděte do **My Applets** a klikněte na tlačítko **New Applet**
 
 <div class="container">
   <div class="row">
@@ -227,7 +227,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
   </div>
 </div>
 
-#### Krok 4: Klikněte na **+this** ve větě `if this then that`.
+#### Krok 4: Ve větě `if this then that` klikněte na **+this**
 
 <div class="container">
   <div class="row">
@@ -235,11 +235,11 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
   </div>
 </div>
 
-#### Krok 5: Vyhledejte službu s názvem **Webhooks** a vyberte ji.
+#### Krok 5: Vyhledejte službu **Webhooks** a vyberte ji
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-05.webp')} alt="Krok Choose a service s vyhledaným a zvýrazněným servisem Webhooks"/>
+    <Image img={require('./img/radio-push-button/radio-push-button-ifttt-05.webp')} alt="Krok Choose a service s vyhledanou a zvýrazněnou službou Webhooks"/>
   </div>
 </div>
 
@@ -251,7 +251,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
   </div>
 </div>
 
-#### Krok 7: Zadejte button do pole **Event Name** (Název události) a klikněte na **Create Trigger** (Vytvořit spouštěč).
+#### Krok 7: Do pole **Event Name** napište `button` a klikněte na **Create Trigger**
 
 <div class="container">
   <div class="row">
@@ -259,7 +259,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
   </div>
 </div>
 
-#### Krok 8: Klikněte na **+that** ve větě `if this then that`.
+#### Krok 8: Ve větě `if this then that` klikněte na **+that**
 
 <div class="container">
   <div class="row">
@@ -267,7 +267,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
   </div>
 </div>
 
-#### Krok 9: Vyhledejte akční službu s názvem **Notifications** (Oznámení) a vyberte ji.
+#### Krok 9: Vyhledejte službu pro akci **Notifications** a vyberte ji
 
 <div class="container">
   <div class="row">
@@ -275,7 +275,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
   </div>
 </div>
 
-#### Krok 10: Klikněte na **Send a notification from the IFTTT app** (Odeslat oznámení z aplikace IFTTT).
+#### Krok 10: Klikněte na **Send a notification from the IFTTT app**
 
 <div class="container">
   <div class="row">
@@ -283,7 +283,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
   </div>
 </div>
 
-#### Krok 11: Upravte pole **Notification** a vložte text T`The button has been pressed on {{OccurredAt}}`, poté klikněte na tlačítko **Create action** (Vytvořit akci).
+#### Krok 11: Do pole **Notification** vložte text `The button has been pressed on {{OccurredAt}}` a klikněte na tlačítko **Create action**
 
 <div class="container">
   <div class="row">
@@ -323,7 +323,7 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
   </div>
 </div>
 
-#### Krok 16: Zadejte název `button` do pole **event** a ponechte okno otevřené.
+#### Krok 16: Do pole **event** vložte název `button` a okno nechte otevřené
 
 <div class="container">
   <div class="row">
@@ -333,9 +333,9 @@ V této části vytvoříme **Applet** ve službě **IFTTT**. **Applet** je typ 
 
 #### Krok 17: Mobilní aplikace
 
-Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se pomocí stejného účtu, který jste použili k vytvoření appletu. Povolte aplikaci zasílání push notifikací, pokud budete vyzváni.
+Nainstalujte si do chytrého telefonu aplikaci **IFTTT** a přihlaste se stejným účtem, ve kterém jste applet vytvořili. Když se aplikace zeptá, povolte jí push notifikace.
 
-### Krok 18: Klikněte na tlačítko **Test It** v okně webového prohlížeče.
+#### Krok 18: V okně prohlížeče klikněte na tlačítko **Test It**
 
 <div class="container">
   <div class="row">
@@ -343,9 +343,9 @@ Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se 
   </div>
 </div>
 
-#### Krok 19: Během několika sekund byste měli na svém chytrém telefonu obdržet push notifikaci.
+#### Krok 19: Do několika sekund by vám na chytrý telefon měla přijít push notifikace
 
-#### Krok 20: Zkopírujte tuto URL adresu do schránky pro pozdější použití.
+#### Krok 20: Zkopírujte si tuto adresu URL do schránky, budete ji potřebovat později
 
 <div class="container">
   <div class="row">
@@ -355,17 +355,17 @@ Nainstalujte si aplikaci **IFTTT** do svého chytrého telefonu a přihlaste se 
 
 :::success
 
-V tomto bodě máte funkční notifikační **Applet** ve službě **IFTTT**.
+Teď máte ve službě **IFTTT** funkční **Applet** pro notifikace.
 
 :::
 
-## Propojení IFTTT v Node-RED
+## Propojení Node-RED s IFTTT
 
-V této části vytvoříme propojení mezi událostí tlačítka na MQTT a HTTP požadavkem na **IFTTT**, který spustí push notifikaci.
+V této části propojíme událost tlačítka v MQTT s požadavkem HTTP na **IFTTT**, který spustí push notifikaci.
 
 #### Krok 1: Přepněte se do svého flow v **Node-RED**
 
-#### Krok 2: Vložte následující úryvek do flow (použijte **Menu >> Import**)
+#### Krok 2: Vložte do flow následující úryvek (pomocí **Menu >> Import**)
 
 ```text
 [{"id":"e507a379.e9d1d","type":"mqtt in","z":"dfc861b.b2a02a","name":"","topic":"node/push-button:0/push-button/-/event-count","qos":"2","broker":"b9592cd0.2b74f","x":660,"y":760,"wires":[["5d4d5593.80242c"]]},{"id":"62133f2.84223c","type":"http request","z":"dfc861b.b2a02a","name":"","method":"POST","ret":"txt","url":"","tls":"","x":1010,"y":760,"wires":[[]]},{"id":"5d4d5593.80242c","type":"change","z":"dfc861b.b2a02a","name":"","rules":[{"t":"delete","p":"payload","pt":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":890,"y":860,"wires":[["62133f2.84223c"]]},{"id":"b9592cd0.2b74f","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
@@ -375,17 +375,17 @@ Bude to vypadat takto:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-snippet.webp')} alt="Flow v Node-RED s MQTT uzlem event-count tlačítka napojeným přes delete msg.payload na uzel http request"/>
+    <Image img={require('./img/radio-push-button/radio-push-button-node-red-ifttt-snippet.webp')} alt="Flow v Node-RED s uzlem MQTT pro event-count tlačítka napojeným přes delete msg.payload na uzel http request"/>
   </div>
 </div><br></br>
 
 :::info
 
-Tento úryvek vytváří spojení mezi MQTT tématem `node/push-button:0/push-button/-/event-count` a HTTP požadavkem. Před předáním zprávy do HTTP požadavku odstraníme parametr `payload`, protože by jinak byl použit jako tělo HTTP požadavku.
+Úryvek propojí topic MQTT `node/push-button:0/push-button/-/event-count` s požadavkem HTTP. Než zprávu předáme do požadavku HTTP, odstraníme z ní parametr `payload`, jinak by se použil jako tělo požadavku.
 
 :::
 
-#### Krok 3: Klikněte na **http request node** a upravte IFTTT URL adresu získanou v předchozí části.
+#### Krok 3: Dvakrát klikněte na uzel **http request** a upravte adresu URL IFTTT, kterou jste získali v předchozí části
 
 <div class="container">
   <div class="row">
@@ -393,18 +393,18 @@ Tento úryvek vytváří spojení mezi MQTT tématem `node/push-button:0/push-bu
   </div>
 </div>
 
-#### Krok 4: Uložte URL kliknutím na tlačítko **Done**
+#### Krok 4: Adresu URL uložte tlačítkem **Done**
 
-#### Krok 5: Nasazení flow pomocí tlačítka **Deploy** v pravém horním rohu.
+#### Krok 5: Nasaďte flow tlačítkem **Deploy** v pravém horním rohu
 
 :::success
 
-V tomto bodě byste měli obdržet push notifikaci pokaždé, když stisknete tlačítko.
+Teď by vám měla přijít push notifikace pokaždé, když stisknete tlačítko.
 
 :::
 
 ## Související dokumenty
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
-* [**Nastavení Toolchain**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
-* [**Průvodce Toolchain**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
+* [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
+* [**Průvodce toolchainem**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)

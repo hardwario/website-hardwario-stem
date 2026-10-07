@@ -6,18 +6,18 @@ import Image from '@theme/IdealImage';
 
 ## Úvod
 
-Ani mobilní telefon není neomylný! Občas tě může zklamat a nevzbudit. Pokud se ti to stane, nezoufej. Stiskni 👇 chytré tlačítko a omluv se učiteli dřív, než to oznámí rodičům.
+Ani mobilní telefon není neomylný! Občas vás může zradit a nevzbudit. Když se to stane, nezoufejte. Stiskněte 👇 chytré tlačítko a omluvte se učiteli dřív, než to oznámí vašim rodičům.
 
-V tomto projektu se naučíš, **jak odeslat oznámení pomocí chytrého tlačítka**. 📩
+V tomto projektu se naučíte, **jak chytrým tlačítkem odeslat oznámení**. 📩
 
-K tomu budeš potřebovat pouze základní [**Sadu Start**](https://www.hardwario.store/cz/p/start-set) od HARDWARIO.
+Stačí vám k tomu základní sada HARDWARIO [**Start Set**](https://www.hardwario.store/cz/p/start-set).
 
 
-## Zrealizuj to v Node-RED
+## Rozjeďte to v Node-RED
 
-1. Sestav Sadu Start a spáruj ji. Pokud to děláš poprvé, připravili jsme pro tebe jednoduchý návod. Pro Core Module budeš potřebovat firmware pro rádiové tlačítko. Pokud nevíš, jak firmware nahrát nebo co to vlastně je, zjistíš to [zde](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
-2. V Playgroundu klikni na záložku **Functions**, kde se nachází programovací prostředí [Node-RED](https://docs.hardwario.com/tower/platform-integrations/blynk-app/#node-red-setup). 🤖
-3. Z panelu vlevo přetáhni na plochu Node-RED **MQTT** uzel ze sekce Input.
+1. Sestavte Start Set a spárujte ho. Pokud to děláte poprvé, připravili jsme pro vás jednoduchý návod. Do modulu Core Module budete potřebovat firmware pro rádiové tlačítko. Pokud nevíte, jak firmware nahrát nebo co to vlastně je, najdete to [tady](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
+2. V Playgroundu klikněte na záložku **Functions**, kde najdete programovací prostředí [Node-RED](https://docs.hardwario.com/tower/platform-integrations/blynk-app/#node-red-setup). 🤖
+3. Z panelu vlevo přetáhněte na plochu Node-RED uzel **MQTT** ze sekce Input.
 
 <div class="container">
   <div class="row">
@@ -25,27 +25,27 @@ K tomu budeš potřebovat pouze základní [**Sadu Start**](https://www.hardwari
   </div>
 </div>
 
-4. V uzlu nastav funkci tlačítka. Dvojklikem otevři jeho nastavení a **zkopíruj následující řádek do pole Topic**:
+4. V uzlu nastavte klíčovou funkci, tedy stisk tlačítka. Dvojklikem otevřete jeho nastavení a **do pole Topic zkopírujte tento řádek**:
 
 ```
 node/push-button:0/push-button/-/event-count
 ```
 
-Potvrď kliknutím na tlačítko **Done**.
+Potvrďte tlačítkem **Done**.
 
-## Nastav obsah omluvy.
+## Napište text omluvy
 
-1. Obsah omluvy určíš také v Node-RED. Umísti vedle MQTT node také **Change node** z kategorie **Functions**. Tento node určuje, jaká zpráva se odešle.
+1. Text omluvy nastavíte také v Node-RED. Vedle uzlu MQTT umístěte uzel **Change** ze sekce **Functions**. Ten určuje, jaká zpráva se odešle.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/apology-to-teachers/apology-to-teachers-2.webp')} alt="Zvýrazněný Change node v paletě a uzel set msg.payload umístěný vedle MQTT uzlu tlačítka"/>
+    <Image img={require('./img/apology-to-teachers/apology-to-teachers-2.webp')} alt="Zvýrazněný uzel Change v paletě a uzel set msg.payload umístěný vedle uzlu MQTT tlačítka"/>
   </div>
 </div>
 
-2. Dvojklikem otevři node a v poli **Rules** nastav pravidlo **msg.payload** (viz screenshot níže). Tím nastavíš obsah zprávy. Měj na paměti, že oznámení nezobrazuje české háčky a čárky – a nezapomeň se podepsat. Zpráva může vypadat třeba takto:
+2. Dvojklikem uzel otevřete a v poli **Rules** nastavte pravidlo **msg.payload** (viz snímek obrazovky níže). Tím určíte text zprávy. Pamatujte, že oznámení nezobrazí háčky a čárky, a nezapomeňte se podepsat. Zpráva může vypadat třeba takto:
 
-_Dear Mr. Woodpecker, I'm sorry, but unfortunately my dog ate my alarm clock. I'll come a.s.a.p. Evzen (your favorite pupil, who does not deserve to have a note sent home to his parents)._
+_Vazeny pane Datle, omlouvam se, ale muj pes mi bohuzel sezral budik. Prijdu co nejdriv. Evzen (vas oblibeny zak, ktery si nezaslouzi poznamku domu)._
 
 <div class="container">
   <div class="row">
@@ -53,29 +53,29 @@ _Dear Mr. Woodpecker, I'm sorry, but unfortunately my dog ate my alarm clock. I'
   </div>
 </div>
 
-Potvrď kliknutím na tlačítko **Done**. 👏
+Potvrďte tlačítkem **Done**. 👏
 
-## Připrav Blynk IoT pro oznámení
+## Připravte Blynk IoT na oznámení
 
-Omluva dorazí na telefon učitele jako push oznámení prostřednictvím aplikace **Blynk IoT**. 📱
+Omluva dorazí učiteli do telefonu jako push notifikace z aplikace **Blynk IoT**. 📱
 
-1. Pokud ještě nemáš účet, vytvoř si ho v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). [V tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) se dozvíš, jak nastavit účet, šablonu zařízení (template) a zařízení (device) – budeš potřebovat všechny tři. Můžeš také znovu použít šablonu z předchozího projektu.
+1. Pokud ještě nemáte účet v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/), založte si ho. [V tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) zjistíte, jak nastavit účet, šablonu zařízení (template) a zařízení (device). Budete potřebovat všechny tři. Můžete také znovu použít šablonu z některého předchozího projektu.
 
-2. V Blynk IoT se oznámení neumisťuje na obrazovku telefonu jako widget – odesílá se jako **Event** definovaný na tvé šabloně. V detailu šablony otevři záložku **Events** a přidej nový event (například ho pojmenuj `apology` a přidej mu zprávu). Poté pro tento event zapni **Notifications**, aby ho Blynk doručil na tvůj telefon. [Návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) tě provede nastavením šablony.
+2. V Blynk IoT se oznámení nepřidává na obrazovku telefonu jako widget. Odesílá se jako událost (**Event**) definovaná v šabloně. V detailu šablony otevřete záložku **Events** a přidejte novou událost (pojmenujte ji třeba `apology` a zadejte jí zprávu). Pak pro tuto událost zapněte **Notifications**, aby ji Blynk doručil do telefonu. [Návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) vás nastavením šablony provede.
 
-3. Stáhni si na telefon **aplikaci Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlas se stejným účtem. Zkontroluj, že má aplikace povolená oznámení, aby se omluva mohla zobrazit. ✉️
+3. Stáhněte si do telefonu **aplikaci Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlaste se stejným účtem. Zkontrolujte, že má aplikace povolená oznámení, aby se omluva mohla zobrazit. ✉️
 
-## Nastav odesílání omluvy
+## Nastavte odeslání omluvy
 
-1. Nyní se vrať do Playgroundu. Na plochu Node-RED přidej za Change node se svou omluvou uzel ze sekce **Blynk IoT**, který umí spustit tvůj event (uzel **log event**). 📮
+1. Vraťte se do Playgroundu. Na plochu Node-RED přidejte za uzel Change s omluvou uzel ze sekce **Blynk IoT**, který umí spustit vaši událost (uzel **log event**). 📮
 
-2. Dvojklikem node otevři. Vpravo uvidíš **malou tužku**. Klikni na ni a otevře se nové okno. Do pole **Url** zadej `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové aplikaci Blynk IoT na svém počítači. Potvrď tlačítkem **Add**.
+2. Dvojklikem uzel otevřete. Vpravo uvidíte **malou tužku**. Klikněte na ni a otevře se nové okno. Do pole **Url** zadejte `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu zařízení ve webové aplikaci Blynk IoT na počítači. Potvrďte tlačítkem **Add**.
 
-3. Nastav node tak, aby spouštěl **Event**, který jsi vytvořil (kód eventu, např. `apology`). Právě to promění stisk tlačítka v push oznámení. Potvrď kliknutím na tlačítko **Done**.
+3. Nastavte uzel tak, aby spouštěl událost (**Event**), kterou jste vytvořili (kód události, např. `apology`). Právě tím se stisk tlačítka promění v push notifikaci. Potvrďte tlačítkem **Done**.
 
-4. **Propoj uzly** tak, aby se ze stisku tlačítka ➡️ stala tvá omluva ➡️ která spustí Blynk IoT event ➡️ jenž dorazí na mobil učitele. Poté stiskni tlačítko **Deploy** a klidně se uvolni – omluva, která ti zachrání kůži, když se zpozdíš, je připravena! 🙏
+4. **Propojte uzly** tak, aby se stisk tlačítka ➡️ proměnil v omluvu, ➡️ která spustí událost v Blynk IoT, ➡️ jež dorazí učiteli do mobilu. Pak stiskněte tlačítko **Deploy** a klidně si oddechněte: omluva, která vám zachrání kůži, až přijdete pozdě, je připravená! 🙏
 
-## Připravit, pozor… teď!
+## Připravit, pozor… start!
 
-1. Chceš si to vyzkoušet? **Pro testování použij svůj vlastní účet**, aby oznámení dorazilo na tvůj telefon.
-2. Znovu potvrď tlačítkem **Deploy**, potom už jen stiskni tlačítko a… voilà, **někdo ti píše**! 💌
+1. Chcete si to vyzkoušet? **Na testování použijte vlastní účet**, aby oznámení dorazilo do vašeho telefonu.
+2. Znovu potvrďte tlačítkem **Deploy**, pak už jen stiskněte tlačítko a… hokus pokus, **někdo dostal vaši zprávu**! 💌

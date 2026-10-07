@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 Do you have a diary, poems or a top secret government-issued document in your drawer? If it's something nobody should see, secure it. 🔒 Turn your IoT Start Set into a drawer monitor and get alerts on your mobile phone. 📲
 
-This project teaches you how to create a **drawer monitor that sends alerts to your mobile phone when some opens your drawer**. 👈
+This project teaches you how to create a **drawer monitor that sends alerts to your mobile phone when someone opens your drawer**. 👈
 
 You only need a **box with a button** and a **Radio Dongle**. That's why the basic HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/) is perfect.
 
@@ -125,4 +125,4 @@ This second chain reads the **Switch** widget from your phone, so you can arm an
 
 2. Control everything else from your mobile phone. 📱 Open the device in the Blynk IoT app and **arm the detector** by flipping the Switch widget to the ON position.
 
-3. And wait for the mouse to get caught. 🥁 As soon as someone opens the drawer, a **push notification pops up on your mobile**. Meanwhile, **plan what you'll do with the sneaky troublemaker**. We recommend making them do homework for you for a week. They deserve it.
+3. And wait for the mouse to get caught. 🥁 As soon as someone opens the drawer, a **push notification pops up on your mobile**. Meanwhile, **plan what you'll do with the sneaky troublemaker**. We recommend making them do your chores for a week. They deserve it.

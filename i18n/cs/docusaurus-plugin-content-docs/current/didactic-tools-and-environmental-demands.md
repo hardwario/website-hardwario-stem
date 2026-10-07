@@ -9,15 +9,15 @@ import Image from '@theme/IdealImage';
 ## Vybavení učebny
 
 * Vybavení umožňující různé uspořádání učebny podle jednotlivých fází:
-  * REALISE: Klasické uspořádání učebny
-  * EXPERIMENT a APPLY: Pracoviště lektora a 3 týmy s proporcionálním zastoupením žáků
-  * REFLECT: Uspořádání do kruhu nebo klasické uspořádání učebny
+  * REALISE: klasické uspořádání učebny
+  * EXPERIMENT a APPLY: pracoviště lektora a 3 týmy s rovnoměrně rozdělenými žáky
+  * REFLECT: sezení v kruhu nebo klasické uspořádání učebny
 * Projektor nebo větší monitor
 * Flipchart
 * Hardwarové vybavení:
   * Počítač připojený k internetu (minimálně jeden pro lektora, ideálně samostatné počítače pro lektora a 3 skupiny)
-  * Smartphone připojený k internetu (minimálně jeden pro lektora, ideálně samostatné telefony pro lektora a 3 skupiny)
-  * IoT sady HARDWARIO:
+  * Chytrý telefon připojený k internetu (minimálně jeden pro lektora, ideálně samostatné telefony pro lektora a 3 skupiny)
+  * Sady IoT stavebnice HARDWARIO TOWER:
     * Start Set
     * Control Set
 * Softwarové vybavení:

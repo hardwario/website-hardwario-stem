@@ -1,11 +1,11 @@
 ---
 slug: what-is-iot-introduction
 title: Úvod
-title_meta: "Úvod (L101: Co je to Internet věcí - IoT)"
+title_meta: "Úvod (L101: Co je to internet věcí – IoT)"
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **Co je to Internet věcí (IoT)** je v rámci jedné vyučovací hodiny představit možnosti internetu věcí. V rámci lekce se studenti seznámí s populárními IoT technologiemi a udělají si základní představu o smyslu a reálném využití internetu věcí.
+Cílem lekce **Co je to internet věcí (IoT)** je během jedné vyučovací hodiny představit možnosti internetu věcí. Studenti se seznámí s rozšířenými technologiemi IoT a získají základní představu o tom, k čemu internet věcí slouží a kde se reálně využívá.
 
 ## Co budete v rámci lekce potřebovat?
 

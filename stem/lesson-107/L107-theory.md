@@ -9,8 +9,8 @@ import Image from '@theme/IdealImage';
 
 ## Light
 
-Light is the visible part o [electromagnetic radiation](https://en.wikipedia.org/wiki/Electromagnetic_radiation)**.
-JIts **[frekvency](https://en.wikipedia.org/wiki/Frequency)** ranges approximately between 3.9×10¹⁴ and 7.9×10¹⁴ Hz, which corresponds to wavelengths in a vacuum from 390 to 760 [nm](https://en.wikipedia.org/wiki/Metre)**. 
+Light is the **visible part of [electromagnetic radiation](https://en.wikipedia.org/wiki/Electromagnetic_radiation)**.
+Its **[frequency](https://en.wikipedia.org/wiki/Frequency)** ranges approximately between 3.9×10¹⁴ and 7.9×10¹⁴ Hz, which corresponds to **wavelengths** in a vacuum from **390 to 760 [nm](https://en.wikipedia.org/wiki/Metre)**. 
 
 This range lies between [ultraviolet](https://en.wikipedia.org/wiki/Ultraviolet) (UV) and [infrared](https://en.wikipedia.org/wiki/Infrared) (IR) radiation.
 A broader spectrum extending into UV and IR is also considered light in some scientific fields.
@@ -62,8 +62,8 @@ For example, it is used for **emissive color mixing** in monitors and projectors
 Typical wavelengths:
 
 * Red: 700 nm  
-* Green: 546,1 nm  
-* Blue*: 435,8 nm
+* Green: 546.1 nm  
+* Blue: 435.8 nm
 
 Colors are created by mixing the intensity of these components:
 
@@ -76,7 +76,7 @@ Colors are created by mixing the intensity of these components:
 | 255 | 255 | 0   | Yellow    |
 | 255 | 0   | 255 | Magenta   |
 | 0   | 255 | 255 | Cyan      |
-| 255 | 255 | 255 | white     |
+| 255 | 255 | 255 | White     |
 
 ---
 

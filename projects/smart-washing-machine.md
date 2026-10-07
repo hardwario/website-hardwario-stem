@@ -1,6 +1,6 @@
 ---
 slug: smart-washing-machine
-title: Smart Washing machine
+title: Smart washing machine
 ---
 import Image from '@theme/IdealImage';
 
@@ -15,11 +15,11 @@ All you need is the box with the button and the USB dongle. You will be all set 
 
 ## Download new firmware
 
-1. Upload new firmware to the Core Module: **bcf-radio-washing-machine-monitor** (you will find it among other firmware in the Playground). Thanks to this firmware, the box will be more sensitive 1to vibrations of the washing machine. 🔃
+1. Upload new firmware to the Core Module: **bcf-radio-washing-machine-monitor** (you will find it among other firmware in the Playground). Thanks to this firmware, the box will be more sensitive to vibrations of the washing machine. 🔃
 
 **Our tip:** If you don’t know how to download the firmware or what it is, [you will find out here](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware).
 
-1. [Pair the Core Module with the USB Dongle](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device) Right after pairing it, you will see that your Core Module changed Alias to **washing-machine-detector**. 👌
+2. [Pair the Core Module with the USB Dongle](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device). Right after pairing it, you will see that your Core Module changed Alias to **washing-machine-detector**. 👌
 
 ![HARDWARIO Playground devices list](./img/smart-washing-machine/image4.png)
 

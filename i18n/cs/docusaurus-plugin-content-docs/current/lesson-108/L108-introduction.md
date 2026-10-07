@@ -5,9 +5,9 @@ title_meta: "Úvod (L108: IoT čítač impulzů)"
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **IoT čítač impulzů** je ukázat studentům možnosti online monitoringu spotřeby energií (elektřina, plyn, voda) pomocí čítače impulzů.
+Cílem lekce **IoT čítač impulzů** je ukázat studentům, jak lze pomocí čítače impulzů sledovat online spotřebu energií (elektřiny, plynu a vody).
 
-Studenti si sami sestaví a naprogramují zařízení k monitoringu impulzů pomocí sady Sensor a připojeného LED nebo magnetického senzoru pro převod impulzů měřidla.
+Studenti si ze sady Sensor sami sestaví a naprogramují zařízení, které počítá impulzy měřidla snímané připojeným LED nebo magnetickým senzorem.
 
 ## Co budete v rámci lekce potřebovat?
 
@@ -15,7 +15,7 @@ Studenti si sami sestaví a naprogramují zařízení k monitoringu impulzů pom
 * Projektor nebo větší monitor
 * [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER
 * [Sadu Control](https://www.hardwario.store/cz/p/control-set) IoT stavebnice HARDWARIO TOWER
-* Snímače pulzů
+* Snímače impulzů
   * [Snímač LED impulzů](https://www.hardwario.store/cz/p/led-pulse-sensor) nebo
   * [Snímač magnetických impulzů](https://www.hardwario.store/cz/p/magnetic-pulse-sensor) nebo 
   * [Snímač magnetických impulzů pro vodoměry](https://www.hardwario.store/cz/p/magnetic-pulse-sensor)

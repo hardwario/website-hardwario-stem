@@ -5,7 +5,7 @@ title_meta: "Hodnocení (L109: IoT monitor půdy)"
 ---
 import Image from '@theme/IdealImage';
 
-**Časová dotace**: 5 mins
+**Časová dotace**: 5 min.
 
 Provedeme 3-2-1 hodnocení, tzn. studenti uvedou:
 

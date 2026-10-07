@@ -18,7 +18,7 @@ Communication will occur via the **Bridge Module**, which is connected to a comp
 
 As part of the experiment, we will understand:
 
-* How to work with** MQTT messages** in the Playground app
+* How to work with **MQTT messages** in the Playground app
 * How to configure a **dashboard** in the Node-RED app
 
 ### Experiment steps
@@ -115,4 +115,4 @@ Download the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playg
 </div>
 
 *Note:*  
-*Blow on the Humidity Tag to see real-time changes in temperature and humidity values..*
+*Blow on the Humidity Tag to see real-time changes in temperature and humidity values.*

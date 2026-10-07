@@ -9,4 +9,4 @@ import Image from '@theme/IdealImage';
 
 Students present their ideas and projects to other students.
 
-They discuss and suggest where IoT building blocks can be deployed to create something meaningful.
+They discuss and suggest where the IoT button can be deployed to create something meaningful.

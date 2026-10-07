@@ -1,6 +1,6 @@
 ---
 slug: lora-climate-monitor
-title: Lora climate monitor
+title: LoRa climate monitor
 ---
 import Image from '@theme/IdealImage';
 
@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 With this kit, you can measure **temperature**, **humidity**, **luminosity** and **pressure**. Then the values are sent wirelessly to the LoRa gateway.
 
-You can use community The Things Network to receive the data.
+You can use the community network The Things Network to receive the data.
 
 ## What You Will Need
 
@@ -36,7 +36,7 @@ For configuring the LoRa keys please follow [LoRa AT Commands Configuration](htt
 The LoRa Climate Monitor sends a LoRa packet when:
 
 * After power-up, when the batteries are inserted
-* Every 15 minutes when the measure values are the same
+* Every 15 minutes when the measured values are the same
 * After pressing the button
 * When you type `AT$SEND` to the console
 

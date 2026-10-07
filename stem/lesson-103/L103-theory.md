@@ -35,5 +35,5 @@ The IoT button is used in many fields and everyday situations:
 
 ### School
 
-* Reporting a request: e.g. summoning cleaning of toilets
+* Reporting a request: e.g. calling the cleaners to the toilets
 * Device control: e.g. remote control of the gym door 

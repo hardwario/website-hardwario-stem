@@ -13,7 +13,7 @@ Tento návod vás provede projektem **Bezdrátový CO₂ monitor**. V prostřed�
 <div class="container">
   <div class="row">
     <Image  img={require('./img/radio-co2-monitor/radio-co2-monitor.png')}
-          style={{ backgroundColor: "#fff" }} alt="Blokové schéma: sada Radio CO2 Monitor propojená sub-GHz rádiem s Radio Donglem a branou s Node-RED"/>
+          style={{ backgroundColor: "#fff" }} alt="Blokové schéma: sada Radio CO2 Monitor propojená sub-GHz rádiem s donglem Radio Dongle a bránou s Node-RED"/>
   </div>
 </div>
 
@@ -32,21 +32,21 @@ Tento návod vás provede projektem **Bezdrátový CO₂ monitor**. V prostřed�
 * Jedna z následujících možností:
   
   * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)<br></br>
-    Více informací naleznete v dokumentu [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
+    Více informací najdete v dokumentu [**Rychlý start s firmwarem**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
   * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**<br></br>
-    Více informací naleznete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
+    Více informací najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
   * Nainstalovaný **HARDWARIO Firmware Tool**<br></br>
-    Více informací naleznete v dokumentu [**Toolchain Setup**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
+    Více informací najdete v dokumentu [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain).
 
 ## Nahrání firmwaru
 
-V tomto postupu použijeme **HARDWARIO Playground** k nahrání firmwaru do **Core Module**.
+Firmware nahrajete do modulu **Core Module** v aplikaci **HARDWARIO Playground**.
 
-#### Krok 1: Připojte kabel Micro USB k modulu Core Module a k počítači
+#### Krok 1: Připojte modul **Core Module** kabelem Micro USB k počítači
 
 #### Krok 2: Spusťte HARDWARIO Playground
 
-Na kartě Firmware vyberte a nahrajte firmware `bcf-radio-co2-monitor` do **Core Module**.
+Na záložce Firmware vyberte firmware `bcf-radio-co2-monitor` a nahrajte ho do modulu **Core Module**.
 
 :::warning
 
@@ -78,11 +78,11 @@ Podívejte se na krátké video s jednoduchou ukázkou krok za krokem:
   />
 </div>
 
-#### Krok 1: Začněte s **Battery Module**
+#### Krok 1: Začněte modulem **Battery Module**
 
 :::warning
 
-Ujistěte se, že v **Battery Module** nejsou vloženy žádné baterie.
+Zkontrolujte, že v modulu **Battery Module** nejsou vložené baterie.
 
 :::
 
@@ -98,21 +98,21 @@ Ujistěte se, že v **Battery Module** nejsou vloženy žádné baterie.
 
 #### Krok 7: Nasaďte **Cover Module** na **Core Module**
 
-## Spuštění Playgroundu
+## Příprava Playgroundu
 
 :::danger
 
-Pokud používáte nový **HARDWARIO Playground**, použijte záložku **Functions** místo [http://localhost:1880/](http://localhost:1880/). Párování nyní probíhá v záložce **Devices** a komunikaci otestujete v záložce **Messages**.
+Pokud používáte nový **HARDWARIO Playground**, použijte místo adresy [http://localhost:1880/](http://localhost:1880/) záložku **Functions**. Párování teď probíhá na záložce **Devices** a komunikaci otestujete na záložce **Messages**.
 
 :::
 
-#### Krok 1: Otevřete Node-RED ve svém webovém prohlížeči:
+#### Krok 1: Otevřete Node-RED ve webovém prohlížeči:
 
 [http://localhost:1880/](http://localhost:1880/)
 
-#### Krok 2: Měli byste vidět prázdnou pracovní plochu s označením **Flow 1**:
+#### Krok 2: Měli byste vidět prázdnou pracovní plochu **Flow 1**
 
-#### Krok 3: Vložte následující úryvek do flow \(pomocí **Menu &gt;&gt; Import**\) a klikněte na záložku **Flow 1**:
+#### Krok 3: Vložte do flow následující úryvek \(pomocí **Menu &gt;&gt; Import**\) a klikněte na záložku **Flow 1**:
 
 ```text
 [{"id":"2fc604fc.3b6abc","type":"inject","z":"dfc861b.b2a02a","name":"List all gateways","topic":"gateway/all/info/get","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":460,"wires":[["a2c10833.24d5d8"]]},{"id":"1e4502b8.2f63fd","type":"inject","z":"dfc861b.b2a02a","name":"Start node pairing","topic":"gateway/usb-dongle/pairing-mode/start","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":570,"y":580,"wires":[["795ff5a7.8e266c"]]},{"id":"3d844ce2.932864","type":"inject","z":"dfc861b.b2a02a","name":"Stop node pairing","topic":"gateway/usb-dongle/pairing-mode/stop","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":640,"wires":[["5967c452.c838bc"]]},{"id":"f202b253.2705b","type":"inject","z":"dfc861b.b2a02a","name":"List paired nodes","topic":"gateway/usb-dongle/nodes/get","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":520,"wires":[["f0aca138.0b2c3"]]},{"id":"349f02fd.890f6e","type":"inject","z":"dfc861b.b2a02a","name":"Unpair all nodes","topic":"gateway/usb-dongle/nodes/purge","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"x":560,"y":700,"wires":[["2f1c5bb6.53d6f4"]]},{"id":"cf61d75d.4ad8f8","type":"mqtt in","z":"dfc861b.b2a02a","name":"","topic":"#","qos":"2","broker":"67b8de4a.029d3","x":530,"y":400,"wires":[["a5cb0658.f5d658"]]},{"id":"a5cb0658.f5d658","type":"debug","z":"dfc861b.b2a02a","name":"","active":true,"console":"false","complete":"false","x":790,"y":400,"wires":[]},{"id":"a2c10833.24d5d8","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":460,"wires":[]},{"id":"f0aca138.0b2c3","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":520,"wires":[]},{"id":"795ff5a7.8e266c","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":580,"wires":[]},{"id":"5967c452.c838bc","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":640,"wires":[]},{"id":"2f1c5bb6.53d6f4","type":"mqtt out","z":"dfc861b.b2a02a","name":"","topic":"","qos":"","retain":"","broker":"717f7c18.ba0a24","x":770,"y":700,"wires":[]},{"id":"67b8de4a.029d3","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""},{"id":"717f7c18.ba0a24","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"willTopic":"","willQos":"0","willPayload":"","birthTopic":"","birthQos":"0","birthPayload":""}]
@@ -127,7 +127,7 @@ Bude to vypadat takto:
   </div>
 </div><br></br>
 
-Úryvek přidá ovládací tlačítka pro příkazy brány a rádia, které se odesílají protokolem MQTT.
+Úryvek přidá tlačítka pro příkazy brány a rádia. Příkazy se odesílají protokolem MQTT.
 
 #### Krok 4: Nasaďte flow tlačítkem **Deploy** v pravém horním rohu:
 
@@ -141,11 +141,11 @@ Bude to vypadat takto:
 
 :::info
 
-V záložce **debug** uvidíte všechny zprávy MQTT.
+Na záložce **debug** uvidíte všechny zprávy MQTT.
 
 :::
 
-#### Krok 6: Klikněte na tlačítko **List all gateways**. V záložce **debug** byste měli vidět odpověď podobnou této:
+#### Krok 6: Klikněte na tlačítko **List all gateways**. Na záložce **debug** byste měli vidět podobnou odpověď:
 
 <div class="container">
   <div class="row">
@@ -161,9 +161,9 @@ Teď máte funkční **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** a **HARD
 
 ## Rádiové párování
 
-V této části vytvoříme rádiové spojení mezi **Radio Dongle** a sestavou **Radio CO₂ Monitor**.
+V této části navážeme rádiové spojení mezi **Radio Dongle** a sestavou **Radio CO₂ Monitor**.
 
-Postupujte podle následujících kroků v prostředí **Node-RED**:
+V prostředí **Node-RED** postupujte takto:
 
 #### Krok 1: Klikněte na tlačítko **Start node pairing**
 
@@ -175,7 +175,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 #### Krok 2: Vložte baterie do sestavy **Radio CO₂ Monitor**, čímž odešlete požadavek na párování \(červená LED na modulu **Core Module** by se také měla asi na 2 sekundy rozsvítit\)
 
-#### Krok 3: Klikněte na tlačítko **Stop node pairing**.
+#### Krok 3: Klikněte na tlačítko **Stop node pairing**
 
 <div class="container">
   <div class="row">
@@ -185,13 +185,13 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 :::success
 
-Teď máte navázané rádiové spojení mezi uzlem \(**Radio Motion Detector**\) a bránou \(**Radio Dongle**\).
+Teď máte navázané rádiové spojení mezi uzlem \(**Radio CO₂ Monitor**\) a bránou \(**Radio Dongle**\).
 
 :::
 
 ## Test komunikace
 
-Postupujte podle následujících kroků v prostředí **Node-RED**:
+V prostředí **Node-RED** postupujte takto:
 
 #### Krok 1: Přepněte se na záložku **debug** vpravo
 
@@ -199,7 +199,7 @@ Postupujte podle následujících kroků v prostředí **Node-RED**:
 
 Dýchněte na teplotní senzor na desce **Temperature Tag**. Změna teploty spustí rádiový přenos.
 
-Poté byste měli vidět podobné zprávy:
+Pak byste měli vidět podobné zprávy:
 
 <div class="container">
   <div class="row">
@@ -213,10 +213,10 @@ Teď máte ověřenou rádiovou komunikaci.
 
 :::
 
-### Související dokumenty  <a id="related-documents"></a>
+### Související dokumenty <a id="related-documents"></a>
 
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
-* [**Nastavení nástrojového řetězce**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
-* [**Průvodce nástrojovým řetězcem**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
+* [**Nastavení toolchainu**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
+* [**Průvodce toolchainem**](https://docs.hardwario.com/chester/firmware-sdk/installation-on-macos/#install-toolchain)
 

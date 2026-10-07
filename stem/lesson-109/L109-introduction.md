@@ -9,7 +9,7 @@ The goal of the IoT Soil Monitor lesson is to introduce soil monitoring, especia
 
 Students will build their own soil capacitance sensor, create graphs of the measured values and a system of colour-coded indications of exceeding the set limits of soil moisture and temperature. 
 
-What will you need for the lesson? 
+## What will you need for the lesson?
 
 * A computer with the [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases) application installed 
 * Projector or larger monitor 

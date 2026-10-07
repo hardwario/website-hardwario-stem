@@ -185,7 +185,7 @@ Follow these steps in **Node-RED**:
 
 :::success
 
-At this point, you have established a radio link between the node \(**Radio Motion Detector**\) and the gateway \(**Radio Dongle**\).
+At this point, you have established a radio link between the node \(**Radio CO2 Monitor**\) and the gateway \(**Radio Dongle**\).
 
 :::
 

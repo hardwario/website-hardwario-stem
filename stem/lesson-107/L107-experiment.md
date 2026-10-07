@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 
 ### Experiment Description
 
-In this experiment, we will control an **LED strip** using a **button** based on the measured **temperature**. We will also learn how to work with the **RGB color model**.
+In this experiment, we will control an **LED strip** with a **button** and based on the measured **temperature**. We will also learn how to work with the **RGB color model**.
 
 ### Experiment Steps
 
@@ -53,7 +53,7 @@ In this experiment, we will control an **LED strip** using a **button** based on
 
 * Core Module
 * Power Module
-* LED Pásek
+* LED Strip
 
 <div class="container">
   <div class="row">
@@ -98,7 +98,7 @@ You’ll need `twr-radio-push-button` for the button and `twr-radio-power-contro
 ### Setting up the Function to Display Button Press Count and Temperature
 
 1. Go to the **Functions** tab
-2.Import this **flow**:
+2. Import this **flow**:
 
 ```json
 [{"id":"e1c78aec22a2b30f","type":"tab","label":"IoT button","disabled":false,"info":""},{"id":"df77fa76ec57b83c","type":"mqtt in","z":"e1c78aec22a2b30f","name":"","topic":"node/push-button:0/push-button/-/event-count","qos":"2","datatype":"auto","broker":"a382db22.fb11e8","inputs":0,"x":200,"y":180,"wires":[["f459f618531641e5"]]},{"id":"db42bc1c50d5c6bf","type":"mqtt in","z":"e1c78aec22a2b30f","name":"","topic":"node/push-button:0/thermometer/0:1/temperature","qos":"2","datatype":"auto","broker":"29fba84a.b2af58","inputs":0,"x":210,"y":360,"wires":[["f285b637e508b347"]]},{"id":"f285b637e508b347","type":"ui_text","z":"e1c78aec22a2b30f","group":"57ff470b.93fdf8","order":3,"width":0,"height":0,"name":"","label":"Temperature","format":"{{msg.payload}}°C","layout":"row-spread","className":"","x":550,"y":360,"wires":[]},{"id":"f459f618531641e5","type":"ui_text","z":"e1c78aec22a2b30f","group":"57ff470b.93fdf8","order":4,"width":0,"height":0,"name":"","label":"Counter","format":"{{msg.payload}}","layout":"row-spread","className":"","x":540,"y":180,"wires":[]},{"id":"a382db22.fb11e8","type":"mqtt-broker","name":"","broker":"127.0.0.1","port":"1883","clientid":"","autoConnect":true,"usetls":false,"protocolVersion":"4","keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","birthMsg":{},"closeTopic":"","closeQos":"0","closePayload":"","closeMsg":{},"willTopic":"","willQos":"0","willPayload":"","willMsg":{},"sessionExpiry":""},{"id":"29fba84a.b2af58","type":"mqtt-broker","name":"","broker":"127.0.0.1","port":"1883","clientid":"","autoConnect":true,"usetls":false,"protocolVersion":"4","keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","birthMsg":{},"closeTopic":"","closePayload":"","closeMsg":{},"willTopic":"","willQos":"0","willPayload":"","willMsg":{},"sessionExpiry":""},{"id":"57ff470b.93fdf8","type":"ui_group","name":"Default","tab":"11207769.c31889","order":1,"disp":true,"width":"6","collapse":false},{"id":"11207769.c31889","type":"ui_tab","name":"Home","icon":"dashboard"}]

@@ -34,7 +34,7 @@ For configuring the LoRa keys please follow [LoRa AT Commands Configuration](htt
 
 ## Transmitting the data
 
-The LoRa Climate Monitor sends a LoRa packet when:
+The LoRa 1-Wire thermometer sends a LoRa packet when:
 
 * After power-up, when the batteries are inserted
 * Every 15 minutes when the measured values are the same

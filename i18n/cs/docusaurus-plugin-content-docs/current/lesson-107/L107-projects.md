@@ -5,14 +5,14 @@ title_meta: "Projekty (L107: IoT osvětlení)"
 ---
 import Image from '@theme/IdealImage';
 
-Studenti si zkoušejí další projekty, které jsou svázány s daným tématem, nebo probíhá tzv. **Ideation**
+Studenti zkoušejí další projekty k tématu lekce nebo hledají nápady metodou Ideation.
 
 
 ## Další projekty s tématem lekce k vyzkoušení
 
 ### Web HARDWARIO
 
-* N/A
+* Zatím žádné
 
 ### Platforma Hackster.io
 
@@ -138,7 +138,7 @@ Studenti si zkoušejí další projekty, které jsou svázány s daným tématem
 
 ### Ideation
 
-Studenti navrhují reálné využití znalostí nabytých teoretickým výkladem a experimenty. Nápady zapisují do grafu, kde na ose x se odhaduje náročnost (náklady) projektu a na ose y dopad realizace řešení.
+Studenti navrhují reálné využití znalostí, které získali z teoretického výkladu a experimentů. Nápady zapisují do grafu, kde osa x udává odhadovanou náročnost (náklady) projektu a osa y dopad zavedení řešení.
 
 
 

@@ -18,7 +18,7 @@ You only need a **box with a button** and a **USB dongle**.  That's why the basi
 1. If you haven't already done so, put the Start Set together.
 2. Load the special firmware, namely **bcf-radio-still-position-detector** (you´ll find it among the other firmware in Playground) onto the Core Module. This firmware will make the box much more sensitive to movement and measure time changes. 👌
    **Our Tip:** You don’t know how to download the firmware or what it is? [Find out more here](https://docs.hardwario.com/tower/firmware-sdk/)
-3. [Pair Core Module with USB Dongle](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device) After pairing has been completed, you will see that your Core Module has changed the Alias to **still-position-detector**.
+3. [Pair Core Module with USB Dongle](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device). After pairing has been completed, you will see that your Core Module has changed the Alias to **still-position-detector**.
 
 <div class="container">
   <div class="row">
@@ -59,7 +59,7 @@ Confirm by clicking the **Done** button.
 
 Confirm by clicking the **Done** button.
 
-5. **Link both nodes** together. Don't forget to click the red **Deploy** button in the top right corner to get everything up and running. ****
+5. **Link both nodes** together. Don't forget to click the red **Deploy** button in the top right corner to get everything up and running.
 
 <div class="container">
   <div class="row">

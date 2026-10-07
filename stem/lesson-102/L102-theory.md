@@ -1,7 +1,7 @@
 ---
 slug: hardwario-tower-iot-kit-theory
 title: Theory
-title_meta: "Theory (L102: IoT kits HARDWARIO TOWER)"
+title_meta: "Theory (L102: HARDWARIO TOWER IoT Kit)"
 ---
 import Image from '@theme/IdealImage';
 
@@ -55,7 +55,7 @@ In **HARDWARIO Playground** you can:
 ### Playground app tabs
 
 1. **Devices** has the most important role of all the tabs. Pair your build with the USB Dongle and thus with your computer and then you can create.
-2. **Bridge** is the tab for pairing the special Bridge Module
+2. **Bridge** is the tab for connecting the special Bridge Module.
 3. **Functions** is a tab where you simply drag the so-called nodes to determine how your assembly should behave in different situations, for example when you press a button or the ambient temperature changes. All this simple programming works on the Node-RED system, which you can learn more about [here](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
 4. In **Dashboard**, you'll eventually see your box's activities plotted in handy colour charts. Want to track how the temperature in your classroom has risen and fallen? No problem! We have also prepared a [tutorial](https://docs.hardwario.com/tower/desktop-programming/data-visualization) on creating a cool Dashboard.
 5. In **Messages** you will see every value that your assembly records, whether it is a button press, a position change or a temperature measurement.

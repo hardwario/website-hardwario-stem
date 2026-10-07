@@ -6,30 +6,30 @@ import Image from '@theme/IdealImage';
 
 ## Úvod
 
-Zvedni rodinné pračce IQ. 🤖 Naprogramuj pomocí krabičky IoT upozornění, díky kterému se tví rodiče dozvědí, že várka doprala.
+Zvyšte rodinné pračce IQ. 🤖 S krabičkou IoT naprogramujete upozornění, ze kterého se rodiče dozvědí, že pračka doprala.
 
-V tomhle projektu se naučíš **nastavit krabičku tak, že pozná, až pračka dopere**, a pošle o tom **upozornění na mobil**.📱 👈
+V tomto projektu se naučíte **nastavit krabičku tak, aby poznala, kdy pračka dopere**, a poslala o tom **upozornění na mobil**. 📱 👈
 
-Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Start Setem**](https://www.hardwario.store/p/start-set/).
-
-
-## Stáhni si nový firmware
+Budete potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíte si proto se základní sadou HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/).
 
 
-1. Na Core Module nahraj nový firmware, a to **bcf-radio-washing-machine-monitor** (najdeš ho mezi ostatním firmwarem v Playgroundu). Díky tomuhle firmwaru bude krabička citlivěji vnímat otřesy pračky. 🔃
+## Stáhněte si nový firmware
 
-**Náš tip:** Nevíš, jak si firmware stáhnout nebo co to je? [Zjistíš to tady](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware)
 
-2. [Core Module spáruj s USB Donglem](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device). Hned po spárování uvidíš, že tvůj Core Module změnil Alias na **washing-machine-detector**. 👌
+1. Do modulu Core Module nahrajte nový firmware **bcf-radio-washing-machine-monitor** (najdete ho mezi ostatním firmwarem v Playgroundu). Díky tomuto firmwaru bude krabička citlivěji vnímat otřesy pračky. 🔃
+
+**Náš tip:** Nevíte, jak si firmware stáhnout nebo co to je? [Najdete to tady](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware).
+
+2. [Spárujte modul Core Module s USB donglem](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device). Hned po spárování uvidíte, že se alias modulu Core Module změnil na **washing-machine-detector**. 👌
 
 ![HARDWARIO Playground devices list](./img/smart-washing-machine/image4.png)
 
-## Rozjeď to v Node-RED
+## Rozjeďte to v Node-RED
 
-1. V Playgroundu klikni na **záložku Functions**, kde je programovací plocha [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming) 🤖
+1. V Playgroundu klikněte na **záložku Functions**, kde je programovací plocha [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming). 🤖
 
-2. Začni jako vždycky: na plochu nejdřív umísti **MQTT node** ze sekce Input.
-Dvakrát na něj klikni a do řádku zkopíruj **Topic**, se kterým krabička změří, kdy se pračka přestane otřásat:
+2. Začněte jako vždy: na plochu nejdřív umístěte **uzel MQTT** ze sekce Input.
+Dvakrát na něj klikněte a do řádku **Topic** zkopírujte tento topic, přes který krabička ohlásí, že se pračka přestala otřásat:
 
 ```
 node/washing-machine-detector:0/washing/finished
@@ -37,25 +37,25 @@ node/washing-machine-detector:0/washing/finished
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/smart-washing-machine/smart-washing-machine-1.webp')} alt="Dialog Edit mqtt in node s tématem konce praní vloženým do zvýrazněného pole Topic"/>
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-1.webp')} alt="Dialog Edit mqtt in node s topicem konce praní vloženým do zvýrazněného pole Topic"/>
   </div>
 </div>
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
-3. Vedle postav **node Change** ze sekce Functions.
+3. Vedle něj umístěte **uzel Change** ze sekce Function.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/smart-washing-machine/smart-washing-machine-2.webp')} alt="Plocha Node-RED s uzlem Change umístěným vedle MQTT uzlu washing-machine-detector"/>
+    <Image img={require('./img/smart-washing-machine/smart-washing-machine-2.webp')} alt="Plocha Node-RED s uzlem Change vedle uzlu MQTT pro washing-machine-detector"/>
   </div>
 </div>
 
-4. Uvnitř nodu Change **nastavíš zprávu**, která se rodičům po doprání pošle do mobilu. Mysli na to, že by měla být bez háčků a čárek.
+4. V uzlu Change **nastavíte zprávu**, která rodičům po doprání přijde do mobilu. Myslete na to, že by měla být bez háčků a čárek.
 Malá inspirace:
-    - Mate tam cisty pradlo.
+    - Mate tam ciste pradlo.
     - Doprala jsem. Dostanu ted tyden dovolene?
-    - Doprano a uz me nechte bejt. Vase pracka.
+    - Doprano, tak me nechte byt. Vase pracka.
 
 <div class="container">
   <div class="row">
@@ -63,85 +63,85 @@ Malá inspirace:
   </div>
 </div>
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
-## Připrav si applikaci Blynk IoT
+## Připravte si aplikaci Blynk IoT
 
-1. Pokud ještě nemáš, vytvoř si účet v aplikaci [Blynk IoT](https://blynk.io). Jak na to se podívej v [tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Seznámíš se tam i s tím, jak se tvoří šablony a datastreamy. Obojí budeš potřebovat.
+1. Pokud ještě účet nemáte, vytvořte si ho v aplikaci [Blynk IoT](https://blynk.io). Postup najdete v [tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/), kde se dozvíte i to, jak se vytvářejí šablony a datastreamy. Budete potřebovat obojí.
 
-2. Druhým krokem je vytvoření šablony zařízení. Jak na to najdeš [ve stejném návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Klidně ale použij šablonu z předchozích projektů, pokud ji máš.
+2. Dále vytvořte šablonu zařízení, opět podle [stejného návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Pokud už máte šablonu z předchozích projektů, klidně ji použijte.
 
-3. Teď si nastav nový Datastream. Na detailu šablony klikni na záložku **Datastreams**. Vpravo nahoře klikni na **Edit**. Objeví se ti tlačítko **+ New Datastream**, klikni na něj, vyber **Virtual Pin** a objeví se ti dialogové okno:
+3. Teď nastavte nový datastream. V detailu šablony klikněte na záložku **Datastreams** a vpravo nahoře na **Edit**. Objeví se tlačítko **+ New Datastream**. Klikněte na něj, vyberte **Virtual Pin** a otevře se dialogové okno:
 
 ![HARDWARIO Add Blynk IoT datastream](./img/smart-washing-machine/add-datastream-1.png)
 
-4. Nastav název pro nový Datastream a vyber jeden z volných Pinů. V mobilní notifikaci budeme chtít vypsat tvou vlastní zprávu, proto **zvol jako datový typ String** (textový řetězec). 
+4. Pojmenujte nový datastream a vyberte jeden z volných pinů. V notifikaci na mobilu chceme zobrazit vaši vlastní zprávu, proto **jako datový typ zvolte String** (textový řetězec).
 
-5. V dialogovém okně dole ještě rozklikni **Advanced settings** a zaškrtni poslední volbu **Expose to Automation**, díky tomu ji budeme moct použít v automatizacích. V selektoru vedle zvol **Sensor** a zaškrtni taky **Available in Conditions**. Datastream vytvoříš kliknutím na **Create**. 
+5. Dole v dialogovém okně ještě rozbalte **Advanced settings** a zaškrtněte poslední volbu **Expose to Automation**, aby šel datastream použít v automatizacích. V nabídce vedle zvolte **Sensor** a zaškrtněte také **Available in Conditions**. Datastream vytvoříte kliknutím na **Create**.
 
 ![HARDWARIO Add Blynk IoT datastream](./img/smart-washing-machine/add-datastream-2.png)
 
-6. Vpravo nahoře svou práci ulož tlačítkem **Save**.
+6. Práci uložte tlačítkem **Save** vpravo nahoře.
 
-## Založ zařízení
+## Založte zařízení
 
-Pokud jej ještě nemáš, založ si zařízení z vytvořené šablony. Jak na to popisujeme [v návodu, který už znáš](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+Pokud ještě zařízení nemáte, založte si ho z vytvořené šablony. Postup popisujeme [v návodu, který už znáte](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
-## Vytvoř automatizaci
+## Vytvořte automatizaci
 
-1. Přepni se do sekce **Automation** a klikni na tlačítko **+ Create Automation**.
+1. Přepněte se do sekce **Automation** a klikněte na tlačítko **+ Create Automation**.
 
 ![HARDWARIO Add Blynk IoT automation](./img/smart-washing-machine/add-automation-1.png)
 
-2. Z dostupných možností vyber **Device State**. Automatizace vyhodnotí vždy, když do aplikace pošleš zprávu.
+2. Z nabízených možností vyberte **Device State**. Automatizace se vyhodnotí pokaždé, když do aplikace pošlete zprávu.
 
 ![HARDWARIO Add Blynk IoT automation](./img/smart-washing-machine/add-automation-2.png)
 
-3. Nastavení automatizace je jednoduché: v sekci **When** se nastaví, kdy se má automatizace spustit, a v sekci **Do this**, co se má následně stát. 
+3. Nastavení automatizace je jednoduché: v sekci **When** nastavíte, kdy se má automatizace spustit, a v sekci **Do this**, co se má potom stát.
 
-4. Nejprve nastav sekci **When**. Vyber tvé zařízení a **vytvořený Datastream**. Objeví se ti třetí selector, ten nech nastavený na **Is Any**. 
+4. Nejdřív nastavte sekci **When**: vyberte své zařízení a **vytvořený datastream**. Objeví se třetí nabídka, tu nechte nastavenou na **Is Any**.
 
-5. V sekci **Do This** klikni na **Send app notification** a nastav si příjemce. Pro zjednodušení tam nastav sebe. Do polí **Subject** a **Message** přetáhni myší položku **Trigger value**, jde o proměnnou, kde bude uložen text tvé zprávy.
+5. V sekci **Do This** klikněte na **Send app notification** a nastavte příjemce. Pro zjednodušení zadejte sebe. Do polí **Subject** a **Message** přetáhněte myší položku **Trigger value**. Je to proměnná, ve které bude uložený text vaší zprávy.
 
-6. Nakonec nezapomeň nastavit **název automatizace**. V selectu **Limit period** můžeš omezit, kdy nejdříve po notifikaci přijde další. 
+6. Nakonec nezapomeňte vyplnit **název automatizace**. V nabídce **Limit period** můžete nastavit, za jak dlouho nejdříve může po jedné notifikaci přijít další.
 
 ![HARDWARIO Add Blynk IoT automation](./img/smart-washing-machine/add-automation-3.png)
 
-7. Klikem na **Save** automatizaci ulož.
+7. Automatizaci uložte tlačítkem **Save**.
 
-## Nastav si mobil
+## Nastavte mobil
 
-1. Čas ukrást mámě nebo tátovi mobil a nastavit jim jejich vlastní Blynk IoT. Pokud s Blynkem neumíš, [**podívej se na návod**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+1. Je čas ukrást mámě nebo tátovi na chvíli mobil a nastavit jim Blynk IoT. Pokud s Blynkem ještě neumíte, [**podívejte se na návod**](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
-2. V Blynku se přihlas pod svým účtem.
+2. V Blynku se přihlaste svým účtem.
 
-## Dokonči programování
+## Dokončete programování
 
-1. Vrať se k počítači. Na ploše Node-RED přidej za oba nody **zelený node Write**. Najdeš ho v levé části v sekci **Blynk IoT** (Pozor! Ne Blynk ws).
+1. Vraťte se k počítači. Na ploše Node-RED přidejte za oba uzly **zelený uzel Write**. Najdete ho vlevo v sekci **Blynk IoT** (pozor, ne Blynk ws).
 
 ![Blynk IoT - HARDWARIO Playground](./img/smart-washing-machine/playground-1.png)
 
-2. Dvakrát na node klikni. Pak klikni na **tužku**. ✏
+2. Dvakrát klikněte na uzel a pak na **tužku**. ✏
 
 ![Blynk Connection settings](./img/smart-washing-machine/playground-2.png)
 
-3. Otevřelo se ti okno pro párování s Blynkem. Tady nastav **Url** na ``blynk.cloud``, do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové aplikaci na počítači.
+3. Otevře se okno pro připojení k Blynku. Do pole **Url** zadejte ``blynk.cloud`` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu zařízení ve webové aplikaci na počítači.
 
 ![Blynk IoT - HARDWARIO Playground](./img/smart-washing-machine/playground-3.png)
 
-Nastavení potvrď tlačítkem **Add**.
+Nastavení potvrďte tlačítkem **Add**.
 
-3. Vyplň číslo virtuálního Pinu vytvořeného datastreamu a tlačítkem **Done** vše ulož.
+4. Vyplňte číslo virtuálního pinu vytvořeného datastreamu a vše uložte tlačítkem **Done**.
 
-4. Už ti to zbývá jenom **propojit** a poslat příkaz do vesmíru červeným tlačítkem **Deploy** vpravo nahoře. 👏
+5. Teď už zbývá jen uzly **propojit** a červeným tlačítkem **Deploy** vpravo nahoře vyslat povel do vesmíru. 👏
 
 ![Deploy flow in Node-RED](./img/smart-washing-machine/playground-4.png)
 
-## Roztoč to!
+## Roztočte to!
 
-1. **Krabičku polož na pračku**. Přilep ji malým kouskem izolepy, aby nespadla.
+1. **Krabičku položte na pračku** a přilepte ji malým kouskem izolepy, aby nespadla.
 
-2. **Krabička pozná, že pračka dopere**, protože se přestane otřásat. Pošle o tom zprávu mámě nebo tátovi na mobil.
-Hustý, co? A rázem žiješ v **chytré domácnosti**! 🤡
+2. **Krabička pozná, že pračka doprala**, protože se přestala otřásat, a pošle o tom zprávu mámě nebo tátovi na mobil.
+Paráda, ne? A rázem žijete v **chytré domácnosti**! 🤡
 
 ![Get Notification on Phone](./img/smart-washing-machine/blynk-notification.jpg)

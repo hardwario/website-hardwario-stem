@@ -51,11 +51,11 @@ msg.payload = count;
 return msg;
 ```
 
-Name the node in the Label field, e.g. **Counter**.
+Name the node in the **Name** field, e.g. **Counter**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/catch-the-mist/catch-the-mist-3.webp')} alt="Edit function node dialog with the fridge-opening counter code and the node name filled in"/> </div> </div>
 
-Confirm it the the **Done** button.
+Confirm it with the **Done** button.
 
 5. Next to this node, place the last one: the **Text node** from the Dashboard section.
 

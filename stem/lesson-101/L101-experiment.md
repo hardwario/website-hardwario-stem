@@ -13,9 +13,9 @@ import Image from '@theme/IdealImage';
 
 From the HARDWARIO kit we can build a universal wireless button. 
 
-As part of the experiment, we will understand
+As part of the experiment, we will understand:
 
-* how easy it is to work with the IoT kit HARDWARIO TOWER
+* how easy it is to work with the HARDWARIO TOWER IoT kit
 
 ### Steps of the experiment
 
@@ -33,4 +33,4 @@ As part of the experiment, we will understand
 * Mini Battery Module
 * Push Button Module
 
-Build your unit according to [video tutorial](https://www.youtube.com/watch?v=OCPPKXzCBg0)
+Build the unit by following the [video tutorial](https://www.youtube.com/watch?v=OCPPKXzCBg0).

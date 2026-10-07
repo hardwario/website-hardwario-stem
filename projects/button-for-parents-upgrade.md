@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 Do you already have a basic version of the button that enables your mom to call you for dinner? Congratulations. 👍 With this enhancement, you can move the project even further forward: the message changes according to the time of day. You can even respond to it.
 
-Under this project, you will learn how to **set up a different message for different times of day**, send a special notification **by holding the button** and program a simple **response** option. 👌
+In this project, you will learn how to **set up a different message for different times of day**, send a special notification **by holding the button** and program a simple **response** option. 👌
 
 The basic version of this project can be found here: [Create an IoT button that enables your mom to call you for dinner](/projects/button-for-parents/).
 
@@ -18,7 +18,7 @@ You will need the **box with button** and a **USB Dongle**. The basic HARDWARIO 
 
 ## Prepare Node-RED
 
-1. Put the Star set together and pair it. On the Core Module you will need the familiar **bcf-radio-push-button** firmware again.
+1. Put the Start Set together and pair it. On the Core Module you will need the familiar **bcf-radio-push-button** firmware again.
 
 <div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-1.webp')} alt="Playground Devices tab with the paired device listed under the alias push-button:0"/> </div> </div>
 

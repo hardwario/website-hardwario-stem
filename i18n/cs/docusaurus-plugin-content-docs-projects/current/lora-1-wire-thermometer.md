@@ -1,12 +1,12 @@
 ---
 slug: lora-1-wire-thermometer
-title: LoRa teploměr s 1-Wire rozhraním
+title: Teploměr LoRa se senzory 1-Wire
 ---
 import Image from '@theme/IdealImage';
 
-# LoRa teploměr s 1-Wire rozhraním
+# Teploměr LoRa se senzory 1-Wire
 
-S touto sadou můžete měřit **teploty** pomocí jednoho nebo více připojených teplotních senzorů DS18B20 nebo DS18S20. Hodnoty se pak bezdrátově odešlou do brány LoRa.
+S touto sadou můžete měřit **teploty** jedním nebo více připojenými teplotními senzory DS18B20 nebo DS18S20. Hodnoty se pak bezdrátově odešlou do brány LoRa.
 
 K příjmu dat můžete použít komunitní síť The Things Network.
 
@@ -22,34 +22,34 @@ K příjmu dat můžete použít komunitní síť The Things Network.
 
 #### Krok 1: Stáhněte si nejnovější verzi [**HARDWARIO Playground**](https://github.com/hardwario/hardwario-playground/releases/latest)
 
-#### Krok 2: Připojte Core Module k počítači.
+#### Krok 2: Připojte modul Core Module k počítači
 
-#### Krok 3: V aplikaci Playground přejděte na kartu **Firmware**, vyberte `bcf-lora-1wire-thermometer` a nahrajte firmware.
+#### Krok 3: V aplikaci Playground přejděte na záložku **Firmware**, vyberte `bcf-lora-1wire-thermometer` a nahrajte firmware
 
-#### Krok 4: Po nahrání se červená LED dioda na modulu Core Module rozsvítí na 2 sekundy a poté zhasne.
+#### Krok 4: Po nahrání se červená LED na modulu Core Module na 2 sekundy rozsvítí a pak zhasne
 
 ## Konfigurace LoRa
 
-Klíče LoRa nakonfigurujete podle návodu [LoRa AT Commands Configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/#lora-configuration).
+Klíče LoRa nakonfigurujete podle návodu [Konfigurace LoRa pomocí příkazů AT](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/#lora-configuration).
 
-##  Přenos dat
+## Přenos dat
 
-LoRa Climate Monitor odešle paket LoRa v těchto případech:
+Teploměr odešle paket LoRa v těchto případech:
 
-* Po zapnutí, když jsou vloženy baterie
-* Každých 15 minut, když jsou naměřené hodnoty stejné
+* Po zapnutí, tedy po vložení baterií
+* Každých 15 minut, pokud se naměřené hodnoty nemění
 * Po stisknutí tlačítka
-* Když zadáte `AT$SEND` do konzole
+* Když do konzole zadáte `AT$SEND`
 
 ## Čtení dat
 
-Data jsou zakódována ve zprávě LoRa. Abyste získali hodnoty zpět, musíte extrahovat správné bity. To je vysvětleno v souboru [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py` python [skript v repozitáři](https://github.com/bigclownlabs/bcf-lora-climate-monitor).
+Data jsou zakódovaná ve zprávě LoRa. Hodnoty z ní získáte, když vyberete správné bity; postup popisuje soubor [README.md](https://github.com/bigclownlabs/bcf-lora-climate-monitor/blob/master/README.md#buffer). Můžete také použít `decode.py`, pythonový [skript v repozitáři](https://github.com/bigclownlabs/bcf-lora-climate-monitor).
 
-Přijatý řetězec HEX můžete předat jako parametr pro `decode.py`:
+Přijatý řetězec HEX předejte skriptu `decode.py` jako parametr:
 
 :::info
 
-Stejný příkaz můžete použít k aktualizaci **Firmware Flashing Tool** na nejnovější verzi.
+Stejným příkazem můžete aktualizovat nástroj **Firmware Flashing Tool** na nejnovější verzi.
 
 :::
 

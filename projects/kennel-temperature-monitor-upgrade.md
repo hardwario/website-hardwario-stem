@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 Do you already have a basic version of the kennel temperature detector? Build an even better one. It will send notifications to your mobile and you will see the temperature in the kennel from anywhere. 🐶
 
-Under this project, you will learn how to set the box to **send you a message when the temperature exceeds a preset value**. 👌 The box won’t start barking, but it´s still a great project. 🐩
+In this project, you will learn how to set the box to **send you a message when the temperature drops below a preset value**. 👌 The box won’t start barking, but it´s still a great project. 🐩
 
 The basic version of this project can be found here: [Temperature monitor for your hairy watchman: check the temperature in your dog's kennel](/projects/kennel-temperature-monitor/).
 
@@ -25,7 +25,7 @@ All you need is the basic HARDWARIO [**Start Set**](https://www.hardwario.store/
   </div>
 </div>
 
-2. In Playground, click on the **Function** tab and place the same thing on the desktop as in the basic version of the project:
+2. In Playground, click on the **Functions** tab and place the same thing on the desktop as in the basic version of the project:
 
 - one **MQTT node** from under the Input section uploading **Topic**
 
@@ -77,9 +77,9 @@ The temperature alert is delivered to your phone through the **Blynk IoT** app a
 
 In the node, set what you see below:
 
-a. Use **msg. payload** as the selected property;
+a. Use **msg.payload** as the selected property;
 
-b. Select the notification to be sent when the temperature is less than or equal to −15 °C. Work with the **flow. optimalTemp** variable and with the symbol less than/equal to: `**<=**`
+b. Select the notification to be sent when the temperature is less than or equal to −15 °C. Work with the **flow.optimalTemp** variable and with the symbol less than/equal to: `**<=**`
 
 <div class="container">
   <div class="row">
@@ -163,4 +163,4 @@ In the node, set the **unit of measure** (°C), the **temperature range** (−15
   </div>
 </div>
 
-3. Above all, you get a **notification** on your mobile if your dog is too hot or cold, so you can check on the kennel anywhere, anytime. 🕵️ Happy dog = good dog! 🐕
+3. Above all, you get a **notification** on your mobile if your dog is too cold, so you can check on the kennel anywhere, anytime. 🕵️ Happy dog = good dog! 🐕

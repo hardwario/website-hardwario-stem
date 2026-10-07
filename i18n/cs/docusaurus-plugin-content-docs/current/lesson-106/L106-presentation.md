@@ -9,4 +9,4 @@ import Image from '@theme/IdealImage';
 
 Studenti prezentují své nápady a projekty ostatním studentům. 
 
-Diskutují a navrhují, kde se dá IoT monitoring akcelerace nasadit tak, aby vzniklo něco smysluplného.
+Diskutují a navrhují, kde se dá IoT monitoring vibrací nasadit tak, aby vzniklo něco smysluplného.

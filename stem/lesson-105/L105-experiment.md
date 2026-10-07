@@ -13,13 +13,13 @@ import Image from '@theme/IdealImage';
 
 ### Experiment Description
 
-The HARDWARIO kit will be used to build the indoor climate quality monitor. The device allows us to measure the concentration of carbon dioxide (CO2), the concentration of organic volatile substances (VOC), temperature and relative humidity. Communication will be carried out wirelessly to Radio Dongle plugged into the USB port of the computer. The measured data will be displayed in the HARDWARIO Playground application, resp. in the embedded Node-RED dashboard.
+The HARDWARIO kit will be used to build the indoor climate quality monitor. The device allows us to measure the concentration of carbon dioxide (CO2), the concentration of volatile organic compounds (VOC), temperature and relative humidity. The unit will communicate wirelessly with the Radio Dongle plugged into the USB port of the computer. The measured data will be displayed in the HARDWARIO Playground application, specifically in the embedded Node-RED dashboard.
 
 In the experiment, we will understand:
 
-* that warm air is rising and why
+* that warm air rises and why
 * what is the relative humidity and dew point
-* that the standard outdoor CO2 concentration is 400 ppm, 0.04% and that in an unventilated room to increase and at higher concentrations negatively affect our performance
+* that the standard outdoor CO2 concentration is 400 ppm (0.04%), that it rises in an unventilated room and that higher concentrations reduce our performance
 * that CO2 is heavier than air
 * that VOCs are volatile organic compounds, measured in ppb and the acceptable TVOC concentration (VOC total) is 500 ppb (0.00005%)
 
@@ -65,7 +65,7 @@ Follow the [video tutorial](https://www.youtube.com/watch?v=jGxjl5v7kqE) to buil
 
 
 * Switch to the **Functions** tab
-* Perform the import **flow**
+* Import the following **flow**
 
 ```json
 [{"id":"79e43d5b.b7de84","type":"mqtt in","z":"e4c105de.aff268","name":"","topic":"node/co2-monitor:0/battery/-/voltage","qos":"2","datatype":"auto","broker":"bb7a191.cab93e8","x":300,"y":200,"wires":[["521ff625.3eaca8"]]},{"id":"dcc8f17c.0ed3c","type":"mqtt in","z":"e4c105de.aff268","name":"","topic":"node/co2-monitor:0/co2-meter/-/concentration","qos":"2","datatype":"auto","broker":"bb7a191.cab93e8","x":330,"y":240,"wires":[["e0721e5a.aa664"]]},{"id":"eacac94f.005308","type":"mqtt in","z":"e4c105de.aff268","name":"","topic":"node/co2-monitor:0/thermometer/0:1/temperature","qos":"2","datatype":"auto","broker":"bb7a191.cab93e8","x":340,"y":280,"wires":[["d24263f2.a3fbc"]]},{"id":"aa9d7939.9416e8","type":"mqtt in","z":"e4c105de.aff268","name":"","topic":"node/co2-monitor:0/hygrometer/0:4/relative-humidity","qos":"2","broker":"bb7a191.cab93e8","x":350,"y":320,"wires":[["5596bacf.f825d4"]]},{"id":"521ff625.3eaca8","type":"ui_gauge","z":"e4c105de.aff268","name":"","group":"57ff470b.93fdf8","order":6,"width":"3","height":"3","gtype":"gage","title":"Voltage","label":"V","format":"{{value}}","min":0,"max":10,"colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","x":820,"y":200,"wires":[]},{"id":"e0721e5a.aa664","type":"ui_gauge","z":"e4c105de.aff268","name":"","group":"57ff470b.93fdf8","order":1,"width":"3","height":"3","gtype":"gage","title":"CO2 concentration","label":"ppm","format":"{{value}}","min":0,"max":"3000","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","x":850,"y":240,"wires":[]},{"id":"d24263f2.a3fbc","type":"ui_gauge","z":"e4c105de.aff268","name":"","group":"57ff470b.93fdf8","order":2,"width":"3","height":"3","gtype":"gage","title":"Temperature","label":"°C","format":"{{value}}","min":0,"max":"40","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","x":830,"y":280,"wires":[]},{"id":"5596bacf.f825d4","type":"ui_gauge","z":"e4c105de.aff268","name":"","group":"57ff470b.93fdf8","order":3,"width":"3","height":"3","gtype":"gage","title":"Humidity","label":"%","format":"{{value}}","min":0,"max":"100","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","x":820,"y":320,"wires":[]},{"id":"269d7f32.45109","type":"mqtt in","z":"e4c105de.aff268","name":"","topic":"node/co2-monitor:0/voc-sensor/0:0/tvoc","qos":"2","datatype":"auto","broker":"e649966c.8c2af8","x":310,"y":360,"wires":[["9fd92dd4.fa6a3"]]},{"id":"9fd92dd4.fa6a3","type":"ui_gauge","z":"e4c105de.aff268","name":"","group":"2fc45a9a.bbfd66","order":0,"width":0,"height":0,"gtype":"gage","title":"TVOC","label":"units","format":"{{value}} ppb","min":0,"max":"200","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","x":810,"y":360,"wires":[]},{"id":"bb7a191.cab93e8","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","willTopic":"","willQos":"0","willPayload":""},{"id":"57ff470b.93fdf8","type":"ui_group","z":"","name":"Default","tab":"11207769.c31889","disp":true,"width":"6","collapse":false},{"id":"e649966c.8c2af8","type":"mqtt-broker","z":"","name":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","closeTopic":"","closeQos":"0","closePayload":"","willTopic":"","willQos":"0","willPayload":""},{"id":"2fc45a9a.bbfd66","type":"ui_group","z":"","name":"Default","tab":"54d3d6be.bc2ca8","disp":true,"width":"6","collapse":false},{"id":"11207769.c31889","type":"ui_tab","z":"","name":"Home","icon":"dashboard"},{"id":"54d3d6be.bc2ca8","type":"ui_tab","z":"","name":"Home","icon":"dashboard"}]
@@ -75,19 +75,19 @@ Follow the [video tutorial](https://www.youtube.com/watch?v=jGxjl5v7kqE) to buil
 * Switch to the **Messages** tab, if everything went well, you should see the incoming messages from the unit
 * Switch to the **Dashboard** tab, if everything went well, you should see the gauges with the current temperature, humidity, CO2 and VOC readings.  
   *Notes:*  
-*1. Breathe warm air to speed up the sending of data to the unit*  
+*1. Breathe on the unit to speed up data sending*  
 *2. It may take a while to display the results of CO2 and VOC measurements, be patient :)*
 
 ### Measuring of temperature, humidity,  CO2 and VOC
 
 
-* Compete in teams who generate the highest temperature with their breath
+* Compete in teams to see who can generate the highest temperature with their breath
 *Question for the team with the lowest temperature*
 **Why does the warm air rise up?**
 * Compare the measured humidity between teams
 *A question for all teams* 
 **The measured humidity is relative humidity. Explain the terms of relative humidity and dew point.**
-* Compare the measured CO2 and VOC concentrations between the teams CO2 and VOC
+* Compare the measured CO2 and VOC concentrations between the teams
 *A question for all teams*
 **How do you explain the differences in the measured values?**
 
@@ -102,14 +102,14 @@ Experiment 1 can be followed by integration with the Google Sheet. The measured 
 In the experiment, we will understand:
 
 * how to connect Google Sheet spreadsheet with Playground
-* how to create well-arranged graphs showing the dependence of measured values with the timetable and number of students in the classroom
+* how to create well-arranged graphs showing the dependence of measured values on the timetable and number of students in the classroom
 
 ### Experiment Steps
 
 * Create a **Google account**
 * Create a new Google sheet, eg. via [sheets.new](https://docs.google.com/spreadsheets/d/1QeiJCh4L6f6cXWA7HfXrqGrWJPnjWcaemCiTn-Mbf9M/edit?gid=0#gid=0)
-* Rename your current List from **List1 to Data**, we will refere to that in the code later
-* You can also change first line to say what values are on the columns, it will arrive in this order **CO2, Temperature, Humidity, TVOC**.
+* Rename the current sheet from **List1** to **Data**; the code refers to this name
+* You can also label the columns in the first row. The data arrives in this order: **CO2, Temperature, Humidity, TVOC**.
 * On the **Tools** tab select **Script editor**
 
 * Paste the **script** below and save it with **Ctrl + S**
@@ -146,11 +146,11 @@ function doPost(e) {
 </div>
 
 
-* In the flow, click the **http request** bubble and paste your project URL into the **URL field** and add the following **snipet**, then press **Done**
+* In the flow, double-click the **http request** node and paste your project URL into the **URL field** and add the following **snippet**, then press **Done**
 * The upper part with the **-1 node** is just to set default values in case some of the sensors didn't send any data yet.
 
 ```json
-?value={{{payload}}}
+?val={{{payload}}}
 ```
 
 <div class="container">
@@ -161,6 +161,6 @@ function doPost(e) {
 
 
 * Confirm the Functions setting by pressing the **Deploy** button
-* Look at your **Google sheet project** and you should see how the measured values increase in each tab
+* Open your **Google Sheet**: the measured values should appear in the individual columns
 * If you see **-1** in some column it means that the sensor didn't send any data yet.
-* At the end of the measurement, complete the worksheets by specifying the timetable and number of pupils and then present the results to others.
+* At the end of the measurement, add the timetable and the number of pupils to the sheet and then present the results to others.

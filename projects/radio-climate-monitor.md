@@ -39,7 +39,7 @@ In this procedure we will use the **HARDWARIO Playground** to upload firmware to
 
 #### Step 1: Connect the Micro USB cable to the **Core Module** and your computer
 
-#### Step ****2: Run the HARDWARIO Playground. In the Firmware tab choose and upload the `bcf-radio-climate-monitor` firmware to the **Core Module**
+#### Step 2: Run the HARDWARIO Playground. In the Firmware tab choose and upload the `bcf-radio-climate-monitor` firmware to the **Core Module**
 
 :::warning
 
@@ -147,7 +147,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 :::success
 
-At this point, you've got working **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle**and **HARDWARIO Gateway**.
+At this point, you've got working **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** and **HARDWARIO Gateway**.
 
 :::
 

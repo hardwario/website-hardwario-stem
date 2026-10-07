@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 Do you dare? Create two of your favorite competitions by building just one project, switching between them as you like! Everyone will have fun at your party. 🕺
 
-Under this project, you will learn how to **save the highest measured value and determine different competitions in one project and switch between them**.
+In this project, you will learn how to **save the highest measured value and determine different competitions in one project and switch between them**.
 
 The basic version of this project can be found here: [IoT party game: Do you have a dragon´s fire or freezing breath in you?](/projects/dragons-fire/)
 
@@ -56,14 +56,14 @@ if(!flow.get("pressed")) {
 ```
 - The highest temperature is recorded under the **Text node**. Do not forget to enter the value `{{msg.payload}}°C` in the Value format line.
 - The **Change node** lists the participant with the hottest breath; you have to set the flow in it. contestantName
-The ![Change node](./img/dragons-fire-level-2/image8.png)
-- flow closes the ordinary **Text node**.
+![Change node](./img/dragons-fire-level-2/image8.png)
+- The flow ends with an ordinary **Text node**.
 
 ## Measure the coldest breath
 
 Place the next flow below the previous one. With this, you'll be able to measure which one of you has the coldest breath to be anointed the **Night King.** ❄ To start measuring the coldest temperature, **press and hold the button**.
 
-**Our tip**: Avoid generating a similar flow from scratch by simply copying and rewriting the nodes. Copy and paste with **CRTL + C & CTRL + V**; this can be applied to several nodes at once. Hurray! 🙌
+**Our tip**: Avoid generating a similar flow from scratch by simply copying and rewriting the nodes. Copy and paste with **CTRL + C & CTRL + V**; this can be applied to several nodes at once. Hurray! 🙌
 
 ![Measure the coldest breath](./img/dragons-fire-level-2/image1.png)
 
@@ -189,7 +189,7 @@ The lower Change node announces the **coldest breath competition**:
 
 ## Set default values
 
-Hold onto your hat, we're heading into the final stretch. The last flow sets the **default values**: 30 °C as an optimum temperature, pretty cool lowest temperature and pretty hot highest temperature. The actual measured temperatures are then compared with these temperatures.
+Hold onto your hat, we're heading into the final stretch. The last flow sets the **default values**: 30 °C as an optimum temperature, a very low starting value for the highest temperature and a very high starting value for the lowest temperature. The actual measured temperatures are then compared with these temperatures.
 
 ![Timestamp value setting](./img/dragons-fire-level-2/image17.png)
 
@@ -198,9 +198,9 @@ Hold onto your hat, we're heading into the final stretch. The last flow sets the
 
 - The **Inject node** contains a checked box with which the default values are set just a moment after pressing the Deploy button.
 
-The ![Inject node](./img/dragons-fire-level-2/image11.png)
+![Inject node](./img/dragons-fire-level-2/image11.png)
 
--  and the **Function node** contain javascript code that sets the default values.
+- The **Function node** contains javascript code that sets the default values.
 
 ```
 flow.set("contestantTemp", 30);
@@ -211,7 +211,7 @@ return msg;
 
 ## Look at the result.
 
-That's how sexy your desktop looks now. Enjoy it, just like when you saw the sea for the first time ... 🌊 Just one more second ... and another ... and then press your old good friend **Deploy** in the top right.
+That's how sexy your desktop looks now. Enjoy it, just like when you saw the sea for the first time ... 🌊 Just one more second ... and another ... and then press your good old friend **Deploy** in the top right.
 
 ![Deploy](./img/dragons-fire-level-2/image18.png)
 

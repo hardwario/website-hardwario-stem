@@ -1,40 +1,40 @@
 ---
 slug: kung-fu-master
-title: Kung-fu mástr
+title: Mistr kung-fu
 ---
 import Image from '@theme/IdealImage';
 
 ## Úvod
 
-S touhle hrou se s kámoši nudit nebudete. Nastav si svůj Start Set tak, aby dokázal rozeznat i ten nejjemnější pohyb.
+S touhle hrou se s kamarády nudit nebudete. Nastavte si Start Set tak, aby rozpoznal i ten nejjemnější pohyb.
 
-V tomhle projektu se naučíš vytvořit takzvaný **still position detector**, tedy **detektor pohybu**. 👈
+V tomto projektu se naučíte vytvořit takzvaný **still position detector**, tedy **detektor pohybu**. 👈
 
-Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Start Setem**](https://www.hardwario.store/cz/p/start-set).
+Budete potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíte si proto se základní sadou HARDWARIO [**Start Set**](https://www.hardwario.store/cz/p/start-set).
 
 
-## Stáhni si nový firmware
+## Stáhněte si nový firmware
 
-1. Pokud to ještě nemáš, Start set sestav.
+1. Pokud jste to ještě neudělali, sestavte Start Set.
 
-2. Na Core Module potřebuješ nahrát speciální firmware, a to **bcf radio still position detector** (najdeš ho mezi ostatním firmwarem v Playgroundu). S tímhle firmwarem bude krabička mnohem citlivější na pohyb a změny pohybu časově změří. 👌
-**Náš tip:** Nevíš, jak si firmware stáhnout nebo co to je? [Zjistíš to tady](https://docs.hardwario.com/tower/firmware-sdk/)
+2. Do modulu Core Module nahrajte speciální firmware **bcf-radio-still-position-detector** (najdete ho mezi ostatním firmwarem v Playgroundu). S tímto firmwarem bude krabička mnohem citlivější na pohyb a změří, kolik času mezi pohyby uběhne. 👌
+**Náš tip:** Nevíte, jak si firmware stáhnout nebo co to je? [Najdete to tady](https://docs.hardwario.com/tower/firmware-sdk/).
 
-1. [Core Module spáruj](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device) s USB Donglem Hned po spárování uvidíš, že tvůj Core Module změnil Alias na **still-position-detector**.
+3. [Spárujte modul Core Module](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device) s USB donglem. Hned po spárování uvidíte, že se alias modulu Core Module změnil na **still-position-detector**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-1.webp')} alt="Záložka Devices v Playgroundu s napárovaným Core Modulem přejmenovaným na still-position-detector:0"/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-1.webp')} alt="Záložka Devices v Playgroundu se spárovaným modulem Core Module, který má nově alias still-position-detector:0"/>
   </div>
 </div>
 
 
-## Rozjeď to v Node-RED
+## Rozjeďte to v Node-RED
 
-1. V Playgroundu klikni na **záložku Functions**, kde je programovací plocha [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
-2. Začni jako vždycky: na plochu nejdřív umísti **MQTT** node ze sekce Inputs.
+1. V Playgroundu klikněte na **záložku Functions**, kde je programovací plocha [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
+2. Začněte jako vždy: na plochu nejdřív umístěte uzel **MQTT** ze sekce Input.
 
-Dvakrát na něj klikni a do řádku zkopíruj **Topic**, se kterým bude krabička počítat čas strávený v jedné poloze:
+Dvakrát na něj klikněte a do řádku **Topic** zkopírujte tento topic, přes který krabička posílá čas strávený v jedné poloze:
 
 ```
 node/still-position-detector:0/hold-time
@@ -42,27 +42,27 @@ node/still-position-detector:0/hold-time
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-2.webp')} alt="Nastavení uzlu MQTT s tématem hold-time vyplněným v poli Topic"/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-2.webp')} alt="Nastavení uzlu MQTT s topicem hold-time vyplněným v poli Topic"/>
   </div>
 </div>
 
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
-3. Aby zařízení fungovalo, na plochu musíš umístit ještě další bublinu. Najdeš ji v sekci Dashboard jako **Text**. Tenhle node zajistí zapisování výsledku.
+3. Aby zařízení fungovalo, umístěte na plochu ještě jednu bublinu. Najdete ji v sekci Dashboard jako **Text**. Tento uzel bude výsledek vypisovat.
 
-4. Na node Text dvakrát ťukni. V nastavení uprav jeho **Label**, tedy popisek. Napiš tam třeba **Still time**.
+4. Na uzel Text dvakrát klikněte. V nastavení upravte jeho **Label**, tedy popisek. Napište tam třeba **Still time**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kung-fu-master/kung-fu-master-3.webp')} alt="Nastavení uzlu Text s vlastním popiskem vyplněným ve zvýrazněném poli Label"/>
+    <Image img={require('./img/kung-fu-master/kung-fu-master-3.webp')} alt="Nastavení uzlu Text s vlastním popiskem ve zvýrazněném poli Label"/>
   </div>
 </div>
 
 
-Potvrď tlačítkem Done.
+Potvrďte tlačítkem **Done**.
 
-5. **Oba nody propoj.** V pravém horním rohu nezapomeň ťuknout na červené **Deploy**, kterým celé flow rozjedeš.
+5. **Oba uzly propojte.** Nezapomeňte v pravém horním rohu kliknout na červené tlačítko **Deploy**, kterým celý flow spustíte.
 
 <div class="container">
   <div class="row">
@@ -72,13 +72,13 @@ Potvrď tlačítkem Done.
 
 ## A… akce!
 
-Wow, v ruce máš časovač pohybu. Nezní to cool? Zkus si to!
+Wow, v ruce máte časovač pohybu. Nezní to skvěle? Vyzkoušejte si ho!
 
-1. **Zmáčkni tlačítko** na krabičce. ⏺️
+1. **Stiskněte tlačítko** na krabičce. ⏺️
 
-2. Po malé chvilce s **krabičkou pohni**.
+2. Po chvilce **krabičkou pohněte**.
 
-3. Na záložce **Dashboard** v Playgroundu uvidíš, **kolik času** od zmáčknutí tlačítka a pohybu uběhlo. Mazec! 👍
+3. Na záložce **Dashboard** v Playgroundu uvidíte, **kolik času** uběhlo mezi stisknutím tlačítka a pohybem. Paráda! 👍
 
 <div class="container">
   <div class="row">
@@ -86,16 +86,16 @@ Wow, v ruce máš časovač pohybu. Nezní to cool? Zkus si to!
   </div>
 </div>
 
-## Soupeř s kámoši
+## Změřte síly s kamarády
 
-1. **Vyzvi kámoše na souboj** a zjisti, **kdo krabičku nejdýl udrží bez jediného pohybu v různých polohách**, třeba:
+1. **Vyzvěte kamarády na souboj** a zjistěte, **kdo krabičku v různých polohách nejdéle udrží bez jediného pohybu**, třeba:
     - na jedné noze,
     - v planku,
     - ve stojce 🙃,
     - jakkoli jinak vás napadne.
 
-    Slovní rušení protivníka je samozřejmě povoleno, ale nesahat! 🤡
+    Rozptylovat soupeře slovy je samozřejmě povoleno, ale nesahat! 🤡
 
-2. **Výsledky zapisuj**.
+2. **Zapisujte si výsledky.**
 
-3. Ten, kdo má nejvíckrát nejlepší čas, je **zenový kung-fu mástr**! 🙇
+3. Kdo bude mít nejčastěji nejlepší čas, je **zenový mistr kung-fu**! 🙇

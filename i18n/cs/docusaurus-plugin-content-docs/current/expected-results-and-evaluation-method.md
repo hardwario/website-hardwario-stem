@@ -5,10 +5,10 @@ title: Předpokládané výsledky a způsob vyhodnocení
 
 ## Student bude schopen:
 
-* Vysvětlit pojem Internet věcí
+* Vysvětlit pojem internet věcí
 * Používat IoT stavebnici HARDWARIO
 * Programovat v prostředí Node-RED
-* Vytvořit vlastní IoT projekt a odprezentovat ho
+* Vytvořit vlastní IoT projekt a prezentovat ho
 
 ## Student bude znát:
 
@@ -19,5 +19,5 @@ title: Předpokládané výsledky a způsob vyhodnocení
 
 ## Způsob vyhodnocení:
 
-* 3-2-1 Assessment
-* Slovní hodnocení studenty
+* 3-2-1 hodnocení
+* Slovní hodnocení týmových projektů celou skupinou

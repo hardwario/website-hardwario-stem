@@ -1,7 +1,7 @@
 ---
 slug: hardwario-tower-iot-kit-experiment
 title: Experiment
-title_meta: "Experiment (L102: IoT kits HARDWARIO TOWER)"
+title_meta: "Experiment (L102: HARDWARIO TOWER IoT Kit)"
 ---
 import Image from '@theme/IdealImage';
 
@@ -21,18 +21,18 @@ Several teams of students will use the HARDWARIO kit to build sample sets. A lis
 
 ### Experiment description
 
-In Playground, we will create a flow pattern showing the weight of the students.
+In Playground, we will create a sample flow showing the weight of the students.
 
 #### Experiment procedure
 
 1. Download and install the Playground app on your computer
 2. In the Functions tab, create a new flow:
-    a. insert mqtt in (double-click on the bubble and fill in topic cesko/city/name/weight + confirm Done)
-    b. insert dashboard text (double click on the bubble to change Label to weight + confirm Done)
-    c. connect the bubbles with a string
-    d. confirm Deploy
-3. In the Messages tab, subscribe to messages cesko/# (note: first delete the bridge/# cross)
-4. Send a message with your token and payload: weight in kg
+    a. insert mqtt in (double-click the node and fill in topic cesko/city/name/weight + confirm Done)
+    b. insert dashboard text (double-click the node to change Label to weight + confirm Done)
+    c. connect the nodes with a wire
+    d. click Deploy
+3. In the Messages tab, subscribe to messages cesko/# (note: first remove bridge/# by clicking its cross)
+4. Send a message with your topic and a payload: your weight in kg
 5. Go to the Dashboard tab and you should see your weight
 
 <div class="container">

@@ -5,9 +5,9 @@ title_meta: "Úvod (L109: IoT monitor půdy)"
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **IoT monitor půdy** je představit toto dnes atraktivní téma z vícero pohledů. 
+Cílem lekce **IoT monitor půdy** je představit toto aktuální téma z několika úhlů pohledu. 
 
-Studenti si sami sestaví a naprogramují zařízení k měření teploty a vlhkosti půdy. Na základě praktických experimentů si snáze uvědomí a zapamatují příčiny a důsledky nedostatečné vlhkosti půdy. 
+Studenti si sami sestaví a naprogramují zařízení k měření teploty a vlhkosti půdy. Díky praktickým experimentům si snáze uvědomí a zapamatují, jaké příčiny a důsledky má nedostatečná vlhkost půdy. 
 
 ## Co budete v rámci lekce potřebovat?
 
@@ -15,5 +15,5 @@ Studenti si sami sestaví a naprogramují zařízení k měření teploty a vlhk
 * Projektor nebo větší monitor
 * [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER
 * [Sadu Sensor](https://www.hardwario.store/cz/p/sensor-set) stavebnice HARDWARIO TOWER
-* [Soil Sensor HARDWARIO](https://www.hardwario.store/p/soil-sensor)
+* [HARDWARIO Soil Sensor](https://www.hardwario.store/p/soil-sensor)
 * Sklenice s vodou, nádoba s hlínou

@@ -5,61 +5,61 @@ title: Dračí dech
 
 ## Úvod
 
-Bav se s kámoši díky IoT. Kdo z vás bude mít nejžhavější, nebo nejchladnější dech? Je na tobě, čím si k vítězství pomůžeš. Smí se všechno. 😱
+Užijte si s kamarády zábavu s IoT. Kdo z vás bude mít nejžhavější, nebo nejchladnější dech? Čím si k vítězství pomůžete, je na vás. Povoleno je všechno. 😱
 
-S tímhle projektem se naučíš **měřit teplotu s IoT**. Postačí ti základní HARDWARIO sada, tedy [**Start Set**](https://www.hardwario.store/cz/p/start-set/).
-
-
-## Připrav si krabičku
-
-1. Start Set sestav a spáruj: Na Core Module potřebuješ firmware **radio push button**.
-
-2. Otevři v Playgroundu záložku **Messages**. Tady uvidíš změny teploty. Teplota se měří automaticky, a to buď pravidelně po 15 sekundách, nebo když dojde k větší změně. A právě toho využijeme.
+V tomto projektu se naučíte **měřit teplotu pomocí IoT**. Stačí vám základní sada HARDWARIO [**Start Set**](https://www.hardwario.store/cz/p/start-set/).
 
 
-![messages](./img/dragons-fire/image4.png)
+## Připravte si krabičku
 
-## Nastav si Node-RED
+1. Start Set sestavte a spárujte. Do modulu Core Module potřebujete firmware **radio push button**.
 
-1. Messages jsou pro tebe možná málo. ✌️ Nastav si rovnou svůj vlastní barevný ukazatel teploty, a to pomocí bublin v Node-RED. Nejdřív v Playgroundu klikni na záložku **Functions**.
+2. Otevřete v Playgroundu záložku **Messages**. Uvidíte v ní změny teploty. Teplota se měří automaticky, a to buď pravidelně každých 15 sekund, nebo když se výrazně změní. Právě toho využijeme.
 
-2. Na čistou plochu polož světle fialový node (bublinu) s názvem **MQTT**. Najdeš ho v sekci Input.
 
-3. Node rozklikni dvojklikem. V řádku **Topic** určíš, co chceš, aby barevný ukazatel zobrazoval. Teď to bude teplota. Proto do řádku zkopíruj zprávu s teplotou ze záložky Messages (bez čísla). Nebo klidně použij tuhle:
+![Záložka Messages v Playgroundu](./img/dragons-fire/image4.png)
+
+## Nastavte si Node-RED
+
+1. Záložka Messages vám možná stačit nebude. ✌️ Postavte si z bublin v Node-RED vlastní barevný ukazatel teploty. Nejdřív v Playgroundu klikněte na záložku **Functions**.
+
+2. Na prázdnou plochu umístěte světle fialový uzel (bublinu) s názvem **MQTT**. Najdete ho v sekci Input.
+
+3. Uzel otevřete dvojklikem. V řádku **Topic** určíte, co má barevný ukazatel zobrazovat, tentokrát teplotu. Do řádku proto zkopírujte zprávu s teplotou ze záložky Messages (bez čísla), nebo klidně použijte tuto:
 ```
 node/push-button:0/thermometer/0:1/temperature
 ```
 
 ![MQTT](./img/dragons-fire/image3.png)
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
-4. Vedle nodu postav druhý, tentokrát modrý s názvem **Gauge**. Najdeš ho v sekci Dashboard. Tímhle nodem určíš, jak bude naměřená teplota znázorněná na obrazovce: jako ukazatel. Oba nody propoj.
+4. Vedle uzlu umístěte druhý, tentokrát modrý uzel s názvem **Gauge**. Najdete ho v sekci Dashboard. Tento uzel určuje, jak se naměřená teplota zobrazí na obrazovce: jako ukazatel. Oba uzly propojte.
 
-![Gauce chart](./img/dragons-fire/image1.png)
+![Ukazatel Gauge](./img/dragons-fire/image1.png)
 
-5. Na node Gauge dvakrát klikni. V řádku **Type** si nastavíš, jak se bude graf zobrazovat (nejlepší bude Gauge). V řádku **Range** upravíš minimální a maximální hodnotu ukazatele (zkus 0 a 50).
+5. Na uzel Gauge dvakrát klikněte. V řádku **Type** nastavíte, jak se bude graf zobrazovat (nejlepší bude Gauge). V řádku **Range** upravíte minimální a maximální hodnotu ukazatele (zkuste 0 a 50).
 
 ![Node-RED](./img/dragons-fire/image2.png)
 
-Potvrď tlačítkem **Done**.
-**Náš tip:** V záložce **Label** si svůj ukazatel libovolně přejmenuj.
+Potvrďte tlačítkem **Done**.
+**Náš tip:** V řádku **Label** můžete ukazatel libovolně přejmenovat.
 
-6. Teď můžeš zmáčknout červené tlačítko **Deploy** v pravém horním rohu obrazovky. 🚨 Tím celý flow aktivuješ.
-❗ **Pozor**: Při každé změně v nodech musíš Deploy mačkat znovu.
+6. Teď stiskněte červené tlačítko **Deploy** v pravém horním rohu obrazovky. 🚨 Tím celý flow aktivujete.
+❗ **Pozor**: Po každé změně v uzlech musíte Deploy stisknout znovu.
 
-7. Překlikni se do jiné záložky, do **Dashboardu**. Tvůj ukazatel žije právě tady. 😲
+7. Přepněte se na záložku **Dashboard**. Tady najdete svůj ukazatel. 😲
 
 ![Node-RED](./img/dragons-fire/image5.png)
 
-## Rozjeď hru s kámoši
+## Rozjeďte hru s kamarády
 
 1. **Sedněte si s kamarády ke stolu.**
 
-2. Nejdřív změřte, kdo v sobě skrývá **dračí oheň**. 🔥 **Jeden po druhém na krabičku dýchejte**. Pomůcky dovoleny, zkuste si dech zahřát s tím, co máte po ruce. Go wild a zkoušej všechno možné i nemožné. 🙌
-❓ **Vyzkoušej:** Co dech zahřeje víc – čaj, nebo pálivé papričky?
+2. Nejdřív změřte, kdo v sobě skrývá **dračí oheň**. 🔥 **Jeden po druhém dýchejte na krabičku**. Pomůcky jsou dovolené: zkuste si dech zahřát vším, co máte po ruce. Zkoušejte všechno možné i nemožné. 🙌
+❓ **Vyzkoušejte:** Zahřeje dech víc horký čaj, nebo pálivé papričky?
 
-3. Po skončení prvního kola následuje **mrazivé kolo**. ❄ Kdo zvládne svůj dech ochladit tak, aby ho měl **nejchladnější**?
-❓ **Vyzkoušej:** Ochladí dech víc kostka ledu, nebo chladivé žvýkačky?
+3. Po prvním kole následuje **mrazivé kolo**. ❄ Kdo dokáže dech ochladit tak, aby byl **nejchladnější**?
+❓ **Vyzkoušejte:** Ochladí dech víc kostka ledu, nebo chladivá žvýkačka?
 
-4. **Rekordy zapište** a při příští hře je zkuste překonat.
+4. **Rekordy si zapište** a při příští hře je zkuste překonat.

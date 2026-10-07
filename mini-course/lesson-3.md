@@ -72,16 +72,32 @@ So two **Change** nodes are used.
 To display text, use the **Text** node from the **Dashboard** section.  
 
 - Give it a name (e.g., *“What about the PIR sensor?”*)  
-- Set it to display `msg.payload`. At this point, it will take
+- Set it to display `msg.payload`. At this point, it takes the value *“I am calm”* or *“Careful, I’m falling”*.
 
-## 7. Guard
+<div class="container">
+  <div class="row">
+    <Image img={require('./img/iot-function-text.webp')} alt="Node-RED flow: Change nodes set the text by orientation and pass it to a dashboard Text node"/>
+  </div>
+</div>
+
+## 7. From Number to Text
+
+Does it work?  
+When you turn the **PIR Module**, you should see the text on the dashboard change:
+
+- **“I am calm”** → at orientation 1–5  
+- **“Careful, I’m falling”** → at orientation 6  
+
+If you also have the **Gauge** from the previous lesson, you will see the current orientation of the **PIR Module** at the same time.
+
+## 8. Guard
 
 So far, the PIR module has been used as a **gyroscopic cube**.
 Now, use it as a proper **PIR sensor**!
 
 👉 Program it so that it monitors the **presence of a person** and writes to the **Dashboard** whether it detects someone or not.
 
-## 8. Summary
+## 9. Summary
 
 ✅ The **input** generates messages, and you can modify them using **Change**.
 ✅ You can filter messages using **Switch** and pass them on to other nodes for processing.

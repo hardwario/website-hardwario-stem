@@ -1,31 +1,31 @@
 ---
 slug: node-red-and-start-set
-title: Node-RED a Sada Start
+title: Node-RED a Start Set
 ---
 ## Úvod
 
-Node-RED je jednoduchý, ale mocný nástroj a my si nyní ukážeme jak vytvořit jednoduchý dadshborad a zobrazovat v něm informace o počtu stisknutí tlačítka, teplotě a stavu naklonění. 
+Node-RED je jednoduchý, ale mocný nástroj. Teď si ukážeme, jak v něm vytvořit základní dashboard, který zobrazí počet stisknutí tlačítka, teplotu a stav naklonění.
 
 
 ## Kolikrát jsem stiskl tlačítko?
 
-Abychom mohli zobrazovat hodnotu stisknutí, musíme jí nejprve někde vzít.
+Abychom mohli počet stisknutí zobrazit, musíme ho nejdřív někde získat.
 
-1. Pokud nemáme, tak si spustíme **HARDWARIO Playgroun**. Z předešlého návodu víme že se nám zobrazuje v **Messages** a pokud zde klikneme na řádek s topicem `node/motion-detector:0/push-button/-/event-count` tak se nám tento zkopíruje do schránky, což nám ještě potvrdí vyskakovací info panel.
+1. Pokud ještě neběží, spusťte **HARDWARIO Playground**. Z předchozího návodu víte, že se data zobrazují v **Messages**. Když tu kliknete na řádek s topicem `node/motion-detector:0/push-button/-/event-count`, zkopíruje se do schránky a potvrdí to vyskakovací informační panel.
 
-> Pokud bychom měli spárovaných více **Push button** modulů, tak se nám budou lišit v čísle za \`motion-detector:\`
+> Pokud máte spárovaných více modulů **Push Button**, budou se lišit číslem za \`motion-detector:\`
 
-2. Nyní se přesunem do **Functions**. Jde o vloženou aplikaci **Node-RED**. Existuje k ní skvělá dokumentace, podpora i obrovská komunita uživatelů. Funguje na principu **vizuálního programování**: na plochu si přidáváte funkční bloky, kterým říkáme **nody**, a jejich spojením **vytvoříte funkční aplikaci** (flow).
-3. Smažte dva nody, které máte na ploše.
-4. Začneme přidáním nodu **mqtt in**. Najdete jej vlevo v sekci **network**. Přetáhněte jej na plochu.
+2. Teď přejděte do **Functions**. Je to vestavěná aplikace **Node-RED**, ke které existuje skvělá dokumentace, podpora i velká komunita uživatelů. Funguje na principu **vizuálního programování**: na plochu přidáváte funkční bloky, kterým říkáme **uzly** (nodes), a jejich propojením **vytvoříte funkční aplikaci** (flow).
+3. Smažte dva uzly, které už na ploše jsou.
+4. Začněte uzlem **mqtt in**. Najdete ho vlevo v sekci **network**. Přetáhněte ho na plochu.
 
-![Rozjeď to v Node-RED](./img/node-red-and-start-set/image3.png "Rozjeď to v Node-RED")
+![Rozjeďte to v Node-RED](./img/node-red-and-start-set/image3.png "Rozjeďte to v Node-RED")
 
-5. Dvakrát na něj klikněte, otevře se vám nastavovací okno nodu, ve kterém potřebujeme vyplnit pole **topic**. To určí, jaké zprávy chceme v této flow přijímat.
-6. Vraťte se v Playgroundu do záložky **Messages** a najděte zprávu s teplotou. Kromě hodnoty teploty vidíte vedle i identifikaci zprávy, vypadá takto: `node/push-button:0/thermometer/0:1/temperature` a jedná se o **topic**. 
-7. Zkopírujte si tento topic, přejděte zpět do sekce **Functions**, vložte jej do pole **Topic** a uložte nastavení tlačítkem **Done**.
-8. Nyní vložte na plochu node **Gauge**, ten najdete mezi nody v sekci **dashboard**.
-9. Dvakrát na něj klikněte, ať se otevře jeho nastavení. Nyní změníme jen hodnotu **max** v sekci **Range** na **50**. Uložte nastavení tlačítkem **Done**.
-10. Nyní oba nody propojte. Je to snadné, stačí stisknout šedý čtverec jednoho nodu a myší jej natáhnout k šedému čtverci druhého nodu.
-11. Tlačítkem **Deploy** vpravo nahoře nyní můžete spustit aplikaci a přepnout se do záložky **Dashboard** v Playgroundu.
-12. Dýchněte na zařízení, abyste vyvolali okamžitou zprávu o teplotě a IoT! V grafu uvidíte aktuální teplotu.
+5. Dvojklikem otevřete jeho nastavení. Tady je potřeba vyplnit pole **topic**, které určuje, jaké zprávy bude tento flow přijímat.
+6. Vraťte se v Playgroundu na záložku **Messages** a najděte zprávu s teplotou. Vedle hodnoty teploty vidíte i identifikátor zprávy, který vypadá takto: `node/push-button:0/thermometer/0:1/temperature`. To je **topic**.
+7. Topic zkopírujte, vraťte se do **Functions**, vložte ho do pole **Topic** a nastavení uložte tlačítkem **Done**.
+8. Teď přetáhněte na plochu uzel **Gauge**. Najdete ho v sekci **dashboard**.
+9. Dvojklikem otevřete jeho nastavení a v sekci **Range** změňte hodnotu **max** na **50**. Nastavení uložte tlačítkem **Done**.
+10. Oba uzly propojte. Je to snadné: klikněte na šedý čtvereček jednoho uzlu a myší ho přetáhněte k šedému čtverečku druhého uzlu.
+11. Tlačítkem **Deploy** vpravo nahoře aplikaci spusťte a pak v Playgroundu přepněte na záložku **Dashboard**.
+12. Dýchněte na zařízení, aby hned odeslalo zprávu s teplotou, a je to! V grafu uvidíte aktuální teplotu.

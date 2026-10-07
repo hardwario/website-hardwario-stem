@@ -1,23 +1,23 @@
 ---
 slug: dragons-fire-level-2
-title: Dračí dech level 2
+title: 'Dračí dech: úroveň 2'
 ---
 import Image from '@theme/IdealImage';
 
 ## Úvod
 
-Troufáš si? Sestav jeden projekt, ve kterém zprovozníš dva typy své oblíbené soutěže naráz a budeš mezi nimi libovolně přepínat! Při párty máte o zábavu postaráno. 🕺
+Troufáte si? Postavte jeden projekt se dvěma oblíbenými soutěžemi a přepínejte mezi nimi, jak se vám zachce! O zábavu na párty máte postaráno. 🕺
 
-S tímhle projektem se naučíš **ukládat nejvyšší naměřenou hodnotu a nastavit několik typů soutěže v jednom projektu a přepínat mezi nimi**.
+V tomto projektu se naučíte **uložit nejvyšší naměřenou hodnotu, nastavit v jednom projektu několik typů soutěže a přepínat mezi nimi**.
 
-Základní verzi tohohle projektu najdeš tady: [IoT párty hra: máš v sobě dračí oheň, nebo mrazivý dech?](/cs/projects/dragons-fire/)
+Základní verzi projektu najdete tady: [IoT párty hra: máte v sobě dračí oheň, nebo mrazivý dech?](/cs/projects/dragons-fire/)
 
-I tentokrát ti postačí základní HARDWARIO sada, tedy [**Start Set**](https://www.hardwario.store/cz/p/start-set/).
+I tentokrát vám stačí základní sada HARDWARIO [**Start Set**](https://www.hardwario.store/cz/p/start-set/).
 
 
-## Připrav si Node-RED
+## Připravte si Node-RED
 
-1. Start Set sestav a spáruj. Na Core Module potřebuješ zase ten starý známý firmware **bcf-radio-push-button**.
+1. Start Set sestavte a spárujte. Do modulu Core Module budete potřebovat opět starý známý firmware **bcf-radio-push-button**.
 
 <div class="container">
   <div class="row">
@@ -25,21 +25,21 @@ I tentokrát ti postačí základní HARDWARIO sada, tedy [**Start Set**](https:
   </div>
 </div>
 
-## Změř nejžhavější dech
+## Změřte nejžhavější dech
 
-Sestav si tohle flow, se kterým odhalíš **nejžhavějšího draka** z vaší party. 🐉 Nejvyšší teplota se začne měřit **krátkým stisknutím tlačítka**.
+Sestavte tento flow, se kterým odhalíte **nejžhavějšího draka** z vaší party. 🐉 Nejvyšší teplota se začne měřit po **krátkém stisknutí tlačítka**.
 
-![zmer nejzhavejsi dech](./img/dragons-fire-level-2/image9.png)
+![Flow pro měření nejžhavějšího dechu](./img/dragons-fire-level-2/image9.png)
 
-**Potřebuješ poradit, jak na to?**
+**Potřebujete poradit, jak na to?**
 
-- **MQTT node** ze sekce Input v sobě skrývá Topic s krátkým zmáčknutím tlačítka:
+- Uzel **MQTT** ze sekce Input má v poli Topic krátké stisknutí tlačítka:
 
 ```
 node/push-button:0/push-button/-/event-count
 ```
 
-- javascriptový kód z **node Function** vypadá takhle
+- Kód JavaScriptu v uzlu **Function** vypadá takto:
 
 ```
 var hottestTemp = flow.get("hottestTemp");
@@ -58,31 +58,31 @@ if(!flow.get("pressed"))
 }
 ```
 
-- spodní **node Text** zaznamenává nejvyšší teplotu, nezapomeň do řádku Value format vyplnit hodnotu `{{msg.payload}}°C`
+- Spodní uzel **Text** zaznamenává nejvyšší teplotu. Nezapomeňte do řádku Value format vyplnit hodnotu `{{msg.payload}}°C`.
 
-- **Change node** vypisuje nejžhavějšího účastníka, musíš v něm nastavit flow. contestantName
+- Uzel **Change** vypisuje účastníka s nejžhavějším dechem. Nastavte v něm flow. contestantName
 
-![change node](./img/dragons-fire-level-2/image8.png)
+![Uzel Change](./img/dragons-fire-level-2/image8.png)
 
-- flow uzavírá obyčejný **Text node**
+- Flow uzavírá obyčejný uzel **Text**.
 
-## Změř nejmrazivější dech
+## Změřte nejmrazivější dech
 
-Pod předchozí flow umísti další. S tímhle změříš, kdo z vás dýchá tak studeně, že by mohl **konkurovat Nočnímu králi**. ❄ Nejchladnější teplota se začne měřit až **při dlouhém stisknutí tlačítka**.
+Pod předchozí flow umístěte další. Změříte s ním, kdo z vás dýchá tak studeně, že by mohl **konkurovat Nočnímu králi**. ❄ Nejnižší teplota se začne měřit až po **dlouhém stisknutí tlačítka**.
 
-**Náš tip**: Vyhni se tvoření podobného flow od nuly a nody jednoduše zkopíruj a přepiš. Kopírování funguje jednoduchým **CRTL+C & CTRL+V**, jde to udělat i s několika nody naráz. Sláva 🙌
+**Náš tip**: Podobný flow nemusíte stavět od nuly: uzly jednoduše zkopírujte a upravte. Stačí **Ctrl+C a Ctrl+V**, a to i pro několik uzlů naráz. Sláva! 🙌
 
-![zmer nejmrazivejsi dech](./img/dragons-fire-level-2/image1.png)
+![Flow pro měření nejmrazivějšího dechu](./img/dragons-fire-level-2/image1.png)
 
-**Potřebuješ poradit, jak na to?**
+**Potřebujete poradit, jak na to?**
 
-- Topic v **MQTT node** obsahuje dlouhé stisknutí tlačítka:
+- Pole Topic v uzlu **MQTT** tentokrát odpovídá dlouhému stisknutí tlačítka:
 
 ```
 node/push-button:0/push-button/-/hold-count
 ```
 
-- javascript ve **Function node** vypadá zase takhle:
+- Kód v uzlu **Function** vypadá tentokrát takto:
 
 ```
 var coldestTemp = flow.get("coldestTemp");
@@ -104,27 +104,27 @@ if(flow.get("contestantTemp") < coldestTemp)
 }
 ```
 
-- **oba Text nody jsou stejné jako v předchozím flow**, jen je změň z nejžhavějšího na nejchladnější
+- **Oba uzly Text jsou stejné jako v předchozím flow**, jen v nich nejžhavější změňte na nejchladnější.
 
-- **Change node je stejný jako v předchozím flow**
+- **Uzel Change je stejný jako v předchozím flow.**
 
-❗ **Náš tip**: Něco nefunguje, jak by mělo? Přidej na plochu Debug node, který ti pomůže odstranit případné brouky. 🐞
+❗ **Náš tip**: Něco nefunguje, jak má? Přidejte na plochu uzel Debug, který vám pomůže vychytat případné brouky. 🐞
 
-## Nastav průběžná měření
+## Nastavte průběžné měření
 
-Vytvoř nový flow, který umísti pod oba předchozí. S tímhle flow změříš každý pokus, a navíc si tabulka zapamatuje jména účastníků.
+Vytvořte nový flow a umístěte ho pod oba předchozí. Tento flow změří každý pokus a tabulka si navíc zapamatuje jména účastníků.
 
-![prubezna mereni flow](./img/dragons-fire-level-2/image15.png)
+![Flow pro průběžné měření](./img/dragons-fire-level-2/image15.png)
 
-**Potřebuješ poradit, jak na to?**
+**Potřebujete poradit, jak na to?**
 
-- Topic v **MQTT node** obsahuje měření teploty:
+- Pole Topic v uzlu **MQTT** obsahuje měření teploty:
 
 ```
 node/push-button:0/thermometer/0:1/temperature
 ```
 
-- javascript ve **Function node** vypadá takhle:
+- Kód v uzlu **Function** vypadá takto:
 
 ```
 var temp = msg.payload;
@@ -147,75 +147,75 @@ else if(flow.get("holded"))
 }
 ```
 
-- tmavě modrý **Text node** s teplotou, kterou krabička naměří aktuálnímu soutěžícímu, obsahuje stupně Celsia: `{{msg.payload}}°C`
+- Tmavě modrý uzel **Text** ukazuje ve stupních Celsia teplotu, kterou krabička naměří aktuálnímu soutěžícímu: `{{msg.payload}}°C`
 
-- **Text input node** (ten světle modrý) má v řádku Delay nulu (jméno soutěžícího pak musíš v tabulce potvrdit Enterem)
+- Uzel **Text input** (ten světle modrý) má v řádku Delay nulu, takže jméno soutěžícího musíte v tabulce potvrdit klávesou Enter.
 
-- **Change node** má dvě pravidla. Jedno nechává prázdnou hodnotu, dokud nezaregistruje první teplotu. A druhé nastaví jako průměrnou teplotu 30 °C, to znamená, že teplejší výsledky budou nad 30 °C, chladnější zase pod.
+- Uzel **Change** má dvě pravidla. První nechává hodnotu prázdnou, dokud nepřijde první teplota. Druhé nastaví průměrnou teplotu na 30 °C, takže teplejší výsledky budou nad 30 °C a chladnější pod touto hodnotou.
 
-![prubezne mereni](./img/dragons-fire-level-2/image3.png)
+![Průběžné měření](./img/dragons-fire-level-2/image3.png)
 
-- **Function node** s javascriptem pro ukládání jmen vypadá jednoduše takto
+- Uzel **Function** s kódem pro ukládání jmen vypadá jednoduše takto:
 
 ```
 flow.set("contestantName", msg.payload);
 return msg;
 ```
 
-- a poslední **Text node** je prostě text node, který oznamuje aktuálního soutěžícího. Voilà!
+- Poslední uzel **Text** je obyčejný textový uzel, který oznamuje aktuálního soutěžícího. Voilà!
 
-## Nastav si typ soutěže
+## Nastavte typ soutěže
 
-Ízy špízy? Tak tam přihoď jeden **timestamp flow**, se kterým změníš typ hry! Krátké zmáčknutí tlačítka změří nejžhavější dech a dlouhé podržení tlačítka změří nejmrazivější dech. Krutý 👍
+Hračka? Tak přidejte ještě jeden **timestamp flow**, kterým budete měnit typ hry! Krátké stisknutí tlačítka změří nejžhavější dech, dlouhé podržení nejmrazivější. Skvělé! 👍
 
-![timestamp flow](./img/dragons-fire-level-2/image4.png)
+![Timestamp flow](./img/dragons-fire-level-2/image4.png)
 
-### Potřebuješ poradit, jak na to?
+### Potřebujete poradit, jak na to?
 
-- první node se jmenuje **Inject** a najdeš ho v sekci Input. Ten každou sekundu kontroluje, která soutěž probíhá. Podle dlouhého nebo krátkého zmáčknutí tlačítka zjistí, jestli se zrovna soutěží o nejchladnější nebo nejteplejší dech, a takovou soutěž pak vypíše.
+- První uzel se jmenuje **Inject** a najdete ho v sekci Input. Každou sekundu kontroluje, která soutěž právě běží: podle dlouhého nebo krátkého stisknutí tlačítka pozná, jestli se soutěží o nejchladnější, nebo nejžhavější dech, a tuto soutěž pak vypíše.
 
-![inject](./img/dragons-fire-level-2/image12.png)
+![Uzel Inject](./img/dragons-fire-level-2/image12.png)
 
-Nastav do něj opakování po jedné sekundě.
+Nastavte v něm opakování každou sekundu.
 
-![nastaveni intervalu](./img/dragons-fire-level-2/image5.png)
+![Nastavení intervalu](./img/dragons-fire-level-2/image5.png)
 
-- **vrchní Switch node** reaguje na krátké zmáčknutí tlačítka a obsahuje _is true_
+- **Horní uzel Switch** reaguje na krátké stisknutí tlačítka a obsahuje _is true_.
 
-![switch node](./img/dragons-fire-level-2/image7.png)
+![Uzel Switch](./img/dragons-fire-level-2/image7.png)
 
-- **spodní Switch node** reaguje na podržení tlačítka a taky obsahuje _is true_
+- **Dolní uzel Switch** reaguje na podržení tlačítka a také obsahuje _is true_.
 
-![spodni switch node](./img/dragons-fire-level-2/image2.png)
+![Dolní uzel Switch](./img/dragons-fire-level-2/image2.png)
 
-- všechny tři Change nody obsahují zprávu: horní obsahuje zprávu, která oznamuje **soutěž o nejžhavější dech**
+- Všechny tři uzly Change obsahují zprávu. Horní oznamuje **soutěž o nejžhavější dech**:
 
-![soutez o nejzhavejsi dech](./img/dragons-fire-level-2/image13.png)
+![Soutěž o nejžhavější dech](./img/dragons-fire-level-2/image13.png)
 
-prostřední zprávu, že **zrovna žádná soutěž neběží**
+Prostřední hlásí, že **zrovna neběží žádná soutěž**:
 
-![zprava soutez nebezi](./img/dragons-fire-level-2/image14.png)
+![Žádná soutěž neběží](./img/dragons-fire-level-2/image14.png)
 
-a spodní oznamuje **soutěž o nejmrazivější dech**
+Spodní oznamuje **soutěž o nejmrazivější dech**:
 
-![soutez o nejmrazivejsi dech](./img/dragons-fire-level-2/image10.png)
+![Soutěž o nejmrazivější dech](./img/dragons-fire-level-2/image10.png)
 
-- no a závěrečný **Text node** oznamuje typ soutěže
+- Závěrečný uzel **Text** oznamuje typ soutěže.
 
-## Nastav výchozí hodnoty
+## Nastavte výchozí hodnoty
 
-Drž si klobouk, frčíme do finále. Poslední flow nastaví **výchozí hodnoty**: 30 °C jako optimální teplotu, hoooodně chladnou nejnižší teplotu a hoooodně horkou nejvyšší teplotu. S těmito teplotami se pak skutečně naměřené teploty porovnávají.
+Držte si klobouky, jedeme do finále. Poslední flow nastaví **výchozí hodnoty**: 30 °C jako optimální teplotu, velmi nízkou výchozí hodnotu nejvyšší teploty a velmi vysokou výchozí hodnotu nejnižší teploty. S těmito hodnotami se pak porovnávají skutečně naměřené teploty.
 
-![timestamp nastaveni hodnot](./img/dragons-fire-level-2/image17.png)
+![Nastavení výchozích hodnot](./img/dragons-fire-level-2/image17.png)
 
 
-### Potřebuješ poradit, jak na to?
+### Potřebujete poradit, jak na to?
 
-- **Inject node** obsahuje zaškrtnuté políčko, se kterým se nastaví výchozí hodnoty jen malou chvilku po stisknutí tlačítka Deploy.
+- Uzel **Inject** má zaškrtnuté políčko, díky kterému se výchozí hodnoty nastaví chvilku po stisknutí tlačítka Deploy.
 
-![inject node](./img/dragons-fire-level-2/image11.png)
+![Uzel Inject](./img/dragons-fire-level-2/image11.png)
 
--  a **node Function** obsahuje javascript, který nastavuje výchozí hodnoty.
+-  Uzel **Function** obsahuje JavaScript, který výchozí hodnoty nastavuje.
 
 ```
 flow.set("contestantTemp", 30);
@@ -224,26 +224,26 @@ flow.set("coldestTemp", 100);
 return msg;
 ```
 
-## Podívej se na tu nádheru
+## Podívejte se na tu nádheru
 
-Takhle sexy teď vypadá tvoje plocha. Vychutnej si to, jako když jsi poprvé viděl moře… 🌊 Ještě chvilku… A ještě chvilku… A pak už jenom zmáčkni starýho dobrýho kamaráda **Deploy** vpravo nahoře.
+Takhle krásně teď vypadá vaše plocha. Vychutnejte si ten pohled jako první setkání s mořem… 🌊 Ještě chvilku… a ještě chvilku… A pak už jen stiskněte starého dobrého kamaráda **Deploy** vpravo nahoře.
 
 ![Deploy](./img/dragons-fire-level-2/image18.png)
 
 ## Jdeme soutěžit!
 
-1. Jak už sis asi všiml, krabička reaguje na dva typy zmáčknutí: při obyčejném krátkém se spustí **soutěž o nejteplejší dech**, při dlouhém podržení tlačítka se spustí **soutěž o nejmrazivější dech**.
+1. Jak jste si asi všimli, krabička rozlišuje dva typy stisknutí: krátké stisknutí spustí **soutěž o nejžhavější dech**, dlouhé podržení tlačítka **soutěž o nejmrazivější dech**.
 
 
 ### Jak soutěžit?
 
-- Otevři záložku **Dashboard** v Playgroundu.
-- Nejdřív napiš jméno soutěžícího,
-- potvrď ho pomocí **Enter**,
-- a potom **dlouhým nebo krátkým stisknutím tlačítka** zvol typ soutěže. 👇
-- Až soutěžící zkusí, co umí, **stejně dlouhým stisknutím tlačítka** aktuální soutěž ukončíš a uložíš.
-- U dalšího soutěžícího postupujte stejně, jedno po druhém.
+- Otevřete v Playgroundu záložku **Dashboard**.
+- Nejdřív napište jméno soutěžícího
+- a potvrďte ho klávesou **Enter**.
+- Potom **krátkým nebo dlouhým stisknutím tlačítka** zvolte typ soutěže. 👇
+- Až soutěžící předvede, co umí, **stejně dlouhým stisknutím tlačítka** soutěž ukončete a výsledek uložte.
+- U dalších soutěžících postupujte stejně, jeden po druhém.
 
-![soutezici](./img/dragons-fire-level-2/image16.png)
+![Soutěžící](./img/dragons-fire-level-2/image16.png)
 
-2. I u tohohle levelu obtížností platí, že **jakákoli pomoc je povolena**. Vyzkoušej, co ti nejvíc rozžhaví dech, a co ho naopak vymrazí. Držíme palce, draku! 💪
+2. I na této úrovni obtížnosti platí, že **jakákoli pomoc je povolená**. Vyzkoušejte, co vám nejvíc rozpálí dech a co ho naopak zmrazí. Držíme palce, draci! 💪

@@ -1,45 +1,45 @@
 ---
 slug: button-for-parents-upgrade
-title: Tlačítko pro rodiče - Vylepšení
+title: Vylepšené tlačítko pro rodiče
 ---
 import Image from '@theme/IdealImage';
 
 ## Úvod
 
-Máš už hotovou základní verzi tlačítka, kterým tě máma zavolá k večeři? Tak to gratulki. 👍 S tímhle vylepšením projekt posuneš dál – zpráva se změní podle denní doby, a ještě na ni můžeš zareagovat.
+Máte už hotovou základní verzi tlačítka, kterým vás máma zavolá k večeři? Gratulujeme. 👍 S tímto vylepšením posunete projekt dál: zpráva se bude měnit podle denní doby a navíc na ni můžete odpovědět.
 
-V tomhle projektu se naučíš **nastavit jinou zprávu na jiný čas**, odeslat speciální notifikaci **dlouhým podržením tlačítka** a naprogramovat možnost jednoduché **reakce**. 👌
+V tomto projektu se naučíte **nastavit různé zprávy pro různou denní dobu**, odeslat speciální notifikaci **dlouhým podržením tlačítka** a naprogramovat jednoduchou **odpověď**. 👌
 
-Základní verzi tohohle projektu najdeš tady: [Vyrob si IoT tlačítko, se kterým tě máma zavolá k večeři](/cs/projects/button-for-parents/).
+Základní verzi projektu najdete tady: [Vyrobte si IoT tlačítko, kterým vás máma zavolá k večeři](/cs/projects/button-for-parents/).
 
-Budeš potřebovat **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou, tedy [**Start setem**](https://www.hardwario.store/p/start-set/).
+Budete potřebovat **krabičku s tlačítkem** a **USB dongle**. Vystačíte si tedy se základní sadou HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/).
 
 
-## Připrav si Node-RED
+## Připravte si Node-RED
 
-1. Start set sestav a spáruj. Na Core Module potřebuješ zase ten starý známý firmware **bcf-radio-push-button**.
+1. Start Set sestavte a spárujte. Do modulu Core Module budete potřebovat opět starý známý firmware **bcf-radio-push-button**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-1.webp')} alt="Záložka Devices v Playgroundu se spárovaným zařízením pod aliasem push-button:0"/> </div> </div>
 
-## Nastav si notifikaci
+## Nastavte si notifikaci
 
-1. Nastav si flow pro notifikaci podobně jako u [základní verze tohohle projektu](/cs/projects/button-for-parents/).
+1. Flow pro notifikaci nastavte podobně jako u [základní verze projektu](/cs/projects/button-for-parents/).
 
-Na plochu polož **MQTT node** ze sekce Input, který má v Topicu počítání kliknutí. Vedle něj hoď **notifikaci na mobil** propojenou s Blynkem.
+Na plochu umístěte uzel **MQTT** ze sekce Input, který má v poli Topic počítání stisknutí. Vedle něj umístěte **notifikaci do mobilu** propojenou s Blynkem.
 
-❗ **Change nod zatím vynechej**, hned se dozvíš proč.
+❗ **Uzel Change zatím vynechte**, hned se dozvíte proč.
 
 Zatím to vypadá takto:
 
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-2.webp')} alt="MQTT uzel event-count a uzel notify pro Blynk umístěné na ploše, zatím nepropojené"/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-2.webp')} alt="Uzel MQTT event-count a uzel notify pro Blynk umístěné na ploše, zatím nepropojené"/> </div> </div>
 
-2. Mezi oba nody tentokrát vlož jiný node, do kterého zkopíruješ javascript. Najdeš ho jako **node Function** pod stejnojmennou sekcí.
+2. Mezi oba uzly tentokrát vložte jiný uzel, do kterého zkopírujete JavaScript. Najdete ho jako uzel **Function** ve stejnojmenné sekci.
 
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-3.webp')} alt="Function uzel zvýrazněný v paletě a umístěný mezi uzly MQTT a notify"/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-3.webp')} alt="Uzel Function zvýrazněný v paletě a umístěný mezi uzly MQTT a notify"/> </div> </div>
 
-3. Do tohohle nodu vložíš **kód, se kterým ovládneš čas**. ⏳ Nastavíš si, od kolika do kolika hodin ti má chodit zpráva o snídani 🍳, obědu 🍗 a večeři 🍕. Chytrý javascript, co?
+3. Do tohoto uzlu vložíte **kód, kterým ovládnete čas**. ⏳ Nastavíte v něm, od kolika do kolika hodin vám má chodit zpráva o snídani 🍳, obědě 🍗 a večeři 🍕. Chytrý JavaScript, že?
 
-Následující kód zkopíruj do řádku **Function** v nastavení nodu. Když se na kód podíváš, uvidíš, že některé části jsou barevně zvýrazněné. V nich nastavíš **dobu jídla** a **svoji vlastní zprávu**. Barevné části kódu si libovolně přizpůsob, jenom mysli na to, že čárky a háčky nebudou fungovat.
+Následující kód zkopírujte do řádku **Function** v nastavení uzlu. Když se na kód podíváte, uvidíte, že některé části jsou barevně zvýrazněné. V nich nastavíte **čas jídla** a **vlastní zprávu**. Barevné části kódu si upravte podle sebe, jen pamatujte, že háčky a čárky fungovat nebudou.
 
 ```
 var date = new Date();
@@ -64,19 +64,19 @@ else if(hour >= 17 && hour < 21)
 
 <div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-4.webp')} alt="Dialog Edit function node s JavaScriptem hlídajícím čas jídel na záložce On Message"/> </div> </div>
 
-4. Ve stejném okně ještě tenhle node pojmenuj, a to v řádku **Name**. Třeba jako _Nastavení času a zprávy_.
+4. Ve stejném okně uzel ještě pojmenujte v řádku **Name**, třeba _Nastavení času a zprávy_.
 
 <div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-5.webp')} alt="Dialog Edit function node s pojmenováním uzlu ve zvýrazněném poli Name"/> </div> </div>
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
-## Nastav dlouhé stisknutí tlačítka
+## Nastavte dlouhé stisknutí tlačítka
 
-1. A jedeme dál. Teď si nastav, co tlačítko provede, když ho rodiče **dlouho podrží**. To se totiž taky dá ovládnout. 👌
+1. A jedeme dál. Teď nastavte, co tlačítko udělá, když ho rodiče **dlouho podrží**. I to se dá ovládat. 👌
 
-Na plochu polož **další MQTT** node ze sekce Input.
+Na plochu umístěte **další uzel MQTT** ze sekce Input.
 
-2. Nastav do něj ale jiný **Topic**, díky kterému tlačítko zareaguje právě na dlouhé stisknutí.
+2. Nastavte v něm ale jiný **Topic**, díky kterému tlačítko zareaguje právě na dlouhé stisknutí.
 
 ```
 node/push-button:0/push-button/-/hold-count
@@ -84,33 +84,33 @@ node/push-button:0/push-button/-/hold-count
 
 <div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-6.webp')} alt="Dialog Edit mqtt in node se zvýrazněným polem Topic s tématem hold-count tlačítka"/> </div> </div>
 
-3. Za něj hoď **Change node**, který jsi používal už u basic verze. V něm nastav svoji vlastní zprávu, která se pošle, když rodiče tlačítko dlouho podrží. Dá se to využít třeba na zavolání k čemukoliv jinému než k jídlu 🙂 Takže třeba: _Pojd dolu, lenochu!_
+3. Za něj umístěte uzel **Change**, který už znáte ze základní verze. Nastavte v něm vlastní zprávu, která se odešle, když rodiče tlačítko dlouho podrží. Hodí se k zavolání kvůli čemukoli jinému než jídlu 🙂, třeba: _Pojd dolu, lenochu!_
 
 <div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-7.webp')} alt="Dialog Edit change node nastavující msg.payload na zprávu Pojd dolu, lenochu!"/> </div> </div>
 
-4. Za tenhle node hoď ještě jeden, kterým zprávu odklikneš. Navíc ti vyskočí nejenom v mobilu, ale i na počítači.
+4. Za tento uzel přidejte ještě jeden, ve kterém zprávu odkliknete. Zpráva vám navíc vyskočí nejen v mobilu, ale i na počítači.
 
-Je to **node Notification** pod sekcí Dashboard.
+Je to uzel **Notification** v sekci Dashboard.
 
 <div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-8.webp')} alt="Uzel notification pojmenovaný show notification umístěný za uzlem set msg.payload ve flow držení tlačítka"/> </div> </div>
 
-5. Uvnitř vyber na řádku **Layout** OK / Cancel Dialog a potvrď tlačítkem **Done**.
+5. V uzlu vyberte v řádku **Layout** možnost OK / Cancel Dialog a potvrďte tlačítkem **Done**.
 
 <div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-9.webp')} alt="Dialog Edit notification node s Layout nastaveným na OK / Cancel Dialog"/> </div> </div>
 
-6. Všechno propoj podle obrázku a zmáčkni **Deploy**.
+6. Všechno propojte podle obrázku a stiskněte **Deploy**.
 
-<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-10.webp')} alt="Obě flow tlačítka propojená s uzly notify a show dialog, se zvýrazněným tlačítkem Deploy"/> </div> </div>
+<div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-10.webp')} alt="Oba flow tlačítka propojené s uzly notify a show dialog, se zvýrazněným tlačítkem Deploy"/> </div> </div>
 
 ## Akce!
 
-1. Stejně jako předtím, vylepšenou krabičku **dej do správy mamce a taťkovi**.
-2. Nauč je, že **krátkým stisknutím** tě zavolají k jídlu…
+1. Stejně jako minule svěřte vylepšenou krabičku **mámě a tátovi**.
+2. Vysvětlete jim, že **krátkým stisknutím** vás zavolají k jídlu…
 
-![Action](./img/button-for-parents-upgrade/image12.png)
+![Notifikace z tlačítka v aplikaci Blynk IoT](./img/button-for-parents-upgrade/image12.png)
 
-3. A pokud tě chtějí zavolat kvůli čemukoli jinému, musí tlačítko **zmáčknout déle**. 👇
+3. …a pokud vás chtějí zavolat kvůli čemukoli jinému, musí tlačítko **podržet déle**. 👇
 
-![Action](./img/button-for-parents-upgrade/image13.png)
+![Notifikace z tlačítka v aplikaci Blynk IoT](./img/button-for-parents-upgrade/image13.png)
 
-Aspoň tě nezklame, když na talíř nedostaneš jídlo, ale rodinnou diskuzi. No fuj, jiné menu, prosím!
+Aspoň vás nezklame, když místo jídla dostanete na talíř rodinnou poradu. Fuj, jiné menu, prosím!

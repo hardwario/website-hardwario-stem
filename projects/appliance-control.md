@@ -7,7 +7,7 @@ title: Appliance Control
 
 With the Control kit, you can use the integrated power relay (230V/16A) to control household appliances such as a lamp, fan, or even a water pump. You can also use the Control kit to manage a digital LED strip.
 
-n this project, we’ll use the relay to control a desk lamp and display the surrounding temperature using a programmable LED strip. This setup is perfect for smart lighting at home, in the office, or even for a Christmas tree.
+In this project, we’ll use the relay to control a desk lamp and display the surrounding temperature using a programmable LED strip. This setup is perfect for smart lighting at home, in the office, or even for a Christmas tree.
 
 The kit includes 3 modules, a power adapter, a 3D-printed case, mounting rubber bands, and a 72-pixel LED strip.
 

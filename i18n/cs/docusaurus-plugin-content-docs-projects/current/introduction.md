@@ -8,6 +8,6 @@ import Image from '@theme/IdealImage';
 
 # Projekty a návody TOWER
 
-Prozkoumejte praktické projekty, které propojují moduly TOWER, senzory, sub-GHz rádio, MQTT, Node-RED a externí IoT služby. Každý návod má konkrétní výsledek a popisuje kroky potřebné k jeho zopakování.
+Prozkoumejte praktické projekty, které propojují moduly TOWER, senzory, sub-GHz rádio, MQTT, Node-RED a externí služby IoT. Každý návod vede ke konkrétnímu výsledku a popisuje všechny kroky, jak ho zopakovat.
 
-Vyberte si téma v [přehledu projektů](projects-overview.md), nebo pokračujte dalším návodem v postranní navigaci.
+V [přehledu projektů](projects-overview.md) si vyberte projekt podle tématu, nebo pokračujte dalším návodem v postranním menu.

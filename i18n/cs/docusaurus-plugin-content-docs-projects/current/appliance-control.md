@@ -5,69 +5,68 @@ title: Ovládání spotřebičů
 
 ## Úvod
 
-Se sadou Control dokážete díky integrovanému silovému relé (230V/16A) ovládat domácí spotřebiče, jako je například lampa, větrák nebo třeba vodní čerpadlo. Sadou Control lze také řídit digitální LED pásek. 
+Se sadou Control a jejím vestavěným silovým relé (230 V / 16 A) ovládáte domácí spotřebiče, třeba lampu, větrák nebo i vodní čerpadlo. Sada Control umí řídit také digitální LED pásek.
 
-V tomto projektu budeme s pomocí relé ovládat stolní lampu a pomocí programovatelného LED pásku zobrazovat okolní teplotu. Projekt využijete pro chytré osvětlení doma, v kanceláři nebo pro vánoční stromek. 
+V tomto projektu budeme pomocí relé ovládat stolní lampu a na programovatelném LED pásku zobrazovat okolní teplotu. Hodí se to pro chytré osvětlení doma, v kanceláři nebo třeba na vánočním stromku.
 
-Součástí sady jsou 3 moduly, adaptér do zásuvky, 3D tištěná krabicka, upevňovací gumičky a LED pásek s 72 pixely. 
+Sada obsahuje 3 moduly, napájecí adaptér, krabičku vytištěnou na 3D tiskárně, upevňovací gumičky a LED pásek se 72 pixely.
 
-**Součástí sady není Radio Dongle, který budete potřebovat pro vytvoření sítě.** 
+**Součástí sady není Radio Dongle, který potřebujete k vytvoření sítě.**
 
-Zkontrolujte si, že máte vše potřebné pro tento projekt:
+Zkontrolujte si, že máte vše, co k projektu potřebujete:
 
 ## Sestavte sadu
 
-1. Nasaďte červený **Core Module** na žlutý **Power Module**. Pro dodržení správné orientace je jeden pin na modulech vždy vynechán a jedna díra na konektoru zaslepená. Buďte při nasazování opatrní, ať se piny nezlomí. Ohnuté piny však můžete snadno narovnat.
+1. Nasaďte červený **Core Module** na žlutý **Power Module**. Aby moduly nešly nasadit obráceně, jeden pin chybí a jeden otvor v konektoru je zaslepený. Při nasazování buďte opatrní, ať piny neohnete. Ohnuté piny ale snadno narovnáte.
 2. Černý **Cover Module** nasaďte na červený **Core Module**.
-3. Celou sestavu vložte do **krabičky vytištěné na 3D tiskárně** a zajistěte **gumičkami**.
-4. Zapojte přiložený **LED pásek** do konektoru **Power Modulu** ve spodní části sestavené krabičky.
-5. Připravte si **síťový adaptér**, ale zatím jej nezapojujte.
+3. Celou sestavu vložte do **krabičky vytištěné na 3D tiskárně** a zajistěte ji **gumičkami**.
+4. Přiložený **LED pásek** zapojte do konektoru modulu **Power Module** ve spodní části krabičky.
+5. Připravte si **napájecí adaptér**, ale zatím ho nezapojujte.
 
 
-## Spusťte vlastní radiovou síť
+## Spusťte vlastní rádiovou síť
 
-Pokud již máte **Radio Dongle** z jiné sady, můžete tento krok přeskočit. 
+Pokud už máte **Radio Dongle** z jiné sady, můžete tento krok přeskočit.
 
-1. Otevřete na vašem počítači aplikaci HARDWARIO Plaground. Pokud ji ještě nemáte, otevřete  si [tento](https://docs.hardwario.com/tower/desktop-programming/playground-installation/#download) návod a postupujte podle něho. 
+1. Otevřete na počítači aplikaci HARDWARIO Playground. Pokud ji ještě nemáte, nainstalujte si ji podle [tohoto](https://docs.hardwario.com/tower/desktop-programming/playground-installation/#download) návodu.
 2. V Playgroundu otevřete záložku **Devices**.
-3. Vložte váš USB Radio Dongle do počítače. Objeví se vám v Playgroundu v roletce **Radio Dongle** nahoře.
-4. Klikněte na **Connect**, tím se vám automaticky spustí radiová síť. 
+3. Zapojte USB Radio Dongle do počítače. Objeví se nahoře v rozbalovacím seznamu **Radio Dongle**.
+4. Klikněte na **Connect** a rádiová síť se automaticky spustí.
 
-## Připojte vaši Sadu Start
+## Připojte sadu Control
 
-1. Pokud máte jen sadu Control a v seznamu devices (v Playgroundu) vidíte jedno zařízení Push Button, tak ho můžete smazat. Pokud máte i jinou sadu a chcete pracovat i s touto, nic nemažte.
-2. Klikněte v Playground na tlačítko **Start pairing**.
-4. Vezměte do ruky konektor pro sadu Control a zapojte jej do krabičky. Pote zapojte napájecí adaptér do zásuvky.  
-5. Po úspěšném spárování, byste měli mezi zařízeními vidět zařízení s názvem **Power Control**.
+1. Pokud máte jen sadu Control a v seznamu zařízení (v Playgroundu) vidíte zařízení Push Button, můžete ho smazat. Pokud chcete používat i jiné sady, nic nemažte.
+2. V Playgroundu klikněte na tlačítko **Start pairing**.
+3. Vezměte konektor sady Control a zapojte ho do krabičky. Pak zapojte napájecí adaptér do zásuvky.
+4. Po úspěšném spárování by se v seznamu mělo objevit zařízení s názvem **Power Control**.
 
-## Otestujte si komunikaci
+## Otestujte komunikaci
 
-Jak už je uvedeno výše, sestava umí kromě zprávy o stisknutí tlačítka posílat také informaci o teplotě a poloze orientaci. Jednoduše si vyzkoušejte, jaké zprávy zařízení posílá:
+Jak už jsme zmínili, zařízení umí kromě zprávy o stisknutí tlačítka posílat také údaje o teplotě a orientaci. Vyzkoušejte, jaké zprávy posílá:
 
-1. Otevřete v Playgroundu záložku Messages.
-2. Na obrazovce uvidíte seznam zpráv, které vaše tlačítko odeslalo přes Radio Dongle do počítače.
-3. Stiskněte několikrát tlačítko a na obrazovce uvidíte, jak se postupně plní počítadlo stisků.
-4. Zkuste na zařízení dýchnout teplý vzduch z úst. Vzroste teplota a ta se vám objeví mezi zprávami.
-5. Poslední zprávou je informace o orientaci zařízení. Ta funguje jako klasická kostka, zkuste zařízením otáčet a zjistěte, kdy se objeví pozice 1, 2, 3...6.
+1. Otevřete v Playgroundu záložku **Messages**.
+2. Uvidíte seznam zpráv, které vaše tlačítko poslalo přes Radio Dongle do počítače.
+3. Několikrát stiskněte tlačítko a sledujte, jak roste počet stisknutí.
+4. Dýchněte na zařízení teplý vzduch: teplota stoupne a objeví se mezi zprávami.
+5. Poslední typ zprávy je orientace zařízení. Funguje jako hrací kostka: zkuste zařízením otáčet a zjistěte, kdy se objeví pozice 1, 2, 3…6.
 
-![Rozjeď to v Node-RED](./img/appliance-control/image3.png "Rozjeď to v Node-RED")
+![Node-RED](./img/appliance-control/image3.png "Node-RED")
 
 ## První projekt
 
-V mnoha tutoriálech je prvním projektem Hello World! Společně zvládmene něco lepšího. Zprávy o teplotě zobrazíme v grafu!
+V mnoha návodech je prvním projektem „Hello World!“. My zvládneme něco zajímavějšího: zobrazíme teplotu v grafu!
 
-1. V Playgroundu si otevřete záložku **Functions**.
-2. Jde o vloženou aplikaci **Node-RED**. Existuje k ní skvělá dokumentace, podpora i obrovská komunita uživatelů. Funguje na principu **vizuálního programování**: na plochu si přidáváte funkční bloky, kterým říkáme **nody**, a jejich spojením **vytvoříte funkční aplikaci** (flow).
-3. Smažte dva nody, které máte na ploše.
-4. Začneme přidáním nodu **mqtt in**. Najdete jej vlevo v sekci **network**. Přetáhněte jej na plochu a dvakrát na něj klikněte.
-5. Otevře se vám nastavovací okno nodu, ve kterém potřebujeme vyplnit pole **topic**. To určí, jaké zprávy chceme v této flow přijímat.
-6. Vraťte se v Playgroundu do záložky **Messages** a najděte zprávu s teplotou. Kromě hodnoty teploty vidíte vedle i identifikaci zprávy, vypadá takto: `node/push-button:0/thermometer/0:1/temperature` a jedná se o **topic**. 
-7. Zkopírujte si tento topic, přejděte zpět do sekce **Functions**, vložte jej do pole **Topic** a uložte nastavení tlačítkem **Done**.
-8. Nyní vložte na plochu node **Gauge**, ten najdete mezi nody v sekci **dashboard**.
-9. Dvakrát na něj klikněte, ať se otevře jeho nastavení. Nyní změníme jen hodnotu **max** v sekci **Range** na **50**. Uložte nastavení tlačítkem **Done**.
-10. Nyní oba nody propojte. Je to snadné, stačí stisknout šedý čtverec jednoho nodu a myší jej natáhnout k šedému čtverci druhého nodu.
-11. Tlačítkem **Deploy** vpravo nahoře nyní můžete spustit aplikaci a přepnout se do záložky **Dashboard** v Playgroundu.
-12. Dýchněte na zařízení, abyste vyvolali okamžitou zprávu o teplotě a IoT! V grafu uvidíte aktuální teplotu.
+1. V Playgroundu otevřete záložku **Functions**.
+2. Je to vestavěná aplikace **Node-RED**. Má skvělou dokumentaci, podporu i velkou komunitu uživatelů. Funguje na principu **vizuálního programování**: na plochu přetahujete bloky, kterým se říká **uzly** (nodes), a jejich propojením **vytvoříte fungující aplikaci** (flow).
+3. Smažte z plochy dva výchozí uzly.
+4. Začněte uzlem **mqtt in**, který najdete vlevo v sekci **network**. Přetáhněte ho na plochu a dvakrát na něj klikněte.
+5. Otevře se okno s nastavením uzlu. Vyplňte v něm pole **Topic**, které určuje, jaké zprávy bude tento flow přijímat.
+6. Vraťte se v Playgroundu na záložku **Messages** a najděte zprávu s teplotou. Vedle hodnoty teploty uvidíte identifikátor zprávy, například `node/push-button:0/thermometer/0:1/temperature`. To je **topic**.
+7. Zkopírujte tento topic, vraťte se na záložku **Functions**, vložte ho do pole **Topic** a klikněte na **Done**.
+8. Teď přidejte uzel **Gauge** ze sekce **dashboard**.
+9. Dvojklikem otevřete jeho nastavení. V sekci **Range** změňte hodnotu **max** na **50** a klikněte na **Done**.
+10. Oba uzly propojte. Stačí chytit myší šedý čtvereček jednoho uzlu a táhnout ho k druhému.
+11. Kliknutím na **Deploy** vpravo nahoře aplikaci spustíte. Pak se v Playgroundu přepněte na záložku **Dashboard**.
+12. Dýchněte na zařízení, tím vyvoláte okamžitou zprávu o teplotě. V grafu uvidíte aktuální teplotu.
 
-**Tip na další experiment:** Zkuste vymyslet, jak na dashboardu zobrazit i informaci o orientaci zařízení a počtu stisknutí tlačítka, možnosti dashboardu v Playgroundu jsou neomezené!
-
+**Tip na další experiment:** Zkuste na dashboardu zobrazit i orientaci zařízení a počet stisknutí tlačítka. Možnosti Playgroundu jsou neomezené!

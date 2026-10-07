@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 Whether you have an iguana, turtle, snake or gecko, you definitely want them to be as comfortable as possible at home. 👌🦎 Monitor the climate in their terrarium and make sure your green buddy has ideal living conditions.
 
 
-Under this project, you will learn **how to measure four climate values and display them in graphs** \- temperature, humidity, luminosity and air pressure. Who knows? Your green buddies may reward you with a few the stories about their dinosaur ancestors! 🦖 Or something like that.
+In this project, you will learn **how to measure four climate values and display them in graphs**: temperature, humidity, luminosity and air pressure. Who knows? Your green buddies may reward you with a few stories about their dinosaur ancestors! 🦖 Or something like that.
 
 If you already have the Start Set, you will only need the [Climate Module](https://www.hardwario.store/p/climate-module/). Alternatively, the [Clime Set](https://www.hardwario.store/p/clime-set) contains **all the equipment** you need.
 
@@ -55,7 +55,7 @@ In the new **Gauge node** set the **Range** to 0 to 100 and enter % in the **Val
 
 8. Now we go to the light pointer. 💡 The procedure is exactly the same: one **MQTT node** and one **Gauge node**.
 
-9. Copy the following Topic into the **MQTT node**: node/climate-monitor:0/lux-meter/0:0/illuminance. In the **Gauge node**, set the time range to 0 to 10,000 and enter light unit lx (so-called lux) in the **Value format** line. As before, you can choose the name and color again.
+9. Copy the following Topic into the **MQTT node**: node/climate-monitor:0/lux-meter/0:0/illuminance. In the **Gauge node**, set the range to 0 to 10,000 and enter light unit lx (so-called lux) in the **Value format** line. As before, you can choose the name and color again.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-5.webp')} alt="Illuminance MQTT node with its Gauge highlighted; edit dialog shows lx value format and range 0 to 10000"/> </div> </div>
 
@@ -74,9 +74,9 @@ In the new **Gauge**, add the 0 to 10,000 range again. This time you do not have
 
 Under the Gauge nodes for humidity, luminosity and pressure, add one **Chart node** from under the Dashboard section.
 
-13. Gradually click through all three nodes and name them in **Label** just like the adjacent Gauge nodes. For the**X-axis** always set what time interval you want to display the results for (every hour should already be set automatically there).
+13. Gradually click through all three nodes and name them in **Label** just like the adjacent Gauge nodes. For the **X-axis** always set what time interval you want to display the results for (every hour should already be set automatically there).
 
-For the **Y-axis** fill in the same ranges that you entered for the adjacent Gauges, i.e. for humidity 0 to 100, for temperature and luminance 0 to 10,000.
+For the **Y-axis** fill in the same ranges that you entered for the adjacent Gauges, i.e. for humidity 0 to 100, for pressure and luminance 0 to 10,000.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-7.webp')} alt="Edit chart node dialog with Label, X-axis interval, and Y-axis range highlighted, and three chart nodes in the flow"/> </div> </div>
 Done! Before you start measuring, add one more clever feature: a virtual guard.
@@ -86,13 +86,13 @@ Done! Before you start measuring, add one more clever feature: a virtual guard.
 The virtual guard will alert you whenever the temperature in your lizard´s terrarium is not right. 🐍 You will need several nodes to build it.
 
 1. Above everything you've created, add a **Numeric node** from under the Dashboard section (123 is written on it).
-Click on it and fill in the **Range** and ** Value format** lines just like for the first Gauge. If you can't remember, check out the screenshot below. Do not forget to name the node in the Label, e.g. Ideal temperature.
+Click on it and fill in the **Range** and **Value format** lines just like for the first Gauge. If you can't remember, check out the screenshot below. Do not forget to name the node in the Label, e.g. Ideal temperature.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-8.webp')} alt="Numeric node on the canvas; edit dialog with Label, value format with degrees Celsius, and range 0 to 40 highlighted"/> </div> </div>
 
 2. Add another node next to it, but this time a **Change node** from under the Function section.
 Click on it and set it to **flow.optimal** and **msg.payload** (as shown in the screenshot).
-**What this is for**: These two nodes (Numeric and Change) allow you to set the ideal temperature; the guard will alert you if it is exceeded. 👮 The Numeric node is used to determine the optimal temperature in the Dashboard and the Change node for setting it to the flow. optimal. Other nodes, which we will now add, work with it.
+**What this is for**: These two nodes (Numeric and Change) allow you to set the ideal temperature; the guard will alert you if it is exceeded. 👮 The Numeric node is used to determine the optimal temperature in the Dashboard and the Change node for setting it to flow.optimal. Other nodes, which we will now add, work with it.
 
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-9.webp')} alt="Change node next to the Numeric node; edit dialog with rule Set flow.optimal to msg.payload highlighted"/> </div> </div>
 
@@ -134,4 +134,4 @@ If you want to set the **Switch node** exactly according to our screenshot, then
 <div class="container"> <div class="row"> <Image img={require('./img/iguana-terrarium-monitor/iguana-terrarium-monitor-16.webp')} alt="Dashboard detail: the optimal temperature setting with arrows and the temperature status message highlighted"/> </div> </div>
 
 3. Check if your buddy's terrarium is at the ideal temperature, and monitor **increases and decreases** in pressure, luminosity and humidity.
-4. If the measured temperature is too different from the one in the terrarium, go to a pet store or your vet to make sure your reptile is **fit, healthy and happy**. 👌
+4. If the measured temperature differs too much from the ideal one, go to a pet store or your vet to make sure your reptile is **fit, healthy and happy**. 👌

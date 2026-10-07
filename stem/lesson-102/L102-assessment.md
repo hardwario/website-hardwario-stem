@@ -1,7 +1,7 @@
 ---
 slug: hardwario-tower-iot-kit-assessment
 title: Assessment
-title_meta: "Assessment (L102: IoT kits HARDWARIO TOWER)"
+title_meta: "Assessment (L102: HARDWARIO TOWER IoT Kit)"
 ---
 import Image from '@theme/IdealImage';
 

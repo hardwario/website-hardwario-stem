@@ -1,7 +1,8 @@
 ---
 slug: hardwario-tower-iot-kit
-title: 'L102: IoT kits HARDWARIO TOWER'
+title: 'L102: HARDWARIO TOWER IoT Kit'
+description: "A lesson on the HARDWARIO TOWER IoT kit and the HARDWARIO Playground app: students build sample sets and create their first Node-RED flow."
 ---
 import Image from '@theme/IdealImage';
 
-We will get acquainted with the TOWER IoT kit and also the HARDWARIO Playground application, which has a visual programming environment Node-RED
+We will get to know the TOWER IoT kit and the HARDWARIO Playground application, which includes the Node-RED visual programming environment.

@@ -6,13 +6,27 @@ import Image from '@theme/IdealImage';
 
 # Bezdrátový půdní senzor
 
-Tento dokument vás provede projektem **Bezdrátový půdní senzor**. Budete moci zobrazit, ukládat a analyzovat úroveň vlhkosti a teplotu v nástroji **Node-RED** a ve vizualizačním nástroji **Grafana**.
+Tento návod vás provede projektem **Bezdrátový půdní senzor**. Vlhkost půdy a teplotu budete zobrazovat, ukládat a analyzovat v prostředí **Node-RED** a ve vizualizačním nástroji **Grafana**.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-project-image.webp')} alt="Projekt půdního čidla: elektronika ve venkovní krabičce, sonda v záhonu a budíky s teplotou, vlhkostí a baterií"/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-project-image.webp')} alt="Projekt půdního senzoru: elektronika ve venkovní krabičce, sonda v záhonu a budíky s teplotou, vlhkostí a baterií"/>
   </div>
 </div>
+
+## Videonávod
+
+<div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
+  <iframe
+   src="https://www.youtube.com/embed/6kU-_ldaGOw?si=2kawboGcP9ABW9Cl" title="YouTube video player"
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+    referrerPolicy="strict-origin-when-cross-origin"
+  />
+</div>
+
 
 ## Blokové schéma
 
@@ -25,7 +39,7 @@ Tento dokument vás provede projektem **Bezdrátový půdní senzor**. Budete mo
 
 ## Požadavky
 
-* Buď [**Sadu Soil Sensor**](https://www.hardwario.store/cz/p/soil-sensor-set), nebo jednotlivé komponenty:
+* Buď [**Sada Soil Sensor**](https://www.hardwario.store/cz/p/soil-sensor-set), nebo jednotlivé komponenty:
   
   * 1x [**Soil Sensor**](https://www.hardwario.store/cz/p/soil-sensor)
   * 1x [**Sensor Module**](https://www.hardwario.store/cz/p/sensor-module)
@@ -33,77 +47,77 @@ Tento dokument vás provede projektem **Bezdrátový půdní senzor**. Budete mo
   * 1x [**Battery Module**](https://www.hardwario.store/cz/p/battery-module)
   * 1x [**Radio Dongle**](https://www.hardwario.store/cz/p/radio-dongle)
 
-* Budete potřebovat **Raspberry Pi** s nainstalovanou distribucí **HARDWARIO Raspbian**. Podívejte se na dokument [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
+* Budete potřebovat **Raspberry Pi** s nainstalovanou distribucí **HARDWARIO Raspbian**. Postup najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
 
-Naměřená data budou ukládána a vizualizována v Grafaně na [**Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/login-guide). Je také možné použít váš počítač. Stačí postupovat podle dokumentu [**Quick Start Guide**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
+Naměřená data se budou ukládat a zobrazovat v Grafaně na [**Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/login-guide). Můžete použít i svůj počítač, stačí postupovat podle dokumentu [**Rychlý start s firmwarem**](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
 
 ## Připojení k Raspberry Pi
 
-Veškerá konfigurace, služby a nahrávání firmwaru budou prováděny na **Raspberry Pi**. Váš počítač slouží pouze k připojení na **SSH server Raspberry Pi** a na webové rozhraní **Grafana**.
+Konfiguraci, služby i nahrávání firmwaru budete dělat na **Raspberry Pi**. Počítač vám poslouží jen k připojení k **SSH serveru Raspberry Pi** a k webovému rozhraní **Grafana**.
 
-Postupujte podle dokumentu [**Přihlášení k Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/login-guide/) kde najdete návod, jak zjistit **IP adresu Raspberry Pi** ve vaší síti a jak se připojit k **SSH serveru**.
+Postupujte podle dokumentu [**Přihlášení k Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/login-guide/), kde najdete návod, jak v síti zjistit **IP adresu Raspberry Pi** a připojit se k **SSH serveru**.
 
 ## Nahrání firmwaru
 
-V tomto postupu použijeme **HARDWARIO Firmware Tool** pro nahrání firmwaru do **Core Modulu**. Připojení a nahrání firmwaru proběhne pomocí **Raspberry Pi**.
+Firmware nahrajete do modulu **Core Module** nástrojem **HARDWARIO Firmware Tool**. Modul připojíte k **Raspberry Pi** a firmware nahrajete z něj.
 
-Nyní je čas nahrát firmware do **Core Modulu**.
+Teď nahrajte firmware do modulu **Core Module**.
 
-#### Krok 1: Připojte Micro USB kabel k **Core Modulu** a k **Raspberry Pi**
+#### Krok 1: Připojte modul **Core Module** kabelem Micro USB k **Raspberry Pi**
 
-#### Krok 2: Nahrajte firmware do **Core Modulu**:
+#### Krok 2: Nahrajte firmware do modulu **Core Module**:
 
 :::info
 
-Možná budete chtít aktualizovat dostupné firmwary pomocí příkazu `bcf update`, pokud od instalace prostředí Playground uplynula delší doba.
+Pokud od instalace Playgroundu uplynula delší doba, možná budete chtít aktualizovat dostupné firmwary příkazem `bcf update`.
 
 :::
 
 :::warning
 
-**Programování Core Module R1 a R2**
-Pro rozdíly v programování staršího **Core Module 1** a novějšího **Core Module 2** si prosím přečtěte dokument **Srovnání Core Module R1 a R2** v sekci **Hardware**.
+**Nahrávání firmwaru do Core Module R1 a R2**
+Rozdíly v nahrávání firmwaru do staršího **Core Module 1** a novějšího **Core Module 2** popisuje **srovnání Core Module R1 a R2** v sekci **Hardware**.
 
 :::
 
-Spusťte aplikaci **HARDWARIO Playground**. V záložce Firmware vyberte a nahrajte firmware `bcf-radio-soil-sensor` do **Core Module**:
+Spusťte **HARDWARIO Playground**, na záložce Firmware vyberte firmware `bcf-radio-soil-sensor` a nahrajte ho do modulu **Core Module**:
 
-#### Krok 3: Odpojte kabel Micro USB od **Core Module** a **Raspberry Pi**
+#### Krok 3: Odpojte kabel Micro USB od modulu **Core Module** a od **Raspberry Pi**
 
 
 :::success
 
-V tomto okamžiku je váš firmware úspěšně nahrán.
+Firmware je úspěšně nahraný.
 
 :::
 
 ## Sestavení hardwaru
 
-#### Krok 1: Začněte s [**Battery Module**](https://www.hardwario.store/cz/p/battery-module)
+#### Krok 1: Začněte modulem [**Battery Module**](https://www.hardwario.store/cz/p/battery-module)
 
 :::warning
 
-Ujistěte se, že **Battery Module** nemá vložené žádné baterie.
+Zkontrolujte, že v modulu **Battery Module** nejsou vložené baterie.
 
 :::
 
-#### Krok 2: Připojte [**Core Module**](https://www.hardwario.store/cz/p/core-module) na vrchní část [**Battery Module**](https://www.hardwario.store/cz/p/battery-module).
+#### Krok 2: Nasaďte [**Core Module**](https://www.hardwario.store/cz/p/core-module) na [**Battery Module**](https://www.hardwario.store/cz/p/battery-module)
 
-#### Krok 3: Připojte [**Sensor Module**](https://www.hardwario.store/cz/p/sensor-module) na vrchní část [**Core Module**](https://www.hardwario.store/cz/p/core-module).
+#### Krok 3: Nasaďte [**Sensor Module**](https://www.hardwario.store/cz/p/sensor-module) na [**Core Module**](https://www.hardwario.store/cz/p/core-module)
 
-#### Krok 4: Připojte konektor [**Soil Sensor**](https://www.hardwario.store/cz/p/soil-sensor) do [**Sensor Module**](https://www.hardwario.store/cz/p/sensor-module).
+#### Krok 4: Zapojte konektor senzoru [**Soil Sensor**](https://www.hardwario.store/cz/p/soil-sensor) do modulu [**Sensor Module**](https://www.hardwario.store/cz/p/sensor-module)
 
-## Párování
+## Rádiové párování
 
-V této části vytvoříme rádiové spojení mezi **Radio Dongle** a **Radio Climate Monitor**.
+V této části navážeme rádiové spojení mezi **Radio Dongle** a sestavou **Radio Soil Sensor**.
 
-Postupujte podle následujících kroků v prostředí **Node-RED**:
+V prostředí **Node-RED** postupujte takto:
 
 #### Krok 1: Klikněte na tlačítko **Start node pairing**
 
 :::warning
 
-Ujistěte se, že po stisknutí tlačítka **Start node pairing** se v pravém panelu **debug** zobrazí dvě zprávy. Jedna je příkaz a druhá, obsahující **„start“**, je odpověď od **Radio Dongle**.
+Zkontrolujte, že se po stisknutí tlačítka **Start node pairing** na záložce **debug** vpravo zobrazí dvě zprávy: první je příkaz, druhá se slovem **„start“** je odpověď donglu **Radio Dongle**.
 
 :::
 
@@ -113,15 +127,15 @@ Ujistěte se, že po stisknutí tlačítka **Start node pairing** se v pravém p
   </div>
 </div>
 
-#### Krok 2: Sestavení
+#### Krok 2: Zapněte sestavu
 
-Vložte baterie do **Soil Sensor Sady**, čímž odešlete požadavek na párování (měli byste také vidět červenou LED diodu na **Core Module**, která bude přibližně 2 sekundy svítit).
+Vložte baterie do sestavy **Radio Soil Sensor**, čímž odešlete požadavek na párování (červená LED na modulu **Core Module** by se také měla asi na 2 sekundy rozsvítit).
 
-V panelu **debug v Node-RED** se zobrazí zpráva s názvem a verzí firmwaru nově spárovaného modulu.
+Na záložce **debug** v **Node-RED** se zobrazí zpráva s názvem a verzí firmwaru nově spárovaného modulu.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-paired-mqtt-message.webp')} alt="Záložka debug s informací o firmwaru spárovaného půdního čidla a prvními zprávami o vlhkosti a teplotě"/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-node-red-gw-pair-paired-mqtt-message.webp')} alt="Záložka debug s informací o firmwaru spárovaného půdního senzoru a prvními zprávami o vlhkosti a teplotě"/>
   </div>
 </div>
 
@@ -135,70 +149,70 @@ V panelu **debug v Node-RED** se zobrazí zpráva s názvem a verzí firmwaru no
 
 :::success
 
-V tomto bodě jste úspěšně navázali bezdrátové spojení mezi node (**Soil Sensor**) a bránou (**Radio Dongle**).
+Teď máte navázané rádiové spojení mezi uzlem (**Radio Soil Sensor**) a bránou (**Radio Dongle**).
 
 :::
 
 ## Test komunikace
 
-Postupujte podle následujících kroků v prostředí **Node-RED**:
+V prostředí **Node-RED** postupujte takto:
 
-#### Krok 1: Přepněte se na kartu debug vpravo
+#### Krok 1: Přepněte se na záložku **debug** vpravo
 
 #### Krok 2: Otestujte přenos
 
-Začněte dýchat na teplotní senzor připojený k **Soil Sensor** modulu. Tím způsobíte změnu teploty, která vyvolá bezdrátový přenos dat.
+Dýchněte na teplotní čidlo senzoru **Soil Sensor**. Změna teploty spustí rádiový přenos.
 
-Měli byste pak vidět podobné zprávy:
+Pak byste měli vidět podobné zprávy:
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-radio-test.webp')} alt="Záložka debug se zvýrazněnými příchozími MQTT zprávami o teplotě a vlhkosti z půdního čidla"/>
+    <Image img={require('./img/radio-soil-sensor/radio-soil-sensor-radio-test.webp')} alt="Záložka debug se zvýrazněnými příchozími zprávami MQTT o teplotě a vlhkosti z půdního senzoru"/>
   </div>
 </div><br></br>
 
 
 :::success
 
-V tomto bodě máte ověřenou rádiovou komunikaci.
+Teď máte ověřenou rádiovou komunikaci.
 
 :::
 
-## Enclosure
+## Krabička
 
-Volitelně vložte sestavené zařízení do vhodného krytu, pokud jej máte k dispozici.
+Pokud máte vhodnou krabičku, můžete do ní sestavu vložit.
 
 :::info
 
-Více informací o krytech najdete v dokumentu [**Enclosures**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
+Více o krabičkách najdete v dokumentu [**Krabičky**](https://docs.hardwario.com/chester/hardware-description/enclosures/).
 
 :::
 
 ## Integrace s Grafanou
 
-Nyní, když jsme sestavili naši sadu, můžeme začít se základní integrací s **Grafanou**.
+Sada je sestavená, takže můžeme začít se základním propojením s **Grafanou**.
 
-#### Krok 1: Instalace závislostí
+#### Krok 1: Nainstalujte závislosti
 
-Nainstalujte **Grafanu** a databázi **InfluxDB** na svůj **Raspberry Pi**. Tento postup je podrobně vysvětlen v dokumentu [**Grafana pro vizualizaci**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization)
+Na **Raspberry Pi** nainstalujte **Grafanu** a databázi **InfluxDB**. Postup podrobně popisuje dokument [**Vizualizace v Grafaně**](https://docs.hardwario.com/tower/platform-integrations/grafana-visualization).
 
-#### Krok 2: Úprava konfigurace
+#### Krok 2: Upravte konfiguraci
 
-Přidejte tyto řádky do konfiguračního souboru `/etc/bigclown/mqtt2influxdb.yml`, který jste vytvořili v tutoriálu **Grafana pro vizualizaci**. Tím přidáte podporu pro nová témata (topics), která posílá Půdní senzor (Soil Sensor).
+Do konfiguračního souboru `/etc/bigclown/mqtt2influxdb.yml`, který jste vytvořili v návodu **Vizualizace v Grafaně**, přidejte tyto řádky. Tím doplníte podporu nových topiců, které posílá senzor Soil Sensor.
 
 :::info
 
-Pro úpravu textu používáme editor **nano**. Změny uložíte stisknutím klávesové zkratky `Ctrl + O` a editor ukončíte stisknutím `Ctrl + X`.
+Text upravujeme v editoru **nano**. Změny uložíte klávesovou zkratkou `Ctrl + O`, editor ukončíte zkratkou `Ctrl + X`.
 
 :::
 
-Otevřete konfiguraci mqtt2influxdb v textovém editoru **nano**.
+Otevřete konfiguraci mqtt2influxdb v editoru **nano**.
 
 ```text
 sudo nano /etc/bigclown/mqtt2influxdb.yml
 ```
 
-A na konec existujícího souboru přidejte následující řádky:
+Na konec souboru přidejte tyto řádky:
 
 ```text
 - measurement: moisture
@@ -218,25 +232,25 @@ A na konec existujícího souboru přidejte následující řádky:
         channel: $.topic[3]
 ```
 
-#### Krok 3: Otestujte, zda je konfigurace platná. V opačném případě je v souboru YAML nějaká chyba ve formátování.
+#### Krok 3: Ověřte, že je konfigurace platná. Pokud ne, je v souboru YAML chyba ve formátování
 
 ```text
 mqtt2influxdb -c /etc/bigclown/mqtt2influxdb.yml --test
 ```
 
-#### Krok 4: Restartujte službu MQTT2InfluxDB, protože jsme změnili konfiguraci.
+#### Krok 4: Restartujte službu MQTT2InfluxDB, aby načetla změněnou konfiguraci
 
 ```text
 pm2 restart mqtt2influxdb
 ```
 
-#### Krok 5: Otevřete stránku **Grafana**, která běží na **Raspberry Pi** na portu `3000`.
+#### Krok 5: Otevřete **Grafanu**, která běží na **Raspberry Pi** na portu `3000`
 
 [http://hub.local:3000](http://hub.local:3000)
 
 #### Krok 6: Graf
 
-Nyní můžete dole vidět teplotu a napětí baterie. Je však potřeba přidat graf vlhkosti. Protože jsme do konfiguračního souboru přidali řádek `- measurement: moisture`, je nutné duplikovat existující graf a změnit jeho zdroj dat (`measurement`) na `moisture`.
+Dole teď vidíte teplotu a napětí baterie. Chybí ještě graf vlhkosti. Protože jsme do konfiguračního souboru přidali řádek `- measurement: moisture`, je potřeba existující graf zduplikovat a změnit jeho zdroj dat (`measurement`) na `moisture`.
 
 <div class="container">
   <div class="row">
@@ -244,7 +258,7 @@ Nyní můžete dole vidět teplotu a napětí baterie. Je však potřeba přidat
   </div>
 </div><br></br>
 
-Nyní klikněte na **Edit** v **duplikovaném** grafu.
+Pak v **duplikovaném** grafu klikněte na **Edit**.
 
 <div class="container">
   <div class="row">
@@ -252,7 +266,7 @@ Nyní klikněte na **Edit** v **duplikovaném** grafu.
   </div>
 </div><br></br>
 
-Nyní na kartě **Metrics** změňte položku **FROM** z hodnoty **temperature** na **moisture**.
+Na záložce **Metrics** změňte u položky **FROM** hodnotu **temperature** na **moisture**.
 
 <div class="container">
   <div class="row">
@@ -260,9 +274,9 @@ Nyní na kartě **Metrics** změňte položku **FROM** z hodnoty **temperature**
   </div>
 </div>
 
-#### Krok 7: Uložit
+#### Krok 7: Uložte
 
-Nyní klikněte na tlačítko **Save** v prostředí **Grafana**, aby vaše konfigurace zůstala zachována i při dalším otevření stránky.
+Nakonec v **Grafaně** klikněte na tlačítko **Save**, aby nastavení zůstalo zachované i při dalším otevření stránky.
 
 <div class="container">
   <div class="row">
@@ -270,7 +284,7 @@ Nyní klikněte na tlačítko **Save** v prostředí **Grafana**, aby vaše konf
   </div>
 </div>
 
-### Související dokumenty<a id="related-documents"></a>
+### Související dokumenty <a id="related-documents"></a>
 
-* [**Instalace Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
-* [**Přihlášení do Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/login-guide)
+* [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
+* [**Přihlášení k Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/login-guide)

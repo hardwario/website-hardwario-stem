@@ -7,10 +7,10 @@ import Image from '@theme/IdealImage';
 
 **Time allocation**: 5 mins.
 
-First, give feedback on the lesson. You will pass the knowledge test again to show if the learning objectives have been met. 
+First, students give feedback on the lesson and take the knowledge test again to show whether the learning objectives have been met. 
 
-Perform 3-2-1 Assessment, ie. you specify:
+We will do a 3-2-1 Assessment, i.e. students will state:
 
-* 3 things you didn't know before the lesson
-* 2 things that were a surprise for you under this topic
-* 1 thing you want to start doing based on what you learned in the lesson
+* 3 things they did not know before the lesson
+* 2 things that were a surprise to them in the topic discussed
+* 1 thing that is still unclear to them

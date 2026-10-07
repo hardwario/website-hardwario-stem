@@ -1,47 +1,47 @@
 ---
 slug: private-lora-network-with-mikrotik-and-chirpstack
-title: Soukromá LoRa síť
+title: Soukromá síť LoRa
 ---
 import Image from '@theme/IdealImage';
 
 
-# Soukromá síť LoRa s Mikrotikem a ChirpStackem
+# Soukromá síť LoRa: MikroTik a ChirpStack
 
-Tento návod vysvětluje, jak nastavit soukromou síť LoRaWAN s Mikrotik wAP LR8 kit a ChirpStackem běžícím na jakémkoli počítači s Linuxem.
+Tento návod popisuje, jak postavit soukromou síť LoRaWAN se sadou MikroTik wAP LR8 kit a serverem ChirpStack na libovolném počítači s Linuxem.
 
-## Rychlý start sady Mikrotik wAP LR9
+## Rychlý start se sadou MikroTik wAP LR9
 
-Připojte se k Mikrotiku podle pokynů na oficiální [stránce sady wAP LR8](https://help.mikrotik.com/docs/display/UM/wAP+LR8+kit). První připojení je pouze přes WiFi. To později změníme.
+K zařízení MikroTik se připojte podle pokynů na oficiální [stránce sady wAP LR8](https://help.mikrotik.com/docs/display/UM/wAP+LR8+kit). Poprvé se můžete připojit jen přes Wi-Fi, to později změníme.
 
 :::info
 
-V případě, že budete potřebovat obnovit tovární nastavení Mikrotiku, [postupujte podle těchto pokynů](https://wiki.mikrotik.com/wiki/Manual:Reset). Ujistěte se, že sledujete správnou zelenou LED diodu, která je WiFi LED dioda pod konektorem napájení.
+Pokud budete potřebovat obnovit tovární nastavení zařízení MikroTik, [postupujte podle těchto pokynů](https://wiki.mikrotik.com/wiki/Manual:Reset). Řiďte se přitom správnou zelenou LED: je to LED Wi-Fi pod napájecím konektorem.
 
-Uvnitř jednotky LoRa card je další zelená LED dioda, která po spuštění bliká, což je trochu matoucí. Nesledujte tuto zelenou LED diodu uvnitř jednotky.
+Uvnitř jednotky je na kartě LoRa další zelená LED, která po spuštění bliká a trochu mate. Tou se neřiďte.
 
 :::
 
-## Povolení připojení ethernetového rozhraní/zakázání WLAN
+## Připojení přes ethernet a vypnutí WLAN
 
-Volitelné. Ve výchozím nastavení je firewall nastaven tak, že se nemůžete připojit ke konfiguraci RouterOS přes ethernet. Povolíte to zakázáním všech pravidel ve Firewallu. Přejděte do IP > Firewall a zakážte všechna pravidla kliknutím na tlačítko „D“ vedle nich.
+Tento krok je volitelný. Ve výchozím nastavení firewall nedovolí připojit se ke konfiguraci RouterOS přes ethernet. Přístup povolíte tak, že ve firewallu vypnete všechna pravidla: přejděte do IP > Firewall a u každého pravidla klikněte na tlačítko „D“.
 
-Ethernet by nyní měl fungovat a přidělit adresu DHCP. Nyní se můžete připojit k RouterOS přes ethernet.
+Ethernet by teď měl fungovat a získat adresu z DHCP. K RouterOS se pak můžete připojit přes ethernet.
 
-Můžete také volitelně zcela deaktivovat WLAN. To provedete v části Interfaces, kde deaktivujete „wlan1“.
+WLAN můžete také úplně vypnout: v části Interfaces deaktivujte „wlan1“.
 
-## Povolení LoRa
+## Zapnutí LoRa
 
-LoRa je ve výchozím nastavení deaktivována. Povolte ji v menu LoRa a stiskněte „E“ pro její aktivaci. Na traffic kartě byste měli vidět příchozí packety. Jsou šifrované, takže můžete správně vidět pouze Dev Addr, ale je docela užitečné vidět, že hardware funguje správně.
+LoRa je ve výchozím nastavení vypnutá. Zapnete ji v menu LoRa tlačítkem „E“. Na kartě Traffic byste měli vidět příchozí pakety. Jsou šifrované, takže čitelná je jen Dev Addr, ale aspoň vidíte, že hardware funguje správně.
 
-## Instalace ChirpStack
+## Instalace serveru ChirpStack
 
-V této části nainstalujete **ChirpStack Gateway Bridge, ChirpStack Network Server, ChirpStack Application Server** na svůj server Linux. Váš Mikrotik wAP LR9 se poté připojí k tomuto serveru a bude tam předávat pakety LoRa.
+V této části nainstalujete na svůj linuxový server **ChirpStack Gateway Bridge, ChirpStack Network Server, ChirpStack Application Server**. Zařízení MikroTik wAP LR9 se pak k tomuto serveru připojí a bude mu předávat pakety LoRa.
 
-Pro Debian můžete postupovat podle [návodu k instalaci Debian/Ubuntu](https://www.chirpstack.io/guides/debian-ubuntu/), jinak se podívejte na tuto [obecná stránka k instalaci](https://www.chirpstack.io/docs/chirpstack/downloads.html).
+Na Debianu postupujte podle [návodu k instalaci pro Debian/Ubuntu](https://www.chirpstack.io/guides/debian-ubuntu/), jinak použijte [obecnou stránku k instalaci](https://www.chirpstack.io/docs/chirpstack/downloads.html).
 
 :::info
 
-V instalačním návodu pro Debian/Ubuntu je skript pro vytvoření tabulky Postgress. Můžete zkopírovat celý skript a vložit ho do konzole Posgress. Po vytvoření tabulky stačí stisknout klávesu Enter a tím se provede poslední příkaz k ukončení příkazového řádku.
+Instalační návod pro Debian/Ubuntu obsahuje skript, který v PostgreSQL vytvoří tabulky. Celý skript můžete zkopírovat a vložit do konzole PostgreSQL. Po vytvoření tabulek stiskněte Enter: provede se tím poslední příkaz, který konzoli ukončí.
 
 :::
 
@@ -49,35 +49,37 @@ V instalačním návodu pro Debian/Ubuntu je skript pro vytvoření tabulky Post
 
 :::info
 
-Nezapomeňte povolit otevření portu 8080 ve firewallu serveru pro webovou stránku Chirp a portu 1700 pro Gateway Bridge. Pokud používáte MQTT, otevřete také port 1883. Pokud používáte `ufw`, zadejte `sudo ufw allow 8080`.
+Nezapomeňte na firewallu serveru otevřít port 8080 pro webové rozhraní ChirpStack a port 1700 pro Gateway Bridge. Pokud používáte MQTT, otevřete i port 1883. S `ufw` stačí zadat `sudo ufw allow 8080`.
 
 :::
 
-Postupujte podle pokynů [jak se připojit k aplikačnímu serveru ChirpStack](https://www.chirpstack.io/guides/first-gateway-device/).
+Pak postupujte podle návodu, [jak se připojit k aplikačnímu serveru ChirpStack](https://www.chirpstack.io/guides/first-gateway-device/).
 
-## Připojení brány Mikrotik k ChirpStack
+## Připojení brány MikroTik k serveru ChirpStack
 
-Otevřete nabídku LoRa v konfiguraci Mikrotik. V předchozím kroku jsme povolili hardware LoRa. Nyní je čas nastavit IP adresu  ChirpStack Gateway Server. Přejděte do LoRa > Servery a nastavte IP adresu vašeho serveru a oba porty na 1700.
+V konfiguraci zařízení MikroTik otevřete menu LoRa. Hardware LoRa jsme zapnuli v předchozím kroku, teď nastavíme IP adresu pro ChirpStack Gateway Server. Přejděte do LoRa > Servers, zadejte IP adresu svého serveru a oba porty nastavte na 1700.
 
-Druhým krokem je přejít do Zařízení, otevřít podrobnosti brány a v Síťových serverech vybrat přidaný síťový server. K změně tohoto nastavení může být nutné dočasně deaktivovat LoRa.
+Potom přejděte do Devices, otevřete detail brány a v Network Servers vyberte přidaný síťový server. Než nastavení změníte, možná bude potřeba LoRa dočasně vypnout.
 
-Měli byste také nastavit typ sítě na Soukromá. Poté je také nutné nastavit soukromou konfiguraci pro všechny vaše uzly LoRaWAN.
+Nastavte také Network type na Private. Soukromou konfiguraci pak musíte nastavit i ve všech uzlech LoRaWAN.
 
-V levém menu v části Log byste měli vidět text „Forwarder started“. 
+V levém menu v části Log by se měl objevit text „Forwarder started“.
 
 :::info
 
-Na svém serveru můžete spustit `sudo journalctl -f -n 100 -u chirpstack-gateway-bridge.service` a zobrazit protokoly příchozích zpráv, abyste se ujistili, že je připojení nastaveno správně.
+Na serveru můžete spustit `sudo journalctl -f -n 100 -u chirpstack-gateway-bridge.service` a v logu příchozích zpráv ověřit, že je připojení nastavené správně.
 
 :::
 
-Poté postupujte podle [těchto kroků v tutoriálu ChirpStack](https://www.chirpstack.io/guides/first-gateway-device/) a přidejte svůj síťový server, gateway, organizaci a profily, jak je vysvětleno.
+## Brána a zařízení v systému ChirpStack
 
-## Užitečné odkazy a tutoriály
+Pak podle [těchto kroků v návodu ChirpStack](https://www.chirpstack.io/guides/first-gateway-device/) přidejte síťový server, bránu, organizaci a profily.
 
-[HARDWARIO Kit LoRa AT commands configuration](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/)
+## Užitečné odkazy a návody
 
-[HARDWARIO LoRa Tester with LCD & GPS](https://www.hackster.io/160709/lora-tester-with-lcd-gps-open-configurable-low-power-4a5b61), more information also in our e-shop.
+[Konfigurace sady HARDWARIO LoRa pomocí příkazů AT](https://docs.hardwario.com/tower/radio-communication/lora-at-commands/)
+
+[HARDWARIO LoRa Tester with LCD & GPS](https://www.hackster.io/160709/lora-tester-with-lcd-gps-open-configurable-low-power-4a5b61), další informace najdete i v našem e-shopu.
 
 [HARDWARIO LoRa Climate Kit](https://www.hackster.io/hubmartin/lora-climate-monitor-easy-open-low-power-and-with-graphs-7bacc2)
 

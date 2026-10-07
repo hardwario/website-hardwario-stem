@@ -3,12 +3,12 @@ slug: target-group-and-students-profile
 title: Cílová skupina a profil studenta
 ---
 
-## Cílovou skupinou jsou:
+## Cílová skupina
 
-* studenti posledních 3 ročníků základních škol
+* žáci posledních tří ročníků základních škol
 * studenti středních škol
 
-**Doporučený počet studentů**: 9-15 pro seminář, až 30 pro webinář
+**Doporučený počet studentů**: 9–15 pro seminář, až 30 pro webinář
 
 ## Vstupní předpoklady studentů
 

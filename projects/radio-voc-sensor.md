@@ -96,7 +96,7 @@ Make sure the **Battery Module** does not have batteries inserted yet
 
 ### Full hardware
 
-The firmware also supports [**LCD Module**](https://www.hardwario.store/p/lcd-module-bg), [**Tag Module**](https://www.hardwario.store/p/tag-module), [**Temperature Tag**](https://www.hardwario.store/p/temperature-tag) and [**Humidity Tag**](https://www.hardwario.store/p/humidity-tag). All values are displayed with nice graph on the display and are also send over HARDWARIO radio network to the [**Radio Dongle**](https://www.hardwario.store/p/radio-dongle).
+The firmware also supports [**LCD Module**](https://www.hardwario.store/p/lcd-module-bg), [**Tag Module**](https://www.hardwario.store/p/tag-module), [**Temperature Tag**](https://www.hardwario.store/p/temperature-tag) and [**Humidity Tag**](https://www.hardwario.store/p/humidity-tag). All values are displayed with nice graph on the display and are also sent over HARDWARIO radio network to the [**Radio Dongle**](https://www.hardwario.store/p/radio-dongle).
 
 <div class="container">
   <div class="row">
@@ -118,7 +118,7 @@ Make sure the **Battery Module** does not have batteries inserted yet.
 
 #### Step 4: Plug the **Temperature Tag** and **Humidity Tag** into a socket on the **Tag Module**
 
-#### **Step 5:** Plug the **Core Module** on top of the **TAG Module**
+#### **Step 5:** Plug the **Core Module** on top of the **Tag Module**
 
 #### **Step 6:** Plug the **LCD Module** on top of the **Core Module**
 
@@ -286,7 +286,7 @@ You will see this dashboard with values from the Radio VOC sensor.
   </div>
 </div><br></br>
 
-Your project is finished, congratulation!
+Your project is finished, congratulations!
 
 ### Related Documents <a id="related-documents"></a>
 

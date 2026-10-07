@@ -6,20 +6,20 @@ import Image from '@theme/IdealImage';
 
 ## Úvod
 
-Máš v šuplíku deníček, básničky nebo tajný vládní dokument? Pokud je to něco, co by nikdo neměl vidět, zabezpeč to. 🔒 Vytvoř si ze Start Sady IoT hlídače šuplíku, který ti pošle upozornění na mobil. 📲
+Máte v šuplíku deníček, básničky nebo tajný vládní dokument? Pokud je to něco, co by nikdo neměl vidět, zabezpečte to. 🔒 Ze sady Start Set si vyrobte IoT hlídače šuplíku, který vám pošle upozornění na mobil. 📲
 
-V tomhle projektu se naučíš vytvořit **detektor otevírání šuplíku, který ti pošle upozornění na mobil**. 👈
+V tomto projektu se naučíte vytvořit **detektor otevření šuplíku, který vám pošle upozornění na mobil**. 👈
 
-Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou – [**Starter Kitem**](https://www.hardwario.store/cz/p/start-set).
+Budete potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíte si proto se základní sadou HARDWARIO [**Start Set**](https://www.hardwario.store/cz/p/start-set).
 
 
-## Stáhni si nový firmware
+## Stáhněte si nový firmware
 
-1. Na Core Module nahraj speciální firmware, a to **bcf-radio-x-axis-detector** (najdeš ho mezi ostatním firmwarem v Playgroundu). Díky tomuhle firmwaru bude krabička citlivější na pohyb. 👌
+1. Do modulu Core Module nahrajte speciální firmware **bcf-radio-x-axis-detector** (najdete ho mezi ostatním firmwarem v Playgroundu). Díky tomuto firmwaru bude krabička citlivější na pohyb. 👌
 
-**Náš tip:** Nevíš, jak si firmware stáhnout nebo co to je? [Zjistíš to tady](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware)
+**Náš tip:** Nevíte, jak si firmware stáhnout nebo co to je? [Najdete to tady](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware).
 
-2. [Core Module spáruj s USB Donglem](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device) Hned po spárování uvidíš, že tvůj Core Module změnil Alias na **x-axis-detector**.
+2. [Spárujte modul Core Module s USB donglem](https://docs.hardwario.com/tower/platform-integrations/homekit-and-siri/#pair-the-device). Hned po spárování uvidíte, že se alias modulu Core Module změnil na **x-axis-detector**.
 
 <div class="container">
   <div class="row">
@@ -28,30 +28,30 @@ Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Proto si vy
 </div>
 
 
-## Připrav si appku Blynk IoT
+## Připravte si aplikaci Blynk IoT
 
-Krabička se ti bude hlásit na mobil přes appku **Blynk IoT**. 📱 Nastavíš si v ní dvě věci: **přepínač** pro zapnutí a vypnutí detektoru a **push notifikaci**, která se spustí, když někdo otevře šuplík.
+Krabička se vám bude hlásit na mobil přes aplikaci **Blynk IoT**. 📱 Nastavíte v ní dvě věci: **přepínač**, kterým detektor zapnete a vypnete, a **push notifikaci**, která přijde, když někdo otevře šuplík.
 
-1. Pokud ho ještě nemáš, vytvoř si účet v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). V [tomhle návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) najdeš, jak si založit účet, šablonu zařízení (device template) a zařízení (device) – budeš potřebovat všechny tři. Můžeš taky využít šablonu z některého předchozího projektu.
+1. Pokud ještě účet nemáte, vytvořte si ho v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). V [tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) najdete, jak si založit účet, šablonu zařízení (device template) a zařízení (device). Budete potřebovat všechny tři. Můžete také použít šablonu z některého předchozího projektu.
 
-2. **Přidej Datastream pro stav detektoru.** V detailu šablony otevři záložku **Datastreams**, vpravo nahoře klikni na **Edit**, pak na **+ New Datastream** a zvol **Virtual Pin**. Vyber volný Pin a zvol typ **Integer** s rozsahem **0–1** (0 = vypnuto, 1 = zapnuto). Zapamatuj si číslo Pinu, budeš ho potřebovat v Node-RED. Klikni na **Create** a šablonu ulož přes **Save**.
+2. **Přidejte datastream pro stav detektoru.** V detailu šablony otevřete záložku **Datastreams**, vpravo nahoře klikněte na **Edit**, pak na **+ New Datastream** a zvolte **Virtual Pin**. Vyberte volný pin a zvolte typ **Integer** s rozsahem **0–1** (0 = vypnuto, 1 = zapnuto). Poznamenejte si číslo pinu, budete ho potřebovat v Node-RED. Klikněte na **Create** a šablonu uložte tlačítkem **Save**.
 
-3. **Přidej notifikační Event.** V šabloně otevři záložku **Events** a přidej nový event (třeba ho pojmenuj `drawer` a dej mu zprávu, kterou chceš dostávat – pozor, Blynk neumí čárky, háčky ani speciální znaky 🤷). Pro tenhle event zapni **Notifications**, aby ti Blynk doručil upozornění na mobil. [Návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) tě nastavením šablony provede.
+3. **Přidejte událost pro notifikaci.** V šabloně otevřete záložku **Events** a přidejte novou událost (**Event**). Pojmenujte ji třeba `drawer` a zadejte zprávu, kterou chcete dostávat. Pozor, Blynk neumí čárky, háčky ani speciální znaky. 🤷 Pro tuto událost zapněte **Notifications**, aby vám Blynk doručil upozornění na mobil. Nastavením šablony vás provede [návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
-4. Pokud ještě nemáš zařízení, **vytvoř si device** ze své šablony – popsané je to ve [stejném návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+4. Pokud ještě nemáte zařízení, **vytvořte si ho** ze své šablony. Postup najdete ve [stejném návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
-5. Stáhni si do mobilu **appku Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlas se stejným účtem. Zkontroluj, že má appka povolené notifikace, aby ti upozornění mohlo naskočit. 📱
+5. Stáhněte si do mobilu **aplikaci Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlaste se stejným účtem. Zkontrolujte, že má aplikace povolené notifikace, aby vám upozornění mohlo naskočit. 📱
 
-6. V mobilu otevři zařízení a nastav si jeho dashboard: přidej widget **Button**, přepni ho do režimu **Switch** a přiřaď mu Datastream se stavem detektoru, který jsi vytvořil. Takhle budeš detektor z mobilu pohodlně zapínat a vypínat.
+6. V mobilu otevřete zařízení a nastavte jeho dashboard: přidejte widget **Button**, přepněte ho do režimu **Switch** a přiřaďte mu vytvořený datastream se stavem detektoru. Detektor pak budete pohodlně zapínat a vypínat z mobilu.
 
 
-## Nastav v Node-RED zprávu
+## Nastavte zprávu v Node-RED
 
-1. V Playgroundu klikni na **záložku Functions**, kde je programovací plocha [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
+1. V Playgroundu klikněte na **záložku Functions**, kde je programovací plocha [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
 
-2. Začni jako vždycky: na plochu nejdřív umísti **MQTT node** ze sekce Input.
+2. Začněte jako vždy: na plochu nejdřív umístěte **uzel MQTT** ze sekce Input.
 
-Dvakrát na něj klikni a do řádku zkopíruj **Topic**, se kterým krabička odhalí změnu pohybu:
+Dvakrát na něj klikněte a do řádku **Topic** zkopírujte tento topic, přes který krabička hlásí pohyb:
 
 ```
 node/x-axis-detector:0/accelerometer/-/event-count
@@ -59,19 +59,19 @@ node/x-axis-detector:0/accelerometer/-/event-count
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-2.webp')} alt="Dialog Edit mqtt in node s tématem event-count akcelerometru ve zvýrazněném poli Topic"/>
+    <Image img={require('./img/safe-drawer/safe-drawer-2.webp')} alt="Dialog Edit mqtt in node s topicem event-count akcelerometru ve zvýrazněném poli Topic"/>
   </div>
 </div>
 
-3. Vedle tohohle nodu umísti **node Switch** ze sekce **Function**. Díky tomuhle nodu můžeš detekci vypnout, když jsi doma a otvíráš šuplík sám.
+3. Vedle tohoto uzlu umístěte **uzel Switch** ze sekce **Function**. Díky němu můžete detekci vypnout, když jste doma a šuplík otvíráte sami.
 
 <div class="container">
   <div class="row">
-    <Image img={require('./img/safe-drawer/safe-drawer-3.webp')} alt="Plocha Node-RED s uzlem Switch umístěným vedle MQTT uzlu x-axis-detectoru"/>
+    <Image img={require('./img/safe-drawer/safe-drawer-3.webp')} alt="Plocha Node-RED s uzlem Switch vedle uzlu MQTT pro x-axis-detector"/>
   </div>
 </div>
 
-4. Uvnitř nodu změň řádek Property na **flow. active**. Do řádku níž číslici **1**. S touhle jedničkou se notifikace pošle, když je tlačítko zapnuté, jinak se zahodí. Mrkej na obrázek.
+4. V uzlu změňte řádek Property na **flow.active** a do řádku pod ním zadejte číslici **1**. Díky jedničce se notifikace pošle jen tehdy, když je přepínač zapnutý, jinak se zahodí. Řiďte se obrázkem.
 
 <div class="container">
   <div class="row">
@@ -79,7 +79,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
   </div>
 </div>
 
-5. Za tohle postav ještě **node Change** ze sekce Function.
+5. Za něj umístěte ještě **uzel Change** ze sekce Function.
 
 <div class="container">
   <div class="row">
@@ -87,7 +87,7 @@ node/x-axis-detector:0/accelerometer/-/event-count
   </div>
 </div>
 
-6. V něm si nastav **zprávu, která se ti pošle do mobilu**. Dávej bacha, čárky a háčky Blynk neumí. 🤷
+6. V něm nastavte **zprávu, která vám přijde do mobilu**. Pozor, čárky a háčky Blynk neumí. 🤷
 
 <div class="container">
   <div class="row">
@@ -95,35 +95,35 @@ node/x-axis-detector:0/accelerometer/-/event-count
   </div>
 </div>
 
-7. Na konec tohohle potravního řetězce umísti node ze sekce **Blynk IoT**, který umí spustit tvůj event (node **log event**).
+7. Na konec tohoto potravního řetězce umístěte uzel ze sekce **Blynk IoT**, který umí spustit vaši událost (uzel **log event**).
 
-8. Dvakrát na něj klikni, ať se ti otevře nastavení. Vpravo uvidíš **malou tužtičku**. Klikni na ni a otevře se nové okno. Do pole **Url** zadej `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové appce Blynk IoT na svém počítači. Potvrď tlačítkem **Add**.
+8. Dvakrát na něj klikněte, aby se otevřelo nastavení. Vpravo uvidíte **malou tužku**. Klikněte na ni a otevře se nové okno. Do pole **Url** zadejte `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu zařízení ve webové aplikaci Blynk IoT na počítači. Potvrďte tlačítkem **Add**.
 
-**Náš tip:** Připojení pojmenuj, ať ho v dalších nodech snadno poznáš.
+**Náš tip:** Připojení pojmenujte, ať ho v dalších uzlech snadno poznáte.
 
-9. Nastav node tak, aby spouštěl **Event**, který jsi vytvořil (kód eventu, např. `drawer`). Tohle z otevření šuplíku udělá push notifikaci. Potvrď tlačítkem **Done**.
+9. Nastavte uzel tak, aby spouštěl vytvořenou událost (**Event**), v našem příkladu s kódem `drawer`. Díky tomu se z otevření šuplíku stane push notifikace. Potvrďte tlačítkem **Done**.
 
-10. Teď tenhle řetězec **pospojuj**: MQTT ➡️ Switch ➡️ Change ➡️ Blynk IoT log event. A jdeme dál.
+10. Teď celý řetězec **propojte**: MQTT ➡️ Switch ➡️ Change ➡️ Blynk IoT log event. A jdeme dál.
 
-## Nastav v Node-RED detektor přepínače
+## Nastavte v Node-RED přepínač detektoru
 
-Tenhle druhý řetězec čte widget **Switch** z tvého mobilu, takže můžeš detektor zapínat a vypínat na dálku.
+Druhý řetězec čte widget **Switch** ve vašem mobilu, takže detektor můžete zapínat a vypínat na dálku.
 
-1. Načni další řetězec. Polož na plochu **node Write** ze sekce **Blynk IoT**. Ten čte stav přepínače.
+1. Začněte další řetězec: na plochu umístěte **uzel Write** ze sekce **Blynk IoT**. Ten čte stav přepínače.
 
-2. Dvojklikem ho otevři. Na řádku **Connection** vyber připojení, které jsi nastavil výš u nodu log event. Do řádku **Virtual Pin** vyplň číslo Datastreamu se stavem detektoru, který jsi vytvořil v Blynku (bez písmene „V"). Potvrď tlačítkem **Done**.
+2. Dvojklikem ho otevřete. V řádku **Connection** vyberte připojení, které jste nastavili výše u uzlu log event. Do řádku **Virtual Pin** zadejte číslo datastreamu se stavem detektoru, který jste vytvořili v Blynku (bez písmene „V“). Potvrďte tlačítkem **Done**.
 
-3. A poslední node do party. Polož na plochu **node Change** ze sekce Function.
+3. A poslední uzel do party: na plochu umístěte **uzel Change** ze sekce Function.
 
-4. Node nastavíš tak, aby reagoval na vypnutí a zapnutí přepínače na Blynku. Dvojklikem ho otevři a nastav do políček Rules postupně **flow.active** a **msg.payload**, aby se hodnota přepínače ukládala do `flow.active` (které kontroluje node Switch v prvním řetězci).
+4. Uzel nastavíte tak, aby reagoval na zapnutí a vypnutí přepínače v Blynku. Dvojklikem ho otevřete a do políček Rules postupně zadejte **flow.active** a **msg.payload**, aby se hodnota přepínače ukládala do proměnné `flow.active`, kterou kontroluje uzel Switch v prvním řetězci.
 
-5. Teď tyhle dva hezouny **spoj**. Nezapomeň taky kliknout na tlačítko **Deploy** vpravo nahoře, aby se všechno zprovoznilo.
+5. Teď tuhle dvojici **propojte**. Nezapomeňte také kliknout na tlačítko **Deploy** vpravo nahoře, aby se všechno spustilo.
 
 
-## Spusť pastičku
+## Nastražte past
 
-1. **Krabičku polož do šuplíku** naležato.
+1. **Krabičku položte do šuplíku** naplocho.
 
-2. Všechno ostatní už ovládej z mobilu. 📱 Otevři zařízení v appce Blynk IoT a **zapni detektor** přepnutím widgetu Switch do polohy ON.
+2. Všechno ostatní už ovládáte z mobilu. 📱 Otevřete zařízení v aplikaci Blynk IoT a **zapněte detektor** přepnutím widgetu Switch do polohy ON.
 
-3. A čekej, až se myška chytí. 🥁 Jakmile někdo otevře šuplík, **na mobilu naskočí push notifikace**. Mezitím **naplánuj, co s nenechavým neřádem uděláš**. Doporučujeme nechat ho týden dělat domácí práce za tebe. Však si to zaslouží.
+3. A čekejte, až se myška chytí. 🥁 Jakmile někdo otevře šuplík, **na mobilu vám naskočí push notifikace**. Mezitím si **naplánujte, co s nenechavcem uděláte**. Doporučujeme, ať za vás týden dělá domácí práce. Zaslouží si to.

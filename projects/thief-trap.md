@@ -8,22 +8,22 @@ import Image from '@theme/IdealImage';
 
 Is your younger brother entering your room? Are you going on holiday and afraid someone will steal your treasure? Set up an alarm against all thieves. 👮
 
-Under this project, you will learn how to create a ** that sends notifications to your mobile if someone else is in your room**. 👁️
+In this project, you will learn how to create a **detector that sends notifications to your mobile if someone else is in your room**. 👁️
 
-If you already have the Start Set, you will only need the [**PIR Module**](https://www.hardwario.store/p/pir-module/). Alternatively, the [Motion  Set](https://www.hardwario.store/p/motion-set) contains all the equipment you need.
+If you already have the Start Set, you will only need the [**PIR Module**](https://www.hardwario.store/p/pir-module/). Alternatively, the [Motion Set](https://www.hardwario.store/p/motion-set) contains all the equipment you need.
 
 
 ## Download the new firmware
 
-1. If you haven´t done so yet, put the Motion  Set together.
+1. If you haven´t done so yet, put the Motion Set together.
 
 2. Load special firmware onto the Core Module, namely bcf-radio-burglar-alarm (you will find it among the other firmware in Playground). With this firmware the box will reveal intruders and burglars.👂
 
-![sestavení motion detektor Setu](./img/thief-trap/image20.png)
+![Motion Set assembly](./img/thief-trap/image20.png)
 
 **Our tip**: You don’t know how to download the firmware or what is it? [You'll find out here](https://docs.hardwario.com/tower/firmware-development/firmware-quick-start/).
 
-1. Pair the Core Module with a USB Dongle. Right after pairing, you will see that your Core Module has changed the Alias to **Burglar alarm**.
+3. Pair the Core Module with a USB Dongle. Right after pairing, you will see that your Core Module has changed the Alias to **Burglar alarm**.
 
 <div class="container">
   <div class="row">
@@ -50,9 +50,9 @@ Your box connects to your smartphone thanks to the **Blynk IoT** app, where the 
 ## Read the arming switch in Node-RED
 
 1. In Playground, click the **Functions tab** where the [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/) programming desktop is.🤖
-2. Start programming and jump right in. The first node will contain a small javascript code. Place it on the desktop using the ** Function node** from under the section of the same name.
+2. Start programming and jump right in. The first node will contain a small javascript code. Place it on the desktop using the **Function node** from under the section of the same name.
 
-Double-click on it and type the node name in the Label field: Int parser.
+Double-click on it and type the node name in the Name field: Int parser.
 
 Subsequently, copy the following simple javascript code into the Function field:
 
@@ -139,15 +139,13 @@ Due to this node, the sensor will only be active if you trigger it by a button i
   </div>
 </div>
 
-3. For the best bit of all, place the MQTT node from under the
-
-**Output** section onto the desktop (watch it ❗).
+3. For the best bit of all, place the MQTT node from under the **Output** section onto the desktop (watch it ❗).
 
 In the node, set _node/burglar-alarm:0/alarm/-/set/state_ as the Topic, through which the sensor sends its status to the alarm. If the switch in Blynk or Dashboard is turned on, the alarm is activated. 👮
 
 
 
-1. Subsequently **connect** these three elements together.
+4. Subsequently **connect** these three elements together.
 
 <div class="container">
   <div class="row">
@@ -170,7 +168,7 @@ Place the **MQTT node from under the Input section** onto your desktop. In the n
 2. A short javascript code should follow it, namely a **Function node**. As the **Name** set _Message_ with this code right here:
 
 ```
-msg.payload = "Someone's in your room" return msg;
+msg.payload = "Someone's in your room"; return msg;
 ```
 
 **Our tip**: Feel free to rewrite the message in the code, but remember that Blynk does not read hooks (háčky) and accent marks (čárky). Otherwise it´s double Dutch! 🤷

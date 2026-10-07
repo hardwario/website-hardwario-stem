@@ -6,13 +6,13 @@ title_meta: "Experiment (L108: IoT čítač impulzů)"
 import Image from '@theme/IdealImage';
 
 
-**Časová dotace:** 10 min.
+**Časová dotace**: 10 min.
 
 ## Přenášíme počet impulzů
 
 ### Popis experimentu
 
-V rámci experimentu budeme přenášet počet impulzů pomocí **LED** nebo **magnetického senzoru**.
+V experimentu budeme přenášet počet impulzů, které snímá **LED** nebo **magnetický senzor**.
 
 
 ## Kroky experimentu
@@ -32,42 +32,42 @@ V rámci experimentu budeme přenášet počet impulzů pomocí **LED** nebo **m
 
 :::tip
 
- K Sensor Modulu nezapomeňte připojit váš čítač impulzů podle tohoto obrázku:
+ K modulu Sensor Module nezapomeňte připojit snímač impulzů podle tohoto obrázku:
 
 :::
 
 <div class="container">
   <div class="row">
-    <Image img={require('./counter.avif')} alt="Sensor Module s vodiči pulzního čítače připojenými do zelené svorkovnice"/>
+    <Image img={require('./counter.avif')} alt="Sensor Module s vodiči snímače impulzů připojenými do zelené svorkovnice"/>
   </div>
 </div>
 
-### 2. Nahrání firmware
+### 2. Nahrání firmwaru
 
 - Připojte **Core Module** k počítači.
 - V aplikaci **Playground** v záložce **Firmware** nahrajte firmware `twr-radio-pulse-counter`.
-- Pokud ještě nemáte Playground nainstalovaný, stáhněte a nainstalujte jej.
+- Pokud aplikaci Playground ještě nemáte, stáhněte si ji a nainstalujte.
 
 :::tip
 
- Podívejte se na [podrobný návod nahrání firmware do Core Module.](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/)
+ Podívejte se na [podrobný návod k nahrání firmwaru do modulu Core Module](https://docs.hardwario.com/tower/desktop-programming/firmware-flashing/).
 
 :::
 
 ### 3. Připojení jednotek do Playgroundu
 
 1. Zasuňte do USB portu počítače **Radio Dongle**.
-2. Otevřete aplikaci **Playground** a běžte na záložku **Devices**.
+2. Otevřete aplikaci **Playground** a přejděte na záložku **Devices**.
 3. Vyberte svůj Radio Dongle ze seznamu USB zařízení a klikněte na **Connect**.
 4. Klikněte na **Start pairing**.
-5. Vložte do sady Sensor baterie: úspěšné spárování se projeví zobrazením zařízení s názvem `wireless-pulse-counter:0`.
+5. Vložte do sady Sensor baterie. Po úspěšném spárování se zobrazí zařízení s názvem `wireless-pulse-counter:0`.
 
 ---
 
-### 4. Nastavení funkce zobrazení počtu impulzů
+### 4. Zobrazení počtu impulzů
 
 1. Přepněte se na záložku **Functions**.
-2. Proveďte **import flow**:
+2. Importujte tento **flow**:
 
 
 ```json
@@ -75,22 +75,22 @@ V rámci experimentu budeme přenášet počet impulzů pomocí **LED** nebo **m
 ```
 <div class="container">
   <div class="row">
-    <Image img={require('./stem-diagram.png')} alt="Flow v Node-RED: počet pulzů vede do textu Pulses, grafu Pulses in time a uzlu switch zobrazujícího dialog"/>
+    <Image img={require('./stem-diagram.png')} alt="Flow v Node-RED: počet impulzů vede do textu Pulses, grafu Pulses in time a uzlu switch zobrazujícího dialog"/>
   </div>
 </div>
 
-3. Přepněte se na záložku **Messages**: pokud vše proběhlo správně, uvidíte příchozí zprávy ze sady Sensor.
+3. Přepněte se na záložku **Messages**. Pokud vše proběhlo správně, uvidíte příchozí zprávy ze sady Sensor.
 4. Přepněte se na záložku **Dashboard**: zobrazí se graf s počtem impulzů.
 
 :::info
 
- Flow obsahuje také **automatické upozornění**, pokud počet impulzů dosáhne **30** nebo **70**.
+ Flow obsahuje také **automatické upozornění**, které se zobrazí, když počet impulzů dosáhne **30** nebo **70**.
 
 :::
 
  <div class="container">
   <div class="row">
-    <Image img={require('./stem-result.webp')} alt="Dashboard Node-RED s počtem pulzů, grafem Pulses in time a dialogem Pulse counter hlásícím 30 ticks detected"/>
+    <Image img={require('./stem-result.webp')} alt="Dashboard Node-RED s počtem impulzů, grafem Pulses in time a dialogem Pulse counter hlásícím 30 ticks detected"/>
   </div>
 </div>
 

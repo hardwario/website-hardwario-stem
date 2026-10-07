@@ -8,7 +8,7 @@ import React from 'react';
 
 **Časová dotace**: 10 min.
 
-Studenti si zkoušejí další projekty, které souvisejí s daným tématem, nebo probíhá fáze ideace.
+Studenti zkoušejí další projekty k tématu lekce nebo hledají nápady metodou Ideation.
 
 ## Platforma Hackster.io
 
@@ -141,9 +141,9 @@ Studenti si zkoušejí další projekty, které souvisejí s daným tématem, ne
 
 ## Ideation
 
-Studenti navrhují reálné využití znalostí získaných během teoretického výkladu a experimentů.
+Studenti navrhují reálné využití znalostí, které získali z teoretického výkladu a experimentů.
 
-Své nápady zapisují do grafu, kde osa x představuje odhadovanou náročnost (náklady) projektu a osa y odhadovaný dopad realizace řešení.
+Nápady zapisují do grafu, kde osa x udává odhadovanou náročnost (náklady) projektu a osa y odhadovaný dopad zavedení řešení.
 
 <div class="container">
   <div class="row">

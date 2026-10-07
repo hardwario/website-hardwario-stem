@@ -5,9 +5,9 @@ title_meta: "Úvod (L105: IoT monitor kvality vnitřního klimatu)"
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **IoT monitor kvality vnitřního klimatu** je představit toto dnes atraktivní téma z vícero pohledů. 
+Cílem lekce **IoT monitor kvality vnitřního klimatu** je představit toto aktuální téma z několika úhlů pohledu.
 
-Studenti si sami sestaví a naprogramují zařízení k měření koncentrace CO2. Na základě praktických experimentů si snáze uvědomí a zapamatují příčiny a důsledky nekvalitního klimatu ve vnitřních prostorách. 
+Studenti si sami sestaví a naprogramují zařízení k měření koncentrace CO2. Díky praktickým experimentům si snáze uvědomí a zapamatují, co způsobuje špatné vnitřní klima a jaké má důsledky.
 
 ## Co budete v rámci lekce potřebovat?
 

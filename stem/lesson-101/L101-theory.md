@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 
 STEM stands for **SCIENCE-TECHNOLOGY-ENGINEERING-MATHEMATICS**.
 
-We're learning new things at the same time. We learn new things through real-life projects.
+We learn the individual subjects together. We learn new things through real-life projects.
 
 **In HARDWARIO's STEM learning, we learn from real-life IoT projects**.
 ## What is IoT
@@ -24,7 +24,7 @@ It is also a phenomenon, a bubble, a threat and an opportunity. An opportunity t
 
 **Physical things connected to the internet, linked to other things and data with the aim of getting something useful out of it all**.
 
-### Samples
+### Examples
 
 * [**Risk of data misinterpretation**](https://youtu.be/nwPtcqcqz00)
 * [**Risk of invasion of privacy**](https://youtu.be/_CQA3X-qNgA)
@@ -44,7 +44,7 @@ There are also risks associated with the development of IoT:
 * Misuse of data
 * Invasion of privacy
 * Misinterpretation of data
-* Overwhelm by an overload of poorly structured information
+* Overload of poorly structured information
 
 IoT actually means that things around us can communicate with us, that is, send us information or exchange this information themselves. This is already a huge step forward, as it allows us to significantly speed up and streamline many activities, make informed and therefore better decisions, plan our time better, manage many activities remotely without having to travel or arrange for another person to control them.
 
@@ -154,10 +154,10 @@ Currently, the most widely used systems for global wireless transmissions are th
 **Important!**
 [LPWAN](https://en.wikipedia.org/wiki/Low-power_wide-area_network) stands for Low-Power Wide Area Network, i.e. a network with low power requirements for communication and covering a larger area. These include [NB-IoT](https://en.wikipedia.org/wiki/Narrowband_IoT), [LoRaWAN](https://en.wikipedia.org/wiki/LoRa) and [Sigfox](https://en.wikipedia.org/wiki/Sigfox). Each of these networks has its own specifics, but all are suitable for battery-powered IoT devices operating in locations where there is no standard internet connection (e.g. Wi-Fi). Therefore, they offer perfect IoT solutions in agriculture, forestry, water management.
 
-Samples
+Examples
 
 * MQTT: https://youtu.be/EIxdz-2rhLs
 
 ### Wired transmissions
 
-Of course, data from IoT devices can also be transmitted by wire. If conditions allow, you can connect your IoT device to the Internet via Ethernet. However, we more often see a solution where individual IoT devices are wired to the Hub, which is then connected to the Internet. In such cases, standards such as [I²C](https://en.wikipedia.org/wiki/I%c2%b2C), [1-Wire](https://en.wikipedia.org/wiki/1-Wire), [RS-232](https://en.wikipedia.org/wiki/RS-232) and [RS485](https://en.wikipedia.org/wiki/RS-485) are used.
+Of course, data from IoT devices can also be transmitted by wire. If conditions allow, you can connect your IoT device to the Internet via Ethernet. However, we more often see a solution where individual IoT devices are wired to the Hub, which is then connected to the Internet. In such cases, standards such as [I²C](https://en.wikipedia.org/wiki/I%c2%b2C), [1-Wire](https://en.wikipedia.org/wiki/1-Wire), [RS-232](https://en.wikipedia.org/wiki/RS-232) and [RS-485](https://en.wikipedia.org/wiki/RS-485) are used.

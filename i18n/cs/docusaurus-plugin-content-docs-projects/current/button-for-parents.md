@@ -1,28 +1,28 @@
 ---
 slug: button-for-parents
-title: Tlačítko pro rodiče 
+title: Tlačítko pro rodiče
 ---
 
 ## Úvod
 
-Znáš to? Paříš jak drak nebo posloucháš hudbu na plné pecky, a když tě máma volá k večeři, vůbec o ničem nevíš. Sestav proto pro rodiče chytré tlačítko, se kterým tě upozorní přes mobil a nevyřvou si hlasivky.
+Znáte to: zrovna hrajete hry nebo posloucháte hudbu naplno, a když vás máma volá k večeři, vůbec o tom nevíte. Sestavte proto rodičům chytré tlačítko, kterým vás upozorní přes mobil a nebudou muset křičet přes celý dům.
 
-V tomhle projektu se naučíš, **jak tlačítkem poslat zprávu do mobilu** odkudkoli v domě. 👌
+V tomto projektu se naučíte, **jak tlačítkem poslat zprávu do mobilu** odkudkoli v domě. 👌
 
-Budeš potřebovat krabičku s **tlačítkem** a **USB dongle**. Proto si vystačíš se základní HARDWARIO sadou, tedy [**Starter setem**](https://www.hardwario.store/p/start-set/).
+Budete potřebovat krabičku s **tlačítkem** a **USB dongle**. Vystačíte si tedy se základní sadou HARDWARIO [**Start Set**](https://www.hardwario.store/p/start-set/).
 
 
-## Rozjeď to v Node-RED
+## Rozjeďte to v Node-RED
 
-1. Starter set sestav a spáruj. Na Core Module potřebuješ firmware **radio push button**.
-2. V Playgroundu klikni na **záložku Functions**. Na ní si přednastavíš krabičku, aby dělala všechno, co chceš.
-3. Jde se programovat. 🤞 Na plochu Node-RED postav světle fialovou bublinu, neboli nod. Najdeš ho vlevo jako **MQTT** v sekci **Input**.
+1. Start Set sestavte a spárujte. Do modulu Core Module potřebujete firmware **radio push button**.
+2. V Playgroundu klikněte na **záložku Functions**. Tady krabičku nastavíte tak, aby dělala, co chcete.
+3. Jdeme programovat. 🤞 Na plochu Node-RED umístěte světle fialovou bublinu, tedy uzel. Najdete ho vlevo jako **MQTT** v sekci **Input**.
 
-![Rozjeď to v Node-RED](./img/button-for-parents/image3.png "Rozjeď to v Node-RED")
+![Rozjeďte to v Node-RED](./img/button-for-parents/image3.png "Rozjeďte to v Node-RED")
 
-**Pokud program otevíráš poprvé:** tenhle node máš na ploše přednastavený jako **node/#**. Druhou, tmavězelenou, bublinu můžeš smazat.
+**Pokud program otevíráte poprvé:** tento uzel už máte na ploše předem nastavený jako **node/#**. Druhou, tmavě zelenou bublinu můžete smazat.
 
-4. Uvnitř nodu nastavíš klíčovou funkci: a tou je klikání na tlačítko. Na node dvakrát klikni a **do pole Topic zkopíruj tenhle řádek**:
+4. V uzlu nastavíte klíčovou funkci, tedy stisk tlačítka. Dvakrát na uzel klikněte a **do pole Topic zkopírujte tento řádek**:
 
 ```
 node/push-button:0/push-button/-/event-count
@@ -30,122 +30,122 @@ node/push-button:0/push-button/-/event-count
 
 ![MQTT Topic](./img/button-for-parents/image9.png "MQTT Topic")
 
-Potvrď pomocí tlačítka **Done**.
+Potvrďte tlačítkem **Done**.
 
-**Tip:** Vidíš v Playgroundu záložku **Messages**? Tady se zobrazují všechny akce, řádek po řádku. Klikni na krabičce – a tadá, zobrazilo se ti to stejné:
+**Tip:** Vidíte v Playgroundu záložku **Messages**? Zobrazují se v ní všechny akce, řádek po řádku. Stiskněte tlačítko na krabičce a… tadá, objevil se stejný řádek:
 ```
 node/push-button:0/push-button/-/event-count
 ```
-Co to znamená? Že můžeš příště do pole Topic kopírovat řádky ze záložky Messages.
+Co to znamená? Příště můžete řádky do pole Topic kopírovat přímo ze záložky Messages.
 
-## Hoď tam vlastní zprávu
+## Napište vlastní zprávu
 
-1. Zprávu si nastavíš taky tady v Node-RED. Kamkoli vedle světle fialového inputu MQTT umísti **žlutý node ze sekce Functions s názvem Change**.
+1. Zprávu nastavíte také tady v Node-RED. Kamkoli vedle světle fialového vstupu MQTT umístěte **žlutý uzel Change ze sekce Functions**.
 
-![Node-RED Change node](./img/button-for-parents/image7.png "Node-RED Change node")
+![Uzel Change v Node-RED](./img/button-for-parents/image7.png "Uzel Change v Node-RED")
 
-2. Tenhle Change node mění, jak se akce projeví. Takže třeba pošle zprávu. Go wild a nastav si svoji vlastní (jenom pozor, na Blynku se nezobrazují háčky a čárky). Malá inspirace:
-	- Zranice!
+2. Uzel Change určuje, co se při stisku stane, třeba že se odešle zpráva. Popusťte uzdu fantazii a napište si vlastní (jen pozor, Blynk nezobrazuje háčky a čárky). Malá inspirace:
+	- Vecere!
 	- Cas krmeni
-	- Bez doplnit realnou manu
-	- Muj health potion byl prave uvaren
+	- Bez si doplnit skutecnou manu
+	- Lektvar zdravi je uvareny
 
-Uděláš to tak, že na node dvakrát klikneš a v poli **Rules** (pravidla) zprávu napíšeš do druhého řádku.
+Stačí na uzel dvakrát kliknout a v poli **Rules** (pravidla) napsat zprávu do druhého řádku.
 
-![Node-RED Change node edit](./img/button-for-parents/image5.png "Node-RED Change node edit")
+![Úprava uzlu Change v Node-RED](./img/button-for-parents/image5.png "Úprava uzlu Change v Node-RED")
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
-3. Na kraji každého nodu uvidíš malou šedou kuličku. Když na ni klikneš, klik podržíš a myš zatáhneš do strany, vytáhneš z nodu provázek. Tím se nody propojují.
-Zkus si to. **Oba nody propoj** táhnutím myší od jedné bubliny k druhé. Easy peasy. 🙆
+3. Na okraji každého uzlu uvidíte malou šedou kuličku. Když na ni kliknete, podržíte tlačítko myši a táhnete do strany, vytáhnete z uzlu provázek. Tak se uzly propojují.
+Vyzkoušejte to. **Oba uzly propojte** tažením myši od jedné bubliny ke druhé. Hračka. 🙆
 
 ![Node-RED](./img/button-for-parents/image6.png "Node-RED")
 
-## Připrav si applikaci Blynk IoT
+## Připravte si aplikaci Blynk IoT
 
-1. Pokud ještě nemáš, vytvoř si účet v aplikaci [Blynk IoT](https://blynk.io). Seznámíš se tam i s tím, jak se tvoří šablony a datastreamy. Obojí budeš potřebovat.
+1. Pokud ještě nemáte účet v aplikaci [Blynk IoT](https://blynk.io), založte si ho. Zároveň se tam seznámíte s tím, jak se vytvářejí šablony a datastreamy. Budete potřebovat obojí.
 
-2. Druhým krokem je vytvoření šablony zařízení. Klidně ale použij šablonu z předchozích projektů, pokud ji máš.
+2. Dalším krokem je vytvoření šablony zařízení. Pokud máte šablonu z předchozích projektů, klidně ji použijte.
 
-3. Teď si nastav nový Datastream. Na detailu šablony klikni na záložku **Datastreams**. Vpravo nahoře klikni na **Edit**. Objeví se ti tlačítko **+ New Datastream**, klikni na něj, vyber **Virtual Pin** a objeví se ti dialogové okno:
-
-
-![Node-RED](./img/button-for-parents/add-datastream-1.png "Node-RED")
-
-4. Nastav název pro nový Datastream a vyber jeden z volných Pinů. V mobilní notifikaci budeme chtít vypsat tvou vlastní zprávu, proto **zvol jako datový typ String** (textový řetězec). 
-
-5. V dialogovém okně dole ještě rozklikni **Advanced settings** a zaškrtni poslední volbu **Expose to Automation**, díky tomu ji budeme moct použít v automatizacích. V selektoru vedle zvol **Sensor** a zaškrtni taky **Available in Conditions**. Datastream vytvoříš kliknutím na **Create**. 
-
-![Node-RED](./img/button-for-parents/add-datastream-2.png "Node-RED")
+3. Teď nastavte nový datastream. V detailu šablony klikněte na záložku **Datastreams** a vpravo nahoře na **Edit**. Objeví se tlačítko **+ New Datastream**. Klikněte na něj, vyberte **Virtual Pin** a otevře se dialogové okno:
 
 
-6. Vpravo nahoře svou práci ulož tlačítkem **Save**.
+![Přidání datastreamu v Blynk IoT](./img/button-for-parents/add-datastream-1.png "Přidání datastreamu v Blynk IoT")
 
-## Založ zařízení
+4. Pojmenujte nový datastream a vyberte jeden z volných pinů. V notifikaci na mobilu chceme zobrazit vaši vlastní zprávu, proto **jako datový typ zvolte String** (textový řetězec).
 
-Pokud jej ještě nemáš, založ si zařízení z vytvořené šablony. 
+5. Dole v dialogovém okně ještě rozbalte **Advanced settings** a zaškrtněte poslední volbu **Expose to Automation**, abychom datastream mohli použít v automatizacích. V rozbalovacím seznamu vedle zvolte **Sensor** a zaškrtněte také **Available in Conditions**. Datastream vytvoříte kliknutím na **Create**.
 
-## Vytvoř automatizaci
-
-1. Přepni se do sekce **Automation** a klikni na tlačítko **+ Create Automation**.
+![Nastavení datastreamu v Blynk IoT](./img/button-for-parents/add-datastream-2.png "Nastavení datastreamu v Blynk IoT")
 
 
+6. Vpravo nahoře práci uložte tlačítkem **Save**.
 
-![Node-RED](./img/button-for-parents/add-automation-1.png "Node-RED")
+## Založte zařízení
 
+Pokud ho ještě nemáte, založte si z vytvořené šablony zařízení.
 
-2. Z dostupných možností vyber **Device State**. Automatizace vyhodnotí vždy, když do aplikace pošleš zprávu.
+## Vytvořte automatizaci
 
-
-![Node-RED](./img/button-for-parents/add-automation-2.png "Node-RED")
-
-
-3. Nastavení automatizace je jednoduché: v sekci **When** se nastaví, kdy se má automatizace spustit, a v sekci **Do this**, co se má následně stát. 
-
-4. Nejprve nastav sekci **When**. Vyber tvé zařízení a **vytvořený Datastream**. Objeví se ti třetí selector, ten nech nastavený na **Is Any**. 
-
-5. V sekci **Do This** klikni na **Send app notification** a nastav si příjemce. Pro zjednodušení tam nastav sebe. Do polí **Subject** a **Message** přetáhni myší položku **Trigger value**, jde o proměnnou, kde bude uložen text tvé zprávy.
-
-6. Nakonec nezapomeň nastavit **název automatizace**. V selectu **Limit period** můžeš omezit, kdy nejdříve po notifikaci přijde další. 
-
-
-![Node-RED](./img/button-for-parents/add-automation-3.png "Node-RED")
-
-7. Klikem na **Save** automatizaci ulož.
-
-## Nastav si appku na mobilu
-
-😎 Stáhni si na mobil **appku Blynk IoT** z z [App store](https://apps.apple.com/us/app/blynk-iot/id1559317868), nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk). Přihlas se do ní pod svým účtem.
+1. Přepněte se do sekce **Automation** a klikněte na tlačítko **+ Create Automation**.
 
 
 
-![Node-RED](./img/button-for-parents/blynk-iot.png "Node-RED")
-
-## Propoj mobil s krabičkou
-
-1. Vrať se k počítači. Na ploše Node-RED přidej za oba nody **zelený node Write**. Najdeš ho v levé části pod sekcí Blynk IoT.
-2. Node otevři dvojklikem. Vpravo uvidíš **malou tužku**. Klikni na ni a otevře se ti nové okno.
-3. Do pole **Url** vlož ``blynk.cloud``. 
-4. Do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové aplikaci na počítači.
-
-![Node-RED Blynk](./img/button-for-parents/playground-1.png "Node-RED Blynk")
-
-5. Nastavení potvrď tlačítkem **Add**. 
+![Nová automatizace v Blynk IoT](./img/button-for-parents/add-automation-1.png "Nová automatizace v Blynk IoT")
 
 
-6. Vyplň číslo virtuálního Pinu vytvořeného datastreamu a tlačítkem **Done** vše ulož.
+2. Z nabízených možností vyberte **Device State**. Automatizace se vyhodnotí pokaždé, když do aplikace pošlete zprávu.
 
-7. **Node s Blynkem propoj s nodem, do kterého si nastavil zprávu**. Teď si zařízení naprogramoval tak, aby se kliknutí na krabičce ➡️ proměnilo ve zprávu, ➡️ která doputuje až do tvého mobilu. 👾
 
-![Node-RED Blynk integration](./img/button-for-parents/playground-2.png "Node-RED Blynk integration")
+![Výběr podmínky automatizace v Blynk IoT](./img/button-for-parents/add-automation-2.png "Výběr podmínky automatizace v Blynk IoT")
 
-❗ Celý flow odstartuj a potvrď červeným tlačítkem **Deploy** vpravo nahoře. 🚨
+
+3. Nastavení automatizace je jednoduché: v sekci **When** určíte, kdy se má automatizace spustit, a v sekci **Do this**, co se pak má stát.
+
+4. Nejdřív nastavte sekci **When**. Vyberte své zařízení a **vytvořený datastream**. Objeví se třetí rozbalovací seznam, ten nechte nastavený na **Is Any**.
+
+5. V sekci **Do This** klikněte na **Send app notification** a nastavte příjemce. Pro jednoduchost zadejte sebe. Do polí **Subject** a **Message** přetáhněte myší položku **Trigger value**. Je to proměnná, ve které bude uložený text vaší zprávy.
+
+6. Nakonec nezapomeňte automatizaci **pojmenovat**. V poli **Limit period** můžete nastavit, za jak dlouho nejdříve může po jedné notifikaci přijít další.
+
+
+![Nastavení automatizace v Blynk IoT](./img/button-for-parents/add-automation-3.png "Nastavení automatizace v Blynk IoT")
+
+7. Automatizaci uložte kliknutím na **Save**.
+
+## Nastavte si aplikaci v mobilu
+
+😎 Stáhněte si do mobilu **aplikaci Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk). Přihlaste se do ní svým účtem.
+
+
+
+![Aplikace Blynk IoT v mobilu](./img/button-for-parents/blynk-iot.png "Aplikace Blynk IoT v mobilu")
+
+## Propojte mobil s krabičkou
+
+1. Vraťte se k počítači. Na plochu Node-RED přidejte za oba uzly **zelený uzel Write**. Najdete ho vlevo v sekci Blynk IoT.
+2. Uzel otevřete dvojklikem. Vpravo uvidíte **malou tužku**. Klikněte na ni a otevře se nové okno.
+3. Do pole **Url** vložte ``blynk.cloud``.
+4. Do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu zařízení ve webové aplikaci Blynk na počítači.
+
+![Uzel Blynk v Node-RED](./img/button-for-parents/playground-1.png "Uzel Blynk v Node-RED")
+
+5. Nastavení potvrďte tlačítkem **Add**.
+
+
+6. Vyplňte číslo virtuálního pinu vytvořeného datastreamu a vše uložte tlačítkem **Done**.
+
+7. **Uzel Blynku propojte s uzlem, ve kterém jste nastavili zprávu.** Teď jste zařízení naprogramovali tak, aby se stisk tlačítka na krabičce ➡️ proměnil ve zprávu, ➡️ která doputuje až do vašeho mobilu. 👾
+
+![Propojení Node-RED s Blynkem](./img/button-for-parents/playground-2.png "Propojení Node-RED s Blynkem")
+
+❗ Celý flow spusťte červeným tlačítkem **Deploy** vpravo nahoře. 🚨
 
 ## Akce!
 
-1. Zmáčkni tlačítko a… magic. 🎇 **Zpráva se ti ukáže na mobilu!** 🙌
-2. Tlačítko dej mámě nebo tátovi. Ti koukají, co? Rodinný mír a klid před večeří je zachráněn. 🤓
+1. Stiskněte tlačítko a… kouzlo! 🎇 **Zpráva se vám objeví v mobilu!** 🙌
+2. Dejte tlačítko mámě nebo tátovi. Koukají, co? Rodinný klid před večeří je zachráněn. 🤓
 
 
 
-![Node-RED](./img/button-for-parents/blynk-notification-dinner.jpg "Node-RED")
+![Notifikace Blynk v mobilu](./img/button-for-parents/blynk-notification-dinner.jpg "Notifikace Blynk v mobilu")

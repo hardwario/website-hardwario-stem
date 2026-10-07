@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 
 ### Experiment description
 
-From the HARDWARIO kit we will build an IoT button. The device will allow us to send information about its pressing and further work with this information.
+From the HARDWARIO kit we will build an IoT button. The device will send information about each press, and we will work with this information further.
 
 The communication will be done wirelessly to the Radio Dongle plugged into the USB port of the computer. The number of presses will be displayed in the HARDWARIO Playground application, or in the dashboard of the embedded Node-RED application.
 
@@ -45,7 +45,7 @@ Assemble the unit according to the [videotutorial](https://www.youtube.com/watch
 * Open the Playground application and go to the **Devices** tab
 * Select your Radio Dongle from the list of USB devices and click **Connect**
 * Click on **Start pairing**
-* Insert the batteries into the button and connect the adapter to the LED strip controller
+* Insert the batteries into the button
 
 **Setting up the function to display the number of presses and button temperature**
 

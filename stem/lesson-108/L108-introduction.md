@@ -5,7 +5,7 @@ title_meta: "Introduction (L108: IoT Pulse Monitor)"
 ---
 import Image from '@theme/IdealImage';
 
-The aim of the **IoT Pulse Counter** lesson is to show students the possibilities of online energy consumption monitoring (electricity, gas, water) using a pulse counter.
+The aim of the **IoT Pulse Monitor** lesson is to show students the possibilities of online energy consumption monitoring (electricity, gas, water) using a pulse counter.
 
 Students will build and program a device themselves to monitor pulses using the Sensor Set and a connected LED or magnetic sensor for converting meter impulses.
 

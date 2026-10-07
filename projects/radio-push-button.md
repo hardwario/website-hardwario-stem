@@ -134,7 +134,7 @@ In the **debug** tab, you will be able to see all the MQTT messages.
 
 :::success
 
-At this point, you've got working **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle**and **HARDWARIO Gateway**.
+At this point, you've got working **Node-RED**, **MQTT**, **HARDWARIO Radio Dongle** and **HARDWARIO Gateway**.
 
 :::
 

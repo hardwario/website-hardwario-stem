@@ -89,7 +89,7 @@ Tap it. Now let's set up the dashboard where we'll show the measured value:
 
 ## Connect your mobile with the box
 
-1. Go back to your computer. On the Node-RED canvas, add a green **Write node** after both nodes. You'll find it on the left under the Blynk IoT section.
+1. Go back to your computer. On the Node-RED canvas, add a green **Write node** after the MQTT node. You'll find it on the left under the Blynk IoT section.
 
 ![Node-RED Blynk write](./img/warmes-coldes-place/playground-0.png)
 

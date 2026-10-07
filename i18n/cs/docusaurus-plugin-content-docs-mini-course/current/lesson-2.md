@@ -1,39 +1,39 @@
 ---
 slug: lesson-2
-title: Lekce 2 - Měřte a vykreslujte
+title: Lekce 2 – Měřte a vykreslujte
 ---
 import Image from '@theme/IdealImage';
 
-🧑‍💻 **Trvání:** 30 minut
+🧑‍💻 **Trvání:** 30 minut  
 🎯 **Cílová skupina:** pro jednotlivce i malé skupiny
 
 ## 1. Úvod do vizuálního programování
 
-Playground umožňuje programování přetahováním bloků a okamžitě reaguje na připojené moduly.
+V aplikaci Playground programujete přetahováním bloků a aplikace okamžitě reaguje na připojené moduly.
 
-## 2. Začínáme s HARDWARIO Playgroundem
+## 2. Začínáme s aplikací HARDWARIO Playground
 
 Ověřte si, že máte z předchozí lekce vše připraveno:
 
-✅ Playground je spuštěný
-✅ Dongle je připojený
-✅ PIR senzor má baterie
+✅ Playground je spuštěný  
+✅ Dongle je připojený  
+✅ PIR senzor má baterie  
 ✅ V **Messages** vidíte výstupy z PIR senzoru
 
 ## 3. První program
 
-Vytvořte program pro zpracování výstupů z **PIR Module**.
+Vytvořte program, který zpracuje výstupy z **PIR Module**.
 
 :::info
 
-Tento text není úplná dokumentace **Node-RED**.
-Pro hlubší pochopení doporučujeme [oficiální příklady](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
+Tento text nenahrazuje úplnou dokumentaci **Node-RED**.
+Chcete-li proniknout hlouběji, doporučujeme [oficiální příklady](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
 
 :::
 
 **Úkol:** Připravte **přehledový dashboard** s následujícími prvky:
 
-- 🧭 **Měřidlo (gauge)** pro orientaci **PIR Module**
+- 🧭 **Budík (gauge)** pro orientaci **PIR Module**
 - 📈 **Graf orientace v čase**
 - 🌡️ **Graf teploty v čase**
 
@@ -65,9 +65,9 @@ Výsledný dashboard
 
 ✅ Už umíte připojit moduly, sledovat jejich výstupy a zobrazit je graficky.
 
-👉 Zkuste připojit také **Climate Module** a sledovat tlak, vlhkost nebo světlo.
+👉 Zkuste připojit také **Climate Module** a sledovat tlak, vlhkost nebo osvětlenost.
 
 :::info
-V této lekci byl **PIR Module** použit pro orientaci a teplotu.
-Jeho detekce pohybu je méně vhodná pro rychlé testování, ale můžete ji vyzkoušet, pokud je v okolí klid.
+V této lekci jste z **PIR Module** využili orientaci a teplotu.
+Detekce pohybu se pro rychlé testování hodí méně, ale můžete ji vyzkoušet, když je v okolí klid.
 :::

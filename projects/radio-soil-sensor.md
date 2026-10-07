@@ -110,7 +110,7 @@ Make sure the **Battery Module** does not have batteries inserted.
 
 ## Radio Pairing
 
-In this section, we will create a radio link between the **Radio Dongle** and the **Radio Climate Monitor**.
+In this section, we will create a radio link between the **Radio Dongle** and the **Radio Soil Sensor**.
 
 Follow these steps in **Node-RED**:
 
@@ -130,7 +130,7 @@ Make sure, that after pressing the **Start node pairing** button in the right **
 
 #### Step 2: Assembly
 
-Insert the batteries into the **Radio Climate Monitor** to send the pairing request (you should also see the red LED on the **Core Module** to be on for about 2 seconds).
+Insert the batteries into the **Radio Soil Sensor** to send the pairing request (you should also see the red LED on the **Core Module** to be on for about 2 seconds).
 
 In the **Node-RED** debug tab, there is a message about name and firmware version of the new paired module.
 
@@ -150,7 +150,7 @@ In the **Node-RED** debug tab, there is a message about name and firmware versio
 
 :::success
 
-At this point, you've got established a radio link between the node (**Radio Moisture Sensor**) and the gateway (**Radio Dongle**).
+At this point, you've got established a radio link between the node (**Radio Soil Sensor**) and the gateway (**Radio Dongle**).
 
 :::
 

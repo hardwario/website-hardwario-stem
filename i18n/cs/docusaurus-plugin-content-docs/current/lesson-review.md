@@ -3,7 +3,7 @@ slug: lesson-review
 title: Časové dotace lekcí
 ---
 
-**Naše STEM lekce jsou připraveny tak, aby je bylo možné realizovat během jedné vyučovací hodiny**, mají tedy časovou dotaci **45 min**. Každou lekci lze prodloužit rozšířením experimentů a projektů studentů.
+**Naše STEM lekce jsou připravené tak, aby se vešly do jedné vyučovací hodiny**, mají tedy časovou dotaci **45 min**. Každou lekci lze prodloužit, pokud rozšíříte experimenty a studentské projekty.
 
 
 ## Úvod do lekce
@@ -12,38 +12,38 @@ title: Časové dotace lekcí
 
 Přivítání studentů a představení průběhu lekce. Seznámení s jednotlivými fázemi lekce podle pedagogického rámce. Vzájemné představení studentů a zjištění jejich očekávání a potřeb. Vyplnění znalostního testu.
 
-**Časová dotace:** 0–5 min. 
+**Časová dotace**: 0–5 min. 
 
 ## Teoretická příprava
 
 
 ### Anotace
 
-Teoretická příprava pro experimenty a samostatnou práci studentů. Lektor má hlavní roli, studenti jsou informováni o cílech výuky a teoriích spjatých se zvoleným tématem.
+Teoretická příprava pro experimenty a samostatnou práci studentů. Hlavní slovo má lektor, který studenty seznámí s cíli výuky a s teorií ke zvolenému tématu.
 
 **Časová dotace**: 10 min.
 
-## Experiment - Praktická příprava
+## Experiment – praktická příprava
 
 ### Anotace
 
-Praktická příprava pro samostatnou práci studentů. Lektor vede experimenty, studenti pod jeho supervizí pracují na vzorových IoT projektech spjatých s tématem lekce.
+Praktická příprava pro samostatnou práci studentů. Lektor vede experimenty a studenti pod jeho dohledem pracují na vzorových IoT projektech k tématu lekce.
 
 **Časová dotace**: 10 min. 
 
-## Apply - Projekty studentů
+## Apply – projekty studentů
 
 ### Anotace
 
-Týmová práce studentů na zvolených IoT projektech. Lektor je mentorem, pomáhá studentům s volbou projektů (zvažuje znalosti a schopnosti studentů a časovou dotaci). Studenti v týmech pracují na návrhu, tvorbě a přípravě prezentace IoT projektů. V případě malé časové dotace lze v této fázi použít metodu [Ideation](https://en.wikipedia.org/wiki/Ideation_(creative_process)).
+Týmová práce studentů na zvolených IoT projektech. Lektor působí jako mentor a pomáhá studentům vybrat projekty (s ohledem na jejich znalosti, schopnosti a dostupný čas). Studenti v týmech projekty navrhují, vytvářejí a připravují jejich prezentaci. Pokud je času málo, lze v této fázi použít metodu [Ideation](https://en.wikipedia.org/wiki/Ideation_(creative_process)).
 
 **Časová dotace**: 10 min.
 
-## Reflect - Prezentace projektů
+## Reflect – prezentace projektů
 
 ### Anotace
 
-Studenti prezentují své IoT projekty či nápady ostatním. Lektor a ostatní studenti kriticky hodnotí prezentované myšlenky a přemýšlejí o důležitosti výstupů projektů a témat lekce, včetně důležitosti internetu věcí v reálném světě.  
+Studenti prezentují své IoT projekty či nápady ostatním. Lektor a ostatní studenti prezentované myšlenky kriticky hodnotí a přemýšlejí o tom, jaký význam mají výsledky projektů a témata lekce a jakou roli hraje internet věcí v reálném světě.  
 
 **Časová dotace**: 10 min.
 
@@ -51,7 +51,7 @@ Studenti prezentují své IoT projekty či nápady ostatním. Lektor a ostatní 
 
 ### Anotace
 
-Slovní hodnocení prezentovaných projektů skupinou. Rekapitulace splnění výukových cílů lektorem. Provedení znalostního testu a 3-2-1 assessmentu.
+Skupina slovně zhodnotí prezentované projekty. Lektor shrne, jak se podařilo splnit výukové cíle. Studenti znovu vyplní znalostní test a provedou 3-2-1 hodnocení.
 
 **Časová dotace**: 0–5 min.
 

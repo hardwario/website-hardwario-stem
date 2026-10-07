@@ -42,7 +42,7 @@ For Debian you can follow [Debian/Ubuntu install tutorial](https://www.chirpstac
 
 :::info
 
-In the Debian/Ubuntu installation tutorial there is a Postgress table creation script. You can copy complete script and paste it into the Posgress console. After table creation you just press enter and that executes the last command to exit the prompt.
+In the Debian/Ubuntu installation tutorial there is a PostgreSQL table creation script. You can copy complete script and paste it into the PostgreSQL console. After table creation you just press enter and that executes the last command to exit the prompt.
 
 :::
 
@@ -50,7 +50,7 @@ In the Debian/Ubuntu installation tutorial there is a Postgress table creation s
 
 :::info
 
-Do no forget to enable to open port 8080 in your server firewall for Chirp web page and 1700 for the Gateway Bridge. Also if you use MQTT open port 1883. If you use `ufw` then type `sudo ufw allow 8080`.
+Do not forget to open port 8080 in your server firewall for Chirp web page and 1700 for the Gateway Bridge. Also if you use MQTT open port 1883. If you use `ufw` then type `sudo ufw allow 8080`.
 
 :::
 

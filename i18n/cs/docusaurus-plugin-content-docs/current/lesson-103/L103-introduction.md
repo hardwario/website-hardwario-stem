@@ -5,7 +5,7 @@ title_meta: "Úvod (L103: IoT tlačítko)"
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **Notifikační IoT tlačítko** je v rámci jedné vyučovací hodiny představit nekonečné možnosti uplatnění IoT tlačítka v řadě domácích i průmyslových projektech.
+Cílem lekce **Notifikační IoT tlačítko** je během jedné vyučovací hodiny ukázat, jak rozmanitě se dá IoT tlačítko využít v domácích i průmyslových projektech.
 
 ## Co budete v rámci lekce potřebovat?
 

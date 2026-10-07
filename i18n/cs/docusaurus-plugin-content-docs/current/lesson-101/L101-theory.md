@@ -1,7 +1,7 @@
 ---
 slug: what-is-iot-theory
 title: Teorie
-title_meta: "Teorie (L101: Co je to Internet věcí - IoT)"
+title_meta: "Teorie (L101: Co je to internet věcí – IoT)"
 ---
 import Image from '@theme/IdealImage';
 
@@ -9,15 +9,15 @@ import Image from '@theme/IdealImage';
 
 ## Co to je STEM
 
-STEM je zkratka **SCIENCE-TECHNOLOGY-ENGINEERING-MATHEMATICS**.
+STEM je zkratka anglických slov **Science, Technology, Engineering, Mathematics** (přírodní vědy, technologie, technika, matematika).
 
-Nové věci se **učíme najednou**. Nové věci se **učíme na projektech z reálného života**.
+Jednotlivé obory se **učíme společně**. Nové věci se **učíme na projektech z reálného života**.
 
-**V rámci STEM výuky HARDWARIO se učíme na reálných projektech internetu věcí**.
+**Ve STEM výuce HARDWARIO se učíme na reálných projektech internetu věcí.**
 
 ## Co to je IoT
 
-Internet věcí (anglicky Internet of Things, zkratka IoT) je označení pro síť fyzických zařízení, vozidel, domácích spotřebičů a dalších zařízení, která jsou vybavena elektronikou, softwarem, senzory, pohyblivými částmi a síťovou konektivitou, která umožňuje těmto zařízením se propojit a vyměňovat si data.
+Internet věcí (anglicky Internet of Things, zkratka IoT) je označení pro síť fyzických zařízení, vozidel, domácích spotřebičů a dalších zařízení, která jsou vybavena elektronikou, softwarem, senzory, pohyblivými částmi a síťovou konektivitou, díky které se mohou propojit a vyměňovat si data.
 
 A také to je fenomén, bublina, hrozba a příležitost. Příležitost udělat svět bezpečnější, šetrnější, efektivnější a zábavnější.
 
@@ -28,40 +28,40 @@ A také to je fenomén, bublina, hrozba a příležitost. Příležitost udělat
 ### Ukázky
 
 * [**Riziko nesprávné interpretace dat**](https://youtu.be/nwPtcqcqz00)
-* [**Riziko nabourání se do soukromí**](https://youtu.be/_CQA3X-qNgA)
+* [**Riziko narušení soukromí**](https://youtu.be/_CQA3X-qNgA)
 
 ## V čem IoT pomáhá a jak nás ohrožuje
 
-Internet věcí je tady pro to, aby nám pomáhal. Dnes se zejména dotýká těchto oblastí:
+Internet věcí je tu proto, aby nám pomáhal. Dnes se týká hlavně těchto oblastí:
 
-* Bezpečnost: víme, co se děje v našich objektech, kde se nachází naše děti, ...
-* Zdraví: regulujeme prostředí, ve kterém žijeme a pracujeme, rychleji a přesněji reagujeme na zdravotní stav, ...
-* Ekonomika: lépe plánujeme, optimalizujeme procesy, usnadňujeme si život, ...
-* Ekologie: šetříme zdroje i přírodu, ...
-* Zábava: objevujeme nové formy zábavy, ...
+* Bezpečnost: víme, co se děje v našich objektech, kde jsou naše děti atd.
+* Zdraví: regulujeme prostředí, ve kterém žijeme a pracujeme, rychleji a přesněji reagujeme na zdravotní stav atd.
+* Ekonomika: lépe plánujeme, optimalizujeme procesy, usnadňujeme si život atd.
+* Ekologie: šetříme zdroje i přírodu atd.
+* Zábava: objevujeme nové formy zábavy atd.
 
 Existují i rizika spojená s rozvojem IoT:
 
 * Zneužití dat
-* Nabourání se do soukromí
+* Narušení soukromí
 * Nesprávná interpretace dat
 * Zahlcení přemírou špatně strukturovaných informací
 
-IoT vlastně znamená, že věci okolo nás s námi mohou komunikovat, tedy posílat nám informace, případně si tyto informace vyměňovat samy. Již toto je ohromný posun kupředu, protože nám umožňuje výrazně zrychlit a zefektivnit mnoho činností, dělat informovaná a tedy lepší rozhodnutí, lépe plánovat svůj čas, zvládnout spoustu aktivit na dálku, aniž bychom museli složitě cestovat, nebo zajišťovat jejich ovládání prostřednictvím jiné osoby.
+IoT vlastně znamená, že věci kolem nás s námi mohou komunikovat, tedy posílat nám informace, případně si je vyměňovat mezi sebou. Už to je obrovský krok kupředu: díky tomu můžeme výrazně zrychlit a zefektivnit mnoho činností, dělat informovaná, a tedy lepší rozhodnutí, lépe plánovat svůj čas a zvládnout spoustu věcí na dálku, aniž bychom museli složitě cestovat nebo je za nás musel ovládat někdo jiný.
 
-Prostě v IoT máme v rukou nástroj s ohromným potenciálem zlepšit naše životy.
+Zkrátka, v IoT máme v rukou nástroj s ohromným potenciálem zlepšit naše životy.
 
 ## IoT hardware
 
-### Co jsou to ty "věci"
+### Co jsou to ty „věci“
 
-Jsou to fyzická zařízení, která měří, ovládají, komunikují. Patří mezi ně zejména:
+Jsou to fyzická zařízení, která měří, ovládají a komunikují. Patří mezi ně zejména:
 
 * Senzory
 * Akční členy
 * Ovladače
 
-Jiným pohledem můžeme za THINGS označit komplexnější zařízení:
+Z jiného pohledu můžeme za věci (things) považovat i složitější zařízení:
 
 * Vozidla
 * Průmyslové stroje
@@ -69,7 +69,7 @@ Jiným pohledem můžeme za THINGS označit komplexnější zařízení:
 
 **Důležité!**
 
-Společnými znaky THINGS ale vždy jsou:
+Všechny věci (things) však mají vždy tyto společné znaky:
 
 * Jde o fyzické zařízení
 * Je vybavené elektronikou
@@ -78,9 +78,9 @@ Společnými znaky THINGS ale vždy jsou:
 
 ### Centrální IoT zařízení
 
-Nezbytnou podmínkou internetu věcí je, že jsou zařízení připojená k internetu. V mnoha případech je ale výhodnější zařízení připojit k internetu skrze nějaký centrální prvek, tzv. Hub. V takovém případě komunikují zařízení neinternetovým protokolem mezi sebou a s Hubem a k internetu je připojen pouze Hub.
+Nezbytnou podmínkou internetu věcí je, že jsou zařízení připojená k internetu. Často je ale výhodnější připojit je k internetu přes nějaký centrální prvek, tzv. hub. Zařízení pak mezi sebou i s hubem komunikují jiným než internetovým protokolem a k internetu je připojen jen hub.
 
-Na trhu existuje mnoho centrálních Hubů, mezi ty nejpopulárnější v oblasti open-source hnutí patří Huby postavené na Raspberry Pi, nebo v Česku vyvíjený router Turris.
+Na trhu je mnoho centrálních hubů. V open-source komunitě patří k nejoblíbenějším huby postavené na Raspberry Pi nebo router Turris vyvíjený v Česku.
 
 ### Ostatní IoT hardware
 
@@ -92,50 +92,50 @@ Na vzestupu jsou hlasoví asistenti jako Google Assistant, Amazon Alexa, Microso
 
 **Důležité!**
 
-Firmware je software pro řízení nějakého vestavěného (embedded) systému. Díky firmwaru se zařízení chová tak, jak chceme. Například každých 15 min. měří úroveň CO2 a každou hodinu odešle naměřené vzorky do cloudu.
+Firmware je software, který řídí vestavěný (embedded) systém. Díky firmwaru se zařízení chová tak, jak chceme: například každých 15 minut změří koncentraci CO2 a každou hodinu odešle naměřené hodnoty do cloudu.
 
-Důležitou vlastností firmwaru je řízení spotřeby zařízení, což je kritická záležitost zejména u bateriově napájených produktů. I proto se doporučuje psát firmware v úsporných programovacích jazycích (např. C), aby samotné výpočetní operace netrvaly příliš dlouho a neubíraly potřebnou energii.
+Důležitým úkolem firmwaru je řídit spotřebu zařízení, což je zásadní hlavně u výrobků napájených z baterií. I proto se firmware doporučuje psát v efektivních programovacích jazycích (např. v jazyce C), aby samotné výpočty netrvaly příliš dlouho a zbytečně nevybíjely baterii.
 
-Vzhledem k paměťovým možnostem embedded zařízení je také nutné brát ohled na velikost kódu. Psaní firmwaru je tedy velmi náročná disciplína.
+Kvůli omezené paměti vestavěných zařízení je také nutné hlídat velikost kódu. Psaní firmwaru je tedy velmi náročná disciplína.
 
 ### IoT platformy
 
-Přidaná hodnota internetu věcí netkví v IoT zařízeních, ale v analýzách získaných dat z těchto zařízení. Nashromážděná data se označují jako tzv. Big Data, a ta jsou ukládána a zpracovávána v backendových platformách. Dnes se již ustoupilo od provozování vlastních backendů a využívají se vysoce dostupná a škálovatelná řešení od Amazonu (AWS), Microsoftu (Azure) nebo Google. Toto nemusí platit pro uzavřené systémy, kdy výrobce nabízí kompletní řešení sestávající z hardwaru a aplikace a provozuje systém na vlastní infrastruktuře.
+Přidaná hodnota internetu věcí netkví v samotných zařízeních, ale v analýze dat, která z nich získáme. Nashromážděným datům se říká big data a ukládají se a zpracovávají na backendových platformách. Od provozu vlastních backendů se dnes již ustoupilo a využívají se vysoce dostupná a škálovatelná řešení od Amazonu (AWS), Microsoftu (Azure) nebo Googlu. To nemusí platit pro uzavřené systémy, ve kterých výrobce nabízí kompletní řešení z hardwaru a aplikace a provozuje ho na vlastní infrastruktuře.
 
 ### IoT aplikace
 
-Nabídka aplikací pro IoT je obrovská a dynamicky se rozšiřuje. Velcí hráči provozující IoT platformy nabízejí vlastní řešení (např. Microsoft a jeho IoT Central), ale existuje mnoho vynikajících IoT aplikací vyvíjených menšími společnostmi, jako např. IFTTT, Ubidots atd. Drtivá většina aplikací existuje v desktopové i mobilní variantě pro chytré telefony.
+Nabídka aplikací pro IoT je obrovská a dynamicky se rozšiřuje. Velcí hráči, kteří provozují IoT platformy, nabízejí vlastní řešení (např. Microsoft a jeho IoT Central), ale existuje i mnoho vynikajících IoT aplikací od menších společností, například IFTTT nebo Ubidots. Drtivá většina aplikací má desktopovou i mobilní verzi pro chytré telefony.
 
 ## IoT konektivita
 
 ### Přenosové protokoly
 
-Protokol je v informatice konvence nebo standard, podle kterého probíhá elektronická komunikace a přenos dat mezi dvěma koncovými body (realizované nejčastěji počítači). Jednodušeji řečeno je to jazyk, kterým rozumí všechny prvky nějakého komunikačního systému.
+Protokol je v informatice konvence nebo standard, podle kterého probíhá elektronická komunikace a přenos dat mezi dvěma koncovými body (nejčastěji počítači). Jednodušeji řečeno je to jazyk, kterému rozumějí všechny prvky komunikačního systému.
 
-V rámci internetu se používá mnoho protokolů, mezi hlavní patří rodina přenosových protokolů TCP/IP (IP, TCP, UDP ad.). Všeobecně nejznámějšími jsou aplikační protokoly jako např. HTTPS nebo IMAP.
+Na internetu se používá mnoho protokolů, mezi hlavní patří rodina přenosových protokolů TCP/IP (IP, TCP, UDP a další). Nejznámější jsou aplikační protokoly, například HTTPS nebo IMAP.
 
-Pro komunikaci v IoT se používá celá řada protokolů, my se ale zaměříme na protokol MQTT, který se stal standardem, je podporován téměř všemi IoT hráči a je používán v naší stavebnici HARDWARIO TOWER.
+V IoT se ke komunikaci používá celá řada protokolů. My se zaměříme na protokol MQTT, který se stal standardem, podporují ho téměř všichni hráči na trhu IoT a používá ho i stavebnice HARDWARIO TOWER.
 
 ### MQTT
 
 :::tip
 
-MQTT (z anglického Message Queuing Telemetry Transport) je protokol standardizovaný ISO a postavený na principu publish-subscribe (publikuj-odebírej). A jak může vypadat do systému publikovaná zpráva? Skládá se z tzv. topiku (Topic) a vlastního obsahu, např.:
+MQTT (z anglického Message Queuing Telemetry Transport) je protokol standardizovaný ISO a postavený na principu publish-subscribe (publikuj-odebírej). Jak může vypadat zpráva publikovaná do systému? Skládá se z tzv. topicu (Topic) a vlastního obsahu, například:
 
 :::
 
 * Topic: `mujdum/prizemi/vypinace/vypinac1`
 * Obsah: `1`
 
-Zpráva tedy říká, že vypínač jedna ze skupiny vypínačů v přízemí mého domu je ve stavu 1, což bývá nejčastěji ZAPNUTO.
+Zpráva tedy říká, že vypínač č. 1 ze skupiny vypínačů v přízemí mého domu je ve stavu 1, což obvykle znamená ZAPNUTO.
 
 :::info
 
-Pokud se k této zprávě přihlásí konkrétní žárovka, pak bude svítit do doby, než dorazí zpráva mujdum/prizemi/vypinace/vypinac1 0, nebo když se rozbije :)
+Pokud se k odběru této zprávy přihlásí konkrétní žárovka, bude svítit, dokud nedorazí zpráva mujdum/prizemi/vypinace/vypinac1 0, nebo dokud se nerozbije :)
 
 :::
 
-Prvky MQTT systému komunikují se serverem, kterému se často říká broker. Je to vlastně pošťák, který doručuje zprávy z publikujících zařízení k těm, které se přihlásily k jejich odběru. My používáme open-source [Mosquitto broker](https://mosquitto.org/).
+Prvky systému MQTT komunikují se serverem, kterému se často říká broker. Je to vlastně pošťák, který doručuje zprávy z publikujících zařízení k těm, které se přihlásily k jejich odběru. My používáme open-source broker [Mosquitto](https://mosquitto.org/).
 
 ### Bezdrátové přenosy
 
@@ -143,19 +143,19 @@ Už víme, jakým jazykem spolu IoT zařízení komunikují a kdo komunikaci ř�
 
 #### Lokální bezdrátové přenosy
 
-Ve světě IoT se pro lokální bezdrátové přenosy používají všeobecně známé standardy, např. Wi-Fi nebo Bluetooth. Existují rovněž speciální bezdrátové technologie jako [ZigBee](https://cs.wikipedia.org/wiki/ZigBee) nebo [Z-Wave](https://en.wikipedia.org/wiki/Z-Wave), které mají vlastní komunikační protokoly. Důležitým aspektem pro bezdrátové přenosy je volba frekvenčního pásma. Ta ovlivňuje kvalitu přenosu: dosah, spolehlivost a spotřebu.
+Ve světě IoT se pro lokální bezdrátové přenosy používají všeobecně známé standardy, např. Wi-Fi nebo Bluetooth. Existují rovněž speciální bezdrátové technologie jako [ZigBee](https://cs.wikipedia.org/wiki/ZigBee) nebo [Z-Wave](https://en.wikipedia.org/wiki/Z-Wave), které mají vlastní komunikační protokoly. Pro bezdrátový přenos je důležitá volba frekvenčního pásma, protože ovlivňuje kvalitu přenosu: dosah, spolehlivost a spotřebu.
 
-Pro IoT zařízení, které většinou nepřenášejí velká data, se nejvíce hodí bezdrátové přenosy v tzv. Sub-GHz pásmu. V tomto pásmu jsou pro tyto účely vyhrazené bezlicenční frekvence, pro EU např. 868 MHz. Ve srovnání s Wi-Fi (provozovanou na frekvencích 2,4 a 5 GHz) má Sub-GHz téměř dvojnásobně vyšší dosah, vyšší spolehlivost (díky nižší frekvenci a méně zařízením používajícím toto pásmo) a výrazně nižší nároky na výkon, tedy nižší spotřebu. Hodí se tedy pro zařízení běžící na baterie, jako například stavebnici HARDWARIO TOWER.
+Pro IoT zařízení, která většinou nepřenášejí velké objemy dat, se nejvíce hodí bezdrátový přenos v tzv. pásmu sub-GHz. V tomto pásmu jsou pro tyto účely vyhrazené bezlicenční frekvence, pro EU např. 868 MHz. Ve srovnání s Wi-Fi (provozovanou na frekvencích 2,4 a 5 GHz) má pásmo sub-GHz téměř dvojnásobný dosah, vyšší spolehlivost (díky nižší frekvenci a méně zařízením používajícím toto pásmo) a výrazně nižší nároky na výkon, tedy nižší spotřebu. Proto se hodí pro zařízení napájená z baterií, například pro stavebnici HARDWARIO TOWER.
 
 #### Globální bezdrátové přenosy
 
 Globální přenosové systémy se používají zejména pro mobilní objekty nebo zařízení instalovaná v místech bez připojení k internetu.
 
-V současnosti nejvíce používanými systémy pro globální bezdrátové přenosy jsou technologie mobilních operátorů, tedy 2G (GPRS, EDGE), 3G a 4G (LTE) sítě. IoT zařízení jsou vybavena SIM kartou a připojují se k internetu skrze zvolenou mobilní síť. Nevýhodou těchto technologií je náročnost na energii, nehodí se tedy pro bateriově napájená zařízení. Naštěstí se začaly budovat nové IoT sítě souhrnně označované jako LPWAN.
+Pro globální bezdrátové přenosy se dnes nejčastěji používají sítě mobilních operátorů, tedy 2G (GPRS, EDGE), 3G a 4G (LTE). IoT zařízení mají SIM kartu a k internetu se připojují přes zvolenou mobilní síť. Nevýhodou těchto technologií je vysoká spotřeba energie, proto se nehodí pro zařízení napájená z baterií. Naštěstí se začaly budovat nové IoT sítě souhrnně označované jako LPWAN.
 
 **Důležité!**
 
-[LPWAN](https://en.wikipedia.org/wiki/Low-power_wide-area_network) je z anglického Low-Power Wide Area Network, tzn. sítě s nízkými nároky na energii pro komunikaci a pokrývající větší území. Patří mezi ně [NB-IoT](https://en.wikipedia.org/wiki/Narrowband_IoT), [LoRaWAN](https://en.wikipedia.org/wiki/LoRa) a [Sigfox](https://en.wikipedia.org/wiki/Sigfox). Každá z těchto sítí má svá specifika, všechny jsou ale vhodné pro IoT zařízení napájené z baterií a provozované v místech, kde není standardní připojení k internetu (např. Wi-Fi). Proto nabízejí perfektní IoT řešení v zemědělství, lesnictví, vodním hospodářství.
+[LPWAN](https://en.wikipedia.org/wiki/Low-power_wide-area_network) je zkratka anglického Low-Power Wide Area Network, tedy síť s nízkou spotřebou energie, která pokrývá velké území. Patří mezi ně [NB-IoT](https://en.wikipedia.org/wiki/Narrowband_IoT), [LoRaWAN](https://en.wikipedia.org/wiki/LoRa) a [Sigfox](https://en.wikipedia.org/wiki/Sigfox). Každá z těchto sítí má svá specifika, všechny jsou ale vhodné pro IoT zařízení napájená z baterií a provozovaná v místech, kde není standardní připojení k internetu (např. Wi-Fi). Proto se výborně hodí pro IoT řešení v zemědělství, lesnictví nebo vodním hospodářství.
 
 Ukázky
 
@@ -163,4 +163,4 @@ Ukázky
 
 ### Drátové přenosy
 
-Data z IoT zařízení lze samozřejmě přenášet i drátově. Pokud to podmínky umožňují, můžete své IoT zařízení připojit k internetu pomocí ethernetu. Častěji se ale setkáváme s řešením, kdy se jednotlivá IoT zařízení připojují drátově k Hubu, který je následně připojen do internetu. V takových případech se používají standardy [I²C](https://cs.wikipedia.org/wiki/I%C2%B2C), [1-Wire](https://cs.wikipedia.org/wiki/1-Wire), [RS-232](https://cs.wikipedia.org/wiki/RS-232), [RS485](https://cs.wikipedia.org/wiki/RS-485).
+Data z IoT zařízení lze samozřejmě přenášet i drátově. Pokud to podmínky umožňují, můžete své IoT zařízení připojit k internetu pomocí ethernetu. Častěji se ale setkáváme s řešením, kdy se jednotlivá IoT zařízení připojují drátově k hubu, který je pak připojen k internetu. V takových případech se používají standardy [I²C](https://cs.wikipedia.org/wiki/I%C2%B2C), [1-Wire](https://cs.wikipedia.org/wiki/1-Wire), [RS-232](https://cs.wikipedia.org/wiki/RS-232) a [RS-485](https://cs.wikipedia.org/wiki/RS-485).

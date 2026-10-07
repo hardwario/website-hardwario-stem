@@ -5,11 +5,11 @@ title_meta: "Úvod (L102: IoT stavebnice HARDWARIO TOWER)"
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **IoT stavebnice HARDWARIO TOWER** je v rámci jedné vyučovací hodiny představit možnosti průmyslové stavebnice určené ke stavění zařízení internetu věcí. V rámci lekce se studenti seznámí s principy fungování a základními moduly stavebnice TOWER a s prací v rámci aplikace Playground. 
+Cílem lekce **IoT stavebnice HARDWARIO TOWER** je během jedné vyučovací hodiny představit možnosti průmyslové stavebnice, ze které se staví zařízení internetu věcí. Studenti se seznámí s tím, jak stavebnice TOWER funguje, s jejími základními moduly a s prací v aplikaci Playground. 
 
 ## Co budete v rámci lekce potřebovat?
 
 * Počítač s nainstalovanou aplikací [HARDWARIO Playground](https://github.com/hardwario/hardwario-playground/releases)
 * Projektor nebo větší monitor
-* Sadu [Start IoT](https://www.hardwario.store/cz/p/start-set) stavebnice HARDWARIO TOWER
-* Volitelně [další sestavy](https://www.hardwario.store/cz/tower) IoT stavebnice HARDWARIO TOWER
+* [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER
+* Volitelně [další sady](https://www.hardwario.store/cz/tower) IoT stavebnice HARDWARIO TOWER

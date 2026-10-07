@@ -9,30 +9,30 @@ import Image from '@theme/IdealImage';
 
 ## Význam a funkce IoT tlačítka
 
-Tlačítko je jedním z nejzákladnějších a nejvíce používaných zařízení doma, ve škole i v práci. Provází nás po celý den, od zaklapnutí budíku až po vypnutí televize dálkovým ovladačem. Přeměna tlačítka na IoT zařízení přináší mnoho výhod:
+Tlačítko je jedním z nejzákladnějších a nejpoužívanějších zařízení doma, ve škole i v práci. Provází nás celý den, od umlčení budíku až po vypnutí televize dálkovým ovladačem. Když z tlačítka uděláme IoT zařízení, získáme řadu výhod:
 
-* Přidává ke stlačení tlačítka časovou značku
-* Umožnuje stlačení tlačítka odkudkoliv
-* Urychluje přenos informace o stlačení dalším adresátům
+* Ke každému stisku přidá časovou značku
+* Dá se stisknout odkudkoli
+* Informaci o stisku rychleji předá dalším adresátům
 
-## Vyžití IoT tlačítka v reálném životě
+## Využití IoT tlačítka v reálném životě
 
 IoT tlačítko se uplatňuje v mnoha oborech a životních situacích:
 
 ### Domácnost
 
-* Chytrý domovní zvonek: např. ve svém chytrém telefonu vidíme, že někdo zvoní u nás doma
+* Chytrý domovní zvonek: např. na chytrém telefonu vidíme, že u nás doma někdo zvoní
 * Automatické objednání často nakupovaného zboží: např. tlačítko u prášku na praní
 * Přivolání člena domácnosti: např. svolání k večeři
-* Ovládání zařízení: např. vzdálené ovládání dveří, brány nebo garážových vrat
+* Ovládání zařízení: např. dálkové ovládání dveří, brány nebo garážových vrat
 
 ### Práce
 
 * Hlášení stavu výroby: např. systém [ANDON](https://cs.wikipedia.org/wiki/Andon)
 * Nahlášení požadavku: např. přivolání údržby na pracoviště
-* Záznam operací: např. záznam nekvalitních výrobků
+* Záznam operací: např. evidence vadných výrobků
 
 ### Škola
 
 * Nahlášení požadavku: např. přivolání úklidu toalet
-* Ovládání zařízení: např. vzdálené ovládání dveří tělocvičny  
+* Ovládání zařízení: např. dálkové ovládání dveří tělocvičny  

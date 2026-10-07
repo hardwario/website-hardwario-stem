@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 Connect your HARDWARIO TOWER modules, install HARDWARIO Playground, and start measuring.
 
-**Task:** Verify that you have Playground installed and that the device is connected via Bluetooth.
+**Task:** Verify that you have Playground installed and that the device is paired with the Radio Dongle.
 
 ## 1. HARDWARIO Playground
 
@@ -52,7 +52,7 @@ In the right-hand menu under the **Devices** section, click the **Connect** butt
 </div>
 
 <br></br>
-To connect the **PIR Module**, you must first put it into Bluetooth pairing mode. This mode is activated by inserting batteries into the module.  
+To connect the **PIR Module**, you must first put it into pairing mode. This mode is activated by inserting batteries into the module.  
 
 Before inserting the batteries, go to **HARDWARIO Playground** and click the **Start pairing** button. This step will start the pairing process.
 

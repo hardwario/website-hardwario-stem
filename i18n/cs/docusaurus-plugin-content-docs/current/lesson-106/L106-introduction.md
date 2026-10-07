@@ -5,7 +5,7 @@ title_meta: "Úvod (L106: IoT monitor vibrací)"
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce IoT monitor akcelerace je představit studentům jeden z nejběžnějších projektů Průmyslu 4.0, a to prediktivní údržbu pomocí monitoringu otřesů.
+Cílem lekce **IoT monitor vibrací** je představit studentům jeden z nejběžnějších projektů Průmyslu 4.0: prediktivní údržbu založenou na monitoringu vibrací.
 
 ## Co budete v rámci lekce potřebovat?
 

@@ -1,7 +1,7 @@
 ---
 slug: what-is-iot-assessment
 title: Hodnocení
-title_meta: "Hodnocení (L101: Co je to Internet věcí - IoT)"
+title_meta: "Hodnocení (L101: Co je to internet věcí – IoT)"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: iot-vibration-monitor
 title: 'L106: IoT Vibration Monitor'
+description: In this STEM lesson, students build an IoT button, monitor vibration with its accelerometer and learn about predictive maintenance in Industry 4.0.
 ---
 import Image from '@theme/IdealImage';
 

@@ -6,30 +6,30 @@ title: Nejteplejší a nejchladnější místo
 
 ## Úvod
 
-Tenhle projekt odhalí všechna tajemství tvojí školy, ať už někdo loví duchy nebo chce najít žhavé místo pro svoje příští rande. Změř se svojí třídou teplotu v různých koutech školy a zkus být ten, kdo objeví ten největší extrém. 😱
+Tento projekt odhalí všechna tajemství vaší školy, ať už někdo loví duchy, nebo hledá žhavé místo na příští rande. Změřte se třídou teplotu v různých koutech školy a zkuste objevit ten největší extrém. 😱
 
-S tímhle projektem se naučíš měřit teplotu s IoT a zobrazit ji na svém mobilu. Postačí ti základní HARDWARIO sada, tedy [**Start Set**](https://www.hardwario.store/p/start-set/).
+S tímto projektem se naučíte **měřit teplotu pomocí IoT a zobrazit ji v mobilu**. Postačí vám základní sada HARDWARIO, tedy [**Start Set**](https://www.hardwario.store/p/start-set/).
 
-Hru **navrhni učiteli fyziky** jako super zpestření hodiny, nebo ji s kamarády podnikni jenom tak, po škole.
+Hru **navrhněte učiteli fyziky** jako zpestření hodiny, nebo si ji s kamarády zahrajte jen tak po škole.
 
-**Tahle hra je o vítězství**. Kdo najde nejchladnější nebo nejteplejší místo ve škole, je **king**! 👑 Pokud máš ve třídě krabiček několik, pracujte buď samostatně, nebo v malých skupinkách. A pokud máte jenom jednu, postupně se střídejte.
+**V téhle hře jde o vítězství.** Kdo najde nejchladnější nebo nejteplejší místo ve škole, je **král**! 👑 Pokud máte ve třídě krabiček víc, pracujte samostatně nebo v malých skupinkách. Pokud máte jen jednu, střídejte se.
 
 
-## Připrav si krabičku
+## Připravte si krabičku
 
-1. Start Set sestav a spáruj. Na Core Module potřebuješ firmware **radio push button**. Pokud nevíš, jak si firmware stáhnout nebo co to je, [zjistíš to tady](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware).
+1. Sestavte a spárujte Start Set. Do modulu Core Module potřebujete firmware **radio push button**. Pokud nevíte, jak si firmware stáhnout nebo co to je, [najdete to tady](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware).
 
-2. Změny teploty uvidíš v Playgroundu v záložce **Messages**.
+2. Změny teploty uvidíte v Playgroundu v záložce **Messages**.
 
 ![MQTT messages in HARDWARIO Playground](./img/warmes-coldes-place/image10.png)
 
-## Nastav si Node-RED
+## Nastavte si Node-RED
 
-1. Pro záznam nejnižší nebo nejvyšší teploty si nastav vlastní ukazatel. Začni v počítači s pomocí bublin v [Node-RED](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware). Nejdřív v Playgroundu klikni na záložku **Functions**.
+1. Nejnižší nebo nejvyšší teplotu budete zaznamenávat na vlastním ukazateli. Začněte na počítači bublinami v [Node-RED](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware). Nejdřív v Playgroundu klikněte na záložku **Functions**.
 
-2. Na čistou plochu polož světle fialový node (bublinu) s názvem **MQTT**. Najdeš ho v sekci Input.
+2. Na prázdnou plochu umístěte světle fialový uzel (bublinu) s názvem **MQTT**. Najdete ho v sekci Input.
 
-3. Node rozklikni dvojklikem. V řádku **Topic** určíš, co chceš, aby barevný ukazatel zobrazoval. Teď to bude teplota. Proto do řádku zkopíruj zprávu s teplotou ze záložky Messages (bez čísla). Nebo klidně použij tuhle:
+3. Uzel otevřete dvojklikem. V řádku **Topic** určíte, co má ukazatel zobrazovat. Teď to bude teplota, proto do řádku zkopírujte zprávu s teplotou ze záložky Messages (bez čísla). Nebo klidně použijte tuto:
 
 ```
 node/push-button:0/thermometer/0:1/temperature
@@ -37,86 +37,86 @@ node/push-button:0/thermometer/0:1/temperature
 
 ![MQTT input topic](./img/warmes-coldes-place/image9.png)
 
-Potvrď tlačítkem **Done**.
+Potvrďte tlačítkem **Done**.
 
-## Připrav si applikaci Blynk IoT
+## Připravte si aplikaci Blynk IoT
 
-1. Pokud ještě nemáš, vytvoř si účet v aplikaci [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Jak na to se podívej v [tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Seznámíš se tam i s tím, jak se tvoří šablony a datastreamy. Obojí budeš potřebovat.
+1. Pokud ještě účet nemáte, vytvořte si ho v aplikaci [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Postup najdete v [tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/), kde se dozvíte i to, jak se vytvářejí šablony a datastreamy. Budete potřebovat obojí.
 
-2. Druhým krokem je vytvoření šablony zařízení. Jak na to najdeš [ve stejném návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Klidně ale použij šablonu z předchozích projektů, pokud ji máš.
+2. Dále vytvořte šablonu zařízení, opět podle [stejného návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Pokud už máte šablonu z předchozích projektů, klidně ji použijte.
 
-3. Teď si nastav nový Datastream. Na detailu šablony klikni na záložku **Datastreams**. Vpravo nahoře klikni na **Edit**. Objeví se ti tlačítko **+ New Datastream**, klikni na něj, vyber **Virtual Pin** a objeví se ti dialogové okno:
+3. Teď nastavte nový datastream. V detailu šablony klikněte na záložku **Datastreams** a vpravo nahoře na **Edit**. Objeví se tlačítko **+ New Datastream**. Klikněte na něj, vyberte **Virtual Pin** a otevře se dialogové okno:
 
 ![HARDWARIO Add Blynk IoT datastream](./img/warmes-coldes-place/add-datastream-1.png)
 
-4. Nastav název pro nový Datastream a vyber jeden z volných Pinů. Teplotu budeš měřit jako desetinné číslo, proto zvol typ **Double** a jednotku (unit) nastav na **Celsius**. Nezapomeň nastavit rozpětí teplot, které budeš měřit, například **0–50**.
+4. Pojmenujte nový datastream a vyberte jeden z volných pinů. Teplotu budete měřit jako desetinné číslo, proto zvolte typ **Double** a jednotku (unit) nastavte na **Celsius**. Nezapomeňte nastavit rozsah teplot, které budete měřit, například **0–50**.
 
-5. Datastream vytvoříš kliknutím na **Create**. 
+5. Datastream vytvoříte kliknutím na **Create**.
 
 ![HARDWARIO Add Blynk IoT datastream](./img/warmes-coldes-place/add-datastream-2.png)
 
-6. Vpravo nahoře svou práci ulož tlačítkem **Save**.
+6. Práci uložte tlačítkem **Save** vpravo nahoře.
 
-## Založ zařízení
+## Založte zařízení
 
-Pokud jej ještě nemáš, založ si zařízení z vytvořené šablony. Jak na to popisujeme [v návodu, který už znáš](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+Pokud ještě zařízení nemáte, založte si ho z vytvořené šablony. Postup popisujeme [v návodu, který už znáte](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
-## Rozjeď appku na mobilu
+## Spusťte aplikaci v mobilu
 
-**Aplikaci Blynk IoT** si na mobil stáhni z [App store](https://apps.apple.com/us/app/blynk-iot/id1559317868), nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk). Přihlas se do ní s tvými údaji. 
+**Aplikaci Blynk IoT** si do mobilu stáhněte z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlaste se svými údaji.
 
 ![Blynk IoT mobile dashboard](./img/warmes-coldes-place/blynk-1.png)
 
-Hned po přihlášení uvidíš své vytvořené zařízení:
+Hned po přihlášení uvidíte vytvořené zařízení:
 
 ![Blynk IoT mobile dashboard](./img/warmes-coldes-place/blynk-2.png)
 
-Ťukni na něj prstem, teď si nastavíme dashboard, ve kterém budeme ukazovat naměřenou hodnotu:
+Klepněte na něj. Teď nastavíme dashboard, na kterém se bude zobrazovat naměřená hodnota:
 
-1. Pod **klíčem** vpravo nahoře najdeš nastavovací stránku dashboardu.
+1. Pod ikonou **klíče** vpravo nahoře najdete stránku s nastavením dashboardu.
 
 ![Blynk IoT mobile dashboard](./img/warmes-coldes-place/blynk-3.png)
 
-2. Tlačítkem **+** , nebo kliknutím někam na plochu přidáš nový graf nebo jiný prvek dashboardu. Teď použijeme **Gauge**.
+2. Tlačítkem **+** nebo klepnutím kamkoli na plochu přidáte nový graf nebo jiný prvek dashboardu. Teď použijeme **Gauge**.
 
 ![Blynk IoT mobile dashboard](./img/warmes-coldes-place/blynk-gauge.png)
 
-3. Stiskem přidaného widgetu otevřeš okno s jeho nastavením. Nejdůležitější je doplnit ***Datastream*** z tvé šablony pro vybraný virtuální Pin. Doplnit můžeš taky název a změnit barvu.
+3. Klepnutím na přidaný widget otevřete jeho nastavení. Nejdůležitější je vybrat ***Datastream*** ze své šablony pro zvolený virtuální pin. Můžete také doplnit název a změnit barvu.
 
 ![Blynk IoT mobile dashboard](./img/warmes-coldes-place/blynk-temperature.png)
 
-4. Aplikaci máš hotovou. Teď do ní ještě začneme posílat data. 💪
+4. Aplikace je hotová. Teď do ní začneme posílat data. 💪
 
-## Propoj mobil s krabičkou
+## Propojte mobil s krabičkou
 
-1. Vrať se k počítači. Na ploše Node-RED přidej za oba nody zelený **node Write**. Najdeš ho v levé části pod sekcí Blynk IoT.
+1. Vraťte se k počítači. Na ploše Node-RED přidejte za uzel MQTT zelený **uzel Write**. Najdete ho vlevo v sekci Blynk IoT.
 
 ![Node-RED Blynk write](./img/warmes-coldes-place/playground-0.png)
 
-2. Node otevři dvojklikem. Vpravo uvidíš **malou tužku**. Klikni na ni a otevře se ti nové okno. Do pole **Url** vlož ``blynk.cloud``, do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové aplikaci na počítači.
+2. Uzel otevřete dvojklikem. Vpravo uvidíte **malou tužku**. Klikněte na ni a otevře se nové okno. Do pole **Url** vložte ``blynk.cloud`` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu zařízení ve webové aplikaci na počítači.
 
 ![Node-RED Blynk set pin](./img/warmes-coldes-place/playground-1.png)
 
-Nastavení potvrď tlačítem **Add**. Z nodu ale ještě neodcházej. 👈
+Nastavení potvrďte tlačítkem **Add**. Z uzlu ale ještě neodcházejte. 👈
 
-3. Do řádku **Virtual Pin** napiš číslo, které sis zvolil jako PIN v Blynku. Písmeno “V” nepoužívej.
-Potvrď tlačítkem **Done**.
+3. Do řádku **Virtual Pin** napište číslo pinu, který jste zvolili v Blynku, bez písmene „V“.
+Potvrďte tlačítkem **Done**.
 
 
 ![Node-RED Blynk set pin](./img/warmes-coldes-place/playground-2.png)
 
-1. Teď **oba nody propoj** a klikni na červené tlačítko **Deploy** vpravo nahoře. 🚨
+4. Teď **oba uzly propojte** a klikněte na červené tlačítko **Deploy** vpravo nahoře. 🚨
 
 ![Connect Blynk](./img/warmes-coldes-place/playground-3.png)
 
-## Trumfni svou třídu
+## Trumfněte svou třídu
 
-1. Sám nebo ve skupině **vytipuj, které místo může být ve škole nejteplejší, nebo nejchladnější**. 🔥 ⛄
+1. Sami nebo ve skupině **vytipujte, které místo ve škole může být nejteplejší nebo nejchladnější**. 🔥 ⛄
 
-2. Každý jednotlivec nebo skupina má na průzkum **jenom 15 minut**. 🔦 Ať je to trochu vzrůšo.
+2. Každý jednotlivec nebo skupina má na průzkum **jen 15 minut**. 🔦 Ať je to napínavé.
 
-3. Na místo vezmi krabičku a **teplotu sleduj na mobilu**. Může chvíli trvat, než se na ukazateli teplota projeví.
+3. Vezměte krabičku na vybrané místo a **teplotu sledujte v mobilu**. Než se teplota na ukazateli projeví, může to chvíli trvat.
 
 ![measure temperature and show in Blynk](./img/warmes-coldes-place/blynk-temperature-gauge.jpg)
 
-4. Vyzkoušej několik míst a na závěr vyhlašte ty nejextrémnější výsledky. **Congrats vítězům!** 🎇
+4. Vyzkoušejte několik míst a na závěr vyhlaste nejextrémnější výsledky. **Gratulujeme vítězům!** 🎇

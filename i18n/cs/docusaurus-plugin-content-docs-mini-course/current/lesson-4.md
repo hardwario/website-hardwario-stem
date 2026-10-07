@@ -1,6 +1,6 @@
 ---
 slug: lesson-4
-title: Lekce 4 - Světla!
+title: Lekce 4 – Světla!
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
 V **HARDWARIO Playground** už umíte najít vstupy, zpracovat je a vypsat na **Dashboard**.  
 Tím jste získali základní dovednosti pro práci se senzory a vizualizací dat.  
 
-Následující lekce bude hra s **LED páskem**, která přinese do této části práce světlo a nové možnosti kreativního využití.
+V této lekci si pohrajete s **LED páskem**, který do práce vnese světlo a nabídne nové možnosti pro kreativitu.
 
 ## 2. Co je připraveno
 
@@ -22,18 +22,18 @@ Následující lekce bude hra s **LED páskem**, která přinese do této část
 
 ## 3. Nahrajte firmware do Power Module
 
-1. Připojte **Power Module** pomocí USB kabelu.  
+1. Připojte **Power Module** USB kabelem k počítači.  
 2. V záložce **Firmware** vyberte nejnovější verzi.  
-   - Ten můj měl nahraný `twr-radio-power-controller-rgb150`, ale rozhodně je dobré jej aktualizovat.  
-3. LED pásek v tuto chvíli nemusí být připojený, ale ničemu to nevadí.
+   - Můj měl nahraný `twr-radio-power-controller-rgb150`, ale aktualizace rozhodně neuškodí.  
+3. LED pásek teď nemusí být připojený, ale pokud připojený je, nevadí to.
 
 ## 4. Spárujte Power Module
 
-Power Module je výjimečný tím, že **nemá baterie**: je napájený přímo ze zdroje.  
+Power Module se od ostatních modulů liší tím, že **nemá baterie**: napájí se přímo ze zdroje.  
 
 1. V záložce **Devices** klikněte na **Start pairing**.  
-2. Připojte Power Module do zdroje: tím se dostane do párovacího režimu.  
-3. Po spárování se Power Module hlásí jako `power-controller:0`
+2. Připojte Power Module ke zdroji. Tím se přepne do párovacího režimu.  
+3. Po spárování se Power Module hlásí jako `power-controller:0`.
 
 <div class="container">
   <div class="row">
@@ -44,11 +44,11 @@ Power Module je výjimečný tím, že **nemá baterie**: je napájený přímo 
 
 ## 5. Spusťte to!
 
-Programování ve flow opět začněte zprávou, která vám něco pošle. Možností je více:
+Flow opět začněte vstupem, který posílá zprávy. Možností je několik:
 
 ✅ **Button Module**: sledování stisku  
 ✅ **PIR Module**: sledování orientace  
-✅ **Libovolný modul**: všechny mají teplotu (trpělivější varianta 😊)
+✅ **Libovolný modul**: všechny měří teplotu (varianta pro trpělivé 😊)
 
 
 ## 6. Co poslat do Power Module
@@ -60,11 +60,11 @@ Topic, který rozzáří pásek, je například: `node/power-controller:0/led-st
 
 ## 7. Jakou zprávu poslat
 
-Přímé spojení vstupu (např. `Button` se zprávou `1`) s výstupem (nastavení pásku) nevede ke správnému výsledku.  
+Když vstup (např. `Button` se zprávou `1`) spojíte přímo s výstupem (nastavení pásku), nebude to fungovat správně.  
 
-Proto použijte uzel **Change**, kde přenastavíte `msg.payload` na hodnotu barvy v RGB hex kódu (například červená: `“#FF0000”`).
+Proto použijte uzel **Change** a nastavte v něm `msg.payload` na barvu v hexadecimálním kódu RGB (například červená: `"#FF0000"`).
 
-👉 Pokud neznáte kódování barev pomocí RGB, doporučujeme se podívat na dostupné [tabulky barev](https://www.w3schools.com/colors/colors_rgb.asp).
+👉 Pokud kódování barev v RGB neznáte, podívejte se do [tabulky barev](https://www.w3schools.com/colors/colors_rgb.asp).
 
 <div class="container">
   <div class="row">
@@ -75,10 +75,10 @@ Proto použijte uzel **Change**, kde přenastavíte `msg.payload` na hodnotu bar
 
 ## 8. Hrajeme si s kódem
 
-Pro kód, který umí měnit barvu LED pásku podle orientace PIR senzoru:
+Kód, který mění barvu LED pásku podle orientace PIR senzoru, vytvoříte takto:
 
 1. Přidejte uzel **Switch**.  
-2. Podle orientace (1–6) nastavujte různou barvu (`msg.payload`).  
+2. Pro každou orientaci (1–6) nastavte jinou barvu (`msg.payload`).  
 3. Odesílejte ji přes **mqtt out** do Power Module.
 
 <div class="container">
@@ -88,22 +88,22 @@ Pro kód, který umí měnit barvu LED pásku podle orientace PIR senzoru:
 </div>
 
 ## 9. Barvy a efekty
-Byla by škoda nerozsvítit LED světla v plném rozsahu, proto se nebojte vyzkoušet například příkaz `node/power-controller:0/led-strip/-/effect/set`, kterému předáte zprávu:
+Byla by škoda nevyužít možnosti pásku naplno. Vyzkoušejte třeba příkaz `node/power-controller:0/led-strip/-/effect/set` se zprávou:
 ```json
 {"type":"rainbow", "wait":10}
 ```
 
-Bolí vás oči z přílišného jasu? `node/power-controller:0/led-strip/-/brightness/set` bere jako zprávu hodnoty 0–100 a nastaví jas.
+Bolí vás oči z přílišného jasu? `node/power-controller:0/led-strip/-/brightness/set` přijímá jako zprávu hodnotu 0–100 a podle ní nastaví jas.
 
 ## 10. Adresace
-Pásek je možné adresovat i po jednotlivých LED pomocí node//led-strip/-/set-pixel/set, zpráva pak obsahuje informace 
+Pásek lze adresovat i po jednotlivých LED pomocí `node//led-strip/-/set-pixel/set`. Zpráva pak obsahuje informace:
 ```json
 {"type":"rainbow", "wait":10}
 ```
 
-Bolí vás oči z přílišného jasu? `node/power-controller:0/led-strip/-/brightness/set` bere jako zprávu hodnoty 0–100 a nastaví jas.
+Bolí vás oči z přílišného jasu? `node/power-controller:0/led-strip/-/brightness/set` přijímá jako zprávu hodnotu 0–100 a podle ní nastaví jas.
 
 ## 11. Shrnutí
 
-Máte spárovaný Power Module s firmwarem pro LED pásek.
+Máte spárovaný Power Module s firmwarem pro LED pásek.  
 Umíte rozsvítit LED pásek v různých barvách a přidat i efekty.

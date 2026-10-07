@@ -33,7 +33,7 @@ Confirm by clicking the **Done** button.
 
 4. Next to the MQTT node place a second one, this time a blue **Gauge** node. This node can be found in the Dashboard section. This node is used to determine how the measured temperature is displayed on screen: as an indicator. Link both nodes together.
 
-![Gauce chart](./img/dragons-fire/image1.png)
+![Gauge chart](./img/dragons-fire/image1.png)
 
 5. Double-click on the Gauge node. In the **Type** line, set how the graph will be displayed (Gauge is best). In the **Range** line, adjust the minimum and maximum value of the indicator (try 0 and 50).
 

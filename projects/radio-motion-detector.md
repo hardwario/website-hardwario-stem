@@ -334,7 +334,7 @@ In this section, we will create an **Applet** in the **IFTTT** service. The **Ap
   </div>
 </div>
 
-#### Step 16: Insert the name `button` in the **event** field and keep the window open
+#### Step 16: Insert the name `motion` in the **event** field and keep the window open
 
 <div class="container">
   <div class="row">
@@ -372,7 +372,7 @@ At this point, you've got working notification **Applet** in the **IFTTT** servi
 
 ## Connect IFTTT in Node-RED
 
-In this section, we will create a link between the button event on MQTT and HTTP request to **IFTTT** which will trigger the push notification.
+In this section, we will create a link between the motion event on MQTT and HTTP request to **IFTTT** which will trigger the push notification.
 
 #### Step 1: Switch to your **Node-RED** flow
 
@@ -410,7 +410,7 @@ This snippet creates a connection between the MQTT topic `node/motion-detector:0
 
 :::success
 
-At this point, you should get a push notification when you press the button.
+At this point, you should get a push notification whenever motion is detected.
 
 :::
 

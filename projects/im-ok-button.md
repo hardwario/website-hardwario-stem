@@ -1,6 +1,6 @@
 ---
 slug: im-ok-button
-title: Im ok button
+title: I'm OK button
 ---
 
 ## Introduction

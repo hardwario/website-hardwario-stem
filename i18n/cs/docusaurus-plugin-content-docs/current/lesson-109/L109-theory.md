@@ -11,9 +11,9 @@ import Image from '@theme/IdealImage';
 
 ### Co je to sucho
 
-Sucho je obtížné definovat, protože jeho význam se liší v závislosti na regionu. Například na Bali je za sucho považováno období šesti dnů bez deště, zatímco v pouštních oblastech je samozřejmě tento pojem chápán zcela odlišně. Obecně řečeno, sucho nastává tehdy, když dochází k nedostatku srážek po delší dobu, což vede k nedostatku vody pro určitou činnost, skupinu lidí nebo životní prostředí.
+Sucho je obtížné definovat, protože jeho význam se liší v závislosti na regionu. Například na Bali se za sucho považuje období šesti dní bez deště, zatímco v pouštních oblastech se tento pojem chápe samozřejmě úplně jinak. Obecně řečeno, sucho nastává tehdy, když se delší dobu nedostává srážek a pro určitou činnost, skupinu lidí nebo životní prostředí pak chybí voda.
 
-Sucha se dělí na čtyři typy:
+Rozlišujeme čtyři typy sucha:
 
 * **Meteorologické**: záporná odchylka srážek od normálu za určité období
 * **Zemědělské**: půdní sucho, tedy nedostatek vlhkosti pro plodiny 
@@ -24,18 +24,18 @@ Na druhou stranu i příliš vysoká vlhkost půdy může způsobovat problémy.
 
 ### Vodní potenciál půdy
 
-Dostupnost vody pro rostliny je určena tzv. vodním potenciálem půdy. Přesněji řečeno jde o sílu, kterou musí rostlina překonat, aby získala vodu z půdy, a zároveň o sílu, která určuje rozdělení vlhkosti a pohyb roztoků v půdním prostředí.
+Dostupnost vody pro rostliny určuje tzv. vodní potenciál půdy. Přesněji řečeno jde o sílu, kterou musí rostlina překonat, aby získala vodu z půdy, a zároveň o sílu, která určuje rozdělení vlhkosti a pohyb roztoků v půdním prostředí.
 
 Hodnota vodního potenciálu se obvykle udává jako záporný tlak. Například:
 
-0 MPa – plná vodní kapacita, všechny póry jsou zaplněné vodou, rostlina má problém s příjmem kyslíku
--0,005 až -0,015 MPa: polní vodní kapacita, voda je v kapilárních pórech, rostlina má dostatek vody i vzduchu
--1,5 MPa – bod vadnutí, kdy transpirace převyšuje příjem vody a rostlina vadne
+* **0 MPa**: plná vodní kapacita, všechny póry jsou zaplněné vodou a rostlina má problém s příjmem kyslíku
+* **-0,005 až -0,015 MPa**: polní vodní kapacita, voda je v kapilárních pórech a rostlina má dostatek vody i vzduchu
+* **-1,5 MPa**: bod vadnutí, kdy transpirace převyšuje příjem vody a rostlina vadne
 
 ### Jak se půda monitoruje
 
-Běžnou metodou měření vlhkosti půdy je rezistivní metoda. Takový senzor funguje na jednoduchém principu: měří vodivost mezi dvěma elektrodami. Pokud je půda vlhká, vodivost je vyšší (odpor nižší), a naopak. Elektrody jsou proto pokoveny na větší ploše, aby se zvýšil kontaktní povrch. Nevýhodou této metody je však oxidace elektrod, která může měření ovlivnit.
+Vlhkost půdy se běžně měří rezistivní metodou. Senzor funguje na jednoduchém principu: měří vodivost mezi dvěma elektrodami. Ve vlhké půdě je vodivost vyšší (odpor nižší), v suché naopak nižší. Elektrody jsou pokovené na větší ploše, aby byla styčná plocha s půdou co největší. Nevýhodou této metody je oxidace elektrod, která může měření ovlivnit.
 
-Z tohoto důvodu je vhodnější kapacitní metoda. Ta funguje na podobném principu jako dotykové displeje chytrých telefonů: prst při dotyku změní dielektrické vlastnosti skla. Stručně řečeno, dielektrikum je materiál a prostředí okolo elektrod. Voda zásadně mění dielektrické vlastnosti, když se dostane mezi elektrody. Jinými slovy: Dvě kovové elektrody mají jinou kapacitu, když je mezi nimi vzduch, a jinou, když je tam voda. Stejně to funguje, když elektrody vložíte do suché a do mokré půdy.
+Proto je vhodnější kapacitní metoda. Funguje na podobném principu jako dotykové displeje chytrých telefonů: prst při dotyku změní dielektrické vlastnosti skla. Stručně řečeno, dielektrikum je materiál a prostředí okolo elektrod. Voda zásadně mění dielektrické vlastnosti, když se dostane mezi elektrody. Jinými slovy: dvě kovové elektrody mají jinou kapacitu, když je mezi nimi vzduch, a jinou, když je tam voda. Stejně to funguje, když elektrody vložíte do suché a do mokré půdy.
 
-V HARDWARIO jsme vyvinuli plně digitální Soil Sensor s širokým rozsahem napájení od 2,8 V do 5,5 V (kompatibilní s Arduinem). Využívá průmyslově standardní sběrnici 1-Wire a umožňuje připojit paralelně více senzorů, jejichž počet je prakticky neomezený. Je zcela zalitý silikonem a samozřejmě jej lze ponořit do vody. A právě s tímto senzorem budeme v našem experimentu pracovat.
+V HARDWARIO jsme vyvinuli plně digitální půdní senzor Soil Sensor se širokým rozsahem napájecího napětí od 2,8 V do 5,5 V (kompatibilní s Arduinem). Komunikuje po průmyslově standardní sběrnici 1-Wire, na kterou lze paralelně připojit více senzorů; jejich počet je prakticky neomezený. Je celý zalitý silikonem, takže ho samozřejmě lze ponořit do vody. Právě s tímto senzorem budeme v experimentu pracovat.

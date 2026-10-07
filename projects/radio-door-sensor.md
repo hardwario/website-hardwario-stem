@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 **Radio Door Sensor** will notify you to your phone anytime someone opens the door, window or cookie jar! It is also usable as a notification when you forget to close garage or gate in the evening.
 
-It can be equiped with magnet for easy attach enclosure and works for many years on batteries. Really easy installation!
+It can be equipped with magnet for easy attach enclosure and works for many years on batteries. Really easy installation!
 
 <div class="container">
   <div class="row">
@@ -133,7 +133,7 @@ In the **Radio** tab click on the **Pairing start** button.
 
 #### Step 2: Turn Door Sensor into pairing mode
 
-Now insert the batteries to the Door Sensor. The pairing command is send every time you put batteries to the remote module.
+Now insert the batteries to the Door Sensor. The pairing command is sent every time you put batteries to the remote module.
 
 #### Step 3: Stop pairing
 
@@ -318,7 +318,7 @@ To use IFTTT in Node-RED, we can use simple plug-in which will send notification
   </div>
 </div>
 
-#### Step 3: After installation you see confirmation that new nodes has beed addded to the Node-RED:
+#### Step 3: After installation you see confirmation that new nodes have been added to the Node-RED:
 
 <div class="container">
   <div class="row">
@@ -328,7 +328,7 @@ To use IFTTT in Node-RED, we can use simple plug-in which will send notification
 
 :::success
 
-Perfect! Node-RED plugin for IFTTT will allow to send notification directly to you phone.
+Perfect! Node-RED plugin for IFTTT will allow to send notification directly to your phone.
 
 :::
 
@@ -376,7 +376,7 @@ Perfect! Node-RED plugin for IFTTT will allow to send notification directly to y
 
 ## Run and test your flow!
 
-#### **Step 1:** Everytime you change the flow, you have to click on the **Deploy** button in the right top corner. **Please do that now:**
+#### **Step 1:** Every time you change the flow, you have to click on the **Deploy** button in the right top corner. **Please do that now:**
 
 <div class="container">
   <div class="row">
@@ -394,7 +394,7 @@ You should see "true" and "false" messages in the right **debug** tab and during
   </div>
 </div><br></br>
 
-If you would like be notified on "true" messages instead of **false**, just open the **switch node** and change the `false` text in the rules to `true`.
+If you would like to be notified on "true" messages instead of **false**, just open the **switch node** and change the `false` text in the rules to `true`.
 
 <div class="container">
   <div class="row">

@@ -7,9 +7,9 @@ import Image from '@theme/IdealImage';
 ## Introduction
 
 
-Santa and Baby Jesus are highly secretive people, but with IoT you can catch either of them in the act of bringing presents. 🎄 The PIR Module: motion detector will help you
+Santa and Baby Jesus are highly secretive people, but with IoT you can catch either of them in the act of bringing presents. 🎄 The PIR Module: motion detector will help you.
 
-Under this project, you will learn how to **detect motion in a remote room**. Thanks to this you can check whether Santa Claus, Baby Jesus, Grandpa Frost or someone else is in your home. 😲
+In this project, you will learn how to **detect motion in a remote room**. Thanks to this you can check whether Santa Claus, Baby Jesus, Grandpa Frost or someone else is in your home. 😲
 
 If you already have the Starter Set, you will only need the [PIR Module](https://www.hardwario.store/p/pir-module/). Alternatively, the [Motion Set](https://www.hardwario.store/p/motion-set) contains **all the equipment** you need.
 
@@ -55,7 +55,7 @@ Confirm with the **Done** button.
 
 Confirm with the **Done** button.
 
-10. Behind the switch node, place a **Change node** from the Dashboard section. That´s right, just like the one you already have a little lower down. 👍 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-10.webp')} alt="Change node highlighted in the palette, with a set msg.payload node placed after the Stav detektoru switch"/> </div> </div>
+10. Behind the switch node, place a **Change node** from the Function section. That´s right, just like the one you already have a little lower down. 👍 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-10.webp')} alt="Change node highlighted in the palette, with a set msg.payload node placed after the Stav detektoru switch"/> </div> </div>
 
 11. In the **Rules** field, set the function to: _flow_. _detectorActive_ (see screenshot). This enables the device to recognize if the button is on or off. Beware of making typing errors! <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-11.webp')} alt="Edit change node dialog for the switch flow with the rule Set flow.detectorActive to msg.payload highlighted"/> </div> </div>
 Confirm with the **Done** button.

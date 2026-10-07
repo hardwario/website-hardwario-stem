@@ -5,7 +5,7 @@ title_meta: "Hodnocení (L105: IoT monitor kvality vnitřního klimatu)"
 ---
 import Image from '@theme/IdealImage';
 
-**Časová dotace:** 5 min.
+**Časová dotace**: 5 min.
 
 Provedeme 3-2-1 hodnocení, tzn. studenti uvedou:
 

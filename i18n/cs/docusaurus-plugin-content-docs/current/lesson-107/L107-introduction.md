@@ -5,7 +5,7 @@ title_meta: "Úvod (L107: IoT osvětlení)"
 ---
 import Image from '@theme/IdealImage';
 
-Cílem lekce **IoT osvětlení** je představit studentům výhody tzv. chytrého osvětlení, mezi které patří zvýšení pohodlí a hlavně úspory energie. V rámci experimentu si ukážeme vzdálené ovládání světel z chytrého telefonu a přizpůsobení osvětlení aktuálním podmínkám. 
+Cílem lekce **IoT osvětlení** je představit studentům výhody tzv. chytrého osvětlení: vyšší pohodlí a hlavně úspory energie. V experimentu si ukážeme, jak světla ovládat na dálku z chytrého telefonu a jak osvětlení přizpůsobit aktuálním podmínkám. 
 
 ## Co budete v rámci lekce potřebovat?
 
@@ -13,4 +13,4 @@ Cílem lekce **IoT osvětlení** je představit studentům výhody tzv. chytréh
 * Projektor nebo větší monitor
 * [Sadu Start](https://www.hardwario.store/cz/p/start-set) IoT stavebnice HARDWARIO TOWER
 * [Sadu Control](https://www.hardwario.store/cz/search?phrase=sada%20control) IoT stavebnice HARDWARIO TOWER
-* [LED pásek](https://www.hardwario.store/cz/p/led-strip-rgbw-1m) se 144 ledkami
+* [LED pásek](https://www.hardwario.store/cz/p/led-strip-rgbw-1m) se 144 LED

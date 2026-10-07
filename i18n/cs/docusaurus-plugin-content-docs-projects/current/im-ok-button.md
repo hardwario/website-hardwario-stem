@@ -1,29 +1,29 @@
 ---
 slug: im-ok-button
-title: Tlačítko "Jsem v pohodě"
+title: Tlačítko „Jsem v pohodě“
 ---
 
 
 ## Úvod
 
-Rodiče ti každý den volají, jestli jsi ze školy dorazil domů? Je to sice otrava, ale prostě o tebe mají starosti. Vyrob si proto tlačítko, se kterým jim pokaždé pošleš jednoduchou zprávu do mobilu. 📲
+Rodiče vám každý den volají, jestli už jste ze školy doma? Je to sice otravné, ale prostě o vás mají starost. Vyrobte si tlačítko, kterým jim po příchodu domů pošlete jednoduchou zprávu do mobilu. 📲
 
-V tomhle projektu se naučíš, **jak tlačítkem poslat zprávu do mobilu svých rodičů**. 👩👱
+V tomto projektu se naučíte, **jak tlačítkem poslat zprávu do mobilu rodičů**. 👩👱
 
-Budeš potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíš si se základní HARDWARIO sadou, tedy [**Start Set**](https://www.hardwario.store/p/start-set/).
+Budete potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíte si se základní sadou HARDWARIO, tedy [**Start Set**](https://www.hardwario.store/p/start-set/).
 
 
-## Rozjeď to v Node-RED
+## Rozjeďte to v Node-RED
 
-1. Start Kit sestav a spáruj. Na Core Module potřebuješ firmware **radio push button**. Pokud nevíš, jak si firmware stáhnout nebo co to je, [zjistíš to tady](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware).
+1. Sestavte a spárujte Start Set. Do modulu Core Module potřebujete firmware **radio push button**. Pokud nevíte, jak si firmware stáhnout nebo co to je, [najdete to tady](https://docs.hardwario.com/tower/firmware-development/hardwario-extension-tutorial/#flash-firmware).
 
-2. V Playgroundu klikni na **záložku Functions**, kde je programovací plocha [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/)
+2. V Playgroundu klikněte na **záložku Functions**, kde je programovací plocha [Node-RED](https://docs.hardwario.com/tower/desktop-programming/node-red-programming/).
 
-3. Na plochu Node-RED postav světle fialovou bublinu, neboli nod. Najdeš ho vlevo jako **MQTT** v sekci Inputs.
+3. Na plochu Node-RED umístěte světle fialovou bublinu, neboli uzel. Najdete ho vlevo jako **MQTT** v sekci Input.
 
 ![MQTT input node](./img/im-ok-button/image4.png)
 
-4. Uvnitř nodu nastavíš klíčovou funkci: a tou je stisknutí tlačítka. Na node dvakrát klikni a **do pole Topic zkopíruj tenhle řádek**:
+4. V uzlu nastavíte klíčovou funkci: stisknutí tlačítka. Na uzel dvakrát klikněte a **do pole Topic zkopírujte tento řádek**:
 
 ```
 node/push-button:0/push-button/-/event-count
@@ -32,19 +32,19 @@ node/push-button:0/push-button/-/event-count
 ![MQTT topic](./img/im-ok-button/image8.png)
 
 
-Potvrď pomocí tlačítka **Done**.
+Potvrďte tlačítkem **Done**.
 
-**Tip:** Místo kopírování řádku odsud můžeš příště jednoduše zkopírovat řádek, který se ti po stisknutí tlačítka ukáže **v záložce Messages**.
+**Tip:** Místo kopírování řádku odsud můžete příště jednoduše zkopírovat řádek, který se po stisknutí tlačítka objeví **v záložce Messages**.
 
 
-## Nastav svoji zprávu
+## Nastavte si zprávu
 
-1. Zprávu si nastavíš taky tady v Node-RED. Kamkoli vedle světle fialového inputu MQTT přetáhni **žlutý node ze sekce Functions s názvem Change**.
+1. Zprávu nastavíte také tady v Node-RED. Kamkoli vedle světle fialového uzlu MQTT přetáhněte **žlutý uzel s názvem Change ze sekce Function**.
 
 ![Change Node HARDWARIO Playground](./img/im-ok-button/image7.png)
 
 
-2. Na node dvakrát klikni a do pole **Rules** (pravidla) napiš svou zprávu pro rodiče. Jenom pozor, na Blynku se nezobrazují háčky a čárky. Malá inspirace:
+2. Na uzel dvakrát klikněte a do pole **Rules** (pravidla) napište svou zprávu pro rodiče. Jen pozor, Blynk nezobrazuje háčky a čárky. Malá inspirace:
 	- *Klidek. Jsem doma a v bezpeci.*
 	- *Mame doma celebritu… Delam si srandu. To jsem ja.*
 	- *Pokousali me psi, uneslo me UFO, ale uz jsem doma.*
@@ -52,94 +52,94 @@ Potvrď pomocí tlačítka **Done**.
 ![HARDWARIO Playground MQTT messages](./img/im-ok-button/image6.png)
 
 
-Potvrď tlačítkem **Done** a oba nody propoj táhnutím myší od jedné bubliny k druhé. 🐁
+Potvrďte tlačítkem **Done** a oba uzly propojte tažením myši od jedné bubliny ke druhé. 🐁
 
 
-## Připrav si applikaci Blynk IoT
+## Připravte si aplikaci Blynk IoT
 
-1. Pokud ještě nemáš, vytvoř si účet v aplikaci [Blynk IoT](https://blynk.io). Jak na to se podívej v [tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) Seznámíš se tam i s tím, jak se tvoří šablony a datastreamy. Obojí budeš potřebovat.
+1. Pokud ještě účet nemáte, vytvořte si ho v aplikaci [Blynk IoT](https://blynk.io). Postup najdete v [tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/), kde se dozvíte i to, jak se vytvářejí šablony a datastreamy. Budete potřebovat obojí.
 
-2. Druhým krokem je vytvoření šablony zařízení. Jak na to najdeš [ve stejném návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Klidně ale použij šablonu z předchozích projektů, pokud ji máš.
+2. Dále vytvořte šablonu zařízení, opět podle [stejného návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Pokud už máte šablonu z předchozích projektů, klidně ji použijte.
 
-3. Teď si nastav nový Datastream. Na detailu šablony klikni na záložku **Datastreams**. Vpravo nahoře klikni na **Edit**. Objeví se ti tlačítko **+ New Datastream**, klikni na něj, vyber **Virtual Pin** a objeví se ti dialogové okno:
+3. Teď nastavte nový datastream. V detailu šablony klikněte na záložku **Datastreams** a vpravo nahoře na **Edit**. Objeví se tlačítko **+ New Datastream**. Klikněte na něj, vyberte **Virtual Pin** a otevře se dialogové okno:
 
 ![HARDWARIO Add Blynk IoT datastream](./img/im-ok-button/add-datastream-1.png)
 
 
-4. Nastav název pro nový Datastream a vyber jeden z volných Pinů. V mobilní notifikaci budeme chtít vypsat tvou vlastní zprávu, proto **zvol jako datový typ String** (textový řetězec). 
+4. Pojmenujte nový datastream a vyberte jeden z volných pinů. V notifikaci na mobilu chceme zobrazit vaši vlastní zprávu, proto **jako datový typ zvolte String** (textový řetězec).
 
-5. V dialogovém okně dole ještě rozklikni **Advanced settings** a zaškrtni poslední volbu **Expose to Automation**, díky tomu ji budeme moct použít v automatizacích. V selektoru vedle zvol **Sensor** a zaškrtni taky **Available in Conditions**. Datastream vytvoříš kliknutím na **Create**. 
+5. Dole v dialogovém okně ještě rozbalte **Advanced settings** a zaškrtněte poslední volbu **Expose to Automation**, aby šel datastream použít v automatizacích. V nabídce vedle zvolte **Sensor** a zaškrtněte také **Available in Conditions**. Datastream vytvoříte kliknutím na **Create**.
 
 ![HARDWARIO Add Blynk IoT datastream](./img/im-ok-button/add-datastream-2.png)
 
 
-6. Vpravo nahoře svou práci ulož tlačítkem **Save**.
+6. Práci uložte tlačítkem **Save** vpravo nahoře.
 
-## Založ zařízení
+## Založte zařízení
 
-Pokud jej ještě nemáš, založ si zařízení z vytvořené šablony. Jak na to popisujeme [v návodu, který už znáš](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
+Pokud ještě zařízení nemáte, založte si ho z vytvořené šablony. Postup popisujeme [v návodu, který už znáte](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
-## Vytvoř automatizaci
+## Vytvořte automatizaci
 
-1. Přepni se do sekce **Automation** a klikni na tlačítko **+ Create Automation**.
+1. Přepněte se do sekce **Automation** a klikněte na tlačítko **+ Create Automation**.
 
 ![HARDWARIO Add Blynk IoT automation](./img/im-ok-button/add-automation-1.png)
 
 
-2. Z dostupných možností vyber **Device State**. Automatizace vyhodnotí vždy, když do aplikace pošleš zprávu.
+2. Z nabízených možností vyberte **Device State**. Automatizace se vyhodnotí pokaždé, když do aplikace pošlete zprávu.
 
 ![HARDWARIO Add Blynk IoT automation](./img/im-ok-button/add-automation-2.png)
 
 
-3. Nastavení automatizace je jednoduché: v sekci **When** se nastaví, kdy se má automatizace spustit, a v sekci **Do this**, co se má následně stát. 
+3. Nastavení automatizace je jednoduché: v sekci **When** nastavíte, kdy se má automatizace spustit, a v sekci **Do this**, co se má potom stát.
 
-4. Nejprve nastav sekci **When**. Vyber tvé zařízení a **vytvořený Datastream**. Objeví se ti třetí selector, ten nech nastavený na **Is Any**. 
+4. Nejdřív nastavte sekci **When**: vyberte své zařízení a **vytvořený datastream**. Objeví se třetí nabídka, tu nechte nastavenou na **Is Any**.
 
-5. V sekci **Do This** klikni na **Send app notification** a nastav si příjemce. Pro zjednodušení tam nastav sebe. Do polí **Subject** a **Message** přetáhni myší položku **Trigger value**, jde o proměnnou, kde bude uložen text tvé zprávy.
+5. V sekci **Do This** klikněte na **Send app notification** a nastavte příjemce. Pro zjednodušení zadejte sebe. Do polí **Subject** a **Message** přetáhněte myší položku **Trigger value**. Je to proměnná, ve které bude uložený text vaší zprávy.
 
-6. Nakonec nezapomeň nastavit **název automatizace**. V selectu **Limit period** můžeš omezit, kdy nejdříve po notifikaci přijde další. 
+6. Nakonec nezapomeňte vyplnit **název automatizace**. V nabídce **Limit period** můžete nastavit, za jak dlouho nejdříve může po jedné notifikaci přijít další.
 
 ![HARDWARIO Add Blynk IoT automation](./img/im-ok-button/add-automation-3.png)
 
 
-7. Klikem na **Save** automatizaci ulož.
+7. Automatizaci uložte tlačítkem **Save**.
 
 
-## Nastav mobilní aplikaci 
+## Nastavte mobilní aplikaci
 
-1. Půjč si od mámy nebo od táty jejich smartphone a ještě trochu jim ho nachytři. 🤓 Aby se jim tvoje zpráva zobrazila, musí mít na mobilu **appku Blynk IoT**. Stáhneš ji z [App store](https://apps.apple.com/us/app/blynk-iot/id1559317868), nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk).
+1. Půjčte si od mámy nebo táty telefon a udělejte ho ještě o kousek chytřejší. 🤓 Aby se jim vaše zpráva zobrazila, musí mít v mobilu **aplikaci Blynk IoT**. Stáhnete ji z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk).
 
-2. Po instalaci se přihlas pod svým účtem.
+2. Po instalaci se přihlaste svým účtem.
 
 
-## Propoj mobil s krabičkou
+## Propojte mobil s krabičkou
 
-1. Vrať se k počítači. Na ploše Node-RED přidej za oba nody **zelený node Write**. Najdeš ho v levé části v sekci **Blynk IoT** (Pozor! Ne Blynk ws).
+1. Vraťte se k počítači. Na ploše Node-RED přidejte za oba uzly **zelený uzel Write**. Najdete ho vlevo v sekci **Blynk IoT** (pozor, ne Blynk ws).
 
 ![Blynk IoT - HARDWARIO Playground](./img/im-ok-button/playground-1.png)
 
 
-2. Node otevři dvojklikem. Vpravo uvidíš **malou tužku**. Klikni na ni a otevře se ti nové okno. Do pole **Url** vlož ``blynk.cloud``, do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové aplikaci na počítači.
+2. Uzel otevřete dvojklikem. Vpravo uvidíte **malou tužku**. Klikněte na ni a otevře se nové okno. Do pole **Url** vložte ``blynk.cloud`` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu zařízení ve webové aplikaci na počítači.
 
 ![Blynk IoT - HARDWARIO Playground](./img/im-ok-button/playground-2.png)
 
 
-Nastavení potvrď tlačítkem **Add**.
+Nastavení potvrďte tlačítkem **Add**.
 
-3. Vyplň číslo virtuálního Pinu vytvořeného datastreamu a tlačítkem **Done** vše ulož.
+3. Vyplňte číslo virtuálního pinu vytvořeného datastreamu a vše uložte tlačítkem **Done**.
 
-4. **Node s Blynkem propoj se žlutým nodem, do kterého jsi nastavil zprávu.** Teď jsi zařízení naprogramoval tak, aby se stisknutí tlačítka na krabičce ➡️ proměnilo ve zprávu, ➡️ která doputuje až do mobilu tvých rodičů. 👾
+4. **Uzel s Blynkem propojte se žlutým uzlem, ve kterém jste nastavili zprávu.** Teď máte zařízení naprogramované tak, aby se stisknutí tlačítka na krabičce ➡️ proměnilo ve zprávu, ➡️ která doputuje až do mobilu vašich rodičů. 👾
 
 ![Blynk IoT - HARDWARIO Playground](./img/im-ok-button/flow.png)
 
 
-❗ Celý flow odstartuj a potvrď červeným tlačítkem **Deploy** vpravo nahoře. 🚨
+❗ Celý flow spusťte a potvrďte červeným tlačítkem **Deploy** vpravo nahoře. 🚨
 
-## A… Akce!
+## A… akce!
 
-1. Zmáčkni tlačítko. Rodičům na mobilu **vyskočila zpráva**. 💪
+1. Stiskněte tlačítko. Rodičům v mobilu **vyskočí zpráva**. 💪
 
 ![Get Notification on Phone](./img/im-ok-button/notification.png)
 
 
-2. Nejenom, že si o tobě budou tví rodičové myslet, že jsi nadaný, ale ještě si ušetříš jejich každodenní telefonáty. 🎉 **A to je prostě tak chytré, až je to IoT.** 🕺
+2. Rodiče si o vás budou myslet, že máte talent, a vy si navíc ušetříte jejich každodenní telefonáty. 🎉 **A to je prostě tak chytré, až je to IoT.** 🕺

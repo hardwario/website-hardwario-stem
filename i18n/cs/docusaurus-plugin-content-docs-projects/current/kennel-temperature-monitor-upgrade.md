@@ -1,41 +1,41 @@
 ---
 slug: kennel-temperature-monitor-upgrade
-title: Monitor teploty psí boudy - Vylepšení
+title: Vylepšený monitor teploty psí boudy
 ---
 import Image from '@theme/IdealImage';
 
 ## Úvod
 
-Základní verzi detektoru teploty do psí boudy už máš? Postav si ještě o třídu lepší. Bude ti posílat notifikace do mobilu a teplotní stav boudy uvidíš odkudkoli. 🐶
+Základní verzi hlídače teploty psí boudy už máte? Postavte si ještě o třídu lepší. Bude vám posílat notifikace do mobilu a teplotu v boudě uvidíte odkudkoli. 🐶
 
-S tímhle projektem se naučíš nastavit krabičku tak, aby ti **poslala zprávu, když teplota překročí přednastavenou hodnotu**. 👌 Štěkat krabička sice nezačne, ale i tak je to super projekt. 🐩
+S tímto projektem se naučíte nastavit krabičku tak, aby vám **poslala zprávu, když teplota klesne pod nastavenou hodnotu**. 👌 Štěkat krabička sice nezačne, ale i tak je to skvělý projekt. 🐩
 
-Základní verzi tohohle projektu najdeš tady: [Hlídač teploty pro chlupatého hlídače: kontroluj teplotu v boudě svého psa](/cs/projects/kennel-temperature-monitor/).
+Základní verzi tohoto projektu najdete tady: [Hlídač teploty pro chlupatého hlídače: kontrolujte teplotu v boudě svého psa](/cs/projects/kennel-temperature-monitor/).
 
-Tentokrát ti taky postačí základní HARDWARIO sada, tedy [**Start Set**](https://www.hardwario.store/p/start-set).
+I tentokrát vám postačí základní sada HARDWARIO, tedy [**Start Set**](https://www.hardwario.store/p/start-set).
 
 
-## Připrav si Node-RED
+## Připravte si Node-RED
 
-1. Firmware, který k projektu potřebuješ, je známý **bcf-radio-push-button**. Máš ho tam? Tak na co čekáš, krabičku spáruj s Donglem.
+1. K projektu potřebujete známý firmware **bcf-radio-push-button**. Máte ho nahraný? Tak na nic nečekejte a spárujte krabičku s donglem.
 <div class="container">
   <div class="row">
     <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-1.webp')} alt="Záložka Devices v Playgroundu: řádek spárovaného zařízení se zvýrazněným aliasem push-button:0"/>
   </div>
 </div>
 
-2. V Playgroundu překlikni na záložku **Functions** a polož na plochu úplně to samé, co v základní verzi projektu:
+2. V Playgroundu přepněte na záložku **Functions** a umístěte na plochu totéž co v základní verzi projektu:
 
-- jeden kousek **MQTT nodu** ze sekce Input (nahraj na něj znovu **Topic**
+- jeden **uzel MQTT** ze sekce Input, do kterého znovu vložte tento **Topic**:
 
 ```
-node/push-button:0/thermometer/0:1/temperature),
+node/push-button:0/thermometer/0:1/temperature
 ```
 
-- a ukazatel, tedy node **Gauge** ze sekce Dashboard. Měl by ukazovat od −15 do 40 °C. Navíc si ho pojmenuj, pro lepší orientaci. ✍️
+- a ukazatel, tedy uzel **Gauge** ze sekce Dashboard. Měl by ukazovat rozsah od −15 do 40 °C. Pro lepší orientaci ho pojmenujte. ✍️
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-2.webp')} alt="Plocha Node-RED s MQTT uzlem teploty a uzlem budíku boudy umístěnými na ploše"/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-2.webp')} alt="Plocha Node-RED s uzlem MQTT pro teplotu a uzlem Gauge pro boudu"/>
   </div>
 </div>
 
@@ -45,35 +45,35 @@ node/push-button:0/thermometer/0:1/temperature),
   </div>
 </div>
 
-Drž si cylindr, jedeme dál. 🎩
+Držte si klobouky, jedeme dál. 🎩
 
-## Připrav Blynk IoT pro upozornění
+## Připravte Blynk IoT na upozornění
 
-Teplotní upozornění ti dorazí do telefonu skrz aplikaci **Blynk IoT** jako push notifikace. A přesně tohle dělá z krabičky chytrou věc. 😎
+Upozornění na teplotu vám přijde do telefonu jako push notifikace z aplikace **Blynk IoT**. Právě tím se z krabičky stává chytrá věc. 😎
 
-1. Pokud ještě žádný nemáš, založ si účet v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Jak si nastavit účet, šablonu zařízení (device template) a zařízení (device) se dozvíš v [tomhle návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Budeš potřebovat všechny tři. Klidně můžeš použít i šablonu z předchozího projektu.
+1. Pokud ještě účet nemáte, založte si ho v [Blynk IoT](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Jak nastavit účet, šablonu zařízení (device template) a zařízení (device), se dozvíte v [tomto návodu](https://docs.hardwario.com/tower/platform-integrations/blynk-app/). Budete potřebovat všechny tři. Klidně můžete použít i šablonu z předchozího projektu.
 
-2. V Blynk IoT se upozornění na obrazovku telefonu neumisťuje jako widget. Posílá se jako **Event** (událost) definovaný na tvé šabloně. V detailu šablony otevři záložku **Events** a přidej nový event (pojmenuj ho například `kennel_temp` a dej mu zprávu, kterou chceš dostávat, třeba _It is too cold in the kennel_). Pak pro tenhle event zapni **Notifications**, aby ti ho Blynk doručil do telefonu. [Návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/) tě nastavením šablony provede.
+2. V Blynk IoT se upozornění nepřidává na obrazovku telefonu jako widget, ale posílá se jako událost (**Event**) definovaná v šabloně. V detailu šablony otevřete záložku **Events** a přidejte novou událost (pojmenujte ji například `kennel_temp` a zadejte zprávu, kterou chcete dostávat, třeba _V boude je moc velka zima_). Pak pro tuto událost zapněte **Notifications**, aby vám ji Blynk doručil do telefonu. Nastavením šablony vás provede [návod](https://docs.hardwario.com/tower/platform-integrations/blynk-app/).
 
-3. Stáhni si do telefonu aplikaci **Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlas se stejným účtem. Ujisti se, že má aplikace povolené notifikace, aby se upozornění mohlo objevit. 📱 Nejdřív ale musíš vylepšit svůj Node-RED, jinak to nic dělat nebude.
+3. Stáhněte si do telefonu aplikaci **Blynk IoT** z [App Store](https://apps.apple.com/us/app/blynk-iot/id1559317868) nebo [Google Play](https://play.google.com/store/apps/details?id=cloud.blynk) a přihlaste se stejným účtem. Zkontrolujte, že má aplikace povolené notifikace, aby se upozornění mohlo zobrazit. 📱 Nejdřív ale musíte vylepšit Node-RED, jinak se nic nestane.
 
 
-## Upgraduj v Node-RED
+## Vylepšete Node-RED
 
-1. Vrať se k počítači a do Playground nastav další funkce. První z nich bude **notifikace na mobil**. Tu zprovozníš díky třem nodům.
+1. Vraťte se k počítači a v Playgroundu nastavte další funkce. První z nich je **notifikace na mobil**, kterou zprovozníte pomocí tří uzlů.
 
-- První node: **node Switch** ze sekce Function.
+- První: **uzel Switch** ze sekce Function.
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-4.webp')} alt="Plocha Node-RED se zvýrazněným uzlem Switch ze sekce Function nad uzlem budíku"/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-4.webp')} alt="Plocha Node-RED se zvýrazněným uzlem Switch ze sekce Function nad uzlem Gauge"/>
   </div>
 </div>
 
-Uvnitř nodu nastav to, co vidíš níž na obrázku:
+V uzlu nastavte totéž co na obrázku níže:
 
-a. jako vybranou vlastnost (Property) použij **msg. payload**,
+a. jako vybranou vlastnost (Property) použijte **msg.payload**,
 
-b. zvol, aby se notifikace poslala, když bude teplota rovna nebo nižší −15 °C. Pracuj s proměnnou **flow. optimalTemp** a se značkou menší/rovná se: 
+b. nastavte, aby se notifikace poslala, když teplota klesne na −15 °C nebo níž. Pracujte s proměnnou **flow.optimalTemp** a operátorem menší nebo rovno: 
 `**<=**`.
 <div class="container">
   <div class="row">
@@ -81,38 +81,38 @@ b. zvol, aby se notifikace poslala, když bude teplota rovna nebo nižší −15
   </div>
 </div>
 
-- Druhý: **node Change** ze stejné sekce. Ten ovlivňuje, jaká zpráva ti na mobil přijde.
+- Druhý: **uzel Change** ze stejné sekce. Ten určuje, jaká zpráva vám přijde na mobil.
 <div class="container">
   <div class="row">
     <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-6.webp')} alt="Plocha Node-RED se zvýrazněným uzlem Change (set msg.payload) vedle uzlu Switch"/>
   </div>
 </div>
 
-Uvnitř nodu nastav, co ti telefon zahlásí, až teplota v boudě klesne pod nejnižší teplotu, kterou sis nastavil. Třeba _V boude je moc velka zima_.
+V uzlu nastavte, co vám telefon oznámí, když teplota v boudě klesne pod nastavené minimum. Třeba _V boude je moc velka zima_.
 
-**Náš tip**: Zprávu piš bez háčků a čárek, Blynk jim bohužel nerozumí.
+**Náš tip**: Zprávu pište bez háčků a čárek, Blynk jim bohužel nerozumí.
 
-- Třetí: **node Blynk IoT**, který umí spustit tvůj event (node **log event**), ze sekce Blynk IoT. Ten zajišťuje propojení s mobilem.
-Dvojklikem node otevři. Vpravo uvidíš **malou tužku**. Klikni na ni a otevře se nové okno. Do pole **Url** zadej `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopíruj hodnoty z detailu zařízení ve webové aplikaci Blynk IoT na počítači. Potvrď tlačítkem **Add**.
+- Třetí: **uzel Blynk IoT** ze sekce Blynk IoT, který umí spustit vaši událost (uzel **log event**). Přes něj vede spojení s mobilem.
+Uzel otevřete dvojklikem. Vpravo uvidíte **malou tužku**. Klikněte na ni a otevře se nové okno. Do pole **Url** zadejte `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z detailu zařízení ve webové aplikaci Blynk IoT na počítači. Potvrďte tlačítkem **Add**.
 
-Pak node nastav tak, aby spouštěl **Event**, který jsi vytvořil (kód eventu, např. `kennel_temp`). Právě tohle promění příliš nízkou naměřenou teplotu v push notifikaci. Potvrď tlačítkem **Done**.
+Pak uzel nastavte tak, aby spouštěl vytvořenou událost (**Event**), v našem příkladu s kódem `kennel_temp`. Díky tomu se příliš nízká naměřená teplota promění v push notifikaci. Potvrďte tlačítkem **Done**.
 
-**Náš tip**: V řádku name si propojení ještě pojmenuj, abys ho později poznal.
+**Náš tip**: V řádku name propojení pojmenujte, ať ho později poznáte.
 
-## Hoď tam flow, které hlídá optimální teplotu
+## Přidejte flow, který hlídá optimální teplotu
 
-1. Poslední třešinka na dortu. Tohle flow se bude skládat ze dvou nodů.
+1. Teď přijde třešnička na dortu. Tento flow se bude skládat ze dvou uzlů.
 
-První je **node Numeric** ze sekce Dashboard. Zní to jako nějaký padouch z komiksu, že jo? Teď je to ale tvůj kámoš.
+První je **uzel Numeric** ze sekce Dashboard. Zní to jako padouch z komiksu, že? Teď je to ale váš pomocník.
 
-Node Numeric ti umožní nastavit nejnižší přípustnou teplotu rovnou z Dashboardu v Playgroundu. **Zajistí, že se práh dá snadno upravit.**
+Pomocí uzlu Numeric nastavíte nejnižší přípustnou teplotu přímo z Dashboardu v Playgroundu. **Práh tak snadno upravíte.**
 <div class="container">
   <div class="row">
     <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-12.webp')} alt="Plocha Node-RED se zvýrazněným uzlem Numeric ze sekce Dashboard"/>
   </div>
 </div>
 
-Uvnitř nastav **měrnou jednotku** (°C), **teplotní rozmezí** ( −15 a 40) a **název nodu**.
+V uzlu nastavte **jednotku** (°C), **teplotní rozsah** (−15 až 40) a **název uzlu**.
 
 <div class="container">
   <div class="row">
@@ -120,35 +120,35 @@ Uvnitř nastav **měrnou jednotku** (°C), **teplotní rozmezí** ( −15 a 40) 
   </div>
 </div>
 
-3. Vedle toho umísti další **Change node**.
+3. Vedle něj umístěte další **uzel Change**.
 <div class="container">
   <div class="row">
     <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-14.webp')} alt="Plocha Node-RED se zvýrazněným uzlem Change (set msg.payload) vedle uzlu Numeric"/>
   </div>
 </div>
 
-4. V něm nastav, aby se podle změny v nodu Numeric rovnou aktualizovala hodnota minimální teploty (optimalTemp). Mrkej na obrázek.
+4. V něm nastavte, aby se při každé změně v uzlu Numeric hned aktualizovala minimální teplota (optimalTemp). Řiďte se obrázkem.
 <div class="container">
   <div class="row">
     <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-15.webp')} alt="Dialog Edit change node: zvýrazněné pravidlo Set flow.optimalTemp na msg.payload"/>
   </div>
 </div>
 
-5. Teď už ti to zbývá **propojit podle obrázku** a potvrdit tlačítkem **Deploy**. 🙌
+5. Teď už zbývá uzly **propojit podle obrázku** a potvrdit tlačítkem **Deploy**. 🙌
 <div class="container">
   <div class="row">
     <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-18.webp')} alt="Hotový flow v Node-RED s propojenými uzly a zvýrazněným tlačítkem Deploy"/>
   </div>
 </div>
 
-## A... akce!
+## A… akce!
 
-1. Krabičku zase nalep na **vnitřní stěnu boudy**.
-2. Teplota naměřená v boudě se ti ukazuje v Playgroundu **na záložce Dashboard**…
+1. Krabičku znovu přilepte na **vnitřní stěnu boudy**.
+2. Teplotu naměřenou v boudě uvidíte v Playgroundu **na záložce Dashboard**…
 <div class="container">
   <div class="row">
-    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-19.webp')} alt="Dashboard s budíkem teploty v boudě ukazujícím 23,75 °C a polem optimální teploty"/>
+    <Image img={require('./img/kennel-temperature-monitor-upgrade/kennel-temperature-monitor-upgrade-19.webp')} alt="Dashboard s ukazatelem teploty v boudě, který ukazuje 23,75 °C, a polem optimální teploty"/>
   </div>
 </div>
 
-3. A hlavně dostaneš na mobil **notifikaci**, kdyby bylo rafíkovi moc hic nebo velká kosa, takže můžeš boudu čekovat odkudkoli a kdykoli. 🕵️ Šťastný pes = dobrý pes! 🐕
+3. A hlavně vám na mobil přijde **notifikace**, kdyby byla psovi v boudě zima, takže boudu můžete kontrolovat odkudkoli a kdykoli. 🕵️ Šťastný pes = dobrý pes! 🐕

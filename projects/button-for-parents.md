@@ -17,10 +17,10 @@ You will need the **box with a button** and the **USB dongle**. So you will be f
 
 1. Put together the Starter set and pair it. For the Core Module, you need the **radio push button** firmware. If you don’t know how to download the firmware or what it even is, you can find out more here.
 2. Click on the **Functions tab** in the Playground. You will find there the Node-RED programming desktop. Here you can preset your box so it does anything you want.
-**If you open the programme for the first time:** clear the desktop and delete all the preset nods with the Delete button.
-3. Let's program now. 🤞 Place the light purple cell, or nod, on the Node-RED desktop first. You'll find it on the left side as **MQTT in the Inputs section**.
+**If you open the programme for the first time:** clear the desktop and delete all the preset nodes with the Delete button.
+3. Let's program now. 🤞 Place the light purple cell, or node, on the Node-RED desktop first. You'll find it on the left side as **MQTT in the Inputs section**.
 
-![Get it started in Node-RED](./img/button-for-parents/image3.png "Rozjeď to v Node-RED")
+![Get it started in Node-RED](./img/button-for-parents/image3.png "Get it started in Node-RED")
 
 
 4. In the node, you will set up the key feature: clicking on the button. Click on the node twice and **copy this link into the Topic field**:
@@ -45,10 +45,10 @@ What does it mean? It means that next time you can copy lines into the Topic fie
 
 ![Node-RED Change node](./img/button-for-parents/image7.png "Node-RED Change node")
 
-2. This Change nod alters the action. For example, it can send a message. Go wild and set up your own. A little inspiration:
+2. This Change node alters the action. For example, it can send a message. Go wild and set up your own. A little inspiration:
 	- Grub!
 	- Feeding time
-	- BFill your belly with real mana
+	- Fill your belly with real mana
 	- My health potion has been cooked
 
 You can do it by clicking the node twice and writing the message in the second line of the **Rules** field.

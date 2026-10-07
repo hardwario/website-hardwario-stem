@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 # Minikurz TOWER
 
-Tento kurz vznikl ve spolupráci HARDWARIO a.s. a Technické univerzity v Liberci v rámci dotační podpory Libereckého kraje. Cílem je poskytnout studentům i učitelům praktický nástroj k objevování světa internetu věcí (IoT) prostřednictvím elektronické stavebnice TOWER.
+Tento kurz vznikl ve spolupráci společnosti HARDWARIO a.s. a Technické univerzity v Liberci s dotační podporou Libereckého kraje. Cílem je poskytnout studentům i učitelům praktický nástroj k objevování světa internetu věcí (IoT) prostřednictvím elektronické stavebnice HARDWARIO TOWER.
 
 Kurz je navržen tak, aby účastníky vedl od prvního zapojení modulu až po tvorbu vlastních IoT aplikací.
 
@@ -23,9 +23,9 @@ Během kurzu projdete pět výukových lekcí, které kombinují teorii, praktic
 
 ## Co budete potřebovat
 
-* Počítač s **Windows 10 nebo novějším**, **macOS 15 nebo novějším**, nebo s **linuxovým desktopem** (podporováno je Ubuntu 24.04 / Fedora 42 nebo novější), jeden volný USB port a oprávnění instalovat software a USB ovladače.
+* Počítač s **Windows 10 nebo novějším**, **macOS 15 nebo novějším** či s **linuxovým desktopem** (podporováno je Ubuntu 24.04 / Fedora 42 nebo novější), jeden volný USB port a oprávnění instalovat software a USB ovladače.
 * **HARDWARIO Playground**: ke stažení zdarma; instalací vás provede Lekce 1.
-* Hardware HARDWARIO TOWER používaný v lekcích: **Radio Dongle, Core Module, Battery Module, Mini Battery Module, PIR Module, Climate Module, Button Module, LCD Module, Power Module, Cover Module**, USB kabel, LED pásek, DC adaptér a 3D tištěné kryty a k tomu **šest baterií AAA** (čtyři do Battery Module, dvě do Mini Battery Module).
+* Hardware HARDWARIO TOWER používaný v lekcích: **Radio Dongle, Core Module, Battery Module, Mini Battery Module, PIR Module, Climate Module, Button Module, LCD Module, Power Module, Cover Module**, USB kabel, LED pásek, DC adaptér a 3D tištěné krabičky, k tomu **šest baterií AAA** (čtyři do Battery Module, dvě do Mini Battery Module).
 * Připojení k internetu pro stažení softwaru. **Nejsou potřeba žádné účty ani cloudové služby.**
 
 ## Přínosy kurzu
