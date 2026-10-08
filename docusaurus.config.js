@@ -271,4 +271,30 @@ const config = {
     }),
 };
 
-module.exports = config;
+// The Legal footer column points at www.hardwario.com in the locale being
+// built. A function, not the object: Docusaurus loads this module once and
+// calls the function for every locale. Labels stay English; the cs
+// footer.json translates them.
+function legalColumn(locale) {
+  const www = locale === 'cs' ? 'https://www.hardwario.com/cs' : 'https://www.hardwario.com';
+  return {
+    title: 'Legal',
+    items: [
+      { label: 'Privacy Policy', href: `${www}/legal/privacy/` },
+      { label: 'Cookie Policy', href: `${www}/legal/cookies/` },
+      { label: 'All Legal Documents', href: `${www}/legal/` },
+    ],
+  };
+}
+
+module.exports = () => {
+  const locale = process.env.DOCUSAURUS_CURRENT_LOCALE === 'cs' ? 'cs' : 'en';
+  const footer = config.themeConfig.footer;
+  return {
+    ...config,
+    themeConfig: {
+      ...config.themeConfig,
+      footer: { ...footer, links: [...footer.links, legalColumn(locale)] },
+    },
+  };
+};
