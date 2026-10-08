@@ -4,6 +4,9 @@
 const {themes} = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
+// Every YouTube embed becomes a click-to-play poster (no Google request before
+// the click); see the file.
+const youtubeFacade = require('./src/remark/youtube-facade');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -97,6 +100,7 @@ const config = {
           path: 'stem',
           sidebarPath: require.resolve('./sidebars-stem.js'),
           editUrl: 'https://github.com/hardwario/website-hardwario-stem/edit/main',
+          remarkPlugins: [youtubeFacade],
         },
         // Learning content lives in the three docs instances below; there is
         // no STEM blog. Avoid publishing an empty, indexable /blog route.
@@ -127,6 +131,7 @@ const config = {
         routeBasePath: 'projects',
         sidebarPath: require.resolve('./sidebars-projects.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-stem/edit/main',
+        remarkPlugins: [youtubeFacade],
       }),
     ],
     [
@@ -137,6 +142,7 @@ const config = {
         routeBasePath: 'mini-course',
         sidebarPath: require.resolve('./sidebars-mini-course.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-stem/edit/main',
+        remarkPlugins: [youtubeFacade],
       }),
     ],
     [
