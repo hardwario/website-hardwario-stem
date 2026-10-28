@@ -14,9 +14,17 @@
   Cache-Control: public, max-age=2592000
 
 # Security response headers for every route (HTML + assets).
-# No Content-Security-Policy: Docusaurus relies on inline <script>/<style>
-# (hydration, JSON-LD, search, embeds), so a meaningful CSP needs dedicated
-# design and is tracked separately rather than shipped blind.
+# Content-Security-Policy-Report-Only (from 2026-11-02): violations are reported
+# to /csp-report, which the Worker logs to Workers Logs (filter kind = csp-report);
+# nothing is blocked. After two weeks of reports, decide on enforcing.
+# - script-src: no 'unsafe-inline'. The hashes are Docusaurus' inline scripts: the
+#   colour-mode bootstrap on every page and the base-URL banner on the EN and CS
+#   homepages. A Docusaurus upgrade can change them: run `npm run verify:csp`
+#   after `npm run build`, and put the hashes it lists here.
+# - style-src keeps 'unsafe-inline': React style attributes, ideal-image
+#   placeholders and Prism write inline styles.
+# - connect-src: this site only.
+# - frame-src: YouTube (youtube-nocookie, only after the visitor presses play).
 # HSTS is intentionally max-age only (no includeSubDomains/preload): this is a
 # subdomain of hardwario.com and preload is effectively irreversible — keep it
 # in step with the apex's deliberately conservative HSTS.
@@ -26,3 +34,5 @@
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Reporting-Endpoints: csp-endpoint="/csp-report"
+  Content-Security-Policy-Report-Only: default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; script-src 'self' 'sha256-VSjX2aDQTt9NLoldfwitmTdwi/Q1Ul2H+D/aNhI0EuM=' 'sha256-0MUyFJhUwQbJbxdRddDw1q7CMNQ//leUWFbuI6XcmZo=' 'sha256-/KdKZA1Dc/wxVzoVs+p7ovq4sZz0sO9WUYUsYJE7e4M='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; frame-src https://www.youtube-nocookie.com; report-uri /csp-report; report-to csp-endpoint
