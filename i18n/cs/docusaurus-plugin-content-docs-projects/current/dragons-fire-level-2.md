@@ -45,16 +45,15 @@ node/push-button:0/push-button/-/event-count
 var hottestTemp = flow.get("hottestTemp");
 var pressed = flow.get("pressed") || false;
 
-flow.set("holded", false);flow.set("pressed", !pressed);
+flow.set("holded", false);
+flow.set("pressed", !pressed);
 
-if(!flow.get("pressed"))
-{
- if(flow.get("contestantTemp") > hottestTemp)
- {
- flow.set("hottestTemp", flow.get("contestantTemp"));
- msg.payload = flow.get("hottestTemp");
- return msg;
- }
+if(!flow.get("pressed")) {
+  if(flow.get("contestantTemp") > hottestTemp) {
+    flow.set("hottestTemp", flow.get("contestantTemp"));
+    msg.payload = flow.get("hottestTemp");
+    return msg;
+  }
 }
 ```
 
@@ -92,15 +91,12 @@ flow.set("pressed", false);
 
 flow.set("holded", !holded);
 
-if(!flow.get("holded"))
-{
-if(flow.get("contestantTemp") < coldestTemp)
- {
-  flow.set("coldestTemp", flow.get("contestantTemp"));
-
-  msg.payload = flow.get("coldestTemp");
-  return msg;
- }
+if(!flow.get("holded")) {
+  if(flow.get("contestantTemp") < coldestTemp) {
+    flow.set("coldestTemp", flow.get("contestantTemp"));
+    msg.payload = flow.get("coldestTemp");
+    return msg;
+  }
 }
 ```
 
@@ -129,21 +125,17 @@ node/push-button:0/thermometer/0:1/temperature
 ```
 var temp = msg.payload;
 
-if(flow.get("pressed"))
-{
- if(flow.get("contestantTemp") < temp)
- {
-  flow.set("contestantTemp", temp);
-  return msg;
+if(flow.get("pressed")) {
+  if(flow.get("contestantTemp") < temp) {
+    flow.set("contestantTemp", temp);
+    return msg;
   }
 }
-else if(flow.get("holded"))
-{
-  if(flow.get("contestantTemp") > temp)
-  {
-   flow.set("contestantTemp", temp);
-   return msg;
- }
+else if(flow.get("holded")) {
+  if(flow.get("contestantTemp") > temp) {
+    flow.set("contestantTemp", temp);
+    return msg;
+  }
 }
 ```
 

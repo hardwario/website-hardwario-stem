@@ -71,7 +71,8 @@ Double-click it and type the node name in the **Name** field: Int parser.
 Then copy this simple code into the Function field:
 
 ```
-msg.payload = parseInt(msg.payload); return msg;
+msg.payload = parseInt(msg.payload);
+return msg;
 ```
 
 <div class="container">
@@ -109,7 +110,12 @@ Confirm with **Done**.
 In the **Name** field, enter Notification setting status, and copy this code into the **Function** field:
 
 ```
-if(msg.payload == "1") { flow.set("alarmOn", 1); } else { flow.set("alarmOn", 0); } return msg;
+if(msg.payload == "1") {
+  flow.set("alarmOn", 1);
+} else {
+  flow.set("alarmOn", 0);
+}
+return msg;
 ```
 
 <div class="container">
@@ -144,7 +150,8 @@ node/burglar-alarm:0/thermometer/0:1/temperature
 
 
 ```
-msg.payload = flow.get("alarmOn"); return msg;
+msg.payload = flow.get("alarmOn");
+return msg;
 ```
 
 Thanks to this node, the sensor is active only when you switch it on in Blynk or on the computer.
@@ -184,7 +191,8 @@ First place an **mqtt in** node from the network section on the canvas and set i
 2. Next comes a little JavaScript, a **Function** node. Set its **Name** to _Message_ and use this code:
 
 ```
-msg.payload = "Someone's in your room"; return msg;
+msg.payload = "Someone's in your room";
+return msg;
 ```
 
 **Our tip**: Feel free to change the message in the code, but remember that Blynk can't read accented letters. To Blynk, they're all Greek. 🤷

@@ -38,13 +38,13 @@ Tento návod vás provede projektem **Bezdrátový senzor VOC**. V prostředí *
   * 1x [**Humidity Tag**](https://www.hardwario.store/cz/p/humidity-tag)
 
 * Jedna z následujících možností:
-    * Nainstalovaný **HARDWARIO Playground** (doporučeno)<br></br>
+    * Nainstalovaný **HARDWARIO Playground** (doporučeno)
       Více informací najdete v dokumentu [**Instalace aplikace HARDWARIO Playground**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/).
 
-    * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**<br></br>
+    * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**
       Více informací najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
 
-    * Nainstalovaný **HARDWARIO Toolchain**<br></br>
+    * Nainstalovaný **HARDWARIO Toolchain**
       Více informací najdete v dokumentu [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/).
 
 ### Nahrání firmwaru {#firmware-upload}

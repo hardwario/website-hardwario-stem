@@ -45,20 +45,15 @@ Následující kód zkopírujte v nastavení uzlu na záložku **On Message**. K
 var date = new Date();
 var hour = date.getHours();
 
-if(hour >= 8 && hour < 11)
-{
- msg.payload = "Pojd na snidani, ospalce";
- return msg;
-}
-else if(hour >= 11 && hour < 17)
-{
- msg.payload = "Obidek na tebe uz ceka";
- return msg;
-}
-else if(hour >= 17 && hour < 21)
-{
- msg.payload = "Podava se vrchol dne, vecere";
- return msg;
+if(hour >= 8 && hour < 11) {
+  msg.payload = "Pojd na snidani, ospalce";
+  return msg;
+} else if(hour >= 11 && hour < 17) {
+  msg.payload = "Obidek na tebe uz ceka";
+  return msg;
+} else if(hour >= 17 && hour < 21) {
+  msg.payload = "Podava se vrchol dne, vecere";
+  return msg;
 }
 ```
 

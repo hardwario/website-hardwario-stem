@@ -88,10 +88,10 @@ flow.set("holded", !holded);
 if(!flow.get("holded")) {
   if(flow.get("contestantTemp") < coldestTemp) {
     flow.set("coldestTemp", flow.get("contestantTemp"));
-    msg.payload = flow.get("coldestTemp"); return msg;
+    msg.payload = flow.get("coldestTemp");
+    return msg;
   }
 }
-
 ```
 
 - **Both Text nodes are the same as in the previous flow**; just change hottest to coldest.
@@ -121,7 +121,8 @@ var temp = msg.payload;
 
 if(flow.get("pressed")) {
   if(flow.get("contestantTemp") < temp) {
-    flow.set("contestantTemp", temp); return msg;
+    flow.set("contestantTemp", temp);
+    return msg;
   }
 }
 else if(flow.get("holded")) {

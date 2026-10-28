@@ -19,7 +19,7 @@ Budete potřebovat jen **krabičku s tlačítkem** a **USB dongle**. Vystačíte
 2. Do modulu Core Module nahrajte nový firmware **bcf radio spinning game** (najdete ho v Playgroundu mezi ostatními firmwary). Díky němu bude krabička reagovat na otáčení. 👌
 
 
-3. Modul Core Module spárujte s USB donglem. Hned po spárování uvidíte, že se jeho Alias změnil na **rotation-g-meter**.
+3. <a href="https://docs.hardwario.com/tower/desktop-programming/radio-network-management/#pairing-new-devices" target="_blank">Modul Core Module spárujte s USB donglem.</a> Hned po spárování uvidíte, že se jeho Alias změnil na **rotation-g-meter**.
 
 
 <div class="container"> <div class="row"> <Image img={require('./img/highest-centrifugal-force/highest-centrifugal-force-1.webp')} alt="Záložka Devices v Playgroundu: řádek spárovaného zařízení se zvýrazněným aliasem rotation-g-meter:0"/> </div> </div>

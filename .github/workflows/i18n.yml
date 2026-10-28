@@ -14,7 +14,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      # Report-only on stem until the 53 pages that drifted before this check existed are triaged
-      # (website-admin TODO.md); flip to a failing check afterwards.
       - run: node scripts/verify-i18n.mjs --locale cs
-        continue-on-error: true
