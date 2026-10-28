@@ -23,14 +23,17 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
   const description = translate({
     id: 'homepage.metaDescription',
     message: 'STEM learning platform for schools: hands-on IoT lessons and projects with HARDWARIO TOWER kits.',
   });
+  const title = translate({
+    id: 'homepage.title',
+    message: 'STEM learning platform for schools',
+  });
   return (
     <Layout
-      title={`${siteConfig.title}`}
+      title={title}
       description={description}>
       <HomepageHeader />
       <main>

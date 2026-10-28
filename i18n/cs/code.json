@@ -354,6 +354,9 @@
   "homepage.metaDescription": {
     "message": "Platforma pro výuku STEM ve školách: praktické lekce a projekty IoT se stavebnicí HARDWARIO TOWER."
   },
+  "homepage.title": {
+    "message": "Platforma pro výuku STEM ve školách"
+  },
   "Projects and Tutorials": {
     "message": "Projekty a návody"
   },
