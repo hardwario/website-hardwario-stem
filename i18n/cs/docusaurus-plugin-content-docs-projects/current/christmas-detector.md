@@ -15,7 +15,9 @@ Pokud máte Sadu Start, budete k ní potřebovat ještě [PIR Module](https://ww
 
 ## Připravte si krabičku
 
-1. Sestavte sadu. Do modulu Core Module potřebujete firmware **twr-radio-motion-detector**. <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-1.webp')} alt="Záložka Firmware v Playgroundu s vybraným firmwarem twr-radio-motion-detector k nahrání"/> </div> </div>
+1. Sestavte sadu. Do modulu Core Module potřebujete firmware **twr-radio-motion-detector**.
+
+   <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-1.webp')} alt="Záložka Firmware v Playgroundu s vybraným firmwarem twr-radio-motion-detector k nahrání"/> </div> </div>
 
 2. Pokud se firmware nahrál správně, uvidíte v Playgroundu na záložce Devices alias **motion-detector**.
 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-2.webp')} alt="Záložka Devices v Playgroundu se spárovaným zařízením pod aliasem motion-detector:0"/> </div> </div>
@@ -100,7 +102,9 @@ Zachycený pohyb vám dorazí do chytrého telefonu jako push notifikace z aplik
 
 ## Propojte mobil s krabičkou
 
-1. Vraťte se k počítači. Na plochu Node-RED umístěte poslední uzel celého projektu: uzel **write** ze sekce **Blynk IoT** (ne ze sekce **Blynk ws**, ta patří ke starému Blynku, který už nefunguje). Patří hned za flow s přepínačem (viz obrázek). 👀 <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-13.webp')} alt="Uzel notify pro Blynk zvýrazněný na ploše, umístěný na konec flow detektoru"/> </div> </div>
+1. Vraťte se k počítači. Na plochu Node-RED umístěte poslední uzel celého projektu: uzel **write** ze sekce **Blynk IoT** (ne ze sekce **Blynk ws**, ta patří ke starému Blynku, který už nefunguje). Patří hned za flow s přepínačem (viz obrázek). 👀
+
+   <div class="container"> <div class="row"> <Image img={require('./img/christmas-detector/christmas-detector-13.webp')} alt="Uzel notify pro Blynk zvýrazněný na ploše, umístěný na konec flow detektoru"/> </div> </div>
 
 2. Uzel otevřete dvojklikem. Vedle pole **Connection** uvidíte **malou tužku**. Klikněte na ni a otevře se nové okno. Do pole **Url** zadejte `blynk.cloud` a do polí **Auth Token** a **Template ID** zkopírujte hodnoty z webové aplikace Blynk na počítači: Auth Token najdete na záložce **Device Info** zařízení, Template ID v detailu šablony. Potvrďte tlačítkem **Add**.
 
