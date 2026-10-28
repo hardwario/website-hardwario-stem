@@ -1,6 +1,6 @@
 # HARDWARIO STEM
 
-> STEM learning platform for schools — hands-on Internet-of-Things lessons and
+> STEM learning platform for schools with hands-on Internet-of-Things lessons and
 > student projects built with the solder-free HARDWARIO TOWER kit. Ready-made
 > courses, mini-courses and teaching materials. Published by HARDWARIO a.s., a
 > Czech industrial / wireless IoT manufacturer based in Liberec. Available in
@@ -9,8 +9,8 @@
 
 ## Pages
 
-- [HARDWARIO STEM — English (default)](https://stem.hardwario.com/): courses, mini-courses and teaching materials
-- [HARDWARIO STEM — Czech](https://stem.hardwario.com/cs/): Czech version of the platform
+- [HARDWARIO STEM in English (default)](https://stem.hardwario.com/): courses, mini-courses and teaching materials
+- [HARDWARIO STEM in Czech](https://stem.hardwario.com/cs/): Czech version of the platform
 - [TOWER mini-course](https://stem.hardwario.com/mini-course/): introductory hands-on IoT course
 - [STEM lessons](https://stem.hardwario.com/stem/): structured classroom lessons and teaching guidance
 - [Projects and tutorials](https://stem.hardwario.com/projects/): practical projects built around HARDWARIO TOWER
@@ -20,7 +20,7 @@
 ## More from HARDWARIO
 
 - [HARDWARIO Academy](https://hardwario.academy): why TOWER fits education, teacher resources and school packages
-- [HARDWARIO a.s.](https://www.hardwario.com): company site — products, solutions and services
+- [HARDWARIO a.s.](https://www.hardwario.com): company site with products, solutions and services
 - [HARDWARIO Documentation](https://docs.hardwario.com): technical product documentation
 
 ## Contact
