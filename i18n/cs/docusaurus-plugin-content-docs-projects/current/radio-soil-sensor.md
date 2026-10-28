@@ -288,7 +288,7 @@ Nakonec v **Grafaně** klikněte na tlačítko **Save**, aby nastavení zůstalo
   </div>
 </div>
 
-### Související dokumenty <a id="related-documents"></a>
+### Související dokumenty {#related-documents}
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Přihlášení k Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/login-guide)

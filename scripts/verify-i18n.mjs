@@ -63,7 +63,57 @@ function linkTargets(text, fileDir) {
     .sort();
 }
 
+/**
+ * A translated page may link to the same thing in its own language, so these
+ * differences are not drift and are folded away before comparing:
+ * - the store's Czech storefront (www.hardwario.store/cz/…; it has /cz/ and /de/ only),
+ * - www.hardwario.com's page in the locale (/cs/…),
+ * - a Wikipedia article in the reader's language (the title is localized too, so any
+ *   Wikipedia link stands for any other),
+ * - this site's own pages with the locale prefix (/cs/projects/… is /projects/… in cs),
+ * - a trailing slash, which Workers static assets add anyway.
+ */
+function sameTarget(url, locale) {
+  let u = url
+    .replace(new RegExp(`^(https://www\\.hardwario\\.store)/(?:cz|de)(?=[/?#]|$)`), '$1')
+    .replace(new RegExp(`^(https://www\\.hardwario\\.com)/${locale}(?=[/?#]|$)`), '$1')
+    .replace(new RegExp(`^/${locale}(?=/)`), '');
+  if (/^https?:\/\/[a-z-]+\.(?:m\.)?wikipedia\.org\/wiki\//i.test(u)) return 'wikipedia';
+  return u.replace(/\/(?=[?#]|$)/, '');
+}
+
+/**
+ * A relative asset that resolves inside the translation tree is the localized copy
+ * of the English one (a Czech screenshot), so it counts as the English path.
+ */
+const englishAsset = (abs, locale) => {
+  const m = abs.split(path.sep).join('/').match(new RegExp(`/i18n/${locale}/([^/]+)/current/(.*)$`));
+  if (!m) return abs;
+  const dir = Object.keys(INSTANCES).find((key) => INSTANCES[key] === m[1]);
+  return dir ? path.join(ROOT, dir, m[2]) : abs;
+};
+
 const frontMatterSlug = (text) => (text.match(/^slug:\s*(.+)$/m) || [])[1];
+
+/**
+ * A message a reader sees (a notification text in a Node-RED function) may be
+ * translated, so string literals with a space in them are masked before code is
+ * compared. Topics, keys and other identifiers have no spaces and stay checked.
+ */
+const maskMessages = (code) => code.replace(/"[^"\n]*\s[^"\n]*"/g, '"…"');
+
+/**
+ * Pages whose translation legitimately carries more images than the source: the
+ * Czech Blynk walkthroughs have screenshots no English page has yet (they are
+ * flagged for re-capture in website-admin TODO.md). The number is exact, so any
+ * further change still fails.
+ */
+const EXTRA_IMAGES = {
+  cs: {
+    'projects/button-for-parents.md': 9,
+    'projects/im-ok-button.md': 9,
+  },
+};
 
 /** Fenced code content must come through byte for byte. */
 function codeBlocks(text) {
@@ -132,8 +182,10 @@ function main() {
       const found = [];
 
       const [sa, sb] = [shape(en), shape(cs)];
+      const extraImages = (EXTRA_IMAGES[locale] || {})[source] || 0;
       for (const key of Object.keys(sa)) {
-        if (sa[key] !== sb[key]) found.push(`${key}: en=${sa[key]} cs=${sb[key]}`);
+        const expected = key === 'images' ? sa[key] + extraImages : sa[key];
+        if (sb[key] !== expected) found.push(`${key}: en=${sa[key]} cs=${sb[key]}`);
       }
 
       const slugEn = frontMatterSlug(en);
@@ -141,15 +193,15 @@ function main() {
       if (slugEn !== slugCs) found.push(`slug changed: "${slugEn}" -> "${slugCs}"`);
 
       const [la, lb] = [
-        linkTargets(en, path.dirname(abs)),
-        linkTargets(cs, path.dirname(target)),
+        linkTargets(en, path.dirname(abs)).map((url) => sameTarget(url, locale)),
+        linkTargets(cs, path.dirname(target)).map((url) => sameTarget(englishAsset(url, locale), locale)),
       ];
       const lost = la.filter((l) => !lb.includes(l));
       if (lost.length) found.push(`link targets changed: ${lost.slice(0, 3).join(', ')}`);
 
       const [ca, cb] = [codeBlocks(en), codeBlocks(cs)];
       if (ca.length === cb.length) {
-        const touched = ca.filter((block, i) => block !== cb[i]).length;
+        const touched = ca.filter((block, i) => maskMessages(block) !== maskMessages(cb[i])).length;
         if (touched) found.push(`${touched} code block(s) modified`);
       }
 

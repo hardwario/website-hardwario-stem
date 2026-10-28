@@ -16,7 +16,7 @@ Tento návod vás provede projektem **Bezdrátový monitor klimatu**. V prostře
   </div>
 </div>
 
-### Požadavky <a id="requirements"></a>
+### Požadavky {#requirements}
 
 * Buď [Sada Clime](https://www.hardwario.store/cz/p/clime-set), nebo jednotlivé komponenty:
 
@@ -27,11 +27,11 @@ Tento návod vás provede projektem **Bezdrátový monitor klimatu**. V prostře
 
 * Jedna z těchto možností:
 
-  * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)<br></br>
+  * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)
     Více informací najdete v dokumentu [**Instalace aplikace HARDWARIO Playground**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/).
-  * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**<br></br>
+  * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**
     Více informací najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
-  * Nainstalovaný **HARDWARIO Toolchain**<br></br>
+  * Nainstalovaný **HARDWARIO Toolchain**
     Více informací najdete v dokumentu [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/).
 
 ## Nahrání firmwaru
@@ -216,7 +216,7 @@ Krabičky pro sestavy TOWER najdete v e-shopu v kategorii [**Krabičky**](https:
 
 :::
 
-### Související dokumenty <a id="related-documents"></a>
+### Související dokumenty {#related-documents}
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/)

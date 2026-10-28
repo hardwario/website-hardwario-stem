@@ -2,7 +2,7 @@
 
 V této kategorii najdete hotové projekty HARDWARIO, které si můžete postavit. Každý projekt má vlastní předpřipravený firmware, takže ho stačí jen nahrát.
 
-## Externí projekty na Hackster.io <a id="hackster-io-external-projects"></a>
+## Externí projekty na Hackster.io {#hackster-io-external-projects}
 
 Řadu dalších projektů najdete na [stránce HARDWARIO na Hackster.io](https://www.hackster.io/hardwario/projects).
 

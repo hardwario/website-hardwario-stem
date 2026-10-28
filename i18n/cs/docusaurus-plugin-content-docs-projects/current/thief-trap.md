@@ -110,13 +110,10 @@ Potvrďte tlačítkem **Done**.
 V řádku **Name** vyplňte Stav nastavení upozornění a do pole **Function** zkopírujte tento kód:
 
 ```
-if(msg.payload == "1")
-{
- flow.set("alarmOn", 1);
-}
-else
-{
- flow.set("alarmOn", 0);
+if(msg.payload == "1") {
+  flow.set("alarmOn", 1);
+} else {
+  flow.set("alarmOn", 0);
 }
 return msg;
 ```
@@ -195,7 +192,7 @@ Nejdřív na plochu umístěte **uzel mqtt in ze sekce network** a jako **Topic*
 
 
 ```
-msg.payload = "Nekdo je ve vasem pokoji"
+msg.payload = "Nekdo je ve vasem pokoji";
 return msg;
 ```
 

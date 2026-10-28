@@ -42,8 +42,19 @@ So far it looks like this:
 In the node settings, copy the following code into the **On Message** tab. When you look at the code, you'll see that some parts are highlighted in color. That's where you set the **mealtimes** and **your own messages**. Change the colored parts to suit you; just remember that accented letters such as č or á won't work.
 
 ```
-var date = new Date(); var hour = date.getHours();
-if(hour >= 8 && hour < 11) { msg.payload = "Pojd na snidani, ospalce"; return msg; } else if(hour >= 11 && hour < 17) { msg.payload = "Obidek na tebe uz ceka"; return msg; } else if(hour >= 17 && hour < 21) { msg.payload = "Podava se vrchol dne, vecere"; return msg; }
+var date = new Date();
+var hour = date.getHours();
+
+if(hour >= 8 && hour < 11) {
+  msg.payload = "Pojd na snidani, ospalce";
+  return msg;
+} else if(hour >= 11 && hour < 17) {
+  msg.payload = "Obidek na tebe uz ceka";
+  return msg;
+} else if(hour >= 17 && hour < 21) {
+  msg.payload = "Podava se vrchol dne, vecere";
+  return msg;
+}
 ```
 
 <div class="container"> <div class="row"> <Image img={require('./img/button-for-parents-upgrade/button-for-parents-upgrade-4.webp')} alt="Edit function node dialog with the time-checking meal message JavaScript on the On Message tab"/> </div> </div>

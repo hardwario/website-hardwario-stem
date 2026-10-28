@@ -27,11 +27,11 @@ Tento návod vás provede projektem **Bezdrátový LCD termostat**. S tímto za�
   
 * Jedna z těchto možností:
   
-  * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)<br></br>
+  * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)
     Více informací najdete v dokumentu [**Instalace aplikace HARDWARIO Playground**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/).
-  * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**<br></br>
+  * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**
     Více informací najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
-  * Nainstalovaný **HARDWARIO Firmware Tool**<br></br>
+  * Nainstalovaný **HARDWARIO Firmware Tool**
     Více informací najdete v dokumentu [**Nástroj pro nahrávání firmwaru**](https://docs.hardwario.com/tower/command-line-tools/firmware-tool/).
 
 ## Nahrání firmwaru

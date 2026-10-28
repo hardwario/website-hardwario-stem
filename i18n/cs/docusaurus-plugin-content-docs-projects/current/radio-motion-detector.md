@@ -26,11 +26,11 @@ Tento návod vás provede projektem **Bezdrátový detektor pohybu**. S detektor
   
 * Jedna z následujících možností:
 
-  * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)<br></br>
+  * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)
     Více informací najdete v dokumentu [**Instalace aplikace HARDWARIO Playground**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/).
-  * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**<br></br>
+  * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**
     Více informací najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
-  * Nainstalovaný **HARDWARIO Firmware Tool**<br></br>
+  * Nainstalovaný **HARDWARIO Firmware Tool**
     Více informací najdete v dokumentu [**Nástroj pro nahrávání firmwaru**](https://docs.hardwario.com/tower/command-line-tools/firmware-tool/).
 
 ## Nahrání firmwaru
@@ -415,7 +415,7 @@ Teď by vám měla přijít push notifikace pokaždé, když detektor zachytí p
 
 :::
 
-### Související dokumenty <a id="related-documents"></a>
+### Související dokumenty {#related-documents}
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/)

@@ -17,7 +17,7 @@ Tento návod vás provede projektem **Bezdrátový chytrý LED pásek**. LED pá
   </div>
 </div>
 
-### Požadavky <a id="requirements"></a>
+### Požadavky {#requirements}
 
 * Buď [**Sada Control**](https://www.hardwario.store/cz/p/control-set), nebo jednotlivé komponenty:
 
@@ -34,14 +34,14 @@ Tento návod vás provede projektem **Bezdrátový chytrý LED pásek**. LED pá
   
 * Jedna z následujících možností:
   
-  * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)<br></br>
+  * Nainstalovaný **HARDWARIO Playground** \(doporučeno\)
     Více informací najdete v dokumentu [**Instalace aplikace HARDWARIO Playground**](https://docs.hardwario.com/tower/desktop-programming/playground-installation/).
-  * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**<br></br>
+  * **Raspberry Pi** s distribucí **HARDWARIO Raspbian**
     Více informací najdete v dokumentu [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/).
-  * Nainstalovaný **HARDWARIO Firmware Tool**<br></br>
+  * Nainstalovaný **HARDWARIO Firmware Tool**
     Více informací najdete v dokumentu [**Nástroj pro nahrávání firmwaru**](https://docs.hardwario.com/tower/command-line-tools/firmware-tool/).
 
-### Nahrání firmwaru <a id="firmware-upload"></a>
+### Nahrání firmwaru {#firmware-upload}
 
 Firmware nahrajete do modulu **Core Module** v aplikaci **HARDWARIO Playground**.
 
@@ -240,7 +240,7 @@ V prostředí **Node-RED** postupujte takto:
   </div>
 </div>
 
-### Související dokumenty <a id="related-documents"></a>
+### Související dokumenty {#related-documents}
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/)
