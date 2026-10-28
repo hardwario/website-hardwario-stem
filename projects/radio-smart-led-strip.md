@@ -17,7 +17,7 @@ This guide walks you through the **Radio Smart LED Strip** project. You'll contr
   </div>
 </div>
 
-### Requirements <a id="requirements"></a>
+### Requirements {#requirements}
 
 * Either the [Control Set](https://www.hardwario.store/p/control-set) or these individual components:
 
@@ -41,7 +41,7 @@ This guide walks you through the **Radio Smart LED Strip** project. You'll contr
   * **HARDWARIO Firmware Tool** installed
     See [**Firmware Flashing Tool**](https://docs.hardwario.com/tower/command-line-tools/firmware-tool/) for details.
 
-### Firmware Upload <a id="firmware-upload"></a>
+### Firmware Upload {#firmware-upload}
 
 You'll upload the firmware to the **Core Module** with **HARDWARIO Playground**.
 
@@ -241,7 +241,7 @@ In **Node-RED**, follow these steps:
   </div>
 </div>
 
-### Related Documents <a id="related-documents"></a>
+### Related Documents {#related-documents}
 
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Command Line Tools**](https://docs.hardwario.com/tower/command-line-tools/)

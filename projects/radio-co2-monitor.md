@@ -212,7 +212,7 @@ Radio communication is now verified.
 
 :::
 
-### Related Documents <a id="related-documents"></a>
+### Related Documents {#related-documents}
 
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Command Line Tools**](https://docs.hardwario.com/tower/command-line-tools/)

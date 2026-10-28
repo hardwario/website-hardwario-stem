@@ -16,7 +16,7 @@ Tento návod vás provede projektem **Bezdrátový monitor klimatu**. V prostře
   </div>
 </div>
 
-### Požadavky <a id="requirements"></a>
+### Požadavky {#requirements}
 
 * Buď [Sada Clime](https://www.hardwario.store/cz/p/clime-set), nebo jednotlivé komponenty:
 
@@ -216,7 +216,7 @@ Krabičky pro sestavy TOWER najdete v e-shopu v kategorii [**Krabičky**](https:
 
 :::
 
-### Související dokumenty <a id="related-documents"></a>
+### Související dokumenty {#related-documents}
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/)

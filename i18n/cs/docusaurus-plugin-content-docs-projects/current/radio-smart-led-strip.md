@@ -17,7 +17,7 @@ Tento návod vás provede projektem **Bezdrátový chytrý LED pásek**. LED pá
   </div>
 </div>
 
-### Požadavky <a id="requirements"></a>
+### Požadavky {#requirements}
 
 * Buď [**Sada Control**](https://www.hardwario.store/cz/p/control-set), nebo jednotlivé komponenty:
 
@@ -41,7 +41,7 @@ Tento návod vás provede projektem **Bezdrátový chytrý LED pásek**. LED pá
   * Nainstalovaný **HARDWARIO Firmware Tool**<br></br>
     Více informací najdete v dokumentu [**Nástroj pro nahrávání firmwaru**](https://docs.hardwario.com/tower/command-line-tools/firmware-tool/).
 
-### Nahrání firmwaru <a id="firmware-upload"></a>
+### Nahrání firmwaru {#firmware-upload}
 
 Firmware nahrajete do modulu **Core Module** v aplikaci **HARDWARIO Playground**.
 
@@ -240,7 +240,7 @@ V prostředí **Node-RED** postupujte takto:
   </div>
 </div>
 
-### Související dokumenty <a id="related-documents"></a>
+### Související dokumenty {#related-documents}
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/)

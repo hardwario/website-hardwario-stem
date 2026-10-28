@@ -22,7 +22,7 @@ This guide walks you through the **Radio VOC sensor** project. At the end, you'l
   </div>
 </div>
 
-### Requirements <a id="requirements"></a>
+### Requirements {#requirements}
 
 * Required components
 
@@ -45,7 +45,7 @@ This guide walks you through the **Radio VOC sensor** project. At the end, you'l
     * **HARDWARIO Toolchain** installed
       See [**Command Line Tools**](https://docs.hardwario.com/tower/command-line-tools/) for details.
 
-### Firmware Upload <a id="firmware-upload"></a>
+### Firmware Upload {#firmware-upload}
 
 You'll upload the firmware to the **Core Module** with **HARDWARIO Playground**.
 
@@ -288,7 +288,7 @@ You'll see this dashboard with values from the Radio VOC sensor.
 
 Your project is finished, congratulations!
 
-### Related Documents <a id="related-documents"></a>
+### Related Documents {#related-documents}
 
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Command Line Tools**](https://docs.hardwario.com/tower/command-line-tools/)

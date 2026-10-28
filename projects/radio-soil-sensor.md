@@ -289,7 +289,7 @@ Finally, click **Save** in **Grafana** so your configuration is still there the 
   </div>
 </div>
 
-### Related Documents <a id="related-documents"></a>
+### Related Documents {#related-documents}
 
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Raspberry Pi Login**](https://docs.hardwario.com/tower/server-raspberry-pi/login-guide)

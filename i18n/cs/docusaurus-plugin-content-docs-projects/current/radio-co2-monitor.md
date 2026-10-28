@@ -213,7 +213,7 @@ Teď máte ověřenou rádiovou komunikaci.
 
 :::
 
-### Související dokumenty <a id="related-documents"></a>
+### Související dokumenty {#related-documents}
 
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)

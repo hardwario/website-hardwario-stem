@@ -22,7 +22,7 @@ Tento návod vás provede projektem **Bezdrátový senzor VOC**. V prostředí *
   </div>
 </div>
 
-### Požadavky <a id="requirements"></a>
+### Požadavky {#requirements}
 
 * Potřebné komponenty
 
@@ -47,7 +47,7 @@ Tento návod vás provede projektem **Bezdrátový senzor VOC**. V prostředí *
     * Nainstalovaný **HARDWARIO Toolchain**<br></br>
       Více informací najdete v dokumentu [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/).
 
-### Nahrání firmwaru <a id="firmware-upload"></a>
+### Nahrání firmwaru {#firmware-upload}
 
 Firmware nahrajete do modulu **Core Module** v aplikaci **HARDWARIO Playground**.
 
@@ -290,7 +290,7 @@ Uvidíte tento dashboard s hodnotami ze sestavy Radio VOC sensor.
 
 Projekt je hotový, gratulujeme!
 
-### Související dokumenty <a id="related-documents"></a>
+### Související dokumenty {#related-documents}
 
 * [**Instalace na Raspberry Pi**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Nástroje příkazové řádky**](https://docs.hardwario.com/tower/command-line-tools/)

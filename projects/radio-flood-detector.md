@@ -409,7 +409,7 @@ You should now get a push notification whenever you bridge the flood sensor cont
 
 :::
 
-### Related Documents <a id="related-documents"></a>
+### Related Documents {#related-documents}
 
 * [**Raspberry Pi Installation**](https://docs.hardwario.com/tower/server-raspberry-pi/)
 * [**Command Line Tools**](https://docs.hardwario.com/tower/command-line-tools/)

@@ -15,7 +15,7 @@ This guide walks you through the **Radio Climate Monitor** project. At the end, 
   </div>
 </div>
 
-### Requirements <a id="requirements"></a>
+### Requirements {#requirements}
 
 * Either the [Clime Set](https://www.hardwario.store/p/clime-set) or these individual components:
   

@@ -2,7 +2,7 @@
 
 This category collects ready-made HARDWARIO projects you can build yourself. Each one comes with its own pre-built firmware, so all you have to do is upload it.
 
-## External Projects on Hackster.io <a id="hackster-io-external-projects"></a>
+## External Projects on Hackster.io {#hackster-io-external-projects}
 
 You'll find many more projects on the [HARDWARIO page on Hackster.io](https://www.hackster.io/hardwario/projects).
 
