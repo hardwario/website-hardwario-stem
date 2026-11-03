@@ -10,11 +10,18 @@
   // derives their default from workers_dev when the setting is absent.
   "workers_dev": false,
   "preview_urls": true,
+  // The Worker only answers POST /csp-report (the CSP report collector, see
+  // worker/csp-report.mjs); every other request is served from the assets
+  // without running it.
+  "main": "./worker/csp-report.mjs",
+  // Workers Logs: the collector's report lines land here (filter kind = csp-report).
   "observability": {
     "enabled": true
   },
   "assets": {
     "directory": "build",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/csp-report"]
   }
 }
