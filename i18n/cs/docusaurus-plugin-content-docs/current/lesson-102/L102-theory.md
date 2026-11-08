@@ -1,7 +1,8 @@
 ---
 slug: hardwario-tower-iot-kit-theory
 title: Teorie
-title_meta: "Teorie (L102: IoT stavebnice HARDWARIO TOWER)"
+description: "Teorie k lekci L102: moduly stavebnice TOWER se systémem Plug&Make, komunikace sub-GHz, LoRaWAN, Sigfox či NB-IoT a záložky aplikace HARDWARIO Playground."
+title_meta: "Teorie (L102: IoT stavebnice TOWER)"
 ---
 import Image from '@theme/IdealImage';
 

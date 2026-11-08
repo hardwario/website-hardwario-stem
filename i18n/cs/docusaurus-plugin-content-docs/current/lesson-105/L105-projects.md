@@ -1,7 +1,8 @@
 ---
 slug: iot-indoor-air-quality-monitor-application
 title: Projekty
-title_meta: "Projekty (L105: IoT monitor kvality vnitřního klimatu)"
+description: "Projekty k lekci L105: projekt proti plísni s modulem Climate Module z Hackster.io, nebo nápady na monitoring vnitřního klimatu hledané metodou Ideation."
+title_meta: "Projekty (L105: monitor vnitřního klimatu)"
 ---
 import Image from '@theme/IdealImage';
 

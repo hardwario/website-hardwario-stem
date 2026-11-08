@@ -1,6 +1,7 @@
 ---
 slug: iot-temperature-and-humidity-monitor-introduction
 title: Úvod
+description: "Cíle lekce L104, ve které studenti sestaví senzor teploty a vlhkosti ze Sady Bridge a naměřené hodnoty zobrazí v grafech a budících."
 title_meta: "Úvod (L104: IoT teploměr a vlhkoměr)"
 ---
 import Image from '@theme/IdealImage';

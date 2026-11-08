@@ -1,7 +1,8 @@
 ---
 slug: what-is-iot-theory
 title: Theory
-title_meta: "Theory (L101: What Is the Internet of Things)"
+description: "Theory for L101: what STEM and IoT are, how IoT helps and what risks it brings, IoT hardware, firmware and platforms, MQTT and wireless networks."
+title_meta: "Theory (L101: What Is IoT)"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: iot-temperature-and-humidity-monitor-experiment
 title: Experiment
+description: "Experiment k lekci L104: studenti zasunou Humidity Tag do modulu Bridge Module, připojí ho přes USB a teplotu a vlhkost zobrazí v grafech v Node-RED."
 title_meta: "Experiment (L104: IoT teploměr a vlhkoměr)"
 ---
 import Image from '@theme/IdealImage';
@@ -46,7 +47,7 @@ Moduly typu Tag jsou ve stavebnici TOWER určené pro periferie I²C, jako jsou 
 </div>
 *Zapojení signálů na 5pinovém konektoru*
 
-**Humidity Tag** používá velmi přesný digitální senzor vlhkosti a teploty SHT20 s přesností měření ±3 % u relativní vlhkosti (v rozmezí od 20 % do 80 %) a ±0,3 °C u teploty (rozmezí 5–60 °C).
+**Humidity Tag** používá velmi přesný digitální senzor vlhkosti a teploty SHT20 s přesností měření ±2 % u relativní vlhkosti (v rozmezí od 20 % do 80 %) a ±0,3 °C u teploty (rozmezí 5–60 °C).
 
 ##### Moduly v sestavě:
 

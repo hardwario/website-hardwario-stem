@@ -1,6 +1,7 @@
 ---
 slug: kung-fu-master
 title: Kung-fu master
+description: "Kung-fu master game: with still-position firmware, the Start Set times how long you hold still after a button press and shows it on the dashboard."
 ---
 import Image from '@theme/IdealImage';
 

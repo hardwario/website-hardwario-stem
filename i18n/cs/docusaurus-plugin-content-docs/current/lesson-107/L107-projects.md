@@ -1,6 +1,7 @@
 ---
 slug: iot-light-monitor-projects
 title: Projekty
+description: "Projekty k lekci L107: tři projekty s LED páskem z Hackster.io (ovládání světla, barevná hra, noční lampa) a nápady na chytré osvětlení metodou Ideation."
 title_meta: "Projekty (L107: IoT osvětlení)"
 ---
 import Image from '@theme/IdealImage';

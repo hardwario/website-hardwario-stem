@@ -1,6 +1,7 @@
 ---
 slug: iot-light-monitor-assessment
 title: Assessment
+description: "Closing 3-2-1 assessment of the L107 smart lighting lesson: students list three new things, two surprises and one thing still unclear."
 title_meta: "Assessment (L107: IoT Light Monitor)"
 ---
 import Image from '@theme/IdealImage';

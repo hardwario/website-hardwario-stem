@@ -1,6 +1,7 @@
 ---
 slug: iot-vibration-monitor-experiment
 title: Experiment
+description: "Experiment for L106: students flash vibration monitor firmware to an IoT button, chart its vibration in Playground and add an alert above a set limit."
 title_meta: "Experiment (L106: IoT Vibration Monitor)"
 ---
 import Image from '@theme/IdealImage';

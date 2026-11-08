@@ -1,6 +1,7 @@
 ---
 slug: safe-drawer
 title: Tajný šuplík
+description: "Tajný šuplík: Sada Start pozná otevření šuplíku a přes Blynk IoT pošle upozornění do mobilu, kde detektor také zapínáte přepínačem."
 ---
 import Image from '@theme/IdealImage';
 

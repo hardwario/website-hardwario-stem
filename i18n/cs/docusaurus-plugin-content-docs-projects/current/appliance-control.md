@@ -1,6 +1,7 @@
 ---
 slug: appliance-control
 title: Ovládání spotřebičů
+description: "První kroky se Sadou Control a jejím relé 230 V / 16 A: sadu sestavíte, spárujete s Radio Dongle a její teplotu zobrazíte na budíku v Node-RED."
 ---
 
 ## Úvod

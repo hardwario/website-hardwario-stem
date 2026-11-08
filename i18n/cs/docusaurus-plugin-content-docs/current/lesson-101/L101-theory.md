@@ -1,6 +1,7 @@
 ---
 slug: what-is-iot-theory
 title: Teorie
+description: "Teorie k lekci L101: co je STEM a IoT, jak internet věcí pomáhá a jaká nese rizika, IoT hardware, firmware a platformy, MQTT a bezdrátové sítě."
 title_meta: "Teorie (L101: Co je to internet věcí – IoT)"
 ---
 import Image from '@theme/IdealImage';

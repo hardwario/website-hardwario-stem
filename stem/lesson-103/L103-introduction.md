@@ -1,6 +1,7 @@
 ---
 slug: iot-push-button-introduction
 title: Introduction
+description: "Goals of the L103 lesson on the IoT notification button and its home and industrial uses, plus the equipment: Playground, a projector and the Start Set."
 title_meta: "Introduction (L103: IoT Button)"
 ---
 import Image from '@theme/IdealImage';

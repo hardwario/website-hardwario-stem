@@ -1,6 +1,7 @@
 ---
 slug: iot-soil-monitor-presentation
 title: Presentation
+description: "Presentation part of the L109 soil monitor lesson, 10 minutes long: students present their projects and discuss how to use what they learned."
 title_meta: "Presentation (L109: IoT Soil Monitor)"
 ---
 import Image from '@theme/IdealImage';

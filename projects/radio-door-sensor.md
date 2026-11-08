@@ -1,6 +1,7 @@
 ---
 slug: radio-door-sensor
 title: Radio door sensor
+description: "Radio Door Sensor with a magnetic contact: flash the sensor and Radio Dongle firmware and get an IFTTT notification on your phone when a door opens."
 ---
 import Image from '@theme/IdealImage';
 

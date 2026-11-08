@@ -1,6 +1,7 @@
 ---
 slug: iot-soil-monitor-experiment
 title: Experiment
+description: "Experiment k lekci L109: studenti připojí kapacitní půdní senzor k Sadě Sensor, zobrazí vlhkost a teplotu půdy a překročení limitů signalizují LED páskem."
 title_meta: "Experiment (L109: IoT monitor půdy)"
 ---
 import Image from '@theme/IdealImage';

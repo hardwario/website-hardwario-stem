@@ -1,6 +1,7 @@
 ---
 slug: dragons-fire
 title: Dračí dech
+description: "Párty hra se Sadou Start: teplotu krabičky zobrazíte na budíku v Node-RED a zjistíte, kdo z kamarádů má nejteplejší a kdo nejchladnější dech."
 ---
 
 ## Úvod

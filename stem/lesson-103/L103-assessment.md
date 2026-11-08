@@ -1,6 +1,7 @@
 ---
 slug: iot-push-button-assessment
 title: Assessment
+description: "Closing 3-2-1 assessment of the L103 IoT button lesson, in which students list three new things, two surprises and one open question."
 title_meta: "Assessment (L103: IoT Button)"
 ---
 import Image from '@theme/IdealImage';

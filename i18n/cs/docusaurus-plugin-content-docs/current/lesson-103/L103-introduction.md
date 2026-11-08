@@ -1,6 +1,7 @@
 ---
 slug: iot-push-button-introduction
 title: Úvod
+description: "Cíle lekce L103 o notifikačním IoT tlačítku a jeho využití doma i v průmyslu a potřebné vybavení: aplikace Playground, projektor a Sada Start."
 title_meta: "Úvod (L103: IoT tlačítko)"
 ---
 import Image from '@theme/IdealImage';

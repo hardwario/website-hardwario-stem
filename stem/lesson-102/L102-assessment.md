@@ -1,6 +1,7 @@
 ---
 slug: hardwario-tower-iot-kit-assessment
 title: Assessment
+description: "3-2-1 assessment after the L102 lesson on the HARDWARIO TOWER IoT kit: three things students learned, two that surprised them, one still unclear."
 title_meta: "Assessment (L102: HARDWARIO TOWER IoT Kit)"
 ---
 import Image from '@theme/IdealImage';

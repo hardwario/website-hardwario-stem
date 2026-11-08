@@ -1,6 +1,7 @@
 ---
 slug: didactic-tools-and-environmental-demands
 title: Teaching Aids and Classroom Requirements
+description: "Classroom setup for the lessons: a layout for each phase, projector, flipchart, computers and phones online, Start Set, Control Set and Playground."
 ---
 import Image from '@theme/IdealImage';
 

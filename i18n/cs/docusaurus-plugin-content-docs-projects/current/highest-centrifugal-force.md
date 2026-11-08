@@ -1,6 +1,7 @@
 ---
 slug: highest-centrifugal-force
 title: Nejvyšší odstředivá síla
+description: "Hra s káčou: Sada Start s firmwarem pro točení měří odstředivou sílu a dobu otáčení a Node-RED ukládá rekordy a kreslí graf."
 ---
 import Image from '@theme/IdealImage';
 

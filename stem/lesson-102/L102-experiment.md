@@ -1,6 +1,7 @@
 ---
 slug: hardwario-tower-iot-kit-experiment
 title: Experiment
+description: "Experiment for L102: teams build sample TOWER assemblies, then create a Node-RED flow in Playground that shows each student's weight sent over MQTT."
 title_meta: "Experiment (L102: HARDWARIO TOWER IoT Kit)"
 ---
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: lesson-5
 title: Lesson 5 – Wrap-up and theory
+description: "Mini-course lesson 5 (45 min): Node-RED and MQTT theory, the message path from sensor to output, and a final temperature and motion alert on the LED strip."
 ---
 
 **Duration:** 45 minutes  

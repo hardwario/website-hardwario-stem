@@ -1,6 +1,7 @@
 ---
 slug: dragons-fire-level-2
 title: 'Dračí dech: úroveň 2'
+description: "Dračí dech, úroveň 2: v Node-RED zaznamenáte nejteplejší a nejchladnější dech, vedete tabulku soutěžících a krátkým či dlouhým stiskem přepínáte soutěže."
 ---
 import Image from '@theme/IdealImage';
 

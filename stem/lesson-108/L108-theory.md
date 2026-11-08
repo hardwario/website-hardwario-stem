@@ -1,6 +1,7 @@
 ---
 slug: iot-pulse-monitor-theory
 title: Theory
+description: "Theory for L108: direct and indirect current measurement, and pulse monitoring of electricity, gas and water meters with LED or magnetic sensors."
 title_meta: "Theory (L108: IoT Pulse Monitor)"
 ---
 import Image from '@theme/IdealImage';

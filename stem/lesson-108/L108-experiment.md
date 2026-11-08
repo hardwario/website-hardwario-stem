@@ -1,6 +1,7 @@
 ---
 slug: iot-pulse-monitor-experiment
 title: Experiment
+description: "Experiment for L108: students build a pulse counter from the Sensor Set, flash its firmware and chart pulses from an LED or magnetic sensor in Playground."
 title_meta: "Experiment (L108: IoT Pulse Monitor)"
 ---
 import Image from '@theme/IdealImage';

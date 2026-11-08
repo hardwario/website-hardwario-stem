@@ -1,6 +1,7 @@
 ---
 slug: lesson-2
 title: Lekce 2 – Měřte a vykreslujte
+description: "Lekce 2 minikurzu (30 min): v Node-RED sestavíte dashboard s budíkem a grafy orientace a teploty z modulu PIR Module."
 ---
 import Image from '@theme/IdealImage';
 

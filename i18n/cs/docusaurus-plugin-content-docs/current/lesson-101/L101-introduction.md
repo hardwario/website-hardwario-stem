@@ -1,6 +1,7 @@
 ---
 slug: what-is-iot-introduction
 title: Úvod
+description: "Cíle a vybavení lekce L101 o internetu věcí: počítač s aplikací HARDWARIO Playground, projektor a Sada Start IoT stavebnice HARDWARIO TOWER."
 title_meta: "Úvod (L101: Co je to internet věcí – IoT)"
 ---
 import Image from '@theme/IdealImage';

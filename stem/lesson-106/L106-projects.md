@@ -1,6 +1,7 @@
 ---
 slug: iot-vibration-monitor-projects
 title: Projects
+description: "Student projects for L106: the Hackster.io rotation monitor project, or ideas for vibration monitoring plotted by cost and impact with the Ideation method."
 title_meta: "Projects (L106: IoT Vibration Monitor)"
 ---
 import Image from '@theme/IdealImage';

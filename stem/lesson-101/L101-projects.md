@@ -1,7 +1,8 @@
 ---
 slug: what-is-iot-application
 title: Projects
-title_meta: "Projects (L101: What Is the Internet of Things)"
+description: "Student projects for L101: teams research and present the technologies inside the IoT button, from the MCU and 868 MHz radio to batteries and 3D printing."
+title_meta: "Projects (L101: What Is IoT)"
 ---
 import Image from '@theme/IdealImage';
 

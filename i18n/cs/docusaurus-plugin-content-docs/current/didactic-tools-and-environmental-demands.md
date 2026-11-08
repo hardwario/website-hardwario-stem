@@ -1,6 +1,7 @@
 ---
 slug: didactic-tools-and-environmental-demands
 title: Didaktické nástroje a požadavky prostředí
+description: "Co potřebujete k výuce: uspořádání učebny pro každou fázi lekce, projektor, flipchart, počítače a telefony s internetem, Sada Start a Sada Control."
 ---
 import Image from '@theme/IdealImage';
 

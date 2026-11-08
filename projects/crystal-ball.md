@@ -1,6 +1,7 @@
 ---
 slug: crystal-ball
 title: Crystal ball
+description: "Crystal ball: shake the Start Set and a Node-RED function picks one of four answers at random, shows it on the dashboard and reads it aloud."
 ---
 import Image from '@theme/IdealImage';
 

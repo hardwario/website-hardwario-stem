@@ -1,6 +1,7 @@
 ---
 slug: apology-to-teachers
 title: Apology to your teacher
+description: "A Start Set button that sends a ready-made apology to your teacher's phone when you oversleep, through Node-RED and a Blynk IoT notification."
 ---
 import Image from '@theme/IdealImage';
 

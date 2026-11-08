@@ -1,6 +1,7 @@
 ---
 slug: radio-flood-detector
 title: Radio flood detector
+description: "Radio Flood Detector project with the LD-81 sensor: pair it in Node-RED and receive an IFTTT push notification on your phone when it detects water."
 ---
 import Image from '@theme/IdealImage';
 

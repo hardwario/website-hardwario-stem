@@ -1,6 +1,7 @@
 ---
 slug: iot-light-monitor-theory
 title: Theory
+description: "Theory for L107: light as electromagnetic radiation, visual comfort and the shades of white light, and how the RGB model mixes colors."
 title_meta: "Theory (L107: IoT Light Monitor)"
 ---
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: lesson-5
 title: Lekce 5 – Závěr a teorie
+description: "Lekce 5 minikurzu (45 min): teorie Node-RED a MQTT, cesta zprávy od senzoru k výstupu a závěrečný projekt, v němž LED pásek reaguje na teplotu a pohyb."
 ---
 
 **Trvání:** 45 minut  

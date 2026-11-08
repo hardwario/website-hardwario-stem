@@ -1,6 +1,7 @@
 ---
 slug: iot-pulse-monitor-theory
 title: Teorie
+description: "Teorie k lekci L108: přímé a nepřímé měření spotřeby elektřiny a monitoring impulzů z elektroměrů, plynoměrů a vodoměrů LED a magnetickými senzory."
 title_meta: "Teorie (L108: IoT čítač impulzů)"
 ---
 import Image from '@theme/IdealImage';

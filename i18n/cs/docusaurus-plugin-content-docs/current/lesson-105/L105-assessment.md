@@ -1,7 +1,8 @@
 ---
 slug: iot-indoor-air-quality-monitor-assessment
 title: Hodnocení
-title_meta: "Hodnocení (L105: IoT monitor kvality vnitřního klimatu)"
+description: "Hodnocení metodou 3-2-1 na závěr lekce L105 o kvalitě vnitřního klimatu: studenti uvedou tři nové poznatky, dvě překvapení a jednu nejasnost."
+title_meta: "Hodnocení (L105: monitor vnitřního klimatu)"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: hardwario-tower-iot-kit-introduction
 title: Introduction
+description: "Goals of the L102 lesson on the HARDWARIO TOWER IoT kit and what to prepare: Playground on a computer, a projector, the Start Set and optional other sets."
 title_meta: "Introduction (L102: HARDWARIO TOWER IoT Kit)"
 ---
 import Image from '@theme/IdealImage';

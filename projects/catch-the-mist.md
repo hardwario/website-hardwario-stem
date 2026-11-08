@@ -1,6 +1,7 @@
 ---
 slug: catch-the-mist
 title: Fridge door detector
+description: "Fridge door detector: the Start Set lies in the fridge door, a Node-RED function counts every opening and the Playground dashboard shows the count."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: target-group-and-students-profile
 title: Target Group and Student Profile
+description: "Who the lessons are for: pupils in the last three years of primary school and secondary students aged 12+, 9–15 per seminar, up to 30 per webinar."
 ---
 
 ## Target group

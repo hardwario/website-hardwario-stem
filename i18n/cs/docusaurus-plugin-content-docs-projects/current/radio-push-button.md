@@ -1,6 +1,7 @@
 ---
 slug: radio-push-button
 title: Bezdrátové tlačítko
+description: "Projekt Bezdrátové tlačítko: nahrajete firmware, sestavíte Sadu Push, spárujete ji v Node-RED a po každém stisku vám IFTTT pošle push notifikaci."
 ---
 import Image from '@theme/IdealImage';
 

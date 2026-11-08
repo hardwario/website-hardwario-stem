@@ -1,6 +1,7 @@
 ---
 slug: kung-fu-master
 title: Mistr kung-fu
+description: "Hra Mistr kung-fu: Sada Start s firmwarem pro detekci klidové polohy změří, jak dlouho po stisku tlačítka vydržíte bez hnutí, a ukáže to na dashboardu."
 ---
 import Image from '@theme/IdealImage';
 

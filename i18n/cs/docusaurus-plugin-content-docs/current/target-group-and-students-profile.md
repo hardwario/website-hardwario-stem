@@ -1,6 +1,7 @@
 ---
 slug: target-group-and-students-profile
 title: Cílová skupina a profil studenta
+description: "Pro koho jsou lekce určeny: žáci posledních tří ročníků ZŠ a studenti středních škol od 12 let, na seminář 9–15 osob, na webinář až 30."
 ---
 
 ## Cílová skupina

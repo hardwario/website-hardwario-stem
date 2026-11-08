@@ -1,7 +1,8 @@
 ---
 slug: hardwario-tower-iot-kit-introduction
 title: Úvod
-title_meta: "Úvod (L102: IoT stavebnice HARDWARIO TOWER)"
+description: "Cíle lekce L102 o IoT stavebnici HARDWARIO TOWER a co si připravit: počítač s aplikací Playground, projektor, Sadu Start a případně další sady."
+title_meta: "Úvod (L102: IoT stavebnice TOWER)"
 ---
 import Image from '@theme/IdealImage';
 

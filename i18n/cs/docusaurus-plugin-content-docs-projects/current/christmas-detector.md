@@ -1,6 +1,7 @@
 ---
 slug: christmas-detector
 title: Detektor Ježíška
+description: "Detektor Ježíška: modul PIR Module ze Sady Motion zachytí pohyb v jiné místnosti a Node-RED pošle přes Blynk IoT upozornění do mobilu."
 ---
 import Image from '@theme/IdealImage';
 

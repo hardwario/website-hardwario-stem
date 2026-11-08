@@ -1,6 +1,7 @@
 ---
 slug: iot-soil-monitor-experiment
 title: Experiment
+description: "Experiment for L109: students connect a capacitive soil sensor to the Sensor Set, chart soil moisture and temperature and signal limits with an LED strip."
 title_meta: "Experiment (L109: IoT Soil Monitor)"
 ---
 import Image from '@theme/IdealImage';

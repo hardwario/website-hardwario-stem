@@ -1,6 +1,7 @@
 ---
 slug: warmes-coldes-place
 title: Nejteplejší a nejchladnější místo
+description: "Školní hra se Sadou Start: teplotu v různých koutech školy sledujete na budíku v mobilní aplikaci Blynk IoT a hledáte nejteplejší či nejchladnější místo."
 ---
 
 

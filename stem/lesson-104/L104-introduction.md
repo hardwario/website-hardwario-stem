@@ -1,7 +1,8 @@
 ---
 slug: iot-temperature-and-humidity-monitor-introduction
 title: Introduction
-title_meta: "Introduction (L104: IoT Thermometer and Hygrometer)"
+description: "Goals of the L104 lesson, in which students build a temperature and humidity sensor from the Bridge Set and show the readings in charts and gauges."
+title_meta: "Introduction (L104: Thermometer and Hygrometer)"
 ---
 import Image from '@theme/IdealImage';
 

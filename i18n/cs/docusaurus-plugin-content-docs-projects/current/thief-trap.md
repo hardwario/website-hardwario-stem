@@ -1,6 +1,7 @@
 ---
 slug: thief-trap
 title: Past na zloděje
+description: "Past na zloděje: alarm ze Sady Motion, který zapnete z mobilu nebo dashboardu a který vám přes Blynk IoT ohlásí, že je někdo v pokoji."
 ---
 import Image from '@theme/IdealImage';
 

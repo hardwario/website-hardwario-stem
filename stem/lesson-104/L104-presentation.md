@@ -1,7 +1,8 @@
 ---
 slug: iot-temperature-and-humidity-monitor-presentation
 title: Presentation
-title_meta: "Presentation (L104: IoT Thermometer and Hygrometer)"
+description: "Presentation part of the L104 lesson: students present their ideas and discuss meaningful uses of IoT temperature and humidity monitoring."
+title_meta: "Presentation (L104: Thermometer and Hygrometer)"
 ---
 import Image from '@theme/IdealImage';
 

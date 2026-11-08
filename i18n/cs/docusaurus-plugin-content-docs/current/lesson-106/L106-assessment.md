@@ -1,6 +1,7 @@
 ---
 slug: iot-vibration-monitor-assessment
 title: Hodnocení
+description: "Hodnocení 3-2-1 po lekci L106 o IoT monitoru vibrací: studenti shrnou tři nové poznatky, dvě překvapení a jednu otevřenou otázku."
 title_meta: "Hodnocení (L106: IoT monitor vibrací)"
 ---
 import Image from '@theme/IdealImage';

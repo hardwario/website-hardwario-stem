@@ -1,6 +1,7 @@
 ---
 slug: radio-soil-sensor
 title: Bezdrátový půdní senzor
+description: "Projekt Bezdrátový půdní senzor: firmware nahrajete z Raspberry Pi, senzor spárujete a vlhkost a teplotu půdy sledujete v Node-RED a v nástroji Grafana."
 ---
 import Image from '@theme/IdealImage';
 

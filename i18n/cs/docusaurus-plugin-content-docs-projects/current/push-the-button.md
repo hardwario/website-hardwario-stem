@@ -1,6 +1,7 @@
 ---
 slug: push-the-button
 title: Tlačítko Push
+description: "Návod k Sadě Push: připojíte Radio Dongle v aplikaci Playground, sestavíte flow v Node-RED a při každém stisku dostanete push notifikaci z Blynk IoT."
 ---
 import Image from '@theme/IdealImage';
 

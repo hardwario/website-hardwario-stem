@@ -1,6 +1,7 @@
 ---
 slug: kennel-temperature-monitor-upgrade
 title: Vylepšený monitor teploty psí boudy
+description: "Vylepšený monitor psí boudy: na dashboardu nastavíte minimální teplotu a při jejím poklesu vám Blynk IoT pošle upozornění do mobilu."
 ---
 import Image from '@theme/IdealImage';
 

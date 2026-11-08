@@ -1,6 +1,7 @@
 ---
 slug: iot-light-monitor-introduction
 title: Úvod
+description: "Cíle lekce L107 o chytrém osvětlení, ve které bezdrátové tlačítko ovládá LED pásek, a potřebné vybavení: Sada Start, Sada Control a pásek se 144 LED."
 title_meta: "Úvod (L107: IoT osvětlení)"
 ---
 import Image from '@theme/IdealImage';

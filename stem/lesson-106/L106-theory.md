@@ -1,6 +1,7 @@
 ---
 slug: iot-vibration-monitor-theory
 title: Theory
+description: "Theory for L106: Industry 4.0, predictive maintenance that warns of an approaching fault, and how an accelerometer measures acceleration and vibration."
 title_meta: "Theory (L106: IoT Vibration Monitor)"
 ---
 import Image from '@theme/IdealImage';

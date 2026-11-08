@@ -1,6 +1,7 @@
 ---
 slug: catch-the-mist
 title: Detektor otevírání ledničky
+description: "Detektor otevírání ledničky: Sada Start leží ve dveřích lednice, uzel function v Node-RED počítá každé otevření a počet ukáže dashboard."
 ---
 import Image from '@theme/IdealImage';
 

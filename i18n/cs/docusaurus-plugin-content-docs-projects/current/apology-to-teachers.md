@@ -1,6 +1,7 @@
 ---
 slug: apology-to-teachers
 title: Omluva učiteli
+description: "Když zaspíte, tlačítko ze Sady Start pošle učiteli do mobilu připravenou omluvu přes Node-RED a notifikaci z aplikace Blynk IoT."
 ---
 import Image from '@theme/IdealImage';
 

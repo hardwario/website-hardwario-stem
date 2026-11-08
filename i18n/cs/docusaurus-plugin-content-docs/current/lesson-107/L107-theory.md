@@ -1,6 +1,7 @@
 ---
 slug: iot-light-monitor-theory
 title: Teorie
+description: "Teorie k lekci L107: světlo jako elektromagnetické záření, světelná pohoda, odstíny bílého světla a míchání barev v modelu RGB."
 title_meta: "Teorie (L107: IoT osvětlení)"
 ---
 import Image from '@theme/IdealImage';

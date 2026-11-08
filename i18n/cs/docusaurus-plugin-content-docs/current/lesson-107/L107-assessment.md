@@ -1,6 +1,7 @@
 ---
 slug: iot-light-monitor-assessment
 title: Hodnocení
+description: "Závěrečné hodnocení 3-2-1 v lekci L107 o chytrém osvětlení: tři nové věci, dvě překvapení a jedna věc, která je stále nejasná."
 title_meta: "Hodnocení (L107: IoT osvětlení)"
 ---
 import Image from '@theme/IdealImage';

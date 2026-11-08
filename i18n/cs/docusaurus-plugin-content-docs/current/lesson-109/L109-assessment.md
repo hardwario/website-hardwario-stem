@@ -1,6 +1,7 @@
 ---
 slug: iot-soil-monitor-assessment
 title: Hodnocení
+description: "Hodnocení metodou 3-2-1 na závěr lekce L109 o IoT monitoru půdy: studenti uvedou tři nové poznatky, dvě překvapení a jednu otevřenou otázku."
 title_meta: "Hodnocení (L109: IoT monitor půdy)"
 ---
 import Image from '@theme/IdealImage';

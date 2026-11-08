@@ -1,7 +1,8 @@
 ---
 slug: iot-indoor-air-quality-monitor-presentation
 title: Presentation
-title_meta: "Presentation (L105: IoT Indoor Air Quality Monitor)"
+description: "Presentation part of the L105 lesson: students present their projects and propose where IoT monitoring of indoor air quality makes sense."
+title_meta: "Presentation (L105: Indoor Air Quality Monitor)"
 ---
 import Image from '@theme/IdealImage';
 

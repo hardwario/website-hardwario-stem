@@ -1,6 +1,7 @@
 ---
 slug: christmas-detector
 title: Santa detector
+description: "Santa detector: the PIR Module of the Motion Set spots movement in another room, and Node-RED sends a push notification to your phone via Blynk IoT."
 ---
 import Image from '@theme/IdealImage';
 

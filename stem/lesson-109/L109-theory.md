@@ -1,6 +1,7 @@
 ---
 slug: iot-soil-monitor-theory
 title: Theory
+description: "Theory for L109: types of drought, soil water potential, resistive and capacitive moisture sensing, and the HARDWARIO Soil Sensor on the 1-Wire bus."
 title_meta: "Theory (L109: IoT Soil Monitor)"
 ---
 import Image from '@theme/IdealImage';

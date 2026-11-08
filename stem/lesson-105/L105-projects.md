@@ -1,7 +1,8 @@
 ---
 slug: iot-indoor-air-quality-monitor-application
 title: Projects
-title_meta: "Projects (L105: IoT Indoor Air Quality Monitor)"
+description: "Student projects for L105: a Hackster.io project on stopping mold with the Climate Module, or air quality ideas found with the Ideation method."
+title_meta: "Projects (L105: Indoor Air Quality Monitor)"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: appliance-control
 title: Appliance control
+description: "Get started with the Control Set and its 230 V / 16 A relay: assemble it, pair it with the Radio Dongle and show its temperature on a Node-RED gauge."
 ---
 
 ## Introduction

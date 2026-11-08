@@ -1,6 +1,7 @@
 ---
 slug: safe-drawer
 title: Safe drawer
+description: "Safe drawer: the Start Set detects when a drawer opens and sends a Blynk IoT notification to your phone, where a switch arms the detector."
 ---
 import Image from '@theme/IdealImage';
 

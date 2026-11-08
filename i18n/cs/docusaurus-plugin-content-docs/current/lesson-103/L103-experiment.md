@@ -1,6 +1,7 @@
 ---
 slug: iot-push-button-experiment
 title: Experiment
+description: "Experiment k lekci L103: studenti spárují IoT tlačítko s Radio Dongle a na dashboardu v aplikaci Playground zobrazí počet stisků a teplotu tlačítka."
 title_meta: "Experiment (L103: IoT tlačítko)"
 ---
 import Image from '@theme/IdealImage';

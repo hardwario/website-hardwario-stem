@@ -1,6 +1,7 @@
 ---
 slug: button-for-parents-upgrade
 title: Vylepšené tlačítko pro rodiče
+description: "Vylepšené tlačítko pro rodiče: zpráva se mění podle denní doby, dlouhý stisk pošle zvláštní upozornění a odpovíte v dialogu OK / Cancel."
 ---
 import Image from '@theme/IdealImage';
 

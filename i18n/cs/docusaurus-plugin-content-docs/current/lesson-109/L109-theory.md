@@ -1,6 +1,7 @@
 ---
 slug: iot-soil-monitor-theory
 title: Teorie
+description: "Teorie k lekci L109: typy sucha, vodní potenciál půdy, rezistivní a kapacitní měření vlhkosti a půdní senzor HARDWARIO Soil Sensor na sběrnici 1-Wire."
 title_meta: "Teorie (L109: IoT monitor půdy)"
 ---
 import Image from '@theme/IdealImage';

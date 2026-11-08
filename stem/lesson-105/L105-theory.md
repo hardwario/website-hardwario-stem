@@ -1,7 +1,8 @@
 ---
 slug: iot-indoor-air-quality-monitor-theory
 title: Theory
-title_meta: "Theory (L105: IoT Indoor Air Quality Monitor)"
+description: "Theory for L105: CO2 levels indoors and outdoors, thermal comfort and volatile organic compounds (TVOC), with sources and cross-curricular links."
+title_meta: "Theory (L105: Indoor Air Quality Monitor)"
 ---
 import Image from '@theme/IdealImage';
 

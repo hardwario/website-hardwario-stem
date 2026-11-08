@@ -1,6 +1,7 @@
 ---
 slug: iot-vibration-monitor-presentation
 title: Prezentace
+description: "Prezentační část lekce L106: studenti představí nápady na IoT monitoring vibrací a diskutují, kde by se dal smysluplně nasadit."
 title_meta: "Prezentace (L106: IoT monitor vibrací)"
 ---
 import Image from '@theme/IdealImage';

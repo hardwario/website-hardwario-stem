@@ -1,6 +1,7 @@
 ---
 slug: lesson-2
 title: Lesson 2 – Measure and plot
+description: "Mini-course lesson 2 (30 min): build a Node-RED dashboard in Playground with a gauge and charts of the PIR Module's orientation and temperature."
 ---
 import Image from '@theme/IdealImage';
 

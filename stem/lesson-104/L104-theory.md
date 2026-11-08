@@ -1,7 +1,8 @@
 ---
 slug: iot-temperature-and-humidity-monitor-theory
 title: Theory
-title_meta: "Theory (L104: IoT Thermometer and Hygrometer)"
+description: "Theory for L104: relative humidity, the dew point and how indoor humidity affects health, including the recommended range of 40% to 60%."
+title_meta: "Theory (L104: Thermometer and Hygrometer)"
 ---
 import Image from '@theme/IdealImage';
 

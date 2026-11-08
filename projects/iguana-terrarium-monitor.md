@@ -1,6 +1,7 @@
 ---
 slug: iguana-terrarium-monitor
 title: Iguana terrarium monitor
+description: "Terrarium monitor with the Clime Set: chart temperature, humidity, illuminance and air pressure in Node-RED and get a warning when the temperature is off."
 ---
 import Image from '@theme/IdealImage';
 

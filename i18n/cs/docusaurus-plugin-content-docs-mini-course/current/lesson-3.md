@@ -1,6 +1,7 @@
 ---
 slug: lesson-3
 title: Lekce 3 – Ukázat, či neukázat?
+description: "Lekce 3 minikurzu (30 min): zprávy MQTT filtrujete uzlem Switch, měníte uzlem Change a zobrazíte jako text, pak z modulu PIR Module uděláte hlídače."
 ---
 import Image from '@theme/IdealImage';
 

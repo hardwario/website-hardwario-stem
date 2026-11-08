@@ -1,6 +1,7 @@
 ---
 slug: iot-push-button-experiment
 title: Experiment
+description: "Experiment for L103: students pair an IoT button with the Radio Dongle and show its press count and temperature on the Playground dashboard."
 title_meta: "Experiment (L103: IoT Button)"
 ---
 import Image from '@theme/IdealImage';

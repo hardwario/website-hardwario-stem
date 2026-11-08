@@ -1,6 +1,7 @@
 ---
 slug: smart-washing-machine
 title: Smart washing machine
+description: "Smart washing machine: the Start Set with vibration-sensitive firmware detects the end of a wash and sends a phone notification through Blynk IoT."
 ---
 import Image from '@theme/IdealImage';
 

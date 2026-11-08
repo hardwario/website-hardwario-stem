@@ -1,6 +1,7 @@
 ---
 slug: radio-motion-detector
 title: Radio motion detector
+description: "Radio Motion Detector project with the PIR Module: flash and pair the assembly, then get an IFTTT push notification on your phone when it detects motion."
 ---
 import Image from '@theme/IdealImage';
 

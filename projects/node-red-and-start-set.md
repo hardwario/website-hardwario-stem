@@ -1,6 +1,7 @@
 ---
 slug: node-red-and-start-set
 title: Node-RED and the Start Set
+description: "First Node-RED dashboard for the Start Set in HARDWARIO Playground: copy an MQTT topic from the Messages tab and show the temperature on a gauge."
 ---
 ## Introduction
 

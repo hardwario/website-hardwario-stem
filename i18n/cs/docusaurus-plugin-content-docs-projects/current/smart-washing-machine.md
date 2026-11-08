@@ -1,6 +1,7 @@
 ---
 slug: smart-washing-machine
 title: Chytrá pračka
+description: "Chytrá pračka: Sada Start s firmwarem citlivým na vibrace pozná, že pračka doprala, a přes Blynk IoT pošle upozornění do mobilu."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: what-is-iot-application
 title: Projekty
+description: "Projekty k lekci L101: týmy připraví prezentace o technologiích v IoT tlačítku, od mikrokontroléru a rádia 868 MHz po baterie a 3D tisk."
 title_meta: "Projekty (L101: Co je to internet věcí – IoT)"
 ---
 import Image from '@theme/IdealImage';

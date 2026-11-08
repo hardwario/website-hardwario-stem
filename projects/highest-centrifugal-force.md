@@ -1,6 +1,7 @@
 ---
 slug: highest-centrifugal-force
 title: Highest centrifugal force
+description: "Spinning top game: with spinning game firmware, the Start Set measures centrifugal force and spin time, and Node-RED keeps the records and a chart."
 ---
 import Image from '@theme/IdealImage';
 

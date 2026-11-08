@@ -1,6 +1,7 @@
 ---
 slug: thief-trap
 title: Thief trap
+description: "Thief trap: the Motion Set with burglar alarm firmware spots someone in your room and alerts your phone via Blynk IoT, armed from the app or dashboard."
 ---
 import Image from '@theme/IdealImage';
 

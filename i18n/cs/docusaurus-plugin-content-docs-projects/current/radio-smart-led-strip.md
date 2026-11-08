@@ -1,6 +1,7 @@
 ---
 slug: radio-smart-led-strip
 title: Bezdrátový chytrý LED pásek
+description: "Projekt Bezdrátový chytrý LED pásek se Sadou Control: nahrajete firmware pro svůj pásek RGB nebo RGBW a pásek i relé 16 A ovládáte z Node-RED."
 ---
 import Image from '@theme/IdealImage';
 

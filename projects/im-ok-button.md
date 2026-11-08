@@ -1,6 +1,7 @@
 ---
 slug: im-ok-button
 title: I'm OK button
+description: "A Start Set button that tells your parents on their phone that you got home safely, through Node-RED and a Blynk IoT notification automation."
 ---
 
 

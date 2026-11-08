@@ -1,6 +1,7 @@
 ---
 slug: iot-soil-monitor-projects
 title: Projects
+description: "Student projects for L109: Hackster.io soil moisture projects with the TOWER kit, Arduino or ESP32 and LoRaWAN, plus soil monitoring ideas from Ideation."
 title_meta: "Projects (L109: IoT Soil Monitor)"
 ---
 import Image from '@theme/IdealImage';

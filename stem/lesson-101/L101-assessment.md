@@ -1,7 +1,8 @@
 ---
 slug: what-is-iot-assessment
 title: Assessment
-title_meta: "Assessment (L101: What Is the Internet of Things)"
+description: "3-2-1 assessment closing the L101 lesson on the Internet of Things: students name three new facts, two surprises and one point still unclear."
+title_meta: "Assessment (L101: What Is IoT)"
 ---
 import Image from '@theme/IdealImage';
 

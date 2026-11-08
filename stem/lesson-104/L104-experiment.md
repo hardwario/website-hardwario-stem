@@ -1,7 +1,8 @@
 ---
 slug: iot-temperature-and-humidity-monitor-experiment
 title: Experiment
-title_meta: "Experiment (L104: IoT Thermometer and Hygrometer)"
+description: "Experiment for L104: students insert a Humidity Tag into the Bridge Module, connect it over USB and chart temperature and humidity in Node-RED."
+title_meta: "Experiment (L104: Thermometer and Hygrometer)"
 ---
 import Image from '@theme/IdealImage';
 
@@ -46,7 +47,7 @@ Tag modules in the TOWER kit are designed for I²C peripherals such as sensors, 
 </div>
 *Signal wiring on the 5-pin connector*
 
-The **Humidity Tag** uses the high-precision SHT20 digital humidity and temperature sensor, with a measurement accuracy of ±3% for relative humidity (in the range from 20% to 80%) and ±0.3 °C for temperature (in the range 5–60 °C).
+The **Humidity Tag** uses the high-precision SHT20 digital humidity and temperature sensor, with a measurement accuracy of ±2% for relative humidity (in the range from 20% to 80%) and ±0.3 °C for temperature (in the range 5–60 °C).
 
 ##### Modules in the setup:
 

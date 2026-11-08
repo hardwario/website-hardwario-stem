@@ -1,7 +1,8 @@
 ---
 slug: iot-indoor-air-quality-monitor-experiment
 title: Experiment
-title_meta: "Experiment (L105: IoT Indoor Air Quality Monitor)"
+description: "Experiment for L105: teams build a CO2, VOC, temperature and humidity monitor, compare readings on a Node-RED dashboard and log them to Google Sheets."
+title_meta: "Experiment (L105: Indoor Air Quality Monitor)"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,8 @@
 ---
 slug: hardwario-tower-iot-kit-presentation
 title: Prezentace
-title_meta: "Prezentace (L102: IoT stavebnice HARDWARIO TOWER)"
+description: "Prezentační část lekce L102: studenti předvedou své projekty a navrhují, kde se dá IoT stavebnice HARDWARIO TOWER smysluplně nasadit."
+title_meta: "Prezentace (L102: IoT stavebnice TOWER)"
 ---
 import Image from '@theme/IdealImage';
 

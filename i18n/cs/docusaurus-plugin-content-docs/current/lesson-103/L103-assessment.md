@@ -1,6 +1,7 @@
 ---
 slug: iot-push-button-assessment
 title: Hodnocení
+description: "Závěrečné hodnocení metodou 3-2-1 v lekci L103 o IoT tlačítku: studenti uvedou tři nové věci, dvě překvapení a jednu otevřenou otázku."
 title_meta: "Hodnocení (L103: IoT tlačítko)"
 ---
 import Image from '@theme/IdealImage';

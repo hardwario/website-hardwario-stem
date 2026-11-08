@@ -1,7 +1,8 @@
 ---
 slug: iot-temperature-and-humidity-monitor-application
 title: Projects
-title_meta: "Projects (L104: IoT Thermometer and Hygrometer)"
+description: "Student projects for L104: try the Hackster.io climate monitor project or collect ideas for temperature and humidity monitoring with the Ideation method."
+title_meta: "Projects (L104: Thermometer and Hygrometer)"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,7 @@
 ---
 slug: iot-indoor-air-quality-monitor-introduction
 title: Introduction
-title_meta: "Introduction (L105: IoT Indoor Air Quality Monitor)"
+title_meta: "Introduction (L105: Indoor Air Quality Monitor)"
 ---
 import Image from '@theme/IdealImage';
 

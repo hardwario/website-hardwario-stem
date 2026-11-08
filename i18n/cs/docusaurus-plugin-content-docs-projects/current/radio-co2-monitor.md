@@ -1,6 +1,7 @@
 ---
 slug: radio-co2-monitor
 title: Bezdrátový CO₂ monitor
+description: "Projekt Bezdrátový CO₂ monitor: sestavu s modulem CO₂ Module a tagy spárujete a CO₂, teplotu, vlhkost, osvětlenost a tlak sledujete v Node-RED."
 ---
 import Image from '@theme/IdealImage';
 

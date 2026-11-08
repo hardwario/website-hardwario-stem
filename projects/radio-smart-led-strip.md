@@ -1,6 +1,7 @@
 ---
 slug: radio-smart-led-strip
 title: Radio smart LED strip
+description: "Radio Smart LED Strip project with the Control Set: flash firmware for your RGB or RGBW strip, then control the strip and the 16 A relay from Node-RED."
 ---
 import Image from '@theme/IdealImage';
 

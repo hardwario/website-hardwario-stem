@@ -1,7 +1,8 @@
 ---
 slug: what-is-iot-introduction
 title: Introduction
-title_meta: "Introduction (L101: What Is the Internet of Things)"
+description: "Goals and equipment for the L101 lesson on the Internet of Things: a computer with HARDWARIO Playground, a projector and the HARDWARIO TOWER Start Set."
+title_meta: "Introduction (L101: What Is IoT)"
 ---
 import Image from '@theme/IdealImage';
 

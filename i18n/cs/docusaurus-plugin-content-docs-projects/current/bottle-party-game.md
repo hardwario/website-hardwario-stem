@@ -1,6 +1,7 @@
 ---
 slug: bottle-party-game
 title: Losovací párty hra
+description: "Losovací párty hra: Sada Start reaguje na pohyb a uzel function s JavaScriptem v Node-RED po napínavé pauze náhodně vybere jednoho účastníka."
 ---
 import Image from '@theme/IdealImage';
 

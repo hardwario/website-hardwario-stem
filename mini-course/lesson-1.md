@@ -1,6 +1,7 @@
 ---
 slug: lesson-1
 title: Lesson 1 – Get ready
+description: "Mini-course lesson 1 (20 min): install HARDWARIO Playground, connect the Radio Dongle and pair the PIR Module, with optional firmware flashing."
 ---
 import Image from '@theme/IdealImage';
 

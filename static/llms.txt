@@ -2,10 +2,10 @@
 
 > STEM learning platform for schools with hands-on Internet-of-Things lessons and
 > student projects built with the solder-free HARDWARIO TOWER kit. Ready-made
-> courses, mini-courses and teaching materials. Published by HARDWARIO a.s., a
-> Czech industrial / wireless IoT manufacturer based in Liberec. Available in
-> English (default) and Czech (/cs/). Welcomes AI crawlers; the full page list
-> is in the sitemap below.
+> courses, mini-courses and teaching materials. Published by HARDWARIO a.s.
+> (Liberec, Czech Republic), which designs and manufactures the devices that
+> bring industrial assets online. Available in English (default) and Czech
+> (/cs/). Welcomes AI crawlers; the full page list is in the sitemaps below.
 
 ## Pages
 
@@ -19,9 +19,9 @@
 
 ## More from HARDWARIO
 
-- [HARDWARIO Academy](https://hardwario.academy): why TOWER fits education, teacher resources and school packages
-- [HARDWARIO a.s.](https://www.hardwario.com): company site with products, solutions and services
-- [HARDWARIO Documentation](https://docs.hardwario.com): technical product documentation
+- [HARDWARIO Academy](https://hardwario.academy/): IoT lessons for schools on TOWER and a first pilot planned with the school
+- [HARDWARIO](https://www.hardwario.com/): our devices, the applications built on them and HARDWARIO Cloud
+- [HARDWARIO Documentation](https://docs.hardwario.com/): technical documentation of every device, TOWER included
 
 ## Contact
 

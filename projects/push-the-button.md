@@ -1,6 +1,7 @@
 ---
 slug: push-the-button
 title: Push the button
+description: "Push Set guide: connect the Radio Dongle in Playground, build a Node-RED flow and get a Blynk IoT push notification on your phone for every press."
 ---
 import Image from '@theme/IdealImage';
 

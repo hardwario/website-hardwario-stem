@@ -1,6 +1,7 @@
 ---
 slug: iot-soil-monitor-projects
 title: Projekty
+description: "Projekty k lekci L109: měření vlhkosti půdy z Hackster.io se stavebnicí TOWER, s Arduinem či ESP32 nebo přes LoRaWAN a hledání nápadů metodou Ideation."
 title_meta: "Projekty (L109: IoT monitor půdy)"
 ---
 import Image from '@theme/IdealImage';

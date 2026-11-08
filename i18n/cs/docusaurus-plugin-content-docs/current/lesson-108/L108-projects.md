@@ -1,6 +1,7 @@
 ---
 slug: iot-pulse-monitor-projects
 title: Projekty
+description: "Projekty k lekci L108: projekt HARDWARIO Pulse Counter z Hackster.io, nebo hledání využití online měření spotřeby energií metodou Ideation."
 title_meta: "Projekty (L108: IoT čítač impulzů)"
 ---
 import Image from '@theme/IdealImage';

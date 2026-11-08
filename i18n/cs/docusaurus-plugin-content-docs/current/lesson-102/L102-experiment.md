@@ -1,7 +1,8 @@
 ---
 slug: hardwario-tower-iot-kit-experiment
 title: Experiment
-title_meta: "Experiment (L102: IoT stavebnice HARDWARIO TOWER)"
+description: "Experiment k lekci L102: týmy postaví vzorové sestavy TOWER a v aplikaci Playground vytvoří flow, který zobrazí váhu studentů poslanou přes MQTT."
+title_meta: "Experiment (L102: IoT stavebnice TOWER)"
 ---
 import Image from '@theme/IdealImage';
 

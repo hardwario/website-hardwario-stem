@@ -1,6 +1,7 @@
 ---
 slug: button-for-parents-upgrade
 title: Upgraded button for parents
+description: "Upgraded parents' button: the message changes with the time of day, a long press sends a special notification and an OK/Cancel dialog lets you reply."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: warmes-coldes-place
 title: Warmest and coldest place
+description: "School game with the Start Set: follow the temperature on a Blynk IoT gauge on your phone as you hunt for the warmest or coldest spot in the building."
 ---
 
 

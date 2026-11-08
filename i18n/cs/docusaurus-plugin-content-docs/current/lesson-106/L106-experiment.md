@@ -1,6 +1,7 @@
 ---
 slug: iot-vibration-monitor-experiment
 title: Experiment
+description: "Experiment k lekci L106: do IoT tlačítka studenti nahrají firmware pro monitoring vibrací, zobrazí graf vibrací a nastaví upozornění na překročení limitu."
 title_meta: "Experiment (L106: IoT monitor vibrací)"
 ---
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: radio-co2-monitor
 title: Radio CO₂ monitor
+description: "Radio CO₂ Monitor project: build the kit from the CO₂ Module and sensor tags, pair it and watch CO₂, temperature, humidity, light and pressure in Node-RED."
 ---
 import Image from '@theme/IdealImage';
 

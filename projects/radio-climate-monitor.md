@@ -1,6 +1,7 @@
 ---
 slug: radio-climate-monitor
 title: Radio climate monitor
+description: "Radio Climate Monitor project with the Clime Set: flash and pair the kit, then watch temperature, humidity, light and pressure on a Node-RED dashboard."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: lesson-1
 title: Lekce 1 – Připravte se
+description: "Lekce 1 minikurzu (20 min): nainstalujete HARDWARIO Playground, připojíte Radio Dongle a spárujete modul PIR Module, případně nahrajete firmware."
 ---
 import Image from '@theme/IdealImage';
 

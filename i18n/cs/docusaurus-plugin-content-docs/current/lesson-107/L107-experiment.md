@@ -1,6 +1,7 @@
 ---
 slug: iot-light-monitor-experiment
 title: Experiment
+description: "Experiment k lekci L107: studenti spárují tlačítko s ovladačem LED pásku a nastaví, aby pásek po stisku zmodral a při teplotě nad 25 °C zčervenal."
 title_meta: "Experiment (L107: IoT osvětlení)"
 ---
 import Image from '@theme/IdealImage';

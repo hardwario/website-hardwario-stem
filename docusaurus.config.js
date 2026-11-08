@@ -83,9 +83,11 @@ const config = {
     localeConfigs: {
       en: {
         label: 'English',
+        htmlLang: 'en-US',
       },
       cs: {
         label: 'Čeština',
+        htmlLang: 'cs-CZ',
       },
     },
   },

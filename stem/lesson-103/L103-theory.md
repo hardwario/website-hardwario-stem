@@ -1,6 +1,7 @@
 ---
 slug: iot-push-button-theory
 title: Theory
+description: "Theory for L103: what a button gains as an IoT device and how IoT buttons are used at home, at work (the ANDON system) and at school."
 title_meta: "Theory (L103: IoT Button)"
 ---
 import Image from '@theme/IdealImage';

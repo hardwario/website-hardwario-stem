@@ -1,6 +1,7 @@
 ---
 slug: iot-light-monitor-introduction
 title: Introduction
+description: "Goals of the L107 smart lighting lesson, where a wireless button controls an LED strip, and the kit it needs: Start Set, Control Set and a 144-LED strip."
 title_meta: "Introduction (L107: IoT Light Monitor)"
 ---
 import Image from '@theme/IdealImage';

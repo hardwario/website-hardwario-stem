@@ -1,6 +1,7 @@
 ---
 slug: lesson-4
 title: Lesson 4 – Lights!
+description: "Mini-course lesson 4 (40 min): pair the Power Module, set LED strip colors over mqtt out by PIR Module orientation, and try effects and brightness."
 ---
 import Image from '@theme/IdealImage';
 

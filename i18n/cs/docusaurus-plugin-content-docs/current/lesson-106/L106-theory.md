@@ -1,6 +1,7 @@
 ---
 slug: iot-vibration-monitor-theory
 title: Teorie
+description: "Teorie k lekci L106: Průmysl 4.0, prediktivní údržba, která včas upozorní na blížící se poruchu, a akcelerometr, který měří zrychlení a vibrace."
 title_meta: "Teorie (L106: IoT monitor vibrací)"
 ---
 import Image from '@theme/IdealImage';

@@ -1,7 +1,8 @@
 ---
 slug: what-is-iot-experiment
 title: Experiment
-title_meta: "Experiment (L101: What Is the Internet of Things)"
+description: "Experiment for L101: students build a universal wireless button from the Core Module, Mini Battery Module and Push Button Module of the TOWER kit."
+title_meta: "Experiment (L101: What Is IoT)"
 ---
 import Image from '@theme/IdealImage';
 

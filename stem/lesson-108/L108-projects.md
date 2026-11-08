@@ -1,6 +1,7 @@
 ---
 slug: iot-pulse-monitor-projects
 title: Projects
+description: "Student projects for L108: the HARDWARIO Pulse Counter project on Hackster.io, or the Ideation method to find uses for online energy metering."
 title_meta: "Projects (L108: IoT Pulse Monitor)"
 ---
 import Image from '@theme/IdealImage';

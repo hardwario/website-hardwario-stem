@@ -1,6 +1,7 @@
 ---
 slug: hardwario-tower-iot-kit-application
 title: Projects
+description: "Student projects for L102: teams extend the weight flow in Playground with a traffic-light gauge, more students and a calibration function node."
 title_meta: "Projects (L102: HARDWARIO TOWER IoT Kit)"
 ---
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: radio-push-button
 title: Radio push button
+description: "Radio Push Button project: flash and assemble the Push Set, pair it in Node-RED and get an IFTTT push notification on your phone each time you press it."
 ---
 import Image from '@theme/IdealImage';
 

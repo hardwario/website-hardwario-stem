@@ -1,7 +1,8 @@
 ---
 slug: iot-temperature-and-humidity-monitor-assessment
 title: Assessment
-title_meta: "Assessment (L104: IoT Thermometer and Hygrometer)"
+description: "3-2-1 assessment at the end of the L104 lesson on the IoT thermometer and hygrometer: three new facts, two surprises, one unclear point."
+title_meta: "Assessment (L104: Thermometer and Hygrometer)"
 ---
 import Image from '@theme/IdealImage';
 

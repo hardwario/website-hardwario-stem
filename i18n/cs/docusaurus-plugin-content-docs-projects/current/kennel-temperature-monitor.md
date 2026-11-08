@@ -1,6 +1,7 @@
 ---
 slug: kennel-temperature-monitor
 title: Monitor teploty psí boudy
+description: "Monitor teploty psí boudy se Sadou Start: teplotu zobrazíte v grafu v Node-RED a uvidíte, jak se mění, když je pes uvnitř."
 ---
 ## Úvod
 

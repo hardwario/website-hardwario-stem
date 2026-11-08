@@ -1,6 +1,7 @@
 ---
 slug: lesson-4
 title: Lekce 4 – Světla!
+description: "Lekce 4 minikurzu (40 min): spárujete modul Power Module, přes mqtt out nastavíte barvu LED pásku podle orientace modulu PIR Module a vyzkoušíte efekty."
 ---
 import Image from '@theme/IdealImage';
 

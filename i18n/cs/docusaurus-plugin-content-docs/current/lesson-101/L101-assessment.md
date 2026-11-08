@@ -1,6 +1,7 @@
 ---
 slug: what-is-iot-assessment
 title: Hodnocení
+description: "Hodnocení metodou 3-2-1 na závěr lekce L101 o internetu věcí: studenti uvedou tři nové poznatky, dvě překvapení a jednu nejasnost."
 title_meta: "Hodnocení (L101: Co je to internet věcí – IoT)"
 ---
 import Image from '@theme/IdealImage';

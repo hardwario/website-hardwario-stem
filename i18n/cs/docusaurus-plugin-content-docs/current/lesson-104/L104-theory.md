@@ -1,6 +1,7 @@
 ---
 slug: iot-temperature-and-humidity-monitor-theory
 title: Teorie
+description: "Teorie k lekci L104: relativní vlhkost vzduchu, rosný bod a vliv vlhkosti v bytě na zdraví, včetně doporučeného rozmezí 40 % až 60 %."
 title_meta: "Teorie (L104: IoT teploměr a vlhkoměr)"
 ---
 import Image from '@theme/IdealImage';

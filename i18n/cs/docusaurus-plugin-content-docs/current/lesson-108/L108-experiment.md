@@ -1,6 +1,7 @@
 ---
 slug: iot-pulse-monitor-experiment
 title: Experiment
+description: "Experiment k lekci L108: studenti sestaví čítač impulzů ze Sady Sensor, nahrají firmware a impulzy z LED nebo magnetického senzoru zobrazí v grafu."
 title_meta: "Experiment (L108: IoT čítač impulzů)"
 ---
 import Image from '@theme/IdealImage';

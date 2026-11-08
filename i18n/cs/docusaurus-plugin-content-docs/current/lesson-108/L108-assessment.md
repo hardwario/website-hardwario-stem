@@ -1,6 +1,7 @@
 ---
 slug: iot-pulse-monitor-assessment
 title: Hodnocení
+description: "Hodnocení 3-2-1 na konci lekce L108 o IoT čítači impulzů: studenti uvedou tři nové poznatky, dvě překvapení a jednu nejasnost."
 title_meta: "Hodnocení (L108: IoT čítač impulzů)"
 ---
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: iot-temperature-and-humidity-monitor-application
 title: Projekty
+description: "Projekty k lekci L104: studenti vyzkouší projekt Climate Monitor z Hackster.io nebo metodou Ideation hledají nápady na měření teploty a vlhkosti."
 title_meta: "Projekty (L104: IoT teploměr a vlhkoměr)"
 ---
 import Image from '@theme/IdealImage';

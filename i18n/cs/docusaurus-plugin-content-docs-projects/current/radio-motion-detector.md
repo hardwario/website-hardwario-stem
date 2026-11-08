@@ -1,6 +1,7 @@
 ---
 slug: radio-motion-detector
 title: Bezdrátový detektor pohybu
+description: "Projekt Bezdrátový detektor pohybu s modulem PIR Module: nahrajete firmware, sestavu spárujete a při pohybu vám IFTTT pošle push notifikaci do mobilu."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: lesson-review
 title: Lesson Time Allocation
+description: "How a 45-minute STEM lesson is split into introduction, theory, experiment, student projects, presentations and assessment, with the time for each phase."
 ---
 
 **Our STEM lessons are designed to fit into a single class period**, so each one takes **45 minutes**. Any lesson can be extended by expanding the experiments and the student projects.

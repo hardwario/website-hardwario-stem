@@ -1,7 +1,8 @@
 ---
 slug: hardwario-tower-iot-kit-application
 title: Projekty
-title_meta: "Projekty (L102: IoT stavebnice HARDWARIO TOWER)"
+description: "Projekty k lekci L102: týmy rozšíří flow s váhou v aplikaci Playground o budík se semaforem, další studenty a kalibrační uzel function."
+title_meta: "Projekty (L102: IoT stavebnice TOWER)"
 ---
 import Image from '@theme/IdealImage';
 

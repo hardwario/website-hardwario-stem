@@ -1,6 +1,7 @@
 ---
 slug: what-is-iot-experiment
 title: Experiment
+description: "Experiment k lekci L101: studenti sestaví univerzální bezdrátové tlačítko z modulů Core Module, Mini Battery Module a Push Button Module stavebnice TOWER."
 title_meta: "Experiment (L101: Co je to internet věcí – IoT)"
 ---
 import Image from '@theme/IdealImage';

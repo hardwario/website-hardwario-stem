@@ -1,6 +1,7 @@
 ---
 slug: kennel-temperature-monitor-upgrade
 title: Upgraded kennel temperature monitor
+description: "Upgraded kennel monitor: set a minimum temperature on the dashboard and get a Blynk IoT alert on your phone whenever the kennel gets colder."
 ---
 import Image from '@theme/IdealImage';
 

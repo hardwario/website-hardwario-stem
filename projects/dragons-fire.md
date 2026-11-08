@@ -1,6 +1,7 @@
 ---
 slug: dragons-fire
 title: Dragon's breath
+description: "Party game with the Start Set: show the box's temperature on a Node-RED gauge and find out which of your friends has the hottest or the coldest breath."
 ---
 
 ## Introduction

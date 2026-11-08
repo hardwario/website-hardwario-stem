@@ -1,6 +1,7 @@
 ---
 slug: radio-climate-monitor
 title: Bezdrátový monitor klimatu
+description: "Projekt Bezdrátový monitor klimatu se Sadou Clime: po nahrání firmwaru a spárování sledujete teplotu, vlhkost, osvětlenost a tlak v Node-RED."
 ---
 import Image from '@theme/IdealImage';
 

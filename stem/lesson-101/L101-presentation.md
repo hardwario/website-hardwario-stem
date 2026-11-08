@@ -1,7 +1,8 @@
 ---
 slug: what-is-iot-presentation
 title: Presentation
-title_meta: "Presentation (L101: What Is the Internet of Things)"
+description: "Presentation part of the L101 lesson on the Internet of Things: students present their projects and discuss where IoT can create something meaningful."
+title_meta: "Presentation (L101: What Is IoT)"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: bottle-party-game
 title: Party draw game
+description: "Party draw game: the Start Set reacts to movement and a JavaScript function node in Node-RED picks one participant at random after a suspenseful delay."
 ---
 import Image from '@theme/IdealImage';
 

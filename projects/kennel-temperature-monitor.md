@@ -1,6 +1,7 @@
 ---
 slug: kennel-temperature-monitor
 title: Kennel temperature monitor
+description: "Track the temperature in your dog's kennel with the Start Set: chart it in Node-RED and see how it changes when the dog is inside."
 ---
 ## Introduction
 

@@ -1,6 +1,7 @@
 ---
 slug: lesson-3
 title: Lesson 3 – To show or not to show?
+description: "Mini-course lesson 3 (30 min): filter MQTT messages with Switch, rewrite them with Change, show text on the dashboard and turn the PIR Module into a guard."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: im-ok-button
 title: Tlačítko „Jsem v pohodě“
+description: "Tlačítko ze Sady Start, kterým po návratu ze školy pošlete rodičům do mobilu zprávu přes Node-RED a automatizaci v aplikaci Blynk IoT."
 ---
 
 

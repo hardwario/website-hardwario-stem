@@ -1,6 +1,7 @@
 ---
 slug: button-for-parents
 title: Button for parents
+description: "A Start Set button your parents press to call you for dinner: Node-RED sends their message to your phone as a Blynk IoT push notification."
 ---
 
 

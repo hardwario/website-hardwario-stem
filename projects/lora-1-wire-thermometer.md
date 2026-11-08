@@ -1,6 +1,7 @@
 ---
 slug: lora-1-wire-thermometer
 title: LoRa 1-Wire thermometer
+description: "LoRa thermometer with DS18B20 or DS18S20 1-Wire sensors: flash the firmware, set the LoRa keys and decode data received via The Things Network or similar."
 ---
 import Image from '@theme/IdealImage';
 

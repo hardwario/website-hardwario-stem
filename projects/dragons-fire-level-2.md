@@ -1,6 +1,7 @@
 ---
 slug: dragons-fire-level-2
 title: "Dragon's breath: level 2"
+description: "Dragon's breath level 2: record the hottest and coldest breath, keep a contestant table and switch competitions with a short or long press in Node-RED."
 ---
 import Image from '@theme/IdealImage';
 

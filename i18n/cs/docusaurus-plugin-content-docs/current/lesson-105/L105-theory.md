@@ -1,7 +1,8 @@
 ---
 slug: iot-indoor-air-quality-monitor-theory
 title: Teorie
-title_meta: "Teorie (L105: IoT monitor kvality vnitřního klimatu)"
+description: "Teorie k lekci L105: koncentrace CO2 uvnitř budov a venku, tepelný komfort a těkavé organické látky (TVOC), se zdroji a mezipředmětovými přesahy."
+title_meta: "Teorie (L105: monitor vnitřního klimatu)"
 ---
 import Image from '@theme/IdealImage';
 

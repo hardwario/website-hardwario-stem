@@ -1,6 +1,7 @@
 ---
 slug: expected-results-and-evaluation-method
 title: Expected Outcomes and Assessment Methods
+description: "Learning outcomes of the IoT lessons: students explain IoT, program in Node-RED, know MQTT and present a project, assessed by the 3-2-1 method."
 ---
 
 ## Students will be able to:

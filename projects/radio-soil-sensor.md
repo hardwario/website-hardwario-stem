@@ -1,6 +1,7 @@
 ---
 slug: radio-soil-sensor
 title: Radio soil sensor
+description: "Radio Soil Sensor project: flash the firmware from a Raspberry Pi, pair the sensor and view soil moisture and temperature in Node-RED and Grafana."
 ---
 import Image from '@theme/IdealImage';
 

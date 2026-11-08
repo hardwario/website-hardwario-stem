@@ -1,6 +1,7 @@
 ---
 slug: iot-push-button-theory
 title: Teorie
+description: "Teorie k lekci L103: co tlačítko získá jako IoT zařízení a jak se IoT tlačítka využívají doma, v práci (systém ANDON) a ve škole."
 title_meta: "Teorie (L103: IoT tlačítko)"
 ---
 import Image from '@theme/IdealImage';

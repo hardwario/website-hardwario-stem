@@ -1,6 +1,7 @@
 ---
 slug: crystal-ball
 title: Věštecká koule
+description: "Věštecká koule: po zatřesení Sadou Start vybere uzel function v Node-RED náhodně jednu ze čtyř odpovědí, zobrazí ji a přečte nahlas."
 ---
 import Image from '@theme/IdealImage';
 

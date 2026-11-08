@@ -1,6 +1,7 @@
 ---
 slug: button-for-parents
 title: Tlačítko pro rodiče
+description: "Tlačítko ze Sady Start, kterým vás rodiče zavolají k večeři: Node-RED vám jejich zprávu pošle do mobilu jako push notifikaci z aplikace Blynk IoT."
 ---
 
 ## Úvod

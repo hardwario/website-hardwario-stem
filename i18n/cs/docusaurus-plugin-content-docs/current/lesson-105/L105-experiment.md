@@ -1,7 +1,8 @@
 ---
 slug: iot-indoor-air-quality-monitor-experiment
 title: Experiment
-title_meta: "Experiment (L105: IoT monitor kvality vnitřního klimatu)"
+description: "Experiment k lekci L105: týmy sestaví monitor CO2, VOC, teploty a vlhkosti, porovnají hodnoty na dashboardu v Node-RED a zapíší je do Tabulek Google."
+title_meta: "Experiment (L105: monitor vnitřního klimatu)"
 ---
 import Image from '@theme/IdealImage';
 

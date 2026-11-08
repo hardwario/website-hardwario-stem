@@ -1,6 +1,7 @@
 ---
 slug: node-red-and-start-set
 title: Node-RED a Sada Start
+description: "První dashboard v Node-RED pro Sadu Start v aplikaci HARDWARIO Playground: zkopírujete topic MQTT ze záložky Messages a teplotu zobrazíte na budíku."
 ---
 ## Úvod
 

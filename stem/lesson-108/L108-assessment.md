@@ -1,6 +1,7 @@
 ---
 slug: iot-pulse-monitor-assessment
 title: Assessment
+description: "3-2-1 assessment at the end of the L108 IoT pulse monitor lesson: students name three new facts, two surprises and one unclear point."
 title_meta: "Assessment (L108: IoT Pulse Monitor)"
 ---
 import Image from '@theme/IdealImage';

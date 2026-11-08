@@ -1,7 +1,8 @@
 ---
 slug: hardwario-tower-iot-kit-assessment
 title: Hodnocení
-title_meta: "Hodnocení (L102: IoT stavebnice HARDWARIO TOWER)"
+description: "Hodnocení 3-2-1 po lekci L102 o IoT stavebnici HARDWARIO TOWER: tři věci, které studenti nevěděli, dvě překvapení a jedna nejasnost."
+title_meta: "Hodnocení (L102: IoT stavebnice TOWER)"
 ---
 import Image from '@theme/IdealImage';
 

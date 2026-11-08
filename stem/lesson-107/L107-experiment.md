@@ -1,6 +1,7 @@
 ---
 slug: iot-light-monitor-experiment
 title: Experiment
+description: "Experiment for L107: students pair a button and an LED strip controller and make the strip turn blue on a press and red when it is warmer than 25 °C."
 title_meta: "Experiment (L107: IoT Light Monitor)"
 ---
 import Image from '@theme/IdealImage';

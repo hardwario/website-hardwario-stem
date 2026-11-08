@@ -1,7 +1,8 @@
 ---
 slug: iot-indoor-air-quality-monitor-assessment
 title: Assessment
-title_meta: "Assessment (L105: IoT Indoor Air Quality Monitor)"
+description: "3-2-1 assessment closing the L105 lesson on indoor air quality: students state three new facts, two surprises and one thing still unclear."
+title_meta: "Assessment (L105: Indoor Air Quality Monitor)"
 ---
 import Image from '@theme/IdealImage';
 

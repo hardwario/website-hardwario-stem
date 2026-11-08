@@ -1,6 +1,7 @@
 ---
 slug: hardwario-tower-iot-kit-theory
 title: Theory
+description: "Theory for L102: the TOWER kit's Plug&Make modules, its communication options from sub-GHz radio to NB-IoT, and the tabs of the HARDWARIO Playground app."
 title_meta: "Theory (L102: HARDWARIO TOWER IoT Kit)"
 ---
 import Image from '@theme/IdealImage';

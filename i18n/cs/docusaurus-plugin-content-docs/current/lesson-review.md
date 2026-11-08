@@ -1,6 +1,7 @@
 ---
 slug: lesson-review
 title: Časové dotace lekcí
+description: "Jak se 45minutová lekce STEM dělí na úvod, teorii, experiment, projekty studentů, prezentace a hodnocení a kolik času připadá na každou fázi."
 ---
 
 **Naše STEM lekce jsou připravené tak, aby se vešly do jedné vyučovací hodiny**, mají tedy časovou dotaci **45 min**. Každou lekci lze prodloužit, pokud rozšíříte experimenty a studentské projekty.

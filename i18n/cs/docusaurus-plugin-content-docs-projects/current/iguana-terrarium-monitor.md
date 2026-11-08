@@ -1,6 +1,7 @@
 ---
 slug: iguana-terrarium-monitor
 title: Monitor terária pro leguány
+description: "Monitor terária se Sadou Clime: teplota, vlhkost, osvětlenost a tlak vzduchu v grafech v Node-RED a upozornění, když teplota neodpovídá ideální hodnotě."
 ---
 import Image from '@theme/IdealImage';
 

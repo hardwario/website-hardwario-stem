@@ -1,6 +1,7 @@
 ---
 slug: iot-soil-monitor-assessment
 title: Assessment
+description: "3-2-1 assessment closing the L109 IoT soil monitor lesson: students state three things they learned, two surprises and one open question."
 title_meta: "Assessment (L109: IoT Soil Monitor)"
 ---
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: iot-light-monitor-projects
 title: Projects
+description: "Student projects for L107: three Hackster.io LED strip projects (light control, a color game, a night lamp) and Ideation for smart lighting ideas."
 title_meta: "Projects (L107: IoT Light Monitor)"
 ---
 import Image from '@theme/IdealImage';

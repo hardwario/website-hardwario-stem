@@ -1,6 +1,7 @@
 ---
 slug: radio-door-sensor
 title: Bezdrátový dveřní senzor
+description: "Bezdrátový dveřní senzor s magnetickým kontaktem: nahrajete firmware do senzoru i do Radio Dongle a při otevření dveří vám přijde upozornění z IFTTT."
 ---
 import Image from '@theme/IdealImage';
 

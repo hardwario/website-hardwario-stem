@@ -1,6 +1,7 @@
 ---
 slug: radio-flood-detector
 title: Bezdrátový detektor zaplavení
+description: "Projekt Bezdrátový detektor zaplavení se senzorem LD-81: detektor spárujete v Node-RED a při úniku vody vám IFTTT pošle push notifikaci do mobilu."
 ---
 import Image from '@theme/IdealImage';
 

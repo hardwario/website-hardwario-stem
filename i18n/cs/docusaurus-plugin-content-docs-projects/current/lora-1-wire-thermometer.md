@@ -1,6 +1,7 @@
 ---
 slug: lora-1-wire-thermometer
 title: Teploměr LoRa se senzory 1-Wire
+description: "Teploměr LoRa se senzory 1-Wire DS18B20 nebo DS18S20: nahrajete firmware, nastavíte klíče LoRa a dekódujete data přijatá například přes The Things Network."
 ---
 import Image from '@theme/IdealImage';
 
