@@ -44,7 +44,7 @@
     "node": ">=20.0"
   },
   "devDependencies": {
-    "@hubpav/hwio-web-worker": "0.10.9",
+    "@hubpav/hwio-web-worker": "0.10.10",
     "wrangler": "^4.159.0"
   }
 }
